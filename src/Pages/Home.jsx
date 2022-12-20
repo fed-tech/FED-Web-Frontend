@@ -1,10 +1,13 @@
 import React from "react";
 import Content from "../Components/Home/KnowUs/jsx/Content";
 import Believe from "../Components/Home/WeBelieveIn/Believe";
+import Card from "../Components/Home/Testimonial/jsx/Card-box";
+import testi from "../Components/Home/Testimonial/card-detail.js"
 import knowus from "../Components/Home/KnowUs/db.js";
 import women from "../Img/image 7.png";
 import "../Components/Home/KnowUs/css/space.css";
 import "../Components/Home/css/home.css";
+import "../Components/Home/Testimonial/css/testimonial.css"
 export default function Home() {
   return (
     <>
@@ -48,6 +51,27 @@ export default function Home() {
           </div>
         </section>
         <div className="space"></div>
+
+        {/* -------------------------------------------------Testimonial-------------------------------------- */}
+        <section id="testimonial">
+        <p className="BelievePTag">
+          What do <span>they say</span> about us?
+        </p>
+        <div className="testDivMain">
+          <div className="testDivChild">
+            <Card testi= {testi[0]}/>
+            <Card testi = {testi[1]}/>
+          </div>
+        </div>
+        <div className="SeeallDiv">
+          <p className="Seeall">
+            <a href="./Testimonial.html" className="linkClass">
+              <span id="Seeall">See all</span> <span>&gt;</span>
+            </a>
+          </p>
+        </div>
+        <div className="space2"></div>
+      </section>
     </>
   );
 }
