@@ -3,6 +3,7 @@ import Content from "../Components/Home/KnowUs/jsx/Content";
 import Believe from "../Components/Home/WeBelieveIn/Believe";
 import Card from "../Components/Home/Testimonial/jsx/Card-box";
 import testi from "../Components/Home/Testimonial/card-detail.js"
+import Img from "../Components/Home/WeWorkWith/jsx/Work";
 import knowus from "../Components/Home/KnowUs/db.js";
 import women from "../Img/image 7.png";
 import "../Components/Home/KnowUs/css/space.css";
@@ -71,6 +72,31 @@ export default function Home() {
           </p>
         </div>
         <div className="space2"></div>
+      </section>
+      {/* ----------------------------------------------------WE WORK WITH----------------------------------------  */}
+      
+      <section id="work">
+        <div className="WeWorkWith">
+          <p className="WeWorkWithPTag">
+            We <span>work</span> with...
+          </p>
+          {/* Slider */}
+          <div className="slideParentDiv">
+            <div className="slider">
+              <div className="slide-track">
+                <Img/>
+              </div>
+            </div>
+          </div>
+          <div className="pTagDivWork">
+            <p className="workptagDes">
+              We wish to express our deepest gratitude to our sponsors for their
+              steadfast support and generosity, and for their dedication to
+              making a difference in the entrepreneurial community by supporting
+              grassroots initiatives.
+            </p>
+          </div>
+        </div>
       </section>
     </>
   );
