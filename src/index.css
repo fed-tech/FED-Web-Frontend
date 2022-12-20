@@ -4,6 +4,8 @@
   margin: 0px;
   padding: 0px;
   color: #fff;
+  box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .LinkStyle {
