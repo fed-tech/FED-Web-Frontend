@@ -1,0 +1,21 @@
+import React from 'react'
+import "../css/SliderComponent.css"
+// import  from "./src/assets/Carousel/h1.png";
+
+export default function SliderComponent(props) {
+  return (
+    <div className='carousel'>
+        <div className='text' style={{backgroundImage: "url('./src/assets/Carousel/h1.png')", height: "740px", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize:"cover"}}>
+            <p className='textFed'>
+                {props.para1}
+                <span>{props.coloredPara}</span>
+                <br />
+                {props.para2}
+            </p>
+            <p className='textFedDescription'>
+                {props.para3}
+            </p>
+        </div>
+    </div>
+  )
+}
