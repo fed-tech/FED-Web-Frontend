@@ -105,7 +105,7 @@
 }
 .fed {
   font-family: "Rubik", sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   margin-left: 20px;
   font-size: 30px;
   line-height: 36px;
@@ -142,11 +142,23 @@
   font-size: 20px;
   padding-top: 40px;
 }
+.row1 h4,
+.row2 h4,
+.row3 h4,
+.footerright h4 {
+  background-color: transparent;
+  margin-bottom: 17px;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+}
 .footerright {
   background-color: transparent;
   width: 50%;
   margin-left: 800px;
-  margin-top: -120px;
+  margin-top: -149px;
   overflow: hidden;
 }
 .social {
@@ -198,8 +210,8 @@
 }
 .bottomright,
 .bottomleft {
-  font-family: "Manrope";
-  font-style: normal;
+  font-family: "Rubik", sans-serif;
+  font-weight: 550;
   letter-spacing: 0.005em;
   line-height: 24px;
   max-width: 45%;
@@ -219,11 +231,13 @@
   text-align: right;
   width: 50%;
   margin-left: 550px;
-  margin-top: -40px;
-  color: #afafaf;
+  margin-top: -49px;
+  color: #777777;
 }
 .footerleftlink {
   text-decoration: none;
   color: #afafaf;
   margin-top: 10px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 550;
 }
