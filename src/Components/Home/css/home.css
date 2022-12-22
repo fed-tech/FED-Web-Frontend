@@ -78,7 +78,9 @@
   background-color:#0f0e0e;
   margin-top: -30px;
 }
-
+.slide-track{
+  overflow: hidden;
+}
 .whyDiv,
 .HowDiv,
 .WhatDiv {
