@@ -1,6 +1,10 @@
 * {
   margin: 0px;
   padding: 0px;
+  color: #fff;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  background-color: #0f0e0e;
 }
 
 .LinkStyle {
@@ -41,7 +45,6 @@ input[type="number"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: #fff; */
 }
 
 .pageExt {
