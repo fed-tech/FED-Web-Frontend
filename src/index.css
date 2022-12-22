@@ -18,12 +18,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* .BodyDiv {
-  background-image: url(./Img/background.png);
-  background-attachment: fixed;
-  background-size: cover;
-} */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -42,6 +36,15 @@ input[type="number"] {
   background: rgb(145, 145, 145);
 }
 
-.active {
-  color: #f56692;
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #fff; */
+}
+
+.pageExt {
+  max-width: 1750px;
+  width: 100%;
 }
