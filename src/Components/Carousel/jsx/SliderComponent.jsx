@@ -5,7 +5,7 @@ import "../css/SliderComponent.css"
 export default function SliderComponent(props) {
   return (
     <div className='carousel'>
-        <div className='text' style={{backgroundImage: "url('./src/assets/Carousel/h1.png')", height: "740px", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize:"cover"}}>
+        <div className='text' style={{backgroundImage: `url('${props.image}')`, height: "740px", width: "100%", backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize:"cover"}}>
             <p className='textFed'>
                 {props.para1}
                 <span>{props.coloredPara}</span>
