@@ -20,6 +20,7 @@ export default class SimpleSlider extends Component {
       draggable:false,
       pauseOnHover:false,
       centerPadding: '20px',
+      ease:'ease-out',
       responsive: [
         {
           breakpoint: 1200,
