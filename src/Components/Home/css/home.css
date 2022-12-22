@@ -78,9 +78,7 @@
   background-color:#0f0e0e;
   margin-top: -30px;
 }
-.slide-track{
-  overflow: hidden;
-}
+
 .whyDiv,
 .HowDiv,
 .WhatDiv {
@@ -482,17 +480,17 @@ form {
     justify-content: center;
     align-items: center;
   }
-
+  
   .whyDiv,
   .HowDiv {
     margin-left: 0px;
     margin-bottom: 30px;
   }
-
+  
   .WhatDiv {
     margin-right: 0px;
   }
-
+  
   .whyDiv,
   .HowDiv,
   .WhatDiv {
@@ -516,7 +514,7 @@ form {
   .businessMDiv {
     padding: 90.5px 80px;
   }
-
+  
   .businessMDivright {
     width: 46%;
   }
@@ -527,21 +525,21 @@ form {
   .businessMDiv {
     flex-direction: column;
   }
-
+  
   .testDivMain {
     margin-bottom: 0px;
   }
-
+  
   .testDiv {
     width: 100%;
     margin: 20px 0px;
   }
-
+  
   .businessMDivleft,
   .businessMDivright {
     width: 100%;
   }
-
+  
   .businessMDivleft {
     margin-bottom: 30px;
   }
@@ -553,7 +551,7 @@ form {
   .LetsTalkBusiness {
     font-size: 40px;
   }
-
+  
   #appleIcon,
   #appleIcon img {
     width: 40px;
@@ -565,7 +563,7 @@ form {
   .LetsTalkBusinessSubtitle {
     font-size: 14px;
   }
-
+  
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
@@ -577,21 +575,21 @@ form {
     width: 38px;
     height: 38px;
   }
-
+  
   .believeCenterCol,
   .workptagDes {
     width: 80%;
   }
-
-
+  
+  
   .testpTag {
     margin-bottom: 40px;
   }
-
+  
   .WeWorkWith {
     padding: 60px 0px;
   }
-
+  
   .businessMDiv {
     padding: 60px 20px;
   }
@@ -633,4 +631,8 @@ form {
   .userDisDiv {
     width: 30%;
   }
+}
+
+.slide-track{
+  overflow: hidden;
 }
