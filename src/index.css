@@ -155,7 +155,7 @@
   margin-bottom: 17px;
   color: #ffffff;
   font-family: "Rubik", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 20px;
   line-height: 24px;
 }
@@ -244,7 +244,9 @@
   color: #afafaf;
   margin-top: 10px;
   font-family: "Manrope", sans-serif;
-  font-weight: 550;
+  font-weight: 700;
+  font-size: 17px;
+    line-height: 24px;
 }
 @media only screen and (max-width: 1150px) {
   .footerleft {
