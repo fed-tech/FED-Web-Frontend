@@ -232,27 +232,27 @@
   font-family: "Manrope", sans-serif;
   font-weight: 700;
   font-size: 17px;
-    line-height: 24px;
+  line-height: 24px;
 }
-@media screen and (max-width:1150px) {
-  .bottomdiv{
+@media screen and (max-width: 1150px) {
+  .bottomdiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
-  .bottomleft,.bottomright p{
+  .bottomleft,
+  .bottomright p {
     text-align: center;
-    word-wrap:break-word;
+    word-wrap: break-word;
   }
-  .bottomright{
+  .bottomright {
     margin-top: 50px;
   }
-  .footerleft{
+  .footerleft {
     display: flex;
     flex-direction: column;
   }
-
 }
 @media only screen and(max-width:640px) {
   .f1 {
