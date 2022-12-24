@@ -12,20 +12,20 @@
   font-size: 24px;
   font-weight: bold;
   padding: 16px;
-  /* top: 50%; */
-  /* width: auto; */
-  /* margin-top: -22px; */
   color: white;
-  /* border-radius: 0 3px 3px 0; */
 }
 .slick-prev:before{
-  content: '<';
+  content: '❮' !important;
 }
 .slick-next:before{
-  content: '>';
+  content: '❯' !important;
 
 }
+.slick-prev:hover:before,.slick-next:hover:before{
+  color: #f45725;
+}
   
+
 .slick-dots li.slick-active button:before{
   color: white !important;
 }
