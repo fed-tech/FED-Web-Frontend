@@ -7,7 +7,7 @@ function Footer(props)
                     <img  className="fedlogo"src="https://feddeploy.pages.dev/Img/FedLogo.png" alt="fedlogo"/>
                     <p className="fed">FED</p>
                 </div>
-                <div classaName="flexdiv">
+                <div className="flexdiv">
                     <div className="footerleft">
                         <div className="row1">
                             <h4>Community</h4>
