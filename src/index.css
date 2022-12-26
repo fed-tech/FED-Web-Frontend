@@ -162,7 +162,7 @@
   margin-bottom: 17px;
   color: #ffffff;
   font-family: "Rubik", sans-serif;
-  font-weight: 500;
+  font-weight: 800;
   font-size: 20px;
   line-height: 24px;
 }
@@ -275,26 +275,30 @@
     margin-bottom: 40px;
   }
 }
+<<<<<<< Updated upstream
 
 @media  screen and (max-width:650px) {
   .footerright{
+=======
+@media screen and (max-width: 650px) {
+  .footerright {
+>>>>>>> Stashed changes
     margin-top: -90px;
     width: 30%;
     margin-right: 30px;
     margin-left: 10px;
   }
-  .social{
+  .social {
     display: none;
   }
-  .iconimg{
+  .iconimg {
     width: 24px;
     height: 24px;
   }
 }
 
 @media screen and (max-width: 395px) {
-  
-  .iconimg{
+  .iconimg {
     width: 19px;
     height: 19px;
   }
