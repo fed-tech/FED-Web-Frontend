@@ -50,53 +50,53 @@
   scroll-behavior: smooth;
 }
 /*.main {
-  background-image: url(https://feddeploy.pages.dev/Img/image-23.png);
-  text-align: center;
-  align-items: center;
-  font-family: "Manrope", sans-serif;
-  padding-top: none;
-}
-.ha1 {
-  font-size: 50px;
-  text-align: center;
-  align-items: center;
-  font-weight: bolder;
-  font-family: "Manrope", sans-serif;
-  padding-top: 30px;
-  padding-bottom: 50px;
-}
-.about {
-  padding-top: 50px;
-  color: white;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
-  letter-spacing: 0.005em;
-  margin-bottom: 90px;
-}
-.ha2 {
-  color: red;
-  font-size: 30px;
-  text-align: center;
-  align-items: center;
-  font-weight: bolder;
-  font-family: "Manrope", sans-serif;
-}
-.why-how-what {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3em;
-  width: 80%;
-  margin: 0 auto;
-}
-.why-how-what > div {
-  background-color: aliceblue;
-  border-radius: 10%;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 100px;
-}*/
+    background-image: url(https://feddeploy.pages.dev/Img/image-23.png);
+    text-align: center;
+    align-items: center;
+    font-family: "Manrope", sans-serif;
+    padding-top: none;
+  }
+  .ha1 {
+    font-size: 50px;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family: "Manrope", sans-serif;
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  .about {
+    padding-top: 50px;
+    color: white;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.005em;
+    margin-bottom: 90px;
+  }
+  .ha2 {
+    color: red;
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family: "Manrope", sans-serif;
+  }
+  .why-how-what {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3em;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .why-how-what > div {
+    background-color: aliceblue;
+    border-radius: 10%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }*/
 /*-----------------------------footer---------------------------------*/
 .f1 {
   padding: 40px;
@@ -132,8 +132,8 @@
   width: 60%;
 }
 /* .row1 {
-  margin-bottom: 40px;
-} */
+    margin-bottom: 40px;
+  } */
 .row1,
 .row2,
 .row3 {
@@ -170,7 +170,7 @@
   background-color: transparent;
   width: 35%;
   /* margin-left: 65%;
-  margin-top: 0px; */
+    margin-top: 0px; */
   /* overflow: hidden; */
 }
 .social {
@@ -234,14 +234,14 @@
   color: #777777;
 }
 /* .footerleftlink {
-  text-decoration: none;
-  color: #afafaf;
-  margin-top: 10px;
-  font-family: "Manrope", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-} */
+    text-decoration: none;
+    color: #afafaf;
+    margin-top: 10px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+  } */
 @media screen and (max-width: 1150px) {
   .bottomdiv {
     /* display: flex; */
@@ -252,7 +252,7 @@
   .bottomright,
   .bottomright p {
     /* text-align: center;
-    word-wrap: break-word; */
+      word-wrap: break-word; */
     width: 100%;
     max-width: 100%;
     text-align: center;
@@ -275,14 +275,8 @@
     margin-bottom: 40px;
   }
 }
-<<<<<<< Updated upstream
-
-@media  screen and (max-width:650px) {
-  .footerright{
-=======
 @media screen and (max-width: 650px) {
   .footerright {
->>>>>>> Stashed changes
     margin-top: -90px;
     width: 30%;
     margin-right: 30px;
