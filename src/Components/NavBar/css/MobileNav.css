@@ -4,7 +4,8 @@
 }
 
 #blank,
-#mobileNavList {
+#mobileNavList,
+.mobileNavClass {
     display: none;
 }
 
@@ -94,10 +95,8 @@
         line-height: 28.44px;
     }
 
-    #mobileNavList {
+    .mobileNavClass {
         font-family: "Manrope", sans-serif;
-        opacity: 1;
-        visibility: visible;
         position: fixed;
         top: 48px;
         left: 0px;
@@ -105,13 +104,20 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        transform: translateX(0%);
         transition: all 0.5s;
         transition-delay: 0.3s;
         z-index: 3;
     }
 
+    #mobileNavList {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0%);
+    }
+
     #blank {
+        display: flex;
         opacity: 0;
         visibility: hidden;
         transform: translateX(-100%);
