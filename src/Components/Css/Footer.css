@@ -1,0 +1,334 @@
+.f1 {
+    padding: 40px;
+    background-color: rgba(30, 30, 30, 1);
+    color: white;
+    overflow-x: hidden;
+}
+
+.logodiv {
+    background-color: transparent;
+    display: flex;
+}
+
+.fed {
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+    margin-left: 20px;
+    font-size: 30px;
+    line-height: 36px;
+    text-shadow: 1px 0px 0.496831px #f45725;
+    background-color: transparent;
+}
+
+.fedlogo {
+    background-color: transparent;
+}
+
+.flexdiv {
+    margin-top: 60px;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.footerleft {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+/* .row1 {
+      margin-bottom: 40px;
+    } */
+.row1,
+.row2,
+.row3 {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    /* padding-top: 40px; */
+}
+
+.row1 a,
+.row2 a,
+.row3 a {
+    color: #afafaf;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.row1 h4,
+.row2 h4,
+.row3 h4,
+.footerright h4 {
+    background-color: transparent;
+    margin-bottom: 17px;
+    color: #ffffff;
+    font-family: "Rubik", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.footerright {
+    background-color: transparent;
+    width: 35%;
+    /* margin-left: 65%;
+      margin-top: 0px; */
+    /* overflow: hidden; */
+}
+
+.social {
+    background-color: rgba(30, 30, 30, 1);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23.7px;
+    margin-bottom: 11px;
+}
+
+.icondiv {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between(10px);
+    align-items: center;
+    background-color: rgba(30, 30, 30, 1);
+    /* overflow: hidden; */
+}
+
+.link1 {
+    background-color: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.iconimg {
+    background-color: rgba(30, 30, 30, 1);
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.bottomdiv {
+    background-color: inherit;
+    margin-top: 60px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: #5c5c5a;
+}
+
+.bottomleft {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.bottomright,
+.bottomleft {
+    font-family: "Rubik", sans-serif;
+    font-weight: 550;
+    letter-spacing: 0.005em;
+    line-height: 24px;
+}
+
+.bottomright p {
+    font-weight: 400;
+    font-size: 17px;
+    text-align: right;
+    margin-top: -49px;
+    color: #777777;
+}
+
+.KnowUsmDiv {
+    height: fit-content;
+    padding: 1rem 0px 6rem 0px;
+    background-image: url(https://www.fedkiit.com/Img/image-23.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: transparent;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.para1,
+.para2 {
+    width: auto;
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.para2 {
+    color: #f45725;
+}
+
+.para3 {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 110%;
+    line-height: 40px;
+    letter-spacing: 0.005em;
+    background-color: transparent;
+    text-align: center;
+    width: 50%;
+    margin-bottom: 90px;
+    word-wrap: break-word;
+}
+
+.cover-btn {
+    border-width: 0px;
+    cursor: pointer;
+    background-color: #f45725;
+    width: 370px;
+    height: 64px;
+    border-radius: 6px;
+    padding: 20px;
+    gap: 10px;
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 0%;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 1150px) {
+    .bottomdiv {
+        flex-direction: column;
+    }
+
+    .bottomleft,
+    .bottomleft p,
+    .bottomright,
+    .bottomright p {
+        background-color: transparent;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .bottomleft p {
+        margin-bottom: 10px;
+    }
+
+    .bottomright p {
+        margin-top: 0px;
+    }
+
+    .footerleft {
+        /* display: flex; */
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .footerright {
+        width: 50%;
+    }
+
+    .row1 {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footerright {
+        margin-top: -90px;
+        width: 30%;
+        margin-right: 30px;
+        margin-left: 10px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .iconimg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .para3 {
+        width: 100%;
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .para1,
+    .para2 {
+        width: 100%;
+        font-size: 40px;
+        margin-bottom: 14px;
+    }
+
+    .KnowUsmDiv {
+        padding: 0px 10%;
+        width: 100%;
+        padding-bottom: 50px;
+    }
+
+    .container-cover {
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+
+    .container-cover {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cover-btn {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .iconimg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+
+    .para1,
+    .para2 {
+        width: 100%;
+        font-size: 25px;
+    }
+}
