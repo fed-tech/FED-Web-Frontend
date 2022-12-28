@@ -31,7 +31,7 @@ export default function NavMobile() {
           <div id="Navdarkright"></div>
         </div>
       </nav>
-      <div id={count ? "mobileNavList" : "blank"}>
+      <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
         <div class="mobileNavListChild">
           <div class="mobileList">
             <NavLink to="/" className="liTag">
