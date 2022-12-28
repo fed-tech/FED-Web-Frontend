@@ -1,14 +1,14 @@
 .mobileNav {
-        display: none;
-        background-color: #1e1e1e;
-}
-  
-#blank,
-#mobileNavList {
-        display: none; 
+    display: none;
+    background-color: #1e1e1e;
 }
 
-.Cross{
+#blank,
+#mobileNavList {
+    display: none;
+}
+
+.Cross {
     width: 24px;
     height: 24px;
     cursor: pointer;
@@ -16,7 +16,8 @@
     font-size: 24px;
     margin-top: -7px;
     transition: all 0.3s;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Manrope", sans-serif;
+    font-weight: 900;
 }
 
 @media only screen and (max-width: 650px) {
@@ -28,8 +29,8 @@
         justify-content: center;
         align-items: center;
         z-index: 1;
-    }   
-  
+    }
+
     #mobileNavCon {
         margin: 10px 20px;
         width: 100%;
@@ -38,7 +39,7 @@
         justify-content: space-between;
         align-items: center;
     }
-  
+
     .hamburger {
         width: 24px;
         height: 24px;
@@ -46,14 +47,14 @@
         background-color: transparent;
         transition: all 0.3s;
     }
-  
+
     .hamburger p {
         background-color: transparent;
         font-size: 24px;
         margin-top: -7px;
         transition: all 0.3s;
     }
-  
+
     #bur1,
     #bur2,
     #bur3 {
@@ -61,38 +62,38 @@
         background-color: #fff;
         height: 2px;
     }
-  
+
     #bur1 {
         width: 100%;
         margin-top: 4px;
         margin-bottom: 5px;
     }
-  
+
     #bur2 {
         width: 75%;
         margin-bottom: 5px;
     }
-  
+
     #bur3 {
         width: 50%;
     }
-  
+
     .LogoDiv,
     .LogoDiv img,
     .LogoFED {
         background-color: transparent;
     }
-  
+
     .LogoDiv img {
         width: 28px;
         height: 28px;
     }
-  
+
     .LogoFED {
         font-size: 24px;
         line-height: 28.44px;
     }
-  
+
     #mobileNavList {
         font-family: "Manrope", sans-serif;
         opacity: 1;
@@ -109,11 +110,13 @@
         transition-delay: 0.3s;
         z-index: 3;
     }
-    #blank{
+
+    #blank {
         opacity: 0;
         visibility: hidden;
         transform: translateX(-100%);
     }
+
     #navtoggleDiv {
         background-color: transparent;
         display: flex;
@@ -121,17 +124,18 @@
         justify-content: space-between;
         align-items: center;
     }
+
     .mobileNavListChild {
         margin-left: 20px;
         margin-top: 37px;
         width: 80%;
     }
-  
+
     .liTag {
         font-weight: 700;
         margin-bottom: 30px;
     }
-  
+
     .mobileList {
         display: flex;
         flex-direction: row;
