@@ -89,7 +89,7 @@ export default function Footer() {
         <div className="bottomdiv">
           <div className="bottomleft">
             <p>
-              Made with❤️
+              Made with ❤️
               <br />
               from Federation of Entrepreneurship Development
             </p>
