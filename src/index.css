@@ -242,6 +242,71 @@
     font-size: 17px;
     line-height: 24px;
   } */
+/*-------------------------------------------podcasts---------------------------------*/
+.KnowUsmDiv {
+  height: fit-content;
+  padding: 1rem 0px 6rem 0px;
+  background-image: url(https://www.fedkiit.com/Img/image-23.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: transparent;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.para1,
+.para2 {
+  width: auto;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+  background-color: transparent;
+}
+.para2 {
+  color: #f45725;
+}
+.para3 {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 110%;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  background-color: transparent;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 90px;
+  word-wrap: break-word;
+}
+.cover-btn {
+  border-width: 0px;
+  cursor: pointer;
+  background-color: #f45725;
+  width: 370px;
+  height: 64px;
+  border-radius: 6px;
+  padding: 20px;
+  gap: 10px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 0%;
+  font-weight: 800;
+}
 @media screen and (max-width: 1150px) {
   .bottomdiv {
     /* display: flex; */
@@ -291,10 +356,46 @@
     height: 24px;
   }
 }
-
+@media screen and (max-width: 640px) {
+  .para3 {
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .para1,
+  .para2 {
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+  .KnowUsmDiv {
+    padding: 0px 10%;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .container-cover {
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+  .container-cover {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cover-btn {
+    width: 70%;
+  }
+}
 @media screen and (max-width: 395px) {
   .iconimg {
     width: 19px;
     height: 19px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .para1,
+  .para2 {
+    width: 100%;
+    font-size: 25px;
   }
 }
