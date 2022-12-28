@@ -132,6 +132,7 @@
 
 .bottomright,
 .bottomleft {
+    background-color: transparent;
     font-family: "Rubik", sans-serif;
     font-weight: 550;
     letter-spacing: 0.005em;
@@ -139,6 +140,7 @@
 }
 
 .bottomright p {
+    background-color: transparent;
     font-weight: 400;
     font-size: 17px;
     text-align: right;
