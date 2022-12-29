@@ -2,13 +2,14 @@ import React from "react";
 import Content from "../Components/Home/KnowUs/jsx/Content";
 import Believe from "../Components/Home/WeBelieveIn/Believe";
 import Card from "../Components/Home/Testimonial/jsx/Card-box";
-import testi from "../Components/Home/Testimonial/card-detail.js"
+import testi from "../Components/Home/Testimonial/card-detail.js";
 import Img from "../Components/Home/WeWorkWith/jsx/Work";
 import knowus from "../Components/Home/KnowUs/db.js";
 import women from "../Img/image 7.png";
 import "../Components/Home/KnowUs/css/space.css";
 import "../Components/Home/css/home.css";
-import "../Components/Home/Testimonial/css/testimonial.css"
+import "../Components/Home/Testimonial/css/testimonial.css";
+
 export default function Home() {
   return (
     <>
@@ -36,32 +37,32 @@ export default function Home() {
         </div>
         <div className="space1"></div>
       </section>
-        {/* -----------------------Believe ------------------------------- */}
-        <section className="Beleiver">
-          <p className="BelievePTag">
-            What we <span>believe</span> in...
-            <span id="appleIcon">
-              <img
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/48/thinking-face_1f914.png"
-                alt=""
-              />
-            </span>
-          </p>
-          <div className="believeCenterDiv">
-             <Believe/>
-          </div>
-        </section>
-        <div className="space"></div>
+      {/* -----------------------Believe ------------------------------- */}
+      <section className="Beleiver">
+        <p className="BelievePTag">
+          What we <span>believe</span> in...
+          <span id="appleIcon">
+            <img
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/48/thinking-face_1f914.png"
+              alt=""
+            />
+          </span>
+        </p>
+        <div className="believeCenterDiv">
+          <Believe />
+        </div>
+      </section>
+      <div className="space"></div>
 
-        {/* -------------------------------------------------Testimonial-------------------------------------- */}
-        <section id="testimonial">
+      {/* -------------------------------------------------Testimonial-------------------------------------- */}
+      <section id="testimonial">
         <p className="BelievePTag">
           What do <span>they say</span> about us?
         </p>
         <div className="testDivMain">
           <div className="testDivChild">
-            <Card testi= {testi[0]}/>
-            <Card testi = {testi[1]}/>
+            <Card testi={testi[0]} />
+            <Card testi={testi[1]} />
           </div>
         </div>
         <div className="SeeallDiv">
@@ -74,7 +75,7 @@ export default function Home() {
         <div className="space2"></div>
       </section>
       {/* ----------------------------------------------------WE WORK WITH----------------------------------------  */}
-      
+
       <section id="work">
         <div className="WeWorkWith">
           <p className="WeWorkWithPTag">
@@ -84,7 +85,7 @@ export default function Home() {
           <div className="slideParentDiv">
             <div className="slider">
               <div className="slide-track">
-                <Img/>
+                <Img />
               </div>
             </div>
           </div>
