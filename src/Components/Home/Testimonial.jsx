@@ -17,9 +17,9 @@ export default function Testimonial() {
       </div>
       <div className="SeeallDiv">
         <p className="Seeall">
-          <Link to="/Testimonial" className="linkClass">
+          <Link to="/Testimonial" className="LinkStyle">
             <span id="Seeall">See all</span>
-            {/* <span id="SpanGreaterSign">></span> */}
+            <span id="SpanGreaterSign"> &gt;</span>
           </Link>
         </p>
       </div>
