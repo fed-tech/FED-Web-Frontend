@@ -29,11 +29,12 @@ input[type="number"] {
 
 ::-webkit-scrollbar {
   width: 8px;
+  background-color: #0f0e0e;
 }
 
 ::-webkit-scrollbar-track {
   padding: 0px 20px;
-  background: #fff;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -42,7 +43,7 @@ input[type="number"] {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(145, 145, 145);
+  background: rgb(222, 222, 222);
 }
 
 .page {
@@ -51,6 +52,7 @@ input[type="number"] {
   justify-content: center;
   align-items: center;
   background-color: #0f0e0e;
+  /* background-color: #0f0e0ea6; */
 }
 
 .pageExt {
