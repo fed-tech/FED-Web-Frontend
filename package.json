@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "fed",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,11 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^6.5.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
