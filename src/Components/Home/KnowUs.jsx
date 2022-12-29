@@ -1,8 +1,10 @@
 import React from "react";
 import Content from "./../../Components/Home/Content";
 
-//
+// Data
 import knowus from "./../../Data/db";
+
+// Image
 import women from "./../../Img/image 7.png";
 
 export default function KnowUs() {
