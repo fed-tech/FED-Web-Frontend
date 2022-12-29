@@ -36,16 +36,12 @@
 #KnowUspTag {
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 50px;
   line-height: 59px;
   text-align: center;
   background-color: transparent;
 }
-
-/* #KnowUspTag{
-    color: #fff;
-} */
 
 .KnowUspTag {
   color: #f45725;
@@ -150,7 +146,7 @@
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 50px;
   line-height: 59px;
   margin: 0px 0px 90px 0px;
@@ -295,7 +291,7 @@
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-size: 50px;
   line-height: 59px;
   color: #0f0e0e;
@@ -584,7 +580,6 @@ form {
   .workptagDes {
     width: 80%;
   }
-
 
   .testpTag {
     margin-bottom: 40px;
