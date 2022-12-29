@@ -1,11 +1,9 @@
 import React from "react";
-import Content from "../Components/Home/Content";
 import Believe from "../Components/Home/Believe";
 import Card from "../Components/Home/Card-box";
 import testi from "../Data/card-detail.js";
 import Img from "../Components/Home/Work";
-import knowus from "./../Data/db";
-import women from "../Img/image 7.png";
+import KnowUsCom from "../Components/Home/KnowUs";
 
 // css
 import "../Components/Home/css/space.css";
@@ -17,30 +15,7 @@ export default function Home() {
     <>
       Carousel
       <br />
-      <section id="KnowUs">
-        <div className="KnowUsmDiv">
-          <p id="KnowUspTag">
-            <span className="KnowUspTag">Know us </span>
-            better...
-          </p>
-          <img src={women} alt="" className="womenWithALaptop" />
-          <p id="womenBelowText">
-            Federation of Entrepreneurship Development (FED) is a group of KIIT
-            TBI students that want to encourage individuals with entrepreneurial
-            aspirations by bringing all prospective startup ideas together on
-            one platform. By planning events to promote entrepreneurship
-            awareness, FED connects you with the best resources, contacts, and
-            mentors.
-          </p>
-        </div>
-        {/* Why_What_How */}
-        <div className="WhyHowWhatDiv">
-          <Content knowus={knowus[0]} />
-          <Content knowus={knowus[1]} />
-          <Content knowus={knowus[2]} />
-        </div>
-        <div className="space1"></div>
-      </section>
+      <KnowUsCom />
       {/* -----------------------Believe ------------------------------- */}
       <section className="Beleiver">
         <p className="BelievePTag">
