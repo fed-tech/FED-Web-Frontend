@@ -5,8 +5,8 @@
   height: 740px;
 }
 
-.Beleiver{
-    background-color: #0f0e0e;
+.Beleiver {
+  background-color: #0f0e0e;
 }
 
 .KnowUsmDiv {
@@ -36,12 +36,13 @@
 #KnowUspTag {
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 50px;
   line-height: 59px;
   text-align: center;
   background-color: transparent;
 }
+
 /* #KnowUspTag{
     color: #fff;
 } */
@@ -75,7 +76,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color:#0f0e0e;
+  background-color: #0f0e0e;
   margin-top: -30px;
 }
 
@@ -149,7 +150,7 @@
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 50px;
   line-height: 59px;
   margin: 0px 0px 90px 0px;
@@ -201,7 +202,7 @@
   padding: 24px;
   width: 40%;
   height: 294px;
-  overflow: hidden ;
+  overflow: hidden;
   border-radius: 12px;
 }
 
@@ -480,17 +481,17 @@ form {
     justify-content: center;
     align-items: center;
   }
-  
+
   .whyDiv,
   .HowDiv {
     margin-left: 0px;
     margin-bottom: 30px;
   }
-  
+
   .WhatDiv {
     margin-right: 0px;
   }
-  
+
   .whyDiv,
   .HowDiv,
   .WhatDiv {
@@ -514,44 +515,46 @@ form {
   .businessMDiv {
     padding: 90.5px 80px;
   }
-  
+
   .businessMDivright {
     width: 46%;
   }
 }
 
 @media only screen and (max-width: 810px) {
+
   .testDivChild,
   .businessMDiv {
     flex-direction: column;
   }
-  
+
   .testDivMain {
     margin-bottom: 0px;
   }
-  
+
   .testDiv {
     width: 100%;
     margin: 20px 0px;
   }
-  
+
   .businessMDivleft,
   .businessMDivright {
     width: 100%;
   }
-  
+
   .businessMDivleft {
     margin-bottom: 30px;
   }
 }
 
 @media only screen and (max-width: 720px) {
+
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
     font-size: 40px;
   }
-  
+
   #appleIcon,
   #appleIcon img {
     width: 40px;
@@ -563,44 +566,47 @@ form {
   .LetsTalkBusinessSubtitle {
     font-size: 14px;
   }
-  
+
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
     font-size: 38px;
     margin-bottom: 20px;
   }
+
   #appleIcon,
   #appleIcon img {
     width: 38px;
     height: 38px;
   }
-  
+
   .believeCenterCol,
   .workptagDes {
     width: 80%;
   }
-  
-  
+
+
   .testpTag {
     margin-bottom: 40px;
   }
-  
+
   .WeWorkWith {
     padding: 60px 0px;
   }
-  
+
   .businessMDiv {
     padding: 60px 20px;
   }
 }
 
 @media only screen and (max-width: 550px) {
+
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
     font-size: 30px;
   }
+
   #appleIcon,
   #appleIcon img {
     width: 30px;
@@ -615,11 +621,13 @@ form {
 }
 
 @media only screen and (max-width: 375px) {
+
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
     font-size: 20px;
   }
+
   #appleIcon,
   #appleIcon img {
     width: 20px;
@@ -633,6 +641,6 @@ form {
   }
 }
 
-.slide-track{
+.slide-track {
   overflow: hidden;
 }
