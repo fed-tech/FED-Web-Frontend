@@ -3,9 +3,9 @@ import React from "react";
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
-import Nav from "./Components/Nav";
+import Nav from "./Components/NavBar/jsx/Nav.jsx";
 import Footer from "./Components/Footer";
-import NavMobile from "./Components/NavMobile";
+import NavMobile from "./Components/NavBar/jsx/NavMobile.jsx";
 
 function App() {
   return (
