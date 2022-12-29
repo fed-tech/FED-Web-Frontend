@@ -59,6 +59,12 @@
     }
   }
   
+  @media only screen and (max-width:800px) and (min-width: 750px){
+    .textFed{
+      line-height: 65px;
+    }
+  }
+
   @media only screen and (max-width: 750px) {
     .text{
       margin-top: 48px;

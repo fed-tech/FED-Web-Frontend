@@ -29,39 +29,71 @@
 .slick-dots li.slick-active button:before{
   color: white !important;
 }
-  
+
+.slick-dots{
+  display: flex !important;
+  bottom: 200px !important;
+  margin-left: 50px !important;
+  background-color: transparent !important;
+  width: fit-content;
+}
+
+.slick-dots li{
+  background-color: transparent !important;
+}
+
 .slick-dots li button:before{
   font-size: 16px !important;
-  top: -270px !important;
-  left: -530px !important;
+  position: relative !important;
+  top: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+  bottom: 0px !important;
   color: white !important;
 }
 
-@media only screen and (max-width: 350px){
+@media only screen and (max-width: 650px) {
+  .slick-dots{
+    bottom: 60px !important;
+    margin-left: 30px !important;
+  }
+
+  .slick-dots li button:before{
+    font-size: 12px !important;
+  }
+}
+
+/* @media only screen and (max-width: 350px){
   .slick-dots li button:before{
     font-size: 10px !important;
-    top: -80px !important;
-    left: -87px !important;
+  }
+  .slick-dots{
+    bottom: 250px !important;
+    margin-left: 30px !important;
   }
 }
 
 @media only screen and (max-width: 400px) and (min-width: 350px){
   .slick-dots li button:before{
     font-size: 12px !important;
-    top: -105px !important;
-    left: -115px !important;
+  }
+  .slick-dots{
+    bottom: 250px !important;
+    margin-left: 30px !important;
   }
 }
 
 @media only screen and (max-width: 450px) and (min-width: 400px){
   .slick-dots li button:before{
     font-size: 12px !important;
-    top: -150px !important;
-    left: -140px !important;
   }
-}
+  .slick-dots{
+    bottom: 250px !important;
+    margin-left: 30px !important;
+  }
+} */
 
-@media only screen and (max-width: 800px) and (min-width: 450px){
+/* @media only screen and (max-width: 800px) and (min-width: 450px){
   .slick-dots li button:before{
     top: -240px !important;
     left: -285px !important;
@@ -73,4 +105,4 @@
     top: -240px !important;
     left: -410px !important;
   }
-}
+} */
