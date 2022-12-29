@@ -1,11 +1,12 @@
-
-
 * {
   margin: 0px;
   padding: 0px;
   color: #fff;
   box-sizing: border-box;
-    scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .LinkStyle {
@@ -23,12 +24,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* .BodyDiv {
-  background-image: url(./Img/background.png);
-  background-attachment: fixed;
-  background-size: cover;
-} */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -45,8 +40,4 @@ input[type="number"] {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(145, 145, 145);
-}
-
-.active {
-  color: #f56692;
 }
