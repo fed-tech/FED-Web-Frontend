@@ -119,6 +119,8 @@
 .BelievePTag span,
 .believeCenterCol p span,
 .userName,
+.Seeall,
+.Seeall span,
 .WeWorkWithPTag span,
 .LetsTalkBusiness span,
 .textFed span,
@@ -127,9 +129,8 @@
   color: #f45725;
 }
 
-.Seeall {
-  margin-right: 15%;
-  text-decoration: none;
+#SpanGreaterSign {
+  font-family: "Manrope", sans-serif;
 }
 
 .CardDesPTag {
@@ -255,6 +256,27 @@
   line-height: 20px;
   letter-spacing: 0.005em;
   color: #000000;
+}
+
+.Seeall {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  color: #f45725;
+  float: right;
+  margin-right: 15%;
+}
+
+#Seeall {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  text-decoration-line: underline;
+}
+
+.Seeall span {
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .SeeallDiv {
