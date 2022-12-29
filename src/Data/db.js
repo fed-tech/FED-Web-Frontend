@@ -1,14 +1,7 @@
-// https://i.ibb.co/R9v3sHq/how.png
-// https://i.ibb.co/RD4WkcW/what.png
-// https://i.ibb.co/cyW92Vc/why.png
-import why from "../../../Img/why.png"
-import what from "../../../Img/what.png"
-import how from "../../../Img/how.png"
-
 export default [
   {
     class: "whyDiv",
-    img: `${why}`,
+    img: `https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad0806268d1877e9786678_why.png`,
     for: "Why?",
     content1: "We aim to nurture entrepreneurship through",
     content2: "creative, authentic, and efficient techniques.",
@@ -16,7 +9,7 @@ export default [
   },
   {
     class: "HowDiv",
-    img: `${how}`,
+    img: `https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad080e7a881d28eb9cacc7_how.png`,
     for: "How?",
     content1:
       "Strong co-operation between members that our organization instills is how we can accomplish all of this.",
@@ -26,7 +19,7 @@ export default [
   },
   {
     class: "WhatDiv",
-    img: `${what}`,
+    img: `https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad0800a2e57b8ce3c83da8_what.png`,
     for: "What?",
     content1: "Through our social media handles, we",
     content2:

@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function knowus(props) {
-  console.log(props);
   return (
     <>
       <div className={props.knowus.class}>
