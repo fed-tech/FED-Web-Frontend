@@ -6,6 +6,8 @@ import testi from "../Data/card-detail.js";
 import Img from "../Components/Home/Work";
 import knowus from "./../Data/db";
 import women from "../Img/image 7.png";
+
+// css
 import "../Components/Home/css/space.css";
 import "../Components/Home/css/home.css";
 import "../Components/Home/css/testimonial.css";
@@ -13,6 +15,8 @@ import "../Components/Home/css/testimonial.css";
 export default function Home() {
   return (
     <>
+      Carousel
+      <br />
       <section id="KnowUs">
         <div className="KnowUsmDiv">
           <p id="KnowUspTag">
@@ -53,7 +57,6 @@ export default function Home() {
         </div>
       </section>
       <div className="space"></div>
-
       {/* -------------------------------------------------Testimonial-------------------------------------- */}
       <section id="testimonial">
         <p className="BelievePTag">
@@ -75,7 +78,6 @@ export default function Home() {
         <div className="space2"></div>
       </section>
       {/* ----------------------------------------------------WE WORK WITH----------------------------------------  */}
-
       <section id="work">
         <div className="WeWorkWith">
           <p className="WeWorkWithPTag">
