@@ -7,8 +7,9 @@ import "./css/workwith.css";
 
 export default class SimpleSlider extends Component {
   render() {
-    const settings = {
+    const setting = {
       dots: false,
+      arrows: false,
       infinite: true,
       autoplaySpeed: 0,
       speed: 30000,
@@ -55,7 +56,7 @@ export default class SimpleSlider extends Component {
     };
     return (
       <div>
-        <Slider {...settings}>
+        <Slider {...setting}>
           {Data.map((data, i) => (
             <div key={i} className="img-style">
               <img src={data.src} alt="" />
