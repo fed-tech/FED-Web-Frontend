@@ -52,9 +52,9 @@
   color: white !important;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 320px){
   .slick-dots{
-    bottom: 60px !important;
+    bottom: 30px !important;
     margin-left: 30px !important;
   }
 
@@ -63,7 +63,29 @@
   }
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 400px) and (min-width:320px){
+  .slick-dots{
+    bottom: 70px !important;
+    margin-left: 30px !important;
+  }
+
+  .slick-dots li button:before{
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 650px) and (min-width:400px){
+  .slick-dots{
+    bottom: 100px !important;
+    margin-left: 30px !important;
+  }
+
+  .slick-dots li button:before{
+    font-size: 12px !important;
+  }
+}
+
+@media only screen and (max-width: 750px) and (min-width: 650px){
   .slick-dots{
     bottom: 20px !important;
     margin-left: 30px !important;
