@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card-box";
+import { Link } from "react-router-dom";
 import testi from "./../../Data/card-detail.js";
 
 export default function Testimonial() {
@@ -16,9 +17,9 @@ export default function Testimonial() {
       </div>
       <div className="SeeallDiv">
         <p className="Seeall">
-          <a href="./Testimonial.html" className="linkClass">
+          <Link to="/Testimonial" className="LinkStyle">
             <span id="Seeall">See all</span> <span>&gt;</span>
-          </a>
+          </Link>
         </p>
       </div>
       <div className="space2"></div>

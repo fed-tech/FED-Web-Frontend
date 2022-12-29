@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -30,7 +33,7 @@ input[type="number"] {
 
 ::-webkit-scrollbar-track {
   padding: 0px 20px;
-  background: #fff;
+  background-color: #0F0E0E;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -39,7 +42,7 @@ input[type="number"] {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(145, 145, 145);
+  background: rgb(222, 222, 222);
 }
 
 .page {
@@ -54,4 +57,8 @@ input[type="number"] {
   max-width: 1750px;
   width: 100%;
   background-color: #e5e5e5;
+}
+
+.active {
+  color: #f45725;
 }
