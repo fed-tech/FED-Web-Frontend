@@ -1,14 +1,14 @@
 import React from "react";
-import Content from "../Components/Home/KnowUs/jsx/Content";
-import Believe from "../Components/Home/WeBelieveIn/Believe";
-import Card from "../Components/Home/Testimonial/jsx/Card-box";
-import testi from "../Components/Home/Testimonial/card-detail.js";
-import Img from "../Components/Home/WeWorkWith/jsx/Work";
+import Content from "../Components/Home/Content";
+import Believe from "../Components/Home/Believe";
+import Card from "../Components/Home/Card-box";
+import testi from "../Data/card-detail.js";
+import Img from "../Components/Home/Work";
 import knowus from "./../Data/db";
 import women from "../Img/image 7.png";
-import "../Components/Home/KnowUs/css/space.css";
+import "../Components/Home/css/space.css";
 import "../Components/Home/css/home.css";
-import "../Components/Home/Testimonial/css/testimonial.css";
+import "../Components/Home/css/testimonial.css";
 
 export default function Home() {
   return (
