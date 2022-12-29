@@ -4,9 +4,6 @@ import Content from "./../../Components/Home/Content";
 // Data
 import knowus from "./../../Data/db";
 
-// Image
-import women from "./../../Img/image 7.png";
-
 export default function KnowUs() {
   return (
     <>
@@ -16,7 +13,11 @@ export default function KnowUs() {
             <span className="KnowUspTag">Know us </span>
             better...
           </p>
-          <img src={women} alt="" className="womenWithALaptop" />
+          <img
+            src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad2892268d18376a7a66e6_women.png"
+            alt=""
+            className="womenWithALaptop"
+          />
           <p id="womenBelowText">
             Federation of Entrepreneurship Development (FED) is a group of KIIT
             TBI students that want to encourage individuals with entrepreneurial
