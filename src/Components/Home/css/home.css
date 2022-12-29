@@ -198,6 +198,7 @@
 }
 
 .testDiv {
+  position: relative;
   background-color: #fff;
   padding: 24px;
   width: 40%;
@@ -234,7 +235,9 @@
 }
 
 .userDisDiv {
-  background-color: transparent;
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
 }
 
 .userName {
