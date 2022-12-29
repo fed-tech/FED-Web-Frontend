@@ -1,5 +1,4 @@
 import React from "react";
-import Img from "../Components/Home/Work";
 import KnowUsCom from "../Components/Home/KnowUs";
 import BelieveCom from "./../Components/Home/BelieveCom";
 import Testimonial from "./../Components/Home/Testimonial";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <>
       Carousel
-      <br />
       <KnowUsCom />
       <BelieveCom />
       <Testimonial />
