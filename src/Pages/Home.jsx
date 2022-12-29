@@ -4,7 +4,7 @@ import Believe from "../Components/Home/WeBelieveIn/Believe";
 import Card from "../Components/Home/Testimonial/jsx/Card-box";
 import testi from "../Components/Home/Testimonial/card-detail.js";
 import Img from "../Components/Home/WeWorkWith/jsx/Work";
-import knowus from "../Components/Home/KnowUs/db.js";
+import knowus from "./../Data/db";
 import women from "../Img/image 7.png";
 import "../Components/Home/KnowUs/css/space.css";
 import "../Components/Home/css/home.css";
