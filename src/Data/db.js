@@ -1,7 +1,3 @@
-import why from "../../../Img/why.png";
-import what from "../../../Img/what.png";
-import how from "../../../Img/how.png";
-
 export default [
   {
     class: "whyDiv",
