@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Nav />
-        <NavMobile/>
+        <NavMobile />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
