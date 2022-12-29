@@ -1,12 +1,14 @@
-.slick-prev{
-  left:0px !important;
+.slick-prev {
+  left: 0px !important;
   z-index: 1 !important;
 }
-  
-.slick-next{
-  right: 25.5px !important;
+
+.slick-next {
+  right: 24.5px !important;
 }
-.slick-prev:before, .slick-next:before{
+
+.slick-prev:before,
+.slick-next:before {
   font-family: 'Times New Roman';
   background-color: black;
   font-size: 24px;
@@ -14,23 +16,27 @@
   padding: 16px;
   color: white;
 }
-.slick-prev:before{
+
+.slick-prev:before {
   content: '❮' !important;
 }
-.slick-next:before{
+
+.slick-next:before {
   content: '❯' !important;
 
 }
-.slick-prev:hover:before,.slick-next:hover:before{
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
   color: #f45725;
 }
-  
 
-.slick-dots li.slick-active button:before{
+
+.slick-dots li.slick-active button:before {
   color: white !important;
 }
 
-.slick-dots{
+.slick-dots {
   display: flex !important;
   bottom: 200px !important;
   margin-left: 50px !important;
@@ -38,11 +44,11 @@
   width: fit-content;
 }
 
-.slick-dots li{
+.slick-dots li {
   background-color: transparent !important;
 }
 
-.slick-dots li button:before{
+.slick-dots li button:before {
   font-size: 16px !important;
   position: relative !important;
   top: 0px !important;
@@ -52,46 +58,46 @@
   color: white !important;
 }
 
-@media only screen and (max-width: 320px){
-  .slick-dots{
+@media only screen and (max-width: 320px) {
+  .slick-dots {
     bottom: 30px !important;
     margin-left: 30px !important;
   }
 
-  .slick-dots li button:before{
+  .slick-dots li button:before {
     font-size: 12px !important;
   }
 }
 
-@media only screen and (max-width: 400px) and (min-width:320px){
-  .slick-dots{
+@media only screen and (max-width: 400px) and (min-width:320px) {
+  .slick-dots {
     bottom: 70px !important;
     margin-left: 30px !important;
   }
 
-  .slick-dots li button:before{
+  .slick-dots li button:before {
     font-size: 12px !important;
   }
 }
 
-@media only screen and (max-width: 650px) and (min-width:400px){
-  .slick-dots{
+@media only screen and (max-width: 650px) and (min-width:400px) {
+  .slick-dots {
     bottom: 100px !important;
     margin-left: 30px !important;
   }
 
-  .slick-dots li button:before{
+  .slick-dots li button:before {
     font-size: 12px !important;
   }
 }
 
-@media only screen and (max-width: 750px) and (min-width: 650px){
-  .slick-dots{
+@media only screen and (max-width: 750px) and (min-width: 650px) {
+  .slick-dots {
     bottom: 20px !important;
     margin-left: 30px !important;
   }
 
-  .slick-dots li button:before{
+  .slick-dots li button:before {
     font-size: 12px !important;
   }
 }
