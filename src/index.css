@@ -1,11 +1,9 @@
-
-
 * {
   margin: 0px;
   padding: 0px;
   color: #fff;
   box-sizing: border-box;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .LinkStyle {
@@ -45,8 +43,4 @@ input[type="number"] {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(145, 145, 145);
-}
-
-.active {
-  color: #f56692;
 }
