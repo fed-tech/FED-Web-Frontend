@@ -1,9 +1,8 @@
 import React from "react";
-import Believe from "../Components/Home/Believe";
-import Card from "../Components/Home/Card-box";
-import testi from "../Data/card-detail.js";
 import Img from "../Components/Home/Work";
 import KnowUsCom from "../Components/Home/KnowUs";
+import BelieveCom from "./../Components/Home/BelieveCom";
+import Testimonial from "./../Components/Home/Testimonial";
 
 // css
 import "../Components/Home/css/space.css";
@@ -16,43 +15,8 @@ export default function Home() {
       Carousel
       <br />
       <KnowUsCom />
-      {/* -----------------------Believe ------------------------------- */}
-      <section className="Beleiver">
-        <p className="BelievePTag">
-          What we <span>believe</span> in...
-          <span id="appleIcon">
-            <img
-              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/48/thinking-face_1f914.png"
-              alt=""
-            />
-          </span>
-        </p>
-        <div className="believeCenterDiv">
-          <Believe />
-        </div>
-      </section>
-      <div className="space"></div>
-      {/* -------------------------------------------------Testimonial-------------------------------------- */}
-      <section id="testimonial">
-        <p className="BelievePTag">
-          What do <span>they say</span> about us?
-        </p>
-        <div className="testDivMain">
-          <div className="testDivChild">
-            <Card testi={testi[0]} />
-            <Card testi={testi[1]} />
-          </div>
-        </div>
-        <div className="SeeallDiv">
-          <p className="Seeall">
-            <a href="./Testimonial.html" className="linkClass">
-              <span id="Seeall">See all</span> <span>&gt;</span>
-            </a>
-          </p>
-        </div>
-        <div className="space2"></div>
-      </section>
-      {/* ----------------------------------------------------WE WORK WITH----------------------------------------  */}
+      <BelieveCom />
+      <Testimonial />
       <section id="work">
         <div className="WeWorkWith">
           <p className="WeWorkWithPTag">
