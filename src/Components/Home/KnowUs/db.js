@@ -1,9 +1,6 @@
-// https://i.ibb.co/R9v3sHq/how.png
-// https://i.ibb.co/RD4WkcW/what.png
-// https://i.ibb.co/cyW92Vc/why.png
-import why from "../../../Img/why.png"
-import what from "../../../Img/what.png"
-import how from "../../../Img/how.png"
+import why from "../../../Img/why.png";
+import what from "../../../Img/what.png";
+import how from "../../../Img/how.png";
 
 export default [
   {
