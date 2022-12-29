@@ -48,7 +48,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://feddeploy.pages.dev/Img/instagram.png"
+                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fc55e11aacde597f36_instagram.png"
                   alt="instaimg"
                   className="iconimg"
                 />
@@ -59,7 +59,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://feddeploy.pages.dev/Img/linkedin.png"
+                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fd33698b3915d77ef1_linkedin.png"
                   alt="linkedinimg"
                   className="iconimg"
                 />
@@ -70,7 +70,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://fedkiit.com/Img/spotify.png"
+                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fb3ba6d10f3bf1435c_spotify.png"
                   alt="spotifyimg"
                   className="iconimg"
                 />
@@ -81,7 +81,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://fedkiit.com/Img/youtube.png"
+                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fa33698b5829d77e9a_youtube.png"
                   alt="youtubeimg"
                   className="iconimg"
                 />
