@@ -21,12 +21,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* .BodyDiv {
-  background-image: url(./Img/background.png);
-  background-attachment: fixed;
-  background-size: cover;
-} */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
