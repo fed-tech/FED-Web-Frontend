@@ -3,7 +3,7 @@ import "./css/LetsTalkBusiness.css";
 
 export default function LetsTalkBusiness() {
   return (
-    <div class="letsTalkBusiness">
+    <div class="letsTalkBusiness" id="ContactUs">
       <div class="letsTalkBusiness-left">
         <p class="business-heading">
           Let's Talk <span>Business</span>
