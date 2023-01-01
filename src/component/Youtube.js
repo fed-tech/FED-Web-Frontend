@@ -3,9 +3,7 @@ function Youtube(props)
 {
     return(
         <section id="YOUTUBE">
-        <div className="youtube">
-
-
+        <div className="yt">
         </div>
         </section>
 
