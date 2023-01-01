@@ -6,6 +6,7 @@ import Error from "./Pages/Error";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
+import Events from "./Pages/Events";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <NavMobile />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/event" element={<Events />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />

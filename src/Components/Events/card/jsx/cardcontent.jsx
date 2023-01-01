@@ -1,7 +1,7 @@
 import React from 'react'
 import "../css/eventCard.css"
 
-export default function eventcard(props) {
+export default function eventcard(props){
   return (
     <>
         <div className='eventcard'>
