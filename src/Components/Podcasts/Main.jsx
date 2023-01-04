@@ -1,13 +1,15 @@
-import React from "react";
+import React, {useState,useEffect}from "react";
 import "./css1/podcasts.css";
-import { Navigate } from "react-router-dom";
+import { useNavigation } from "react-router-dom";
 function Main(props)
 {
-   const [goToYoutube, setGoToYoutube] = React.useState(false);
-   React.useEffect(() => {
-      if (goToYoutube) {
-      return <Navigate to="/Youtube" />;
-   }})
+   const navigation = useNavigation();
+   const [goToYoutube, setGoToYoutube] = useState(false);
+   useEffect(() => {
+    if (goToYoutube) {
+      navigation("/Youtube")
+    }  
+   },[goToYoutube])
    return(
     <section id="podcasts">
        <div className="KnowUsmDiv">
