@@ -1,0 +1,27 @@
+.mainbody {
+  background-color: black;
+  width: 100%;
+}
+.descriptiondiv {
+  background-color: black;
+  margin: 5rem 3rem 3rem 3rem;
+}
+.heading1 {
+  color: rgba(244, 87, 37, 1);
+  background-color: black;
+  padding: 0px 0px 10px 0px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.firstdiv {
+  color: white;
+  background-color: black;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+}
