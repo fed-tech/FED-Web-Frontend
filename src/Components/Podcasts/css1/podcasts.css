@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background: transparent;
+  /* background: transparent; */
   margin-bottom: 5%;
   margin-top: 15%;
 }
@@ -36,7 +36,7 @@
   font-size: 50px;
   line-height: 59px;
   text-align: center;
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 .para2 {
   color: #f45725;
@@ -48,7 +48,7 @@
   font-size: 110%;
   line-height: 40px;
   letter-spacing: 0.005em;
-  background-color: transparent;
+  /* background-color: transparent; */
   text-align: center;
   width: 50%;
   margin-bottom: 90px;
@@ -70,6 +70,12 @@
   margin-bottom: 0%;
   font-weight: 800;
 }
+.cover-btn:hover,
+.cover-btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
 @media screen and (max-width: 640px) {
   .para3 {
     width: 100%;

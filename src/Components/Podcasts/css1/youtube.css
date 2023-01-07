@@ -1,20 +1,45 @@
 .mainbody {
   background-color: black;
   width: 100%;
+  margin-top: -800px;
 }
 .descriptiondiv {
   background-color: black;
-  margin: 5rem 3rem 3rem 3rem;
+  margin: 5rem 3rem 0rem 0rem;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 30px;
 }
+.bottomcontainer {
+  background-color: black;
+  margin: 0rem 3rem 0rem 0rem;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 30px;
+}
+
 .heading1 {
   color: rgba(244, 87, 37, 1);
   background-color: black;
   padding: 0px 0px 10px 0px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 20px;
   line-height: 24px;
+  padding-top: 30px;
+}
+.heading2 {
+  color: rgba(244, 87, 37, 1);
+  background-color: black;
+  padding: 0px 0px 10px 0px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  padding-top: 90px;
+  /* padding-left: 90px; */
 }
 .firstdiv {
   color: white;
@@ -24,4 +49,100 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 40px;
+}
+.image1 {
+  width: 252px;
+  height: 141px;
+  border-radius: 12px;
+}
+.underdiv1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.items {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin: 1rem 1rem;
+  padding: 15px 12px;
+  background-color: white;
+  border-radius: 12px;
+  /* border: 2px dotted red; */
+}
+.imagediv,
+.empowering,
+.ep,
+.paragraph {
+  background-color: transparent;
+}
+.empowering,
+.ep {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+/* .paragraph {
+  color: black;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+} */
+.paragraph {
+  display: -webkit-box;
+  max-width: 98%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+  color: black;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.eti {
+  margin: 0px 0px 0px 34px;
+}
+.empowering {
+  color: rgba(244, 87, 37, 1);
+  margin: 0px 0px 9px 0px;
+}
+.ep {
+  color: black;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+.items2,
+.items3 {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  margin: 1rem 1rem;
+  margin-top: 0rem;
+  padding: 15px 12px;
+  background-color: white;
+  border-radius: 12px;
+}
+.items:hover,
+.items:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+.items2:hover,
+.items2:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+.items3:hover,
+.items3:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
