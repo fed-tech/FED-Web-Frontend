@@ -1,7 +1,16 @@
 .mainbody {
   background-color: black;
   width: 100%;
-  margin-top: -800px;
+  /* margin-top: -750px; */
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container2 {
+  padding: 4rem 2rem 1rem 2rem;
 }
 .descriptiondiv {
   background-color: black;
