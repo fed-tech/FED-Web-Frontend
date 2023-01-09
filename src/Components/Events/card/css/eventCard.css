@@ -103,7 +103,6 @@
 @media only screen and (max-width:640px) {
 
     .eventcard {
-        /* margin: 20px; */
         width: 87% !important;
     }
 }
