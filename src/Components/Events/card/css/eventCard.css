@@ -1,12 +1,13 @@
-.cards{
+.cards {
     background-color: #0e0e0e;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
 }
 
 .eventcard {
-    margin: 0px 40px 40px 40px;
+    /* margin: 0px 40px 40px 40px; */
     display: flex;
     justify-content: space-between;
     border-radius: 32px;
@@ -99,10 +100,10 @@
     color: #f45725;
 }
 
-@media only screen and (max-width:640px){
+@media only screen and (max-width:640px) {
 
-    .eventcard{
-        margin: 20px;
+    .eventcard {
+        /* margin: 20px; */
         width: 87% !important;
     }
 }
@@ -139,7 +140,7 @@
     .left {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 12px;
     }
@@ -176,27 +177,29 @@
     }
 }
 
-@media only screen and (min-width: 650px) and (max-width: 700px){
-    .eventcard{
+/* 
+@media only screen and (min-width: 650px) and (max-width: 700px) {
+    .eventcard {
         width: 40%;
         margin: 30px;
     }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 800px){
-    .eventcard{
+
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+    .eventcard {
         width: 38%;
     }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1000px){
-    .eventcard{
+@media only screen and (min-width: 800px) and (max-width: 1000px) {
+    .eventcard {
         width: 40%;
     }
 }
 
-@media only screen and (min-width: 1000px) and (max-width: 1140px){
-    .eventcard{
+@media only screen and (min-width: 1000px) and (max-width: 1140px) {
+    .eventcard {
         width: 42%;
     }
-}
+} */
