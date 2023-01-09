@@ -11,3 +11,9 @@
     background-color: #0f0e0e;
     font-weight: bolder;
 }
+
+@media only screen and (max-width:650px){
+    .heading{
+        padding-top: 78px;
+    }
+}

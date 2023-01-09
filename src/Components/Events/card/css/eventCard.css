@@ -1,13 +1,8 @@
 .cards{
     background-color: #0e0e0e;
     display: flex;
-    flex-direction: column;
-}
-
-.event{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .eventcard {
@@ -18,7 +13,7 @@
     padding: 30px;
     background-color: #1e1e1e;
     position: relative;
-    width: 45%;
+    width: 43%;
 }
 
 .carddetails {
@@ -105,21 +100,14 @@
 }
 
 @media only screen and (max-width:640px){
-    .event{
-        flex-direction: column;
-        padding: 12px;
-    }
 
     .eventcard{
-        margin: 12px;
+        margin: 20px;
+        width: 87% !important;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    .cards {
-        display: flex;
-        flex-direction: column;
-    }
 
     #carddetails {
         display: flex;
@@ -128,7 +116,7 @@
     }
 
     .eventcard {
-        width: 90% !important;
+        width: 90%;
     }
 }
 
@@ -175,12 +163,6 @@
 
 @media only screen and (max-width: 400px) {
     .regBtn {
-        padding: 10px 40px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .regBtn {
         padding: 10px 20px;
     }
 
@@ -191,5 +173,30 @@
 
     .datemonth {
         margin-right: -1rem;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 700px){
+    .eventcard{
+        width: 40%;
+        margin: 30px;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 800px){
+    .eventcard{
+        width: 38%;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1000px){
+    .eventcard{
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1140px){
+    .eventcard{
+        width: 42%;
     }
 }

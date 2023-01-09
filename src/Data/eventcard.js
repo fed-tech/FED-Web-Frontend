@@ -1,4 +1,4 @@
-export default [
+export const eventcard = [
   {
     class: "talkShow",
     date: "26",
