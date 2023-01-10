@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="logodiv">
           <img
             className="fedlogo"
-            src="https://feddeploy.pages.dev/Img/FedLogo.png"
+            src={"./src/assets/FedLogo.png"}
             alt="fedlogo"
           />
           <p className="fed">FED</p>
