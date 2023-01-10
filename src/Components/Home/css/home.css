@@ -9,19 +9,6 @@
   background-color: #0f0e0e;
 }
 
-.KnowUsmDiv {
-  padding: 95px 0px 0px 0px;
-  background-image: url("../../../Img/image-23.png");
-  background-color: #0f0e0e;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #message {
   text-shadow: 10px 10px 50px lightgray;
 }
@@ -586,7 +573,6 @@ form {
   .workptagDes {
     width: 80%;
   }
-
 
   .testpTag {
     margin-bottom: 40px;
