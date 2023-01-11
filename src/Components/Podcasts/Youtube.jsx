@@ -86,31 +86,33 @@ function Youtube(props)
                                 <p className="paragraph1" >
                                  Hello Viewers! 
                                  <br/>
+                                 <br/>
                                    The FEDpreneur Show is our new podcast series in which we host India's most successful entrepreneurs and strive to uncover their secrets to success, learning, and entertainment! Every conversation on The FEDpreneur Show provides the viewer with intellectual, educational, and extreme learning opportunities. It is about a visionary entrepreneur session with several multi-talented and experienced entrepreneurs. It would aid our young brains to stand strong in marketing and startup endeavors with an upcoming podcast, "The FEDpreneur Show," where we host India's best success stories and aim to dig out their secrets to success, learning, and enjoyment!
                                  <br/>
-
+                                 <br/>
                                  Today's audio has an in-depth chat with Nimish Keshri about building start-ups in India, their philosophy, secrets, ups and downs along the way, and many other fascinating information.
+                                  <br/>
                                   <br/>
 
                                  Nimish Keshri is the founder and CEO of the EdTech business SkillVERTEX. SkillVERTEX is an online learning platform where students may explore and select from a variety of courses. SkillVERTEX provides their customers with a placement programme to assist them develop their abilities in the workplace.
                                  <br/> 
-
+                                 <br/>
                                  Follow us on : 
                                  <br/>
-
+                                <br/>
                                   Instagram: <a href="https://www.instagram.com/fedkiit/" target="_blank">https://www.instagram.com/fedkiit/</a>  
                                   <br/>
-
+                                  <br/>
                                   LinkedIn : <a href="https://www.linkedin.com/company/fedkiit" target="_blank"> https://www.linkedin.com/company/fedkiit </a> 
                                  <br/>
-
+                                 <br/>
       
                                     Guest of honor: Nimish Keshri (Instagram: <a href="https://www.instagram.com/who_nk/?utm_medi..." target="_blank">https://instagram.com/who_nk?utm_medi...</a> )
                                  <br/>
-
+                                 <br/>
                                    Podcaster: Aniket Patro (Instagram:<a href="https://www.instagram.com/ankp04/?utm_medi..." target="_blank"> https://instagram.com/ankp04?utm_medi...</a> ) 
                                   <br/>
-
+                                  <br/>
                                  SkillVERTEX ( <a href="https://skillvertex.in">https://skillvertex.in</a>)
                                   </p>
                             </div>
@@ -129,61 +131,61 @@ function Youtube(props)
                                 <p className="paragraph2">
                                 Hello Viewers!
                                 <br/>
-      
+                                <br/>
 
                                 The FEDpreneur Show is our new podcast series in which we host India's most successful entrepreneurs and strive to uncover their secrets to success, learning, and entertainment! Every conversation on The FEDpreneur Show provides the viewer with intellectual, educational, and extreme learning opportunities. It is about a visionary entrepreneur session with several multi-talented and experienced entrepreneurs. It will aid our young brains to stand strong in marketing and startup endeavours with an upcoming podcast, "The FEDpreneur Show," where we host India's best success stories and aim to dig out their secrets to success, learning, and enjoyment!
                                 <br/>
-
+                                <br/>
                                Today's audio episode includes an in-depth discussion with Niket Raj Dwivedi on developing start-ups in India, their philosophy, their secrets, and many other topics.
                                <br/>
-      
+                                <br/>
 
                                FED's creator, Niket Raj Dwivedi, is also the CEO of The Write Order, India's fastest growing publishing business situated in Bangalore, Karnataka. He is a wonderful writer, an incredible poet, and a successful entrepreneur, the creator of the Federation of Entrepreneurship-KIIT, also known as the KIIT's Lone Wolf. This entrepreneurial interview is extremely useful since it gives a step-by-step instruction on how to launch a firm with only a business idea. The Indian startup landscape is unique, and this video might help you learn more.
                                <br/>
-
+                               <br/>
                                This Indian podcast is hopefully going to spread a lot of knowledge and education amongst the various segments of the society.
                                <br/>
-      
+                               <br/>
 
                               Ambar Bishun & Niket Raj Dwivedi are here to discuss the grind before the success of The Write Order.
                               <br/>
-      
+                              <br/>
 
                               Stay connected with the Federation of Entrepreneurship Development-KIIT via our social media platforms to know more about us.
                                <br/>
-
+                               <br/>
                               Follow us on :
                                <br/>
-      
+                               <br/>
 
                               Instagram: <a href="https://www.instagram.com/fedkiit/" target="_blank">https://www.instagram.com/fedkiit/</a>  
                                <br/> 
-
+                                <br/>
                                LinkedIn : <a href="https://www.linkedin.com/company/fedkiit" target="_blank">https://www.linkedin.com/company/fedkiit</a>
                               <br/>  
-
+                              <br/>
                                Facebook: <a href="https://www.facebook.com/fedkiit" target="_blank">https://www.facebook.com/fedkiit </a> 
                                <br/>  
       
-
+                                <br/>
                               Guest of honour: Niket Raj Dwivedi (Instagram: <a href="https://www.instagram.com/niketrajdwi.../" target="_blank">https://www.instagram.com/niketrajdwi...</a>)
                               <br/> 
-
+                              <br/>
                                Podcaster: Ambar Bishun (Instagram: <a href="https://www.instagram.com/august_boy_99/" target="_blank">https://www.instagram.com/august_boy_99/</a>) 
                               <br/>
-
+                              <br/>
                              Host: Mayank Rai (Instagram: <a href="https://www.instagram.com/mayankkkk._0/" target="_blank">https://www.instagram.com/mayankkkk._0/</a>) 
                                 <br/>
-
+                                 <br/>
                              The Write Order (Instagram: <a href="https://www.instagram.com/thewriteorder/" target="_blank">https://www.instagram.com/thewriteorder/</a>)
                              <br/>
                              <br/> 
-
+                              <br/>
       
 
                              Cheers
                              <br/> 
-
+                              <br/>
                              TEAM FED
                                 </p>
                             </div>
