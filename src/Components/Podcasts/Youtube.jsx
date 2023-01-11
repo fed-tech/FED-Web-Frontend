@@ -49,7 +49,7 @@ function Youtube(props)
                     </div>
                 </div>
                 <div className="div2">
-                <div className="underdiv1">
+                <div className="underdiv1" onClick={changeText1}>
                         <div className="items2">
                             <div className="imagediv">
                               <img src={image1} className="image1" alt="Empowering"></img>
