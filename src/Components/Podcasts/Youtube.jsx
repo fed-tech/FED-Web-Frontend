@@ -10,16 +10,33 @@ function Youtube(props)
     function changeText1()
     {
         $(".firstdiv").replaceWith($(".paragraph1").clone().toggleClass("paragraph1 firstdiv"));
+        changeVideo();
+    }
+    function changeVideo()
+    {
+        document.getElementsByClassName("video_content")[0].src="https://www.youtube.com/embed/_MQdy0jUR7I";
+        
     }
     function changeText2()
     {
-        $("firstdiv").replaceWith($("paragraph2"));
+        $(".firstdiv").replaceWith($(".paragraph2").clone().toggleClass("paragraph2 firstdiv"));
+        changeVideo2();
     }
+    function changeVideo2()
+    {
+        document.getElementsByClassName("video_content")[0].src="https://www.youtube.com/embed/TZkBzFK_zQU";
+    }
+   $(".underdiv1").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".container1").offset().top
+    }, 2000);
+});
     return(
         <div className="mainbody">
         <div className="container1">
         <div className="container2">
            <iframe
+           className="video_content"
            width="100%"
            height="480"
            src="https://www.youtube.com/embed/tqGsqwp67-g"
@@ -42,7 +59,7 @@ function Youtube(props)
             <h4 className="heading2">Watch More</h4>
             <div className="watchmore">
                 <div className="div1">
-                    <div className="underdiv1">
+                    <div className="underdiv1" >
                         <div className="items">
                             <div className="imagediv">
                               <img src={image} className="image1" alt="Empowering"></img>
