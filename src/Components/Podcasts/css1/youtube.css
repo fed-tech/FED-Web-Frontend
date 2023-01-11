@@ -3,6 +3,7 @@
   width: 100%;
   /* margin-top: -750px; */
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 .container1 {
   display: flex;
@@ -177,7 +178,23 @@
 .div1 {
   padding-right: 20px;
 }
+@media screen and (max-width: 1150px) {
+  .container1 {
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .container1 {
+    padding-left: 0px;
+    padding-right: 90px;
+  }
+}
 @media screen and (max-width: 746px) {
+  .container1 {
+    padding-left: 0px;
+    padding-right: 400px;
+  }
   .items {
     display: flex;
     flex-direction: column;
@@ -209,14 +226,18 @@
   .div3 {
     padding-top: 10px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
   .div2 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 @media screen and (max-width: 626px) {
+  .container1 {
+    padding-left: 0px;
+    padding-right: 500px;
+  }
   .empowering .ep {
     word-wrap: break-word;
     font-size: 15px;
@@ -224,11 +245,11 @@
   }
   .div2 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
   .div3 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -237,20 +258,24 @@
   }
   .div2 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
   .div3 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 @media screen and (max-width: 498px) {
+  .container1 {
+    padding-left: 0px;
+    padding-right: 600px;
+  }
   .div2 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
   .div3 {
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
