@@ -85,7 +85,9 @@
 .imagediv,
 .empowering,
 .ep,
-.paragraph {
+.paragraph,
+.paragraph1,
+.paragraph2 {
   background-color: transparent;
 }
 .empowering,
@@ -104,7 +106,9 @@
   font-size: 17px;
   line-height: 23px;
 } */
-.paragraph {
+.paragraph,
+.paragraph1,
+.paragraph2 {
   display: -webkit-box;
   max-width: 98%;
   -webkit-line-clamp: 3;

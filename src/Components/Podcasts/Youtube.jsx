@@ -3,9 +3,18 @@ import image from "./css1/images/image-27.png";
 import image1 from "./css1/images/image-29.png";
 import image2 from "./css1/images/youtube-28.png";
 import "./css1/youtube.css";
+import $ from "jquery";
 
 function Youtube(props)
 {
+    function changeText1()
+    {
+        $("firstdiv").replaceWith($("paragraph1"));
+    }
+    function changeText2()
+    {
+        $("firstdiv").replaceWith($("paragraph2"));
+    }
     return(
         <div className="mainbody">
         <div className="container1">
@@ -57,7 +66,7 @@ function Youtube(props)
                             <div className="eti">
                                 <h4 className="empowering">Skills Always Reign Supreme</h4>
                                 <h4 className="ep">EP 02</h4>
-                                <p className="paragraph">
+                                <p className="paragraph1">
                                  Hello Viewers! 
                                  <br/>
                                    The FEDpreneur Show is our new podcast series in which we host India's most successful entrepreneurs and strive to uncover their secrets to success, learning, and entertainment! Every conversation on The FEDpreneur Show provides the viewer with intellectual, educational, and extreme learning opportunities. It is about a visionary entrepreneur session with several multi-talented and experienced entrepreneurs. It would aid our young brains to stand strong in marketing and startup endeavors with an upcoming podcast, "The FEDpreneur Show," where we host India's best success stories and aim to dig out their secrets to success, learning, and enjoyment!
@@ -92,7 +101,7 @@ function Youtube(props)
                     </div>
                 </div>
                 <div className="div3">
-                <div className="underdiv1">
+                <div className="underdiv1" onClick={changeText2}>
                         <div className="items3">
                             <div className="imagediv">
                               <img src={image2} className="image1" alt="Empowering"></img>
@@ -100,7 +109,7 @@ function Youtube(props)
                             <div className="eti">
                                 <h4 className="empowering">Low CGPA !! Multiple Backlogs!!?? Mind grind of an Entrepreneur !</h4>
                                 <h4 className="ep">EP 01</h4>
-                                <p className="paragraph">
+                                <p className="paragraph2">
                                 Hello Viewers!
                                 <br/>
       
