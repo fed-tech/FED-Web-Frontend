@@ -9,7 +9,7 @@ function Youtube(props)
 {
     function changeText1()
     {
-        $("firstdiv").replaceWith($("paragraph1"));
+        $(".firstdiv").replaceWith($(".paragraph1").clone().toggleClass("paragraph1 firstdiv"));
     }
     function changeText2()
     {
@@ -66,7 +66,7 @@ function Youtube(props)
                             <div className="eti">
                                 <h4 className="empowering">Skills Always Reign Supreme</h4>
                                 <h4 className="ep">EP 02</h4>
-                                <p className="paragraph1">
+                                <p className="paragraph1" >
                                  Hello Viewers! 
                                  <br/>
                                    The FEDpreneur Show is our new podcast series in which we host India's most successful entrepreneurs and strive to uncover their secrets to success, learning, and entertainment! Every conversation on The FEDpreneur Show provides the viewer with intellectual, educational, and extreme learning opportunities. It is about a visionary entrepreneur session with several multi-talented and experienced entrepreneurs. It would aid our young brains to stand strong in marketing and startup endeavors with an upcoming podcast, "The FEDpreneur Show," where we host India's best success stories and aim to dig out their secrets to success, learning, and enjoyment!
