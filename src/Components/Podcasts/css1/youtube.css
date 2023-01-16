@@ -83,14 +83,11 @@
   padding: 15px 12px;
   background-color: white;
   border-radius: 12px;
-  /* border: 2px dotted red; */
 }
 .imagediv,
 .empowering,
 .ep,
-.paragraph,
-.paragraph1,
-.paragraph2 {
+.paragraph {
   background-color: transparent;
 }
 .empowering,
@@ -101,17 +98,8 @@
   font-size: 20px;
   line-height: 24px;
 }
-/* .paragraph {
-  color: black;
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 23px;
-} */
-.paragraph,
-.paragraph1,
-.paragraph2 {
+
+.paragraph {
   display: -webkit-box;
   max-width: 98%;
   -webkit-line-clamp: 3;
@@ -138,42 +126,15 @@
   padding-bottom: 15px;
   padding-top: 10px;
 }
-.items2,
-.items3 {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  margin: 1rem 1rem;
-  margin-top: 0rem;
-  padding: 15px 12px;
-  background-color: white;
-  border-radius: 12px;
-}
+
 .items:hover,
 .items:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
-.items2:hover,
-.items2:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
-.items3:hover,
-.items3:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.25em);
 }
 .video_content {
   width: 100%;
   height: 574;
-}
-.div3 {
-  padding-bottom: 30px;
-  padding-right: 20px;
-}
-.div2 {
-  padding-right: 20px;
 }
 .div1 {
   padding-right: 20px;
@@ -199,24 +160,10 @@
     display: flex;
     flex-direction: column;
   }
-  .items2 {
-    display: flex;
-    flex-direction: column;
-  }
-  .items3 {
-    display: flex;
-    flex-direction: column;
-  }
   .image1 {
     width: 100%;
   }
   .items .eti {
-    margin: 0px 0px 0px 0px;
-  }
-  .items2 {
-    margin: 0px 0px 0px 0px;
-  }
-  .items3 {
     margin: 0px 0px 0px 0px;
   }
   .empowering .ep {
@@ -243,39 +190,15 @@
     font-size: 15px;
     text-align: center;
   }
-  .div2 {
-    padding-left: 20px;
-    padding-right: 40px;
-  }
-  .div3 {
-    padding-left: 20px;
-    padding-right: 40px;
-  }
 }
 @media screen and (max-width: 600px) {
   .firstdiv {
     text-align: left;
-  }
-  .div2 {
-    padding-left: 20px;
-    padding-right: 40px;
-  }
-  .div3 {
-    padding-left: 20px;
-    padding-right: 40px;
   }
 }
 @media screen and (max-width: 498px) {
   .container1 {
     padding-left: 0px;
     padding-right: 600px;
-  }
-  .div2 {
-    padding-left: 20px;
-    padding-right: 40px;
-  }
-  .div3 {
-    padding-left: 20px;
-    padding-right: 40px;
   }
 }
