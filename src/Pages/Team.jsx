@@ -1,9 +1,13 @@
 import React from 'react'
 import '../Components/Team/Team.css'
+import db from '../Components/Team/dbTeam.json'
 import '../Components/Team/loading.css'
-import '../Components/Team/Team-Card/Core.jsx'
+import Core from '../Components/Team/Team-Card/Core.jsx'
+import Domain from '../Components/Team/Team-Card/Domain'
 export default function Team() {
-    console.log("object");
+  const coreMember = db.data.core;
+  const domain = db.data;
+  // console.log(coreMember)
   return (
     <>
     <section id='OurTeam'>
@@ -17,12 +21,13 @@ export default function Team() {
             the Creative group, the Technical group, and the Operations group.
           </p>
           <div id="CoreTeam">
-            <div className="centerLoader">
+            {/* <div className="centerLoader">
               <div className="arc" />
               <h1 className="loadingSpanH1">
                 <span className="loadingSpan">Loading</span>
               </h1>
-            </div>
+            </div> */}
+            {coreMember.map((data,i)=><Core mem={data} key ={i}/>)}
           </div>
         </div>
         <div className="space" />
@@ -34,12 +39,7 @@ export default function Team() {
             resolve technicalities in FED!
           </p>
           <div id="TechnicalTeam">
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
+            {domain.Tech.map((data,i)=><Domain mem={data} key={i}/>)}
           </div>
         </div>
         <div className="space" />
@@ -51,12 +51,7 @@ export default function Team() {
             and introduce FED as a whole- behind the veil!
           </p>
           <div id="CreativeTeam">
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
+          {domain.creative.map((data,i)=><Domain mem={data} key={i}/>)}
           </div>
         </div>
         <div className="space" />
@@ -68,12 +63,7 @@ export default function Team() {
             FED's endeavor!
           </p>
           <div id="MarketingTeam">
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
+          {domain.marketing.map((data,i)=><Domain mem={data} key={i}/>)}
           </div>
         </div>
         <div className="space" />
@@ -85,12 +75,7 @@ export default function Team() {
             operate FED's initiatives!
           </p>
           <div id="OperationsTeam">
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
+          {domain.operation.map((data,i)=><Domain mem={data} key={i}/>)}
           </div>
         </div>
         <div className="space" />
@@ -102,12 +87,7 @@ export default function Team() {
           operate FED's initiatives! */}
           </p>
           <div id="AlumniTeam">
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
+          {domain.alumni.map((data,i)=><Domain mem={data} key={i}/>)}
           </div>
         </div>
         <div className="space"></div>

@@ -1,0 +1,172 @@
+{
+  "data": {
+    "core": [
+      {
+        "name": "Rishab Kant",
+        "position": "President",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Navdeep Singh parewa",
+        "position": "Vice President",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Nishant Giri",
+        "position": "Marketing Director",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Rishav Singh",
+        "position": "Tech Director",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Ayan Kumar Paul",
+        "position": "Creative Director",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Sharoni Bose",
+        "position": "Operation Director",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      }
+    ],
+    "Tech": [
+      {
+        "name": "Achyut Vardhan",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Vineet Agrawal",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      }
+    ],
+    "creative": [
+      {
+        "name": "Shashank Singh",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Swarna Dutta",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Sayan Adhikari",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Shreya Raj",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Nekhil Kumar Agarwal",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Rajashree Rajalaxmi Rout",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      }
+    ],
+    "marketing": [
+      {
+        "name": "Divyanshu yogeshwar",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Likhita Sahu",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Swastik Soumya",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      }
+    ],
+    "operation": [
+      {
+        "name": "Shashnak Shivam",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      },
+      {
+        "name": "Avinash Pandey",
+        "linkedin": " ",
+        "github": "",
+        "img": ""
+      }
+    ],
+    "alumni": [
+        {
+          "name": "Rishab Kant",
+          "linkedin": " ",
+          "github": "",
+          "img": ""
+        },
+        {
+          "name": "Navdeep Singh parewa",
+          "linkedin": " ",
+          "github": "",
+          "img": ""
+        },
+        {
+          "name": "Nishant Giri",
+          "linkedin": " ",
+          "github": "",
+          "img": ""
+        },
+        {
+          "name": "Rishav Singh",
+          "linkedin": " ",
+          "github": "",
+          "img": ""
+        },
+        {
+          "name": "Ayan Kumar Paul",
+          "linkedin": " ",
+          "github": "",
+          "img": ""
+        },
+        {
+          "name": "Sharoni Bose",
+          "linkedin": " ",
+          "github": "",
+          "img": ""
+        }
+      ]
+  }
+}
