@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import "./css1/youtube.css";
 function Card(props) {
   return (
