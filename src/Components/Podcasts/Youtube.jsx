@@ -60,7 +60,6 @@ const cardList = [
   },
 ];
 function Youtube(props) {
-  const [count, setCount] = useState([]);
   return (
     <div className="mainbody">
       <div className="container1">
