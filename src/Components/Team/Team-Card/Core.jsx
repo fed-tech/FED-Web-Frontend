@@ -1,15 +1,20 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 export default function Core(props) {
   console.table(props);
+  const [showContent , setshowContent] = useState(true);
+  const [show , setshow] = useState(false);
+  useEffect(()=>{
+  setTimeout(()=>{setshowContent(false), setshow(true)},3000)
+  })
   return (
     <>
-    {/* <div className="centerLoader">
+    {showContent?<div className="centerLoader">
               <div className="arc" />
               <h1 className="loadingSpanH1">
                 <span className="loadingSpan">Loading</span>
               </h1>
-            </div> */}
-    <div className="flip-card">
+            </div>:<></>}
+  {show?<div className="flip-card">
   <div className="flip-card-inner">
     <div className="coreMemMainCard">
       <img
@@ -63,7 +68,7 @@ export default function Core(props) {
       </div>
     </div>
   </div>
-</div>
+</div>:<div></div>}
     </>
   )
 }

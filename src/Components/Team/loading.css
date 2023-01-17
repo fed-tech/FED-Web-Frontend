@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
 .centerLoader {
-    display: flex;
+  display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;

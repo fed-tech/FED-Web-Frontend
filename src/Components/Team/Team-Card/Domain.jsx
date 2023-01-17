@@ -1,17 +1,22 @@
-import React from 'react'
+import React,{useEffect, useState}from 'react'
 
 export default function Domain(props) {
-    console.table(props.mem);
+    // console.table(props.mem);
+    const [showContent2 , setshowContent2] = useState(true);
+  const [show2 , setshow2] = useState(false);
+  useEffect(()=>{
+  setTimeout(()=>{setshowContent2(false), setshow2(true)},3000)
+  })
     var RandomNumber = Math.floor(Math.random() * 3) + 1 ;
   return (
     <>
-    {/* <div className="centerLoader">
+    {showContent2?<div className="centerLoader">
               <div className="arc" />
               <h1 className="loadingSpanH1">
                 <span className="loadingSpan">Loading</span>
               </h1>
-            </div> */}
-            <div className="memDivMain">
+            </div>:<></>}
+            {show2?<div className="memDivMain">
   <div className="memImgDiv">
     <img src={props.mem.img} alt="" className="memImg" />
     <div className="memlinks">
@@ -52,7 +57,7 @@ export default function Domain(props) {
   <p className={`memName name${RandomNumber}`}>
     {props.mem.name}
   </p>
-</div>
+</div>:<div></div>}
 
     </>
   )
