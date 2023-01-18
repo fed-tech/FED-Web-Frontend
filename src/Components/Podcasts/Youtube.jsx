@@ -96,7 +96,12 @@ function Youtube(props) {
         <div className="watchmore">
           {cardList.map((cardList) => {
             return (
-              <div className="div1">
+              <div
+                className="div1"
+                onClick={() => {
+                  cardList.link, cardList.para;
+                }}
+              >
                 <div className="underdiv1">
                   <div className="items">
                     <div className="imagediv">
