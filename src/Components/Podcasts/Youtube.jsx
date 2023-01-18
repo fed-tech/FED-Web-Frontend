@@ -3,7 +3,7 @@ import image from "./css1/images/image-27.png";
 import image1 from "./css1/images/image-29.png";
 import image2 from "./css1/images/youtube-28.png";
 import "./css1/youtube.css";
-import Card from "./Card";
+
 const cardList = [
   {
     episode: "EP 03",
@@ -96,12 +96,24 @@ function Youtube(props) {
         <div className="watchmore">
           {cardList.map((cardList) => {
             return (
-              <Card
-                episode={cardList.episode}
-                image={cardList.image}
-                title={cardList.title}
-                para={cardList.para}
-              />
+              <div className="div1">
+                <div className="underdiv1">
+                  <div className="items">
+                    <div className="imagediv">
+                      <img
+                        src={cardList.image}
+                        className="image1"
+                        alt="Empowering"
+                      ></img>
+                    </div>
+                    <div className="eti">
+                      <h4 className="empowering">{cardList.title}</h4>
+                      <h4 className="ep">{cardList.episode}</h4>
+                      <p className="paragraph">{cardList.para}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
