@@ -79,7 +79,7 @@ function Youtube(props) {
   return (
     <div className="mainbody">
       <div className="container1">
-        <div className="container2">
+        <div className="container2" style={{ width: "90%" }}>
           <iframe
             className="video_content"
             width="100%"
