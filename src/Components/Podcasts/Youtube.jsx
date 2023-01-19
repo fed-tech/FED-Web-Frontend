@@ -99,7 +99,7 @@ function Youtube(props) {
               <div
                 className="div1"
                 onClick={() => {
-                  <List title={cardList.link} para={cardList.para} />;
+                  <List link={cardList.link} para={cardList.para} />;
                 }}
               >
                 <div className="underdiv1">
