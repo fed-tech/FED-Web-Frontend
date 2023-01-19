@@ -197,6 +197,24 @@ p {
   .items .eti {
     margin: 0px 0px 0px 0px;
   } */
+  /* .items .eti {
+    margin: 0px 0px 0px 0px;
+  }
+  .empowering {
+    word-wrap: break-word;
+    text-align: center;
+  }
+  .ep {
+    word-wrap: break-word;
+    text-align: center;
+  } */
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+  .image1 {
+    width: 100%;
+  }
   .items .eti {
     margin: 0px 0px 0px 0px;
   }
@@ -213,18 +231,50 @@ p {
   .firstdiv {
     text-align: left;
   }
-  .empowering .ep {
+  /* .empowering .ep {
     word-wrap: break-word;
     font-size: 15px;
     text-align: center;
   }
   .items .eti {
     margin: 0px 0px 0px 0px;
+  }  */
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+  .image1 {
+    width: 100%;
+  }
+  .items .eti {
+    margin: 0px -15px 0px -15px;
+  }
+  .empowering {
+    word-wrap: break-word;
+    text-align: center;
+  }
+  .ep {
+    word-wrap: break-word;
+    text-align: center;
   }
 }
-@media screen and (max-width: 498px) {
-  /* .container1 {
-    padding-left: 0px;
-    padding-right: 600px;
-  } */
+@media screen and (max-width: 600px) {
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+  .image1 {
+    width: 100%;
+  }
+  .items .eti {
+    margin: 0px -80px 0px -80px;
+  }
+  .empowering {
+    word-wrap: break-word;
+    text-align: center;
+  }
+  .ep {
+    word-wrap: break-word;
+    text-align: center;
+  }
 }
