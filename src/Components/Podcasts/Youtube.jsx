@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import image from "./css1/images/image-27.png";
 import image1 from "./css1/images/image-29.png";
 import image2 from "./css1/images/youtube-28.png";
+import List from "../Podcasts/List";
 import "./css1/youtube.css";
 import "../Podcasts/List";
 const cardList = [
@@ -10,11 +11,12 @@ const cardList = [
     image: image,
     title: "Empowering through Innovation",
     para: `The FEDpreneur Show is a Federation KIIT podcast series in which we host India's most successful entrepreneurs and attempt to unearth their secrets to success while learning entertainingly! Every conversation on The FEDpreneur Show offers the audience intellectual, educational, and extraordinary learning possibilities. It's about a visionary entrepreneur session with a group of multi-talented and experienced business owners. With a forthcoming podcast, "The FEDpreneur Show," where we host India's top success stories and strive to dig out their secrets to success, learning, and fun, it would help our young minds stand firm in marketing and startup endeavors!`,
+    link : "https://www.youtube.com/embed/tqGsqwp67-g",
   },
   {
     episode: "EP 02",
     image: image1,
-    title: "Skills Always Reign Supreme",
+    title: "SKILLS always reign SUPREME | EP 02 | The FEDpreneur Show",
     para: `Hello Viewers! <br>
     The FEDpreneur Show is our new podcast series in which we host India's most successful entrepreneurs and strive to uncover their secrets to success, learning, and entertainment! Every conversation on The FEDpreneur Show provides the viewer with intellectual, educational, and extreme learning opportunities. It is about a visionary entrepreneur session with several multi-talented and experienced entrepreneurs. It would aid our young brains to stand strong in marketing and startup endeavors with an upcoming podcast, "The FEDpreneur Show," where we host India's best success stories and aim to dig out their secrets to success, learning, and enjoyment!<br>
     Today's audio has an in-depth chat with Nimish Keshri about building start-ups in India, their philosophy, secrets, ups and downs along the way, and many other fascinating information.<br>
@@ -26,7 +28,7 @@ const cardList = [
     Guest of honor: Nimish Keshri (Instagram: <a href="https://instagram.com/who_nk?utm_medi..." target="_blank" >https://instagram.com/who_nk?utm_medi...</a> )<br>
     Podcaster: Aniket Patro (Instagram: <a href="https://instagram.com/ankp04?utm_medi..." target="_blank" >https://instagram.com/ankp04?utm_medi...</a> ) <br>
     SkillVERTEX ( <a href="https://skillvertex.in" target="_blank" >https://skillvertex.in</a>)`,
-    link: `<iframe width="1020" height="574" src="https://www.youtube.com/embed/_MQdy0jUR7I?autoplay=1&mute=1&enablejsapi=1&rel=0" title="SKILLS always reign SUPREME | EP 02 | The FEDpreneur Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> `,
+    link: "https://www.youtube.com/embed/_MQdy0jUR7I?autoplay=1&mute=1&enablejsapi=1&rel=0",
   },
   {
     episode: "EP 01",
@@ -56,10 +58,27 @@ const cardList = [
     <br>
     Cheers <br>
     TEAM FED`,
-    link: `<iframe width="1020" height="574" src="https://www.youtube.com/embed/TZkBzFK_zQU?autoplay=1&mute=1&enablejsapi=1&rel=0" title="Low CGPA !! Multiple Backlogs!!?? Mind grind of an Entrepreneur ! The FEDpreneur Show - Episode 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> `,
+    link: "https://www.youtube.com/embed/TZkBzFK_zQU?autoplay=1&mute=1&enablejsapi=1&rel=0",
   },
 ];
 function Youtube(props) {
+
+  const [content,setcontent] = useState({
+    link : "https://www.youtube.com/embed/tqGsqwp67-g",
+    title : "Empowering through Innovation | EP 03 | The FEDpreneur Show",
+    para : "The FEDpreneur Show is a Federation KIIT podcast series in which we host India's most successful entrepreneurs and attempt to unearth their secrets to success while learning entertainingly! Every conversation on The FEDpreneur Show offers the audience intellectual, educational, and extraordinary learning possibilities. It's about a visionary entrepreneur session with a group of multi-talented and experienced business owners. With a forthcoming podcast, 'The FEDpreneur Show,' where we host India's top success stories and strive to dig out their secrets to success, learning, and fun, it would help our young minds stand firm in marketing and startup endeavors!"
+  })
+
+  function transContent (linkch, titlech , parach){
+    console.log(linkch, titlech , parach);
+    setcontent({
+      link : linkch,
+      title : titlech,
+      para : parach
+    })
+    document.querySelector(".container1").scrollIntoView();
+  };
+  
   return (
     <div className="mainbody">
       <div className="container1">
@@ -68,8 +87,8 @@ function Youtube(props) {
             className="video_content"
             width="100%"
             height="480"
-            src="https://www.youtube.com/embed/tqGsqwp67-g"
-            title="Empowering through Innovation | EP 03 | The FEDpreneur Show"
+            src={content.link}
+            title={content.title}
             frameborder="0"
             allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope; picture-in-picture"
             allowfullscreen
@@ -79,16 +98,7 @@ function Youtube(props) {
       <div className="descriptiondiv">
         <h4 className="heading1">Description:</h4>
         <p className="firstdiv">
-          The FEDpreneur Show is a Federation KIIT podcast series in which we
-          host India's most successful entrepreneurs and attempt to unearth
-          their secrets to success while learning entertainingly! Every
-          conversation on The FEDpreneur Show offers the audience intellectual,
-          educational, and extraordinary learning possibilities. It's about a
-          visionary entrepreneur session with a group of multi-talented and
-          experienced business owners. With a forthcoming podcast, "The
-          FEDpreneur Show," where we host India's top success stories and strive
-          to dig out their secrets to success, learning, and fun, it would help
-          our young minds stand firm in marketing and startup endeavors!
+          {content.para}
         </p>
       </div>
       <div className="bottomcontainer">
@@ -98,9 +108,7 @@ function Youtube(props) {
             return (
               <div
                 className="div1"
-                onClick={() => {
-                  <List link={cardList.link} para={cardList.para} />;
-                }}
+                onClick={() => {transContent(cardList.link, cardList.title,cardList.para)}}
               >
                 <div className="underdiv1">
                   <div className="items">
