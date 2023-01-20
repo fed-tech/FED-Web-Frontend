@@ -20,12 +20,12 @@ const cardList = [
     Today's audio has an in-depth chat with Nimish Keshri about building start-ups in India, their philosophy, secrets, ups and downs along the way, and many other fascinating information.\n
     Nimish Keshri is the founder and CEO of the EdTech business SkillVERTEX. SkillVERTEX is an online learning platform where students may explore and select from a variety of courses. SkillVERTEX provides their customers with a placement programme to assist them develop their abilities in the workplace. \n
     Follow us on : \n
-    Instagram: https://www.instagram.com/fedkiit/  \n
-    LinkedIn :  https://www.linkedin.com/company/fedkiit  \n
+    Instagram: <a href="https://www.instagram.com/fedkiit/" target="_blank" >https://www.instagram.com/fedkiit/</a> \n
+    LinkedIn : <a href="https://www.linkedin.com/company/fedkiit" target="_blank">https://www.linkedin.com/company/fedkiit</a>  \n
     
-    Guest of honor: Nimish Keshri (Instagram: https://instagram.com/who_nk?utm_medi... )\n
-    Podcaster: Aniket Patro (Instagram: https://instagram.com/ankp04?utm_medi... ) \n
-    SkillVERTEX ( https://skillvertex.in)`,
+    Guest of honor: Nimish Keshri (Instagram: <a href="https://instagram.com/who_nk?utm_medi..." target="_blank" >https://instagram.com/who_nk?utm_medi...</a>)\n
+    Podcaster: Aniket Patro (<a href="https://instagram.com/ankp04?utm_medi..." target="_blank" >https://instagram.com/ankp04?utm_medi...</a> ) \n
+    SkillVERTEX ( <a href="https://skillvertex.in" target="_blank" >https://skillvertex.in</a>)`,
     link: "https://www.youtube.com/embed/_MQdy0jUR7I?autoplay=1&mute=1&enablejsapi=1&rel=0",
   },
   {
@@ -45,13 +45,13 @@ const cardList = [
     Stay connected with the Federation of Entrepreneurship Development-KIIT via our social media platforms to know more about us.\n
     Follow us on :
     \n
-    Instagram: https://www.instagram.com/fedkiit/   \n
-    LinkedIn : https://www.linkedin.com/company/fedkiit  \n
-    Facebook:  https://www.facebook.com/fedkiit
-    Guest of honour: Niket Raj Dwivedi (Instagram: https://www.instagram.com/niketrajdwi...) \n
-    Podcaster: Ambar Bishun (Instagram: https://www.instagram.com/august_boy_99/) \n
-    Host: Mayank Rai (Instagram: https://www.instagram.com/mayankkkk._0/) \n
-    The Write Order (Instagram: https://www.instagram.com/thewriteorder/) \n
+    Instagram: <a href="https://www.instagram.com/fedkiit/" target="_blank" >https://www.instagram.com/fedkiit/</a>   \n
+    LinkedIn : <a href="https://www.linkedin.com/company/fedkiit" target="_blank">https://www.linkedin.com/company/fedkiit</a>  \n
+    Facebook:  <a href="https://www.facebook.com/fedkiit" target="_blank">https://www.facebook.com/fedkiit</a>\n
+    Guest of honour: Niket Raj Dwivedi (Instagram: <a href="https://www.instagram.com/niketrajdwi..." target="_blank" >https://www.instagram.com/niketrajdwi...</a>) \n
+    Podcaster: Ambar Bishun (Instagram: <a href="https://www.instagram.com/august_boy_99" target="_blank" >https://www.instagram.com/august_boy_99/</a>) \n
+    Host: Mayank Rai (Instagram: <a href="https://www.instagram.com/mayankkkk._0/" target="_blank" >https://www.instagram.com/mayankkkk._0/</a>) \n
+    The Write Order (Instagram: <a href="https://www.instagram.com/thewriteorder/" target="_blank" >https://www.instagram.com/thewriteorder/</a>) \n
     \n
     Cheers \n
     TEAM FED`,
