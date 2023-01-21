@@ -38,6 +38,11 @@ export default function Nav() {
                   Contact Us
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/Alumni" className="liTag">
+                  Alumni
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

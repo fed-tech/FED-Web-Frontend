@@ -58,6 +58,11 @@ export default function NavMobile() {
               Contact Us
             </NavLink>
           </div>
+          <div class="mobileList">
+            <NavLink to="/Alumni" className="liTag">
+              Alumni
+            </NavLink>
+          </div>
         </div>
       </div>
     </header>

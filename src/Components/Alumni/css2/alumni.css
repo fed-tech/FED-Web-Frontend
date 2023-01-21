@@ -1,0 +1,66 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+  color: #fff;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.main_body {
+  height: fit-content;
+  padding: 1rem 0px 0rem 0px;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ouralumni {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* background: transparent; */
+  margin-bottom: 0%;
+  margin-top: 15%;
+}
+.para1,
+.para2 {
+  width: auto;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+}
+.para3 {
+  color: #fff;
+  margin-bottom: 70px;
+}
+.para2 {
+  color: #f45725;
+}
+.box {
+  /* display: flex; */
+  text-align: center;
+  align-items: center;
+  background-color: black;
+  /* flex-direction: row; */
+  /* padding-left: 80px;
+  padding-right: 80px; */
+  flex-direction: column;
+  margin-top: 0px;
+  padding-bottom: 100px;
+}
+.box1 {
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  margin: 40px;
+  padding-right: 400px;
+}

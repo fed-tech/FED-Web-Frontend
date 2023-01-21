@@ -7,6 +7,7 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
 import Podcasts from "./Pages/Podcasts";
+import Alumni from "./Pages/Alumni";
 function App() {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<Error />} />
           <Route path="/Podcasts" element={<Podcasts />} />
+          <Route path="/Alumni" element={<Alumni />} />
         </Routes>
         <Footer />
       </Layout>
