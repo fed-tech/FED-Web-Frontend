@@ -1,30 +1,30 @@
 [
     {
-        "image":"image/alumni photo (1).png",
-        "title":"Steve Jobs",
-        "subtitle":"Founder,FEDKIIT",
-        "para":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon":"image/socialicons.png"
+        "image_":"image/alumni photo (1).png",
+        "title_":"Steve Jobs",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon_":"image/socialicon.png"
     },
     {
-        "image":"image/alumni photo.png",
-        "title":"Steve Jobs",
-        "subtitle":"Founder,FEDKIIT",
-        "para":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon":"image/socialicons.png" 
+        "image_":"image/alumni photo.png",
+        "title_":"Steve Jobs",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon_":"image/socialicon.png" 
     },
     {
-        "image":"image/alumni photo (2).png",
-        "title":"Steve Jobs",
-        "subtitle":"Founder,FEDKIIT",
-        "para":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon":"image/socialicons.png" 
+        "image_":"image/alumni photo (2).png",
+        "title_":"Steve Jobs",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon_":"image/socialicon.png" 
     },
     {
-        "image":"image/alumni photo (3).png",
-        "title":"Steve Jobs",
-        "subtitle":"Founder,FEDKIIT",
-        "para":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon":"image/socialicons.png" 
+        "image_":"image/alumni photo (3).png",
+        "title_":"Steve Jobs",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "icon_":"image/socialicon.png" 
     }
 ]
