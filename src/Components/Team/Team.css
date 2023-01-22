@@ -353,9 +353,6 @@
     overflow: hidden;
   }
   
-  .space {
-    margin-bottom: 100px;
-  }
   
   @media only screen and (max-width: 650px) {
     .memDivMain {
