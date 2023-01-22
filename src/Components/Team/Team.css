@@ -261,7 +261,7 @@
   }
   
   .flip-card:hover .CorememCardImg {
-    opacity: 0.3;
+    opacity: 0.1;
   }
   
   .flip-card:hover .flip-card-back {
