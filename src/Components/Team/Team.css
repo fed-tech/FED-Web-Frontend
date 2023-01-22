@@ -215,6 +215,7 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    opacity: 1;
   }
 
   .flip-card-back {
@@ -259,8 +260,8 @@
     /* box-shadow: 0 4px 8px 0 #e66f4a; */
   }
   
-  .flip-card:hover .flip-card-inner {
-    opacity: 1;
+  .flip-card:hover .CorememCardImg {
+    opacity: 0.3;
   }
   
   .flip-card:hover .flip-card-back {
@@ -288,13 +289,6 @@
   .coresocilaDiv {
     /* display: none; */
     transition: all 0.3s;
-  }
-  .coreMemMainCard{
-    opacity: 1;
-    transition: all 0.5s;
-  }
-  .coreMemMainCard:hover{
-    opacity: 0.5;
   }
   .coreMemMainCard:hover>.coresocilaDiv {
     opacity: 1;
