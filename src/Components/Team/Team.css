@@ -289,7 +289,13 @@
     /* display: none; */
     transition: all 0.3s;
   }
-  
+  .coreMemMainCard{
+    opacity: 1;
+    transition: all 0.5s;
+  }
+  .coreMemMainCard:hover{
+    opacity: 0.5;
+  }
   .coreMemMainCard:hover>.coresocilaDiv {
     opacity: 1;
     visibility: visible;
