@@ -50,6 +50,8 @@
   color: #fff;
   font-family: "Manrope", sans-serif;
   font-size: 20px;
+  text-align: center;
+  align-items: center;
 }
 .para2_ {
   color: #f45725;
@@ -59,7 +61,7 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  padding: 40px calc((100% - (400px * 2)) / 2);
+  padding: 40px calc((100% - (600px * 2)) / 2);
 
   /* padding-left: 230px;
   padding-right: 230px; */
@@ -67,7 +69,11 @@
 .box_ {
   height: 100px;
   flex: 0 0 215px;
-  margin: 20em 20px;
+  padding-bottom: 500px;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  /* margin: 20em 20px; */
   /* border: 1px solid black; */
   /* margin: 1rem;
   padding: 1rem; */
@@ -120,7 +126,7 @@
   padding-bottom: 10px;
   font-family: "Inter", sans-serif;
   font-size: 11px;
-  word-spacing: -1px;
+  word-spacing: -2px;
   /* white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
