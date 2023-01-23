@@ -59,7 +59,8 @@
   flex-wrap: wrap;
   justify-content: center;
 
-  padding: 40px calc((100% - (500px * 2)) / 2);
+  padding: 40px calc((100% - (400px * 2)) / 2);
+
   /* padding-left: 230px;
   padding-right: 230px; */
 }
