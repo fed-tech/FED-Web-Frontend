@@ -33,7 +33,17 @@ function OurAlumni() {
                   <p>{card.para_}</p>
                   <div className="icon_">
                     <img
-                      src={card.icon_}
+                      src={card.twitter_}
+                      className="iconimage"
+                      alt="icons"
+                    ></img>
+                    <img
+                      src={card.link_}
+                      className="iconimage"
+                      alt="icons"
+                    ></img>
+                    <img
+                      src={card.globe}
                       className="iconimage"
                       alt="icons"
                     ></img>

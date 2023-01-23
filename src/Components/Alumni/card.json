@@ -4,7 +4,9 @@
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
         "vector":"image/Vector(1).png"
     },
     {
@@ -12,7 +14,9 @@
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
         "vector":"image/Vector(1).png" 
     },
     {
@@ -20,7 +24,9 @@
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
         "vector":"image/Vector(1).png"
     },
     {
@@ -28,7 +34,9 @@
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
         "vector":"image/Vector(1).png" 
     }
 ]
