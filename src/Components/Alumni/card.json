@@ -4,27 +4,31 @@
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png"
+        "icon_":"image/socialicon.png",
+        "vector":"image/Vector(1).png"
     },
     {
         "image_":"image/alumni photo.png",
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png" 
+        "icon_":"image/socialicon.png",
+        "vector":"image/Vector(1).png" 
     },
     {
         "image_":"image/alumni photo (2).png",
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png" 
+        "icon_":"image/socialicon.png",
+        "vector":"image/Vector(1).png"
     },
     {
         "image_":"image/alumni photo (3).png",
         "title_":"Steve Jobs",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "icon_":"image/socialicon.png" 
+        "icon_":"image/socialicon.png",
+        "vector":"image/Vector(1).png" 
     }
 ]

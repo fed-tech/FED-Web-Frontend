@@ -23,6 +23,11 @@ function OurAlumni() {
               </div>
               <div className="child_">
                 <div className="content_">
+                  <img
+                    src={card.vector}
+                    className="vectorimage"
+                    alt="vector"
+                  ></img>
                   <h1 className="heading_1">{card.title_}</h1>
                   <h3>{card.subtitle}</h3>
                   <p>{card.para_}</p>
