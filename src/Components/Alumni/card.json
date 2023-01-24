@@ -7,7 +7,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"http://www.linkedin.com/in/anuksha-arora",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (2).png",
@@ -17,7 +20,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png" 
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/anvesh-pathak/",
+        "internet":"/" 
     },
     {
         "image_":"image/alumni (3).jpg",
@@ -27,7 +33,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/dipanjan-bakshi-b63432194",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (4).jpeg",
@@ -37,7 +46,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png" 
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/harsh-priyadarshi-003798191/",
+        "internet":"/" 
     },
     {
         "image_":"image/alumni (5).jpg",
@@ -47,7 +59,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/jitosoma-paul-34331820a/",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (6).jpeg",
@@ -57,7 +72,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"http://linkedin.com/in/khushali-verma-242a2319a",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (7).jpg",
@@ -67,7 +85,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/mayank-kumar-54579b1b5/",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (8).jpeg",
@@ -77,7 +98,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/muskan-chaddha-a693891a4",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (9).png",
@@ -87,7 +111,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/neha-kaushik-258b2b19a/",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (10).jpeg",
@@ -97,7 +124,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/pritam-mahapatra-8a0534195",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (11).jpeg",
@@ -107,7 +137,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"/",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (12).png",
@@ -117,7 +150,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/rishab-pratap-40aa65202",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (13).jpg",
@@ -127,7 +163,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/sanskar-srivastav-b243761b3",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (14).jpg",
@@ -137,7 +176,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/kumar-shrey-66491b216/",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (15).jpg",
@@ -147,7 +189,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"/",
+        "internet":"/"
     },
     {
         "image_":"image/alumni (16).jpg",
@@ -157,7 +202,10 @@
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
-        "vector":"image/Vector(1).png"
+        "vector":"image/Vector(1).png",
+        "twitter_link":"/",
+        "linkedin_link":"https://www.linkedin.com/in/veersharma",
+        "internet":"/"
     }
     
 

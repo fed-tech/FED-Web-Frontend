@@ -32,21 +32,15 @@ function OurAlumni() {
                   <h3>{card.subtitle}</h3>
                   <p>{card.para_}</p>
                   <div className="icon_">
-                    <img
-                      src={card.twitter_}
-                      className="iconimage"
-                      alt="icons"
-                    ></img>
-                    <img
-                      src={card.link_}
-                      className="iconimage"
-                      alt="icons"
-                    ></img>
-                    <img
-                      src={card.globe}
-                      className="iconimage"
-                      alt="icons"
-                    ></img>
+                    <img src={card.twitter_} className="iconimage" alt="icons">
+                      <a href={card.twitter_link}></a>
+                    </img>
+                    <img src={card.link_} className="iconimage" alt="icons">
+                      <a href={card.linkedin_link}></a>
+                    </img>
+                    <img src={card.globe} className="iconimage" alt="icons">
+                      <a href={card.internet}></a>
+                    </img>
                   </div>
                 </div>
               </div>
