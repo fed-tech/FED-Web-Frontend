@@ -1,7 +1,7 @@
 [
     {
-        "image_":"image/alumni photo (1).png",
-        "title_":"Steve Jobs",
+        "image_":"image/alumni (1).jpeg",
+        "title_":"Anuksha Arora",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "twitter_":"image/Vector(2).png",
@@ -10,8 +10,8 @@
         "vector":"image/Vector(1).png"
     },
     {
-        "image_":"image/alumni photo.png",
-        "title_":"Steve Jobs",
+        "image_":"image/alumni (2).png",
+        "title_":"Anvesh Pathak",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "twitter_":"image/Vector(2).png",
@@ -20,8 +20,8 @@
         "vector":"image/Vector(1).png" 
     },
     {
-        "image_":"image/alumni photo (2).png",
-        "title_":"Steve Jobs",
+        "image_":"image/alumni (3).jpg",
+        "title_":"Dipanjan Bakshi",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "twitter_":"image/Vector(2).png",
@@ -30,13 +30,135 @@
         "vector":"image/Vector(1).png"
     },
     {
-        "image_":"image/alumni photo (3).png",
-        "title_":"Steve Jobs",
+        "image_":"image/alumni (4).jpeg",
+        "title_":"Harsh Priyadarshi",
         "subtitle":"Founder, FEDKIIT",
         "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "twitter_":"image/Vector(2).png",
         "link_":"image/Vector(3).png",
         "globe":"image/Vector(4).png",
         "vector":"image/Vector(1).png" 
+    },
+    {
+        "image_":"image/alumni (5).jpg",
+        "title_":"Jitosoma Paul",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (6).jpeg",
+        "title_":"Khushali Verma",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (7).jpg",
+        "title_":"Mayank Kumar",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (8).jpeg",
+        "title_":"Muskan Chaddha",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (9).png",
+        "title_":"Neha Kaushik",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (10).jpeg",
+        "title_":"Pritam Mahapatra",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (11).jpeg",
+        "title_":"Rahul Sinha",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (12).png",
+        "title_":"Rishab Pratap",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (13).jpg",
+        "title_":"Sanskar Srivastav",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (14).jpg",
+        "title_":"Shrey Kumar",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (15).jpg",
+        "title_":"Swet raj singh",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
+    },
+    {
+        "image_":"image/alumni (16).jpg",
+        "title_":"Veer Sharma",
+        "subtitle":"Founder, FEDKIIT",
+        "para_":"Lorem ipsum dilor sit amet,consectetur adipiscing elite,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "twitter_":"image/Vector(2).png",
+        "link_":"image/Vector(3).png",
+        "globe":"image/Vector(4).png",
+        "vector":"image/Vector(1).png"
     }
+    
+
 ]
