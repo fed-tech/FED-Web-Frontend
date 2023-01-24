@@ -100,9 +100,9 @@
 .child_ {
   backdrop-filter: blur(32px);
   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.397) 75%,
-    rgba(0, 0, 0, 0.397) 87.5%,
-    rgba(0, 0, 0, 0.397) 100%
+    rgba(0, 0, 0, 0.425) 75%,
+    rgba(0, 0, 0, 0.425) 87.5%,
+    rgba(0, 0, 0, 0.425) 100%
   );
   width: 310px;
   height: 167px;
