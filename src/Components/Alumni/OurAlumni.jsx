@@ -1,6 +1,8 @@
 import React from "react";
 import "./css2/alumni.css";
 import Card from "./card.json";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/Twitter";
 function OurAlumni() {
   return (
     <section className="alumni">
@@ -33,18 +35,14 @@ function OurAlumni() {
                   <p>{card.para_}</p>
                   <div className="icon_">
                     <a href={card.twitter_link}>
-                      <img
-                        src={card.twitter_}
-                        className="iconimage"
-                        alt="icons"
-                      ></img>
+                      <div className="iconimage">
+                        <TwitterIcon />
+                      </div>
                     </a>
                     <a href={card.linkedin_link}>
-                      <img
-                        src={card.link_}
-                        className="iconimage"
-                        alt="icons"
-                      ></img>
+                      <div className="iconimage">
+                        <LinkedInIcon />
+                      </div>
                     </a>
                     {/* <a href={card.internet}>
                       <img
