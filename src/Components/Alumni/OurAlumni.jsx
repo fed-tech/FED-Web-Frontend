@@ -23,11 +23,11 @@ function OurAlumni() {
               </div>
               <div className="child_">
                 <div className="content_">
-                  <img
+                  {/* <img
                     src={card.vector}
                     className="vectorimage"
                     alt="vector"
-                  ></img>
+                  ></img> */}
                   <h1 className="heading_1">{card.title_}</h1>
                   <h3>{card.subtitle}</h3>
                   <p>{card.para_}</p>
@@ -46,13 +46,13 @@ function OurAlumni() {
                         alt="icons"
                       ></img>
                     </a>
-                    <a href={card.internet}>
+                    {/* <a href={card.internet}>
                       <img
                         src={card.globe}
                         className="iconimage"
                         alt="icons"
                       ></img>
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
