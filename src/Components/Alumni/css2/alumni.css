@@ -93,7 +93,7 @@
   padding-right: 0px; */
 }
 .image_1 {
-  width: 310px;
+  width: 300px;
   height: 370px;
   position: relative;
 }
@@ -104,7 +104,7 @@
     rgba(0, 0, 0, 0.425) 87.5%,
     rgba(0, 0, 0, 0.425) 100%
   );
-  width: 280px;
+  width: 270px;
   height: 167px;
   display: flex;
   align-items: center;
@@ -131,7 +131,7 @@
   padding-bottom: 10px;
   font-family: "Inter", sans-serif;
   font-size: 11px;
-  word-spacing: -1px;
+  word-spacing: -2px;
   /* white-space: pre-wrap;
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
