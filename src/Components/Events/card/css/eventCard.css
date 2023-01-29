@@ -1,9 +1,10 @@
-#footer{
-    padding-top: 30px;
+#footer {
     background-color: #0e0e0e;
 }
 
 .cards {
+    margin-top: -1px;
+    padding-bottom: 30px;
     background-color: #0e0e0e;
     display: flex;
     flex-wrap: wrap;
