@@ -34,7 +34,7 @@ export default function Nav() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/ContactUs" className="liTag">
+                <NavLink to="/" className="liTag">
                   Contact Us
                 </NavLink>
               </li>
