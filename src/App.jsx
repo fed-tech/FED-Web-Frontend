@@ -17,7 +17,8 @@ function App() {
         <NavMobile />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/event" element={<Events />} />
+          <Route path="/Team" element={<Team />} />
+          <Route path="/Event" element={<Events />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="*" element={<Error />} />
         </Routes>
