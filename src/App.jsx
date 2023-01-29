@@ -8,6 +8,7 @@ import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
+import Team from "./Pages/Team";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <NavMobile />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/event" element={<Events />} />
+          <Route path="/Team" element={<Team />} />
+          <Route path="/Event" element={<Events />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="*" element={<Error />} />
         </Routes>
