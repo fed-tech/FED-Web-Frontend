@@ -1,6 +1,6 @@
 #OurTeam {
   background-color: rgb(15, 14, 14);
-  margin: 0px;
+  padding-top: 180px;
 }
 
 .TeamCreative {
@@ -355,6 +355,11 @@
   .memDivMain {
     margin: 0px 20px 50px 20px;
   }
+
+  #OurTeam {
+    padding-top: 98px;
+  }
+
 }
 
 @media only screen and (max-width: 659px) {
