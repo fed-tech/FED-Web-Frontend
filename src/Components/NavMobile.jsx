@@ -54,7 +54,7 @@ export default function NavMobile() {
             </NavLink>
           </div>
           <div class="mobileList">
-            <NavLink to="/ContactUs" className="liTag">
+            <NavLink to="/" className="liTag">
               Contact Us
             </NavLink>
           </div>
