@@ -2,7 +2,7 @@ import React from "react";
 import "./css2/alumni.css";
 import Card from "./card.json";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import GitHubIcon from "@mui/icons-material/GitHub";
 function OurAlumni() {
   return (
     <section className="alumni">
@@ -34,9 +34,9 @@ function OurAlumni() {
                   <h3>{card.subtitle}</h3>
                   <p>{card.para_}</p>
                   <div className="icon_">
-                    <a href={card.twitter_link}>
+                    <a href={card.github_link}>
                       <div className="iconimage">
-                        <TwitterIcon />
+                        <GitHubIcon />
                       </div>
                     </a>
                     <a href={card.linkedin_link}>
