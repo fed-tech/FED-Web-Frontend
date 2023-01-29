@@ -61,7 +61,7 @@
   background: snow;
 }
 
-h1 {
+.loadingSpanH1 {
   position: absolute;
   height: 40px;
   margin: auto;
@@ -77,11 +77,11 @@ h1 {
   color: #f45725;
 }
 
-h1 span {
+.loadingSpanH1 span {
   display: none;
 }
 
-h1::after {
+.loadingSpanH1::after {
   animation: txt 5s infinite;
   content: "";
 }
