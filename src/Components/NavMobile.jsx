@@ -37,27 +37,27 @@ export default function NavMobile() {
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
         <div class="mobileNavListChild">
           <div class="mobileList">
-            <NavLink to="/" className="liTag">
+            <NavLink to="/" className="liTag" onClick={()=>setCount(false)}>
               Home
             </NavLink>
           </div>
-          <div class="mobileList">
+          <div class="mobileList" onClick={()=>setCount(false)}>
             <NavLink to="/event" className="liTag">
               Events
             </NavLink>
           </div>
           <div class="mobileList">
-            <NavLink to="/Podcasts" className="liTag">
+            <NavLink to="/Podcasts" className="liTag" onClick={()=>setCount(false)}>
               Podcasts
             </NavLink>
           </div>
           <div class="mobileList">
-            <NavLink to="/Team" className="liTag">
+            <NavLink to="/Team" className="liTag" onClick={()=>setCount(false)}>
               Our Team
             </NavLink>
           </div>
           <div class="mobileList">
-            <HashLink to="/#ContactUs" className="liTag">
+            <HashLink to="/#ContactUs" className="liTag" onClick={()=>setCount(false)}>
               Contact Us
             </HashLink>
           </div>
