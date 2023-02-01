@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./css/MobileNav.css";
 
 export default function NavMobile() {
@@ -56,9 +57,9 @@ export default function NavMobile() {
             </NavLink>
           </div>
           <div class="mobileList">
-            <NavLink to="/" className="liTag">
+            <HashLink to="/#ContactUs" className="liTag">
               Contact Us
-            </NavLink>
+            </HashLink>
           </div>
         </div>
       </div>
