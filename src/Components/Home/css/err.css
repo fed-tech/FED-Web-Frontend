@@ -3,24 +3,24 @@
 }
 .err_box {
   color: aliceblue;
-  font-family: "Rubik", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-size: 170px;
   text-align: center;
   align-items: center;
   background-color: #000000;
-  padding-top: 300px;
+  padding-top: 200px;
 }
 .err_message1 {
   color: #f45725;
-  font-family: "Rubik", sans-serif;
+  font-family: "Manrope", sans-serif;
   font-size: 25px;
   text-align: center;
   align-items: center;
   letter-spacing: 0.1em;
 }
 .err_message2 {
-  font-family: "Rubik", sans-serif;
+  font-family: "Manrope", sans-serif;
   color: aliceblue;
   text-align: center;
   align-items: center;
