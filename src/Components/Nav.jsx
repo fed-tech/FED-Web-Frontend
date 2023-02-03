@@ -19,7 +19,7 @@ export default function Nav() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Err" className="liTag">
+                <NavLink to="/event" className="liTag">
                   Events
                 </NavLink>
               </li>
@@ -29,12 +29,12 @@ export default function Nav() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Err" className="liTag">
+                <NavLink to="/Team" className="liTag">
                   Our Team
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Err" className="liTag">
+                <NavLink to="/ContactUs" className="liTag">
                   Contact Us
                 </NavLink>
               </li>
