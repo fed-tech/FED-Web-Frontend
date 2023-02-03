@@ -9,9 +9,9 @@ function Seeall() {
           return (
             <div className="mcard">
               <div className="cardbox">
-                <p className="cmt">{Wcard.comment}</p>
-                <p className="sp">{Wcard.speaker_name}</p>
-                <p className="prg">{Wcard.program_}</p>
+                <p className="cmt">{element.comment}</p>
+                <p className="sp">{element.speaker_name}</p>
+                <p className="prg">{element.program_}</p>
               </div>
             </div>
           );
