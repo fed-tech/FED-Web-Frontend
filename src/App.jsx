@@ -9,6 +9,7 @@ import NavMobile from "./Components/NavMobile";
 import Podcasts from "./Pages/Podcasts";
 import Alumni from "./Pages/Alumni";
 import Seeall from "./Components/Home/Seeall";
+import Err from "./Components/Home/Err";
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +22,7 @@ function App() {
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="/Testimonial" element={<Seeall />} />
+          <Route path="/Err" element={<Err />} />
         </Routes>
         <Footer />
       </Layout>
