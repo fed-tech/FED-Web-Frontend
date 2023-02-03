@@ -1,11 +1,14 @@
-.err {
-  color: #000000;
+.err_ {
+  background-color: #000000;
 }
 .err_box {
   color: aliceblue;
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-size: 100px;
+  font-size: 200px;
   text-align: center;
   align-items: center;
+  background-color: #000000;
+  padding-top: 200px;
 }
+.err_message;
