@@ -3,7 +3,9 @@ import "./css/err.css";
 function Err() {
   return (
     <div>
-      <div></div>
+      <div className="err">
+        <p className="err_box">404</p>
+      </div>
     </div>
   );
 }
