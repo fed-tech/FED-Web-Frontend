@@ -8,7 +8,9 @@ function Seeall() {
         {Wcard.map((element) => {
           return (
             <div className="mcard">
-              <div className="cardbox"></div>
+              <div className="cardbox">
+                <p className="cmt">{Wcard.comment}</p>
+              </div>
             </div>
           );
         })}
