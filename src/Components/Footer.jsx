@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Footer.css";
 
+import youtubesvg from '../Img/youtube.svg';
+import linkedinsvg from '../Img/linkedin.svg';
+import spotifysvg from '../Img/spotify.svg';
+import instagramsvg from '../Img/instagram.svg';
 export default function Footer() {
   return (
     <section id="footer">
@@ -48,7 +52,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fc55e11aacde597f36_instagram.png"
+                  src={instagramsvg}
                   alt="instaimg"
                   className="iconimg"
                 />
@@ -59,7 +63,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fd33698b3915d77ef1_linkedin.png"
+                  src={linkedinsvg}
                   alt="linkedinimg"
                   className="iconimg"
                 />
@@ -70,7 +74,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fb3ba6d10f3bf1435c_spotify.png"
+                  src={spotifysvg}
                   alt="spotifyimg"
                   className="iconimg"
                 />
@@ -81,7 +85,7 @@ export default function Footer() {
                 target="_blank"
               >
                 <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fa33698b5829d77e9a_youtube.png"
+                  src={youtubesvg}
                   alt="youtubeimg"
                   className="iconimg"
                 />
