@@ -3,6 +3,7 @@ import "./css2/alumni.css";
 import Card from "./card.json";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+
 function OurAlumni() {
   return (
     <section className="alumni">
