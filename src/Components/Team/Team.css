@@ -265,7 +265,36 @@
   visibility: visible;
   opacity: 0.9;
 }
-
+.knowMore{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: -60px;
+  margin-top: 105px;
+  cursor: pointer;
+}
+#knowMore{
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  /* identical to box height, or 200% */
+  
+  letter-spacing: 0.005em;
+  text-decoration-line: underline;
+  
+  color: #F45725;
+  margin-right: 10px;
+}
+.arrow{
+  font-size: 20px !important;
+  font-weight:bolder;
+  height: 20px;
+}
 /* .............  */
 .coresocilaDiv,
 .coresocilaDiv2 {
