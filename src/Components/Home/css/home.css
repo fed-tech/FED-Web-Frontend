@@ -32,9 +32,9 @@
   background-color: transparent;
 }
 
-/* #KnowUspTag{
-    color: #fff;
-} */
+#KnowUspTag {
+  margin-top: 95px;
+}
 
 .KnowUspTag {
   color: #f45725;
