@@ -1,10 +1,10 @@
 import React from "react";
 
 // css
-import "./css/seeall.css";
+import "./../Components/Testimonial/Css/seeall.css";
 
 // json
-import Wcard from "./testimonial.json";
+import Wcard from "./../Data/testimonial.json";
 
 export default function Testimonial() {
   return (
