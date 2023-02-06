@@ -9,8 +9,12 @@ export default function Core(props) {
     }, 3000);
   });
 
-  const contentChange = (e)=>{
-    
+   const contentChange = ()=>
+   {
+     document.querySelector('.team-about').style.display = "block";
+      document.querySelector('.PostPTagName').style. display= "none";
+      document.querySelector('.PostPTag').style. display= "none";
+      document.querySelector('.coresocilaDiv').style. display= "none";
   }
   return (
     <>
@@ -31,6 +35,9 @@ export default function Core(props) {
               <img src={props.mem.img} alt="" className="CorememCardImg" />
             </div>
             <div className="flip-card-back">
+            <div className="team-about">
+                <p>{props.mem.about}</p>
+              </div>
               <p className="PostPTagName">{props.mem.name}</p>
               <p className="PostPTag">{props.mem.position}</p>
               <div className="coresocilaDiv">
@@ -69,11 +76,10 @@ export default function Core(props) {
                   </svg>
                 </a>
               </div>
-              <div className="knowMore" onClick={contentChange} >
+              <div className="knowMore" onClick={contentChange()} >
               <p id="knowMore" >Know more </p> <span className="arrow">&gt;</span> 
               </div>
             </div>
-            <div className="flip-card-back" ></div>
           </div>
         </div>
       ) : (

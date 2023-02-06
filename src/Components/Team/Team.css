@@ -295,6 +295,9 @@
   font-weight:bolder;
   height: 20px;
 }
+.team-about{
+  display: none;
+}
 /* .............  */
 .coresocilaDiv,
 .coresocilaDiv2 {
@@ -346,9 +349,11 @@
   line-height: 25px;
   letter-spacing: 0.005em;
   color: #f45725;
+  display: block;
 }
 
 .PostPTagName {
+  display: block;
   margin: 0px 0px 0px 20px;
   /* text-align: center; */
   font-family: "Rubik", sans-serif;
