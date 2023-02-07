@@ -10,6 +10,21 @@
   padding: 250px calc((100% - (500px * 2)) / 2);
   padding-bottom: 10px;
 }
+.Title{
+  text-align: center;
+    background-color: transparent;
+    font-family: "Rubik", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 59px;
+    margin: 0px 0px 90px 0px;
+}
+
+.spn{
+    background-color: transparent;
+    color: #f45725;
+}
 .mcard {
   height: 100px;
   flex: 0 0 215px;
@@ -70,13 +85,16 @@
   bottom: 20px;
 }
 
-@media only screen and (max-width: 484px) {
-  .cardbox {
+@media only screen and (max-width: 484px)
+ {
+  .cardbox 
+  {
     width: 320px;
-    margin-left: 40px;
+    margin:auto auto;
   }
 }
-@media only screen and (max-width: 477px) {
+@media only screen and (max-width: 477px) 
+{
   .seeall_page 
   {
     background-color: rgb(15, 14, 14);
