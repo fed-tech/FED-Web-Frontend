@@ -43,10 +43,6 @@
   background-color: transparent;
 }
 
-/* #KnowUspTag{
-    color: #fff;
-} */
-
 .KnowUspTag {
   color: #f45725;
 }
@@ -586,7 +582,6 @@ form {
   .workptagDes {
     width: 80%;
   }
-
 
   .testpTag {
     margin-bottom: 40px;
