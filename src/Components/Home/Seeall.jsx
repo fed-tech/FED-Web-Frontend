@@ -6,7 +6,7 @@ function Seeall()
   return (
     <div className="seeall_page">
       <div className="sub_div">
-      <div> <p className="Title">"What do "<span className="spn">they say</span>" about us?"</p>
+      <div> <p className="Title">What do <span className="spn">they say</span> about us?</p>
         </div>
         {Wcard.map((element) => {
           return (
