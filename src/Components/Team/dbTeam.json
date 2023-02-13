@@ -7,7 +7,8 @@
         "linkedin": "https://www.linkedin.com/in/rishabh-kant",
         "github": "https://github.com/RIshaabhKant",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da5e5f3d28f6085c6fa5c_RISHABH%20KANT.jpg",
-        "about" : "Parishram Kro Fall(Fruit) ki chinta mat kro..Fal ka kya h ..Kharidd lengee!!!!!"
+        "about" : "Parishram Kro Fall(Fruit) ki chinta mat kro..Fal ka kya h ..Kharidd lengee!!!!!",
+        "id": 0
       },
       {
         "name": "Navdeep Singh parewa",
@@ -15,7 +16,9 @@
         "linkedin": "https://www.linkedin.com/in/navdeep-parewa-3b20121bb/",
         "github": "",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62fd1cea1b717f43bd4d984b_IMG_20220610_160538__01.jpg",
-        "about" : "FED isn't just society but an emotion, consistently growing. Working efficiently for the good cause and making the best out of everything and everyone, FED has always seen growth. It's an honor contributing as the Vice President of the society.I am sure FED will keep rising enormously, always."
+        "about" : "FED isn't just society but an emotion, consistently growing. Working efficiently for the good cause and making the best out of everything and everyone, FED has always seen growth. It's an honor contributing as the Vice President of the society.I am sure FED will keep rising enormously, always.",
+        "id": 1
+
       },
       {
         "name": "Nishant Giri",
@@ -23,7 +26,8 @@
         "linkedin": "https://www.linkedin.com/in/nishant-giri-7003131b5",
         "github": "https://github.com/nishant-giri",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636002e038a81b26f3bb2a40_IMG20221031161012-copy.jpg",
-        "about" : "Hello, I am Veer Sharma from Marketing department of FED. "
+        "about" : "Hello, I am Veer Sharma from Marketing department of FED. ",
+        "id": 2
       },
       {
         "name": "Rishav Singh",
@@ -31,7 +35,8 @@
         "linkedin": "https://www.linkedin.com/in/rishav-singh-a89622211/",
         "github": "https://github.com/TheDa21crj",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636000459bdab10dce6b88fc_DSC_0014-copy.jpg",
-        "about" : "Technocrat who loves building hardware and software projects always trying to be super productive and learn new skills. Life is about having fun and building awesome projects to show off! See ya in the automation revolution."
+        "about" : "Technocrat who loves building hardware and software projects always trying to be super productive and learn new skills. Life is about having fun and building awesome projects to show off! See ya in the automation revolution.",
+        "id": 3
       },
       {
         "name": "Ayan Kumar Paul",
@@ -39,7 +44,8 @@
         "linkedin": "https://www.linkedin.com/in/ayan-paul-b341a5204/",
         "github": "https://github.com/Ayanpaul11",
         "img": "https://uploads-ssl.webflow.com/635fe4acd1af941207c580b7/635ffcd8bc91161b1567bfdd_Profileimage_.jpg",
-        "about" : "Jack of all trades, master of design."
+        "about" : "Jack of all trades, master of design.",
+        "id": 4
       },
       {
         "name": "Sharoni Bose",
@@ -47,7 +53,8 @@
         "linkedin": "http://www.linkedin.com/in/sharoni-bose-/",
         "github": "http://github.com/sharonibose",
         "img": "https://uploads-ssl.webflow.com/635fe4acd1af941207c580b7/635ffd07defa8130406994c0_WhatsApp%20Image%202022-10-26%20at%2023.13.58.jpeg",
-        "about" : "Hi! I am an integrated MTech student of the School of Biotechnology, KIIT and a member of FED since 2 years now. Apart from the never ending college deadlines & exams, I read books, occasionally doodle and capture moments through my lens. I enjoy meeting and interacting with people. FED has had a significant impact on my development as a person and I'm honoured to be part of this incredible team."
+        "about" : "Hi! I am an integrated MTech student of the School of Biotechnology, KIIT and a member of FED since 2 years now. Apart from the never ending college deadlines & exams, I read books, occasionally doodle and capture moments through my lens. I enjoy meeting and interacting with people. ",
+        "id": 5
       }
     ],
     "Tech": [

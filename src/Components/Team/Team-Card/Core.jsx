@@ -19,17 +19,17 @@ export default function Core(props) {
     setabout(!about);
     console.log(props.mem.about)
     if (about) {
-      document.querySelector(".team-about").style.display = "block";
-       document.querySelector(".PostPTagName").style. display= "none";
-       document.querySelector(".PostPTag").style. display= "none";
-       document.querySelector(".coresocilaDiv").style. display= "none";
+      document.querySelectorAll(".team-about")[props.mem.id].style. display = "block";
+       document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "none";
+       document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "none";
+       document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "none";
        setbtn("close");
     }else
     {
-      document.querySelector(".team-about").style.display = "none";
-       document.querySelector(".PostPTagName").style. display= "block";
-       document.querySelector(".PostPTag").style. display= "block";
-       document.querySelector(".coresocilaDiv").style. display= "flex";
+      document.querySelectorAll(".team-about")[props.mem.id].style.display = "none";
+       document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "block";
+       document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "block";
+       document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "flex";
        setbtn("Know more");
 
     }

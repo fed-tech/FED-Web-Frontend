@@ -275,6 +275,7 @@
   margin-bottom: -60px;
   margin-top: 105px;
   cursor: pointer;
+  /* transition: all 1s; */
 }
 #knowMore {
   font-family: "Manrope";
@@ -282,6 +283,8 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 28px;
+  transition: all 1s;
+
   /* identical to box height, or 200% */
 
   letter-spacing: 0.005em;
@@ -297,9 +300,10 @@
 }
 .team-about {
   display: none;
-  max-width: 256px;
+  max-width: fit-content;
   max-height: 75px;
   margin-left: 20px;
+  margin-right: 20px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
