@@ -38,7 +38,7 @@ export default function Nav() {
               </li>
               <li>
                 <NavLink to="/Alumni" className="liTag">
-                  Our Team
+                  Alumni
                 </NavLink>
               </li>
               <li>
