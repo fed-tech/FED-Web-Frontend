@@ -95,7 +95,7 @@ export default function Core(props) {
                 </a>
               </div>
               <div className="knowMore" onClick={contentChange} >
-              <p id="knowMore" >{btn} </p> <span className="arrow">&gt;</span> 
+              <p id="knowMore" >{btn} </p> <span className="arrow">{'>'}</span> 
               </div>
             </div>
           </div>

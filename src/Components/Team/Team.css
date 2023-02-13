@@ -294,9 +294,16 @@
   margin-right: 10px;
 }
 .arrow {
-  font-size: 20px !important;
-  font-weight: bolder;
-  height: 20px;
+   /* font-size: 20px !important; */
+  /* border: 2px solid #F45725; */
+  /* font-weight: bolder;
+  height: 20px; */ 
+  font-size: 22px;
+    font-weight: 500;
+    background-color: transparent;
+    color: #f45725;
+    font-family: "Manrope";
+    font-style: normal;
 }
 .team-about {
   display: none;
