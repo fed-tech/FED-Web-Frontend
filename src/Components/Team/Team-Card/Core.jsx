@@ -3,18 +3,36 @@ export default function Core(props) {
   console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
+  const [about , setabout] = useState(false);
+  const [btn , setbtn] = useState("Know more");
+  
   useEffect(() => {
     setTimeout(() => {
       setshowContent(false), setshow(true);
     }, 3000);
-  });
-
+  }
+  
+  );
+  
    const contentChange = ()=>
    {
-     document.querySelector('.team-about').style.display = "block";
-      document.querySelector('.PostPTagName').style. display= "none";
-      document.querySelector('.PostPTag').style. display= "none";
-      document.querySelector('.coresocilaDiv').style. display= "none";
+    setabout(!about);
+    console.log(props.mem.about)
+    if (about) {
+      document.querySelector(".team-about").style.display = "block";
+       document.querySelector(".PostPTagName").style. display= "none";
+       document.querySelector(".PostPTag").style. display= "none";
+       document.querySelector(".coresocilaDiv").style. display= "none";
+       setbtn("close");
+    }else
+    {
+      document.querySelector(".team-about").style.display = "none";
+       document.querySelector(".PostPTagName").style. display= "block";
+       document.querySelector(".PostPTag").style. display= "block";
+       document.querySelector(".coresocilaDiv").style. display= "flex";
+       setbtn("Know more");
+
+    }
   }
   return (
     <>
@@ -76,8 +94,8 @@ export default function Core(props) {
                   </svg>
                 </a>
               </div>
-              <div className="knowMore" onClick={contentChange()} >
-              <p id="knowMore" >Know more </p> <span className="arrow">&gt;</span> 
+              <div className="knowMore" onClick={contentChange} >
+              <p id="knowMore" >{btn} </p> <span className="arrow">&gt;</span> 
               </div>
             </div>
           </div>
