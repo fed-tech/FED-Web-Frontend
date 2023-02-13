@@ -7,6 +7,7 @@ import Domain from "../Components/Team/Team-Card/Domain";
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
+  React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
   // console.log(coreMember)
   return (
     <>
