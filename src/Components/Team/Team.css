@@ -79,7 +79,7 @@
   transition: all 0.3s;
 }
 
-.memImgDiv:hover>.memlinks {
+.memImgDiv:hover > .memlinks {
   opacity: 1;
   visibility: visible;
 }
@@ -137,7 +137,7 @@
   transition: all 0.3s;
 }
 
-.memDivMain:hover>.memName {
+.memDivMain:hover > .memName {
   width: 100%;
 }
 
@@ -265,7 +265,7 @@
   visibility: visible;
   opacity: 0.9;
 }
-.knowMore{
+.knowMore {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -276,27 +276,35 @@
   margin-top: 105px;
   cursor: pointer;
 }
-#knowMore{
-  font-family: 'Manrope';
+#knowMore {
+  font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 28px;
   /* identical to box height, or 200% */
-  
+
   letter-spacing: 0.005em;
   text-decoration-line: underline;
-  
-  color: #F45725;
+
+  color: #f45725;
   margin-right: 10px;
 }
-.arrow{
+.arrow {
   font-size: 20px !important;
-  font-weight:bolder;
+  font-weight: bolder;
   height: 20px;
 }
-.team-about{
+.team-about {
   display: none;
+  max-width: 256px;
+  max-height: 75px;
+  margin-left: 20px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
 }
 /* .............  */
 .coresocilaDiv,
@@ -320,7 +328,7 @@
   transition: all 0.3s;
 }
 
-.coreMemMainCard:hover>.coresocilaDiv {
+.coreMemMainCard:hover > .coresocilaDiv {
   opacity: 1;
   visibility: visible;
 }
@@ -393,7 +401,6 @@
   #OurTeam {
     padding-top: 98px;
   }
-
 }
 
 @media only screen and (max-width: 659px) {
@@ -403,7 +410,7 @@
     /* left: 45%; */
   }
 
-  .memDivMain:hover>.memName {
+  .memDivMain:hover > .memName {
     left: 0%;
   }
 
