@@ -56,6 +56,11 @@ export default function NavMobile() {
               Our Team
             </NavLink>
           </div>
+          <div className="mobileList">
+            <NavLink to="/Alumni" className="liTag" onClick={()=>setCount(false)}>
+              Alumni
+            </NavLink>
+          </div>
           <div class="mobileList">
             <HashLink to="/#ContactUs" className="liTag" onClick={()=>setCount(false)}>
               Contact Us
