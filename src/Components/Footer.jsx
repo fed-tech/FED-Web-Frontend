@@ -19,21 +19,21 @@ export default function Footer() {
             <div className="row1">
               <h4>Community</h4>
               {/* ../ContactUs */}
-              <Link to="/" className="footerleftlink">
+              <Link to="/#ContactUs" className="footerleftlink">
                 Contact
               </Link>
-              <Link to="/Teampage" className="footerleftlink">
+              <Link to="/Team" className="footerleftlink">
                 Member
               </Link>
             </div>
             <div className="row2">
               <h4>About Us</h4>
               {/* ../KnowUs */}
-              <Link to="/" className="footerleftlink">
+              <Link to="/#KnowUs" className="footerleftlink">
                 Manifesto
               </Link>
               {/* ../work */}
-              <Link to="/" className="footerleftlink">
+              <Link to="/#work" className="footerleftlink">
                 Partner
               </Link>
             </div>
