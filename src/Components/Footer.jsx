@@ -1,9 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Footer.css";
-import "./Home/LetsTalkBusiness";
-import "./Home/KnowUs";
-import "./Home/WorkWith";
+import { HashLink } from "react-router-hash-link";
 export default function Footer() {
   return (
     <section id="footer">
@@ -21,9 +19,9 @@ export default function Footer() {
             <div className="row1">
               <h4>Community</h4>
               {/* ../ContactUs */}
-              <Link to="/#ContactUs" className="footerleftlink">
+              <HashLink to="/#ContactUs" className="footerleftlink">
                 Contact
-              </Link>
+              </HashLink>
               <Link to="/Team" className="footerleftlink">
                 Member
               </Link>
@@ -31,13 +29,13 @@ export default function Footer() {
             <div className="row2">
               <h4>About Us</h4>
               {/* ../KnowUs */}
-              <Link to="/#KnowUs" className="footerleftlink">
+              <HashLink smooth to="/#KnowUs" className="footerleftlink">
                 Manifesto
-              </Link>
+              </HashLink>
               {/* ../work */}
-              <Link to="/#work" className="footerleftlink">
+              <HashLink smooth to="/#work" className="footerleftlink">
                 Partner
-              </Link>
+              </HashLink>
             </div>
             <div className="row3"></div>
           </div>
