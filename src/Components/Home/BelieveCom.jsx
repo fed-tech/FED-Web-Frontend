@@ -1,6 +1,6 @@
 import React from "react";
 import Believe from "./Believe";
-
+import emoji from "https://em-content.zobj.net/thumbs/320/apple/325/thinking-face_1f914.png";
 export default function BelieveCom() {
   return (
     <>
@@ -8,10 +8,7 @@ export default function BelieveCom() {
         <p className="BelievePTag">
           What we <span>believe</span> in...
           <span id="appleIcon">
-            <img
-              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/48/thinking-face_1f914.png"
-              alt=""
-            />
+            <img src={emoji} alt="" />
           </span>
         </p>
         <div className="believeCenterDiv">
