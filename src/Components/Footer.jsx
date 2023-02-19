@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Footer.css";
-
+import "./Home/LetsTalkBusiness";
+import "./Home/KnowUs";
+import "./Home/WorkWith";
 export default function Footer() {
   return (
     <section id="footer">
