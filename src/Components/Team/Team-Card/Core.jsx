@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "../Core.css";
+
 export default function Core(props) {
   console.table(props);
   const [showContent, setshowContent] = useState(true);
@@ -30,6 +32,7 @@ export default function Core(props) {
        document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "block";
        document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "block";
        document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "flex";
+      //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
        setbtn("Know more");
 
     }
