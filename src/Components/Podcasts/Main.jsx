@@ -1,12 +1,15 @@
+
 import React, { useState } from "react";
 import Youtube from "./Youtube";
 import Backdrop from "./Backdrop";
 import "./css1/podcasts.css";
 function Main(props) {
+
   const [goToYoutube, setGoToYoutube] = useState(false);
 
   function newState() {
     setGoToYoutube(true);
+    window.scrollTo(0,0);
   }
   return (
     <>
