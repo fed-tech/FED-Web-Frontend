@@ -1,5 +1,5 @@
-import React , {useEffect} from "react";
-import { useState} from "react";
+
+import React, { useState } from "react";
 import Youtube from "./Youtube";
 import Backdrop from "./Backdrop";
 import "./css1/podcasts.css";
