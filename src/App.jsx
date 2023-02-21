@@ -25,7 +25,7 @@ function App() {
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
-          <Route path="/Err" element={<Error />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </Layout>
