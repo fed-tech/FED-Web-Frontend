@@ -37,11 +37,6 @@ export default function Nav() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Alumni" className="liTag">
-                  Alumni
-                </NavLink>
-              </li>
-              <li>
                 <HashLink to="/#ContactUs" className="liTag">
                   Contact Us
                 </HashLink>
