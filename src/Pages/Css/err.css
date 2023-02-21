@@ -1,84 +1,36 @@
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
 .bg {
-  /* The image used */
-  background-image: url("./frame.svg");
-
-  /* Full height */
+  background-image: url("../../Img/image-23.png");
+  width: 100%;
   height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-align: center;
+  align-items: center;
 }
 .oops {
-  /* Oops! */
-
-  position: absolute;
-  width: 260px;
-  height: 64px;
-  left: 500px;
-  top: 260px;
-
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
   font-size: 88px;
-  line-height: 107px;
-  display: flex;
-  top: 8%;
-  left: 40%;
-  letter-spacing: 0.02em;
-
-  color: #ffffff;
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+  padding-top: 200px;
+  font-weight: bold;
 }
-.error {
-  /* Error 404 Page Not Found */
-
-  position: absolute;
-  width: 580px;
-  height: 50px;
-  left: 400px;
-  top: 360px;
-
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
+.notfound {
+  font-family: "Montserrat", sans-serif;
   font-size: 46px;
-  line-height: 56px;
-  /* identical to box height */
-  display: flex;
-  top: 25%;
-  left: 30%;
-  letter-spacing: -0.02em;
-
   color: #f45725;
+  text-align: center;
+  align-items: center;
+  padding-top: 10px;
 }
-.para {
-  /* The page you requested could not be found. We’re working on it :) */
-
-  position: absolute;
-  width: 600px;
-  height: 60px;
-  left: 400px;
-  top: 440px;
-
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 34px;
-  top: 40%;
-  left: 30%;
-
-  color: #ffffff;
-}
-.cycle {
-  position: absolute;
-  top: 50%;
-  left: 25%;
+.the_page {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+  padding-top: 30px;
 }
