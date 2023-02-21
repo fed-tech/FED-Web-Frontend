@@ -12,6 +12,7 @@ import "../Components/Home/css/home.css";
 import "../Components/Home/css/testimonial.css";
 
 export default function Home() {
+  React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
   return (
     <>
       <Carousel />

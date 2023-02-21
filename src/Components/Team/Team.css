@@ -79,7 +79,7 @@
   transition: all 0.3s;
 }
 
-.memImgDiv:hover>.memlinks {
+.memImgDiv:hover > .memlinks {
   opacity: 1;
   visibility: visible;
 }
@@ -137,7 +137,7 @@
   transition: all 0.3s;
 }
 
-.memDivMain:hover>.memName {
+.memDivMain:hover > .memName {
   width: 100%;
 }
 
@@ -265,7 +265,58 @@
   visibility: visible;
   opacity: 0.9;
 }
+.knowMore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: -60px;
+  margin-top: 105px;
+  cursor: pointer;
+  /* transition: all 1s; */
+}
+#knowMore {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  transition: all 1s;
 
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.005em;
+  text-decoration-line: underline;
+
+  color: #f45725;
+  margin-right: 10px;
+}
+.arrow {
+   /* font-size: 20px !important; */
+  /* border: 2px solid #F45725; */
+  /* font-weight: bolder;
+  height: 20px; */ 
+  font-size: 22px;
+    font-weight: 500;
+    background-color: transparent;
+    color: #f45725;
+    font-family: "Manrope";
+    font-style: normal;
+}
+.team-about {
+  display: none;
+  max-width: fit-content;
+  max-height: 75px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+}
 /* .............  */
 .coresocilaDiv,
 .coresocilaDiv2 {
@@ -288,7 +339,7 @@
   transition: all 0.3s;
 }
 
-.coreMemMainCard:hover>.coresocilaDiv {
+.coreMemMainCard:hover > .coresocilaDiv {
   opacity: 1;
   visibility: visible;
 }
@@ -317,9 +368,11 @@
   line-height: 25px;
   letter-spacing: 0.005em;
   color: #f45725;
+  display: block;
 }
 
 .PostPTagName {
+  display: block;
   margin: 0px 0px 0px 20px;
   /* text-align: center; */
   font-family: "Rubik", sans-serif;
@@ -359,7 +412,6 @@
   #OurTeam {
     padding-top: 98px;
   }
-
 }
 
 @media only screen and (max-width: 659px) {
@@ -369,7 +421,7 @@
     /* left: 45%; */
   }
 
-  .memDivMain:hover>.memName {
+  .memDivMain:hover > .memName {
     left: 0%;
   }
 

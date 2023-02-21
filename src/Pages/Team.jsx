@@ -7,6 +7,7 @@ import Domain from "../Components/Team/Team-Card/Domain";
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
+  React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
   // console.log(coreMember)
   return (
     <>
@@ -100,20 +101,20 @@ export default function Team() {
         </div>
         <div className="space" />
         {/* Alumni */}
-        <div className="TeamCreative">
+        {/* <div className="TeamCreative">
           <p className="TeamName">
             Our <span>Alumni</span>
           </p>
           <p className="TeamNameSubTitle">
-            {/* Those who help us plan, strategize, commemorate, organize and
-          operate FED's initiatives! */}
+            Those who help us plan, strategize, commemorate, organize and
+          operate FED's initiatives!
           </p>
           <div id="AlumniTeam">
             {domain.alumni.map((data, i) => (
               <Domain mem={data} key={i} />
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="space"></div>
       </section>
     </>
