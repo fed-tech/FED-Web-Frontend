@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 .bg {
@@ -10,6 +9,7 @@
   align-items: center;
   padding-bottom: 90px;
 }
+
 .oops {
   font-family: "Montserrat", sans-serif;
   font-size: 88px;
@@ -19,6 +19,7 @@
   padding-top: 200px;
   font-weight: bold;
 }
+
 .notfound {
   font-family: "Montserrat", sans-serif;
   font-size: 46px;
@@ -27,6 +28,7 @@
   align-items: center;
   padding-top: 10px;
 }
+
 .the_page {
   font-family: "Montserrat", sans-serif;
   font-size: 26px;
