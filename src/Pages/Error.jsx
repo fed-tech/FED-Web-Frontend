@@ -1,6 +1,6 @@
 import React from "react";
 import "./Css/err.css";
-import Errimage from "./Css/errimage/Layer3.svg";
+// import Errimage from "./../Pages/Css/errimage/Layer3.svg";
 function Errorpage() {
   return (
     <div className="bg">
@@ -9,11 +9,11 @@ function Errorpage() {
       <p className="the_page">
         The page you requested could not be found.
         <br />
-        We're working on it :
+        We're working on it :)
       </p>
-      <div className="cycle_image">
+      {/* <div className="cycle_image">
         <img src={Errimage} className="cycleimage" alt=""></img>
-      </div>
+      </div> */}
     </div>
   );
 }
