@@ -11,7 +11,6 @@ export default function Team() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  // console.log(coreMember)
   return (
     <>
       <section id="OurTeam">
