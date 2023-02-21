@@ -7,7 +7,9 @@
   height: 100%;
   text-align: center;
   align-items: center;
-  padding-bottom: 90px;
+  padding-bottom: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .oops {
@@ -35,5 +37,34 @@
   color: aliceblue;
   text-align: center;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 40px;
+}
+.cycle_image {
+  padding-top: 110px;
+}
+@media only screen and (max-width: 1030px) {
+  .bg {
+    overflow-x: hidden;
+  }
+  .cycleimage {
+    height: 80%;
+    width: 80%;
+  }
+  .oops {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .notfound {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .the_page {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 315px) {
+  .oops {
+    margin-right: 100px;
+  }
 }
