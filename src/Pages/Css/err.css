@@ -1,0 +1,84 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  /* The image used */
+  background-image: url("./frame.svg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.oops {
+  /* Oops! */
+
+  position: absolute;
+  width: 260px;
+  height: 64px;
+  left: 500px;
+  top: 260px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 88px;
+  line-height: 107px;
+  display: flex;
+  top: 8%;
+  left: 40%;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+.error {
+  /* Error 404 Page Not Found */
+
+  position: absolute;
+  width: 580px;
+  height: 50px;
+  left: 400px;
+  top: 360px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 56px;
+  /* identical to box height */
+  display: flex;
+  top: 25%;
+  left: 30%;
+  letter-spacing: -0.02em;
+
+  color: #f45725;
+}
+.para {
+  /* The page you requested could not be found. We’re working on it :) */
+
+  position: absolute;
+  width: 600px;
+  height: 60px;
+  left: 400px;
+  top: 440px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  top: 40%;
+  left: 30%;
+
+  color: #ffffff;
+}
+.cycle {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+}
