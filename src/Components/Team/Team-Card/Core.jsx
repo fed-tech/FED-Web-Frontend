@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import "../Core.css";
 
 export default function Core(props) {
-  // console.table(props);
+  console.table(props);222
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
   const [about , setabout] = useState(false);
   const [btn , setbtn] = useState("Know more");
   
+  const aboutP = props.mem.about;
+  console.log(aboutP)
   useEffect(() => {
     setTimeout(() => {
       setshowContent(false), setshow(true);
@@ -19,23 +21,8 @@ export default function Core(props) {
    const contentChange = ()=>
    {
     setabout(!about);
-    // console.log(props.mem.about)
-    // if (about) {
-    //   document.querySelectorAll(".team-about")[props.mem.id].style. display = "block";
-    //    document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "none";
-    //    document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "none";
-    //    document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "none";
-    //    setbtn("close");
-    // }else
-    // {
-    //   document.querySelectorAll(".team-about")[props.mem.id].style.display = "none";
-    //    document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "block";
-    //    document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "block";
-    //    document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "flex";
-    //   //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
-    //    setbtn("Know more");
-
-    // }
+    console.log(props.mem.about)
+    console.log(props.key)
 
     if (about) {
       setbtn("Know more")
@@ -64,7 +51,7 @@ export default function Core(props) {
             </div>
             <div className="flip-card-back">
             <div className={about?"team-about": "none-box"}>
-                <p>{props.mem.about}</p>
+                <p>{aboutP}</p>
               </div>
               <p className={(!about)?"PostPTagName":"none-box"}>{props.mem.name}</p>
               <p className={(!about)?"PostPTag":"none-box"}>{props.mem.position}</p>

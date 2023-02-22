@@ -7,8 +7,9 @@ import Domain from "../Components/Team/Team-Card/Domain";
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
+  const id  = db.data.core[0].id;
   React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
-  // console.log(coreMember)
+  console.log(coreMember.id)
   return (
     <>
       <section id="OurTeam">
@@ -31,7 +32,7 @@ export default function Team() {
               </h1>
             </div> */}
             {coreMember.map((data, i) => (
-              <Core mem={data} key={i} />
+              <Core mem={data} key={coreMember[i].id} />
             ))}
           </div>
         </div>
