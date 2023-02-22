@@ -25,7 +25,7 @@ export default function NavMobile() {
               </div>
             )}
           </div>
-          <Link to="/" className="LinkStyle">
+          <Link to="/" className="LinkStyle" onClick={() => setCount(false)}>
             <div className="LogoDiv">
               <img src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png"></img>
               <p className="LogoFED">FED</p>
@@ -64,7 +64,7 @@ export default function NavMobile() {
               Our Team
             </NavLink>
           </div>
-          <div className="mobileList">
+          {/* <div className="mobileList">
             <NavLink
               to="/Alumni"
               className="liTag"
@@ -72,7 +72,7 @@ export default function NavMobile() {
             >
               Alumni
             </NavLink>
-          </div>
+          </div> */}
           <div class="mobileList">
             <HashLink
               to="/#ContactUs"
