@@ -5,3 +5,8 @@ svg path {
 svg path:hover {
     color: #f45725;
 }
+
+
+.none-box{
+    display: none;
+}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Core.css";
 
 export default function Core(props) {
-  console.table(props);
+  // console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
   const [about , setabout] = useState(false);
@@ -19,23 +19,30 @@ export default function Core(props) {
    const contentChange = ()=>
    {
     setabout(!about);
-    console.log(props.mem.about)
-    if (about) {
-      document.querySelectorAll(".team-about")[props.mem.id].style. display = "block";
-       document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "none";
-       document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "none";
-       document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "none";
-       setbtn("close");
-    }else
-    {
-      document.querySelectorAll(".team-about")[props.mem.id].style.display = "none";
-       document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "block";
-       document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "block";
-       document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "flex";
-      //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
-       setbtn("Know more");
+    // console.log(props.mem.about)
+    // if (about) {
+    //   document.querySelectorAll(".team-about")[props.mem.id].style. display = "block";
+    //    document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "none";
+    //    document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "none";
+    //    document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "none";
+    //    setbtn("close");
+    // }else
+    // {
+    //   document.querySelectorAll(".team-about")[props.mem.id].style.display = "none";
+    //    document.querySelectorAll(".PostPTagName")[props.mem.id].style. display= "block";
+    //    document.querySelectorAll(".PostPTag")[props.mem.id].style. display= "block";
+    //    document.querySelectorAll(".coresocilaDiv")[props.mem.id].style. display= "flex";
+    //   //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
+    //    setbtn("Know more");
 
+    // }
+
+    if (about) {
+      setbtn("Know more")
+    }else{
+      setbtn("close")
     }
+
   }
   return (
     <>
@@ -56,12 +63,12 @@ export default function Core(props) {
               <img src={props.mem.img} alt="" className="CorememCardImg" />
             </div>
             <div className="flip-card-back">
-            <div className="team-about">
+            <div className={about?"team-about": "none-box"}>
                 <p>{props.mem.about}</p>
               </div>
-              <p className="PostPTagName">{props.mem.name}</p>
-              <p className="PostPTag">{props.mem.position}</p>
-              <div className="coresocilaDiv">
+              <p className={(!about)?"PostPTagName":"none-box"}>{props.mem.name}</p>
+              <p className={(!about)?"PostPTag":"none-box"}>{props.mem.position}</p>
+              <div className={(!about)?"coresocilaDiv":"none-box"}>
                 <a
                   href={props.mem.linkedin}
                   className="memLink"
