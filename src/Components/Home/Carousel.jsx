@@ -21,7 +21,7 @@ export default class SimpleSlider extends Component {
         <Slider {...settings}>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63a434c4913e271fa10d3ad5_h1.png"
+              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63f916b233d000a4ef993443_h1.png"
               para1="Federation of"
               coloredPara=" Entrepreneurship"
               para2="Development"
@@ -30,7 +30,7 @@ export default class SimpleSlider extends Component {
           </div>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63a437553e5c9a808a1c1dd5_h2-min.png"
+              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63f916b1389d075bc1aa77e3_h2.png"
               para1="It's all about"
               coloredPara=" Entrepreneurial"
               para2="Knowledge and Growth!"
@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
           </div>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63a437553e5c9a808a1c1dd5_h2-min.png"
+              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63f916b1d3ec48786a77bf54_h3.png"
               para1="Making"
               coloredPara=" 'start-ups' easier"
               para2="for you to understand and begin with!"
