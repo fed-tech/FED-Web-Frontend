@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
           </div>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63fa4f228bb36936f6082a78_h3.png"
+              image="https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fa6bab4e9a8cee9d6fbaae_hthree.png"
               para1="Making"
               coloredPara=" 'start-ups' easier"
               para2="for you to understand and begin with!"
