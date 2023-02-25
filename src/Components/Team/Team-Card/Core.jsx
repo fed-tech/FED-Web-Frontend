@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "../Core.css";
 
 export default function Core(props) {
-  const activeSlideRef = useRef(null);
   console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
