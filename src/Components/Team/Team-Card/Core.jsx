@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "../Core.css";
 
 export default function Core(props) {
@@ -7,7 +7,10 @@ export default function Core(props) {
   const [show, setshow] = useState(false);
   const [about, setabout] = useState(false);
   const [btn, setbtn] = useState("Know more");
-
+  const teamAboutRef = useRef(null);
+  const postPTagNameRef = useRef(null);
+  const postPTagRef = useRef(null);
+  const coresocialDivRef = useRef(null);
   useEffect(() => {
     setTimeout(() => {
       setshowContent(false), setshow(true);
@@ -17,24 +20,16 @@ export default function Core(props) {
   const contentChange = () => {
     setabout(!about);
     if (about) {
-      document.querySelectorAll(".team-about")[props.mem.id].style.display =
-        "block";
-      document.querySelectorAll(".PostPTagName")[props.mem.id].style.display =
-        "none";
-      document.querySelectorAll(".PostPTag")[props.mem.id].style.display =
-        "none";
-      document.querySelectorAll(".coresocilaDiv")[props.mem.id].style.display =
-        "none";
+      teamAboutRef.current.style.display = "block";
+      postPTagNameRef.current.style.display = "none";
+      postPTagRef.current.style.display = "none";
+      coresocialDivRef.current.style.display = "none";
       setbtn("close");
     } else {
-      document.querySelectorAll(".team-about")[props.mem.id].style.display =
-        "none";
-      document.querySelectorAll(".PostPTagName")[props.mem.id].style.display =
-        "block";
-      document.querySelectorAll(".PostPTag")[props.mem.id].style.display =
-        "block";
-      document.querySelectorAll(".coresocilaDiv")[props.mem.id].style.display =
-        "flex";
+      teamAboutRef.current.style.display = "none";
+      postPTagNameRef.current.style.display = "block";
+      postPTagRef.current.style.display = "block";
+      coresocialDivRef.current.style.display = "flex";
       //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
       setbtn("Know more");
     }
@@ -58,12 +53,16 @@ export default function Core(props) {
               <img src={props.mem.img} alt="" className="CorememCardImg" />
             </div>
             <div className="flip-card-back">
-              <div className="team-about">
+              <div className="team-about" ref={teamAboutRef}>
                 <p>{props.mem.about}</p>
               </div>
-              <p className="PostPTagName">{props.mem.name}</p>
-              <p className="PostPTag">{props.mem.position}</p>
-              <div className="coresocilaDiv">
+              <p className="PostPTagName" ref={postPTagNameRef}>
+                {props.mem.name}
+              </p>
+              <p className="PostPTag" ref={postPTagRef}>
+                {props.mem.position}
+              </p>
+              <div className="coresocilaDiv" ref={coresocialDivRef}>
                 <a
                   href={props.mem.linkedin}
                   className="memLink"
