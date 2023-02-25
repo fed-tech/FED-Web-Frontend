@@ -1,13 +1,13 @@
 import React from "react";
-import Main from "../Components/Podcasts/Main";
-function Podcasts() {
+import OurAlumni from "../Components/Alumni/OurAlumni";
+function Alumni() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <Main />
+      <OurAlumni />
     </>
   );
 }
-export default Podcasts;
+export default Alumni;

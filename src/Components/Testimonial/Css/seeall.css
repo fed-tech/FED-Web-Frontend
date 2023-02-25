@@ -1,0 +1,76 @@
+.seeall_page {
+    background-color: rgb(15, 14, 14);
+}
+
+.sub_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+}
+
+.mcard {
+    height: 100px;
+    flex: 0 0 215px;
+    padding-bottom: 380px;
+    padding-left: 50px;
+    padding-right: 80px;
+    background-color: rgb(15, 14, 14);
+}
+
+.cardbox {
+    vertical-align: middle;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 350px;
+    height: 240px;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.cmt {
+    background-color: transparent;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    color: black;
+    margin-bottom: 90px;
+}
+
+.sp {
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    background-color: transparent;
+    color: #f45725;
+    float: left;
+    position: absolute;
+    bottom: 40px;
+}
+
+.prg {
+    background-color: transparent;
+    font-family: "Manrope", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    float: left;
+    position: absolute;
+    bottom: 20px;
+}
+
+@media only screen and (max-width: 650px) {
+    .sub_div {
+        padding-top: 68px;
+    }
+}
