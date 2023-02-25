@@ -21,7 +21,7 @@ export default class SimpleSlider extends Component {
         <Slider {...settings}>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63fa4f220e70bd82ce453702_h1.png"
+              image="https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fa6c18300f0c3b718d0f99_h1.png"
               para1="Federation of"
               coloredPara=" Entrepreneurship"
               para2="Development"
