@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import SliderComponent from "./SliderComponent";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+// Component
+import SliderComponent from "./SliderComponent";
+
+// Css
 import "./css/carousel.css";
 
 export default class SimpleSlider extends Component {
