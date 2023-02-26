@@ -14,6 +14,8 @@ import db from "./../Data/dbTeam.json";
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
+
+  // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
