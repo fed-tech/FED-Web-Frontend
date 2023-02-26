@@ -1,6 +1,12 @@
 import React from "react";
+
+// css
 import "./css/alumni.css";
-import Card from "./card.json";
+
+// Data
+import Card from "./../../Data/card.json";
+
+// Icons
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -26,11 +32,6 @@ function OurAlumni() {
               </div>
               <div className="child_">
                 <div className="content_">
-                  {/* <img
-                    src={card.vector}
-                    className="vectorimage"
-                    alt="vector"
-                  ></img> */}
                   <h1 className="heading_1">{card.title_}</h1>
                   <h3>{card.subtitle}</h3>
                   <p>{card.para_}</p>
@@ -45,13 +46,6 @@ function OurAlumni() {
                         <LinkedInIcon />
                       </div>
                     </a>
-                    {/* <a href={card.internet}>
-                      <img
-                        src={card.globe}
-                        className="iconimage"
-                        alt="icons"
-                      ></img>
-                    </a> */}
                   </div>
                 </div>
               </div>
