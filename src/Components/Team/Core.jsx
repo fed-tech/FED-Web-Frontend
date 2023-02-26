@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import "./css/Core.css";
 
 export default function Core(props) {
-  console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
   const [about, setabout] = useState(false);
