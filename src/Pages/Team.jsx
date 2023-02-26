@@ -1,6 +1,8 @@
 import React from "react";
+
+// Components
 import "../Components/Team/Team.css";
-import db from "../Components/Team/dbTeam.json";
+import db from "./../Data/dbTeam.json";
 import "../Components/Team/loading.css";
 import Core from "../Components/Team/Team-Card/Core.jsx";
 import Domain from "../Components/Team/Team-Card/Domain";
