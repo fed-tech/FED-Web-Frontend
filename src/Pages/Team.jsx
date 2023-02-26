@@ -1,10 +1,12 @@
 import React from "react";
 
 // Components
-import "../Components/Team/Team.css";
-import "../Components/Team/loading.css";
-import Core from "../Components/Team/Team-Card/Core.jsx";
-import Domain from "../Components/Team/Team-Card/Domain";
+import Core from "../Components/Team/Core";
+import Domain from "../Components/Team/Domain";
+
+// css
+import "../Components/Team/css/Team.css";
+import "../Components/Team/css/loading.css";
 
 // Data
 import db from "./../Data/dbTeam.json";
