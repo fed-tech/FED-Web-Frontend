@@ -1,14 +1,22 @@
-import React from "react";
-import "../Components/Team/Team.css";
-import db from "../Components/Team/dbTeam.json";
-import "../Components/Team/loading.css";
-import Core from "../Components/Team/Team-Card/Core.jsx";
-import Domain from "../Components/Team/Team-Card/Domain";
+import React, { useEffect } from "react";
+
+// Components
+import Core from "../Components/Team/Core";
+import Domain from "../Components/Team/Domain";
+
+// css
+import "../Components/Team/css/Team.css";
+import "../Components/Team/css/loading.css";
+
+// Data
+import db from "./../Data/dbTeam.json";
 
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
-  React.useEffect(() => {
+
+  // scroll to top
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
