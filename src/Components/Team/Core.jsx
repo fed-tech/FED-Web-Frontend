@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "../Core.css";
+
+// css
+import "./css/Core.css";
 
 export default function Core(props) {
   console.table(props);
