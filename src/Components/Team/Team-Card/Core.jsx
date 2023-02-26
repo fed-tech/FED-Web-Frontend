@@ -35,7 +35,6 @@ export default function Core(props) {
         "block";
       document.querySelectorAll(".coresocilaDiv")[props.mem.id].style.display =
         "flex";
-      //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
       setbtn("Know more");
     }
   };
