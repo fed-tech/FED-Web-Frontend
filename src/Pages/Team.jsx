@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Components
 import Core from "../Components/Team/Core";
@@ -14,7 +14,7 @@ import db from "./../Data/dbTeam.json";
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
-  React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
