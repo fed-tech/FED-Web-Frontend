@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// Components
 import Carousel from "../Components/Home/Carousel";
 import KnowUsCom from "../Components/Home/KnowUs";
 import BelieveCom from "./../Components/Home/BelieveCom";
@@ -12,9 +14,11 @@ import "../Components/Home/css/home.css";
 import "../Components/Home/css/testimonial.css";
 
 export default function Home() {
-  React.useEffect(() => {
+  // scroll to top
+  useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <Carousel />
