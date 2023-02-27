@@ -1,38 +1,43 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "../Core.css";
 
 export default function Core(props) {
   console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
-  const [about, setabout] = useState(false);
   const [btn, setbtn] = useState("Know more");
-  const teamAboutRef = useRef(null);
-  const postPTagNameRef = useRef(null);
-  const postPTagRef = useRef(null);
-  const coresocialDivRef = useRef(null);
+  const [content, setContent] = useState({
+    showAbout: false,
+    displayTeamAbout: "none",
+    displayPostPTagName: "block",
+    displayPostPTag: "block",
+    displayCoresocilaDiv: "block",
+    btnText: "Learn More",
+  });
   useEffect(() => {
     setTimeout(() => {
       setshowContent(false), setshow(true);
     }, 3000);
   });
-
-  const contentChange = () => {
-    setabout(!about);
-    if (about) {
-      teamAboutRef.current.style.display = "block";
-      postPTagNameRef.current.style.display = "none";
-      postPTagRef.current.style.display = "none";
-      coresocialDivRef.current.style.display = "none";
-      setbtn("close");
-    } else {
-      teamAboutRef.current.style.display = "none";
-      postPTagNameRef.current.style.display = "block";
-      postPTagRef.current.style.display = "block";
-      coresocialDivRef.current.style.display = "flex";
-      //  document.querySelectorAll(".linkd")[props.mem.id].style. display= "flex";
-      setbtn("Know more");
-    }
+  const [teamAboutDisplay, setTeamAboutDisplay] = useState("none");
+  const [postPTagNameDisplay, setPostPTagNameDisplay] = useState("block");
+  const [postPTagDisplay, setPostPTagDisplay] = useState("block");
+  const [coresocialDivDisplay, setCoresocialDivDisplay] = useState("block");
+  const handleContentChange = () => {
+    const newContent = {
+      ...content,
+      showAbout: !content.showAbout,
+      displayTeamAbout: content.showAbout ? "none" : "block",
+      displayPostPTagName: content.showAbout ? "block" : "none",
+      displayPostPTag: content.showAbout ? "block" : "none",
+      displayCoresocilaDiv: content.showAbout ? "block" : "none",
+      btnText: content.showAbout ? "Learn More" : "Close",
+    };
+    setContent(newContent);
+    setTeamAboutDisplay(newContent.displayTeamAbout);
+    setPostPTagNameDisplay(newContent.displayPostPTagName);
+    setPostPTagDisplay(newContent.displayPostPTag);
+    setCoresocialDivDisplay(newContent.displayCoresocilaDiv);
   };
   return (
     <>
@@ -53,16 +58,22 @@ export default function Core(props) {
               <img src={props.mem.img} alt="" className="CorememCardImg" />
             </div>
             <div className="flip-card-back">
-              <div className="team-about" ref={teamAboutRef}>
+              <div className="team-about" style={{ display: teamAboutDisplay }}>
                 <p>{props.mem.about}</p>
               </div>
-              <p className="PostPTagName" ref={postPTagNameRef}>
+              <p
+                className="PostPTagName"
+                style={{ display: postPTagNameDisplay }}
+              >
                 {props.mem.name}
               </p>
-              <p className="PostPTag" ref={postPTagRef}>
+              <p className="PostPTag" style={{ display: postPTagDisplay }}>
                 {props.mem.position}
               </p>
-              <div className="coresocilaDiv" ref={coresocialDivRef}>
+              <div
+                className="coresocilaDiv"
+                style={{ display: coresocialDivDisplay }}
+              >
                 <a
                   href={props.mem.linkedin}
                   className="memLink"
@@ -98,7 +109,7 @@ export default function Core(props) {
                   </svg>
                 </a>
               </div>
-              <div className="knowMore" onClick={contentChange}>
+              <div className="knowMore" onClick={handleContentChange}>
                 <p id="knowMore">{btn} </p> <span className="arrow">{">"}</span>
               </div>
             </div>
