@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../Core.css";
+import "./css/Core.css";
 
 export default function Core(props) {
   console.table(props);
@@ -110,7 +110,8 @@ export default function Core(props) {
                 </a>
               </div>
               <div className="knowMore" onClick={handleContentChange}>
-                <p id="knowMore">{btn} </p> <span className="arrow">{">"}</span>
+                <p id="knowMore">{btn} </p>
+                <span className="arrow">{">"}</span>
               </div>
             </div>
           </div>
