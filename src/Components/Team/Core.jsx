@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
-
-// css
 import "./css/Core.css";
 
 export default function Core(props) {
+  console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
-  const [about, setabout] = useState(false);
   const [btn, setbtn] = useState("Know more");
+  const [content, setContent] = useState({
+    showAbout: false,
+    displayTeamAbout: "none",
+    displayPostPTagName: "block",
+    displayPostPTag: "block",
+    displayCoresocilaDiv: "block",
+    btnText: "Know More",
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,29 +21,25 @@ export default function Core(props) {
     }, 3000);
   });
 
-  const contentChange = () => {
-    setabout(!about);
-    if (about) {
-      document.querySelectorAll(".team-about")[props.mem.id].style.display =
-        "block";
-      document.querySelectorAll(".PostPTagName")[props.mem.id].style.display =
-        "none";
-      document.querySelectorAll(".PostPTag")[props.mem.id].style.display =
-        "none";
-      document.querySelectorAll(".coresocilaDiv")[props.mem.id].style.display =
-        "none";
-      setbtn("close");
-    } else {
-      document.querySelectorAll(".team-about")[props.mem.id].style.display =
-        "none";
-      document.querySelectorAll(".PostPTagName")[props.mem.id].style.display =
-        "block";
-      document.querySelectorAll(".PostPTag")[props.mem.id].style.display =
-        "block";
-      document.querySelectorAll(".coresocilaDiv")[props.mem.id].style.display =
-        "flex";
-      setbtn("Know more");
-    }
+  const [teamAboutDisplay, setTeamAboutDisplay] = useState("none");
+  const [postPTagNameDisplay, setPostPTagNameDisplay] = useState("block");
+  const [postPTagDisplay, setPostPTagDisplay] = useState("block");
+  const [coresocialDivDisplay, setCoresocialDivDisplay] = useState("block");
+  const handleContentChange = () => {
+    const newContent = {
+      ...content,
+      showAbout: !content.showAbout,
+      displayTeamAbout: content.showAbout ? "none" : "block",
+      displayPostPTagName: content.showAbout ? "block" : "none",
+      displayPostPTag: content.showAbout ? "block" : "none",
+      displayCoresocilaDiv: content.showAbout ? "block" : "none",
+      btnText: content.showAbout ? "Know More" : "Close",
+    };
+    setContent(newContent);
+    setTeamAboutDisplay(newContent.displayTeamAbout);
+    setPostPTagNameDisplay(newContent.displayPostPTagName);
+    setPostPTagDisplay(newContent.displayPostPTag);
+    setCoresocialDivDisplay(newContent.displayCoresocilaDiv);
   };
   return (
     <>
@@ -58,12 +60,22 @@ export default function Core(props) {
               <img src={props.mem.img} alt="" className="CorememCardImg" />
             </div>
             <div className="flip-card-back">
-              <div className="team-about">
+              <div className="team-about" style={{ display: teamAboutDisplay }}>
                 <p>{props.mem.about}</p>
               </div>
-              <p className="PostPTagName">{props.mem.name}</p>
-              <p className="PostPTag">{props.mem.position}</p>
-              <div className="coresocilaDiv">
+              <p
+                className="PostPTagName"
+                style={{ display: postPTagNameDisplay }}
+              >
+                {props.mem.name}
+              </p>
+              <p className="PostPTag" style={{ display: postPTagDisplay }}>
+                {props.mem.position}
+              </p>
+              <div
+                className="coresocilaDiv"
+                style={{ display: coresocialDivDisplay }}
+              >
                 <a
                   href={props.mem.linkedin}
                   className="memLink"
@@ -99,8 +111,9 @@ export default function Core(props) {
                   </svg>
                 </a>
               </div>
-              <div className="knowMore" onClick={contentChange}>
-                <p id="knowMore">{btn} </p> <span className="arrow">{">"}</span>
+              <div className="knowMore" onClick={handleContentChange}>
+                <p id="knowMore">{content.btnText} </p>
+                <span className="arrow">{">"}</span>
               </div>
             </div>
           </div>
