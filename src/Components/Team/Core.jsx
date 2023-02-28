@@ -12,13 +12,15 @@ export default function Core(props) {
     displayPostPTagName: "block",
     displayPostPTag: "block",
     displayCoresocilaDiv: "block",
-    btnText: "Learn More",
+    btnText: "Know More",
   });
+
   useEffect(() => {
     setTimeout(() => {
       setshowContent(false), setshow(true);
     }, 3000);
   });
+
   const [teamAboutDisplay, setTeamAboutDisplay] = useState("none");
   const [postPTagNameDisplay, setPostPTagNameDisplay] = useState("block");
   const [postPTagDisplay, setPostPTagDisplay] = useState("block");
@@ -31,15 +33,13 @@ export default function Core(props) {
       displayPostPTagName: content.showAbout ? "block" : "none",
       displayPostPTag: content.showAbout ? "block" : "none",
       displayCoresocilaDiv: content.showAbout ? "block" : "none",
-      btnText: content.showAbout ? "Learn More" : "Close",
+      btnText: content.showAbout ? "Know More" : "Close",
     };
     setContent(newContent);
     setTeamAboutDisplay(newContent.displayTeamAbout);
     setPostPTagNameDisplay(newContent.displayPostPTagName);
     setPostPTagDisplay(newContent.displayPostPTag);
     setCoresocialDivDisplay(newContent.displayCoresocilaDiv);
-
-    setbtn("Back");
   };
   return (
     <>
@@ -112,7 +112,7 @@ export default function Core(props) {
                 </a>
               </div>
               <div className="knowMore" onClick={handleContentChange}>
-                <p id="knowMore">{btn} </p>
+                <p id="knowMore">{content.btnText} </p>
                 <span className="arrow">{">"}</span>
               </div>
             </div>
