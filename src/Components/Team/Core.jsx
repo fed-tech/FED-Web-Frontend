@@ -38,6 +38,8 @@ export default function Core(props) {
     setPostPTagNameDisplay(newContent.displayPostPTagName);
     setPostPTagDisplay(newContent.displayPostPTag);
     setCoresocialDivDisplay(newContent.displayCoresocilaDiv);
+
+    setbtn("Back");
   };
   return (
     <>
