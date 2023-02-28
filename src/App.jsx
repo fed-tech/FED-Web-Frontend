@@ -1,11 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// layout
 import Layout from "./Pages/Layout";
+
+// Components
+import Nav from "./Components/Nav";
+import NavMobile from "./Components/NavMobile";
+import Footer from "./Components/Footer";
+
+// Pages
 import Home from "./Pages/Home";
 import Error from "./Pages/Error";
-import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
-import NavMobile from "./Components/NavMobile";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Team from "./Pages/Team";
