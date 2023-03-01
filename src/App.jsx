@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
@@ -13,7 +13,6 @@ import Alumni from "./Pages/Alumni";
 import Seeall from "./Components/Home/Seeall";
 
 function App() {
-  const location = useLocation();
   return (
     <BrowserRouter>
       <Layout>
