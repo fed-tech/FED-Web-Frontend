@@ -1,11 +1,35 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap');
 #MyProfile {
     padding-top:200px;
     background-color:black;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: mulish;
     font-size: 30px;
 }
-
+.logo-white {
+/* position: absolute;
+top: 236px;  */
+width: 95px;
+height: 57px;
+/* padding: 0px;
+gap: 10px;
+color: white;
+position: absolute;
+left: 673px;
+*/
+}
+.whiteclass {
+    color: black;
+    font-size: 34px;
+}
+.blackclass {
+    color: black;
+    font-size: 17px;
+    padding-top: 3.8px;
+}
 .container {
     margin:0;
     width:100%;
@@ -14,17 +38,36 @@
     /* justify-content: center; */
     align-items: center;
 }
-.signup-div {
+/* .signup-div {
     padding-top:30.8px;
-}
+} */
 .signup-card {
     color: black;
-    background-color: gray;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    background-color: white;
     border-radius: 30px;
+    width: 486.9px;
+    height: 608.4px;
     padding: 77.5px 56.7px;
 }
+.input-padding {
+    margin: 0;
+    padding-left:7.2px;
+    padding-right:7.2px;
+}
 .signup-card input {
+    /* font-family: mulish; */
+    font: 17px mulish;
     background-color: transparent;
     outline: none;
     border: none;
+}
+.submit-btn {
+    background-color: black;
+    font-family: Mulish 500;
+    font-size: 25px;
+    padding: 7.2px 145px;
+    color: white;
 }
