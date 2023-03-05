@@ -17,6 +17,7 @@ import Podcasts from "./Pages/Podcasts";
 import Team from "./Pages/Team";
 import Alumni from "./Pages/Alumni";
 import Seeall from "./Components/Home/Seeall";
+import MyProfile from "./Components/Profile/MyProfile";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
           <Route path="*" element={<Error />} />
+          <Route path="/MyProfile" element={<MyProfile/>}/>
         </Routes>
         <Footer />
       </Layout>

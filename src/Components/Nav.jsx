@@ -41,6 +41,11 @@ export default function Nav() {
                   Contact Us
                 </HashLink>
               </li>
+              <li>
+                <NavLink to="/MyProfile" className="liTag">
+                  My Profile 
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

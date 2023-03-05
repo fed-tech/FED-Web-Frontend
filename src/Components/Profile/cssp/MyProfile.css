@@ -1,0 +1,30 @@
+#MyProfile {
+    padding-top:200px;
+    background-color:black;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
+.container {
+    margin:0;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.signup-div {
+    padding-top:30.8px;
+}
+.signup-card {
+    color: black;
+    background-color: gray;
+    border-radius: 30px;
+    padding: 77.5px 56.7px;
+}
+.signup-card input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
