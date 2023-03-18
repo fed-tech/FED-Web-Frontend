@@ -1,12 +1,3 @@
-* {
-  margin: 0px;
-  padding: 0px;
-
-  color: #fff;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
 .KnowUsmDiv {
   height: fit-content;
   padding: 1rem 0px 6rem 0px;
@@ -38,7 +29,6 @@
   font-size: 50px;
   line-height: 59px;
   text-align: center;
-  /* background-color: transparent; */
 }
 
 .para2 {
@@ -52,7 +42,6 @@
   font-size: 110%;
   line-height: 40px;
   letter-spacing: 0.005em;
-  /* background-color: transparent; */
   text-align: center;
   width: 50%;
   margin-bottom: 90px;
@@ -125,7 +114,6 @@
 }
 
 @media screen and (max-width: 370px) {
-
   .para1,
   .para2 {
     width: 100%;
