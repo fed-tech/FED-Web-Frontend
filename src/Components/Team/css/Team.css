@@ -240,7 +240,6 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  /* Remove this if you don't want the 3D effect */
   width: 33%;
   max-width: 430px;
   min-width: 377px;
@@ -250,11 +249,9 @@
 .flip-card-inner {
   position: relative;
   border-radius: 10px;
-  /* padding: 15px; */
   width: 100%;
   height: 100%;
   text-align: center;
-  /* box-shadow: 0 4px 8px 0 #e66f4a; */
 }
 
 .flip-card:hover .CorememCardImg {
@@ -275,7 +272,6 @@
   margin-bottom: -60px;
   margin-top: 105px;
   cursor: pointer;
-  /* transition: all 1s; */
 }
 #knowMore {
   font-family: "Manrope";
@@ -286,7 +282,6 @@
   transition: all 1s;
   letter-spacing: 0.005em;
   text-decoration-line: underline;
-
   color: #f45725;
   margin-right: 10px;
 }
@@ -310,7 +305,13 @@
   font-size: 14px;
   line-height: 25px;
 }
-/* .............  */
+
+.team-about p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .coresocilaDiv,
 .coresocilaDiv2 {
   margin-bottom: 20px;
