@@ -284,9 +284,6 @@
   font-size: 14px;
   line-height: 28px;
   transition: all 1s;
-
-  /* identical to box height, or 200% */
-
   letter-spacing: 0.005em;
   text-decoration-line: underline;
 
@@ -294,16 +291,12 @@
   margin-right: 10px;
 }
 .arrow {
-   /* font-size: 20px !important; */
-  /* border: 2px solid #F45725; */
-  /* font-weight: bolder;
-  height: 20px; */ 
   font-size: 22px;
-    font-weight: 500;
-    background-color: transparent;
-    color: #f45725;
-    font-family: "Manrope";
-    font-style: normal;
+  font-weight: 500;
+  background-color: transparent;
+  color: #f45725;
+  font-family: "Manrope";
+  font-style: normal;
 }
 .team-about {
   display: none;
