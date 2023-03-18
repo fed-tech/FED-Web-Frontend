@@ -129,7 +129,6 @@
   text-align: center;
   padding: 4px 24px;
   border-radius: 8px;
-  /* width: 45%; */
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -219,7 +218,6 @@
   position: relative;
   bottom: 430px;
   transition: opacity 0.5s, visibility 0.2s;
-  /* Safari */
   visibility: hidden;
   opacity: 0;
   width: 100%;
@@ -324,7 +322,6 @@
 }
 
 .coresocilaDiv {
-  /* display: none; */
   transition: all 0.3s;
 }
 
@@ -363,7 +360,6 @@
 .PostPTagName {
   display: block;
   margin: 0px 0px 0px 20px;
-  /* text-align: center; */
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -377,7 +373,6 @@
 .PostAbtPTag {
   margin-bottom: 30px;
   width: 246px;
-  /* height: 211px; */
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
