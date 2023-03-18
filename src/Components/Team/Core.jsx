@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./css/Core.css";
 
 export default function Core(props) {
-  console.table(props);
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
   const [btn, setbtn] = useState("Know more");
@@ -111,10 +110,10 @@ export default function Core(props) {
                   </svg>
                 </a>
               </div>
-              <div className="knowMore" onClick={handleContentChange}>
+              {/* <div className="knowMore" onClick={handleContentChange}>
                 <p id="knowMore">{content.btnText} </p>
                 <span className="arrow">{">"}</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
