@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 export default function Domain(props) {
-  // console.table(props.mem);
   const [showContent2, setshowContent2] = useState(true);
   const [show2, setshow2] = useState(false);
   useEffect(() => {
