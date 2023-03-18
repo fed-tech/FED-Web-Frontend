@@ -40,7 +40,7 @@
       {
         "name": "Ayan Kumar Paul",
         "position": "Creative Director",
-        "linkedin": "https://www.linkedin.com/in/ayan-paul-b341a5204/",
+        "linkedin": "https://www.linkedin.com/in/ayanpaul2002/",
         "github": "https://github.com/Ayanpaul11",
         "img": "https://uploads-ssl.webflow.com/635fe4acd1af941207c580b7/635ffcd8bc91161b1567bfdd_Profileimage_.jpg",
         "about": "FED helped me advance to a new level by enabling me to go beyond simply learning to teach others. A layperson can just exclaim, 'Oh! What a gorgeous structure,' or 'What a wonderful car,' but only a creative person can make it look better. At FED, we prioritize providing the greatest platform to grow.",
@@ -58,13 +58,22 @@
     ],
     "Tech": [
       {
+        "id": "1",
         "name": "Achyut Vardhan",
         "linkedin": "https://www.linkedin.com/in/achyut-vardhan-3a4905180/",
         "github": "https://github.com/achyutvardhan",
         "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2de611c2178c2fcb034d1_IMG-20221113-WA0064%20-%20Achyut%20Vardhan.jpg"
       },
       {
-        "name": "Vineet Agrawal",
+        "id": "2",
+        "name": "Antara Dubey",
+        "linkedin": "https://www.linkedin.com/in/antara-dubey-573738228/",
+        "github": "https://github.com/Antara-3011",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1e1b9dff2642a6d6fcbb3_IMG-20230214-WA0008%20-%20Antara%20Dubey.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Vinit Agarwal",
         "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
         "github": "https://github.com/vinitagarwal007",
         "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg"
