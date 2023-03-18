@@ -80,24 +80,17 @@
       },
       {
         "id": "4",
-        "name": "Navya Verma",
-        "linkedin": "https://www.linkedin.com/in/navya-verma-53832424b",
-        "github": "https://github.com/NavyaVerma139",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd4485872ab2fb8834cf_Navya%20-%204084%20NAVYA%20VERMA.jpg"
-      },
-      {
-        "id": "",
-        "name": "Jaideep Bose",
-        "linkedin": "",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg"
-      },
-      {
-        "id": "3",
         "name": "Kolla gayatri shruti ",
         "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
         "github": "https://github.com/me-mystic",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Navya Verma",
+        "linkedin": "https://www.linkedin.com/in/navya-verma-53832424b",
+        "github": "https://github.com/NavyaVerma139",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd4485872ab2fb8834cf_Navya%20-%204084%20NAVYA%20VERMA.jpg"
       },
       {
         "id": "6",
@@ -105,6 +98,13 @@
         "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
         "github": "https://github.com/vinitagarwal007",
         "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg"
+      },
+      {
+        "id": "7",
+        "name": "Jaideep Bose",
+        "linkedin": "https://www.linkedin.com/in/jaideep-bose-89a93725a/",
+        "github": "https://github.com/jaideepbose51",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg"
       }
     ],
     "creative": [
