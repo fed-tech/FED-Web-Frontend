@@ -3,14 +3,18 @@ import React from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
+
+// Pages
 import Home from "./Pages/Home";
+import Team from "./Pages/Team";
 import Error from "./Pages/Error";
+import Events from "./Pages/Events";
+import Podcasts from "./Pages/Podcasts";
+
+// Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
-import Events from "./Pages/Events";
-import Podcasts from "./Pages/Podcasts";
-import Team from "./Pages/Team";
 import Alumni from "./Pages/Alumni";
 import Seeall from "./Components/Home/Seeall";
 
