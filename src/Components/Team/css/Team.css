@@ -283,8 +283,6 @@
   text-align: center;
   width: 100%;
   margin-top: 50px;
-  /* margin-bottom: -60px; */
-  /* margin-top: 105px; */
   cursor: pointer;
 }
 
@@ -297,7 +295,7 @@
   transition: all 1s;
   letter-spacing: 0.005em;
   color: #f45725;
-  margin-right: 10px;
+  margin-right: 7px;
   transition: all 0.3s;
 }
 
