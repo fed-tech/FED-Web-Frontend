@@ -282,8 +282,9 @@
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin-bottom: -60px;
-  margin-top: 105px;
+  margin-top: 50px;
+  /* margin-bottom: -60px; */
+  /* margin-top: 105px; */
   cursor: pointer;
 }
 
@@ -295,9 +296,13 @@
   line-height: 28px;
   transition: all 1s;
   letter-spacing: 0.005em;
-  text-decoration-line: underline;
   color: #f45725;
   margin-right: 10px;
+  transition: all 0.3s;
+}
+
+#knowMore:hover {
+  text-decoration-line: underline;
 }
 
 .arrow {
