@@ -293,7 +293,6 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 28px;
-  transition: all 1s;
   letter-spacing: 0.005em;
   color: #f45725;
   transition: all 0.3s;
@@ -420,6 +419,11 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 380px) {
+  .hoverDetailsMDiv {
+    padding: 20px 0px;
+  }
+}
 @media only screen and (max-width: 650px) {
   .memDivMain {
     margin: 0px 20px 50px 20px;
