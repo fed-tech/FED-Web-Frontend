@@ -58,7 +58,10 @@ export default function Core(props) {
             <div className="coreMemMainCard">
               <img src={props.mem.img} alt="" className="CorememCardImg" />
               <div className="hoverDetailsMDiv">
-                <p className="PostPTagName">{props.mem.name}</p>
+                <div className="NamePosDiv">
+                  <p className="PostPTagName">{props.mem.name}</p>
+                  <p className="PostPTag">{props.mem.position}</p>
+                </div>
               </div>
             </div>
           </div>
