@@ -247,14 +247,15 @@
   text-align: center;
 }
 
-.flip-card:hover .CorememCardImg {
-  opacity: 0.1;
-}
+/* .flip-card:hover .CorememCardImg {
+  opacity: 0;
+} */
 
 .flip-card:hover .flip-card-back {
   visibility: visible;
   opacity: 0.9;
 }
+
 .knowMore {
   display: flex;
   flex-direction: row;
@@ -266,6 +267,7 @@
   margin-top: 105px;
   cursor: pointer;
 }
+
 #knowMore {
   font-family: "Manrope";
   font-style: normal;
@@ -278,6 +280,7 @@
   color: #f45725;
   margin-right: 10px;
 }
+
 .arrow {
   font-size: 22px;
   font-weight: 500;
@@ -286,6 +289,7 @@
   font-family: "Manrope";
   font-style: normal;
 }
+
 .team-about {
   display: none;
   max-width: fit-content;
