@@ -258,11 +258,18 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: red;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* background-color: rgba(transparent, transparent, transparent, 0.9); */
+}
+
+.NamePosDiv {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .flip-card:hover .flip-card-back {
@@ -363,8 +370,10 @@
 }
 
 .PostPTag {
-  margin: 0px 0px 10px 20px;
+  width: 100%;
+  /* margin: 0px 0px 10px 20px; */
   text-align: center;
+  text-align: left;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -372,7 +381,7 @@
   line-height: 25px;
   letter-spacing: 0.005em;
   color: #f45725;
-  display: block;
+  /* display: block; */
 }
 
 .PostPTagName {
