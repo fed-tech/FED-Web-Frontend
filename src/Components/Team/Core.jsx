@@ -4,7 +4,7 @@ import "./css/Core.css";
 export default function Core(props) {
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
-  const [btn, setbtn] = useState("Know more");
+  const [btn, setbtn] = useState(true);
   // const [content, setContent] = useState({
   // showAbout: false,
   // displayTeamAbout: "none",
@@ -19,6 +19,11 @@ export default function Core(props) {
       setshowContent(false), setshow(true);
     }, 3000);
   });
+
+  const changeContent = () => {
+    setbtn(!btn);
+  };
+
   //
   const [teamAboutDisplay, setTeamAboutDisplay] = useState("none");
   // const [postPTagNameDisplay, setPostPTagNameDisplay] = useState("block");
@@ -98,8 +103,8 @@ export default function Core(props) {
                     </svg>
                   </a>
                 </div>
-                <div className="knowMore">
-                  <p id="knowMore">{btn}</p>
+                <div className="knowMore" onClick={changeContent}>
+                  <p id="knowMore">{btn ? "Know more" : "Back"}</p>
                   <span className="arrow">{">"}</span>
                 </div>
               </div>
