@@ -421,9 +421,13 @@
 
 @media only screen and (max-width: 380px) {
   .hoverDetailsMDiv {
-    padding: 20px 0px;
+    padding: 20px 7px;
+  }
+  .knowMore {
+    margin-top: 10px;
   }
 }
+
 @media only screen and (max-width: 650px) {
   .memDivMain {
     margin: 0px 20px 50px 20px;
