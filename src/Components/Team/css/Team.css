@@ -295,7 +295,6 @@
   transition: all 1s;
   letter-spacing: 0.005em;
   color: #f45725;
-  margin-right: 7px;
   transition: all 0.3s;
 }
 
@@ -304,6 +303,7 @@
 }
 
 .arrow {
+  margin: 0px 7px;
   font-size: 22px;
   font-weight: 500;
   background-color: transparent;
