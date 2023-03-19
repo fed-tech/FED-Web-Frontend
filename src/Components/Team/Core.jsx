@@ -104,8 +104,9 @@ export default function Core(props) {
                   </a>
                 </div>
                 <div className="knowMore" onClick={changeContent}>
+                  {btn ? "" : <span className="arrow">{"<"}</span>}
                   <p id="knowMore">{btn ? "Know more" : "Back"}</p>
-                  <span className="arrow">{">"}</span>
+                  {btn ? <span className="arrow">{">"}</span> : ""}
                 </div>
               </div>
             </div>
