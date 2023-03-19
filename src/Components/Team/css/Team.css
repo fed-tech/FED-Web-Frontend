@@ -258,13 +258,11 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
-  /* background-color: rgba(transparent, transparent, transparent, 0.9); */
 }
 
 .NamePosDiv {
