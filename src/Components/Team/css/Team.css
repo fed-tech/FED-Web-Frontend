@@ -247,10 +247,6 @@
   text-align: center;
 }
 
-/* .flip-card:hover .CorememCardImg {
-  opacity: 0;
-} */
-
 .coreMemMainCard:hover .hoverDetailsMDiv {
   visibility: visible;
   opacity: 1;
@@ -321,21 +317,11 @@
 }
 
 .team-about {
-  /* max-width: fit-content; */
-  /* max-height: 75px; */
-  /* margin-left: 20px; */
-  /* margin-right: 20px; */
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 25px;
-}
-
-.team-about p {
-  /* display: -webkit-box; */
-  /* -webkit-line-clamp: 3; */
-  /* -webkit-box-orient: vertical; */
 }
 
 .coresocilaDiv2 {
@@ -362,11 +348,6 @@
   transition: all 0.3s;
 }
 
-/* .coreMemMainCard:hover > .coresocilaDiv {
-  opacity: 1;
-  visibility: visible;
-} */
-
 .coresocilaDiv2 {
   margin-top: -65px;
 }
@@ -383,7 +364,6 @@
 
 .PostPTag {
   width: 100%;
-  /* margin: 0px 0px 10px 20px; */
   text-align: center;
   text-align: left;
   font-family: "Rubik", sans-serif;
@@ -393,7 +373,6 @@
   line-height: 25px;
   letter-spacing: 0.005em;
   color: #f45725;
-  /* display: block; */
 }
 
 .PostPTagName {
@@ -405,7 +384,6 @@
   letter-spacing: 0.005em;
   text-align: left;
   width: 100%;
-  /* color: #ffffff; */
   text-transform: capitalize;
 }
 
@@ -449,9 +427,7 @@
 
 @media only screen and (max-width: 659px) {
   .memName {
-    /* width: 60%; */
     right: auto;
-    /* left: 45%; */
   }
 
   .memDivMain:hover > .memName {
@@ -495,19 +471,10 @@
     min-width: 90%;
   }
 
-  /* #CoreTeam {
-      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-      grid-template-rows: repeat(2, minmax(377px, 1fr));
-    } */
-
   .coreMemMainCard {
     width: 100%;
     margin: 0px;
   }
-
-  /* .flip-card-inner {
-      height: 400px;
-    } */
 
   .coreMemDesCard {
     width: 90.98%;
@@ -518,8 +485,4 @@
     width: 71.72%;
     height: fit-content;
   }
-
-  /* .flip-card-back {
-      bottom: 400px;
-    } */
 }
