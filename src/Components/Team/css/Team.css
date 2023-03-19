@@ -263,6 +263,7 @@
   align-items: center;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: scroll;
 }
 
 .NamePosDiv {
@@ -313,11 +314,10 @@
 }
 
 .team-about {
-  display: none;
-  max-width: fit-content;
-  max-height: 75px;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* max-width: fit-content; */
+  /* max-height: 75px; */
+  /* margin-left: 20px; */
+  /* margin-right: 20px; */
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
@@ -326,9 +326,9 @@
 }
 
 .team-about p {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  /* display: -webkit-box; */
+  /* -webkit-line-clamp: 3; */
+  /* -webkit-box-orient: vertical; */
 }
 
 .coresocilaDiv2 {
