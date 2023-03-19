@@ -91,10 +91,9 @@
 }
 
 .svgCore {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: transparent;
-  margin-top: 20px;
 }
 
 #gitLink {
@@ -259,6 +258,7 @@
   top: 0px;
   left: 0px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -328,15 +328,19 @@
   -webkit-box-orient: vertical;
 }
 
-.coresocilaDiv,
 .coresocilaDiv2 {
   margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
-
   align-items: flex-start;
   background-color: transparent;
+}
+
+.coresocilaDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #linkd {
@@ -348,10 +352,10 @@
   transition: all 0.3s;
 }
 
-.coreMemMainCard:hover > .coresocilaDiv {
+/* .coreMemMainCard:hover > .coresocilaDiv {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 .coresocilaDiv2 {
   margin-top: -65px;
