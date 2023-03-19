@@ -250,7 +250,14 @@
   opacity: 0;
 } */
 
+.coreMemMainCard:hover .hoverDetailsMDiv {
+  visibility: visible;
+  opacity: 1;
+}
+
 .hoverDetailsMDiv {
+  visibility: hidden;
+  opacity: 0;
   padding: 20px;
   width: 100%;
   height: 100%;
