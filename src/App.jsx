@@ -11,6 +11,7 @@ import Error from "./Pages/Error";
 import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
+import Profile from "./Pages/Profile";
 import Seeall from "./Components/Home/Seeall";
 
 // Components
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Team" element={<Team />} />
           <Route path="/Event" element={<Events />} />
           <Route path="/Alumni" element={<Alumni />} />
+          <Route path="/Profile" element={<Profile />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
           <Route path="*" element={<Error />} />
