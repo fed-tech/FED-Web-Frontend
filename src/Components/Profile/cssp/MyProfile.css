@@ -1,7 +1,7 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap');
 #MyProfile {
     padding-top:200px;
     background-color:black;
@@ -9,39 +9,17 @@
     font-family: mulish;
     font-size: 30px;
 }
-.logo-white {
-/* position: absolute;
-top: 236px;  */
-width: 95px;
-height: 57px;
-/* padding: 0px;
-gap: 10px;
-color: white;
-position: absolute;
-left: 673px;
-*/
+#logo-white {
+    position: relative;
+    top: 116px; 
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
-.whiteclass {
-    color: black;
-    font-size: 34px;
-}
-.blackclass {
-    color: black;
-    font-size: 17px;
-    padding-top: 3.8px;
-}
-.container {
-    margin:0;
-    width:100%;
-    display:flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-}
-/* .signup-div {
-    padding-top:30.8px;
-} */
 .signup-card {
+    position: relative;
+    top:203.8px;
     color: black;
     /* display: flex;
     flex-direction: column;
@@ -51,6 +29,43 @@ left: 673px;
     width: 486.9px;
     height: 608.4px;
     padding: 77.5px 56.7px;
+}
+.whiteclass {
+    position: absolute;
+    top: 36.9px;
+    left: 154.8px;
+    right: 181.1px;
+    font-size: 27px;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+.blackclass {
+    position: absolute;
+    top:74.7px;
+    left:167.4px;
+    font-size: 13.5px;
+    color: black;
+    font-size: 17px;
+}
+.signup-with {
+    position: absolute;
+    top:132.3px;
+    font-size: 13.5px;
+    color: black;
+    font-size: 17px;
+}
+.container {
+    margin:0;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.signup-div {
+    /* padding-top:30.8px; */
+    margin: 0;
 }
 .input-padding {
     margin: 0;
