@@ -11,11 +11,22 @@ export default function MyProfile() {
                             <p className="whiteclass">Hello there</p>
                             <p className="blackclass">Please enter your details</p>
                             <p className="signup-with">
-                                Sigup with Google
+                                Singup with Google
                             </p>
                             <br />
-                            
-                        </div>
+                            <p className="p1 font-generic">Or</p>
+                            <input type="text" placeholder="First Name" className="font-generic inputs in1"/>
+                            <hr className="hrs hr1"/>
+                            <input type="text" placeholder="Last Name" className="font-generic inputs in2"/>
+                            <hr className="hrs hr2"/>
+                            <input type="email" placeholder="Email" className="font-generic inputs in3"/>
+                            <hr className="hrs hr3"/>
+                            <input type="text" placeholder="Password" className="font-generic inputs in4"/>
+                            <hr className="hrs hr4"/>
+                            <button type="submit" className="submit-btn font-generic">Signup</button>
+                            <p className="p2 font-generic">Already a member? <span>Login</span></p>
+                            </div>
+                            <div className="padding"></div>
                     </div>
                 </div>
             </section>
