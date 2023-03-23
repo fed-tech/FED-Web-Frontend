@@ -101,6 +101,7 @@
     position:absolute;
     line-height: 17px;
     left: 80.1px;
+    text-align: left;
     background-color: transparent;
     outline: none;
     border: none;
@@ -229,6 +230,7 @@
         margin-top: 2%;
     }
     .inputs {
+        text-align: left;
         left:16%;
     }
     .inputs::placeholder{
