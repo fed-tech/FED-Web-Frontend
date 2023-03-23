@@ -183,7 +183,9 @@
         height:120vw;
         box-sizing: border-box;
     }
-
+    #logo-white {
+        font-size: 40px;
+    }
     .font-generic {
         text-align: center;
         font-size: 11.8px;
