@@ -1,16 +1,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
 #MyProfile {
-    padding-top:200px;
+    padding-top: 106px;
     background-color:black;
     color: black;
     font-family: mulish;
     font-size: 30px;
 }
 #logo-white {
+    font-family: rubik;
     position: relative;
+    font-style: normal;
     top: 116px; 
     font-size: 48px;
     font-weight: 700;
@@ -19,7 +21,7 @@
 }
 .signup-card {
     position: relative;
-    top:203.8px;
+    top:159.8px;
     color: black;
     /* display: flex;
     flex-direction: column;
@@ -38,8 +40,7 @@
 .whiteclass {
     position: absolute;
     top: 36.9px;
-    left: 154.8px;
-    right: 181.1px;
+    left: 164.8px;
     margin: 0;
     padding: 0;
     font-family: Mulish;
@@ -53,7 +54,7 @@
 .blackclass {
     position: absolute;
     top:74.7px;
-    left:167.4px;
+    left:163.4px;
     font-size: 13.5px;
     color: black;
     font-weight: 400;
@@ -73,6 +74,11 @@
     color: black;
     font-size: 13.5px;
     line-height: 17px;
+}
+.logo {
+    position: absolute;
+    top:11.6px;
+    left: 109.8px;
 }
 .p1 {
     position: absolute;
@@ -174,5 +180,5 @@
     border-radius: 7.2px;
 }
 .padding{
-    padding-top: 295.8px;
+    padding-top: 251.8px;
 }
