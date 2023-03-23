@@ -9,8 +9,8 @@ export default function MyProfile() {
                     <div className="signup-div">
                         <div className="signup-card">
                             <p className="whiteclass">Hello there</p>
-                            <p className="blackclass">Please enter your details</p>
-                            <p className="signup-with">
+                            <p className="blackclass font-generic">Please enter your details</p>
+                            <p className="signup-with font-generic">
                                 <svg className="logo" width="17.1" height="17.1" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_264_8297)">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5596 9.44466C17.5596 8.83839 17.5052 8.25544 17.4041 7.6958H9.35156V11.0031H13.953C13.7548 12.0718 13.1524 12.9774 12.2469 13.5836V15.7289H15.0101C16.6268 14.2404 17.5596 12.0485 17.5596 9.44466Z" fill="#4285F4"/>
@@ -36,7 +36,7 @@ export default function MyProfile() {
                             <hr className="hrs hr3"/>
                             <input type="text" placeholder="Password" className="font-generic inputs in4"/>
                             <hr className="hrs hr4"/>
-                            <button type="submit" className="submit-btn font-generic">Signup</button>
+                            <button type="submit" className="submit-btn">Signup</button>
                             <p className="p2 font-generic">Already a member? <span>Login</span></p>
                             </div>
                             <div className="padding"></div>
