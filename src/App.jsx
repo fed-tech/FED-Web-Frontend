@@ -1,17 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React from "react";
+
+// Layout
 import Layout from "./Pages/Layout";
+
+// Pages
 import Home from "./Pages/Home";
+import Team from "./Pages/Team";
 import Error from "./Pages/Error";
+import Alumni from "./Pages/Alumni";
+import Events from "./Pages/Events";
+import Podcasts from "./Pages/Podcasts";
+import Seeall from "./Components/Home/Seeall";
+
+// Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
-import Events from "./Pages/Events";
-import Podcasts from "./Pages/Podcasts";
-import Team from "./Pages/Team";
-import Alumni from "./Pages/Alumni";
-import Seeall from "./Components/Home/Seeall";
-import Login from "./Components/Home/Login";
 
 function App() {
   return (
@@ -26,7 +31,6 @@ function App() {
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
-          <Route path="/LoginPage" element={<Login />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
