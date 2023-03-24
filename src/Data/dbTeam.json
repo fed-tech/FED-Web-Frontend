@@ -20,22 +20,13 @@
         "about": "The nature of being an entrepreneur means that you fully embrace ambiguity and are comfortable with being challenged regularly. Being an entrepreneur is more than being a business owner; it's a perspective and a lifestyle. Fed gave me that thing, that spark to grow my personality and lifestyle. Fed is not just an organization, but a family where I met amazing persons, it gave me the best people best skills and the best life learnings"
       },
       {
-        "name": "Nishant Giri",
-        "position": "Marketing Director",
-        "linkedin": "https://www.linkedin.com/in/nishant-giri-7003131b5",
-        "github": "https://github.com/nishant-giri",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636002e038a81b26f3bb2a40_IMG20221031161012-copy.jpg",
-        "about": "I'd like to contribute to FED even more now that I've learned some of the greatest approaches from the cream of the crop. As the Director, I would ensure that FED has a comfortable and energetic working environment in addition to accomplishing the tasks promptly.",
-        "id": 2
-      },
-      {
         "name": "Rishav Singh",
         "position": "Tech Director",
         "linkedin": "https://www.linkedin.com/in/rishav-singh-a89622211/",
         "github": "https://github.com/TheDa21crj",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636000459bdab10dce6b88fc_DSC_0014-copy.jpg",
         "about": "The first is the innovator and the pace of innovation is faster than ever before. Being a part of FED, I have learned to adapt to incoming ideas with a blend of technology at an ever-increasing pace. As a technocrat, I aim to help and support the entire team to improve competitive advantage and drive strategy and growth.",
-        "id": 3
+        "id": 2
       },
       {
         "name": "Ayan Kumar Paul",
@@ -44,6 +35,15 @@
         "github": "https://github.com/Ayanpaul11",
         "img": "https://uploads-ssl.webflow.com/635fe4acd1af941207c580b7/635ffcd8bc91161b1567bfdd_Profileimage_.jpg",
         "about": "FED helped me advance to a new level by enabling me to go beyond simply learning to teach others. A layperson can just exclaim, 'Oh! What a gorgeous structure,' or 'What a wonderful car,' but only a creative person can make it look better. At FED, we prioritize providing the greatest platform to grow.",
+        "id": 3
+      },
+      {
+        "name": "Nishant Giri",
+        "position": "Marketing Director",
+        "linkedin": "https://www.linkedin.com/in/nishant-giri-7003131b5",
+        "github": "https://github.com/nishant-giri",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636002e038a81b26f3bb2a40_IMG20221031161012-copy.jpg",
+        "about": "I'd like to contribute to FED even more now that I've learned some of the greatest approaches from the cream of the crop. As the Director, I would ensure that FED has a comfortable and energetic working environment in addition to accomplishing the tasks promptly.",
         "id": 4
       },
       {
