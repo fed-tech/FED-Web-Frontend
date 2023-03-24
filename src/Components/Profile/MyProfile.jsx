@@ -1,4 +1,4 @@
-import React from "react";
+import Reactz from "react";
 import "./cssp/MyProfile.css";
 export default function MyProfile() {
   return (
