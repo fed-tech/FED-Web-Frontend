@@ -32,8 +32,8 @@ function App() {
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
+          <Route path="/LoginPage" element={<Login />} />
           <Route path="*" element={<Error />} />
-          <Route path="/LoginPage" element={<Login />} />{" "}
         </Routes>
         <Footer />
       </Layout>
