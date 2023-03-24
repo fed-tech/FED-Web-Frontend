@@ -13,6 +13,7 @@
     font-family: rubik;
     position: relative;
     font-style: normal;
+    text-shadow: 1px 0.496831px 1px #F45725;
     top: 116px; 
     font-size: 48px;
     font-weight: 700;
@@ -35,7 +36,9 @@
 .font-generic {
     font-family: Mulish;
     font-style: normal;
-    color:black
+    color:black;
+    text-align: center;
+    font-size: 13.5px;
 }
 .whiteclass {
     position: absolute;
@@ -43,13 +46,11 @@
     left: 164.8px;
     margin: 0;
     padding: 0;
-    font-family: Mulish;
-    font-style: normal;
     font-weight: 600;
     font-size: 27px;
+    color: #000;
     line-height: 34px;
     letter-spacing: 0.05em;
-    color: #000000;
 }
 .blackclass {
     position: absolute;
@@ -68,11 +69,8 @@
     border: 0.9px solid black;
     border-radius: 10.8px;
     padding:12px;
-    padding-left: 134.1px;
-    font-family: Mulish;
     font-weight: 300;
-    color: black;
-    font-size: 13.5px;
+    padding-left: 40px;
     line-height: 17px;
 }
 .logo {
@@ -93,7 +91,6 @@
     top:513.9px;
     left:164.7px;
     font-weight: 300;
-    font-size: 13.5px;
     line-height: 17px;
 }
 .p2 span {
@@ -104,6 +101,7 @@
     position:absolute;
     line-height: 17px;
     left: 80.1px;
+    text-align: left;
     background-color: transparent;
     outline: none;
     border: none;
@@ -113,7 +111,8 @@
     font-size: 13.5px;
     font-family: Mulish;
     font-style: normal;
-    color:black
+    color:black;
+    text-align: left;
 }
 .in1 {
     top: 228.6px;
@@ -127,14 +126,7 @@
 .in4 {
     top: 379.8px;
 }
-/* .hrs {
-    position: absolute;
-    /* width: 359.1px; */
-    /* height: 0px; */
-    /* top: 253.35px; */
-    /* left: 63.9px; */
-    /* border: 0.9px solid #000000; */
-/* } */
+
 .hrs{
     margin-top: 3px;
     position: absolute;
@@ -174,11 +166,113 @@
     line-height: 25px;
     background-color: black;
     color: white;
-    padding: 7.2px;
-    padding-left: 140.4px;
-    padding-right: 153.7px;
+    padding: 7.2px 150.05px;
     border-radius: 7.2px;
 }
 .padding{
     padding-top: 251.8px;
+}
+@media (max-width:510px) {
+    #MyProfile {
+        padding-top: 3%;
+    }
+    .padding {
+        padding-top: 80%;
+    }
+    .signup-card {
+        padding: 0px 20px;
+        width:85vw;
+        height:120vw;
+        box-sizing: border-box;
+    }
+    #logo-white {
+        font-size: 40px;
+    }
+    .font-generic {
+        text-align: center;
+        font-size: 11.8px;
+    }
+    .whiteclass , .blackclass, .signup-with, .logo, .p1, .p2,.inputs .hrs, .submit-btn{
+        display: relative;
+        text-align: center;
+    }
+    .whiteclass {
+        font-size: 22px;
+        left: 20%;
+        right:20%;
+        top:8%;
+    }
+    .blackclass {
+        top:18%;
+        left: 10%;
+        right:10%;
+        text-align: center;
+    }
+    .logo {
+        top:22%;
+        left:15%;
+    }
+    .signup-with {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        top:25%;
+        left:13%;
+        right:13%;
+    }
+    .p1 {
+        top: 34%;
+        left:50%;
+    }
+    .hrs {
+        width:70%;
+        left:14%;
+        right:14%;
+        margin-top: 2%;
+    }
+    .inputs {
+        text-align: left;
+        left:16%;
+    }
+    .inputs::placeholder{
+        font-size: 11.8px;
+        text-align: left;
+    }
+    .in1 {
+        top: 40%;
+    }
+    .hr1 {
+        top: 43%;
+        /* margin-bottom: 10px; */
+    }
+    .in2 {
+        top: 49%;
+    }
+    .hr2 {
+        top: 52%;
+    }
+    .in3 {
+        top: 58%;
+    }
+    .hr3 {
+        top: 61%;
+    }
+    .in4 {
+        top: 67%;
+    }
+    .hr4 {
+        top: 70%;
+    }
+    .submit-btn {
+        top:79%;
+        left:14%;
+        right:14%;
+        font-size: 15px;
+        padding: 0.5% 10%;
+    }
+    .p2 {
+        top:89%;
+        left: 10%;
+        right:10%;
+        text-align: center;
+    }
 }
