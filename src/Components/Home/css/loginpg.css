@@ -1,6 +1,226 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+  /*font-family: 'Mulish', sans-serif;*/
+.full{
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: 120px;
+  left: -1px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.inside{
+  position: relative;
+  background-color: black;
+  height: 755px;
+  width: 622px;
+  flex-wrap: wrap;
+  top: 101px;
+}
+.title{
+text-align: center;
+background-color: transparent;
+font-family: "Rubik", sans-serif;
+font-style: normal;
+font-weight: 800;
+font-size: 50px;
+line-height: 59px;
+margin: 0px 0px 90px 0px;
+position: absolute;
+top: 23px;
+bottom: 675px;
+left: 264px;
+right: 264px;
+}
+
+.whitebox{
+  position: absolute;
+  top: 110px;
+  left:71px;
+  right: 71px;
+  bottom: 91px;
+  width: 482px;
+  height: 555px;
+  background: white;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.welc{
+  position: absolute;
+  top: 37px;
+  left: 141px;
+  bottom: 483px;
+  right: 141px;
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 33px;
+  letter-spacing: 0.005em;
+  color: black;
+}
+
+.det{
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 150px;
+  height: 17px;
+  top: 73.81px;
+  left: 165px;
+  bottom: 462.3px;
+  right: 165px;
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+.googlepart{
+  box-sizing: border-box;
+  position: absolute;
+  top: 130.72px;
+  bottom: 380.6px;
+  right: 56px;
+  left: 56px;
+  height: 42px;
+  width: 369px;
+  border: 0.889247px solid black;
+  border-radius: 10.671px;
+}
+.icon{
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 12.45px;
+  bottom: 12.45px;
+  right: 238px;
+  left: 114px;
+}
+.log{
+  position: absolute;
+  top: 12.45px ;
+  bottom: 12.36px;
+  left: 137px;
+  right: 121px;
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+
+}
+
+.or{
+  position: absolute;
+  top: 199px ;
+  bottom: 337px;
+  left: 233px;
+  right: 233px;
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+
+.signup{
+  position: absolute;
+  top: 469px ;
+  bottom: 66.5px;
+  left: 146px;
+  right: 146px;
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+
+.spn{
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+
+.login-btn{
+  width: 354.81px;
+  height: 39.13px;
+  position: absolute;
+  top: 408.16px;
+  bottom: 105.82px;
+  left: 62.14px;
+  right: 62.14px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  transition: 0.5s;
+  border-radius: 7.11px;
+  cursor: pointer;
+}
+
+.logtwo{
+  position: absolute;
+  top: 7.11px;
+  left: 152pxpx;
+  bottom: 7.01px;
+  right: 152px;
+  background-color: transparent;
+  font-family: 'Mulish', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 25px;
+  color: white;
+}
+
+.input {
+  position:absolute;
+  line-height: 17px;
+  text-align: left;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.input::placeholder{
+  font-weight: 300;
+  font-size: 13.5px;
+  font-family: Mulish;
+  font-style: normal;
+  color:black;
+  text-align: left;
+}
+
+.user{
+  position: absolute;
+  top: 292.86px;
+  left: 69px;
+  bottom: 260.26px;
+  right: 56px;
+}
+
+.pass{
+    position: absolute;
+    top: 354.66px;
+    left: 69px;
+    bottom: 198.45px;
+    right: 56px;
+
 }
