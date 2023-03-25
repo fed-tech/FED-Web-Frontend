@@ -1,14 +1,24 @@
-import React from "react";
-import "../Components/Team/Team.css";
-import db from "../Components/Team/dbTeam.json";
-import "../Components/Team/loading.css";
-import Core from "../Components/Team/Team-Card/Core.jsx";
-import Domain from "../Components/Team/Team-Card/Domain";
+import React, { useEffect } from "react";
+
+// Components
+import Core from "../Components/Team/Core";
+import Domain from "../Components/Team/Domain";
+
+// css
+import "../Components/Team/css/Team.css";
+import "../Components/Team/css/loading.css";
+
+// Data
+import db from "./../Data/dbTeam.json";
+
 export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
-  React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
-  // console.log(coreMember)
+
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section id="OurTeam">
@@ -24,12 +34,6 @@ export default function Team() {
             the Creative group, the Technical group, and the Operations group.
           </p>
           <div id="CoreTeam">
-            {/* <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div> */}
             {coreMember.map((data, i) => (
               <Core mem={data} key={i} />
             ))}
@@ -100,21 +104,6 @@ export default function Team() {
           </div>
         </div>
         <div className="space" />
-        {/* Alumni */}
-        <div className="TeamCreative">
-          <p className="TeamName">
-            Our <span>Alumni</span>
-          </p>
-          <p className="TeamNameSubTitle">
-            {/* Those who help us plan, strategize, commemorate, organize and
-          operate FED's initiatives! */}
-          </p>
-          <div id="AlumniTeam">
-            {domain.alumni.map((data, i) => (
-              <Domain mem={data} key={i} />
-            ))}
-          </div>
-        </div>
         <div className="space"></div>
       </section>
     </>
