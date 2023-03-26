@@ -259,8 +259,3 @@
   border: 1px solid #ccc;
   outline: none;
 }
-@media only screen and (max-width: 949px) {
-  .inside {
-    margin-right: 600px;
-  }
-}
