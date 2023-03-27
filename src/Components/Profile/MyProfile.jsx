@@ -1,9 +1,7 @@
 import React from "react";
 import "./cssp/MyProfile.css"
 export default function MyProfile() {
-    const jsx="hello";
     return (
-        console.alert(jsx)
         <div>
             <section id="MyProfile">
                 <div className="container">
