@@ -166,6 +166,7 @@
     line-height: 25px;
     background-color: black;
     color: white;
+    border:black;
     padding: 7.2px 150.05px;
     border-radius: 7.2px;
 }
