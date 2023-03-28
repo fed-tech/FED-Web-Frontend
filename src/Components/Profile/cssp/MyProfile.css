@@ -171,6 +171,41 @@
 .padding {
   padding-top: 251.8px;
 }
+.error1 {
+  color: red;
+  font-size: 12.8px;
+  margin-top: 145px;
+}
+.error2 {
+  color: red;
+  font-size: 12.8px;
+  margin-top: 35px;
+}
+.error3 {
+  color: red;
+  font-size: 12.8px;
+  margin-top: 35px;
+}
+.error4 {
+  color: red;
+  font-size: 12.8px;
+  margin-top: 35px;
+}
+.formsubmission {
+  position: relative;
+  background-color: #f45725;
+  color: #000;
+  width: 180px;
+  height: 40px;
+  font-size: 15.3px;
+  margin-left: 100px;
+  margin-top: 430px;
+  text-align: center;
+  align-items: center;
+  border-radius: 2%;
+  padding: 9px;
+  box-shadow: 0 8px 8px -4px;
+}
 
 @media (max-width: 510px) {
   #MyProfile {
