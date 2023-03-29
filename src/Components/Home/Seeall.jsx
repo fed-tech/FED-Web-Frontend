@@ -1,6 +1,11 @@
 import React from "react";
+
+// css
 import "./css/seeall.css";
+
+// datas
 import Wcard from "../../Data/testimonial.json";
+
 function Seeall() {
   return (
     <div className="seeall_page">
