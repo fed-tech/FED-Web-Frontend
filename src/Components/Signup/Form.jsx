@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 // css
-import "./cssp/MyProfile.css";
-export default function MyProfile() {
+import "./Css/From.css";
+
+export default function Form() {
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -54,7 +55,7 @@ export default function MyProfile() {
   return (
     <>
       <form action="" onSubmit={handleSubmit}>
-        <div>
+        <div className="mainbody">
           <section id="MyProfile">
             <div className="container">
               <h3 id="logo-white">FED</h3>
@@ -114,7 +115,6 @@ export default function MyProfile() {
                   </p>
                   <br />
 
-                  
                   <p className="p1 font-generic">Or</p>
                   <div className="fname">
                     <input
@@ -123,7 +123,7 @@ export default function MyProfile() {
                       placeholder="First Name"
                       className="font-generic inputs in1"
                       value={formValues.firstname}
-                    onChange={handleChange}
+                      onChange={handleChange}
                     />
                     <hr className="hrs hr1" />
                     <div className="error1">{formErrors.firstname}</div>
@@ -141,7 +141,7 @@ export default function MyProfile() {
                     <hr className="hrs hr2" />
                     <div className="error2">{formErrors.lastname}</div>
                   </div>
-                  
+
                   <div className="email">
                     <input
                       type="email"
@@ -154,7 +154,7 @@ export default function MyProfile() {
                     <hr className="hrs hr3" />
                     <div className="error3">{formErrors.email}</div>
                   </div>
-                  
+
                   <div className="password">
                     <input
                       type="password"
@@ -167,7 +167,7 @@ export default function MyProfile() {
                     <hr className="hrs hr4" />
                     <div className="error4">{formErrors.password}</div>
                   </div>
-                  
+
                   <button type="submit" className="submit-btn">
                     Signup
                   </button>

@@ -1,23 +1,24 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
 
-// layout
+// Layout
 import Layout from "./Pages/Layout";
-
-// Components
-import Nav from "./Components/Nav";
-import NavMobile from "./Components/NavMobile";
-import Footer from "./Components/Footer";
 
 // Pages
 import Home from "./Pages/Home";
+import Team from "./Pages/Team";
 import Error from "./Pages/Error";
+import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
-import Team from "./Pages/Team";
-import Alumni from "./Pages/Alumni";
 import Seeall from "./Components/Home/Seeall";
-import MyProfile from "./Components/Profile/MyProfile";
+// import MyProfile from "./Components/Profile/MyProfile";
+import Signup from "./Pages/Signup";
+
+// Components
+import Nav from "./Components/Nav";
+import Footer from "./Components/Footer";
+import NavMobile from "./Components/NavMobile";
 
 function App() {
   return (
@@ -32,8 +33,9 @@ function App() {
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
+          {/* <Route path="/MyProfile" element={<MyProfile />} /> */}
+          <Route path="/Signup" element={<Signup />} />
           <Route path="*" element={<Error />} />
-          <Route path="/MyProfile" element={<MyProfile/>}/>
         </Routes>
         <Footer />
       </Layout>

@@ -34,12 +34,6 @@ export default function Team() {
             the Creative group, the Technical group, and the Operations group.
           </p>
           <div id="CoreTeam">
-            {/* <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div> */}
             {coreMember.map((data, i) => (
               <Core mem={data} key={i} />
             ))}
@@ -110,21 +104,6 @@ export default function Team() {
           </div>
         </div>
         <div className="space" />
-        {/* Alumni */}
-        {/* <div className="TeamCreative">
-          <p className="TeamName">
-            Our <span>Alumni</span>
-          </p>
-          <p className="TeamNameSubTitle">
-            Those who help us plan, strategize, commemorate, organize and
-          operate FED's initiatives!
-          </p>
-          <div id="AlumniTeam">
-            {domain.alumni.map((data, i) => (
-              <Domain mem={data} key={i} />
-            ))}
-          </div>
-        </div> */}
         <div className="space"></div>
       </section>
     </>
