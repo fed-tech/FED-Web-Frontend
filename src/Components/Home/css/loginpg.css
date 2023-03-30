@@ -6,29 +6,24 @@
   height: 100%;
   width: 100%;
   display: flex;
-  position: relative;
-  top: 120px;
-  left: -1px;
-  flex-wrap: wrap;
-
+  justify-content: center;
+  align-items: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center;
   align-items: center;
 }
 .inside {
-  position: relative;
   background-color: black;
   height: 755px;
   width: 622px;
-  flex-wrap: wrap;
-  top: 101px;
-  border-radius: 5%;
-  margin-bottom: 150px;
   display: flex;
-  margin-left: 320px;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
+  border-radius: 5%;
+  display: flex;
+  text-align: center;
+  padding: 10px;
 }
 .title1 {
   text-align: center;
@@ -36,37 +31,36 @@
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 95px;
-  font-size: 95px;
+  font-size: 63px;
   line-height: 59px;
-  margin: 0px 0px 90px 0px;
-  position: absolute;
-  top: 23px;
-  bottom: 675px;
-  left: 264px;
-  right: 264px;
+
+  margin-bottom: 68px;
+ 
+}
+.title1 p{
+   color: white;
+   margin: 0;
 }
 
 .whitebox {
-  position: relative;
-  top: 10px;
-  left: 71px;
-  right: 71px;
-  bottom: 91px;
   width: 481.08px;
   height: 553.11px;
   background: white;
   border-radius: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
   display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+.hellopart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .welc {
-  position: absolute;
-  top: 37px;
-  left: 141px;
-  bottom: 483px;
-  right: 141px;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -78,15 +72,8 @@
 }
 
 .det {
-  position: absolute;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 150px;
   height: 17px;
-  top: 73.81px;
-  left: 165px;
-  bottom: 462.3px;
-  right: 165px;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -97,31 +84,19 @@
 }
 .googlepart {
   box-sizing: border-box;
-  position: absolute;
-  top: 130.72px;
-  bottom: 380.6px;
-  right: 56px;
-  left: 56px;
   height: 42px;
   width: 369px;
   border: 0.889247px solid black;
   border-radius: 10.671px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .icon {
   width: 17px;
   height: 17px;
-  position: absolute;
-  top: 12.45px;
-  bottom: 12.45px;
-  right: 238px;
-  left: 114px;
 }
 .log {
-  position: absolute;
-  top: 12.45px;
-  bottom: 12.36px;
-  left: 137px;
-  right: 121px;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -132,11 +107,6 @@
 }
 
 .or {
-  position: absolute;
-  top: 199px;
-  bottom: 337px;
-  left: 233px;
-  right: 233px;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -147,11 +117,6 @@
 }
 
 .signup {
-  position: absolute;
-  top: 469px;
-  bottom: 66.5px;
-  left: 146px;
-  right: 146px;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -172,7 +137,6 @@
   text-decoration: none;
 }
 .logtwo {
-  position: absolute;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -183,8 +147,6 @@
   width: 354.81px;
   height: 39.13px;
   border: none;
-  margin-top: 430px;
-  margin-left: -173px;
   border-radius: 3%;
 }
 
@@ -195,6 +157,7 @@
   background-color: transparent;
   outline: none;
   border: none;
+
 }
 .input::placeholder {
   font-weight: 300;
@@ -204,21 +167,14 @@
   color: black;
   text-align: left;
 }
-
-.user {
-  position: absolute;
-  top: 292.86px;
-  left: 69px;
-  bottom: 260.26px;
-  right: 56px;
+.user,.pass{
+  margin-bottom: 36px;
+  width: 369px;
 }
-
-.pass {
-  position: absolute;
-  top: 354.66px;
-  left: 69px;
-  bottom: 198.45px;
-  right: 56px;
+.user input,.pass input{
+  width: 100%;
+  border-bottom: 1.5px solid black;
+  padding: 10px;
 }
 .username {
   border: none;
@@ -226,7 +182,7 @@
   font-size: 12px;
   padding: 5px;
   font-family: "Mulish", sans-serif;
-  margin-left: -180px;
+
 }
 .username:focus {
   outline: none;
@@ -241,7 +197,7 @@
   font-size: 12px;
   padding: 5px;
   font-family: "Mulish", sans-serif;
-  margin-left: -180px;
+
 }
 .password:focus {
   outline: none;
