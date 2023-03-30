@@ -5,6 +5,10 @@ import SuCss from "./Css/Signup.module.css";
 
 export default function Signup() {
   const [showData, setData] = useState({ name: "", email: "", password: "" });
+
+  const postData = async () => {
+    console.log("first");
+  };
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
@@ -72,7 +76,7 @@ export default function Signup() {
             <hr className={SuCss.hrs} />
             <input type="password" placeholder="Password" />
             <hr className={SuCss.hrs} />
-            <button type="submit" className={SuCss.btn}>
+            <button className={SuCss.btn} onClick={postData}>
               SignUp
             </button>
             <p className={SuCss.member}>
