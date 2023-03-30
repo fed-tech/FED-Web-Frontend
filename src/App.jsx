@@ -33,7 +33,7 @@ function App() {
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
           <Route path="*" element={<Error />} />
-          <Route path="/MyProfile" element={<MyProfile/>}/>
+          <Route path="/MyProfile" element={<MyProfile />} />
         </Routes>
         <Footer />
       </Layout>
