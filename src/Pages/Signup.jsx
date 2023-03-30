@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Css
 import SuCss from "./Css/Signup.module.css";
 
 export default function Signup() {
+  const [showData, setData] = useState({ name: "", email: "", password: "" });
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
