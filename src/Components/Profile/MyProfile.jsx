@@ -116,43 +116,57 @@ export default function MyProfile() {
                     Singup with Google
                   </p>
                   <br />
+
+                  
                   <p className="p1 font-generic">Or</p>
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="font-generic inputs in1"
-                    value={firstname}
-                    onChange={(e) => setFirstname(e.target.value)}
-                  />
-                  <hr className="hrs hr1" />
-                  <div className="error1">{formErrors.firstname}</div>
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="font-generic inputs in2"
-                    value={lastname}
-                    onChange={(e) => setlastname(e.target.value)}
-                  />
-                  <hr className="hrs hr2" />
-                  <div className="error2">{formErrors.lastname}</div>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="font-generic inputs in3"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                  <hr className="hrs hr3" />
-                  <div className="error3">{formErrors.email}</div>
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    className="font-generic inputs in4"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                  <hr className="hrs hr4" />
-                  <div className="error4">{formErrors.password}</div>
+                  <div className="fname">
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      className="font-generic inputs in1"
+                      value={firstname}
+                      onChange={(e) => setFirstname(e.target.value)}
+                    />
+                    <hr className="hrs hr1" />
+                    <div className="error1">{formErrors.firstname}</div>
+                  </div>
+
+                  <div className="lname">
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      className="font-generic inputs in2"
+                      value={lastname}
+                      onChange={(e) => setlastname(e.target.value)}
+                    />
+                    <hr className="hrs hr2" />
+                    <div className="error2">{formErrors.lastname}</div>
+                  </div>
+                  
+                  <div className="email">
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      className="font-generic inputs in3"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <hr className="hrs hr3" />
+                    <div className="error3">{formErrors.email}</div>
+                  </div>
+                  
+                  <div className="password">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      className="font-generic inputs in4"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    <hr className="hrs hr4" />
+                    <div className="error4">{formErrors.password}</div>
+                  </div>
+                  
                   <button type="submit" className="submit-btn">
                     Signup
                   </button>
