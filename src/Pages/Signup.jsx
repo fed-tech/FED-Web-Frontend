@@ -11,6 +11,7 @@ export default function Signup() {
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
         <p className={SuCss.FED}>FED</p>
+        <Form />
       </div>
     </div>
   );
