@@ -13,6 +13,7 @@ import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Seeall from "./Components/Home/Seeall";
 import MyProfile from "./Components/Profile/MyProfile";
+import Signup from "./Pages/Signup";
 
 // Components
 import Nav from "./Components/Nav";
@@ -32,8 +33,9 @@ function App() {
           <Route path="/Alumni" element={<Alumni />} />
           <Route path="/Podcasts" element={<Podcasts />} />
           <Route path="/Testimonial" element={<Seeall />} />
-          <Route path="*" element={<Error />} />
           <Route path="/MyProfile" element={<MyProfile />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </Layout>
