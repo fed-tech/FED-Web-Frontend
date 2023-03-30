@@ -4,10 +4,22 @@ import React, { useState } from "react";
 import SuCss from "./Css/Signup.module.css";
 
 export default function Signup() {
-  const [showData, setData] = useState({ name: "", email: "", password: "" });
+  const [showData, setData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setData({ ...showData, [name]: value });
+  };
 
   const postData = async () => {
-    console.log("first");
+    console.log(showData);
   };
   return (
     <div className={SuCss.mDiv}>
@@ -68,13 +80,28 @@ export default function Signup() {
 
           <p className={SuCss.OrText}>Or</p>
           <div className={SuCss.form}>
-            <input type="text" placeholder="First name" />
+            <input
+              type="text"
+              placeholder="First name"
+              onChange={DataInp}
+              name="firstName"
+            />
             <hr className={SuCss.hrs} />
-            <input type="text" placeholder="Last name" />
+            <input
+              type="text"
+              placeholder="Last name"
+              onChange={DataInp}
+              name="lastName"
+            />
             <hr className={SuCss.hrs} />
             <input type="email" placeholder="Email" />
             <hr className={SuCss.hrs} />
-            <input type="password" placeholder="Password" />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={DataInp}
+              name="password"
+            />
             <hr className={SuCss.hrs} />
             <button className={SuCss.btn} onClick={postData}>
               SignUp
