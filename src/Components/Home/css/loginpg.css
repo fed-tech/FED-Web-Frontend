@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+
+.full {
+  background-image: url(../../../Img/image-23.png);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  top: 120px;
+  left: -1px;
+  flex-wrap: wrap;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  align-items: center;
+}
+.inside {
+  position: relative;
+  background-color: black;
+  height: 755px;
+  width: 622px;
+  flex-wrap: wrap;
+  top: 101px;
+  border-radius: 5%;
+  margin-bottom: 150px;
+  display: flex;
+  margin-left: 320px;
+  text-align: center;
+  align-items: center;
+}
+.title1 {
+  text-align: center;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 95px;
+  font-size: 95px;
+  line-height: 59px;
+  margin: 0px 0px 90px 0px;
+  position: absolute;
+  top: 23px;
+  bottom: 675px;
+  left: 264px;
+  right: 264px;
+}
+
+.whitebox {
+  position: relative;
+  top: 10px;
+  left: 71px;
+  right: 71px;
+  bottom: 91px;
+  width: 481.08px;
+  height: 553.11px;
+  background: white;
+  border-radius: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.welc {
+  position: absolute;
+  top: 37px;
+  left: 141px;
+  bottom: 483px;
+  right: 141px;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 33px;
+  letter-spacing: 0.005em;
+  color: black;
+}
+
+.det {
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 150px;
+  height: 17px;
+  top: 73.81px;
+  left: 165px;
+  bottom: 462.3px;
+  right: 165px;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+.googlepart {
+  box-sizing: border-box;
+  position: absolute;
+  top: 130.72px;
+  bottom: 380.6px;
+  right: 56px;
+  left: 56px;
+  height: 42px;
+  width: 369px;
+  border: 0.889247px solid black;
+  border-radius: 10.671px;
+}
+.icon {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 12.45px;
+  bottom: 12.45px;
+  right: 238px;
+  left: 114px;
+}
+.log {
+  position: absolute;
+  top: 12.45px;
+  bottom: 12.36px;
+  left: 137px;
+  right: 121px;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+
+.or {
+  position: absolute;
+  top: 199px;
+  bottom: 337px;
+  left: 233px;
+  right: 233px;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+
+.signup {
+  position: absolute;
+  top: 469px;
+  bottom: 66.5px;
+  left: 146px;
+  right: 146px;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+}
+
+.spn {
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  color: black;
+  text-decoration: none;
+}
+.logtwo {
+  position: absolute;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  color: white;
+  background-color: black;
+  width: 354.81px;
+  height: 39.13px;
+  border: none;
+  margin-top: 430px;
+  margin-left: -173px;
+  border-radius: 3%;
+}
+
+.input {
+  position: absolute;
+  line-height: 17px;
+  text-align: left;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.input::placeholder {
+  font-weight: 300;
+  font-size: 13.5px;
+  font-family: Mulish;
+  font-style: normal;
+  color: black;
+  text-align: left;
+}
+
+.user {
+  position: absolute;
+  top: 292.86px;
+  left: 69px;
+  bottom: 260.26px;
+  right: 56px;
+}
+
+.pass {
+  position: absolute;
+  top: 354.66px;
+  left: 69px;
+  bottom: 198.45px;
+  right: 56px;
+}
+.username {
+  border: none;
+  color: black;
+  font-size: 12px;
+  padding: 5px;
+  font-family: "Mulish", sans-serif;
+  margin-left: -180px;
+}
+.username:focus {
+  outline: none;
+}
+.hr1 {
+  border-top: 2px solid black;
+  width: 354.81;
+}
+.password {
+  border: none;
+  color: black;
+  font-size: 12px;
+  padding: 5px;
+  font-family: "Mulish", sans-serif;
+  margin-left: -180px;
+}
+.password:focus {
+  outline: none;
+}
+.hr2 {
+  border-top: 2px solid black;
+  width: 354.81;
+}
+.signup {
+  padding-top: 20px;
+}
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: #ccc;
+  border: 1px solid #ccc;
+  outline: none;
+}
