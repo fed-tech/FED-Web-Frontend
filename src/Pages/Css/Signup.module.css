@@ -1,0 +1,25 @@
+.mDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.glassDiv {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 15px 70px 40px 70px;
+}
+
+.FED {
+  font-family: rubik;
+  font-style: normal;
+  text-shadow: 1px 0.496831px 1px #f45725;
+  font-size: 48px;
+  font-weight: 700;
+}
