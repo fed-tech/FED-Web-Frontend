@@ -1,34 +1,29 @@
 import React, { useState, useEffect } from "react";
 import "./cssp/MyProfile.css";
 export default function MyProfile() {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setlastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [allEntry, setallEntry] = useState([]);
+  const initialValues = {
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  };
+  const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
-  const submitForm = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const newEntry = {
-      firstname: firstname,
-      lastname: lastname,
-      email: email,
-      password: password,
-    };
-    const errors = validate(newEntry);
-    setFormErrors(errors);
-    if (Object.keys(errors).length === 0) {
-      setallEntry([...allEntry, newEntry]);
-      console.log(allEntry);
-      setIsSubmit(true);
-    }
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
   };
 
   useEffect(() => {
     console.log(formErrors);
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(allEntry);
+      console.log(formValues);
     }
   }, [formErrors]);
   const validate = (values) => {
@@ -56,7 +51,7 @@ export default function MyProfile() {
   };
   return (
     <>
-      <form action="" onSubmit={submitForm}>
+      <form action="" onSubmit={handleSubmit}>
         <div>
           <section id="MyProfile">
             <div className="container">
@@ -119,37 +114,41 @@ export default function MyProfile() {
                   <p className="p1 font-generic">Or</p>
                   <input
                     type="text"
+                    name="firstname"
                     placeholder="First Name"
                     className="font-generic inputs in1"
-                    value={firstname}
-                    onChange={(e) => setFirstname(e.target.value)}
+                    value={formValues.firstname}
+                    onChange={handleChange}
                   />
                   <hr className="hrs hr1" />
                   <div className="error1">{formErrors.firstname}</div>
                   <input
                     type="text"
+                    name="lastname"
                     placeholder="Last Name"
                     className="font-generic inputs in2"
-                    value={lastname}
-                    onChange={(e) => setlastname(e.target.value)}
+                    value={formValues.lastname}
+                    onChange={handleChange}
                   />
                   <hr className="hrs hr2" />
                   <div className="error2">{formErrors.lastname}</div>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email"
                     className="font-generic inputs in3"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={formValues.email}
+                    onChange={handleChange}
                   />
                   <hr className="hrs hr3" />
                   <div className="error3">{formErrors.email}</div>
                   <input
                     type="password"
+                    name="password"
                     placeholder="Password"
                     className="font-generic inputs in4"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
+                    value={formValues.password}
+                    onChange={handleChange}
                   />
                   <hr className="hrs hr4" />
                   <div className="error4">{formErrors.password}</div>
@@ -162,7 +161,7 @@ export default function MyProfile() {
                   {Object.keys(formErrors).length === 0 && isSubmit ? (
                     <div className="formsubmission">Signed in successfully</div>
                   ) : (
-                    <pre>{JSON.stringify(allEntry, undefined, 2)}</pre>
+                    <pre></pre>
                   )}
                 </div>
                 <div className="padding"></div>
