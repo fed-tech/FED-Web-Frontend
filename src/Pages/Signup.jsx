@@ -19,7 +19,20 @@ export default function Signup() {
   };
 
   const postData = async () => {
-    console.log(showData);
+    let { firstName, lastName, email, password } = showData;
+
+    if (
+      firstName !== "" &&
+      lastName !== "" &&
+      password !== "" &&
+      email !== "" &&
+      email.indexOf("@") > -1 &&
+      email.indexOf(".") !== -1
+    ) {
+      console.log("Allowed");
+    } else {
+      console.log("error");
+    }
   };
   return (
     <div className={SuCss.mDiv}>
@@ -94,7 +107,12 @@ export default function Signup() {
               name="lastName"
             />
             <hr className={SuCss.hrs} />
-            <input type="email" placeholder="Email" />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={DataInp}
+            />
             <hr className={SuCss.hrs} />
             <input
               type="password"
