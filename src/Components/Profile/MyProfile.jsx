@@ -144,6 +144,7 @@ export default function MyProfile() {
                   
                   <div className="email">
                     <input
+                      type="email"
                       name="email"
                       placeholder="Email"
                       className="font-generic inputs in3"
@@ -167,46 +168,6 @@ export default function MyProfile() {
                     <div className="error4">{formErrors.password}</div>
                   </div>
                   
-                  {/* <input
-                    type="text"
-                    name="firstname"
-                    placeholder="First Name"
-                    className="font-generic inputs in1"
-                    value={formValues.firstname}
-                    onChange={handleChange}
-                  />
-                  <hr className="hrs hr1" />
-                  <div className="error1">{formErrors.firstname}</div>
-                  <input
-                    type="text"
-                    name="lastname"
-                    placeholder="Last Name"
-                    className="font-generic inputs in2"
-                    value={formValues.lastname}
-                    onChange={handleChange}
-                  />
-                  <hr className="hrs hr2" />
-                  <div className="error2">{formErrors.lastname}</div>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="font-generic inputs in3"
-                    value={formValues.email}
-                    onChange={handleChange}
-                  />
-                  <hr className="hrs hr3" />
-                  <div className="error3">{formErrors.email}</div>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="Password"
-                    className="font-generic inputs in4"
-                    value={formValues.password}
-                    onChange={handleChange}
-                  />
-                  <hr className="hrs hr4" />
-                  <div className="error4">{formErrors.password}</div> */}
                   <button type="submit" className="submit-btn">
                     Signup
                   </button>
