@@ -158,18 +158,6 @@
 }
 
 .submit-btn {
-<<<<<<< HEAD
-    position: absolute;
-    top: 454.5px;
-    /* font-weight: 600; */
-    font-size: 19.8px;
-    line-height: 25px;
-    background-color: black;
-    color: white;
-    border:black;
-    padding: 7.2px 150.05px;
-    border-radius: 7.2px;
-=======
   position: absolute;
   top: 454.5px;
   /* font-weight: 600; */
@@ -179,7 +167,6 @@
   color: white;
   padding: 7.2px 150.05px;
   border-radius: 7.2px;
->>>>>>> 0866efeb3ae6ae4d85ae828d71ddf3f64a5940c3
 }
 .padding {
   padding-top: 251.8px;
