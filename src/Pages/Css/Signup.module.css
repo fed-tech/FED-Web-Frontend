@@ -14,6 +14,7 @@
   backdrop-filter: blur(10px);
   border-radius: 24px;
   padding: 15px 70px 40px 70px;
+  width:44%;
 }
 
 .FED {
@@ -22,4 +23,8 @@
   text-shadow: 1px 0.496831px 1px #f45725;
   font-size: 48px;
   font-weight: 700;
+}
+.whiteDiv {
+  background-color: white;
+  width:100%;
 }

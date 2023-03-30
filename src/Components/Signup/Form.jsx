@@ -54,7 +54,9 @@ export default function Form() {
   };
   return (
     <>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil dolor facere quis dolores consequuntur. Libero vel quisquam deserunt doloribus magni cumque. Facere quae vero maiores neque molestiae! Iste, dolore quod!
+  <div className="whiteDiv">
+    
+  </div>
     </>
   );
 }
