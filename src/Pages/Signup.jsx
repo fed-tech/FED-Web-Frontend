@@ -3,9 +3,6 @@ import React from "react";
 // Css
 import SuCss from "./Css/Signup.module.css";
 
-// Components
-import Form from "./../Components/Signup/Form";
-
 export default function Signup() {
   return (
     <div className={SuCss.mDiv}>
@@ -14,9 +11,9 @@ export default function Signup() {
         <div className={SuCss.wFFFDiv}>
           <div className={SuCss.helloDiv}> Hello There</div>
           <p className={SuCss.plsDiv}> Please enter Your Details</p>
-          
+
           <div className={SuCss.googleDiv}>
-            <svg
+            {/* <svg
                       className="logo"
                       width="17.1"
                       height="17.1"
@@ -60,27 +57,28 @@ export default function Signup() {
                           />
                         </clipPath>
                       </defs>
-            </svg>
+            </svg> */}
             <p className={SuCss.googleText}>SignUp with Google</p>
           </div>
-          
+
           <p className={SuCss.OrText}>Or</p>
           <div className={SuCss.form}>
-            <input type="text" placeholder="First name"/>
-            <hr className={SuCss.hrs}/>
-            <input type="text" placeholder="Last name"/>
-            <hr className={SuCss.hrs}/>
-            <input type="email" placeholder="Email"/>
-            <hr className={SuCss.hrs}/>
-            <input type="password" placeholder="Password"/>
-            <hr className={SuCss.hrs}/>
-            <button type="submit" className={SuCss.btn}>SignUp</button>
+            <input type="text" placeholder="First name" />
+            <hr className={SuCss.hrs} />
+            <input type="text" placeholder="Last name" />
+            <hr className={SuCss.hrs} />
+            <input type="email" placeholder="Email" />
+            <hr className={SuCss.hrs} />
+            <input type="password" placeholder="Password" />
+            <hr className={SuCss.hrs} />
+            <button type="submit" className={SuCss.btn}>
+              SignUp
+            </button>
             <p className={SuCss.member}>
-                    Already a member? <span>Login</span>
+              Already a member? <span>Login</span>
             </p>
           </div>
         </div>
-        {/* <Form /> */}
       </div>
     </div>
   );
