@@ -110,6 +110,7 @@ input::placeholder {
   background-color: black;
   font: mulish 19.8px;
   font-size: 19.8px;
+  cursor: pointer;
 }
 .member {
   margin-top: 19.8px;
