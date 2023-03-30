@@ -54,9 +54,7 @@ export default function Form() {
   };
   return (
     <>
-  <div className="whiteDiv">
-    
-  </div>
+
     </>
   );
 }
