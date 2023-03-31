@@ -30,7 +30,7 @@
   text-align: center;
   align-items: center;
 }
-.title {
+.title1 {
   text-align: center;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
@@ -259,20 +259,28 @@
   border: 1px solid #ccc;
   outline: none;
 }
-@media only screen and (max-width: 949px) {
-  .inside {
-    margin-right: 600px;
+@media screen and (max-width:500px){
+
+  .full{
+    padding: 0;
   }
+  .inside{
+    width: 100%;
+    padding: 0;
+
+  }
+  .whitebox{
+    width: 100%;
+    padding: 1.25rem;
+  }
+  
 }
-@media only screen and (max-width: 484px) {
-  .whitebox {
-    width: 320px;
-    margin: auto auto;
+@media screen and (max-width:360px) {
+  .user,.pass{
+    width: 21.875rem;
   }
-}
-@media only screen and (max-width: 477px) {
-  .full {
-    background-color: rgb(15, 14, 14);
-    overflow-x: hidden;
+  .googlepart{
+    width: 21.875rem;
   }
+
 }
