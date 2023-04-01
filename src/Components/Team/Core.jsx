@@ -4,19 +4,6 @@ import "./css/Core.css";
 export default function Core(props) {
   const [showContent, setshowContent] = useState(true);
   const [show, setshow] = useState(false);
-<<<<<<< HEAD
-  const [btn, setbtn] = useState("Know more");
-  
-  const [content, setContent] = useState({
-    showAbout: false,
-    displayTeamAbout: "none",
-    displayPostPTagName: "block",
-    displayPostPTag: "block",
-    displayCoresocilaDiv: "block",
-    btnText: "Know More",
-  });
-
-=======
   const [btn, setbtn] = useState(true);
   // const [content, setContent] = useState({
   // showAbout: false,
@@ -27,7 +14,6 @@ export default function Core(props) {
   // btnText: "Know More",
   // });
   //
->>>>>>> origin/main
   useEffect(() => {
     setTimeout(() => {
       setshowContent(false), setshow(true);

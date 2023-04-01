@@ -12,7 +12,7 @@ import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Seeall from "./Components/Home/Seeall";
-
+import Profile from "./Pages/Profile";
 // Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
@@ -35,6 +35,7 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
+            <Route path="/Profile" element={<Profile/>}/>
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
