@@ -21,7 +21,6 @@ function Login() {
           <p className="or">Or</p>
           <div className="user">
             <input type="text" placeholder="Email" className="username" />
-            <hr className="hr1" />
           </div>
           <div className="pass">
             <input
@@ -29,7 +28,6 @@ function Login() {
               placeholder="Password"
               className="password"
             />
-            <hr className="hr2" />
           </div>
           <div className="login-btn">
             <button className="logtwo">Login</button>

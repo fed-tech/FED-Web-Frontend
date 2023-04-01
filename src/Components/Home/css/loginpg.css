@@ -9,49 +9,49 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-size:cover;
   text-align: center;
   align-items: center;
+  padding:2.5rem;
 }
 .inside {
   background-color: black;
-  height: 755px;
-  width: 622px;
+  height: 47.188rem;
+  width: 38.875rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   border-radius: 5%;
   display: flex;
   text-align: center;
-  padding: 10px;
+  padding: 0.625rem;
 }
 .title1 {
   text-align: center;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
-  font-weight: 95px;
-  font-size: 63px;
-  line-height: 59px;
-
-  margin-bottom: 68px;
- 
+  font-weight: 5.938rem;
+  font-size: 3.938rem;
+  line-height: 3.688rem;
+  margin-bottom: 4.25rem;
 }
 .title1 p{
    color: white;
    margin: 0;
+   font-size: 2.313rem;
 }
 
 .whitebox {
-  width: 481.08px;
-  height: 553.11px;
+  width:30.068rem;
+  height: 34.569rem;
   background: white;
-  border-radius: 16px;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .hellopart{
   display: flex;
@@ -65,44 +65,44 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 27px;
-  line-height: 33px;
+  font-size: 1.688rem;
+  line-height: 2.063rem;
   letter-spacing: 0.005em;
   color: black;
 }
 
 .det {
-  width: 150px;
-  height: 17px;
+  width: 9.375rem;
+  height: 1.063rem;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
   color: black;
 }
 .googlepart {
   box-sizing: border-box;
-  height: 42px;
-  width: 369px;
-  border: 0.889247px solid black;
-  border-radius: 10.671px;
+  height: 2.625rem;
+  width: 23.063rem;
+  border: 0.056rem solid black;
+  border-radius: 0.667rem;
   display: flex;
     align-items: center;
     justify-content: center;
 }
 .icon {
-  width: 17px;
-  height: 17px;
+  width: 1.063rem;
+  height: 1.063rem;
 }
 .log {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
   color: black;
 }
 
@@ -111,8 +111,8 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
   color: black;
 }
 
@@ -121,8 +121,8 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
   color: black;
 }
 
@@ -131,8 +131,8 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
   color: black;
   text-decoration: none;
 }
@@ -141,18 +141,18 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 19px;
+  font-size: 1.188rem;
   color: white;
   background-color: black;
-  width: 354.81px;
-  height: 39.13px;
+  width: 22.176rem;
+  height: 2.446rem;
   border: none;
-  border-radius: 3%;
+  border-radius: 0.625rem;
 }
 
 .input {
   position: absolute;
-  line-height: 17px;
+  line-height: 1.063em;
   text-align: left;
   background-color: transparent;
   outline: none;
@@ -161,57 +161,75 @@
 }
 .input::placeholder {
   font-weight: 300;
-  font-size: 13.5px;
+  font-size: 0.938rem;
   font-family: Mulish;
   font-style: normal;
   color: black;
   text-align: left;
 }
 .user,.pass{
-  margin-bottom: 36px;
-  width: 369px;
+  width: 23.063rem;
 }
 .user input,.pass input{
   width: 100%;
   border-bottom: 1.5px solid black;
-  padding: 10px;
+  padding: 0.625rem;
 }
 .username {
   border: none;
   color: black;
-  font-size: 12px;
-  padding: 5px;
+  font-size: 0.75rem;
+  padding: 0.313rem;
   font-family: "Mulish", sans-serif;
 
 }
 .username:focus {
   outline: none;
 }
-.hr1 {
-  border-top: 2px solid black;
-  width: 354.81;
-}
 .password {
   border: none;
   color: black;
-  font-size: 12px;
-  padding: 5px;
+  font-size: 0.75rem;
+  padding: 0.313rem;
   font-family: "Mulish", sans-serif;
 
 }
 .password:focus {
   outline: none;
 }
-.hr2 {
-  border-top: 2px solid black;
-  width: 354.81;
-}
 .signup {
-  padding-top: 20px;
+  padding-top: 1.25rem;
 }
 .form-control:focus {
   border-color: #ccc;
   box-shadow: #ccc;
   border: 1px solid #ccc;
   outline: none;
+}
+
+@media screen and (max-width:500px){
+
+  .full{
+    padding: 0;
+  }
+  .inside{
+    width: 100%;
+    padding: 0;
+
+  }
+  .whitebox{
+    width: 100%;
+    padding: 1.25rem;
+  }
+  
+}
+@media screen and (max-width:360px) {
+  .user,.pass{
+    width: 21.875rem;
+  }
+  .googlepart{
+    width: 21.875rem;
+
+  }
+
 }
