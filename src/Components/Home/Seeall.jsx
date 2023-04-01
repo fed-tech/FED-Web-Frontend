@@ -1,7 +1,15 @@
 import React from "react";
+
+// css
 import "./css/seeall.css";
+
+// datas
 import Wcard from "../../Data/testimonial.json";
+<<<<<<< HEAD
 import { Animatedpage } from "../Animatedpage";
+=======
+
+>>>>>>> origin/main
 function Seeall() {
   return (
     <Animatedpage>

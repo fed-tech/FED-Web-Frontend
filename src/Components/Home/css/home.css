@@ -71,7 +71,6 @@
   width: 100%;
   background-color: #0f0e0e;
   margin-top: -30px;
-  
 }
 
 .whyDiv,
@@ -95,11 +94,11 @@
   margin-left: 30px;
 }
 
-.whyDiv .CardDesPTag{
+.whyDiv .CardDesPTag {
   padding-bottom: 75px;
 }
 
-.WhatDiv .CardDesPTag{
+.WhatDiv .CardDesPTag {
   padding-bottom: 47px;
 }
 .why,
@@ -486,12 +485,14 @@ form {
 
   .whyDiv,
   .HowDiv {
+    margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 30px;
   }
 
   .WhatDiv {
     margin-right: 0px;
+    margin-left: 0px;
   }
 
   .whyDiv,
@@ -524,7 +525,6 @@ form {
 }
 
 @media only screen and (max-width: 810px) {
-
   .testDivChild,
   .businessMDiv {
     flex-direction: column;
@@ -550,7 +550,6 @@ form {
 }
 
 @media only screen and (max-width: 720px) {
-
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
@@ -601,7 +600,6 @@ form {
 }
 
 @media only screen and (max-width: 550px) {
-
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {
@@ -622,7 +620,6 @@ form {
 }
 
 @media only screen and (max-width: 375px) {
-
   .BelievePTag,
   .WeWorkWithPTag,
   .LetsTalkBusiness {

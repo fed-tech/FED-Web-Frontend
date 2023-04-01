@@ -91,10 +91,9 @@
 }
 
 .svgCore {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: transparent;
-  margin-top: 20px;
 }
 
 #gitLink {
@@ -129,7 +128,6 @@
   text-align: center;
   padding: 4px 24px;
   border-radius: 8px;
-  /* width: 45%; */
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
@@ -188,27 +186,22 @@
   margin: 0px 20px 100px 20px;
 }
 
-/* ...... ...................... */
 .coreMemMainCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 377px; */
-  /* height: 350px; */
   width: 100%;
   height: 100%;
-  /* margin: 30px 10px; */
-  /* margin: 30px; */
-  /* transition: all 0.3s; */
   border-radius: 50px;
   -webkit-backface-visibility: visible;
-  /* Safari */
   backface-visibility: visible;
   opacity: 1;
 }
 
 .CorememCardImg {
+  object-fit: cover;
+  aspect-ratio: 1/1;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -224,7 +217,6 @@
   position: relative;
   bottom: 430px;
   transition: opacity 0.5s, visibility 0.2s;
-  /* Safari */
   visibility: hidden;
   opacity: 0;
   width: 100%;
@@ -240,7 +232,6 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  /* Remove this if you don't want the 3D effect */
   width: 33%;
   max-width: 430px;
   min-width: 377px;
@@ -250,21 +241,45 @@
 .flip-card-inner {
   position: relative;
   border-radius: 10px;
-  /* padding: 15px; */
   width: 100%;
   height: 100%;
+  overflow: hidden;
   text-align: center;
-  /* box-shadow: 0 4px 8px 0 #e66f4a; */
 }
 
-.flip-card:hover .CorememCardImg {
-  opacity: 0.1;
+.coreMemMainCard:hover .hoverDetailsMDiv {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hoverDetailsMDiv {
+  visibility: hidden;
+  opacity: 0;
+  padding: 20px;
+  width: 102%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: scroll;
+}
+
+.NamePosDiv {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .flip-card:hover .flip-card-back {
   visibility: visible;
   opacity: 0.9;
 }
+
 .knowMore {
   display: flex;
   flex-direction: row;
@@ -272,61 +287,56 @@
   justify-content: center;
   text-align: center;
   width: 100%;
-  margin-bottom: -60px;
-  margin-top: 105px;
+  margin-top: 50px;
   cursor: pointer;
-  /* transition: all 1s; */
 }
+
 #knowMore {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 28px;
-  transition: all 1s;
-
-  /* identical to box height, or 200% */
-
   letter-spacing: 0.005em;
-  text-decoration-line: underline;
-
   color: #f45725;
-  margin-right: 10px;
+  transition: all 0.3s;
 }
+
+#knowMore:hover {
+  text-decoration-line: underline;
+}
+
 .arrow {
-   /* font-size: 20px !important; */
-  /* border: 2px solid #F45725; */
-  /* font-weight: bolder;
-  height: 20px; */ 
+  margin: 0px 7px;
   font-size: 22px;
-    font-weight: 500;
-    background-color: transparent;
-    color: #f45725;
-    font-family: "Manrope";
-    font-style: normal;
+  font-weight: 500;
+  background-color: transparent;
+  color: #f45725;
+  font-family: "Manrope";
+  font-style: normal;
 }
+
 .team-about {
-  display: none;
-  max-width: fit-content;
-  max-height: 75px;
-  margin-left: 20px;
-  margin-right: 20px;
   font-family: "Manrope";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 25px;
 }
-/* .............  */
-.coresocilaDiv,
+
 .coresocilaDiv2 {
   margin-bottom: 20px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
-
   align-items: flex-start;
   background-color: transparent;
+}
+
+.coresocilaDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #linkd {
@@ -335,13 +345,7 @@
 }
 
 .coresocilaDiv {
-  /* display: none; */
   transition: all 0.3s;
-}
-
-.coreMemMainCard:hover > .coresocilaDiv {
-  opacity: 1;
-  visibility: visible;
 }
 
 .coresocilaDiv2 {
@@ -359,8 +363,9 @@
 }
 
 .PostPTag {
-  margin: 0px 0px 10px 20px;
+  width: 100%;
   text-align: center;
+  text-align: left;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -368,27 +373,23 @@
   line-height: 25px;
   letter-spacing: 0.005em;
   color: #f45725;
-  display: block;
 }
 
 .PostPTagName {
-  display: block;
-  margin: 0px 0px 0px 20px;
-  /* text-align: center; */
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 32px;
   line-height: 50px;
   letter-spacing: 0.005em;
-  color: #ffffff;
+  text-align: left;
+  width: 100%;
   text-transform: capitalize;
 }
 
 .PostAbtPTag {
   margin-bottom: 30px;
   width: 246px;
-  /* height: 211px; */
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
@@ -404,6 +405,16 @@
   overflow: hidden;
 }
 
+@media only screen and (max-width: 380px) {
+  .hoverDetailsMDiv {
+    padding: 20px 7px;
+  }
+
+  .knowMore {
+    margin-top: 10px;
+  }
+}
+
 @media only screen and (max-width: 650px) {
   .memDivMain {
     margin: 0px 20px 50px 20px;
@@ -416,9 +427,7 @@
 
 @media only screen and (max-width: 659px) {
   .memName {
-    /* width: 60%; */
     right: auto;
-    /* left: 45%; */
   }
 
   .memDivMain:hover > .memName {
@@ -462,19 +471,10 @@
     min-width: 90%;
   }
 
-  /* #CoreTeam {
-      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-      grid-template-rows: repeat(2, minmax(377px, 1fr));
-    } */
-
   .coreMemMainCard {
     width: 100%;
     margin: 0px;
   }
-
-  /* .flip-card-inner {
-      height: 400px;
-    } */
 
   .coreMemDesCard {
     width: 90.98%;
@@ -485,8 +485,4 @@
     width: 71.72%;
     height: fit-content;
   }
-
-  /* .flip-card-back {
-      bottom: 400px;
-    } */
 }
