@@ -71,6 +71,9 @@
   object-fit: contain;
 }
 .illuminating {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
   color: #ffffff;
   padding: 200px 43px 200px 181px;
   text-align: right;
@@ -96,4 +99,29 @@
   margin-left: 280px;
   color: #ffffff;
   margin-right: 44px;
+}
+
+@media (max-width:1200px) {
+  .pmainBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profileBackground {
+    background-image:  url(./../../../Img/Rectangle23.jpg);
+  }
+  .profile {
+    background: none;
+  }
+  .profileLeft, .profileRight, .illuminating {
+    padding: 0;
+  }
+  .profileRight {
+    width: 100%;
+  }
+  .illuminating {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

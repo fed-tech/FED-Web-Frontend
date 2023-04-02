@@ -38,13 +38,11 @@ export default function Profile() {
           </div>
         </div>
         <div className="profileRight">
-          <p className="illuminating">ILLUMINATIING
-            <br />
-            THE 
-            <br />
-            <span>ENTREPRENEUR</span>
-            <br />
-            IN YOU
+          <p className="illuminating">
+            <p>ILLUMINATIING</p>
+            <p>THE</p>
+            <p><span>ENTREPRENEUR</span></p>
+            <p>IN YOU</p>
           </p>
           {/* <div className="illuminating">ILLUMINATIING</div>
           <p className="the">THE </p>
