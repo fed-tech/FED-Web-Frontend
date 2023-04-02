@@ -14,7 +14,7 @@
   align-items: center;
 }
 .inside {
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,0.3);
   
   height: 47.188rem;
   width: 38.875rem;
@@ -45,7 +45,7 @@
 }
 
 .whitebox {
-  width:30.068rem;
+  width:95%;
   height: 34.569rem;
   background: white;
   border-radius: 1rem;
@@ -213,30 +213,16 @@
   outline: none;
 }
 
-@media screen and (max-width:500px){
-
-  .full{
-    padding: 0;
-  }
+@media screen and (max-width:490px){
   .inside{
-    width:100%;
-    padding: 0;
+    overflow: hidden;
 
   }
-  .whitebox{
-    width: 100%;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  .whitebox{  
+    width: 95%;  
     overflow: hidden;
   }
-  .googlepart{
-    width: 64%;
-  }
-  .user,.pass{
-    width: 64%;
-
-  }
-  .login-btn{
-    width: 64%;
+  .googlepart,.user,.pass,.login-btn{
+    width: 77%;
   }
 }
