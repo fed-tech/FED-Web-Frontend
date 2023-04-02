@@ -8,43 +8,67 @@
 }
 .pmainBox {
   display: flex;
+  justify-content: center;
+  margin-top: 120px;
 }
+
 .profileLeft {
-  background-image: url(../../../Img/Rectangle25.png);
-  width: 48%;
-  height: 64%;
-  margin-left: 44px;
+  /* background-image: url(../../../Img/Frame\ 17.png); */
+  width: 52%;
+  /* padding-left: 38px;
+  padding-right: 17px; */
+  background-color: black;
+  padding: 77px 17px 198px 38px;
 }
-.profileDetail {
+.profile {
+  background-color: black;
+  /* background-image: url(../../../Img/Frame\ 17.png); */
   color: #ffffff;
-  font-family: "Rubik", sans-serif;
-  font-size: 32px;
-  padding-top: 300px;
-  margin-left: 60px;
-}
-.FullName {
-  color: #ffffff;
-  font-family: "Rubik", sans-serif;
-  font-size: 32px;
-  padding-top: 200px;
-}
-.p1 {
+  font-family: rubik;
+  font-weight: 300;
   display: flex;
+  flex-direction: column;
+  padding-left: 33px;
+  padding-top: 81px;
+  padding-bottom: 27px;
 }
+.proHeading {
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  line-height: 38px;
+  padding-bottom: 99px;
+  width:47.44%;
+}
+.headInnerText {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid white 1px;
+  padding-bottom: 3px;
+}
+.profile .dets {
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+}
+.dets {
+ margin-bottom: 30px;
+}
+
 .profileRight {
-  background-image: url(./../../../Img/Rectangle23.png);
-  width: 48%;
-  height: 89%;
-  margin-left: 752px;
+  background-image: url(./../../../Img/Rectangle23.jpg);
+  background-position-x: right;
+  background-repeat: no-repeat;
+  width: 47.77%;
+  padding-top: 148px;
+  padding-bottom: 230px;
+  box-sizing: border-box;
   object-fit: contain;
 }
 .illuminating {
-  padding-top: 400px;
+  color: #ffffff;
+  padding: 200px 43px 200px 181px;
+  text-align: right;
   font-family: "Rubik", sans-serif;
   font-size: 50px;
-  color: #ffffff;
-  margin-left: 100px;
-  margin-right: 44px;
   line-height: 59.25px;
 }
 .the {
