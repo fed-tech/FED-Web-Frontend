@@ -14,13 +14,27 @@ export default function Profile() {
                 <img src={penSvg} alt="" />
               </p> 
             </div>
-            <p className="dets">Full Name</p>
-            <p className="dets">Roll Number</p>
-            <p className="dets">Email ID</p>
-            <p className="dets">Year</p>
-            <p className="dets">School</p>
-            <p className="dets">College</p>
-            <p className="dets">Mobile No</p>
+            <div className="details">
+
+              <div className="keys">
+                <p className="dets">Full Name</p>
+                <p className="dets">Roll Number</p>
+                <p className="dets">Email ID</p>
+                <p className="dets">Year</p>
+                <p className="dets">School</p>
+                <p className="dets">College</p>
+                <p className="dets">Mobile No</p>
+              </div>
+              <div className="values">
+                <p className="dets">Ayan Paul</p>
+                <p className="dets">2030015</p>
+                <p className="dets">ayanpaul1108@gmail.com</p>
+                <p className="dets">3rd</p>
+                <p className="dets">Electronics</p>
+                <p className="dets">kiit</p>
+                <p className="dets">9142124912</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="profileRight">

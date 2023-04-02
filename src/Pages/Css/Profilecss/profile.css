@@ -15,8 +15,6 @@
 .profileLeft {
   /* background-image: url(../../../Img/Frame\ 17.png); */
   width: 52%;
-  /* padding-left: 38px;
-  padding-right: 17px; */
   background-color: black;
   padding: 77px 17px 198px 38px;
 }
@@ -44,6 +42,15 @@
   justify-content: space-between;
   border-bottom: solid white 1px;
   padding-bottom: 3px;
+}
+.details {
+  display: flex;
+}
+.keys {
+  width:42.62%;
+}
+.values {
+  width: 57.38%;
 }
 .profile .dets {
   font-family: "Rubik", sans-serif;
