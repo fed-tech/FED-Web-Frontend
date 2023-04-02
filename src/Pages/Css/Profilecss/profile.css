@@ -35,7 +35,7 @@
   letter-spacing: 0.02em;
   line-height: 38px;
   padding-bottom: 99px;
-  width:47.44%;
+  width: 47.44%;
 }
 .headInnerText {
   display: flex;
@@ -47,7 +47,7 @@
   display: flex;
 }
 .keys {
-  width:42.62%;
+  width: 42.62%;
 }
 .values {
   width: 57.38%;
@@ -57,7 +57,7 @@
   font-size: 28px;
 }
 .dets {
- margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .profileRight {
@@ -80,39 +80,46 @@
   font-family: "Rubik", sans-serif;
   font-size: 50px;
   line-height: 59.25px;
+  flex-wrap: wrap;
 }
-.the {
-  font-family: "Rubik", sans-serif;
+.p2 {
+  /* font-family: "Rubik", sans-serif;
   font-size: 50px;
-  margin-left: 350px;
+  margin-left: 350px; */
+  flex-wrap: wrap;
 }
-.entrepreneur {
-  font-family: "Rubik", sans-serif;
+.p3 {
+  /* font-family: "Rubik", sans-serif;
   font-size: 50px;
-  margin-left: 60px;
+  margin-left: 60px; */
   color: #f45725;
+  margin-left: -30px;
+  flex-wrap: wrap;
 }
-.inYou {
-  padding-bottom: 300px;
+.p4 {
+  /* padding-bottom: 300px;
   font-family: "Rubik", sans-serif;
   font-size: 50px;
-  margin-left: 280px;
+  margin-left: 280px; */
   color: #ffffff;
-  margin-right: 44px;
+  /* margin-right: 44px; */
+  flex-wrap: wrap;
 }
 
-@media (max-width:1200px) {
+@media (max-width: 1200px) {
   .pmainBox {
     flex-direction: column;
     align-items: center;
   }
   .profileBackground {
-    background-image:  url(./../../../Img/Rectangle23.jpg);
+    background-image: url(./../../../Img/Rectangle23.jpg);
   }
   .profile {
     background: none;
   }
-  .profileLeft, .profileRight, .illuminating {
+  .profileLeft,
+  .profileRight,
+  .illuminating {
     padding: 0;
   }
   .profileRight {
@@ -120,8 +127,54 @@
   }
   .illuminating {
     padding: 0 20px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .p1 {
+    padding-right: 1000px;
+    margin-left: 258px;
+    padding-top: 20px;
+  }
+  .p2 {
+    padding-right: 800px;
+    margin-left: 258px;
+  }
+  .p3 {
+    padding-right: 900px;
+
+    margin-left: 258px;
+  }
+  .p4 {
+    margin-left: 258px;
+  }
+}
+@media (max-width: 891px) {
+  .p1 {
+    margin-left: 150px;
+  }
+  .p2 {
+    margin-left: 150px;
+  }
+  .p3 {
+    margin-left: 150px;
+  }
+  .p4 {
+    margin-left: 150px;
+  }
+}
+@media (max-width: 558px) {
+  .p1 {
+    margin-left: 40px;
+  }
+  .p2 {
+    margin-left: 40px;
+  }
+  .p3 {
+    margin-left: 40px;
+  }
+  .p4 {
+    margin-left: 40px;
   }
 }

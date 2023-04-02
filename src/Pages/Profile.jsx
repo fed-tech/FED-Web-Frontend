@@ -4,18 +4,16 @@ import penSvg from "../Img/pen-icon.svg";
 export default function Profile() {
   return (
     <div className="profileBackground">
-      
       <div className="pmainBox">
         <div className="profileLeft">
           <div className="profile">
             <div className="proHeading">
               <p className="headInnerText">
-                <p>Profile Details</p> 
+                <p>Profile Details</p>
                 <img src={penSvg} alt="" />
-              </p> 
+              </p>
             </div>
             <div className="details">
-
               <div className="keys">
                 <p className="dets">Full Name</p>
                 <p className="dets">Roll Number</p>
@@ -39,10 +37,12 @@ export default function Profile() {
         </div>
         <div className="profileRight">
           <p className="illuminating">
-            <p>ILLUMINATIING</p>
-            <p>THE</p>
-            <p><span>ENTREPRENEUR</span></p>
-            <p>IN YOU</p>
+            <p className="p1">ILLUMINATIING</p>
+            <p className="p2">THE</p>
+            <p className="p3">
+              <span>ENTREPRENEUR</span>
+            </p>
+            <p className="p4">IN YOU</p>
           </p>
           {/* <div className="illuminating">ILLUMINATIING</div>
           <p className="the">THE </p>
@@ -50,7 +50,6 @@ export default function Profile() {
           <p className="inYou">IN YOU</p> */}
         </div>
       </div>
-
     </div>
   );
 }
