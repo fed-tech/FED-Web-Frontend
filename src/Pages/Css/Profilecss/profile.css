@@ -19,7 +19,7 @@
   padding: 77px 17px 198px 38px;
 }
 .profile {
-  background-color: black;
+  /* background-color: grey; */
   /* background-image: url(../../../Img/Frame\ 17.png); */
   color: #ffffff;
   font-family: rubik;
@@ -52,7 +52,7 @@
 .values {
   width: 57.38%;
 }
-.profile .dets {
+.dets {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
 }
@@ -83,98 +83,113 @@
   flex-wrap: wrap;
 }
 .p2 {
-  /* font-family: "Rubik", sans-serif;
-  font-size: 50px;
-  margin-left: 350px; */
   flex-wrap: wrap;
 }
 .p3 {
-  /* font-family: "Rubik", sans-serif;
-  font-size: 50px;
-  margin-left: 60px; */
   color: #f45725;
   margin-left: -30px;
   flex-wrap: wrap;
 }
 .p4 {
-  /* padding-bottom: 300px;
-  font-family: "Rubik", sans-serif;
-  font-size: 50px;
-  margin-left: 280px; */
   color: #ffffff;
-  /* margin-right: 44px; */
   flex-wrap: wrap;
 }
-
 @media (max-width: 1200px) {
-  .pmainBox {
-    flex-direction: column;
-    align-items: center;
+  .profileRight {
+    display: none;
   }
   .profileBackground {
-    background-image: url(./../../../Img/Rectangle23.jpg);
+    background-image: url(./../../../Img/wolf-full.jpg);
+    background-repeat: no-repeat;
+    margin-right: 20%;
   }
-  .profile {
-    background: none;
-  }
+  .profile,
   .profileLeft,
   .profileRight,
   .illuminating {
-    padding: 0;
+    background: none;
+  }
+  .body {
+    background-color: black;
   }
   .profileRight {
-    width: 100%;
+    margin-right: 5%;
+  }
+}
+@media (max-width: 1000px) {
+  .pmainBox {
+    flex-direction: column;
+  }
+
+  .profileLeft,
+  .illuminating {
+    padding: 0;
+  }
+
+  .illuminating {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .profileLeft {
+    margin-left: 10%;
+  }
+  .p1,
+  .p2,
+  .p3,
+  .p4 {
+    margin-left: 40%;
+  }
+  .proHeading {
+    width: 58%;
+  }
+}
+
+@media (max-width: 880px) {
+  .profileLeft {
+    margin-left: 5%;
+  }
+  .profileLeft,
+  .proHeading {
+    width: 60%;
+  }
+  .p1,
+  .p2,
+  .p3,
+  .p4 {
+    margin-left: 14%;
+  }
+  .proHeading {
+    font-size: 28px;
+  }
+  .dets {
+    font-size: 22px;
   }
   .illuminating {
-    padding: 0 20px;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .p1 {
-    padding-right: 1000px;
-    margin-left: 258px;
-    padding-top: 20px;
-  }
-  .p2 {
-    padding-right: 800px;
-    margin-left: 258px;
-  }
-  .p3 {
-    padding-right: 900px;
-
-    margin-left: 258px;
-  }
-  .p4 {
-    margin-left: 258px;
+    font-size: 45px;
   }
 }
-@media (max-width: 891px) {
-  .p1 {
-    margin-left: 150px;
+
+@media (max-width: 650px) {
+  .pmainBox {
+    margin-top: 0px;
   }
-  .p2 {
-    margin-left: 150px;
-  }
-  .p3 {
-    margin-left: 150px;
-  }
-  .p4 {
-    margin-left: 150px;
+  .profileLeft,
+  .proHeading {
+    width: 80%;
   }
 }
-@media (max-width: 558px) {
-  .p1 {
-    margin-left: 40px;
+
+@media (max-width: 482px) {
+  .proHeading {
+    font-size: 22px;
   }
-  .p2 {
-    margin-left: 40px;
+  .dets {
+    font-size: 16px;
   }
-  .p3 {
-    margin-left: 40px;
-  }
-  .p4 {
-    margin-left: 40px;
+  .illuminating {
+    font-size: 45px;
   }
 }
