@@ -7,8 +7,8 @@ import "./css/alumni.css";
 import Card from "./../../Data/card.json";
 
 // Icons
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import GitHubIcon from "@mui/icons-material/GitHub";
 
 function OurAlumni() {
   return (
