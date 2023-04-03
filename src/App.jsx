@@ -12,6 +12,7 @@ import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Seeall from "./Components/Home/Seeall";
+import Login from "./Components/Home/Login";
 // import MyProfile from "./Components/Profile/MyProfile";
 import Signup from "./Pages/Signup";
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/Login" element={<Login />} />
 
             <Route path="*" element={<Error />} />
+            <Route path="/Signup" element={<Signup />} />
           </Routes>
           <Footer />
         </Layout>

@@ -11,22 +11,20 @@
   background-repeat: no-repeat;
   background-size:cover;
   text-align: center;
-  align-items: center;
 }
 .inside {
   background-color: rgba(0,0,0,0.3);
   
   height: 47.188rem;
-  width: 38.875rem;
+  width:60%;
+  max-width: 44%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 5%;
   text-align: center;
-  padding: 0.625rem;
-  box-sizing: border-box;
-  
+  padding: 15px 70px 44px 70px;  
 }
 .title1 {
   text-align: center;
@@ -45,8 +43,10 @@
 }
 
 .whitebox {
-  width:95%;
+  width: 100%;
   height: 34.569rem;
+  padding: 30px 57px;
+  padding-bottom: 77.5px;
   background: white;
   border-radius: 1rem;
   display: flex;
@@ -86,7 +86,8 @@
 }
 .googlepart {
   height: 2.625rem;
-  width: 23.063rem;
+  width: 100%;
+  padding: 12.8px;
   border: 0.056rem solid black;
   border-radius: 0.667rem;
   display: flex;
@@ -142,27 +143,14 @@
   height: 2.446rem;
 }
 .logtwo {
-  background-color: transparent;
-  font-family: "Mulish", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.188rem;
-  color: white;
-  background-color: black;
   width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 0.625rem;
-}
-
-.input {
-  position: absolute;
-  line-height: 1.063em;
-  text-align: left;
-  background-color: transparent;
-  outline: none;
-  border: none;
-
+    margin-top: 42.15px;
+    padding: 7.3px;
+    border-radius: 7.3px;
+    border: black;
+    background-color: black;
+    font: mulish 19.8px;
+    font-size: 19.8px;
 }
 .input::placeholder {
   font-weight: 300;
@@ -173,13 +161,23 @@
   text-align: left;
 }
 .user,.pass{
-  width: 23.063rem;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6.9px;
+    width: 100%;
 }
 .user input,.pass input{
+  line-height: 1.063em;
+  text-align: left;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 10.6px 23.2px;
   width: 100%;
   border-bottom: 1.5px solid black;
-  padding: 0.625rem;
-  box-sizing: border-box;
+  
 }
 .username {
   border: none;
@@ -213,7 +211,7 @@
   outline: none;
 }
 
-@media screen and (max-width:490px){
+/* @media screen and (max-width:490px){
   .inside{
     width: 100%;
     overflow: hidden;
@@ -225,5 +223,52 @@
   }
   .googlepart,.user,.pass,.login-btn{
     width: 80%;
+  }
+} */
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .inside {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 1000px) and (min-width: 800px) {
+  .inside {
+    width: 60%;
+    max-width: 60%;
+  }
+}
+@media (max-width: 800px) and (min-width: 760px) {
+  .inside {
+    width: 65%;
+    max-width: 65%;
+  }
+}
+@media (max-width: 760px) and (min-width: 530px) {
+  .inside {
+    width: 70%;
+    max-width: 70%;
+    padding: 15px 40px 40px 40px;
+  }
+}
+@media (max-width: 530px) {
+  .inside {
+    width: 80%;
+    max-width: 80%;
+    padding: 15px 40px 40px 40px;
+  }
+  .whitebox {
+    margin-top: 30.8px;
+    padding: 35px 35px;
+  }
+}
+@media (max-width: 400px) {
+  .inside {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 40px 40px 40px;
+  }
+  .whitebox {
+    margin-top: 30.8px;
+    padding: 30px 30px;
   }
 }

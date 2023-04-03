@@ -29,9 +29,7 @@ function Login() {
               className="password"
             />
           </div>
-          <div className="login-btn">
             <button className="logtwo">Login</button>
-          </div>
           <div className="dont">
             <p className="signup">
               Don't have an account?{" "}
