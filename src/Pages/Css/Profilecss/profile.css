@@ -91,6 +91,7 @@
   .profileBackground {
     background-image: url(./../../../Img/wolf-full.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     margin-right: 20%;
   }
   .profile,
