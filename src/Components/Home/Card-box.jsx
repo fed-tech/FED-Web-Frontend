@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function card(props) {
-  console.log(props);
   return (
     <>
       <div className="testDiv">

@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Animatedpage } from "../Components/Animatedpage";
 
 // Components
 import Main from "../Components/Podcasts/Main";
@@ -10,9 +11,11 @@ function Podcasts() {
   }, []);
 
   return (
-    <>
-      <Main />
-    </>
+    <Animatedpage>
+      <>
+        <Main />
+      </>
+    </Animatedpage>
   );
 }
 export default Podcasts;

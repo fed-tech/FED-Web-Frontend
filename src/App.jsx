@@ -15,7 +15,7 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Components/Home/Login";
 // import MyProfile from "./Components/Profile/MyProfile";
 import Signup from "./Pages/Signup";
-
+import Profile from "./Pages/Profile";
 // Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
@@ -38,8 +38,6 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="/Login" element={<Login />} />
-
             <Route path="*" element={<Error />} />
             <Route path="/Signup" element={<Signup />} />
           </Routes>
