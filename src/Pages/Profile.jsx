@@ -37,17 +37,13 @@ export default function Profile() {
         </div>
         <div className="profileRight">
           <p className="illuminating">
-            <p className="p1">ILLUMINATIING</p>
-            <p className="p2">THE</p>
-            <p className="p3">
+            <p>ILLUMINATIING</p>
+            <p>THE</p>
+            <p>
               <span>ENTREPRENEUR</span>
             </p>
-            <p className="p4">IN YOU</p>
+            <p>IN YOU</p>
           </p>
-          {/* <div className="illuminating">ILLUMINATIING</div>
-          <p className="the">THE </p>
-          <p className="entrepreneur">ENTREPRENEUR</p>
-          <p className="inYou">IN YOU</p> */}
         </div>
       </div>
     </div>

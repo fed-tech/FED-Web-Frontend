@@ -13,9 +13,8 @@
 }
 
 .profileLeft {
-  /* background-image: url(../../../Img/Frame\ 17.png); */
+  background-image: url(../../../Img/Frame\ 17.png);
   width: 52%;
-  background-color: black;
   padding: 77px 17px 198px 38px;
 }
 .profile {
@@ -66,7 +65,6 @@
   background-repeat: no-repeat;
   width: 47.77%;
   padding-top: 148px;
-  padding-bottom: 230px;
   box-sizing: border-box;
   object-fit: contain;
 }
@@ -82,21 +80,13 @@
   line-height: 59.25px;
   flex-wrap: wrap;
 }
-.p2 {
-  flex-wrap: wrap;
-}
-.p3 {
-  color: #f45725;
-  margin-left: -30px;
-  flex-wrap: wrap;
-}
-.p4 {
-  color: #ffffff;
-  flex-wrap: wrap;
-}
 @media (max-width: 1200px) {
   .profileRight {
-    display: none;
+    margin-right: 2%;
+    padding: 0;
+  }
+  .profileLeft {
+    padding-bottom: 5%;
   }
   .profileBackground {
     background-image: url(./../../../Img/wolf-full.jpg);
@@ -112,38 +102,51 @@
   .body {
     background-color: black;
   }
-  .profileRight {
-    margin-right: 5%;
+  .illuminating {
+    padding-top: 320px;
+    font-size: 40px;
   }
 }
 @media (max-width: 1000px) {
   .pmainBox {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
   }
-
   .profileLeft,
   .illuminating {
     padding: 0;
   }
-
-  .illuminating {
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-  }
   .profileLeft {
     margin-left: 10%;
   }
-  .p1,
-  .p2,
-  .p3,
-  .p4 {
-    margin-left: 40%;
+  .profileRight {
+    width: 100%;
+    max-width: 100%;
+  }
+  .profile {
+    padding-left: 0;
+    padding-top: 10%;
+  }
+  .proHeading {
+    font-size: 28px;
+  }
+  .dets {
+    font-size: 22px;
+  }
+  .illuminating {
+    padding: 6% 3% 2% 9%;
+    /* width: 100%; */
+    display: flex;
+    flex-direction:row;
+    font-size: 36px;
+    /* text-align: center; */
+  }
+  .illuminating p {
+    padding: 1%;
   }
   .proHeading {
     width: 58%;
+    padding-bottom: 15%;
   }
 }
 
@@ -155,20 +158,14 @@
   .proHeading {
     width: 60%;
   }
-  .p1,
-  .p2,
-  .p3,
-  .p4 {
-    margin-left: 14%;
-  }
   .proHeading {
-    font-size: 28px;
+    font-size: 24px;
   }
   .dets {
-    font-size: 22px;
+    font-size: 20px;
   }
   .illuminating {
-    font-size: 45px;
+    font-size: 33px;
   }
 }
 
@@ -180,6 +177,12 @@
   .proHeading {
     width: 80%;
   }
+  .illuminating {
+    padding-top: 15%;
+  }
+  .proHeading {
+    padding-bottom: 15%;
+  }
 }
 
 @media (max-width: 482px) {
@@ -190,6 +193,14 @@
     font-size: 16px;
   }
   .illuminating {
-    font-size: 45px;
+    font-size: 30px;
   }
 }
+/* @media (max-width : 387px) {
+  .illuminating {
+    font-size: 20px;
+  }
+  .illuminating p {
+    height: 30px;
+  }
+} */
