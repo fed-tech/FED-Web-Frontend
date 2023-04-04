@@ -1,7 +1,7 @@
 import { ClassNames } from "@emotion/react";
 import React, { useState } from "react";
-import "./css/loginpg.css";
-import google from "./../../Img/Google.svg";
+import "../Components/Home/css/loginpg.css";
+import google from "../Img/Google.svg";
 import { Link } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState(null);

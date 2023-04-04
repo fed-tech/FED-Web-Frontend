@@ -1,18 +1,58 @@
 import React, { useState } from "react";
+import axios from "axios";
+import bcrypt from "bcryptjs-react";
+import { Cookies, useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 // Css
 import SuCss from "./Css/Signup.module.css";
 import { Link } from "react-router-dom";
 
+
 export default function Signup() {
+  const navigate = useNavigate();
+  
   const[email,setEmail] = useState(null)
-  const[password,setPassword] = useState(null)
+  const[passwrd,setPassword] = useState(null)
   const[firstname,setFirstName] = useState(null)
-  const[lastName,setLastName] = useState(null)
+  const[lastName,setLastName] = useState(null);
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   console.log(email);
-  console.log(password);
+  console.log(passwrd);
   console.log(firstname);
   console.log(lastName);
+  // console.log(bcrypt.hash(password,8,(err,hash)=>{
+  //   if(err){
+  //     console.log("not hashed");
+  //     return
+  //   }
+  //   console.log(hash)
+     
+  // }))
+  const handleSignUp = async (e) => {
+    e.preventDefault();
+    try {
+      const name = firstname +' '+ lastName;
+      const password = bcrypt.hashSync(passwrd, bcrypt.genSaltSync());
+      console.log('hashed password is:',password)
+      console.log('Name is:',name)
+      const response = await axios.post(`http://localhost:5000/auth/register`, {
+        email,
+        password,
+        name
+      });
+      const success = response.status === 200;
+      if(success)
+      {
+        navigate('/Login');
+      }
+      
+    }
+    catch(error){
+      console.log(error)
+    }
+    
+  }
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
@@ -80,7 +120,7 @@ export default function Signup() {
             <hr className={SuCss.hrs} />
             <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
             <hr className={SuCss.hrs} />
-            <button type="submit" className={SuCss.btn}>
+            <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
               SignUp
             </button>
               <p className={SuCss.member}>
