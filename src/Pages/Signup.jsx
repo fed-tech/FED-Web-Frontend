@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Css
 import SuCss from "./Css/Signup.module.css";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
+  const[email,setEmail] = useState(null)
+  const[password,setPassword] = useState(null)
+  const[firstname,setFirstName] = useState(null)
+  const[lastName,setLastName] = useState(null)
+  console.log(email);
+  console.log(password);
+  console.log(firstname);
+  console.log(lastName);
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
@@ -63,20 +72,21 @@ export default function Signup() {
 
           <p className={SuCss.OrText}>Or</p>
           <div className={SuCss.form}>
-            <input type="text" placeholder="First name" />
+            <input type="text" placeholder="First name" onChange={(e)=>setFirstName(e.target.value)}/>
             <hr className={SuCss.hrs} />
-            <input type="text" placeholder="Last name" />
+            <input type="text" placeholder="Last name" onChange={(e)=>setLastName(e.target.value)}/>
             <hr className={SuCss.hrs} />
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
             <hr className={SuCss.hrs} />
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
             <hr className={SuCss.hrs} />
             <button type="submit" className={SuCss.btn}>
               SignUp
             </button>
-            <p className={SuCss.member}>
-              Already a member? <span>Login</span>
-            </p>
+              <p className={SuCss.member}>
+           
+                Already a member? <Link to='/Login'><span>Login</span></Link>
+              </p>
           </div>
         </div>
       </div>

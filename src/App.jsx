@@ -13,9 +13,11 @@ import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Seeall from "./Components/Home/Seeall";
 import Login from "./Components/Home/Login";
-// import MyProfile from "./Components/Profile/MyProfile";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
+// import MyProfile from "./Components/Profile/MyProfile";
+
+
 // Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
@@ -38,8 +40,10 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="*" element={<Error />} />
+            <Route path="/Login" element={<Login />} />
             <Route path="/Signup" element={<Signup />} />
+            <Route path="/MyProfile" element={<Profile />} />
+            <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
         </Layout>

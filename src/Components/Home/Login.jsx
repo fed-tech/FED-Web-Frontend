@@ -1,8 +1,13 @@
 import { ClassNames } from "@emotion/react";
-import React from "react";
+import React, { useState } from "react";
 import "./css/loginpg.css";
 import google from "./../../Img/Google.svg";
+import { Link } from "react-router-dom";
 function Login() {
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  console.log(email);
+  console.log(password);
   return (
     <div className="full">
       <div className="inside">
@@ -20,22 +25,28 @@ function Login() {
           </div>
           <p className="or">Or</p>
           <div className="user">
-            <input type="text" placeholder="Email" className="username" />
+            <input
+              type="text"
+              placeholder="Email"
+              className="username"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
           <div className="pass">
             <input
               type="password"
               placeholder="Password"
               className="password"
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-            <button className="logtwo">Login</button>
+          <button className="logtwo">Login</button>
           <div className="dont">
             <p className="signup">
               Don't have an account?{" "}
-              <a href="/" className="spn">
-                Signup
-              </a>
+              <Link to='/Signup'>
+                <span className="spn">Signup</span>
+              </Link>
             </p>
           </div>
         </div>
