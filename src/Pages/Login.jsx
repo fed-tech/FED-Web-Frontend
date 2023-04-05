@@ -1,6 +1,6 @@
 import { ClassNames } from "@emotion/react";
 import React, { useState } from "react";
-import "../Components/Home/css/loginpg.css";
+import "./Css/loginpg.css";
 import google from "../Img/Google.svg";
 import { Link } from "react-router-dom";
 function Login() {
