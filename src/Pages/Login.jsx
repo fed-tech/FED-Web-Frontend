@@ -1,13 +1,59 @@
 import { ClassNames } from "@emotion/react";
-import React, { useState } from "react";
-import "./Css/loginpg.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "../Pages/Css/loginpg.css";
 import google from "../Img/Google.svg";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+import { Cookies, useCookies } from "react-cookie";
+import bcrypt from "bcryptjs-react";
 function Login() {
-  const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState(null);
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [passwrd, setPassword] = useState('');
+  const [isinValid, setIsinValid] = useState(false);
+  const [errmssg, setErrMssg] = useState('');
+  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   console.log(email);
-  console.log(password);
+  console.log(passwrd);
+  useEffect(() => {
+    setIsinValid(false);
+  }, [email,passwrd]);
+  const handlelogin=async(e)=>{
+    e.preventDefault();
+    const username = email;
+    if(email === '' || passwrd === '')
+    {
+      setIsinValid(true);
+      setErrMssg('Please fill all the fields');
+      return
+    }
+    try {
+      const password = bcrypt.hashSync(passwrd, '$2b$10$Q0RPeouqYdTToq76zoccIO');
+      console.log(password)
+      const response = await axios.post(`http://localhost:5000/auth/login`,{
+        username,
+        password,
+      });
+      setCookie("AuthToken", response.data.user);
+      // const success = response.status === 'ok';
+      console.log(response.data);
+      if(response.status !== 202)
+      {
+        setIsinValid(true);
+        setErrMssg("Invalid credentials")
+      }
+      else{
+        navigate('/MyProfile');
+      }
+    }catch(err)
+    {
+      setIsinValid(true);
+      setErrMssg("Invalid credentials")
+      console.log(err);
+    }
+  }
+
+  
   return (
     <div className="full">
       <div className="inside">
@@ -40,7 +86,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="logtwo">Login</button>
+          <button className="logtwo" onClick={handlelogin}>Login</button>
           <div className="dont">
             <p className="signup">
               Don't have an account?{" "}
@@ -48,10 +94,12 @@ function Login() {
                 <span className="spn">Signup</span>
               </Link>
             </p>
+            {isinValid && <p id="errmssg">{errmssg}</p>}
           </div>
         </div>
       </div>
     </div>
   );
 }
+
 export default Login;

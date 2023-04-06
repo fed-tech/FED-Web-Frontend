@@ -11,6 +11,12 @@
   background-repeat: no-repeat;
   background-size:cover;
   text-align: center;
+  color: black;
+}
+#errmssg{
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
 }
 .inside {
   background-color: rgba(0,0,0,0.3);
@@ -210,6 +216,7 @@
   border: 1px solid #ccc;
   outline: none;
 }
+
 
 /* @media screen and (max-width:490px){
   .inside{

@@ -1,3 +1,9 @@
+.signupErrDiv{
+  color: red;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
 .mDiv {
   display: flex;
   justify-content: center;
@@ -120,6 +126,11 @@ input::placeholder {
 .member span {
   color: black;
   font-weight: 600;
+}
+#signup_errmssg{
+  color: red;
+  font-size: 13px;
+
 }
 
 @media (max-width: 1200px) and (min-width: 1000px) {

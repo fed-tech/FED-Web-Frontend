@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import bcrypt from "bcryptjs-react";
 import { Cookies, useCookies } from "react-cookie";
@@ -12,28 +12,31 @@ import { Link } from "react-router-dom";
 export default function Signup() {
   const navigate = useNavigate();
   
-  const[email,setEmail] = useState(null)
-  const[passwrd,setPassword] = useState(null)
-  const[firstname,setFirstName] = useState(null)
-  const[lastName,setLastName] = useState(null);
+  const[email,setEmail] = useState('')
+  const[passwrd,setPassword] = useState('')
+  const[firstname,setFirstName] = useState('')
+  const[lastName,setLastName] = useState('');
+  const [isinValid, setIsinValid] = useState(false);
+  const [errmssg, setErrMssg] = useState('');
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   console.log(email);
   console.log(passwrd);
   console.log(firstname);
   console.log(lastName);
-  // console.log(bcrypt.hash(password,8,(err,hash)=>{
-  //   if(err){
-  //     console.log("not hashed");
-  //     return
-  //   }
-  //   console.log(hash)
-     
-  // }))
+  useEffect(() => {
+    setIsinValid(false);
+  }, [email,passwrd,firstname,lastName]);
   const handleSignUp = async (e) => {
     e.preventDefault();
+    if(email === '' || passwrd === '' || firstname === '' || lastName === '')
+    {
+      setIsinValid(true);
+      setErrMssg("Please fill all the fields");
+      return
+    }
     try {
       const name = firstname +' '+ lastName;
-      const password = bcrypt.hashSync(passwrd, bcrypt.genSaltSync());
+      const password = bcrypt.hashSync(passwrd, '$2b$10$Q0RPeouqYdTToq76zoccIO');
       console.log('hashed password is:',password)
       console.log('Name is:',name)
       const response = await axios.post(`http://localhost:5000/auth/register`, {
@@ -46,9 +49,15 @@ export default function Signup() {
       {
         navigate('/Login');
       }
+      else{
+        setIsinValid(true);
+        setErrMssg("Invalid credentials")
+      }
       
     }
     catch(error){
+      setIsinValid(true);
+      setErrMssg("Invalid credentials")
       console.log(error)
     }
     
@@ -127,6 +136,7 @@ export default function Signup() {
            
                 Already a member? <Link to='/Login'><span>Login</span></Link>
               </p>
+              {isinValid && <p className={SuCss.signupErrDiv}>{errmssg}</p>}
           </div>
         </div>
       </div>
