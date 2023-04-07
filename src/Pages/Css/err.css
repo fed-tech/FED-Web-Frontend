@@ -12,8 +12,27 @@
   background-size: cover;
   position: relative;
   padding-top: 150px;
+  transition: all 0.3s;
   z-index: 0;
+  overflow: hidden;
 }
+
+.bg:hover > .cycle_image {
+  transform: translateX(45%);
+  /* animation: cycle 0.5s 5 infinite; */
+  /* justify-content: flex-end; */
+  /* margin-top: 200px; */
+  /* background-color: red; */
+}
+
+/* @keyframes cycle {
+  0% {
+    justify-content: center;
+  }
+  100% {
+    justify-content: flex-end;
+  }
+} */
 
 .ErrorPageOverlayDiv {
   /* position: absolute; */
@@ -72,7 +91,8 @@
   left: 0px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  transform: translateX(22%);
   /* background-color: lightblue; */
   transition: all 0.3s;
   /* height: 100%; */
@@ -80,7 +100,7 @@
 }
 
 .cycle_image:hover {
-  background-color: pink;
+  /* background-color: pink; */
 }
 
 @media only screen and (max-width: 1030px) {
