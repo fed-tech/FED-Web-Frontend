@@ -3,13 +3,35 @@
 
 .bg {
   background-image: url("../../Img/image-23.png");
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   text-align: center;
   align-items: center;
   padding-bottom: 160px;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  padding-top: 150px;
+}
+
+.ErrorPageOverlayDiv {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.OverlayDivCenter {
+  margin-top: 100px;
+  padding: 50px 80px;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
 }
 
 .oops {
@@ -18,7 +40,6 @@
   color: aliceblue;
   text-align: center;
   align-items: center;
-  padding-top: 200px;
   font-weight: bold;
 }
 
@@ -39,25 +60,31 @@
   align-items: center;
   padding-top: 40px;
 }
+
 .cycle_image {
-  padding-top: 110px;
+  transition: all 0.3s;
 }
+
 @media only screen and (max-width: 1030px) {
   .bg {
     overflow-x: hidden;
   }
+
   .cycleimage {
     height: 80%;
     width: 80%;
   }
+
   .oops {
     padding-left: 30px;
     padding-right: 30px;
   }
+
   .notfound {
     padding-left: 30px;
     padding-right: 30px;
   }
+
   .the_page {
     padding-left: 30px;
     padding-right: 30px;
