@@ -22,6 +22,7 @@ export default function Profile() {
                 <p className="dets">School</p>
                 <p className="dets">College</p>
                 <p className="dets">Mobile No</p>
+                <button className="logoutBtn">Logout</button>
               </div>
               <div className="values">
                 <p className="dets">Ayan Paul</p>
