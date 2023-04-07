@@ -76,7 +76,7 @@
   /* background-color: lightblue; */
   transition: all 0.3s;
   /* height: 100%; */
-  z-index: 0;
+  z-index: -1;
 }
 
 .cycle_image:hover {
