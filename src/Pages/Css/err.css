@@ -4,29 +4,32 @@
 .bg {
   background-image: url("../../Img/image-23.png");
   /* width: 100%; */
-  /* height: 100%; */
+  height: 90vh;
   text-align: center;
   align-items: center;
-  padding-bottom: 160px;
+  /* padding-bottom: 0px; */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 150px;
+  z-index: 0;
 }
 
 .ErrorPageOverlayDiv {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 100%;
+  /* position: absolute; */
+  /* top: 0px; */
+  /* width: 100%; */
+  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  z-index: 1;
 }
 
 .OverlayDivCenter {
-  margin-top: 100px;
+  /* margin-top: 100px; */
+  margin-bottom: 50px;
   padding: 50px 80px;
   width: 60%;
   background: rgba(0, 0, 0, 0.2);
@@ -62,7 +65,22 @@
 }
 
 .cycle_image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: lightblue; */
   transition: all 0.3s;
+  /* height: 100%; */
+  z-index: 0;
+}
+
+.cycle_image:hover {
+  background-color: pink;
 }
 
 @media only screen and (max-width: 1030px) {
