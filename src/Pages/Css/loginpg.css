@@ -69,6 +69,7 @@
 }
 
 .welc {
+  margin-top: 2rem;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -91,6 +92,7 @@
   color: black;
 }
 .googlepart {
+  margin: 1.875rem;
   height: 2.625rem;
   width: 100%;
   padding: 12.8px;
@@ -103,6 +105,7 @@
 .icon {
   width: 1.063rem;
   height: 1.063rem;
+  margin-right: 6px;
 }
 .log {
   background-color: transparent;
@@ -129,7 +132,7 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   line-height: 1.063rem;
   color: black;
 }
@@ -139,10 +142,23 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   line-height: 1.063rem;
   color: black;
   text-decoration: none;
+}
+.spn:after{
+  content: "";
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 0;
+  left: 263px;
+  top: 30.313rem;
+  transition: 0.3s;
+}
+.spn:hover:after{
+  width: 12%;
 }
 .login-btn{
   width: 22.176rem;
@@ -210,6 +226,7 @@
 .signup {
   padding-top: 1.25rem;
 }
+
 .form-control:focus {
   border-color: #ccc;
   box-shadow: #ccc;

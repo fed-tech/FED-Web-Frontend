@@ -91,7 +91,7 @@ function Login() {
             <p className="signup">
               Don't have an account?{" "}
               <Link to='/Signup'>
-                <span className="spn">Signup</span>
+                <span className="spn">SignUp</span>
               </Link>
             </p>
             {isinValid && <p id="errmssg">{errmssg}</p>}

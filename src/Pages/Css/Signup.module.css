@@ -98,7 +98,7 @@ input {
 }
 input::placeholder {
   font-weight: 300;
-  font-size: 13.5px;
+  font-size: 0.938rem;
   font-family: Mulish;
   font-style: normal;
   color: black;
