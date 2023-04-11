@@ -95,6 +95,7 @@ input {
   outline: none;
   border: none;
   color: black;
+  border-bottom: 1px solid black;
 }
 input::placeholder {
   font-weight: 300;
@@ -106,6 +107,7 @@ input::placeholder {
 }
 .hrs {
   width: 100%;
+  height: 1px;
 }
 .btn {
   width: 100%;

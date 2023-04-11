@@ -8,16 +8,19 @@ import { useNavigate } from "react-router-dom";
 import SuCss from "./Css/Signup.module.css";
 import { Link } from "react-router-dom";
 
-
 export default function Signup() {
   const navigate = useNavigate();
-  
-  const[email,setEmail] = useState('')
-  const[passwrd,setPassword] = useState('')
-  const[firstname,setFirstName] = useState('')
-  const[lastName,setLastName] = useState('');
+
+  const [email, setEmail] = useState("");
+  const [emailerr, setEmailerr] = useState(false);
+  const [passwrderr, setPasswrderr] = useState(false);
+  const [firstNameerr, setfirstnameerr] = useState(false);
+  const [lastnameerr, setlastNameerr] = useState(false);
+  const [passwrd, setPassword] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState('');
+  const [errmssg, setErrMssg] = useState("");
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   console.log(email);
   console.log(passwrd);
@@ -25,43 +28,59 @@ export default function Signup() {
   console.log(lastName);
   useEffect(() => {
     setIsinValid(false);
-  }, [email,passwrd,firstname,lastName]);
+    setEmailerr(false);
+    setfirstnameerr(false);
+    setlastNameerr(false);
+    setPasswrderr(false);
+  }, [email, passwrd, firstname, lastName]);
   const handleSignUp = async (e) => {
     e.preventDefault();
-    if(email === '' || passwrd === '' || firstname === '' || lastName === '')
-    {
-      setIsinValid(true);
-      setErrMssg("Please fill all the fields");
-      return
+    if (firstname === "") {
+      setfirstnameerr(true);
+
     }
-    try {
-      const name = firstname +' '+ lastName;
-      const password = bcrypt.hashSync(passwrd, '$2b$10$Q0RPeouqYdTToq76zoccIO');
-      console.log('hashed password is:',password)
-      console.log('Name is:',name)
-      const response = await axios.post(`http://localhost:5000/auth/register`, {
-        email,
-        password,
-        name
-      });
-      const success = response.status === 200;
-      if(success)
-      {
-        navigate('/Login');
-      }
-      else{
+    if (lastName === "") {
+      setlastNameerr(true);
+
+    }
+    if (email === "") {
+      setEmailerr(true);
+
+    }
+    if (passwrd === "") {
+      setPasswrderr(true);
+
+    } else {
+      try {
+        const name = firstname + " " + lastName;
+        const password = bcrypt.hashSync(
+          passwrd,
+          "$2b$10$Q0RPeouqYdTToq76zoccIO"
+        );
+        console.log("hashed password is:", password);
+        console.log("Name is:", name);
+        const response = await axios.post(
+          `http://localhost:5000/auth/register`,
+          {
+            email,
+            password,
+            name,
+          }
+        );
+        const success = response.status === 200;
+        if (success) {
+          navigate("/Login");
+        } else {
+          setIsinValid(true);
+          setErrMssg("Invalid credentials");
+        }
+      } catch (error) {
         setIsinValid(true);
-        setErrMssg("Invalid credentials")
+        setErrMssg("Unwanted errors");
+        console.log(error);
       }
-      
     }
-    catch(error){
-      setIsinValid(true);
-      setErrMssg("Invalid credentials")
-      console.log(error)
-    }
-    
-  }
+  };
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
@@ -121,22 +140,59 @@ export default function Signup() {
 
           <p className={SuCss.OrText}>Or</p>
           <div className={SuCss.form}>
-            <input type="text" placeholder="First name" onChange={(e)=>setFirstName(e.target.value)}/>
-            <hr className={SuCss.hrs} />
-            <input type="text" placeholder="Last name" onChange={(e)=>setLastName(e.target.value)}/>
-            <hr className={SuCss.hrs} />
-            <input type="email" placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
-            <hr className={SuCss.hrs} />
-            <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
-            <hr className={SuCss.hrs} />
+            <input
+              id="first_name"
+              type="text"
+              placeholder="First name"
+              onChange={(e) => setFirstName(e.target.value)}
+              style={{
+                borderBottom: firstNameerr
+                  ? "2px solid red"
+                  : "2px solid black",
+              }}
+            />
+            <input
+              type="text"
+              id="last_name"
+              placeholder="Last name"
+              onChange={(e) => setLastName(e.target.value)}
+              style={{
+                borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
+              }}
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+              style={{
+                borderBottom: emailerr ? "2px solid red" : "2px solid black",
+              }}
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+              style={{
+                borderBottom: passwrderr ? "2px solid red" : "2px solid black",
+              }}
+            />
             <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
               SignUp
             </button>
-              <p className={SuCss.member}>
-           
-                Already a member? <Link to='/Login'><span>Login</span></Link>
-              </p>
-              {isinValid && <p className={SuCss.signupErrDiv}>{errmssg}</p>}
+            <p className={SuCss.member}>
+              Already a member?{" "}
+              <Link to="/Login">
+                <span>Login</span>
+              </Link>
+            </p>
+            <p
+              className={SuCss.signupErrDiv}
+              style={{ visibility: isinValid ? "visible" : "hidden" }}
+            >
+              {errmssg}
+            </p>
           </div>
         </div>
       </div>
