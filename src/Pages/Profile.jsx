@@ -1,7 +1,15 @@
 import React from "react";
 import "./Css/Profilecss/profile.css";
 import penSvg from "../Img/pen-icon.svg";
+import { useNavigate } from "react-router-dom";
+import { useCookies } from "react-cookie";
 export default function Profile() {
+  const [cookies, setCookie, removeCookie] = useCookies(['user']);
+  const navigate = useNavigate();
+  const logout = ()=>{
+    removeCookie("AuthToken");
+    navigate('/Signup')
+  }
   return (
     <div className="profileBackground">
       <div className="pmainBox">
@@ -44,6 +52,7 @@ export default function Profile() {
             </p>
             <p>IN YOU</p>
           </p>
+          <button onClick={logout}>click me</button>
         </div>
       </div>
     </div>
