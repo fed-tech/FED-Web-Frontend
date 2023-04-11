@@ -8,7 +8,7 @@ export default function Profile() {
   const [cookies, setCookie, removeCookie] = useCookies('user');
   const navigate = useNavigate();
   function handleLogout() {
-    removeCookie('user');
+    removeCookie('AuthToken');
     navigate("/Signup");
   }
   return (
