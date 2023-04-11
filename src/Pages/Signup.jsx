@@ -76,7 +76,7 @@ export default function Signup() {
         }
       } catch (error) {
         setIsinValid(true);
-        setErrMssg("Unwanted errors");
+        setErrMssg("Invalid Credentials");
         console.log(error);
       }
     }

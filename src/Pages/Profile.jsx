@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Css/Profilecss/profile.css";
 import penSvg from "../Img/pen-icon.svg";
 import { Cookies, useCookies } from "react-cookie";
