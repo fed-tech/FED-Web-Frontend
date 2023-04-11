@@ -147,8 +147,8 @@ export default function Signup() {
               onChange={(e) => setFirstName(e.target.value)}
               style={{
                 borderBottom: firstNameerr
-                  ? "1px solid red"
-                  : "1px solid black",
+                  ? "2px solid red"
+                  : "2px solid black",
               }}
             />
             <input
@@ -157,7 +157,7 @@ export default function Signup() {
               placeholder="Last name"
               onChange={(e) => setLastName(e.target.value)}
               style={{
-                borderBottom: lastnameerr ? "1px solid red" : "1px solid black",
+                borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
               }}
             />
             <input
@@ -166,7 +166,7 @@ export default function Signup() {
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
               style={{
-                borderBottom: emailerr ? "1px solid red" : "1px solid black",
+                borderBottom: emailerr ? "2px solid red" : "2px solid black",
               }}
             />
             <input
@@ -175,7 +175,7 @@ export default function Signup() {
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
               style={{
-                borderBottom: passwrderr ? "1px solid red" : "1px solid black",
+                borderBottom: passwrderr ? "2px solid red" : "2px solid black",
               }}
             />
             <button type="submit" className={SuCss.btn} onClick={handleSignUp}>

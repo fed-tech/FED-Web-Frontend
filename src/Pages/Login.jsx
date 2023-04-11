@@ -82,7 +82,7 @@ function Login() {
               className="username"
               onChange={(e) => setEmail(e.target.value)}
               style={{
-                borderBottom: emailerr ? "1px solid red" : "1px solid black",
+                borderBottom: emailerr ? "2px solid red" : "2px solid black",
               }}
             />
           </div>
@@ -93,7 +93,7 @@ function Login() {
               className="password"
               onChange={(e) => setPassword(e.target.value)}
               style={{
-                borderBottom: passwrderr ? "1px solid red" : "1px solid black",
+                borderBottom: passwrderr ? "2px solid red" : "2px solid black",
               }}
             />
           </div>
