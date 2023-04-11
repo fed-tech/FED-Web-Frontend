@@ -134,6 +134,32 @@ input::placeholder {
   font-size: 13px;
 
 }
+.spn {
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.90rem;
+  line-height: 1.063rem;
+  color: black;
+  text-decoration: none;
+}
+.spn:after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: blue;
+  display:flex;
+  margin-left: 155px;
+  transition: 0.3s;
+}
+.spn:hover:after{
+  width: 25%;
+  transition: width 0.3s linear;
+}
+.spn:hover{
+  color: blue;
+}
 
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {

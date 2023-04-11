@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "./Css/Profilecss/profile.css";
 import penSvg from "../Img/pen-icon.svg";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 export default function Profile() {
@@ -9,6 +11,16 @@ export default function Profile() {
   const logout = ()=>{
     removeCookie("AuthToken");
     navigate('/Signup')
+=======
+import { Cookies, useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
+export default function Profile() {
+  const [cookies, setCookie, removeCookie] = useCookies('user');
+  const navigate = useNavigate();
+  function handleLogout() {
+    removeCookie('AuthToken');
+    navigate("/Signup");
+>>>>>>> 94108401df7415133c8272ca88abf25d458da99e
   }
   return (
     <div className="profileBackground">
@@ -30,7 +42,11 @@ export default function Profile() {
                 <p className="dets">School</p>
                 <p className="dets">College</p>
                 <p className="dets">Mobile No</p>
+                <button className="logoutBtn" onClick={handleLogout}>
+                    Logout
+                </button>
               </div>
+              
               <div className="values">
                 <p className="dets">Ayan Paul</p>
                 <p className="dets">2030015</p>
