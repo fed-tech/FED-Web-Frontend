@@ -150,7 +150,7 @@ input::placeholder {
   height: 3px;
   background-color: blue;
   display:flex;
-  margin-left: 155px;
+  margin-left: 120px;
   transition: 0.3s;
 }
 .spn:hover:after{

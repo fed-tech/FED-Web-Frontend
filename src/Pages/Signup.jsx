@@ -184,7 +184,7 @@ export default function Signup() {
             <p className={SuCss.member}>
               Already a member?{" "}
               <Link to="/Login">
-                <span>Login</span>
+                <span className={SuCss.spn}>Login</span>
               </Link>
             </p>
             <p
