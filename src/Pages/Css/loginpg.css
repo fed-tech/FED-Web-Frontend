@@ -149,17 +149,21 @@
 }
 .spn:after{
   content: "";
-  position: absolute;
-  background-color: black;
-  height: 2px;
   width: 0;
-  left: 263px;
-  top: 30.313rem;
+  height: 3px;
+  background-color: blue;
+  display:flex;
+  margin-left: 155px;
   transition: 0.3s;
 }
 .spn:hover:after{
-  width: 12%;
+  width: 25%;
+  transition: width 0.3s linear;
 }
+.spn:hover{
+  color: blue;
+}
+
 .login-btn{
   width: 22.176rem;
   height: 2.446rem;
