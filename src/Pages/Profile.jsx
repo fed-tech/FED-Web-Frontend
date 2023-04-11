@@ -3,10 +3,13 @@ import axios from "axios";
 import "./Css/Profilecss/profile.css";
 import penSvg from "../Img/pen-icon.svg";
 import { Cookies, useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 export default function Profile() {
   const [cookies, setCookie, removeCookie] = useCookies('user');
+  const navigate = useNavigate();
   function handleLogout() {
     removeCookie('user');
+    navigate("/Signup");
   }
   return (
     <div className="profileBackground">
