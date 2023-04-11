@@ -53,7 +53,7 @@ function Login() {
       }
     } catch (err) {
       setIsinValid(true);
-      setErrMssg("Invalid credentials");
+      setErrMssg("Unwanted errors");
       console.log(err);
     }
   }
