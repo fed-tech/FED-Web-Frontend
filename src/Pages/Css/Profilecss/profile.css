@@ -51,6 +51,18 @@
 .values {
   width: 57.38%;
 }
+.logoutBtn {
+  background-color: #ffffff;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  height: 40px;
+  width: 158.47%;
+  border: none;
+  margin-top: 30px;
+  box-shadow: inset;
+  font-size: 20px;
+  border-radius: 7.3%;
+}
 .dets {
   font-family: "Rubik", sans-serif;
   font-size: 28px;

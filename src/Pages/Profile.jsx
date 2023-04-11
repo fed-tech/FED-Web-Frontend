@@ -1,7 +1,12 @@
 import React from "react";
 import "./Css/Profilecss/profile.css";
 import penSvg from "../Img/pen-icon.svg";
+import { Cookies, useCookies } from "react-cookie";
 export default function Profile() {
+  const [cookies, setCookie, removeCookie] = useCookies('user');
+  function handleLogout() {
+    removeCookie('user');
+  }
   return (
     <div className="profileBackground">
       <div className="pmainBox">
@@ -22,7 +27,11 @@ export default function Profile() {
                 <p className="dets">School</p>
                 <p className="dets">College</p>
                 <p className="dets">Mobile No</p>
+                <button className="logoutBtn" onClick={handleLogout}>
+                    Logout
+                </button>
               </div>
+              
               <div className="values">
                 <p className="dets">Ayan Paul</p>
                 <p className="dets">2030015</p>
