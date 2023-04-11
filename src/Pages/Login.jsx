@@ -48,6 +48,7 @@ function Login() {
       if (response.status !== 202) {
         setIsinValid(true);
         setErrMssg("Invalid credentials");
+        return;
       } else {
         navigate("/MyProfile");
       }
