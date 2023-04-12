@@ -43,7 +43,7 @@ export default function Nav() {
               </li>
               <li>
                 <NavLink to="/MyProfile" className="liTag">
-                  My Profile 
+                  Login/SignUp
                 </NavLink>
               </li>
             </ul>
