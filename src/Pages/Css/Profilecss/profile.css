@@ -103,6 +103,7 @@
   .profileBackground {
     background-image: url(./../../../Img/wolf-full.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     margin-right: 20%;
   }
   .profile,
@@ -149,7 +150,7 @@
     padding: 6% 3% 2% 9%;
     /* width: 100%; */
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     font-size: 36px;
     /* text-align: center; */
   }
@@ -160,6 +161,18 @@
     width: 58%;
     padding-bottom: 15%;
   }
+}
+.logoutBtn {
+  background-color: #ffffff;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  height: 40px;
+  width: 158.47%;
+  border: none;
+  margin-top: 30px;
+  box-shadow: inset;
+  font-size: 20px;
+  border-radius: 7.3%;
 }
 
 @media (max-width: 880px) {
