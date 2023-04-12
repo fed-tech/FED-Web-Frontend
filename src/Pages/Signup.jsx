@@ -37,19 +37,15 @@ export default function Signup() {
     e.preventDefault();
     if (firstname === "") {
       setfirstnameerr(true);
-
     }
     if (lastName === "") {
       setlastNameerr(true);
-
     }
     if (email === "") {
       setEmailerr(true);
-
     }
     if (passwrd === "") {
       setPasswrderr(true);
-
     } else {
       try {
         const name = firstname + " " + lastName;
