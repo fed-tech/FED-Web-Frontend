@@ -37,19 +37,15 @@ export default function Signup() {
     e.preventDefault();
     if (firstname === "") {
       setfirstnameerr(true);
-
     }
     if (lastName === "") {
       setlastNameerr(true);
-
     }
     if (email === "") {
       setEmailerr(true);
-
     }
     if (passwrd === "") {
       setPasswrderr(true);
-
     } else {
       try {
         const name = firstname + " " + lastName;
@@ -184,7 +180,7 @@ export default function Signup() {
             <p className={SuCss.member}>
               Already a member?{" "}
               <Link to="/Login">
-                <span>Login</span>
+                <span className={SuCss.spn}>Login</span>
               </Link>
             </p>
             <p
