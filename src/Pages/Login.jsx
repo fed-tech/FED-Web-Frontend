@@ -30,34 +30,33 @@ function Login() {
     }
     if (passwrd === "") {
       setPasswrderr(true);
-    }
-    else{
-    try {
-      const password = bcrypt.hashSync(
-        passwrd,
-        "$2b$10$Q0RPeouqYdTToq76zoccIO"
-      );
-      console.log(password);
-      const response = await axios.post(`http://localhost:5000/auth/login`, {
-        username,
-        password,
-      });
-      setCookie("AuthToken", response.data.user);
-      // const success = response.status === 'ok';
-      console.log(response.data);
-      if (response.status !== 202) {
+    } else {
+      try {
+        const password = bcrypt.hashSync(
+          passwrd,
+          "$2b$10$Q0RPeouqYdTToq76zoccIO"
+        );
+        console.log(password);
+        const response = await axios.post(`http://localhost:5000/auth/login`, {
+          username,
+          password,
+        });
+        setCookie("AuthToken", response.data.user);
+        // const success = response.status === 'ok';
+        console.log(response.data.status);
+        if (response.status === "ok") {
+          navigate("/MyProfile");
+          return;
+        } else {
+          setIsinValid(true);
+          setErrMssg("Invalid credentials");
+        }
+      } catch (err) {
         setIsinValid(true);
-        setErrMssg("Invalid credentials");
-        return;
-      } else {
-        navigate("/MyProfile");
+        setErrMssg("Invalid Credentials");
+        console.log(err);
       }
-    } catch (err) {
-      setIsinValid(true);
-      setErrMssg("Invalid Credentials");
-      console.log(err);
     }
-  }
   };
 
   return (
