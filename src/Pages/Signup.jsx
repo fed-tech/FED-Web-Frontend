@@ -11,11 +11,18 @@ import { Link } from "react-router-dom";
 export default function Signup() {
   const navigate = useNavigate();
 
+<<<<<<< Updated upstream
   const [email, setEmail] = useState("");
+=======
+>>>>>>> Stashed changes
   const [emailerr, setEmailerr] = useState(false);
   const [passwrderr, setPasswrderr] = useState(false);
   const [firstNameerr, setfirstnameerr] = useState(false);
   const [lastnameerr, setlastNameerr] = useState(false);
+<<<<<<< Updated upstream
+=======
+  const [email, setEmail] = useState("");
+>>>>>>> Stashed changes
   const [passwrd, setPassword] = useState("");
   const [firstname, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
