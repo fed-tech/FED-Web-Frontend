@@ -15,8 +15,6 @@ function Login() {
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("");
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
-  console.log(email);
-  console.log(passwrd);
   useEffect(() => {
     setIsinValid(false);
     setEmailerr(false);
@@ -44,7 +42,8 @@ function Login() {
         setCookie("AuthToken", response.data.user);
         // const success = response.status === 'ok';
         console.log(response.data.status);
-        if (response.status === "ok") {
+        if (response.data.status === "ok") {
+          setErrMssg("");
           navigate("/MyProfile");
           return;
         } else {
