@@ -41,10 +41,10 @@ function Login() {
           username,
           password,
         });
-        setCookie("AuthToken", response.data.user);
-        // const success = response.status === 'ok';
-        console.log(response.data.status);
-        if (response.status === "ok") {
+
+        if (response.status === 202) {
+          setCookie("AuthToken", response.data.user);
+          console.log(cookies.get())
           navigate("/MyProfile");
           return;
         } else {
