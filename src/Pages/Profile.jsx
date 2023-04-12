@@ -5,12 +5,26 @@ import penSvg from "../Img/pen-icon.svg";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 export default function Profile() {
+  const [users,setUsers]=useState([])
+
+  useEffect(()=>{
+    console.log("profilepage");
+    loadUsers();
+  },[]);
+
+  const loadUsers=async()=>{
+    const result=await axios.post("http://localhost:5000/profile/getprofile");
+    console.log(result);
+  }
+
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
+
   const navigate = useNavigate();
   function handleLogout() {
     removeCookie('AuthToken');
     navigate("/Signup");
   }
+  
   return (
     <div className="profileBackground">
       <div className="pmainBox">
@@ -44,7 +58,7 @@ export default function Profile() {
                 <p className="dets">Electronics</p>
                 <p className="dets">kiit</p>
                 <p className="dets">9142124912</p>
-              </div>
+              </div> 
             </div>
           </div>
         </div>
