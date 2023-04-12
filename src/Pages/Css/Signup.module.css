@@ -4,6 +4,9 @@
   margin-top: 10px;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
 .mDiv {
   display: flex;
   justify-content: center;
@@ -118,6 +121,7 @@ input::placeholder {
   background-color: black;
   font: mulish 19.8px;
   font-size: 19.8px;
+  cursor: pointer;
 }
 .member {
   margin-top: 19.8px;
