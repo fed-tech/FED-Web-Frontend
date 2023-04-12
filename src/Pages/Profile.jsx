@@ -8,8 +8,8 @@ export default function Profile() {
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
   const navigate = useNavigate();
   function handleLogout() {
-    removeCookie('AuthToken');
     navigate("/Signup");
+    removeCookie('AuthToken');
   }
   return (
     <div className="profileBackground">
