@@ -5,7 +5,15 @@ import penSvg from "../Img/pen-icon.svg";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 export default function Profile() {
-  const [users,setUsers]=useState([])
+  const [users,setUsers]=useState([]);
+
+  const [name, setName] = useState();
+  const [roll, setRoll] = useState("");
+  const [email, setEmail] = useState("");
+  const [year, setYear] = useState("");
+  const [school, setSchool] = useState("");
+  const [college, setCollege] = useState("");
+  const [mobileno, setMobileno] = useState("");
 
   useEffect(()=>{
     console.log("profilepage");
@@ -13,8 +21,14 @@ export default function Profile() {
   },[]);
 
   const loadUsers=async()=>{
-    const result=await axios.post("http://localhost:5000/profile/getprofile");
+    const result=await axios.get("http://localhost:5000/profile/getprofile");
     console.log(result);
+    fetchData();
+  }
+
+  function fetchData() {
+    setEmail(result.data.email);
+    setName(result.data.name);
   }
 
   const [cookies, setCookie, removeCookie] = useCookies(['user']);
@@ -51,13 +65,13 @@ export default function Profile() {
               </div>
               
               <div className="values">
-                <p className="dets">Ayan Paul</p>
-                <p className="dets">2030015</p>
-                <p className="dets">ayanpaul1108@gmail.com</p>
-                <p className="dets">3rd</p>
-                <p className="dets">Electronics</p>
-                <p className="dets">kiit</p>
-                <p className="dets">9142124912</p>
+                <p className="vals">{name}</p>
+                <p className="vals">{roll}</p>
+                <p className="vals">{email}</p>
+                <p className="vals">{year}</p>
+                <p className="vals">{school}</p>
+                <p className="vals">{college}</p>
+                <p className="vals">{mobileno}</p>
               </div> 
             </div>
           </div>
