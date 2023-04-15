@@ -63,11 +63,11 @@
   font-size: 20px;
   border-radius: 7.3%;
 }
-.dets {
+.dets, .vals {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
 }
-.dets {
+.dets, .vals {
   margin-bottom: 30px;
 }
 
