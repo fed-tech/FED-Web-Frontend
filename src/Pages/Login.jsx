@@ -14,7 +14,8 @@ function Login(props) {
   const [passwrd, setPassword] = useState("");
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("");
-  const [cookies, setCookie, removeCookie] = useCookies(["user"]);
+  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
+
   useEffect(() => {
     setIsinValid(false);
     setEmailerr(false);
@@ -35,14 +36,15 @@ function Login(props) {
           "$2b$10$Q0RPeouqYdTToq76zoccIO"
         );
         console.log(password);
+        console.log(document.cookie);
         const response = await axios.post(`http://localhost:5000/auth/login`, {
           username,
           password,
         });
-        console.log(response)
+        setCookie("auth_token", response.data.token);
+        console.log(response);
 
         if (response.status === 200) {
-          
           props.setIsLoggedIn(true);
           navigate("/MyProfile");
           return;
