@@ -4,7 +4,7 @@ import "./Css/Profilecss/profile.css";
 import penSvg from "../Img/pen-icon.svg";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
-export default function Profile() {
+export default function Profile(props) {
   const [users,setUsers]=useState([]);
 
   const [name, setName] = useState();
@@ -37,6 +37,7 @@ export default function Profile() {
   function handleLogout() {
     navigate("/Signup");
     removeCookie('AuthToken');
+    props.setIsLoggedIn(false);
   }
   
   return (

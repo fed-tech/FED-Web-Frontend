@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./css/DesktopNav.css";
 
-export default function Nav() {
+export default function Nav(props) {
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -42,8 +42,8 @@ export default function Nav() {
                 </HashLink>
               </li>
               <li>
-                <NavLink to="/MyProfile" className="liTag">
-                  Login/SignUp
+                <NavLink to={props.isLoggedIn?"/MyProfile":"Login"} className="liTag">
+                  {props.isLoggedIn?"MyProfile":"Login/SignUp"}
                 </NavLink>
               </li>
             </ul>

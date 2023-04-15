@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -27,11 +27,12 @@ import NavMobile from "./Components/NavMobile";
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
+  const[isLoggedIn,setIsLoggedIn] = useState(false);
   return (
     <>
       <BrowserRouter>
         <Layout>
-          <Nav />
+          <Nav isLoggedIn = {isLoggedIn}/>
           <NavMobile />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -40,9 +41,9 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="/Login" element={<Login />} />
+            <Route path="/Login" element={<Login setIsLoggedIn = {setIsLoggedIn}/>} />
             <Route path="/Signup" element={<Signup />} />
-            <Route path="/MyProfile" element={<Profile />} />
+            <Route path="/MyProfile" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Login setIsLoggedIn = {setIsLoggedIn}/>} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />

@@ -6,7 +6,7 @@ import google from "../Img/Google.svg";
 import { Link, useNavigate } from "react-router-dom";
 import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
-function Login() {
+function Login(props) {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [emailerr, setEmailerr] = useState(false);
@@ -39,9 +39,11 @@ function Login() {
           username,
           password,
         });
+        console.log(response)
 
-        if (response.status === 202) {
-          setCookie("AuthToken", response.data.user);
+        if (response.status === 200) {
+          
+          props.setIsLoggedIn(true);
           navigate("/MyProfile");
           return;
         } else {
