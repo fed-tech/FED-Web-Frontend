@@ -14,7 +14,6 @@ function Login(props) {
   const [passwrd, setPassword] = useState("");
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("");
-  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
 
   useEffect(() => {
     setIsinValid(false);
@@ -41,8 +40,6 @@ function Login(props) {
           username,
           password,
         });
-        setCookie("auth_token", response.data.token);
-        console.log(response);
 
         if (response.status === 200) {
           props.setIsLoggedIn(true);
