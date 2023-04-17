@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./css/DesktopNav.css";
+import axios from "axios";
+import { useCookies } from "react-cookie";
 
 export default function Nav(props) {
+  const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
+  const validate = async()=>{
+    const result=await axios.get("http://localhost:5000/profile/getprofile",{withCredentials:true,headers:{
+      "auth_token":cookie.auth_token
+    }});
+    const success = result.status === 200;
+    if(success)
+    {
+      props.setIsLoggedIn(true);
+    }
+    
+  }
+  useEffect(()=>{
+    validate();
+  },[])
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -42,7 +59,7 @@ export default function Nav(props) {
                 </HashLink>
               </li>
               <li>
-                <NavLink to={props.isLoggedIn?"/MyProfile":"Login"} className="liTag">
+                <NavLink to={props.isLoggedIn?"/MyProfile":"Signup"} className="liTag">
                   {props.isLoggedIn?"MyProfile":"Login/SignUp"}
                 </NavLink>
               </li>

@@ -36,7 +36,7 @@ export default function Profile(props) {
   const navigate = useNavigate();
   function handleLogout() {
     navigate("/Signup");
-    removeCookie('AuthToken');
+    removeCookie('auth_token');
     props.setIsLoggedIn(false);
   }
   

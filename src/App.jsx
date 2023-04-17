@@ -32,7 +32,7 @@ function App() {
     <>
       <BrowserRouter>
         <Layout>
-          <Nav isLoggedIn = {isLoggedIn}/>
+          <Nav isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
           <NavMobile />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -41,9 +41,9 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="/Login" element={<Login setIsLoggedIn = {setIsLoggedIn}/>} />
-            <Route path="/Signup" element={<Signup />} />
-            <Route path="/MyProfile" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Login setIsLoggedIn = {setIsLoggedIn}/>} />
+            <Route path="/Login" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Login setIsLoggedIn = {setIsLoggedIn}/>} />
+            <Route path="/Signup" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Signup/>}  />
+            <Route path="/MyProfile" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Signup/>} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
