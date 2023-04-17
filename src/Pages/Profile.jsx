@@ -14,24 +14,24 @@ export default function Profile(props) {
   const [school, setSchool] = useState("");
   const [college, setCollege] = useState("");
   const [mobileno, setMobileno] = useState("");
-
+  const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
   useEffect(()=>{
     console.log("profilepage");
     loadUsers();
   },[]);
 
   const loadUsers=async()=>{
-    const result=await axios.get("http://localhost:5000/profile/getprofile");
-    console.log(result);
-    fetchData();
-  }
-
-  function fetchData() {
+    const result=await axios.get("http://localhost:5000/profile/getprofile",{withCredentials:true,headers:{
+      "auth_token":cookie.auth_token
+    }});
+    console.log(result.data);
     setEmail(result.data.email);
     setName(result.data.name);
   }
 
-  const [cookies, setCookie, removeCookie] = useCookies(['user']);
+  
+
+  
 
   const navigate = useNavigate();
   function handleLogout() {
