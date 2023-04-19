@@ -14,6 +14,7 @@ function Login(props) {
   const [passwrd, setPassword] = useState("");
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("");
+  const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
 
   useEffect(() => {
     setIsinValid(false);
@@ -21,6 +22,7 @@ function Login(props) {
     setPasswrderr(false);
   }, [email, passwrd]);
   const handlelogin = async (e) => {
+
     e.preventDefault();
     const username = email;
     if (email === "") {
@@ -42,6 +44,7 @@ function Login(props) {
         });
 
         if (response.status === 200) {
+          setCookie("auth_token",response.data.token)
           props.setIsLoggedIn(true);
           navigate("/MyProfile");
           return;
