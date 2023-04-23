@@ -3,11 +3,9 @@
 
 .bg {
   background-image: url("../../Img/image-23.png");
-  /* width: 100%; */
   height: 90vh;
   text-align: center;
   align-items: center;
-  /* padding-bottom: 0px; */
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -19,30 +17,14 @@
 
 .bg:hover > .cycle_image {
   transform: translateX(45%);
-  /* animation: cycle 0.5s 5 infinite; */
-  /* justify-content: flex-end; */
-  /* margin-top: 200px; */
-  /* background-color: red; */
 }
 
 .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
   transform: translateX(-20%);
 }
 
-/* @keyframes cycle {
-  0% {
-    justify-content: center;
-  }
-  100% {
-    justify-content: flex-end;
-  }
-} */
 
 .ErrorPageOverlayDiv {
-  /* position: absolute; */
-  /* top: 0px; */
-  /* width: 100%; */
-  /* height: 100%; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +34,6 @@
 
 .OverlayDivCenter {
   transform: translateX(0%);
-  /* margin-top: 100px; */
   margin-bottom: 50px;
   padding: 50px 80px;
   width: 60%;
@@ -97,17 +78,11 @@
   left: 0px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   transform: translateX(22%);
-  /* background-color: lightblue; */
   transition: all 0.3s;
-  /* height: 100%; */
   z-index: -1;
 }
 
-.cycle_image:hover {
-  /* background-color: pink; */
-}
 
 @media only screen and (max-width: 1030px) {
   .bg {
