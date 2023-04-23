@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// Components
 import OurAlumni from "../Components/Alumni/OurAlumni";
+
 function Alumni() {
-  React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <OurAlumni />

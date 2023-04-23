@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// Components
 import Main from "../Components/Podcasts/Main";
-function Podcasts()
-{
-   React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
- return(
+
+function Podcasts() {
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
     <>
-       <Main />   
+      <Main />
     </>
- )
+  );
 }
 export default Podcasts;
