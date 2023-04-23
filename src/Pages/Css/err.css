@@ -5,6 +5,7 @@
   background-image: url("../../Img/image-23.png");
   height: 90vh;
   text-align: center;
+  display: flex;
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -29,6 +30,7 @@
   justify-content: center;
   align-items: center;
   pointer-events: none;
+  width: 100%;
   z-index: 1;
 }
 
@@ -90,22 +92,28 @@
   }
 
   .cycleimage {
-    height: 80%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
   }
-
+  .OverlayDivCenter {
+    width: 70%;
+    height: 20%;
+  }
   .oops {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 74px;
   }
 
   .notfound {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 35px;
   }
 
   .the_page {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 18px;
   }
 }
