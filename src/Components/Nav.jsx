@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./css/DesktopNav.css";
 import axios from "axios";
 import { useCookies } from "react-cookie";
+import { UserContext } from "../../context/userContext";
 
 export default function Nav(props) {
   const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
+  const {userDetails} = useContext(UserContext)
   const validate = async()=>{
     const result=await axios.get("http://localhost:5000/profile/getprofile",{withCredentials:true,headers:{
       "auth_token":cookie.auth_token
@@ -60,7 +62,7 @@ export default function Nav(props) {
               </li>
               <li>
                 <NavLink to={props.isLoggedIn?"/MyProfile":"Signup"} className="liTag">
-                  {props.isLoggedIn?"MyProfile":"Login/SignUp"}
+                  {props.isLoggedIn?<><img src={userDetails.profileimg} alt="" srcset="" height="20px"/>{userDetails.name}</>:"Login/SignUp"}
                 </NavLink>
               </li>
             </ul>

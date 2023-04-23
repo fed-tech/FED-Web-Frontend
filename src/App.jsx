@@ -17,7 +17,6 @@ import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
 // import MyProfile from "./Components/Profile/MyProfile";
 
-
 // Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
@@ -27,12 +26,12 @@ import NavMobile from "./Components/NavMobile";
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
-  const[isLoggedIn,setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       <BrowserRouter>
         <Layout>
-          <Nav isLoggedIn = {isLoggedIn} setIsLoggedIn = {setIsLoggedIn}/>
+          <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           <NavMobile />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -41,9 +40,36 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="/Login" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Login setIsLoggedIn = {setIsLoggedIn}/>} />
-            <Route path="/Signup" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Signup/>}  />
-            <Route path="/MyProfile" element={isLoggedIn?<Profile setIsLoggedIn = {setIsLoggedIn}/>:<Signup/>} />
+            <Route
+              path="/Login"
+              element={
+                isLoggedIn ? (
+                  <Profile setIsLoggedIn={setIsLoggedIn} />
+                ) : (
+                  <Login setIsLoggedIn={setIsLoggedIn} />
+                )
+              }
+            />
+            <Route
+              path="/Signup"
+              element={
+                isLoggedIn ? (
+                  <Profile setIsLoggedIn={setIsLoggedIn} />
+                ) : (
+                  <Signup />
+                )
+              }
+            />
+            <Route
+              path="/MyProfile"
+              element={
+                isLoggedIn ? (
+                  <Profile setIsLoggedIn={setIsLoggedIn} />
+                ) : (
+                  <Signup />
+                )
+              }
+            />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
