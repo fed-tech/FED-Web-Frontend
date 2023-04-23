@@ -62,7 +62,7 @@ export default function Nav(props) {
               </li>
               <li>
                 <NavLink to={props.isLoggedIn?"/MyProfile":"Signup"} className="liTag">
-                  {props.isLoggedIn?<><img src={userDetails.profileimg} alt="" srcset="" height="20px"/>{userDetails.name}</>:"Login/SignUp"}
+                  {props.isLoggedIn?<img src={userDetails.profileimg} alt="" srcset=""  className="profile_img"/>:"Login/SignUp"}
                 </NavLink>
               </li>
             </ul>

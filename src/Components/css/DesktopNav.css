@@ -58,12 +58,18 @@
 
 .liTag {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .liTag:hover {
   color: #f45725;
 }
-
+.profile_img{
+  height: 30px;
+  border-radius: 50%;
+}
 @media only screen and (max-width: 900px) {
   .listDiv {
     width: 75%;
