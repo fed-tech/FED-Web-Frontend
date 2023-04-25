@@ -17,7 +17,7 @@
 }
 
 .bg:hover > .cycle_image {
-  transform: translateX(45%);
+  transform: translateX(45%) ;
 }
 
 .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
@@ -97,7 +97,6 @@
   }
   .OverlayDivCenter {
     width: 70%;
-    height: 20%;
   }
   .oops {
     padding-left: 1%;
@@ -115,5 +114,87 @@
     padding-left: 1%;
     padding-right: 1%;
     font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .bg {
+    overflow-x: hidden;
+  }
+
+  .cycleimage {
+    height: 60%;
+    width: 60%;
+  }
+  .OverlayDivCenter {
+    width: 70%;
+  }
+  .oops {
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 68px;
+  }
+
+  .notfound {
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 30px;
+  }
+
+  .the_page {
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .bg:hover > .cycle_image {
+    transform: translate(20%, 23%);
+  }
+  
+  .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
+    transform: translateY(-30%);
+  }
+ 
+  .OverlayDivCenter {
+    width: 80%;
+  }
+  .oops {
+    font-size: 55px;
+  }
+
+  .notfound {
+    font-size: 25px;
+  }
+
+  .the_page {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .bg:hover > .cycle_image {
+    transform: rotate(90deg) translate(70%, 0%);
+  }
+  
+  .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
+    transform: translateY(-45%);
+  }
+ 
+  .OverlayDivCenter {
+    width: 80%;
+  }
+  .oops {
+    padding-bottom: 0.5%;
+    font-size: 40px;
+  }
+
+  .notfound {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .the_page {
+    padding: 0;
+    font-size: 13px;
   }
 }
