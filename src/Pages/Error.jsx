@@ -1,5 +1,9 @@
 import React from "react";
+
+// css
 import "./Css/err.css";
+
+// assets
 import Errimage from "./../assets/Layer 3.svg";
 
 function Errorpage() {

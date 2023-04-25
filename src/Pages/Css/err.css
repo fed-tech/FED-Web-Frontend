@@ -63,8 +63,3 @@
     padding-right: 30px;
   }
 }
-@media screen and (max-width: 315px) {
-  .oops {
-    margin-right: 100px;
-  }
-}

@@ -1,0 +1,488 @@
+#OurTeam {
+  background-color: rgb(15, 14, 14);
+  padding-top: 180px;
+}
+
+.TeamCreative {
+  margin: 0px 30px;
+}
+
+.TeamName {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.005em;
+}
+
+.TeamName span {
+  color: #f45725;
+}
+
+.TeamNameSubTitle {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  margin: 0px 30px 80px 30px;
+}
+
+.colDiv1,
+.colDiv2 {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+
+.teamColDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.memImgDiv,
+.memImg {
+  box-sizing: initial;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.memImgDiv {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #c4c4c4;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.memlinks {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  backdrop-filter: blur(1px);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.memImgDiv:hover > .memlinks {
+  opacity: 1;
+  visibility: visible;
+}
+
+.svg {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+}
+
+.svgCore {
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+}
+
+#gitLink {
+  margin-left: 20px;
+}
+
+.memLink {
+  background-color: transparent;
+}
+
+.svg path {
+  transition: all 0.3s;
+}
+
+.svg path:hover {
+  color: #f45725;
+}
+
+.memName {
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-align: center;
+  padding: 4px 24px;
+  border-radius: 8px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+
+.memDivMain:hover > .memName {
+  width: 100%;
+}
+
+.name1 {
+  background-color: #f4c300;
+}
+
+.name2 {
+  background-color: #19c47d;
+}
+
+.name3 {
+  background-color: #00b4cd;
+}
+
+.name4 {
+  background-color: #18a0fa;
+}
+
+.memName,
+.memImgDiv {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#OperationsTeam,
+#MarketingTeam,
+#CreativeTeam,
+#CoreTeam,
+#TechnicalTeam,
+#AlumniTeam {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#CoreTeam {
+  gap: 0px 15px;
+  margin: 0px 30px;
+}
+
+.memDivMain {
+  width: 260px;
+  position: relative;
+  margin: 0px 20px 100px 20px;
+}
+
+.coreMemMainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  opacity: 1;
+}
+
+.CorememCardImg {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.flip-card-back {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  bottom: 430px;
+  transition: opacity 0.5s, visibility 0.2s;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px;
+  border-radius: 10px;
+}
+
+.flip-card {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 33%;
+  max-width: 430px;
+  min-width: 377px;
+  height: 430px;
+}
+
+.flip-card-inner {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.coreMemMainCard:hover .hoverDetailsMDiv {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hoverDetailsMDiv {
+  visibility: hidden;
+  opacity: 0;
+  padding: 20px;
+  width: 102%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: scroll;
+}
+
+.NamePosDiv {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.flip-card:hover .flip-card-back {
+  visibility: visible;
+  opacity: 0.9;
+}
+
+.knowMore {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+#knowMore {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  color: #f45725;
+  transition: all 0.3s;
+}
+
+#knowMore:hover {
+  text-decoration-line: underline;
+}
+
+.arrow {
+  margin: 0px 7px;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: transparent;
+  color: #f45725;
+  font-family: "Manrope";
+  font-style: normal;
+}
+
+.team-about {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.coresocilaDiv2 {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: transparent;
+}
+
+.coresocilaDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#linkd {
+  margin-right: 5px;
+  margin-left: 20px;
+}
+
+.coresocilaDiv {
+  transition: all 0.3s;
+}
+
+.coresocilaDiv2 {
+  margin-top: -65px;
+}
+
+.coreMemDesCard {
+  height: 211px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 343px;
+  border: 4px solid #f45725;
+  border-radius: 14px;
+}
+
+.PostPTag {
+  width: 100%;
+  text-align: center;
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.005em;
+  color: #f45725;
+}
+
+.PostPTagName {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 50px;
+  letter-spacing: 0.005em;
+  text-align: left;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.PostAbtPTag {
+  margin-bottom: 30px;
+  width: 246px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 380px) {
+  .hoverDetailsMDiv {
+    padding: 20px 7px;
+  }
+
+  .knowMore {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .memDivMain {
+    margin: 0px 20px 50px 20px;
+  }
+
+  #OurTeam {
+    padding-top: 98px;
+  }
+}
+
+@media only screen and (max-width: 659px) {
+  .memName {
+    right: auto;
+  }
+
+  .memDivMain:hover > .memName {
+    left: 0%;
+  }
+
+  .svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .TeamName {
+    font-size: 40px;
+  }
+
+  .TeamNameSubTitle {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  #OperationsTeam,
+  #MarketingTeam,
+  #CreativeTeam,
+  #TechnicalTeam,
+  #AlumniTeam #CoreTeam {
+    gap: 33px 0px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #CoreTeam {
+    gap: 30px 15px;
+    justify-items: start;
+  }
+
+  .flip-card {
+    margin-top: 0px;
+    min-width: 90%;
+  }
+
+  .coreMemMainCard {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .coreMemDesCard {
+    width: 90.98%;
+    height: 100%;
+  }
+
+  .PostAbtPTag {
+    width: 71.72%;
+    height: fit-content;
+  }
+}

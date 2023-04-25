@@ -1,15 +1,13 @@
-
 import React, { useState } from "react";
 import Youtube from "./Youtube";
 import Backdrop from "./Backdrop";
 import "./css1/podcasts.css";
 function Main(props) {
-
   const [goToYoutube, setGoToYoutube] = useState(false);
 
   function newState() {
     setGoToYoutube(true);
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
   return (
     <>
@@ -17,7 +15,7 @@ function Main(props) {
         <>
           <section id="podcasts" style={{ display: "none" }}>
             <div className="KnowUsmDiv">
-              <div className="container-cover">
+              <div className="coverTitle">
                 <p className="para1">
                   The <span className="para2">FedPreneur</span> Show.
                 </p>
@@ -49,7 +47,7 @@ function Main(props) {
         <>
           <section id="podcasts" style={{ display: "block" }}>
             <div className="KnowUsmDiv">
-              <div className="container-cover">
+              <div className="coverTitle">
                 <p className="para1">
                   The <span className="para2">FedPreneur</span> Show.
                 </p>

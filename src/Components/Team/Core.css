@@ -1,7 +1,0 @@
-svg path {
-    transition: all 0.3s;
-}
-
-svg path:hover {
-    color: #f45725;
-}

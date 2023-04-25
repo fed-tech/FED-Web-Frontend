@@ -1,6 +1,11 @@
 import React from "react";
+
+// css
 import "./css/seeall.css";
+
+// datas
 import Wcard from "../../Data/testimonial.json";
+
 function Seeall() {
   React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
   return (
