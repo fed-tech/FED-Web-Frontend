@@ -5,7 +5,7 @@ export default function LetsTalkBusiness() {
   const [formData, setFormData] = useState({});
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     const storedData = JSON.parse(localStorage.getItem("formData")) || [];
     const newKey = Date.now().toString();
     const newData = { ...storedData, [newKey]: formData };
