@@ -13,7 +13,7 @@ function Login(props) {
   const [passwrderr, setPasswrderr] = useState(false);
   const [passwrd, setPassword] = useState("");
   const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("");
+  const [errmssg, setErrMssg] = useState("Invalid");
   const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
 
   useEffect(() => {
@@ -42,19 +42,25 @@ function Login(props) {
           username,
           password,
         });
+        console.log(response)
 
         if (response.status === 200) {
           setCookie("auth_token",response.data.token)
           props.setIsLoggedIn(true);
           navigate("/MyProfile");
           return;
-        } else {
-          setIsinValid(true);
-          setErrMssg("Invalid credentials");
         }
       } catch (err) {
         setIsinValid(true);
-        setErrMssg("Invalid Credentials");
+
+        if(err.response.data.code === 4)
+        {
+          setErrMssg("Email not verified")
+        }
+        else if(err.response.data.code === 2)
+        {
+          setErrMssg("Invalid credentials");
+        }
         console.log(err);
       }
     }
@@ -110,7 +116,7 @@ function Login(props) {
             </p>
             <p
               id="errmssg"
-              style={{ visibility: isinValid ? "visible" : "hidden" }}
+              style={{ color: isinValid ? "red" : "white" }}
             >
               {errmssg}
             </p>

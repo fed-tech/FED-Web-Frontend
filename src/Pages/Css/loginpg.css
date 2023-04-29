@@ -14,9 +14,7 @@
   color: black;
 }
 #errmssg{
-  color: red;
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: 14px;
 }
 .inside {
   background-color: rgba(0,0,0,0.3);

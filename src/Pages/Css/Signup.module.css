@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
 .signupErrDiv{
-  color: red;
-  font-size: 13px;
-  margin-top: 10px;
+  font-size: 14px;
 }
 
 
@@ -132,11 +130,6 @@ input::placeholder {
 .member span {
   color: black;
   font-weight: 600;
-}
-#signup_errmssg{
-  color: red;
-  font-size: 13px;
-
 }
 .spn {
   background-color: transparent;

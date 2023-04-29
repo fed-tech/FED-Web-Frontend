@@ -20,7 +20,7 @@ export default function Signup() {
   const [firstname, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("");
+  const [errmssg, setErrMssg] = useState("Invalid");
   const [cookies, setCookie, removeCookie] = useCookies(["user"]);
   console.log(email);
   console.log(passwrd);
@@ -65,14 +65,19 @@ export default function Signup() {
         );
         const success = response.status === 200;
         if (success) {
+          alert("Please check your mail")
           navigate("/Login");
-        } else {
-          setIsinValid(true);
-          setErrMssg("Invalid credentials");
         }
       } catch (error) {
         setIsinValid(true);
-        setErrMssg("Invalid Credentials");
+        if(error.response.data.code === 1)
+        {
+          setErrMssg("User already exists")
+        }
+        else if(error.response.data.code === 2)
+        {
+          setErrMssg("Invalid email format")
+        }
         console.log(error);
       }
     }
@@ -185,7 +190,7 @@ export default function Signup() {
             </p>
             <p
               className={SuCss.signupErrDiv}
-              style={{ visibility: isinValid ? "visible" : "hidden" }}
+              style={{ color: isinValid ? "red" : "white" }}
             >
               {errmssg}
             </p>
