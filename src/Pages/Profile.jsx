@@ -6,15 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import { UserContext } from "../../context/userContext";
 export default function Profile(props) {
-  // const [users,setUsers]=useState([]);
-
-  // const [name, setName] = useState();
-  // const [roll, setRoll] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [year, setYear] = useState("");
-  // const [school, setSchool] = useState("");
-  // const [college, setCollege] = useState("");
-  // const [mobileno, setMobileno] = useState("");
   const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
   const {userDetails,setUserDetails}= useContext(UserContext);
 
