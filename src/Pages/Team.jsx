@@ -50,20 +50,13 @@ export default function Team() {
         />
         <div className="space" />
         {/* Creative */}
-        {/* <div className="TeamCreative">
-          <p className="TeamName">
-            Team <span>Creative</span>
-          </p>
-          <p className="TeamNameSubTitle">
-            Those who help us illustrate, create, design, address, showcase, and
-            introduce FED as a whole- behind the veil!
-          </p>
-          <div id="CreativeTeam">
-            {domain.creative.map((data, i) => (
-              <Domain mem={data} key={i} />
-            ))}
-          </div>
-        </div> */}
+        <Departments
+          name="Creative"
+          title="Those who help us illustrate, create, design, address, showcase, and
+          introduce FED as a whole- behind the veil!"
+          data={domain.creative}
+        />
+
         <div className="space" />
         {/* Marketing */}
         {/* <div className="TeamCreative">
