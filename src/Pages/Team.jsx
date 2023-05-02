@@ -58,22 +58,20 @@ export default function Team() {
         />
         <div className="space" />
         {/* Marketing */}
-        {/* <div className="TeamCreative">
-          <p className="TeamName">
-            Team <span>Marketing</span>
-          </p>
-          <p className="TeamNameSubTitle">
-            Those who help us strategize, develop, promote, grow and market
-            FED's endeavor!
-          </p>
-          <div id="MarketingTeam">
-            {domain.marketing.map((data, i) => (
-              <Domain mem={data} key={i} />
-            ))}
-          </div>
-        </div> */}
+        <Departments
+          name="Marketing"
+          title="Those who help us strategize, develop, promote, grow and market
+          FED's endeavor!"
+          data={domain.marketing}
+        />
         <div className="space" />
         {/* Operations */}
+        <Departments
+          name="Marketing"
+          title="Those who help us strategize, develop, promote, grow and market
+          FED's endeavor!"
+          data={domain.marketing}
+        />
         {/* <div className="TeamCreative">
           <p className="TeamName">
             Team <span>Operations</span>
