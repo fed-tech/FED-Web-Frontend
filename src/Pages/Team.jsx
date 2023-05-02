@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 // Components
 import Core from "../Components/Team/Core";
 import Departments from "./../Components/Team/Departments";
-// import Domain from "../Components/Team/Domain";
 
 // css
 import "../Components/Team/css/Team.css";
