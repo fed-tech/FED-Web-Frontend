@@ -234,6 +234,14 @@
       },
       {
         "id": 4,
+        "name": "Dev Shubhankar",
+        "instagram": "https://instagram.com/flummox.irl?igshid=YmMyMTA2M2Y=",
+        "linkedin": "https://www.linkedin.com/in/dev-shubhankar-492181265",
+        "github": "https://github.com/Cout-dev",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b7084f92fc1b3c52ce98_IMG_20230502_123445.jpg"
+      },
+      {
+        "id": 5,
         "name": "Eshan Modh",
         "instagram": "https://instagram.com/eshaann17?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/eshan-modh-36898722b",
@@ -241,7 +249,7 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b512dcbf175a06970c30_imgmy%20(1)%20-%201991%20_%20ESHAAN%20MODH.jpg"
       },
       {
-        "id": 5,
+        "id": 6,
         "name": "Gourav Vardhan Panigrahi",
         "instagram": "https://instagram.com/gourav__vardhan?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/gourav-vardhan-panigrahi-448a48221/",
@@ -249,7 +257,7 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b5706996fc170f0f77ac_Screenshot_20230227_224025_Gallery%20-%20GOURAV%20VARDHAN%20PANIGRAHI.jpg"
       },
       {
-        "id": 6,
+        "id": 7,
         "name": "Monalisa Pal",
         "instagram": "https://instagram.com/nutellaaenthusiast?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/monalisa-p-6474a0214/",
