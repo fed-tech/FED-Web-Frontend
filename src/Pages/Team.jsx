@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 // Components
 import Core from "../Components/Team/Core";
-import Domain from "../Components/Team/Domain";
+import Departments from "./../Components/Team/Departments";
 
 // css
 import "../Components/Team/css/Team.css";
@@ -10,7 +10,6 @@ import "../Components/Team/css/loading.css";
 
 // Data
 import db from "./../Data/dbTeam.json";
-import { Animatedpage } from "../Components/Animatedpage";
 
 export default function Team() {
   const coreMember = db.data.core;
@@ -21,94 +20,59 @@ export default function Team() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Animatedpage>
-      <>
-        <section id="OurTeam">
-          {/* Core */}
-          <div className="TeamCore">
-            <p className="TeamName">
-              Meet Our <span>Team.</span>
-            </p>
-            <p className="TeamNameSubTitle">
-              We are a tight-knit community of passionate people devoted to
-              bringing about vibrant and awe-inspiring changes in the field of
-              Entrepreneurship. The pillars of our crew are the Marketing group,
-              the Creative group, the Technical group, and the Operations group.
-            </p>
-            <div id="CoreTeam">
-              {coreMember.map((data, i) => (
-                <Core mem={data} key={i} />
-              ))}
-            </div>
+    <>
+      <section id="OurTeam">
+        {/* Core */}
+        <div className="TeamCore">
+          <p className="TeamName">
+            Meet Our <span>Team.</span>
+          </p>
+          <p className="TeamNameSubTitle">
+            We are a tight-knit community of passionate people devoted to
+            bringing about vibrant and awe-inspiring changes in the field of
+            Entrepreneurship. The pillars of our crew are the Marketing group,
+            the Creative group, the Technical group, and the Operations group.
+          </p>
+          <div id="CoreTeam">
+            {coreMember.map((data, i) => (
+              <Core mem={data} key={i} />
+            ))}
           </div>
-          <div className="space" />
-          {/* Technical */}
-          <div className="TeamCreative">
-            <p className="TeamName">
-              Team <span>Technical</span>
-            </p>
-            <p className="TeamNameSubTitle">
-              Those who help us design, analyze, troubleshoot, diagnose and
-              resolve technicalities in FED!
-            </p>
-            <div id="TechnicalTeam">
-              {domain.Tech.map((data, i) => (
-                <Domain mem={data} key={i} />
-              ))}
-            </div>
-          </div>
-          <div className="space" />
-          {/* Creative */}
-          <div className="TeamCreative">
-            <p className="TeamName">
-              Team <span>Creative</span>
-            </p>
-            <p className="TeamNameSubTitle">
-              Those who help us illustrate, create, design, address, showcase,
-              and introduce FED as a whole- behind the veil!
-            </p>
-            <div id="CreativeTeam">
-              {domain.creative.map((data, i) => (
-                <Domain mem={data} key={i} />
-              ))}
-            </div>
-          </div>
-          <div className="space" />
-          {/* Marketing */}
-          <div className="TeamCreative">
-            <p className="TeamName">
-              Team <span>Marketing</span>
-            </p>
-            <p className="TeamNameSubTitle">
-              Those who help us strategize, develop, promote, grow and market
-              FED's endeavor!
-            </p>
-            <div id="MarketingTeam">
-              {domain.marketing.map((data, i) => (
-                <Domain mem={data} key={i} />
-              ))}
-            </div>
-          </div>
-          <div className="space" />
-          {/* Operations */}
-          <div className="TeamCreative">
-            <p className="TeamName">
-              Team <span>Operations</span>
-            </p>
-            <p className="TeamNameSubTitle">
-              Those who help us plan, strategize, commemorate, organize and
-              operate FED's initiatives!
-            </p>
-            <div id="OperationsTeam">
-              {domain.operation.map((data, i) => (
-                <Domain mem={data} key={i} />
-              ))}
-            </div>
-          </div>
-          <div className="space" />
-          <div className="space"></div>
-        </section>
-      </>
-    </Animatedpage>
+        </div>
+        <div className="space" />
+        {/* Technical */}
+        <Departments
+          name="Technical"
+          title="Those who help us design, analyze, troubleshoot, diagnose and
+            resolve technicalities in FED!"
+          data={domain.Tech}
+        />
+        <div className="space" />
+        {/* Creative */}
+        <Departments
+          name="Creative"
+          title="Those who help us illustrate, create, design, address, showcase, and
+          introduce FED as a whole- behind the veil!"
+          data={domain.creative}
+        />
+        <div className="space" />
+        {/* Marketing */}
+        <Departments
+          name="Marketing"
+          title="Those who help us strategize, develop, promote, grow and market
+          FED's endeavor!"
+          data={domain.marketing}
+        />
+        <div className="space" />
+        {/* Operations */}
+        <Departments
+          name="Operations"
+          title="Those who help us plan, strategize, commemorate, organize and
+          operate FED's initiatives!"
+          data={domain.operation}
+        />
+        <div className="space" />
+      </section>
+    </>
   );
 }
