@@ -56,7 +56,6 @@ export default function Team() {
           introduce FED as a whole- behind the veil!"
           data={domain.creative}
         />
-
         <div className="space" />
         {/* Marketing */}
         {/* <div className="TeamCreative">
