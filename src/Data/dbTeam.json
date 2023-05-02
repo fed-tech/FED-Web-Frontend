@@ -203,16 +203,34 @@
     ],
     "operation": [
       {
+        "id": 0,
         "name": "Shashnak Shivam",
         "linkedin": "https://www.linkedin.com/in/shashank-s-40738410b/",
         "github": "",
         "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ec536a0062d4c212bf93_Picsart_22-02-11_15-54-53-297%20-%20Shashank%20Shivam.jpg"
       },
       {
+        "id": 1,
         "name": "Avinash Pandey",
         "linkedin": "https://www.linkedin.com/in/dispuzzler/",
         "github": "",
         "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ebf49428270d3eda9f65_profile-pic%20(3)%20-%20210_Avinash%20Pandey.png"
+      },
+      {
+        "id": 2,
+        "name": "Aryan Pandey",
+        "instagram": "https://instagram.com/a.ryannn_?igshid=YmMyMTA2M2Y=",
+        "linkedin": "https://www.linkedin.com/in/aryan-pandey-5b65231b4",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b15dbb77672031e86174_IMG_20230227_161522%20-%20Aryan%20Pandey.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Ayushi Giri",
+        "instagram": "https://instagram.com/ayushiiii._.8?igshid=YmMyMTA2M2Y=",
+        "linkedin": "https://www.linkedin.com/in/ayushi-giri-251137268",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b24ec1949769c64a59b2_Snapchat-672423520%20-%20199_AYUSHI%20GIRI.jpg"
       }
     ],
     "alumni": [
