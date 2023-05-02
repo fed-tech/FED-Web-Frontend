@@ -4,8 +4,6 @@ import React from "react";
 import Domain from "./Domain";
 
 export default function Departments(props) {
-  // const coreMember = db.data.core;
-  // const domain = db.data;
   return (
     <div className="TeamCreative">
       <p className="TeamName">
