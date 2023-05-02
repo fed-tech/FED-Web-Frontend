@@ -313,7 +313,7 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b8c930efcd2a1d8fac77_IMG_20230127_125931%20-%20Sukirti%20(1).jpg"
       },
       {
-        "id": 4,
+        "id": 2,
         "name": "Ujjawal Kumar",
         "instagram": "https://instagram.com/attherateujjawal17?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/ujjawal-kumar-817989256",
@@ -321,7 +321,7 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c5df6f603706ab9d584d_uj.jpg"
       },
       {
-        "id": 1,
+        "id": 3,
         "name": "SHOURYJEET GUPTA",
         "instagram": "https://instagram.com/shoury.jeet?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/shouryjeet-gupta-319260255",
@@ -329,7 +329,7 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645120e9739c0115080a754b_WhatsApp%20Image%202023-05-02%20at%2014.41.16.jpg"
       },
       {
-        "id": 2,
+        "id": 4,
         "name": "Sayeed Anwar",
         "instagram": "https://instagram.com/_iam_sayeed_?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/sayeed-anwar-a23a91216/",
@@ -337,12 +337,20 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6451221b466415d341064440_s.0.png"
       },
       {
-        "id": 3,
+        "id": 1,
         "name": "Soham Mazumdar",
         "instagram": "https://instagram.com/03sxham03?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/soham-mazumdar-159148222/",
         "github": "https://github.com/SohamOPP",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6451246e136b875b89d95be7_new.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Samidh Daschaudhuri",
+        "instagram": "https://instagram.com/samidhhh?igshid=YmMyMTA2M2Y=",
+        "linkedin": "https://www.linkedin.com/in/samidh-daschaudhuri-b875841ab",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645126ef61a70320bc269027_IMG_0509.JPG"
       }
     ],
     "alumni": [
