@@ -73,7 +73,6 @@ export default function Team() {
           data={domain.operation}
         />
         <div className="space" />
-        <div className="space"></div>
       </section>
     </>
   );
