@@ -10,8 +10,6 @@ export default function Domain(props) {
     }, 3000);
   });
 
-  // var RandomNumber = Math.floor(Math.random() * 3) + 1;
-
   return (
     <>
       {showContent2 ? (
