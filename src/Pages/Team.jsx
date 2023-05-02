@@ -67,25 +67,11 @@ export default function Team() {
         <div className="space" />
         {/* Operations */}
         <Departments
-          name="Marketing"
-          title="Those who help us strategize, develop, promote, grow and market
-          FED's endeavor!"
-          data={domain.marketing}
+          name="Operations"
+          title="Those who help us plan, strategize, commemorate, organize and
+          operate FED's initiatives!"
+          data={domain.operation}
         />
-        {/* <div className="TeamCreative">
-          <p className="TeamName">
-            Team <span>Operations</span>
-          </p>
-          <p className="TeamNameSubTitle">
-            Those who help us plan, strategize, commemorate, organize and
-            operate FED's initiatives!
-          </p>
-          <div id="OperationsTeam">
-            {domain.operation.map((data, i) => (
-              <Domain mem={data} key={i} />
-            ))}
-          </div>
-        </div> */}
         <div className="space" />
         <div className="space"></div>
       </section>
