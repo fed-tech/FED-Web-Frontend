@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 
 // Components
 import Core from "../Components/Team/Core";
-import Domain from "../Components/Team/Domain";
+import Departments from "./../Components/Team/Departments";
+// import Domain from "../Components/Team/Domain";
 
 // css
 import "../Components/Team/css/Team.css";
@@ -41,23 +42,28 @@ export default function Team() {
         </div>
         <div className="space" />
         {/* Technical */}
-        <div className="TeamCreative">
+        <Departments
+          name="Technical"
+          title="Those who help us design, analyze, troubleshoot, diagnose and
+            resolve technicalities in FED!"
+          data={domain.Tech}
+        />
+        {/* <div className="TeamCreative">
           <p className="TeamName">
             Team <span>Technical</span>
           </p>
           <p className="TeamNameSubTitle">
-            Those who help us design, analyze, troubleshoot, diagnose and
-            resolve technicalities in FED!
+            
           </p>
           <div id="TechnicalTeam">
             {domain.Tech.map((data, i) => (
               <Domain mem={data} key={i} />
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="space" />
         {/* Creative */}
-        <div className="TeamCreative">
+        {/* <div className="TeamCreative">
           <p className="TeamName">
             Team <span>Creative</span>
           </p>
@@ -70,10 +76,10 @@ export default function Team() {
               <Domain mem={data} key={i} />
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="space" />
         {/* Marketing */}
-        <div className="TeamCreative">
+        {/* <div className="TeamCreative">
           <p className="TeamName">
             Team <span>Marketing</span>
           </p>
@@ -86,10 +92,10 @@ export default function Team() {
               <Domain mem={data} key={i} />
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="space" />
         {/* Operations */}
-        <div className="TeamCreative">
+        {/* <div className="TeamCreative">
           <p className="TeamName">
             Team <span>Operations</span>
           </p>
@@ -102,7 +108,7 @@ export default function Team() {
               <Domain mem={data} key={i} />
             ))}
           </div>
-        </div>
+        </div> */}
         <div className="space" />
         <div className="space"></div>
       </section>
