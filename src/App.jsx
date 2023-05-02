@@ -15,7 +15,6 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
-// import MyProfile from "./Components/Profile/MyProfile";
 
 // Components
 import Nav from "./Components/Nav";
