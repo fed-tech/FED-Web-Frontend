@@ -3,7 +3,7 @@ import React from "react";
 // css
 import "./css/seeall.css";
 
-// datas
+// data
 import Wcard from "../../Data/testimonial.json";
 
 function Seeall() {
