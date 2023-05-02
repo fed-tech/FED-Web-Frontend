@@ -48,19 +48,7 @@ export default function Team() {
             resolve technicalities in FED!"
           data={domain.Tech}
         />
-        {/* <div className="TeamCreative">
-          <p className="TeamName">
-            Team <span>Technical</span>
-          </p>
-          <p className="TeamNameSubTitle">
-            
-          </p>
-          <div id="TechnicalTeam">
-            {domain.Tech.map((data, i) => (
-              <Domain mem={data} key={i} />
-            ))}
-          </div>
-        </div> */}
+
         <div className="space" />
         {/* Creative */}
         {/* <div className="TeamCreative">
