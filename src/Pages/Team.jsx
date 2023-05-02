@@ -48,7 +48,6 @@ export default function Team() {
             resolve technicalities in FED!"
           data={domain.Tech}
         />
-
         <div className="space" />
         {/* Creative */}
         {/* <div className="TeamCreative">
