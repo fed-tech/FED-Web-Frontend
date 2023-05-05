@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import "./css/MobileNav.css";
 
 export default function NavMobile() {
   const [count, setCount] = useState(false);
+
   function toggleEvent() {
     setCount(true);
   }
+
   return (
     <header>
       <nav className="mobileNav">
@@ -73,7 +74,7 @@ export default function NavMobile() {
               Alumni
             </NavLink>
           </div> */}
-          <div class="mobileList">
+          {/* <div class="mobileList">
             <HashLink
               to="/#ContactUs"
               className="liTag"
@@ -81,7 +82,7 @@ export default function NavMobile() {
             >
               Contact Us
             </HashLink>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>
