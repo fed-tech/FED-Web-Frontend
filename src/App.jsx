@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { Suspense } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -12,6 +12,9 @@ import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Seeall from "./Components/Home/Seeall";
+
+// Loading
+import Loading from "./Pages/Loading";
 
 // Components
 import Nav from "./Components/Nav";
