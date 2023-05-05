@@ -4,11 +4,11 @@ export default function Domain(props) {
   const [showContent2, setshowContent2] = useState(true);
   const [show2, setshow2] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setshowContent2(false), setshow2(true);
-    }, 3000);
-  });
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setshowContent2(false), setshow2(true);
+  //   }, 3000);
+  // });
 
   return (
     <>
