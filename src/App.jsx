@@ -5,13 +5,13 @@ import React, { Suspense } from "react";
 import Layout from "./Pages/Layout";
 
 // Pages
-import Home from "./Pages/Home";
-import Team from "./Pages/Team";
-import Error from "./Pages/Error";
-import Alumni from "./Pages/Alumni";
-import Events from "./Pages/Events";
-import Podcasts from "./Pages/Podcasts";
-import Seeall from "./Components/Home/Seeall";
+const Home = React.lazy(() => import("./Pages/Home"));
+const Team = React.lazy(() => import("./Pages/Team"));
+const Error = React.lazy(() => import("./Pages/Error"));
+const Alumni = React.lazy(() => import("./Pages/Alumni"));
+const Events = React.lazy(() => import("./Pages/Events"));
+const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
+const Seeall = React.lazy(() => import("./Components/Home/Seeall"));
 
 // Loading
 import Loading from "./Pages/Loading";
@@ -32,13 +32,62 @@ function App() {
           <Nav />
           <NavMobile />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Team" element={<Team />} />
-            <Route path="/Event" element={<Events />} />
-            <Route path="/Alumni" element={<Alumni />} />
-            <Route path="/Podcasts" element={<Podcasts />} />
-            <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="*" element={<Error />} />
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Home />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/Team"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Team />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/Event"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Events />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/Alumni"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Alumni />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/Podcasts"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Podcasts />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/Testimonial"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Seeall />
+                </Suspense>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Error />
+                </Suspense>
+              }
+            />
           </Routes>
           <Footer />
         </Layout>
