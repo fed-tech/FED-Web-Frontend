@@ -36,11 +36,11 @@ export default function Nav() {
                   Our Team
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <HashLink to="/#ContactUs" className="liTag">
                   Contact Us
                 </HashLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
