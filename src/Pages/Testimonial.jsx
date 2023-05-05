@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // css
-import "./../Components/Testimonial/Css/seeall.css";
+import SaCss from "./Css/seall.module.css";
 
 // Data
 import Wcard from "./../Data/testimonial.json";
@@ -13,15 +13,20 @@ export default function Testimonial() {
   }, []);
 
   return (
-    <div className="seeall_page">
-      <div className="sub_div">
+    <div className={SaCss.seeall_page}>
+      <div className={SaCss.sub_div}>
+        <div>
+          <p className={SaCss.Title}>
+            What do <span className={SaCss.spn}>they say</span> about us?
+          </p>
+        </div>
         {Wcard.map((element) => {
           return (
-            <div className="mcard">
-              <div className="cardbox">
-                <p className="cmt">{element.comment}</p>
-                <p className="sp">{element.speaker_name}</p>
-                <p className="prg">{element.program_}</p>
+            <div className={SaCss.mcard}>
+              <div className={SaCss.cardbox}>
+                <p className={SaCss.cmt}>{element.comment}</p>
+                <p className={SaCss.sp}>{element.speaker_name}</p>
+                <p className={SaCss.prg}>{element.program_}</p>
               </div>
             </div>
           );
