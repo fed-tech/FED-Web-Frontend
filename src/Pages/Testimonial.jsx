@@ -20,9 +20,9 @@ export default function Testimonial() {
             What do <span className={SaCss.spn}>they say</span> about us?
           </p>
         </div>
-        {Wcard.map((e.key) => {
+        {Wcard.map((e, key) => {
           return (
-            <div className={SaCss.mcard}>
+            <div className={SaCss.mcard} key={key}>
               <div className={SaCss.cardbox}>
                 <p className={SaCss.cmt}>{e.key.comment}</p>
                 <p className={SaCss.sp}>{e.key.speaker_name}</p>
