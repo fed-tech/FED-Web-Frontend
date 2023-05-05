@@ -13,6 +13,8 @@ const Events = React.lazy(() => import("./Pages/Events"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Seeall = React.lazy(() => import("./Components/Home/Seeall"));
 
+const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
+
 // Loading
 import Loading from "./Pages/Loading";
 
@@ -69,7 +71,7 @@ function App() {
               path="/Testimonial"
               element={
                 <Suspense fallback={<Loading />}>
-                  <Seeall />
+                  <Testimonial />
                 </Suspense>
               }
             />
