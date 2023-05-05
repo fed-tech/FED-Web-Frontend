@@ -20,13 +20,13 @@ export default function Testimonial() {
             What do <span className={SaCss.spn}>they say</span> about us?
           </p>
         </div>
-        {Wcard.map((element) => {
+        {Wcard.map((e.key) => {
           return (
             <div className={SaCss.mcard}>
               <div className={SaCss.cardbox}>
-                <p className={SaCss.cmt}>{element.comment}</p>
-                <p className={SaCss.sp}>{element.speaker_name}</p>
-                <p className={SaCss.prg}>{element.program_}</p>
+                <p className={SaCss.cmt}>{e.key.comment}</p>
+                <p className={SaCss.sp}>{e.key.speaker_name}</p>
+                <p className={SaCss.prg}>{e.key.program_}</p>
               </div>
             </div>
           );
