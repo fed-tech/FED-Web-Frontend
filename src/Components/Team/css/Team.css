@@ -236,6 +236,7 @@
   max-width: 430px;
   min-width: 377px;
   height: 430px;
+  margin-bottom: 30px;
 }
 
 .flip-card-inner {
