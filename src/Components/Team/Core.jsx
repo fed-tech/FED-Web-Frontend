@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+
+// css
 import "./css/Core.css";
 
 export default function Core(props) {
