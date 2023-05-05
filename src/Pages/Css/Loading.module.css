@@ -1,12 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
 .centerLoader {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  height: 100px;
-  margin-top: 50px;
+  height: 430px;
+  background-color: #0f0e0e;
 }
 
 .arc {
