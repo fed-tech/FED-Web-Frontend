@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // css
 import "./../Components/Testimonial/Css/seeall.css";
 
-// json
+// Data
 import Wcard from "./../Data/testimonial.json";
 
 export default function Testimonial() {
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="seeall_page">
       <div className="sub_div">
