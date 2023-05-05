@@ -24,9 +24,9 @@ export default function Testimonial() {
           return (
             <div className={SaCss.mcard} key={key}>
               <div className={SaCss.cardbox}>
-                <p className={SaCss.cmt}>{e.key.comment}</p>
-                <p className={SaCss.sp}>{e.key.speaker_name}</p>
-                <p className={SaCss.prg}>{e.key.program_}</p>
+                <p className={SaCss.cmt}>{e.comment}</p>
+                <p className={SaCss.sp}>{e.speaker_name}</p>
+                <p className={SaCss.prg}>{e.program_}</p>
               </div>
             </div>
           );
