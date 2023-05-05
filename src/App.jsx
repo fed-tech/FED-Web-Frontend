@@ -32,6 +32,7 @@ function App() {
           <Nav />
           <NavMobile />
           <Routes>
+            <Route path="/load" element={<Loading />}></Route>
             <Route
               path="/"
               element={
