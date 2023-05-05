@@ -32,14 +32,7 @@ function App() {
           <Nav />
           <NavMobile />
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Home />
-                </Suspense>
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route
               path="/Team"
               element={
