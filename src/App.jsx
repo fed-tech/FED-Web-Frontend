@@ -71,14 +71,6 @@ function App() {
               path="/Testimonial"
               element={
                 <Suspense fallback={<Loading />}>
-                  <Seeall />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/Testimonials"
-              element={
-                <Suspense fallback={<Loading />}>
                   <Testimonial />
                 </Suspense>
               }
