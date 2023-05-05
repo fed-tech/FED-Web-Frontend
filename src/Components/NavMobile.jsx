@@ -4,9 +4,11 @@ import "./css/MobileNav.css";
 
 export default function NavMobile() {
   const [count, setCount] = useState(false);
+
   function toggleEvent() {
     setCount(true);
   }
+
   return (
     <header>
       <nav className="mobileNav">
