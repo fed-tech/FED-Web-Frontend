@@ -231,6 +231,22 @@
         "linkedin": "http://linkedin.com/in/shubham-mohapatra-2558a4202",
         "github": "https://github.com/Shubh290704",
         "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/645549e8ee9e027395b58353_09F5FBF6-B187-4018-BC75-3F03A65520C2.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Ryansh Rajput",
+        "instagram": "https://instagram.com/_ryansh.r_?igshid=ZGUzMzM3NWJiOQ==",
+        "linkedin": "https://www.linkedin.com/in/ryansh-rajput-5045b6275/",
+        "github": "https://github.com/RyanshRajput",
+        "img": "https://uploads-ssl.webflow.com/645661fff52e178a3f7e28d5/64566663963c9b6d9bac64ef_SAVE_20230212_240831%20(1).jpg"
+      },
+      {
+        "id": 3,
+        "name": "Chaitanya Gera",
+        "instagram": "https://instagram.com/chaitanya_gera11?igshid=ZGUzMzM3NWJiOQ==",
+        "linkedin": "https://www.linkedin.com/in/chaitanya-gera-593681258",
+        "github": "https://github.com/chaitanya-g11",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64566e9ba99e7e7c96d45e23_WhatsApp%20Image%202023-05-06%20at%2019.57.51.jpg"
       }
     ],
     "operation": [
