@@ -211,7 +211,6 @@
       {
         "id": 3,
         "name": "Parth",
-        "instagram": "https://www.instagram.com/_white.caffeine/",
         "linkedin": "https://www.linkedin.com/in/parth-verma-100819252/",
         "github": "https://github.com/White-Caffeine",
         "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64553f903a388c004d57ac66_Snapchat-2011634124.jpg"
@@ -219,7 +218,6 @@
       {
         "id": 4,
         "name": "Sakib Alam",
-        "instagram": "http://instagram.com/_.thesakibalam._",
         "linkedin": "https://www.linkedin.com/in/sakib-alam-22b20817a/",
         "github": "https://github.com/Sakibalam03",
         "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64554116f960006ef1aac8dd_20230210_002323_230.jpg"
@@ -227,7 +225,6 @@
       {
         "id": 1,
         "name": "Shubham Mohapatra",
-        "instagram": "https://instagram.com/shubhzzz._?igshid=YmMyMTA2M2Y=",
         "linkedin": "http://linkedin.com/in/shubham-mohapatra-2558a4202",
         "github": "https://github.com/Shubh290704",
         "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/645549e8ee9e027395b58353_09F5FBF6-B187-4018-BC75-3F03A65520C2.jpg"
@@ -235,7 +232,6 @@
       {
         "id": 2,
         "name": "Ryansh Rajput",
-        "instagram": "https://instagram.com/_ryansh.r_?igshid=ZGUzMzM3NWJiOQ==",
         "linkedin": "https://www.linkedin.com/in/ryansh-rajput-5045b6275/",
         "github": "https://github.com/RyanshRajput",
         "img": "https://uploads-ssl.webflow.com/645661fff52e178a3f7e28d5/64566663963c9b6d9bac64ef_SAVE_20230212_240831%20(1).jpg"
@@ -243,10 +239,72 @@
       {
         "id": 3,
         "name": "Chaitanya Gera",
-        "instagram": "https://instagram.com/chaitanya_gera11?igshid=ZGUzMzM3NWJiOQ==",
         "linkedin": "https://www.linkedin.com/in/chaitanya-gera-593681258",
         "github": "https://github.com/chaitanya-g11",
         "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64566e9ba99e7e7c96d45e23_WhatsApp%20Image%202023-05-06%20at%2019.57.51.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Divyak Pratap Singh",
+        "linkedin": "https://www.linkedin.com/in/divyak-pratap-singh-8bb713230",
+        "github": "https://github.com/divyak21",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64567b5640990e2df2a31014_Screenshot_20230504-220154.png"
+      },
+      {
+        "id": 1,
+        "name": "Kinjal Chandra",
+        "linkedin": "https://www.linkedin.com/in/kinjal-chandra-185376275/",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dcba26bca4516c107d_Kinjal.jpeg"
+      },
+      {
+        "id": 2,
+        "name": "Niladri Bhattacharya",
+        "linkedin": "https://www.linkedin.com/in/niladri-bhattacharya-a673b4146",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dd892d47d068e11833_Niladri.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Ankit Sinha",
+        "linkedin": "https://www.linkedin.com/in/ankit-sinha-0431b325b/",
+        "github": "https://github.com/AnkitSinha22",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dda370e0480c63c5ee_Ankit.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Riddhi Agrawal",
+        "linkedin": "https://www.linkedin.com/in/riddhi-agrawal-684b98236/",
+        "github": "https://github.com/Riddhi13Agrawal",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dd3f5779469c676203_Riddhi.jpg"
+      },
+      {
+        "id": 1,
+        "name": "Manish Shankar Prasad",
+        "linkedin": "https://www.linkedin.com/in/manish-shankar-1bab6b22b",
+        "github": "https://github.com/RAGE-12",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dd18cc4bdfb4cf35dc_Manish.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Deepanshu Pandey",
+        "linkedin": "https://www.linkedin.com/in/deepanshu-pandey-743284244",
+        "github": "https://github.com/Deepanshu7771",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fdb53c1cf8ec3f5e906bb_Deepanshu.png"
+      },
+      {
+        "id": 3,
+        "name": "Krishanu Roy",
+        "linkedin": "https://www.linkedin.com/in/krishanu-roy-145a36225",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646132ad215f1e3513bf6236_Krishanu.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Sarthak Singh",
+        "linkedin": "https://www.linkedin.com/in/sarthak-singh-450a31261",
+        "github": "https://github.com/Sarthak045",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64554df56e4de7a47ec5b77f_IMG_8857.jpg"
       }
     ],
     "operation": [
