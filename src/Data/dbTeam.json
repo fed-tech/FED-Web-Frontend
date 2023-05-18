@@ -94,18 +94,18 @@
       },
       {
         "id": 2,
-        "name": "Jaideep Bose",
-        "linkedin": "https://www.linkedin.com/in/jaideep-bose-89a93725a/",
-        "github": "https://github.com/jaideepbose51",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg"
-      },
-      {
-        "id": 3,
         "name": "Binay Kumar Sahu",
         "instagram": "https://www.instagram.com/i_ambinaysahu/",
         "linkedin": "https://www.linkedin.com/in/binay-sahu",
         "github": "https://github.com/BinaySaahu",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6465be1f684e5287347f2c65_b.png"
+      },
+      {
+        "id": 3,
+        "name": "Jaideep Bose",
+        "linkedin": "https://www.linkedin.com/in/jaideep-bose-89a93725a/",
+        "github": "https://github.com/jaideepbose51",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg"
       },
       {
         "id": 4,
