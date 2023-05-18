@@ -59,17 +59,17 @@
     "Tech": [
       {
         "id": 1,
-        "name": "Achyut Vardhan",
-        "linkedin": "https://www.linkedin.com/in/achyut-vardhan-3a4905180/",
-        "github": "https://github.com/achyutvardhan",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2de611c2178c2fcb034d1_IMG-20221113-WA0064%20-%20Achyut%20Vardhan.jpg"
-      },
-      {
-        "id": 2,
         "name": "Antara Dubey",
         "linkedin": "https://www.linkedin.com/in/antara-dubey-573738228/",
         "github": "https://github.com/Antara-3011",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1e1b9dff2642a6d6fcbb3_IMG-20230214-WA0008%20-%20Antara%20Dubey.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Kolla gayatri shruti ",
+        "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
+        "github": "https://github.com/me-mystic",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg"
       },
       {
         "id": 3,
@@ -80,27 +80,20 @@
       },
       {
         "id": 4,
-        "name": "Kolla gayatri shruti ",
-        "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
-        "github": "https://github.com/me-mystic",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg"
-      },
-      {
-        "id": 1,
         "name": "Navya Verma",
         "linkedin": "https://www.linkedin.com/in/navya-verma-53832424b",
         "github": "https://github.com/NavyaVerma139",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd4485872ab2fb8834cf_Navya%20-%204084%20NAVYA%20VERMA.jpg"
       },
       {
-        "id": 2,
+        "id": 1,
         "name": "Vinit Agarwal",
         "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
         "github": "https://github.com/vinitagarwal007",
         "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg"
       },
       {
-        "id": 3,
+        "id": 2,
         "name": "Jaideep Bose",
         "linkedin": "https://www.linkedin.com/in/jaideep-bose-89a93725a/",
         "github": "https://github.com/jaideepbose51",
