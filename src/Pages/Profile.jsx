@@ -23,9 +23,9 @@ export default function Profile(props) {
 
   useEffect(() => {
     console.log("profile page");
-    // if(!userDetails){
-    // loadUsers();
-    // }
+    if (!userDetails) {
+      loadUsers();
+    }
   }, []);
 
   const navigate = useNavigate();

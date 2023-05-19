@@ -9,22 +9,22 @@ import { UserContext } from "../../context/userContext";
 export default function Nav(props) {
   const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
   const { userDetails, setUserDetails } = useContext(UserContext);
-  // const validate = async () => {
-  //   const result = await axios.get("http://localhost:5000/profile/getprofile", {
-  //     withCredentials: true,
-  //     headers: {
-  //       auth_token: cookie.auth_token,
-  //     },
-  //   });
-  //   setUserDetails(result.data);
-  //   const success = result.status === 200;
-  //   if (success) {
-  //     props.setIsLoggedIn(true);
-  //   }
-  // };
-  // useEffect(()=>{
-  //   validate();
-  // },[])
+  const validate = async () => {
+    const result = await axios.get("http://localhost:5000/profile/getprofile", {
+      withCredentials: true,
+      headers: {
+        auth_token: cookie.auth_token,
+      },
+    });
+    setUserDetails(result.data);
+    const success = result.status === 200;
+    if (success) {
+      props.setIsLoggedIn(true);
+    }
+  };
+  useEffect(() => {
+    validate();
+  }, []);
   return (
     <header className="Navigation">
       <nav className="desktopNav">
