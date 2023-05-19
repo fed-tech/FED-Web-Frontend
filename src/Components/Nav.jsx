@@ -7,23 +7,24 @@ import { useCookies } from "react-cookie";
 import { UserContext } from "../../context/userContext";
 
 export default function Nav(props) {
-  const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
-  const {userDetails,setUserDetails} = useContext(UserContext)
-  const validate = async()=>{
-    const result=await axios.get("http://localhost:5000/profile/getprofile",{withCredentials:true,headers:{
-      "auth_token":cookie.auth_token
-    }});
-    setUserDetails(result.data);
-    const success = result.status === 200;
-    if(success)
-    {
-      props.setIsLoggedIn(true);
-    }
-    
-  }
-  useEffect(()=>{
-    validate();
-  },[])
+  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
+  const { userDetails, setUserDetails } = useContext(UserContext);
+  // const validate = async () => {
+  //   const result = await axios.get("http://localhost:5000/profile/getprofile", {
+  //     withCredentials: true,
+  //     headers: {
+  //       auth_token: cookie.auth_token,
+  //     },
+  //   });
+  //   setUserDetails(result.data);
+  //   const success = result.status === 200;
+  //   if (success) {
+  //     props.setIsLoggedIn(true);
+  //   }
+  // };
+  // useEffect(()=>{
+  //   validate();
+  // },[])
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -62,8 +63,20 @@ export default function Nav(props) {
                 </HashLink>
               </li>
               <li>
-                <NavLink to={props.isLoggedIn?"/MyProfile":"Signup"} className="liTag">
-                  {props.isLoggedIn?<img src={userDetails.profileimg} alt="" srcset=""  className="profile_img"/>:"Login/SignUp"}
+                <NavLink
+                  to={props.isLoggedIn ? "/MyProfile" : "Signup"}
+                  className="liTag"
+                >
+                  {props.isLoggedIn ? (
+                    <img
+                      src={userDetails.profileimg}
+                      alt=""
+                      srcset=""
+                      className="profile_img"
+                    />
+                  ) : (
+                    "Login/SignUp"
+                  )}
                 </NavLink>
               </li>
             </ul>

@@ -7,24 +7,24 @@ import { useCookies } from "react-cookie";
 import { UserContext } from "../../context/userContext";
 export default function Profile(props) {
   const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
-  const {userDetails,setUserDetails}= useContext(UserContext);
+  const { userDetails, setUserDetails } = useContext(UserContext);
 
   const loadUsers = async () => {
     const result = await axios.get("http://localhost:5000/profile/getprofile", {
       withCredentials: true,
       headers: {
+        "Content-Type": "application/json",
         auth_token: cookie.auth_token,
       },
     });
     console.log(result.data);
     setUserDetails(result.data);
-
   };
 
   useEffect(() => {
     console.log("profile page");
     // if(!userDetails){
-    loadUsers();
+    // loadUsers();
     // }
   }, []);
 

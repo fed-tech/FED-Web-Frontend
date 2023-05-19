@@ -65,18 +65,15 @@ export default function Signup() {
         );
         const success = response.status === 200;
         if (success) {
-          alert("Please check your mail")
+          alert("Please check your mail");
           navigate("/Login");
         }
       } catch (error) {
         setIsinValid(true);
-        if(error.response.data.code === 1)
-        {
-          setErrMssg("User already exists")
-        }
-        else if(error.response.data.code === 2)
-        {
-          setErrMssg("Invalid email format")
+        if (error.response.data.code === 1) {
+          setErrMssg("User already exists");
+        } else if (error.response.data.code === 2) {
+          setErrMssg("Invalid email format");
         }
         console.log(error);
       }
