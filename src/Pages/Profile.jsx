@@ -1,38 +1,24 @@
-import React, { useContext, useEffect, useState } from "react";
-import axios from "axios";
-import "./Css/Profilecss/profile.css";
-import penSvg from "../Img/pen-icon.svg";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
-import { UserContext } from "../../context/userContext";
-export default function Profile(props) {
-  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
-  const { userDetails, setUserDetails } = useContext(UserContext);
 
-  const loadUsers = async () => {
-    const result = await axios.get("http://localhost:5000/profile/getprofile", {
-      withCredentials: true,
-      headers: {
-        "Content-Type": "application/json",
-        auth_token: cookie.auth_token,
-      },
-    });
-    console.log(result.data);
-    setUserDetails(result.data);
-  };
+// css
+import "./Css/Profilecss/profile.css";
 
-  useEffect(() => {
-    console.log("profile page");
-    if (!userDetails) {
-      loadUsers();
-    }
-  }, []);
+// img
+import penSvg from "../Img/pen-icon.svg";
+
+// state
+import AuthContext from "./../store/auth-context";
+
+export default function Profile() {
+  const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
+
   function handleLogout() {
-    navigate("/Signup");
-    removeCookie("auth_token");
-    props.setIsLoggedIn(false);
+    console.log("logout");
+    navigate("/Login");
+    authCtx.logout();
   }
 
   return (
@@ -61,13 +47,13 @@ export default function Profile(props) {
               </div>
 
               <div className="values">
-                <p className="vals">{userDetails.name}</p>
-                <p className="vals"></p>
-                <p className="vals">{userDetails.email}</p>
-                <p className="vals"></p>
-                <p className="vals"></p>
-                <p className="vals"></p>
-                <p className="vals"></p>
+                <p className="vals">{authCtx.user.name}</p>
+                <p className="vals">{authCtx.user.rollNo}</p>
+                <p className="vals">{authCtx.user.email}</p>
+                <p className="vals">{authCtx.user.selected}</p>
+                <p className="vals">{authCtx.user.school}</p>
+                <p className="vals">{authCtx.user.college}</p>
+                <p className="vals">{authCtx.user.mobileNo}</p>
               </div>
             </div>
           </div>

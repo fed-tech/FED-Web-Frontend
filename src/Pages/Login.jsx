@@ -1,28 +1,41 @@
 import { ClassNames } from "@emotion/react";
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "../Pages/Css/loginpg.css";
-import google from "../Img/Google.svg";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
+
+//  axios
+import axios from "axios";
+
+// state
+import AuthContext from "./../store/auth-context";
+
+// css
+import "../Pages/Css/loginpg.css";
+
+// img
+import google from "../Img/Google.svg";
+
 function Login(props) {
+  const authCtx = useContext(AuthContext);
+
   const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [emailerr, setEmailerr] = useState(false);
   const [passwrderr, setPasswrderr] = useState(false);
   const [passwrd, setPassword] = useState("");
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
-  const [cookie, setCookie, removeCookie] = useCookies(['auth_token']);
+  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
 
   useEffect(() => {
     setIsinValid(false);
     setEmailerr(false);
     setPasswrderr(false);
   }, [email, passwrd]);
-  const handlelogin = async (e) => {
 
+  const handlelogin = async (e) => {
     e.preventDefault();
     const username = email;
     if (email === "") {
@@ -42,23 +55,33 @@ function Login(props) {
           username,
           password,
         });
-        console.log(response)
+        console.log(response);
+        console.log(response.data.result[0].name);
 
         if (response.status === 200) {
-          setCookie("auth_token",response.data.token)
-          props.setIsLoggedIn(true);
+          // setCookie("auth_token", response.data.token);
+          // props.setIsLoggedIn(true);
+          await authCtx.login(
+            response.data.result[0].Name,
+            response.data.result[0].Email,
+            response.data.result[0].img,
+            response.data.result[0].RollNumber,
+            response.data.result[0].School,
+            response.data.result[0].College,
+            response.data.result[0].MobileNo,
+            response.data.result[0].selected,
+            response.data.token,
+            10800000
+          );
           navigate("/MyProfile");
           return;
         }
       } catch (err) {
         setIsinValid(true);
 
-        if(err.response.data.code === 4)
-        {
-          setErrMssg("Email not verified")
-        }
-        else if(err.response.data.code === 2)
-        {
+        if (err.response.data.code === 4) {
+          setErrMssg("Email not verified");
+        } else if (err.response.data.code === 2) {
           setErrMssg("Invalid credentials");
         }
         console.log(err);
@@ -114,10 +137,7 @@ function Login(props) {
                 <span className="spn">Signup</span>
               </Link>
             </p>
-            <p
-              id="errmssg"
-              style={{ color: isinValid ? "red" : "white" }}
-            >
+            <p id="errmssg" style={{ color: isinValid ? "red" : "white" }}>
               {errmssg}
             </p>
           </div>

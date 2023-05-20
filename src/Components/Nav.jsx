@@ -1,30 +1,40 @@
 import React, { useContext, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+
+// css
 import "./css/DesktopNav.css";
+
+// state
+import AuthContext from "./../store/auth-context";
+
+// axios
 import axios from "axios";
-import { useCookies } from "react-cookie";
-import { UserContext } from "../../context/userContext";
+
+// import { useCookies } from "react-cookie";
+// import { UserContext } from "../../context/userContext";
 
 export default function Nav(props) {
-  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
-  const { userDetails, setUserDetails } = useContext(UserContext);
-  const validate = async () => {
-    const result = await axios.get("http://localhost:5000/profile/getprofile", {
-      withCredentials: true,
-      headers: {
-        auth_token: cookie.auth_token,
-      },
-    });
-    setUserDetails(result.data);
-    const success = result.status === 200;
-    if (success) {
-      props.setIsLoggedIn(true);
-    }
-  };
-  useEffect(() => {
-    validate();
-  }, []);
+  const authCtx = useContext(AuthContext);
+
+  // const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
+  // const { userDetails, setUserDetails } = useContext(UserContext);
+  // const validate = async () => {
+  //   const result = await axios.get("http://localhost:5000/profile/getprofile", {
+  //     withCredentials: true,
+  //     headers: {
+  //       auth_token: cookie.auth_token,
+  //     },
+  //   });
+  //   setUserDetails(result.data);
+  //   const success = result.status === 200;
+  //   if (success) {
+  //     props.setIsLoggedIn(true);
+  //   }
+  // };
+  // useEffect(() => {
+  //   validate();
+  // }, []);
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -57,19 +67,19 @@ export default function Nav(props) {
                   Our Team
                 </NavLink>
               </li>
-              <li>
+              {/* <li>
                 <HashLink to="/#ContactUs" className="liTag">
                   Contact Us
                 </HashLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink
-                  to={props.isLoggedIn ? "/MyProfile" : "Signup"}
+                  to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
                   className="liTag"
                 >
-                  {props.isLoggedIn ? (
+                  {authCtx.isLoggedIn ? (
                     <img
-                      src={userDetails.profileimg}
+                      src={authCtx.user.pic}
                       alt=""
                       srcset=""
                       className="profile_img"

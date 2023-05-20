@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -15,16 +15,22 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
+// import MyProfile from "./Components/Profile/MyProfile";
 
 // Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
 
+// state
+import AuthContext from "./store/auth-context";
+
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
+  const authCtx = useContext(AuthContext);
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
@@ -42,7 +48,7 @@ function App() {
             <Route
               path="/Login"
               element={
-                isLoggedIn ? (
+                authCtx.isLoggedIn ? (
                   <Profile setIsLoggedIn={setIsLoggedIn} />
                 ) : (
                   <Login setIsLoggedIn={setIsLoggedIn} />
@@ -52,7 +58,7 @@ function App() {
             <Route
               path="/Signup"
               element={
-                isLoggedIn ? (
+                authCtx.isLoggedIn ? (
                   <Profile setIsLoggedIn={setIsLoggedIn} />
                 ) : (
                   <Signup />
@@ -61,13 +67,7 @@ function App() {
             />
             <Route
               path="/MyProfile"
-              element={
-                isLoggedIn ? (
-                  <Profile setIsLoggedIn={setIsLoggedIn} />
-                ) : (
-                  <Signup />
-                )
-              }
+              element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
             <Route path="*" element={<Error />} />
           </Routes>

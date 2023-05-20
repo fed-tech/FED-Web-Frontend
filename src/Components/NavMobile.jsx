@@ -73,7 +73,7 @@ export default function NavMobile() {
               Alumni
             </NavLink>
           </div> */}
-          <div class="mobileList">
+          {/* <div class="mobileList">
             <HashLink
               to="/#ContactUs"
               className="liTag"
@@ -81,7 +81,7 @@ export default function NavMobile() {
             >
               Contact Us
             </HashLink>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

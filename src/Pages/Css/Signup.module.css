@@ -157,6 +157,17 @@ input::placeholder {
   color: blue;
 }
 
+.year{
+  width: 100%;
+  margin-top: 24.6px;
+  color: black;
+  padding: 10px;
+  border: 2px solid black;
+}
+.year option{
+  color: black;
+}
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;
