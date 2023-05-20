@@ -61,11 +61,11 @@ export default function Signup() {
       } else {
         e.target.style.borderBottom = "2px solid  black";
       }
-    }else if (value === "") {
+    } else if (value === "") {
       e.target.style.borderBottom = "2px solid  #FF0000";
       e.target.style.outline = "none";
     }
-      
+
     if (name === "Password") {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
@@ -86,7 +86,7 @@ export default function Signup() {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
-      }else {
+      } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
@@ -94,7 +94,7 @@ export default function Signup() {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
-      }else {
+      } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
@@ -102,7 +102,7 @@ export default function Signup() {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
-      }else {
+      } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
@@ -110,7 +110,7 @@ export default function Signup() {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
-      }else {
+      } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
@@ -118,7 +118,7 @@ export default function Signup() {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
-      }else {
+      } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
@@ -126,7 +126,7 @@ export default function Signup() {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
-      }else {
+      } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
@@ -137,7 +137,7 @@ export default function Signup() {
 
   useEffect(() => {
     setIsinValid(false);
-  }, [showUser,selected]);
+  }, [showUser, selected]);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -151,7 +151,7 @@ export default function Signup() {
       College,
       MobileNo,
     } = showUser;
-    const name = FirstName + ' ' + LastName;
+    const name = FirstName + " " + LastName;
     if (
       name !== "" &&
       RollNumber !== "" &&
@@ -160,7 +160,7 @@ export default function Signup() {
       MobileNo !== "" &&
       email !== "" &&
       Password !== "" &&
-      selected!=="Year"
+      selected !== "Year"
     ) {
       const password = bcrypt.hashSync(
         Password,
@@ -174,35 +174,39 @@ export default function Signup() {
         School,
         College,
         MobileNo,
-        selected
+        selected,
       };
       try {
         const response = await axios.post(
-          `http://localhost:5000/auth/register`,userObject
+          `http://localhost:5000/auth/register`,
+          userObject
         );
         const success = response.status === 200;
         if (success) {
-          Swal.fire("Signup Successfully", "Pleas check your mail", "success");
+          Swal.fire({
+            title: "Signup Successfully",
+            text: "Pleas check your mail",
+            icon: "success",
+            confirmButtonText: "ok",
+            confirmButtonColor: "#f45725",
+          });
           navigate("/Login");
         }
-        
       } catch (error) {
         setIsinValid(true);
         if (error.response.data.code === 1) {
           setErrMssg("User already exists");
-        }if (error.response.data.code === 2) {
+        }
+        if (error.response.data.code === 2) {
           setErrMssg("Invalid email format");
         }
-        
+
         console.log(error);
       }
-    }
-    else {
+    } else {
       setIsinValid(true);
       setErrMssg("Please fill all the fields");
-      
     }
-      
   };
   return (
     <div className={SuCss.mDiv}>
