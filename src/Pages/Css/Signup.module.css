@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
-.signupErrDiv{
+.signupErrDiv {
   font-size: 14px;
 }
-
 
 .mDiv {
   display: flex;
@@ -136,25 +135,25 @@ input::placeholder {
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   line-height: 1.063rem;
   color: black;
   text-decoration: none;
 }
-.spn:after{
+.spn:after {
   content: "";
   width: 0;
   height: 3px;
   background-color: blue;
-  display:flex;
+  display: flex;
   margin-left: 120px;
   transition: 0.3s;
 }
-.spn:hover:after{
+.spn:hover:after {
   width: 25%;
   transition: width 0.3s linear;
 }
-.spn:hover{
+.spn:hover {
   color: blue;
 }
 
