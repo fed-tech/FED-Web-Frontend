@@ -33,7 +33,7 @@ export default function Signup() {
   ];
 
   const [showUser, setUser] = useState({
-    Email: "",
+    email: "",
     Password: "",
     FirstName: "",
     LastName: "",
@@ -54,7 +54,7 @@ export default function Signup() {
     const name = e.target.name;
     const value = e.target.value;
 
-    if (name === "Email") {
+    if (name === "email") {
       if (value.indexOf("@") === -1 || value.indexOf(".") === -1) {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
@@ -142,7 +142,7 @@ export default function Signup() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     const {
-      Email,
+      email,
       Password,
       FirstName,
       LastName,
@@ -151,14 +151,14 @@ export default function Signup() {
       College,
       MobileNo,
     } = showUser;
-    const Name = FirstName + ' ' + LastName;
+    const name = FirstName + ' ' + LastName;
     if (
-      Name !== "" &&
+      name !== "" &&
       RollNumber !== "" &&
       School !== "" &&
       College !== "" &&
       MobileNo !== "" &&
-      Email !== "" &&
+      email !== "" &&
       Password !== "" &&
       selected!=="Year"
     ) {
@@ -167,8 +167,8 @@ export default function Signup() {
         "$2b$10$Q0RPeouqYdTToq76zoccIO"
       );
       const userObject = {
-        Name,
-        Email,
+        name,
+        email,
         password,
         RollNumber,
         School,
@@ -243,7 +243,7 @@ export default function Signup() {
             <input
               type="email"
               id="email"
-              name="Email"
+              name="email"
               placeholder="Email"
               onChange={DataInp}
               style={{

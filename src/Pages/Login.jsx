@@ -62,8 +62,8 @@ function Login(props) {
           // setCookie("auth_token", response.data.token);
           // props.setIsLoggedIn(true);
           await authCtx.login(
-            response.data.result[0].Name,
-            response.data.result[0].Email,
+            response.data.result[0].name,
+            response.data.result[0].email,
             response.data.result[0].img,
             response.data.result[0].RollNumber,
             response.data.result[0].School,
