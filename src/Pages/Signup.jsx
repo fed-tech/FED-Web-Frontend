@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs-react";
 
 // axios
 import axios from "axios";
-
+import Swal from "sweetalert2";
 // Css
 import SuCss from "./Css/Signup.module.css";
 
@@ -182,7 +182,7 @@ export default function Signup() {
         );
         const success = response.status === 200;
         if (success) {
-          alert("Please check your mail");
+          Swal.fire("Signup Successfully", "Pleas check your mail", "success");
           navigate("/Login");
         }
         
