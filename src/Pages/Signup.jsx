@@ -3,7 +3,7 @@ import axios from "axios";
 import bcrypt from "bcryptjs-react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
-
+import Swal from "sweetalert2";
 // Css
 import SuCss from "./Css/Signup.module.css";
 import { Link } from "react-router-dom";
@@ -65,7 +65,7 @@ export default function Signup() {
         );
         const success = response.status === 200;
         if (success) {
-          alert("Please check your mail");
+          Swal.fire("Signup Successfully", "Pleas check your mail", "success");
           navigate("/Login");
         }
       } catch (error) {
