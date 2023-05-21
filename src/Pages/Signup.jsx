@@ -227,7 +227,7 @@ export default function Signup() {
               id="first_name"
               type="text"
               name="FirstName"
-              placeholder="First name"
+              placeholder="First Name"
               onChange={DataInp}
               style={{
                 borderBottom: firstNameerr
@@ -239,7 +239,7 @@ export default function Signup() {
               type="text"
               id="last_name"
               name="LastName"
-              placeholder="Last name"
+              placeholder="Last Name"
               onChange={DataInp}
               style={{
                 borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
@@ -259,7 +259,7 @@ export default function Signup() {
               type="text"
               id="rollNum"
               name="RollNumber"
-              placeholder="Roll number"
+              placeholder="Roll Number"
               onChange={DataInp}
               style={{
                 borderBottom: emailerr ? "2px solid red" : "2px solid black",
@@ -289,7 +289,7 @@ export default function Signup() {
               type="number"
               id="number"
               name="MobileNo"
-              placeholder="Mobile No"
+              placeholder="Mobile Number"
               onChange={DataInp}
               style={{
                 borderBottom: emailerr ? "2px solid red" : "2px solid black",
