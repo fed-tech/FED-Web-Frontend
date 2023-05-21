@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./css/MobileNav.css";
+// state
+import AuthContext from "./../store/auth-context";
 
-export default function NavMobile() {
+export default function NavMobile(props) {
   const [count, setCount] = useState(false);
   function toggleEvent() {
     setCount(true);
   }
+  const authCtx = useContext(AuthContext);
   return (
     <header>
       <nav className="mobileNav">
@@ -82,6 +85,23 @@ export default function NavMobile() {
               Contact Us
             </HashLink>
           </div> */}
+          <div class="mobileList">
+            <NavLink
+              to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+              className="liTag"
+            >
+              {authCtx.isLoggedIn ? (
+                <img
+                  src={authCtx.user.pic}
+                  alt=""
+                  srcset=""
+                  className="profile_img"
+                />
+              ) : (
+                "Login/SignUp"
+              )}
+            </NavLink>
+          </div>
         </div>
       </div>
     </header>
