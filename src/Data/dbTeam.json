@@ -195,6 +195,13 @@
         "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fdde4ab969d858d09721d9_Abhinav%20Singh-min.jpg"
       },
       {
+        "id": 4,
+        "name": "Vijay",
+        "linkedin": "",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fde3885fd495463af3ffad_Vijay.jpg"
+      },
+      {
         "id": 1,
         "name": "Anurag Prasoon",
         "linkedin": "https://linkedin.com/in/anuragprasoon",
@@ -405,6 +412,41 @@
         "linkedin": "https://www.linkedin.com/in/gudla-sai-surya-9258a7241",
         "github": "https://github.com/GudlaSaiSurya",
         "img": "https://uploads-ssl.webflow.com/64651f3e56e006468e1527e5/64651f917b4a9989b809fcc3_croped%20profikle.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Aditya Kumar Mohapatra",
+        "linkedin": "https://www.linkedin.com/in/aditya-kumar-mohapatra-830997258",
+        "github": "https://github.com/mr-drex",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/646775f1569abb3f79fafaac_WhatsApp%20Image%202023-05-06%20at%2021.51.45.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Mohit Sharma",
+        "linkedin": "https://www.linkedin.com/in/mohitsharma7667",
+        "github": "https://github.com/MohitSharma2312",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/6466546772e48a444d12c1a1_profile%20pic.png"
+      },
+      {
+        "id": 4,
+        "name": "Arnav Kapur",
+        "linkedin": "https://www.linkedin.com/in/arnav-kapur-079925255/",
+        "github": "https://github.com/ArnavKap",
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/646659aaa37555d0f8c0c54a_WhatsApp%20Image%202023-05-18%20at%2022.27.14.jpg"
+      },
+      {
+        "id": 1,
+        "name": "Aaditya Raj",
+        "linkedin": "https://www.linkedin.com/in/aaditya-raj-20535420a",
+        "github": "https://github.com/1Addy3",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2aa50462344c094cc44a_AAditya%20raj_11zon.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Suyash Pandey",
+        "linkedin": "https://www.linkedin.com/in/suyash-pandey-78417524a/",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/646774f0c779aebe41032111_suyash-photo.jpg"
       }
     ],
     "operation": [
@@ -520,7 +562,7 @@
       },
       {
         "id": 3,
-        "name": "SHOURYJEET GUPTA",
+        "name": "Shouryjeet Gupta",
         "instagram": "https://instagram.com/shoury.jeet?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/shouryjeet-gupta-319260255",
         "github": "",
@@ -557,6 +599,34 @@
         "linkedin": "https://www.linkedin.com/in/ayush-raj-ab0837262",
         "github": "",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6454eb797ae02d5b820a80a3_as.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Aparna Aryalakshami",
+        "linkedin": "https://www.linkedin.com/in/aparna-arylakshami-b95425255",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd14a49e84e5f1e0169_Aparna.jpg"
+      },
+      {
+        "id": 1,
+        "name": "Tushar Anand",
+        "linkedin": "https://www.linkedin.com/in/tushar-anand-395ba6272",
+        "github": "https://github.com/TusharAnand17",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd0fb9d4d54cc45a1b7_Tushar.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Rajashree Rajalaxmi Rout",
+        "linkedin": "https://www.linkedin.com/in/rajashree-rajalaxmi-rout-01a14925a",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd00462344c09251a8d_Rajashree.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Shradha Sahay",
+        "linkedin": "https://www.linkedin.com/in/shradha-sahay-3ab123222",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a3d660462344c095ec4b0_shraddha.png"
       }
     ],
     "alumni": [
@@ -645,7 +715,7 @@
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d931bff46201328b55726_Swet%20raj%20singh.jpg"
       },
       {
-        "name": "VEER SHARMA",
+        "name": "Veer Sharma",
         "linkedin": "https://www.linkedin.com/in/veersharma",
         "github": "",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da5df5b281548afb59021_veer.jpg"
