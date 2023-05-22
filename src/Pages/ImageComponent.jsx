@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Blurhash } from "react-blurhash";
 
-// import "./css/Core.css";
-
 import "./../Components/Team/css/Core.css";
 
 export default function ImageComponent({ src, blur }) {
