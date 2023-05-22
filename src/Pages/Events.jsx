@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Animatedpage } from "../Components/Animatedpage.jsx";
 
 // Components
 import Card from "../Components/Events/card/jsx/Card.jsx";
@@ -11,9 +12,11 @@ export default function Events() {
   }, []);
 
   return (
-    <div>
-      <Header head="Previous Events" />
-      <Card />
-    </div>
+    <Animatedpage>
+      <div>
+        <Header head="Previous Events" />
+        <Card />
+      </div>
+    </Animatedpage>
   );
 }

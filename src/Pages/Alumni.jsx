@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 // Components
 import OurAlumni from "../Components/Alumni/OurAlumni";
+import { Animatedpage } from "../Components/Animatedpage";
 
 function Alumni() {
   // scroll to top
@@ -10,9 +11,11 @@ function Alumni() {
   }, []);
 
   return (
-    <>
-      <OurAlumni />
-    </>
+    <Animatedpage>
+      <>
+        <OurAlumni />
+      </>
+    </Animatedpage>
   );
 }
 export default Alumni;

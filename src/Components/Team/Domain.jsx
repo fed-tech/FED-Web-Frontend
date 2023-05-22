@@ -10,8 +10,6 @@ export default function Domain(props) {
     }, 3000);
   });
 
-  var RandomNumber = Math.floor(Math.random() * 3) + 1;
-
   return (
     <>
       {showContent2 ? (
@@ -75,7 +73,7 @@ export default function Domain(props) {
               </div>
             )}
           </div>
-          <p className={`memName name${RandomNumber}`}>{props.mem.name}</p>
+          <p className={`memName name${props.mem.id}`}>{props.mem.name}</p>
         </div>
       ) : (
         <div></div>
