@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Blurhash } from "react-blurhash";
 
-export default function ImageComponent({ src }) {
+// import "./css/Core.css";
+
+import "./../Components/Team/css/Core.css";
+
+export default function ImageComponent({ src, blur }) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
@@ -18,9 +22,9 @@ export default function ImageComponent({ src }) {
       {/* {!imageLoaded && ( */}
       <div style={{ display: imageLoaded ? "none" : "inline" }}>
         <Blurhash
-          hash="L8E,T#j@RlRk}@kC,@RkOXf*$*9]"
-          width={100}
-          height={100}
+          hash={blur}
+          width={300}
+          height={435}
           resolutionX={32}
           resolutionY={32}
           punch={1}
@@ -31,6 +35,7 @@ export default function ImageComponent({ src }) {
       <img
         src={src}
         alt=""
+        className="CorememCardImg"
         style={{ display: !imageLoaded ? "none" : "inline" }}
       />
       {/*  )} */}
