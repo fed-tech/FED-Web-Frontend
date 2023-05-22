@@ -19,7 +19,6 @@ export default function ImageComponent({ src, blur }) {
 
   return (
     <>
-      {/* {!imageLoaded && ( */}
       <div style={{ display: imageLoaded ? "none" : "inline" }}>
         <Blurhash
           hash={blur}
@@ -30,15 +29,12 @@ export default function ImageComponent({ src, blur }) {
           punch={1}
         />
       </div>
-      {/* )} */}
-      {/* {imageLoaded && ( */}
       <img
         src={src}
         alt=""
         className="CorememCardImg"
         style={{ display: !imageLoaded ? "none" : "inline" }}
       />
-      {/*  )} */}
     </>
   );
 }
