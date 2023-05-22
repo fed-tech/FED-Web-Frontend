@@ -49,28 +49,7 @@ export default function Team() {
         />
         <div className="space" />
         {/* Creative */}
-        <Departments
-          name="Creative"
-          title="Those who help us illustrate, create, design, address, showcase, and
-          introduce FED as a whole- behind the veil!"
-          data={domain.creative}
-        />
-        <div className="space" />
-        {/* Marketing */}
-        <Departments
-          name="Marketing"
-          title="Those who help us strategize, develop, promote, grow and market
-          FED's endeavor!"
-          data={domain.marketing}
-        />
-        <div className="space" />
-        {/* Operations */}
-        <Departments
-          name="Operations"
-          title="Those who help us plan, strategize, commemorate, organize and
-          operate FED's initiatives!"
-          data={domain.operation}
-        />
+
         <div className="space" />
       </section>
     </>
