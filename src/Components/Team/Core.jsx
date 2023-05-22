@@ -38,7 +38,6 @@ export default function Core(props) {
           <div className="flip-card-inner">
             <div className="coreMemMainCard">
               <ImageComponent src={props.mem.img} blur={props.mem.blur} />
-              {/* <img src={props.mem.img} alt="" className="CorememCardImg" /> */}
               <div className="hoverDetailsMDiv">
                 {btn ? (
                   <>
