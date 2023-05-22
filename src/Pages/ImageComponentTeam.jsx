@@ -20,7 +20,6 @@ export default function ImageComponent({ src, blur }) {
       <div
         style={{
           display: imageLoaded ? "none" : "inline",
-          borderRadius: "50%",
         }}
       >
         <Blurhash
