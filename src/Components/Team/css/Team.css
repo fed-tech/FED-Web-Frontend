@@ -55,6 +55,8 @@
 }
 
 .memImgDiv {
+  border-radius: 50%;
+  overflow: hidden;
   border-style: solid;
   border-width: 3px;
   border-color: #c4c4c4;
