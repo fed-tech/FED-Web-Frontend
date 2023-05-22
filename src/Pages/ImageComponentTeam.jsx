@@ -17,7 +17,12 @@ export default function ImageComponent({ src, blur }) {
 
   return (
     <>
-      <div style={{ display: imageLoaded ? "none" : "inline" }}>
+      <div
+        style={{
+          display: imageLoaded ? "none" : "inline",
+          borderRadius: "50%",
+        }}
+      >
         <Blurhash
           hash={blur}
           width={230}
