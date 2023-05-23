@@ -63,11 +63,13 @@
   font-size: 20px;
   border-radius: 7.3%;
 }
-.dets, .vals {
+.dets,
+.vals {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
 }
-.dets, .vals {
+.dets,
+.vals {
   margin-bottom: 30px;
 }
 
@@ -192,6 +194,9 @@
   .illuminating {
     font-size: 33px;
   }
+  .vals {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -208,6 +213,9 @@
   .proHeading {
     padding-bottom: 15%;
   }
+  .vals {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 482px) {
@@ -219,6 +227,9 @@
   }
   .illuminating {
     font-size: 30px;
+  }
+  .vals {
+    font-size: 15px;
   }
 }
 /* @media (max-width : 387px) {
