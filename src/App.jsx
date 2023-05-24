@@ -15,6 +15,7 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
+import ResetPassword from "./Pages/ResetPassword"
 // import MyProfile from "./Components/Profile/MyProfile";
 
 // Components
@@ -27,6 +28,7 @@ import AuthContext from "./store/auth-context";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
+import ForgotPassword from "./Pages/ForgotPassword";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -69,6 +71,8 @@ function App() {
               path="/MyProfile"
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
+            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
+            <Route path="/resetpassword" element = {<ResetPassword/>}/>
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
