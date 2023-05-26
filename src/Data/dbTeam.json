@@ -73,38 +73,6 @@
       },
       {
         "id": 2,
-        "name": "Kolla gayatri shruti ",
-        "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
-        "github": "https://github.com/me-mystic",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg",
-        "blur": "LRJHs|00S~I:?Gn+t7oc_NIor=xZ"
-      },
-      {
-        "id": 3,
-        "name": "Muskan Bajaj ",
-        "linkedin": "https://www.linkedin.com/in/muskan-bajaj-705bb1244/",
-        "github": "https://github.com/muskan-bajaj",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1ddba63ea2263cf32c933_IMG_20230219_134340%20-%20228_MUSKAN%20BAJAJ.jpg",
-        "blur": "LPKBL0~q_2M_-.M{IVt8xtWAM|og"
-      },
-      {
-        "id": 4,
-        "name": "Navya Verma",
-        "linkedin": "https://www.linkedin.com/in/navya-verma-53832424b",
-        "github": "https://github.com/NavyaVerma139",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd4485872ab2fb8834cf_Navya%20-%204084%20NAVYA%20VERMA.jpg",
-        "blur": "LmJu$KRPtRWVyZNIjZa#%3ogWAjZ"
-      },
-      {
-        "id": 1,
-        "name": "Vinit Agarwal",
-        "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
-        "github": "https://github.com/vinitagarwal007",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg",
-        "blur": "LgGk%jNHxuV[~VkCWDj]ozs:WBof"
-      },
-      {
-        "id": 2,
         "name": "Binay Kumar Sahu",
         "instagram": "https://www.instagram.com/i_ambinaysahu/",
         "linkedin": "https://www.linkedin.com/in/binay-sahu",
@@ -122,12 +90,36 @@
       },
       {
         "id": 4,
+        "name": "Kolla gayatri shruti ",
+        "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
+        "github": "https://github.com/me-mystic",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg",
+        "blur": "LRJHs|00S~I:?Gn+t7oc_NIor=xZ"
+      },
+      {
+        "id": 1,
+        "name": "Muskan Bajaj ",
+        "linkedin": "https://www.linkedin.com/in/muskan-bajaj-705bb1244/",
+        "github": "https://github.com/muskan-bajaj",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1ddba63ea2263cf32c933_IMG_20230219_134340%20-%20228_MUSKAN%20BAJAJ.jpg",
+        "blur": "LPKBL0~q_2M_-.M{IVt8xtWAM|og"
+      },
+      {
+        "id": 2,
         "name": "Prityanshu Singh",
         "instagram": "https://instagram.com/prityanshu__0111?igshid=OTk0YzhjMDVlZA==",
         "linkedin": "https://www.linkedin.com/in/prityanshu-singh-a23115248",
         "github": "https://github.com/PrityanshuSingh?fbclid=PAAaa5rY1-GB0XWcIJmb6QDBsajl1Tz_WRCMYJRzkEeUGqFgFhyNCKIK4p_Ss",
         "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6465b144571834354f06de7e_IMG_20230518_103143.jpg",
         "blur": "LFE{2?$x4mNg0iM{Iq%100xa_4In"
+      },
+      {
+        "id": 3,
+        "name": "Vinit Agarwal",
+        "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
+        "github": "https://github.com/vinitagarwal007",
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg",
+        "blur": "LgGk%jNHxuV[~VkCWDj]ozs:WBof"
       }
     ],
     "creative": [
@@ -689,7 +681,7 @@
         "blur": "L484SRtk_I58~n^~9]SwIo%Ii~={"
       },
       {
-        "id": 3,
+        "id": 2,
         "name": "Shradha Sahay",
         "linkedin": "https://www.linkedin.com/in/shradha-sahay-3ab123222",
         "github": "",
