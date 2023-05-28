@@ -71,7 +71,7 @@ export const AuthContextProvider = (props) => {
   const [user, setUser] = useState(initialuser);
   const [target, setTarget] = useState("");
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(logedin);
-  const [admin, setAdmin] = useState(false);
+  // const [admin, setAdmin] = useState(false);
 
   console.log("userislogedin : -" + userIsLoggedIn);
 
@@ -84,8 +84,8 @@ export const AuthContextProvider = (props) => {
     localStorage.removeItem("token");
     localStorage.removeItem("expirationTime");
     localStorage.removeItem("user");
-    setAdmin(false);
-    // localStorage.removeItem("admin");
+    // setAdmin(false);
+    localStorage.removeItem("admin");
 
     if (logoutTimer) {
       clearTimeout(logoutTimer);
@@ -146,10 +146,10 @@ export const AuthContextProvider = (props) => {
       login: loginHandler,
       logout: logoutHandler,
       settarget: targetHandler,
-      admin: admin,
-      setAdmin: setAdmin,
+      // admin: admin,
+      // setAdmin: setAdmin,
     }),
-    [token, userIsLoggedIn, target, admin, setAdmin]
+    [token, userIsLoggedIn, target]
   );
 
   return (

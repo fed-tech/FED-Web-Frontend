@@ -75,7 +75,9 @@ function App() {
             />
             <Route
               path="/admin/addMember"
-              element={authCtx.admin ? <AddMember /> : <Error />}
+              element={
+                localStorage.getItem("admin") ? <AddMember /> : <Error />
+              }
             />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
