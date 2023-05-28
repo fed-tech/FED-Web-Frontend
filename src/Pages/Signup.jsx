@@ -210,6 +210,7 @@ export default function Signup() {
       setErrMssg("Please fill all the fields");
     }
   };
+
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
