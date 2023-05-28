@@ -143,6 +143,7 @@ export default function Signup() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+
     const {
       email,
       Password,
@@ -153,7 +154,9 @@ export default function Signup() {
       College,
       MobileNo,
     } = showUser;
+
     const name = FirstName + " " + LastName;
+
     if (
       name !== "" &&
       RollNumber !== "" &&
@@ -168,6 +171,7 @@ export default function Signup() {
         Password,
         "$2b$10$Q0RPeouqYdTToq76zoccIO"
       );
+
       const userObject = {
         name,
         email,
@@ -178,12 +182,15 @@ export default function Signup() {
         MobileNo,
         selected,
       };
+
       try {
         const response = await axios.post(
           `http://localhost:5000/auth/register`,
           userObject
         );
+
         const success = response.status === 200;
+
         if (success) {
           Swal.fire({
             icon: "success",
@@ -196,6 +203,7 @@ export default function Signup() {
         }
       } catch (error) {
         setIsinValid(true);
+
         if (error.response.data.code === 1) {
           setErrMssg("User already exists");
         }
@@ -210,6 +218,7 @@ export default function Signup() {
       setErrMssg("Please fill all the fields");
     }
   };
+
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
