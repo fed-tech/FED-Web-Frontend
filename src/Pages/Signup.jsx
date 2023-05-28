@@ -24,7 +24,7 @@ export default function Signup() {
   const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
   const options = [
     { value: "", text: "Year" },
     { value: "1st", text: "1st year" },
@@ -347,7 +347,7 @@ export default function Signup() {
             <h2>SignUp Successfully!</h2>
             <h3>Please check your mail !!</h3>
             <button className={SuCss.ok} onClick={toggleModel}>
-              ok
+              OK
             </button>
           </div>
         </div>

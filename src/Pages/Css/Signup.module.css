@@ -169,7 +169,8 @@ input::placeholder {
   color: black;
 }
 .modal {
-  background-color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.635);
+  backdrop-filter: blur(10px);
   text-align: center;
   align-items: center;
   height: 250px;
