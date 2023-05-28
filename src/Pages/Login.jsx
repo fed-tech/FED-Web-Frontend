@@ -57,10 +57,8 @@ function Login(props) {
         });
         console.log(response);
         console.log(response.data.result[0].name);
-        if(response.data.result[0].access===1)
-          console.log("admin");
-        else
-          console.log("not admin")
+        if (response.data.result[0].access === 1) console.log("admin");
+        else console.log("not admin");
 
         if (response.status === 200) {
           // setCookie("auth_token", response.data.token);
@@ -130,6 +128,11 @@ function Login(props) {
                 borderBottom: passwrderr ? "2px solid red" : "2px solid black",
               }}
             />
+          </div>
+          <div className="forgotPassword">
+            <Link to="/forgotpassword">
+              <p>Forgot Password?</p>
+            </Link>
           </div>
           <button className="logtwo" onClick={handlelogin}>
             Login

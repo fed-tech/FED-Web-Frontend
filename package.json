@@ -26,6 +26,7 @@
     "react-router-hash-link": "^2.4.3",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.7.5"
   },
   "devDependencies": {

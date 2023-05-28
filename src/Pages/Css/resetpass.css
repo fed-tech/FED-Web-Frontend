@@ -15,11 +15,13 @@
 }
 #errmssg{
   font-size: 14px;
+  margin-top: 15px;
+  user-select: none;
 }
 .inside {
   background-color: rgba(0,0,0,0.3);
   
-  height: 47.188rem;
+  height: 29.569rem;
   width:60%;
   max-width: 44%;
   display: flex;
@@ -168,13 +170,14 @@
 }
 .logtwo {
   width: 100%;
-    margin-top: 42.15px;
+  margin-top: 31.15px;
     padding: 7.3px;
     border-radius: 7.3px;
     border: black;
     background-color: black;
     font: mulish 19.8px;
-    font-size: 19.8px;
+    font-size: 15.8px;
+    cursor: pointer;
 }
 .input::placeholder {
   font-weight: 300;

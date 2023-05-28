@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs-react";
 // axios
 import axios from "axios";
 import Swal from "sweetalert2";
+
 // Css
 import SuCss from "./Css/Signup.module.css";
 
@@ -185,9 +186,9 @@ export default function Signup() {
         const success = response.status === 200;
         if (success) {
           Swal.fire({
-            title: "Signup Successfully",
-            text: "Pleas check your mail",
             icon: "success",
+            title: "SignuUp Successfully",
+            text: "Please check your mail",
             confirmButtonText: "ok",
             confirmButtonColor: "#f45725",
           });
