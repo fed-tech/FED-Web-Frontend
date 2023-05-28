@@ -57,9 +57,15 @@ function Login(props) {
         });
         console.log(response);
         console.log(response.data.result[0].name);
-        if (response.data.result[0].access === 1) console.log("admin");
-        else console.log("not admin");
-
+        if (response.data.result[0].access === 1) {
+          // localStorage.setItem("admin", true);
+          authCtx.setAdmin(true);
+          console.log("admin");
+        } else {
+          // localStorage.setItem("admin", false);
+          authCtx.setAdmin(false);
+          console.log("not admin");
+        }
         if (response.status === 200) {
           // setCookie("auth_token", response.data.token);
           // props.setIsLoggedIn(true);

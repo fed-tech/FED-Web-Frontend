@@ -15,7 +15,7 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
-import ResetPassword from "./Pages/ResetPassword"
+import ResetPassword from "./Pages/ResetPassword";
 // import MyProfile from "./Components/Profile/MyProfile";
 
 // Components
@@ -48,7 +48,7 @@ function App() {
             <Route path="/Alumni" element={<Alumni />} />
             <Route path="/Podcasts" element={<Podcasts />} />
             <Route path="/Testimonial" element={<Seeall />} />
-            <Route path="/admin/addMember" element={<AddMember/>}/>
+            {/* <Route path="/admin/addMember" element={<AddMember/>}/> */}
             <Route
               path="/Login"
               element={
@@ -73,8 +73,12 @@ function App() {
               path="/MyProfile"
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
-            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
-            <Route path="/resetpassword" element = {<ResetPassword/>}/>
+            <Route
+              path="/admin/addMember"
+              element={authCtx.admin ? <AddMember /> : <Error />}
+            />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
