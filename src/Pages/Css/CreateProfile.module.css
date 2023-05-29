@@ -66,10 +66,6 @@
   border-radius: 10.8px;
   padding: 12.8px;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  align-items: center;
 }
 .googleText {
   text-align: center;

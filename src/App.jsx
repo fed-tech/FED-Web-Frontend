@@ -29,6 +29,7 @@ import AuthContext from "./store/auth-context";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 import ForgotPassword from "./Pages/ForgotPassword";
+import CreateProfile from "./Pages/CreateProfile";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -73,6 +74,7 @@ function App() {
             />
             <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
             <Route path="/resetpassword" element = {<ResetPassword/>}/>
+            <Route path="/createprofile" element = {<CreateProfile/>}/>
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
