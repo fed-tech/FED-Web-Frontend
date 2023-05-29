@@ -6,7 +6,7 @@ import { useGoogleLogin } from '@react-oauth/google';
 
 // axios
 import axios from "axios";
-import Swal from "sweetalert2";
+// import Swal from "sweetalert2";
 
 // Css
 import SuCss from "./Css/Signup.module.css";
@@ -15,6 +15,7 @@ import SuCss from "./Css/Signup.module.css";
 import AuthContext from "./../store/auth-context";
 import google from "../Img/Google.svg";
 
+import tick from "./../Img/tick.png";
 export default function Signup() {
   const authCtx = useContext(AuthContext);
 
@@ -26,8 +27,6 @@ export default function Signup() {
   const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
-  const [codeResponse,setCodeResponse] = useState();
-  const [profile,setProfile] = useState();
 
   const options = [
     { value: "", text: "Year" },
@@ -219,14 +218,16 @@ export default function Signup() {
         );
         const success = response.status === 200;
         if (success) {
-          Swal.fire({
-            icon: "success",
-            title: "SignuUp Successfully",
-            text: "Please check your mail",
-            confirmButtonText: "ok",
-            confirmButtonColor: "#f45725",
-          });
-          navigate("/Login");
+          // Swal.fire({
+          //   icon: "success",
+          //   title: "SignuUp Successfully",
+          //   text: "Please check your mail",
+          //   confirmButtonText: "ok",
+          //   confirmButtonColor: "#f45725",
+          //   SwalModalColor: "black",
+          // });
+          setModal(!modal);
+          // navigate("/Login");
         }
       } catch (error) {
         setIsinValid(true);
@@ -251,6 +252,9 @@ export default function Signup() {
         setErrMssg("Invalid mobile number")
       }
     }
+  };
+  const toggleModel = () => {
+    setModal(!modal);
   };
   return (
     <div className={SuCss.mDiv}>
@@ -379,6 +383,18 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      {modal && (
+        <div className={SuCss.modal}>
+          <div className={SuCss.modalcontent}>
+            <img src={tick}></img>
+            <h2>SignUp Successfully!</h2>
+            <h3>Please check your mail !!</h3>
+            <button className={SuCss.ok} onClick={toggleModel}>
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

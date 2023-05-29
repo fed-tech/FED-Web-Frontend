@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 .signupErrDiv {
   font-size: 14px;
 }
@@ -172,7 +173,38 @@ input::placeholder {
 .year option {
   color: black;
 }
-
+.modal {
+  background: rgba(0, 0, 0, 0.635);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  align-items: center;
+  height: 250px;
+  width: 400px;
+  position: absolute;
+  border-radius: 5%;
+}
+.modalcontent h2 {
+  font-family: "Rubik", sans-serif;
+  padding-top: 20px;
+}
+.modalcontent h3 {
+  font-family: "Rubik", sans-serif;
+  padding-top: 10px;
+}
+.ok {
+  margin-top: 40px;
+  width: 90px;
+  height: 30px;
+  background-color: #f45725;
+  border: none;
+  border-radius: 6%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.modalcontent img {
+  width: 200px;
+  margin-top: -60px;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;

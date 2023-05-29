@@ -163,6 +163,9 @@
     width: 58%;
     padding-bottom: 15%;
   }
+  .vals {
+    font-size: 20px;
+  }
 }
 .logoutBtn {
   background-color: #ffffff;
@@ -223,7 +226,7 @@
     font-size: 22px;
   }
   .dets {
-    font-size: 16px;
+    font-size: 15px;
   }
   .illuminating {
     font-size: 30px;
@@ -232,11 +235,17 @@
     font-size: 15px;
   }
 }
-/* @media (max-width : 387px) {
+@media (max-width: 394px) {
+  .proHeading {
+    font-size: 22px;
+  }
+  .dets {
+    font-size: 14px;
+  }
   .illuminating {
-    font-size: 20px;
+    font-size: 30px;
   }
-  .illuminating p {
-    height: 30px;
+  .vals {
+    font-size: 14px;
   }
-} */
+}
