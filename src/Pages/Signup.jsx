@@ -27,6 +27,8 @@ export default function Signup() {
   const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
+  const [codeResponse,setCodeResponse] = useState();
+  const [modal,setModal] = useState(false);
 
   const options = [
     { value: "", text: "Year" },
@@ -157,8 +159,7 @@ export default function Signup() {
           })
           .then((res) => {
               localStorage.setItem('user',JSON.stringify(res.data));
-              navigate('/createprofile')
-              setProfile(res.data);
+              navigate('/createprofile');
 
           })
           .catch((err) => console.log(err));
