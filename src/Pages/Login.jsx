@@ -3,6 +3,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
+import {GoogleOAuthProvider} from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
 
 //  axios
 import axios from "axios";
@@ -102,10 +104,22 @@ function Login(props) {
             <p className="welc">Welcome Back</p>
             <p className="det">Please Enter your details</p>
           </div>
-          <div className="googlepart">
+          
+          <GoogleOAuthProvider clientId="<your_client_id>">
+
+<GoogleLogin
+  onSuccess={credentialResponse => {
+    console.log(credentialResponse);
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+/>;</GoogleOAuthProvider>;
+
+          {/* <div className="googlepart">
             <img src={google} className="icon"></img>
             <p className="log">Login with Google</p>
-          </div>
+          </div> */}
           <p className="or">Or</p>
           <div className="user">
             <input
