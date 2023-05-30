@@ -61,17 +61,16 @@
 }
 
 .logoutBtn {
-  background-color: #ffff00;
+  background-color: #ffffff;
   color: black;
   font-family: "Rubik", sans-serif;
   height: 40px;
   width: 158.47%;
   border: none;
   margin-top: 30px;
-  /* box-shadow: inset; */
+  box-shadow: inset;
   font-size: 20px;
   border-radius: 7.3%;
-  cursor: pointer;
 }
 
 .dets,
