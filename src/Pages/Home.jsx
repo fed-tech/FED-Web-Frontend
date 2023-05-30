@@ -42,7 +42,7 @@ export default function Home() {
         <meta
           property="og:image"
           itemprop="image"
-          content="https://repository-images.githubusercontent.com/579079518/5468d976-8ae5-404b-992b-7d24e6650980"
+          content="https://ik.imagekit.io/vgd1bllwv/fed.png?updatedAt=1685457447183"
         />
         <meta property="og:type" content="website" />
 
