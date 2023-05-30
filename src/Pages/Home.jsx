@@ -42,7 +42,7 @@ export default function Home() {
         <meta
           property="og:image"
           itemprop="image"
-          content="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png"
+          content="https://repository-images.githubusercontent.com/579079518/5468d976-8ae5-404b-992b-7d24e6650980"
         />
         <meta property="og:type" content="website" />
 
