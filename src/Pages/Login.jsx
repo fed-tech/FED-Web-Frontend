@@ -19,6 +19,9 @@ import "../Pages/Css/loginpg.css";
 import google from "../Img/Google.svg";
 
 function Login(props) {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
