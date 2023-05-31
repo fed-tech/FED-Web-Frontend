@@ -283,3 +283,41 @@
     font-size: 14px;
   }
 }
+@media (max-width: 348px) {
+  .proHeading {
+    font-size: 22px;
+  }
+
+  .dets {
+    font-size: 14px;
+    padding:0;
+  }
+
+  .illuminating {
+    font-size: 30px;
+  }
+
+  .vals {
+    font-size: 14px;
+    
+  }
+}
+@media (max-width: 298px) {
+  .proHeading {
+    font-size: 22px;
+  }
+
+  .dets {
+    font-size: 14px;
+  }
+
+  .illuminating {
+    font-size: 30px;
+  }
+
+  .vals {
+    font-size: 14px;
+    padding:15px;
+  }
+}
+
