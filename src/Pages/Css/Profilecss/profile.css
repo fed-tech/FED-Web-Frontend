@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
 .profileBackground {
   background-color: black;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+   overflow-x: hidden;
 }
+
 .pmainBox {
   display: flex;
   justify-content: center;
@@ -15,8 +17,9 @@
 .profileLeft {
   background-image: url(../../../Img/Frame\ 17.png);
   width: 52%;
-  padding: 77px 17px 198px 38px;
+  padding: 77px 17px 60px 38px;
 }
+
 .profile {
   /* background-color: grey; */
   /* background-image: url(../../../Img/Frame\ 17.png); */
@@ -29,6 +32,7 @@
   padding-top: 81px;
   padding-bottom: 27px;
 }
+
 .proHeading {
   font-size: 32px;
   letter-spacing: 0.02em;
@@ -36,38 +40,33 @@
   padding-bottom: 99px;
   width: 47.44%;
 }
+
 .headInnerText {
   display: flex;
   justify-content: space-between;
   border-bottom: solid white 1px;
   padding-bottom: 3px;
 }
+
 .details {
-  display: flex;
+  /* display: flex; */
 }
+
 .keys {
   width: 42.62%;
 }
+
 .values {
   width: 57.38%;
 }
-.logoutBtn {
-  background-color: #ffffff;
-  color: black;
-  font-family: "Rubik", sans-serif;
-  height: 40px;
-  width: 158.47%;
-  border: none;
-  margin-top: 30px;
-  box-shadow: inset;
-  font-size: 20px;
-  border-radius: 7.3%;
-}
+
 .dets,
 .vals {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
+  padding:20px;
 }
+
 .dets,
 .vals {
   margin-bottom: 30px;
@@ -82,6 +81,7 @@
   box-sizing: border-box;
   object-fit: contain;
 }
+
 .illuminating {
   display: flex;
   flex-direction: column;
@@ -94,60 +94,74 @@
   line-height: 59.25px;
   flex-wrap: wrap;
 }
+
 @media (max-width: 1200px) {
   .profileRight {
     margin-right: 2%;
     padding: 0;
   }
+
   .profileLeft {
     padding-bottom: 5%;
   }
+
   .profileBackground {
     background-image: url(./../../../Img/wolf-full.jpg);
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 20%;
   }
+
   .profile,
   .profileLeft,
   .profileRight,
   .illuminating {
     background: none;
   }
+
   .body {
     background-color: black;
   }
+
   .illuminating {
     padding-top: 320px;
     font-size: 40px;
   }
 }
+
 @media (max-width: 1000px) {
   .pmainBox {
     flex-direction: column-reverse;
     align-items: center;
   }
+
   .profileLeft,
   .illuminating {
     padding: 0;
   }
+
   .profileLeft {
     margin-left: 10%;
   }
+
   .profileRight {
     width: 100%;
     max-width: 100%;
   }
+
   .profile {
     padding-left: 0;
     padding-top: 10%;
   }
+
   .proHeading {
     font-size: 28px;
   }
+
   .dets {
     font-size: 22px;
   }
+
   .illuminating {
     padding: 6% 3% 2% 9%;
     /* width: 100%; */
@@ -156,47 +170,56 @@
     font-size: 36px;
     /* text-align: center; */
   }
+
   .illuminating p {
     padding: 1%;
   }
+
   .proHeading {
     width: 58%;
     padding-bottom: 15%;
   }
+
   .vals {
     font-size: 20px;
   }
 }
+
 .logoutBtn {
   background-color: #ffffff;
   color: black;
   font-family: "Rubik", sans-serif;
   height: 40px;
-  width: 158.47%;
+  width: 70%;
   border: none;
   margin-top: 30px;
   box-shadow: inset;
   font-size: 20px;
-  border-radius: 7.3%;
+  border-radius: 2%;
 }
 
 @media (max-width: 880px) {
   .profileLeft {
     margin-left: 5%;
   }
+
   .profileLeft,
   .proHeading {
     width: 60%;
   }
+
   .proHeading {
     font-size: 24px;
   }
+
   .dets {
     font-size: 20px;
   }
+
   .illuminating {
     font-size: 33px;
   }
+
   .vals {
     font-size: 20px;
   }
@@ -206,16 +229,20 @@
   .pmainBox {
     margin-top: 0px;
   }
+
   .profileLeft,
   .proHeading {
     width: 80%;
   }
+
   .illuminating {
     padding-top: 15%;
   }
+
   .proHeading {
     padding-bottom: 15%;
   }
+
   .vals {
     font-size: 20px;
   }
@@ -225,27 +252,72 @@
   .proHeading {
     font-size: 22px;
   }
+
   .dets {
     font-size: 15px;
   }
+
   .illuminating {
     font-size: 30px;
   }
+
   .vals {
     font-size: 15px;
   }
 }
+
 @media (max-width: 394px) {
   .proHeading {
     font-size: 22px;
   }
+
   .dets {
     font-size: 14px;
   }
+
   .illuminating {
     font-size: 30px;
   }
+
   .vals {
     font-size: 14px;
   }
 }
+@media (max-width: 348px) {
+  .proHeading {
+    font-size: 22px;
+  }
+
+  .dets {
+    font-size: 14px;
+    padding:0;
+  }
+
+  .illuminating {
+    font-size: 30px;
+  }
+
+  .vals {
+    font-size: 14px;
+    
+  }
+}
+@media (max-width: 298px) {
+  .proHeading {
+    font-size: 22px;
+  }
+
+  .dets {
+    font-size: 14px;
+  }
+
+  .illuminating {
+    font-size: 30px;
+  }
+
+  .vals {
+    font-size: 14px;
+    padding:15px;
+  }
+}
+
