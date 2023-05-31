@@ -30,6 +30,9 @@ function Login(props) {
   const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
 
   useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
+  useEffect(() => {
     setIsinValid(false);
     setEmailerr(false);
     setPasswrderr(false);

@@ -147,6 +147,10 @@ export default function Signup() {
     onSuccess:(response)=>setCodeResponse(response)
   })
 
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
+
   useEffect(()=>{
     
     if (codeResponse) {
