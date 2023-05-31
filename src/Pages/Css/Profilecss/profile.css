@@ -5,7 +5,7 @@
   background-color: black;
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
+   overflow-x: hidden;
 }
 
 .pmainBox {
@@ -17,7 +17,7 @@
 .profileLeft {
   background-image: url(../../../Img/Frame\ 17.png);
   width: 52%;
-  padding: 77px 17px 198px 38px;
+  padding: 77px 17px 60px 38px;
 }
 
 .profile {
@@ -49,7 +49,7 @@
 }
 
 .details {
-  display: flex;
+  /* display: flex; */
 }
 
 .keys {
@@ -64,6 +64,7 @@
 .vals {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
+  padding:20px;
 }
 
 .dets,
@@ -189,12 +190,12 @@
   color: black;
   font-family: "Rubik", sans-serif;
   height: 40px;
-  width: 158.47%;
+  width: 70%;
   border: none;
   margin-top: 30px;
   box-shadow: inset;
   font-size: 20px;
-  border-radius: 7.3%;
+  border-radius: 2%;
 }
 
 @media (max-width: 880px) {
