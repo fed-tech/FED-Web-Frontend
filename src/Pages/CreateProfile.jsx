@@ -267,7 +267,7 @@ export default function CreateProfile() {
               ))}
             </select>
             <button type="submit" className={SuCss.btn} onClick={handleCreateProfile}>
-              create profile
+              Create profile
             </button>
             <p
               className={SuCss.signupErrDiv}
