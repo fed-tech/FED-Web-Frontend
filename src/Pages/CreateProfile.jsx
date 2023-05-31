@@ -14,9 +14,6 @@ import SuCss from "./Css/CreateProfile.module.css";
 import AuthContext from "./../store/auth-context";
 
 export default function CreateProfile() {
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, [])
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
