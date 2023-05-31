@@ -89,6 +89,10 @@
   line-height: 1.063rem;
   color: black;
 }
+#custom-login-button {
+  background-color: black;
+  color: white;
+}
 .googlepart {
   margin: 1.875rem;
   height: 2.625rem;

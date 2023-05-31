@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
-import {GoogleOAuthProvider} from '@react-oauth/google';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
 
 //  axios
@@ -104,17 +104,17 @@ function Login(props) {
             <p className="welc">Welcome Back</p>
             <p className="det">Please Enter your details</p>
           </div>
-          
-          <GoogleOAuthProvider clientId="<your_client_id>">
 
-<GoogleLogin
-  onSuccess={credentialResponse => {
-    console.log(credentialResponse);
-  }}
-  onError={() => {
-    console.log('Login Failed');
-  }}
-/>;</GoogleOAuthProvider>;
+          <GoogleOAuthProvider clientId="294536364723-56kfvttecvq2vaspgf6qv6742l4ruj68.apps.googleusercontent.com">
+
+            <GoogleLogin id="custom-login-button"
+              onSuccess={credentialResponse => {
+                console.log(credentialResponse);
+              }}
+              onError={() => {
+                console.log('Login Failed');
+              }}
+            />;</GoogleOAuthProvider>;
 
           {/* <div className="googlepart">
             <img src={google} className="icon"></img>
