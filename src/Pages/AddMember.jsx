@@ -9,50 +9,49 @@ export default function AddMember() {
     img: "",
     access: "",
   });
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [img, setImage] = useState("");
-  const [access, setAccess] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (name === "") {
-      console.log("please enter name");
-      return;
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    if (name === "access") {
+      setData({ ...data, [name]: Number(value) });
+    } else {
+      setData({ ...data, [name]: value });
     }
-    if (email === "") {
-      console.log("please enter email");
-      return;
-    }
-    if (access === "") {
-      console.log("please enter department");
-      return;
-    }
-    if (img === "") {
-      console.log("please enter image");
+  };
+
+  const handleSubmit = async () => {
+    const { name, email, img, access } = data;
+
+    if (name === "" || email === "" || access == "" || img == "") {
+      console.log("Please Fill All Departments");
       return;
     }
 
+    console.log(name);
+    console.log(email);
+    console.log(img);
     console.log(access);
-    try {
-      const res = await axios.post("http://localhost:5000/Member/addMember", {
-        email,
-        name,
-        access,
-        img,
-      });
-      setName("");
-      setEmail("");
-      setAccess("");
-      setImage("");
-      console.log(res);
-    } catch (err) {
-      setName("");
-      setEmail("");
-      setAccess("");
-      setImage("");
-      console.log(err.response.data);
-    }
+
+    // try {
+    //   const res = await axios.post("http://localhost:5000/Member/addMember", {
+    //     email,
+    //     name,
+    //     access,
+    //     img,
+    //   });
+    //   setName("");
+    //   setEmail("");
+    //   setAccess("");
+    //   setImage("");
+    //   console.log(res);
+    // } catch (err) {
+    //   setName("");
+    //   setEmail("");
+    //   setAccess("");
+    //   setImage("");
+    //   console.log(err.response.data);
+    // }
   };
 
   return (
@@ -64,8 +63,10 @@ export default function AddMember() {
             className="addMemNameInput"
             type="text"
             placeholder="Enter member name"
-            value={data.name}
-            onChange={(e) => setData({ name })}
+            name="name"
+            // value={data.name}
+            onChange={DataInp}
+            // onChange={(e) => setData({ name: e.target.value })}
           />
         </div>
         <div className="addMemEmail">
@@ -74,16 +75,20 @@ export default function AddMember() {
             className="addMemEmailInput"
             type="email"
             placeholder="Enter email id"
-            value={data.email}
-            onChange={(e) => setData({ email })}
+            name="email"
+            // value={data.email}
+            onChange={DataInp}
+            // onChange={(e) => setData({ email: e.target.value })}
           />
         </div>
         <div className="addMemDept">
           <div className="addMemDeptH">Department</div>
           <select
             className="addMemDeptInput"
-            value={data.access}
-            onChange={(e) => setData({ access: Number(e.target.value) })}
+            name="access"
+            // value={data.access}
+            onChange={DataInp}
+            // onChange={(e) => setData({ access: Number(e.target.value) })}
           >
             <option value="" hidden>
               Select Department
@@ -111,12 +116,12 @@ export default function AddMember() {
             className="addMemImageInput"
             type="text"
             placeholder="Enter image link"
-            value={data.img}
-            onChange={(e) => setData({ img })}
+            name="img"
+            onChange={DataInp}
           />
         </div>
         <div className="addMemButton">
-          <button type="submit" onClick={handleSubmit}>
+          <button type="button" onClick={handleSubmit}>
             ADD MEMBER
           </button>
         </div>
