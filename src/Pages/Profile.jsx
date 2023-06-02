@@ -27,6 +27,7 @@ export default function Profile() {
         <div className="profileLeft">
           <div className="profile">
             <div className="proHeading">
+              <div>fherjktherhfkejrhtjk</div>
               <p className="headInnerText">
                 <p>Profile Details</p>
                 <img src={penSvg} alt="" />
