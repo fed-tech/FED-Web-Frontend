@@ -3,13 +3,16 @@ import axios from "axios";
 import "../Pages/Css/addMember.css";
 
 export default function AddMember() {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    img: "",
+    access: "",
+  });
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  //   const [dept, setDept] = useState("");
   const [img, setImage] = useState("");
   const [access, setAccess] = useState("");
-  const [error, setError] = useState("");
-  const [initialize, setInitialize] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,18 +32,6 @@ export default function AddMember() {
       console.log("please enter image");
       return;
     }
-
-    // if (dept === "director") {
-    //   setAccess(2);
-    // } else if (dept === "creative") {
-    //   setAccess(3);
-    // } else if (dept === "technical") {
-    //   setAccess(4);
-    // } else if (dept === "marketing") {
-    //   setAccess(5);
-    // } else if (dept === "operations") {
-    //   setAccess(6);
-    // }
 
     console.log(access);
     try {
@@ -73,8 +64,8 @@ export default function AddMember() {
             className="addMemNameInput"
             type="text"
             placeholder="Enter member name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={data.name}
+            onChange={(e) => setData({ name })}
           />
         </div>
         <div className="addMemEmail">
@@ -83,16 +74,16 @@ export default function AddMember() {
             className="addMemEmailInput"
             type="email"
             placeholder="Enter email id"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={data.email}
+            onChange={(e) => setData({ email })}
           />
         </div>
         <div className="addMemDept">
           <div className="addMemDeptH">Department</div>
           <select
             className="addMemDeptInput"
-            value={access}
-            onChange={(e) => setAccess(Number(e.target.value))}
+            value={data.access}
+            onChange={(e) => setData({ access: Number(e.target.value) })}
           >
             <option value="" hidden>
               Select Department
@@ -120,8 +111,8 @@ export default function AddMember() {
             className="addMemImageInput"
             type="text"
             placeholder="Enter image link"
-            value={img}
-            onChange={(e) => setImage(e.target.value)}
+            value={data.img}
+            onChange={(e) => setData({ img })}
           />
         </div>
         <div className="addMemButton">
