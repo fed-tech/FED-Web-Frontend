@@ -1,22 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useCookies } from "react-cookie";
+
 import bcrypt from "bcryptjs-react";
-import { useGoogleLogin } from '@react-oauth/google';
 
 // axios
 import axios from "axios";
-// import Swal from "sweetalert2";
+import Swal from "sweetalert2";
 
 // Css
-import SuCss from "./Css/Signup.module.css";
+import SuCss from "./Css/CreateProfile.module.css";
 
 // state
 import AuthContext from "./../store/auth-context";
-import google from "../Img/Google.svg";
 
-import tick from "./../Img/tick.png";
-export default function Signup() {
+export default function CreateProfile() {
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -27,8 +24,6 @@ export default function Signup() {
   const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
-  const [codeResponse,setCodeResponse] = useState();
-  const [modal,setModal] = useState(false);
 
   const options = [
     { value: "", text: "Year" },
@@ -38,16 +33,15 @@ export default function Signup() {
     { value: "4th", text: "4th year" },
     { value: "5th", text: "5th year" },
   ];
-
   const [showUser, setUser] = useState({
     email: "",
     Password: "",
-    FirstName: "",
-    LastName: "",
+    name: "",
     RollNumber: "",
     School: "",
     College: "",
     MobileNo: "",
+    img: "",
   });
 
   const [selected, setSelected] = useState(options[0].value);
@@ -61,42 +55,7 @@ export default function Signup() {
     const name = e.target.name;
     const value = e.target.value;
 
-    if (name === "email") {
-      if (value.indexOf("@") === -1 || value.indexOf(".") === -1) {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    } else if (value === "") {
-      e.target.style.borderBottom = "2px solid  #FF0000";
-      e.target.style.outline = "none";
-    }
 
-    if (name === "Password") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "FirstName") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "LastName") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
     if (name === "RollNumber") {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
@@ -142,66 +101,46 @@ export default function Signup() {
     console.log(showUser);
   };
 
-
-  const login = useGoogleLogin({
-    onSuccess:(response)=>setCodeResponse(response)
-  })
-
-  useEffect(()=>{
-    
-    if (codeResponse) {
-      axios
-          .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`, {
-              headers: {
-                  Authorization: `Bearer ${codeResponse.access_token}`,
-                  Accept: 'application/json'
-              }
-          })
-          .then((res) => {
-              localStorage.setItem('user',JSON.stringify(res.data));
-              navigate('/createprofile');
-
-          })
-          .catch((err) => console.log(err));
-  }
-},[codeResponse]);
-
-
-  
-
   useEffect(() => {
     setIsinValid(false);
   }, [showUser, selected]);
 
-  const handleSignUp = async (e) => {
+  const handleCreateProfile = async (e) => {
     e.preventDefault();
+    const profile = JSON.parse(localStorage.getItem('user'));
+    showUser.email = profile.email;
+    showUser.Password = profile.id;
+    showUser.name = profile.name;
+    showUser.img = profile.picture;
     const {
       email,
       Password,
-      FirstName,
-      LastName,
+      name,
       RollNumber,
       School,
       College,
       MobileNo,
+      img,
     } = showUser;
-    const name = FirstName + " " + LastName;
+    
+
+    const password = bcrypt.hashSync(
+      Password,
+      "$2b$10$Q0RPeouqYdTToq76zoccIO"
+    );
     if (
       name !== "" &&
       RollNumber !== "" &&
+      Password !== ""&&
       School !== "" &&
       College !== "" &&
       MobileNo !== "" &&
       MobileNo.length<=12 &&
       MobileNo.length>=10 &&
       email !== "" &&
-      Password !== "" &&
-      selected !== "Year"
+      selected !== "Year"&&
+      img != ""
     ) {
-      const password = bcrypt.hashSync(
-        Password,
-        "$2b$10$Q0RPeouqYdTToq76zoccIO"
-      );
       const userObject = {
         name,
         email,
@@ -211,24 +150,38 @@ export default function Signup() {
         College,
         MobileNo,
         selected,
+        img,
       };
+      console.log("user object: ",userObject);
       try {
         const response = await axios.post(
-          `http://localhost:5000/auth/register`,
+          `http://localhost:5000/auth/googleregister`,
           userObject
         );
         const success = response.status === 200;
         if (success) {
-          // Swal.fire({
-          //   icon: "success",
-          //   title: "SignuUp Successfully",
-          //   text: "Please check your mail",
-          //   confirmButtonText: "ok",
-          //   confirmButtonColor: "#f45725",
-          //   SwalModalColor: "black",
-          // });
-          setModal(!modal);
-          // navigate("/Login");
+          const username = userObject.email;
+          const password = userObject.password;
+          axios.post(`http://localhost:5000/auth/login`, {
+            username,
+            password,
+          }).then((res)=>{
+            authCtx.login(
+              res.data.result[0].name,
+              res.data.result[0].email,
+              res.data.result[0].img,
+              res.data.result[0].RollNumber,
+              res.data.result[0].School,
+              res.data.result[0].College,
+              res.data.result[0].MobileNo,
+              res.data.result[0].selected,
+              res.data.token,
+              10800000
+            );
+            navigate("/MyProfile");
+            return;
+
+          })
         }
       } catch (error) {
         setIsinValid(true);
@@ -254,57 +207,14 @@ export default function Signup() {
       }
     }
   };
-  const toggleModel = () => {
-    setModal(!modal);
-  };
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
         <p className={SuCss.FED}>FED</p>
         <div className={SuCss.wFFFDiv}>
-          <div className={SuCss.helloDiv}> Hello There</div>
+          <div className={SuCss.helloDiv}> Create Profile</div>
           <p className={SuCss.plsDiv}> Please enter Your Details</p>
-
-          <div className={SuCss.googleDiv} onClick={() => login()}>
-            <img src={google} className="icon"></img>
-            <p className={SuCss.googleText}>SignUp with google</p>
-              
-          </div>
-
-          <p className={SuCss.OrText}>Or</p>
           <div className={SuCss.form}>
-            <input
-              id="first_name"
-              type="text"
-              name="FirstName"
-              placeholder="First Name"
-              onChange={DataInp}
-              style={{
-                borderBottom: firstNameerr
-                  ? "2px solid red"
-                  : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="last_name"
-              name="LastName"
-              placeholder="Last Name"
-              onChange={DataInp}
-              style={{
-                borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
             <input
               type="text"
               id="rollNum"
@@ -345,16 +255,6 @@ export default function Signup() {
                 borderBottom: emailerr ? "2px solid red" : "2px solid black",
               }}
             />
-            <input
-              type="password"
-              id="password"
-              name="Password"
-              placeholder="Password"
-              onChange={DataInp}
-              style={{
-                borderBottom: passwrderr ? "2px solid red" : "2px solid black",
-              }}
-            />
             <select
               value={selected}
               onChange={handleChange}
@@ -366,15 +266,9 @@ export default function Signup() {
                 </option>
               ))}
             </select>
-            <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
-              SignUp
+            <button type="submit" className={SuCss.btn} onClick={handleCreateProfile}>
+              create profile
             </button>
-            <p className={SuCss.member}>
-              Already a member?{" "}
-              <Link to="/Login">
-                <span className={SuCss.spn}>Login</span>
-              </Link>
-            </p>
             <p
               className={SuCss.signupErrDiv}
               style={{ color: isinValid ? "red" : "white" }}
@@ -384,18 +278,8 @@ export default function Signup() {
           </div>
         </div>
       </div>
-      {modal && (
-        <div className={SuCss.modal}>
-          <div className={SuCss.modalcontent}>
-            <img src={tick}></img>
-            <h2>SignUp Successfully!</h2>
-            <h3>Please check your mail !!</h3>
-            <button className={SuCss.ok} onClick={toggleModel}>
-              OK
-            </button>
-          </div>
-        </div>
-      )}
     </div>
+    
   );
 }
+

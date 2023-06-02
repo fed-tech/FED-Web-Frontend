@@ -29,12 +29,17 @@ import AuthContext from "./store/auth-context";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
+<<<<<<< HEAD
 
 // axios
 import axios from "axios";
 
 // Base URL
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
+=======
+import ForgotPassword from "./Pages/ForgotPassword";
+import CreateProfile from "./Pages/CreateProfile";
+>>>>>>> 2657ac3224a6f345fd39c89d5aaaba06dd786440
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -77,12 +82,18 @@ function App() {
               path="/MyProfile"
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
+<<<<<<< HEAD
             <Route
               path="/admin/addMember"
               element={authCtx.user.access === "0" ? <AddMember /> : <Error />}
             />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
+=======
+            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
+            <Route path="/resetpassword" element = {<ResetPassword/>}/>
+            <Route path="/createprofile" element = {<CreateProfile/>}/>
+>>>>>>> 2657ac3224a6f345fd39c89d5aaaba06dd786440
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
