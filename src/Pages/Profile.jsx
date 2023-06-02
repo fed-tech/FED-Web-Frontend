@@ -30,7 +30,7 @@ export default function Profile() {
               {authCtx.user.access === 0 ? (
                 <>
                   <div>
-                    <Link to="/admin/addMember">Add Member</Link>
+                    <Link to="/admin/Member">Member</Link>
                   </div>
                   <br />
                   <br />
