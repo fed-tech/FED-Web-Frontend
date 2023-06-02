@@ -18,6 +18,7 @@ import Profile from "./Pages/Profile";
 import ResetPassword from "./Pages/ResetPassword";
 import ForgotPassword from "./Pages/ForgotPassword";
 import AddMember from "./Pages/AddMember";
+import Member from "./Pages/Member";
 
 // Components
 import Nav from "./Components/Nav";
@@ -73,8 +74,8 @@ function App() {
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
             <Route
-              path="/admin/addMember"
-              element={authCtx.user.access === 0 ? <AddMember /> : <Error />}
+              path="/admin/Member"
+              element={authCtx.user.access === 0 ? <Member /> : <Error />}
             />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
