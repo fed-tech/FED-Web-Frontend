@@ -33,7 +33,7 @@ export default function AddMember() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/Member/addMember", {
+      const res = await axios.post("/Member/addMember", {
         email,
         name,
         access,
