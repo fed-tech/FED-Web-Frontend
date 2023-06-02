@@ -196,6 +196,7 @@
   box-shadow: inset;
   font-size: 20px;
   border-radius: 2%;
+  cursor: pointer;
 }
 
 @media (max-width: 880px) {

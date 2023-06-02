@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
-import { useGoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from "@react-oauth/google";
 
 // axios
 import axios from "axios";
@@ -27,8 +27,8 @@ export default function Signup() {
   const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
-  const [codeResponse,setCodeResponse] = useState();
-  const [modal,setModal] = useState(false);
+  const [codeResponse, setCodeResponse] = useState();
+  const [modal, setModal] = useState(false);
 
   const options = [
     { value: "", text: "Year" },
@@ -142,32 +142,63 @@ export default function Signup() {
     console.log(showUser);
   };
 
-
   const login = useGoogleLogin({
-    onSuccess:(response)=>setCodeResponse(response)
-  })
+    onSuccess: (response) => setCodeResponse(response),
+  });
 
-  useEffect(()=>{
-    
+  useEffect(() => {
     if (codeResponse) {
       axios
-          .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`, {
-              headers: {
-                  Authorization: `Bearer ${codeResponse.access_token}`,
-                  Accept: 'application/json'
+        .get(
+          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
+          {
+            headers: {
+              Authorization: `Bearer ${codeResponse.access_token}`,
+              Accept: "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          const mail = res.data.email;
+          console.log(mail)
+          axios
+            .post("http://localhost:5000/auth/googleverification", {
+              email: mail,
+            })
+            .then((response) => {
+              if (response.data.code === 1) {
+                const username = response.data.email;
+                const password = response.data.password;
+                axios
+                  .post(`http://localhost:5000/auth/login`, {
+                    username,
+                    password,
+                  })
+                  .then((resp) => {
+                    authCtx.login(
+                      resp.data.result[0].name,
+                      resp.data.result[0].email,
+                      resp.data.result[0].img,
+                      resp.data.result[0].RollNumber,
+                      resp.data.result[0].School,
+                      resp.data.result[0].College,
+                      resp.data.result[0].MobileNo,
+                      resp.data.result[0].selected,
+                      resp.data.token,
+                      10800000
+                    );
+                    navigate("/MyProfile");
+                    return;
+                  });
+              } else {
+                localStorage.setItem("user", JSON.stringify(res.data));
+                navigate("/createprofile");
               }
-          })
-          .then((res) => {
-              localStorage.setItem('user',JSON.stringify(res.data));
-              navigate('/createprofile');
-
-          })
-          .catch((err) => console.log(err));
-  }
-},[codeResponse]);
-
-
-  
+            });
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [codeResponse]);
 
   useEffect(() => {
     setIsinValid(false);
@@ -192,8 +223,8 @@ export default function Signup() {
       School !== "" &&
       College !== "" &&
       MobileNo !== "" &&
-      MobileNo.length<=12 &&
-      MobileNo.length>=10 &&
+      MobileNo.length <= 12 &&
+      MobileNo.length >= 10 &&
       email !== "" &&
       Password !== "" &&
       selected !== "Year"
@@ -242,20 +273,18 @@ export default function Signup() {
         console.log(error);
       }
     } else {
-      if(MobileNo === "" || (MobileNo.length<=12 && MobileNo.length>=10))
-      {
-
+      if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
         setErrMssg("Please fill all the fields");
-      }
-      else{
+      } else {
         setIsinValid(true);
-        setErrMssg("Invalid mobile number")
+        setErrMssg("Invalid mobile number");
       }
     }
   };
   const toggleModel = () => {
     setModal(!modal);
+    navigate("/Login");
   };
   return (
     <div className={SuCss.mDiv}>
@@ -268,7 +297,6 @@ export default function Signup() {
           <div className={SuCss.googleDiv} onClick={() => login()}>
             <img src={google} className="icon"></img>
             <p className={SuCss.googleText}>SignUp with google</p>
-              
           </div>
 
           <p className={SuCss.OrText}>Or</p>
