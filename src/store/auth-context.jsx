@@ -14,6 +14,7 @@ const AuthContext = React.createContext({
     college: "",
     mobileNo: "",
     selected: "",
+    access: "",
   },
   target: null,
   login: async (token) => {},
@@ -78,6 +79,7 @@ export const AuthContextProvider = (props) => {
   const targetHandler = (t) => {
     setTarget(t);
   };
+
   const logoutHandler = useCallback(() => {
     setToken(null);
     setUserIsLoggedIn(false);
@@ -101,6 +103,7 @@ export const AuthContextProvider = (props) => {
     college,
     mobileNo,
     selected,
+    access,
     token,
     expirationTime
   ) => {
@@ -114,6 +117,7 @@ export const AuthContextProvider = (props) => {
       college: college,
       mobileNo: mobileNo,
       selected: selected,
+      access: access,
     };
 
     localStorage.setItem("user", JSON.stringify(setuserdata));
