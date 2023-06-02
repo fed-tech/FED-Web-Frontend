@@ -16,6 +16,8 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
 import ResetPassword from "./Pages/ResetPassword";
+import ForgotPassword from "./Pages/ForgotPassword";
+import AddMember from "./Pages/AddMember";
 
 // Components
 import Nav from "./Components/Nav";
@@ -27,8 +29,9 @@ import AuthContext from "./store/auth-context";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
-import ForgotPassword from "./Pages/ForgotPassword";
-import AddMember from "./Pages/AddMember";
+
+// Base URL
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
   const authCtx = useContext(AuthContext);
