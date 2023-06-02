@@ -16,7 +16,6 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
 import ResetPassword from "./Pages/ResetPassword";
-// import MyProfile from "./Components/Profile/MyProfile";
 
 // Components
 import Nav from "./Components/Nav";
@@ -75,9 +74,7 @@ function App() {
             />
             <Route
               path="/admin/addMember"
-              element={
-                localStorage.getItem("admin") ? <AddMember /> : <Error />
-              }
+              element={authCtx.user.access === "0" ? <AddMember /> : <Error />}
             />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
