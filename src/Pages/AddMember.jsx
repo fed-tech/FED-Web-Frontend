@@ -64,9 +64,7 @@ export default function AddMember() {
             type="text"
             placeholder="Enter member name"
             name="name"
-            // value={data.name}
             onChange={DataInp}
-            // onChange={(e) => setData({ name: e.target.value })}
           />
         </div>
         <div className="addMemEmail">
@@ -76,20 +74,12 @@ export default function AddMember() {
             type="email"
             placeholder="Enter email id"
             name="email"
-            // value={data.email}
             onChange={DataInp}
-            // onChange={(e) => setData({ email: e.target.value })}
           />
         </div>
         <div className="addMemDept">
           <div className="addMemDeptH">Department</div>
-          <select
-            className="addMemDeptInput"
-            name="access"
-            // value={data.access}
-            onChange={DataInp}
-            // onChange={(e) => setData({ access: Number(e.target.value) })}
-          >
+          <select className="addMemDeptInput" name="access" onChange={DataInp}>
             <option value="" hidden>
               Select Department
             </option>
