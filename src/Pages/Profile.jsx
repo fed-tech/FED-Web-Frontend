@@ -82,6 +82,12 @@ export default function Profile() {
           </p>
           <p style={{ textAlign: "right" }}>
             {authCtx.user.access} ={authCtx.user.access === 0 ? "Admin" : ""}
+            {authCtx.user.access === 1 ? "User" : ""}
+            {authCtx.user.access === 2 ? "director" : ""}
+            {authCtx.user.access === 3 ? "creative member" : ""}
+            {authCtx.user.access === 4 ? "tech member" : ""}
+            {authCtx.user.access === 5 ? "marketing member" : ""}
+            {authCtx.user.access === 6 ? "operations member" : ""}
           </p>
         </div>
       </div>
