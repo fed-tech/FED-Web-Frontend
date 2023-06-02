@@ -33,20 +33,20 @@ export default function AddMember() {
     console.log(img);
     console.log(access);
 
-    setData({ name: "", email: "", img: "", access: "" });
-
-    // try {
-    //   const res = await axios.post("http://localhost:5000/Member/addMember", {
-    //     email,
-    //     name,
-    //     access,
-    //     img,
-    //   });
-
-    //   console.log(res);
-    // } catch (err) {
-    //   console.log(err.response.data);
-    // }
+    try {
+      const res = await axios.post("http://localhost:5000/Member/addMember", {
+        email,
+        name,
+        access,
+        img,
+      });
+      if (res.data.status) {
+        console.log(res.data.status);
+        setData({ name: "", email: "", img: "", access: "" });
+      }
+    } catch (err) {
+      console.log(err.response.data);
+    }
   };
 
   return (
