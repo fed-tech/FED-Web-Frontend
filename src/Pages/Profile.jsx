@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // css
 import "./Css/Profilecss/profile.css";
@@ -27,7 +27,9 @@ export default function Profile() {
         <div className="profileLeft">
           <div className="profile">
             <div className="proHeading">
-              <div>fherjktherhfkejrhtjk</div>
+              <div>
+                <Link to="/admin/addMember">Add Member</Link>
+              </div>
               <p className="headInnerText">
                 <p>Profile Details</p>
                 <img src={penSvg} alt="" />
