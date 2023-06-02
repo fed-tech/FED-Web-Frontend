@@ -13,6 +13,8 @@ import AuthContext from "./../store/auth-context";
 export default function Profile() {
   const authCtx = useContext(AuthContext);
 
+  console.log(authCtx);
+
   const navigate = useNavigate();
 
   function handleLogout() {
