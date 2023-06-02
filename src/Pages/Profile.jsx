@@ -27,9 +27,19 @@ export default function Profile() {
         <div className="profileLeft">
           <div className="profile">
             <div className="proHeading">
-              <div>
-                <Link to="/admin/addMember">Add Member</Link>
-              </div>
+              {authCtx.user.access === 0 ? (
+                <>
+                  <div>
+                    <Link to="/admin/addMember">Add Member</Link>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                </>
+              ) : (
+                ""
+              )}
+
               <p className="headInnerText">
                 <p>Profile Details</p>
                 <img src={penSvg} alt="" />
