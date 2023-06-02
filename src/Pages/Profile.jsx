@@ -80,6 +80,9 @@ export default function Profile() {
             </p>
             <p>IN YOU</p>
           </p>
+          <p style={{ textAlign: "right" }}>
+            {authCtx.user.access} ={authCtx.user.access === 0 ? "Admin" : ""}
+          </p>
         </div>
       </div>
     </div>
