@@ -13,8 +13,6 @@ import AuthContext from "./../store/auth-context";
 export default function Profile() {
   const authCtx = useContext(AuthContext);
 
-  console.log(authCtx);
-
   const navigate = useNavigate();
 
   function handleLogout() {
@@ -35,28 +33,41 @@ export default function Profile() {
               </p>
             </div>
             <div className="details">
-              <div className="keys">
-                <p className="dets">Full Name</p>
-                <p className="dets">Roll Number</p>
-                <p className="dets">Email ID</p>
-                <p className="dets">Year</p>
-                <p className="dets">School</p>
-                <p className="dets">College</p>
-                <p className="dets">Mobile No</p>
-                <button className="logoutBtn" onClick={handleLogout}>
-                  Logout
-                </button>
-              </div>
-
-              <div className="values">
-                <p className="vals">{authCtx.user.name}</p>
-                <p className="vals">{authCtx.user.rollNo}</p>
-                <p className="vals">{authCtx.user.email}</p>
-                <p className="vals">{authCtx.user.selected}</p>
-                <p className="vals">{authCtx.user.school}</p>
-                <p className="vals">{authCtx.user.college}</p>
-                <p className="vals">{authCtx.user.mobileNo}</p>
-              </div>
+              <table className="profileTable">
+                <tbody>
+                  <tr>
+                    <td className="dets">Full Name</td>
+                    <td className="vals">{authCtx.user.name}</td>
+                  </tr>
+                  <tr>
+                    <td className="dets">Roll Number</td>
+                    <td className="vals">{authCtx.user.rollNo}</td>
+                  </tr>
+                  <tr>
+                    <td className="dets">Email ID</td>
+                    <td className="vals">{authCtx.user.email}</td>
+                  </tr>
+                  <tr>
+                    <td className="dets">Year</td>
+                    <td className="vals">{authCtx.user.selected}</td>
+                  </tr>
+                  <tr>
+                    <td className="dets">School</td>
+                    <td className="vals">{authCtx.user.school}</td>
+                  </tr>
+                  <tr>
+                    <td className="dets">College</td>
+                    <td className="vals">{authCtx.user.college}</td>
+                  </tr>
+                  <tr>
+                    <td className="dets">Mobile No</td>
+                    <td className="vals">{authCtx.user.mobileNo}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button className="logoutBtn" onClick={handleLogout}>
+                Logout
+              </button>
             </div>
           </div>
         </div>
