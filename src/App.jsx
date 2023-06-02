@@ -72,6 +72,10 @@ function App() {
               path="/MyProfile"
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
+            <Route
+              path="/admin/addMember"
+              element={authCtx.user.access === 0 ? <AddMember /> : <Error />}
+            />
             <Route path="/forgotpassword" element={<ForgotPassword />} />
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/createprofile" element={<CreateProfile />} />
