@@ -33,6 +33,8 @@ export default function AddMember() {
     console.log(img);
     console.log(access);
 
+    setData({ name: "", email: "", img: "", access: "" });
+
     // try {
     //   const res = await axios.post("http://localhost:5000/Member/addMember", {
     //     email,
@@ -40,16 +42,9 @@ export default function AddMember() {
     //     access,
     //     img,
     //   });
-    //   setName("");
-    //   setEmail("");
-    //   setAccess("");
-    //   setImage("");
+
     //   console.log(res);
     // } catch (err) {
-    //   setName("");
-    //   setEmail("");
-    //   setAccess("");
-    //   setImage("");
     //   console.log(err.response.data);
     // }
   };
@@ -64,6 +59,7 @@ export default function AddMember() {
             type="text"
             placeholder="Enter member name"
             name="name"
+            value={data.name}
             onChange={DataInp}
           />
         </div>
@@ -74,12 +70,18 @@ export default function AddMember() {
             type="email"
             placeholder="Enter email id"
             name="email"
+            value={data.email}
             onChange={DataInp}
           />
         </div>
         <div className="addMemDept">
           <div className="addMemDeptH">Department</div>
-          <select className="addMemDeptInput" name="access" onChange={DataInp}>
+          <select
+            className="addMemDeptInput"
+            name="access"
+            value={data.access}
+            onChange={DataInp}
+          >
             <option value="" hidden>
               Select Department
             </option>
@@ -107,6 +109,7 @@ export default function AddMember() {
             type="text"
             placeholder="Enter image link"
             name="img"
+            value={data.img}
             onChange={DataInp}
           />
         </div>
