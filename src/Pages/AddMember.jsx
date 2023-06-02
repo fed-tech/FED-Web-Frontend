@@ -28,11 +28,6 @@ export default function AddMember() {
       return;
     }
 
-    console.log(name);
-    console.log(email);
-    console.log(img);
-    console.log(access);
-
     try {
       const res = await axios.post("http://localhost:5000/Member/addMember", {
         email,
