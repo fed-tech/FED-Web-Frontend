@@ -30,6 +30,9 @@ import AuthContext from "./store/auth-context";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
+// axios
+import axios from "axios";
+
 // Base URL
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
