@@ -29,7 +29,6 @@ import AuthContext from "./store/auth-context";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
-import ForgotPassword from "./Pages/ForgotPassword";
 import CreateProfile from "./Pages/CreateProfile";
 
 function App() {
@@ -73,9 +72,9 @@ function App() {
               path="/MyProfile"
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
             />
-            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
-            <Route path="/resetpassword" element = {<ResetPassword/>}/>
-            <Route path="/createprofile" element = {<CreateProfile/>}/>
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
+            <Route path="/createprofile" element={<CreateProfile />} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
