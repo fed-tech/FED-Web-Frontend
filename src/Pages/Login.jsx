@@ -55,18 +55,10 @@ function Login(props) {
           username,
           password,
         });
+
         console.log(response);
-        console.log(response.data.result[0].name);
-        if (Number(response.data.result[0].access) === 0) {
-          localStorage.setItem("admin", true);
-          console.log("admin");
-        } else {
-          localStorage.setItem("admin", false);
-          console.log("not admin");
-        }
+
         if (response.status === 200) {
-          // setCookie("auth_token", response.data.token);
-          // props.setIsLoggedIn(true);
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -76,9 +68,11 @@ function Login(props) {
             response.data.result[0].College,
             response.data.result[0].MobileNo,
             response.data.result[0].selected,
+            response.data.result[0].access,
             response.data.token,
             10800000
           );
+
           navigate("/MyProfile");
           return;
         }
