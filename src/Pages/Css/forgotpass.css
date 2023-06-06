@@ -91,6 +91,9 @@
   line-height: 1.063rem;
   color: black;
 }
+#google {
+  color: black;
+}
 .googlepart {
   margin: 1.875rem;
   height: 2.625rem;
@@ -101,6 +104,9 @@
   display: flex;
     align-items: center;
     justify-content: center;
+}
+.googlepart GoogleOAuthProvider {
+  width : 100%;
 }
 .icon {
   width: 1.063rem;

@@ -3,6 +3,8 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
+import { GoogleOAuthProvider, useGoogleLogin } from '@react-oauth/google';
+import { GoogleLogin } from '@react-oauth/google';
 
 //  axios
 import axios from "axios";
@@ -17,6 +19,9 @@ import "../Pages/Css/loginpg.css";
 import google from "../Img/Google.svg";
 
 function Login(props) {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, [])
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -88,6 +93,33 @@ function Login(props) {
       }
     }
   };
+  const [ user, setUser ] = useState([]);
+    const [ profile, setProfile ] = useState([]);
+
+    const login = useGoogleLogin({
+        onSuccess: (codeResponse) => setUser(codeResponse),
+        onError: (error) => console.log('Login Failed:', error)
+    });
+
+    useEffect(
+        () => {
+            if (user) {
+                axios
+                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                        headers: {
+                            Authorization: `Bearer ${user.access_token}`,
+                            Accept: 'application/json'
+                        }
+                    })
+                    .then((res) => {
+                        setProfile(res.data);
+                        console.log(profile);
+                    })
+                    .catch((err) => console.log(err));
+            }
+        },
+        [ user ]
+    );
 
   return (
     <div className="full">
@@ -100,7 +132,19 @@ function Login(props) {
             <p className="welc">Welcome Back</p>
             <p className="det">Please Enter your details</p>
           </div>
-          <div className="googlepart">
+
+            <div className="googlepart" onClick={() => login()}>
+          {/* <GoogleOAuthProvider clientId="294536364723-56kfvttecvq2vaspgf6qv6742l4ruj68.apps.googleusercontent.com">
+
+            <GoogleLogin id="custom-login-button"
+              onSuccess={credentialResponse => {
+                console.log(credentialResponse);
+              }}
+              onError={() => {
+                console.log('Login Failed');
+              }}
+            />;</GoogleOAuthProvider>; */}
+
             <img src={google} className="icon"></img>
             <p className="log">Login with Google</p>
           </div>
