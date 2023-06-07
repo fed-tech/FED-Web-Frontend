@@ -178,6 +178,7 @@ export default function CreateProfile() {
               res.data.result[0].College,
               res.data.result[0].MobileNo,
               res.data.result[0].selected,
+              res.data.result[0].access,
               res.data.token,
               10800000
             );
