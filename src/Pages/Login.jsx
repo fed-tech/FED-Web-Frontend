@@ -138,7 +138,7 @@ function Login(props) {
                       resp.data.result[0].College,
                       resp.data.result[0].MobileNo,
                       resp.data.result[0].selected,
-                      resp.data.result[0].access,
+                      Number(resp.data.result[0].access),
                       resp.data.token,
                       10800000
                     );
