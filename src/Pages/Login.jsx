@@ -3,8 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
-import { GoogleOAuthProvider, useGoogleLogin } from '@react-oauth/google';
-import { GoogleLogin } from '@react-oauth/google';
+import { useGoogleLogin } from "@react-oauth/google";
 
 //  axios
 import axios from "axios";
@@ -17,6 +16,7 @@ import "../Pages/Css/loginpg.css";
 
 // img
 import google from "../Img/Google.svg";
+import Swal from "sweetalert2";
 
 function Login(props) {
   useEffect(() => {
@@ -33,6 +33,7 @@ function Login(props) {
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
+  const [codeResponse, setCodeResponse] = useState();
 
   useEffect(() => {
     setIsinValid(false);
@@ -93,33 +94,72 @@ function Login(props) {
       }
     }
   };
-  const [ user, setUser ] = useState([]);
-    const [ profile, setProfile ] = useState([]);
 
-    const login = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log('Login Failed:', error)
-    });
+  const login = useGoogleLogin({
+    onSuccess: (response) => setCodeResponse(response),
+  });
 
-    useEffect(
-        () => {
-            if (user) {
+  useEffect(() => {
+    if (codeResponse) {
+      axios
+        .get(
+          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
+          {
+            headers: {
+              Authorization: `Bearer ${codeResponse.access_token}`,
+              Accept: "application/json",
+            },
+          }
+        )
+        .then((res) => {
+          const mail = res.data.email;
+          console.log(mail)
+          axios
+            .post("http://localhost:5000/auth/googleverification", {
+              email: mail,
+            })
+            .then((response) => {
+              if (response.data.code === 1) {
+                const username = response.data.email;
+                const password = response.data.password;
                 axios
-                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
-                        headers: {
-                            Authorization: `Bearer ${user.access_token}`,
-                            Accept: 'application/json'
-                        }
-                    })
-                    .then((res) => {
-                        setProfile(res.data);
-                        console.log(profile);
-                    })
-                    .catch((err) => console.log(err));
-            }
-        },
-        [ user ]
-    );
+                  .post(`http://localhost:5000/auth/login`, {
+                    username,
+                    password,
+                  })
+                  .then((resp) => {
+                    authCtx.login(
+                      resp.data.result[0].name,
+                      resp.data.result[0].email,
+                      resp.data.result[0].img,
+                      resp.data.result[0].RollNumber,
+                      resp.data.result[0].School,
+                      resp.data.result[0].College,
+                      resp.data.result[0].MobileNo,
+                      resp.data.result[0].selected,
+                      resp.data.token,
+                      10800000
+                    );
+                    navigate("/MyProfile");
+                    return;
+                  });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Email does not exist",
+                  text:"Please signup first",
+                  confirmButtonText: "ok",
+                  confirmButtonColor: "#f45725",
+                  background: "black",
+                  color:"white",
+              });
+                navigate("/signup");
+              }
+            });
+        })
+        .catch((err) => console.log(err));
+    }
+  }, [codeResponse]);
 
   return (
     <div className="full">
@@ -132,19 +172,7 @@ function Login(props) {
             <p className="welc">Welcome Back</p>
             <p className="det">Please Enter your details</p>
           </div>
-
-            <div className="googlepart" onClick={() => login()}>
-          {/* <GoogleOAuthProvider clientId="294536364723-56kfvttecvq2vaspgf6qv6742l4ruj68.apps.googleusercontent.com">
-
-            <GoogleLogin id="custom-login-button"
-              onSuccess={credentialResponse => {
-                console.log(credentialResponse);
-              }}
-              onError={() => {
-                console.log('Login Failed');
-              }}
-            />;</GoogleOAuthProvider>; */}
-
+          <div className="googlepart" onClick={() => login()}>
             <img src={google} className="icon"></img>
             <p className="log">Login with Google</p>
           </div>
