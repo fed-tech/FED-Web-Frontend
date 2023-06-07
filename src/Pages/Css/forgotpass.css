@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
 
-.full {
+.full-page {
   background-image: url(../../Img/image-23.png);
   height: 64rem;
   width: 100%;
@@ -13,12 +13,12 @@
   text-align: center;
   color: black;
 }
-#errmssg{
+#errmssg1{
   font-size: 14px;
   margin-top: 15px;
   user-select: none;
 }
-.inside {
+.insidebox {
   background-color: rgba(0,0,0,0.3);
   
   height: 29.569rem;
@@ -32,7 +32,7 @@
   text-align: center;
   padding: 15px 70px 44px 70px;  
 }
-.title1 {
+.title2 {
   text-align: center;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
@@ -42,13 +42,13 @@
   line-height: 3.688rem;
   margin-bottom: 4.25rem;
 }
-.title1 p{
+.title2 p{
    color: white;
    margin: 0;
    font-size: 2.313rem;
 }
 
-.whitebox {
+.whitebox1 {
   width: 100%;
   height: 34.569rem;
   padding: 30px 57px;
@@ -61,14 +61,14 @@
   justify-content: space-evenly;
   position: relative;
 }
-.hellopart{
+.hellopart1{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.welc {
+.welc1 {
   margin-top: 2rem;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
@@ -80,7 +80,7 @@
   color: black;
 }
 
-.det {
+.det1 {
   width: 9.375rem;
   height: 1.063rem;
   background-color: transparent;
@@ -94,7 +94,7 @@
 #google {
   color: black;
 }
-.googlepart {
+.googlepart1 {
   margin: 1.875rem;
   height: 2.625rem;
   width: 100%;
@@ -105,15 +105,15 @@
     align-items: center;
     justify-content: center;
 }
-.googlepart GoogleOAuthProvider {
+.googlepart1 GoogleOAuthProvider {
   width : 100%;
 }
-.icon {
+.icon1 {
   width: 1.063rem;
   height: 1.063rem;
   margin-right: 6px;
 }
-.log {
+.log1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -123,7 +123,7 @@
   color: black;
 }
 
-.or {
+.or1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -133,7 +133,7 @@
   color: black;
 }
 
-.signup {
+.signup1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -143,7 +143,7 @@
   color: black;
 }
 
-.spn {
+.spn1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -153,7 +153,7 @@
   color: black;
   text-decoration: none;
 }
-.spn:after{
+.spn1:after{
   content: "";
   width: 0;
   height: 3px;
@@ -162,19 +162,19 @@
   margin-left: 155px;
   transition: 0.3s;
 }
-.spn:hover:after{
+.spn1:hover:after{
   width: 25%;
   transition: width 0.3s linear;
 }
-.spn:hover{
+.spn1:hover{
   color: blue;
 }
 
-.login-btn{
+.login-btn1{
   width: 22.176rem;
   height: 2.446rem;
 }
-.logtwo {
+.logtwo1 {
   width: 100%;
   margin-top: 31.15px;
     padding: 7.3px;
@@ -212,7 +212,7 @@
   border-bottom: 1.5px solid black;
   
 }
-.username {
+.username1 {
   border: none;
   color: black;
   font-size: 0.75rem;
@@ -220,10 +220,10 @@
   font-family: "Mulish", sans-serif;
 
 }
-.username:focus {
+.username1:focus {
   outline: none;
 }
-.password {
+.password1 {
   border: none;
   color: black;
   font-size: 0.75rem;
@@ -231,10 +231,10 @@
   font-family: "Mulish", sans-serif;
 
 }
-.password:focus {
+.password1:focus {
   outline: none;
 }
-.signup {
+.signup1 {
   padding-top: 1.25rem;
 }
 
@@ -244,66 +244,66 @@
   border: 1px solid #ccc;
   outline: none;
 }
-.forgotPassword{
+.forgotPassword1{
   width: 100%;
   padding: 6.9px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.forgotPassword p{
+.forgotPassword1 p{
   color: black;
   cursor: pointer;
   font-family: "Mulish", sans-serif;
   font-size: 13px;
 }
-.forgotPassword p:hover{
+.forgotPassword1 p:hover{
   color: #f45725;
 }
 
 @media (max-width: 1200px) and (min-width: 1000px) {
-  .inside {
+  .insidebox {
     width: 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 1000px) and (min-width: 800px) {
-  .inside {
+  .insidebox {
     width: 60%;
     max-width: 60%;
   }
 }
 @media (max-width: 800px) and (min-width: 760px) {
-  .inside {
+  .insidebox {
     width: 65%;
     max-width: 65%;
   }
 }
 @media (max-width: 760px) and (min-width: 530px) {
-  .inside {
+  .insidebox {
     width: 70%;
     max-width: 70%;
     padding: 15px 40px 40px 40px;
   }
 }
 @media (max-width: 530px) {
-  .inside {
+  .insidebox {
     width: 80%;
     max-width: 80%;
     padding: 15px 40px 40px 40px;
   }
-  .whitebox {
+  .whitebox1 {
     margin-top: 30.8px;
     padding: 35px 35px;
   }
 }
 @media (max-width: 400px) {
-  .inside {
+  .insidebox {
     width: 100%;
     max-width: 100%;
     padding: 15px 40px 40px 40px;
   }
-  .whitebox {
+  .whitebox1 {
     margin-top: 30.8px;
     padding: 30px 30px;
   }
