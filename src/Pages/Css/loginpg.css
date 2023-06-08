@@ -18,8 +18,8 @@
 }
 .inside {
   background-color: rgba(0,0,0,0.3);
-  
-  height: 47.188rem;
+  margin-top: 221px;
+    height: 47.188rem;
   width:60%;
   max-width: 44%;
   display: flex;

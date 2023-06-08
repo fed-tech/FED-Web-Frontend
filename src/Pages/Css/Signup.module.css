@@ -32,7 +32,7 @@
   font-family: rubik;
   font-style: normal;
   text-shadow: 1px 0.496831px 1px #f45725;
-  font-size: 48px;
+  font-size: 37px;
   font-weight: 700;
 }
 .wFFFDiv {
@@ -180,7 +180,8 @@ input::placeholder {
   align-items: center;
   height: 250px;
   width: 400px;
-  position: absolute;
+  position: fixed;
+  top : 40%;
   border-radius: 5%;
 }
 .modalcontent h2 {
