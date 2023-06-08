@@ -33,6 +33,11 @@ function ForgotPassword() {
             icon: "success",
             confirmButtonText: "ok",
             confirmButtonColor: "#f45725",
+            background: "black",
+            color: "white",
+            customClass: {
+              title: "my-title-class",
+            },
           });
           localStorage.removeItem("Email");
           navigate("/Login");
