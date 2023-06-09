@@ -254,7 +254,9 @@
 .forgotPassword p:hover{
   color: #f45725;
 }
-
+.my-title-class{
+  font-family:"Rubik", sans-serif;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
   .inside3 {
     width: 50%;
