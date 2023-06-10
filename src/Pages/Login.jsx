@@ -216,7 +216,7 @@ function Login(props) {
             <p className="signup">
               Don't have an account?{" "}
               <Link to="/Signup">
-                <span className="spn">Signup</span>
+                <span className="spann">Signup</span>
               </Link>
             </p>
             <p id="errmssg" style={{ color: isinValid ? "red" : "white" }}>

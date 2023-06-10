@@ -142,7 +142,7 @@
   color: black;
 }
 
-/* .spn {
+.spann {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -152,22 +152,22 @@
   color: black;
   text-decoration: none;
 }
-.spn:after{
+.spann:after{
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display:flex;
   margin-left: 155px;
   transition: 0.3s;
 }
-.spn:hover:after{
+.spann:hover:after{
   width: 25%;
   transition: width 0.3s linear;
 }
-.spn:hover{
-  color: blue;
-} */
+.spann:hover{
+  color: #f45725;
+}
 
 .login-btn{
   width: 22.176rem;
