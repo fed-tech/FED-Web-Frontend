@@ -142,7 +142,7 @@
   color: black;
 }
 
-.spn {
+/* .spn {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -167,7 +167,7 @@
 }
 .spn:hover{
   color: blue;
-}
+} */
 
 .login-btn{
   width: 22.176rem;

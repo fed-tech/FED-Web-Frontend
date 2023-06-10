@@ -149,10 +149,10 @@ input::placeholder {
 .spn:after {
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display: flex;
-  margin-left: 120px;
+  margin-left: 124px;
   transition: 0.3s;
 }
 .spn:hover:after {
@@ -160,7 +160,7 @@ input::placeholder {
   transition: width 0.3s linear;
 }
 .spn:hover {
-  color: blue;
+  color: #f45725;
 }
 
 .year {
