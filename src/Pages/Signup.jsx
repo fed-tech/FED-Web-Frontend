@@ -34,7 +34,6 @@ export default function Signup() {
   const [modal, setModal] = useState(false);
 
   const options = [
-    { value: "", text: "Year" },
     { value: "1st", text: "1st year" },
     { value: "2nd", text: "2nd year" },
     { value: "3rd", text: "3rd year" },
@@ -53,7 +52,7 @@ export default function Signup() {
     MobileNo: "",
   });
 
-  const [selected, setSelected] = useState(options[0].value);
+  const [selected, setSelected] = useState("");
 
   const handleChange = (event) => {
     console.log(event.target.value);
@@ -196,7 +195,7 @@ export default function Signup() {
       MobileNo.length >= 10 &&
       email !== "" &&
       Password !== "" &&
-      selected !== "Year"
+      selected !== ""
     ) {
       const password = bcrypt.hashSync(
         Password,
@@ -357,6 +356,8 @@ export default function Signup() {
               onChange={handleChange}
               className={SuCss.year}
             >
+              <option hidden> Year
+                </option>
               {options.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.text}
