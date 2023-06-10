@@ -84,7 +84,7 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div className="profileRight">
+        {/* <div className="profileRight">
           <p className="illuminating">
             <p>ILLUMINATIING</p>
             <p>THE</p>
@@ -102,7 +102,7 @@ export default function Profile() {
             {authCtx.user.access === 5 ? "marketing member" : ""}
             {authCtx.user.access === 6 ? "operations member" : ""}
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
