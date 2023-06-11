@@ -15,6 +15,7 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
+import TCO from "./Pages/TCO";
 import ResetPassword from "./Pages/ResetPassword";
 import ForgotPassword from "./Pages/ForgotPassword";
 import AddMember from "./Pages/AddMember";
@@ -73,6 +74,10 @@ function App() {
             <Route
               path="/MyProfile"
               element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
+            />
+            <Route
+              path="/MyProfile/member"
+              element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
             />
             <Route
               path="/admin/Member"
