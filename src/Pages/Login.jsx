@@ -154,8 +154,8 @@ function Login(props) {
                   background: "black",
                   color: "white",
                   customClass: {
-                    text: "my-text-class",
                     title: "my-title-class",
+                    text: "my-text-class",
                   },
                 });
                 navigate("/signup");
