@@ -156,8 +156,8 @@
 .spn1:after{
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display:flex;
   margin-left: 155px;
   transition: 0.3s;
@@ -167,7 +167,7 @@
   transition: width 0.3s linear;
 }
 .spn1:hover{
-  color: blue;
+  color: #f45725;
 }
 
 .login-btn1{
@@ -260,7 +260,13 @@
 .forgotPassword1 p:hover{
   color: #f45725;
 }
-
+.my-text-class{
+  font-family: "Rubik", sans-serif;
+}
+.my-title-class
+{
+  font-family: "Rubik", sans-serif;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
   .insidebox {
     width: 50%;

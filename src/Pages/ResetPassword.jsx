@@ -31,8 +31,13 @@ function ForgotPassword() {
             title: "Password reset successfully",
             // text: "Please check your mail",
             icon: "success",
-            confirmButtonText: "ok",
+            confirmButtonText: "OK",
             confirmButtonColor: "#f45725",
+            background: "black",
+            color: "white",
+            customClass: {
+              title: "my-title-class",
+            },
           });
           localStorage.removeItem("Email");
           navigate("/Login");

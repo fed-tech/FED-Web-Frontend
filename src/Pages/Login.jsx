@@ -20,8 +20,8 @@ import Swal from "sweetalert2";
 
 function Login(props) {
   useEffect(() => {
-    window.scrollTo(0,0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -113,13 +113,12 @@ function Login(props) {
         )
         .then((res) => {
           const mail = res.data.email;
-          console.log(mail)
+          console.log(mail);
           axios
             .post("http://localhost:5000/auth/googleverification", {
               email: mail,
             })
             .then((response) => {
-              
               if (response.data.code === 1) {
                 const username = response.data.email;
                 const password = response.data.password;
@@ -149,12 +148,16 @@ function Login(props) {
                 Swal.fire({
                   icon: "error",
                   title: "Email does not exist",
-                  text:"Please signup first",
-                  confirmButtonText: "ok",
+                  text: "Please signup first",
+                  confirmButtonText: "OK",
                   confirmButtonColor: "#f45725",
                   background: "black",
-                  color:"white",
-              });
+                  color: "white",
+                  customClass: {
+                    text: "my-text-class",
+                    title: "my-title-class",
+                  },
+                });
                 navigate("/signup");
               }
             });
@@ -213,7 +216,7 @@ function Login(props) {
             <p className="signup">
               Don't have an account?{" "}
               <Link to="/Signup">
-                <span className="spn">Signup</span>
+                <span className="spann">Signup</span>
               </Link>
             </p>
             <p id="errmssg" style={{ color: isinValid ? "red" : "white" }}>

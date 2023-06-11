@@ -29,7 +29,6 @@ export default function CreateProfile() {
   const [errmssg, setErrMssg] = useState("Invalid");
 
   const options = [
-    { value: "", text: "Year" },
     { value: "1st", text: "1st year" },
     { value: "2nd", text: "2nd year" },
     { value: "3rd", text: "3rd year" },
@@ -47,7 +46,7 @@ export default function CreateProfile() {
     img: "",
   });
 
-  const [selected, setSelected] = useState(options[0].value);
+  const [selected, setSelected] = useState("");
 
   const handleChange = (event) => {
     console.log(event.target.value);
@@ -141,7 +140,7 @@ export default function CreateProfile() {
       MobileNo.length<=12 &&
       MobileNo.length>=10 &&
       email !== "" &&
-      selected !== "Year"&&
+      selected !== ""&&
       img != ""
     ) {
       const userObject = {
@@ -264,6 +263,8 @@ export default function CreateProfile() {
               onChange={handleChange}
               className={SuCss.year}
             >
+              <option hidden>Year
+                </option>
               {options.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.text}

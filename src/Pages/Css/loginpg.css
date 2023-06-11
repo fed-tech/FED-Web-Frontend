@@ -16,19 +16,20 @@
 #errmssg{
   font-size: 14px;
 }
+
 .inside {
-  background-color: rgba(0,0,0,0.3);
   margin-top: 221px;
-    height: 47.188rem;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 5%;
+  padding: 15px 70px 44px 70px;  
   width:60%;
   max-width: 44%;
+  height: 47.188rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 5%;
   text-align: center;
-  padding: 15px 70px 44px 70px;  
 }
 .title1 {
   text-align: center;
@@ -141,7 +142,7 @@
   color: black;
 }
 
-.spn {
+.spann {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -151,21 +152,21 @@
   color: black;
   text-decoration: none;
 }
-.spn:after{
+.spann:after{
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display:flex;
   margin-left: 155px;
   transition: 0.3s;
 }
-.spn:hover:after{
+.spann:hover:after{
   width: 25%;
   transition: width 0.3s linear;
 }
-.spn:hover{
-  color: blue;
+.spann:hover{
+  color: #f45725;
 }
 
 .login-btn{
@@ -257,7 +258,13 @@
 .forgotPassword p:hover{
   color: #f45725;
 }
-
+.my-text-class{
+  font-family: "Rubik", sans-serif;
+}
+.my-title-class
+{
+  font-family: "Rubik", sans-serif;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
   .inside {
     width: 50%;

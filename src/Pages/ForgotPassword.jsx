@@ -26,8 +26,14 @@ function ForgotPassword() {
           title: "OTP Sent",
           text: "Please check your mail",
           icon: "success",
-          confirmButtonText: "ok",
+          confirmButtonText: "OK",
           confirmButtonColor: "#f45725",
+          background: "black",
+          color: "white",
+          customClass: {
+            text: "my-text-class",
+            title: "my-title-class",
+          },
         });
         setShowBtn(true);
       }
@@ -59,8 +65,13 @@ function ForgotPassword() {
         Swal.fire({
           title: "OTP Verified successfully",
           icon: "success",
-          confirmButtonText: "ok",
+          confirmButtonText: "OK",
           confirmButtonColor: "#f45725",
+          background: "black",
+          color: "white",
+          customClass: {
+            title: "my-title-class",
+          },
         });
         localStorage.setItem("Email", email);
         navigate("/resetpassword");
