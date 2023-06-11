@@ -92,7 +92,7 @@ function ForgotPassword() {
     <div className="full-page">
       <div className="insidebox">
         <div className="title2">
-          <p className="fed">FED</p>
+          <p className="FED">FED</p>
         </div>
         <div className="whitebox1">
           <div className="hellopart1">

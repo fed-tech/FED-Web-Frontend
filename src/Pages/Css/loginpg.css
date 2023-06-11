@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
 
 .full {
   background-image: url(../../Img/image-23.png);
@@ -18,7 +20,7 @@
 }
 
 .inside {
-  margin-top: 221px;
+  /* margin-top: 221px;
   background-color: rgba(0,0,0,0.3);
   border-radius: 5%;
   padding: 15px 70px 44px 70px;  
@@ -29,7 +31,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  text-align: center;
+  text-align: center; */
+  margin-top: 221px;
+  background: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 24px;
+  padding: 20px 70px 44px 70px;
+  width: 60%;
+  max-width: 44%;
+  margin-bottom: 48px;
 }
 .title1 {
   text-align: center;
@@ -45,6 +55,14 @@
    color: white;
    margin: 0;
    font-size: 2.313rem;
+}
+.FED {
+  text-align: center;
+  font-family: rubik;
+  font-style: normal;
+  text-shadow: 1px 0.496831px 1px #f45725;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .whitebox {

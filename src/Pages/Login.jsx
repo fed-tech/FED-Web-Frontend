@@ -170,7 +170,7 @@ function Login(props) {
     <div className="full">
       <div className="inside">
         <div className="title1">
-          <p className="fed">FED</p>
+          <p className="FED">FED</p>
         </div>
         <div className="whitebox">
           <div className="hellopart">
