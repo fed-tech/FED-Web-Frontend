@@ -20,6 +20,7 @@ const AuthContext = React.createContext({
   login: async (token) => {},
   logout: () => {},
   settarget: () => {},
+  update:()=>{}
 });
 
 const calculateRemainingTime = (expirationTime) => {
@@ -133,11 +134,41 @@ export const AuthContextProvider = (props) => {
     setUserIsLoggedIn(true);
   };
 
+  const updateHandler = (name,
+    email,
+    pic,
+    rollNo,
+    school,
+    college,
+    mobileNo,
+    selected,
+    access)=>{
+      const setuserdata = {
+        name: name,
+        pic: pic,
+        email: email,
+        rollNo: rollNo,
+        school: school,
+        college: college,
+        mobileNo: mobileNo,
+        selected: selected,
+        access: access,
+      };
+
+      localStorage.setItem("user", JSON.stringify(setuserdata));
+      // setUser(setuserdata);
+      
+
+
+  }
+
   useEffect(() => {
     if (tokenData) {
       setToken(tokenData.token);
       setUserIsLoggedIn(true);
       logoutTimer = setTimeout(logoutHandler, tokenData.duration);
+      setUser(user);
+      console.log(user);
     }
   }, [tokenData, logoutHandler]);
 
@@ -150,6 +181,7 @@ export const AuthContextProvider = (props) => {
       login: loginHandler,
       logout: logoutHandler,
       settarget: targetHandler,
+      update: updateHandler,
       // admin: admin,
       // setAdmin: setAdmin,
     }),

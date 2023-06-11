@@ -17,9 +17,6 @@ import google from "../Img/Google.svg";
 
 import tick from "./../Img/tick.png";
 export default function Signup() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -162,8 +159,43 @@ export default function Signup() {
           }
         )
         .then((res) => {
-          localStorage.setItem("user", JSON.stringify(res.data));
-          navigate("/createprofile");
+          const mail = res.data.email;
+          console.log(mail)
+          axios
+            .post("http://localhost:5000/auth/googleverification", {
+              email: mail,
+            })
+            .then((response) => {
+              if (response.data.code === 1) {
+                const username = response.data.email;
+                const password = response.data.password;
+                axios
+                  .post(`http://localhost:5000/auth/login`, {
+                    username,
+                    password,
+                  })
+                  .then((resp) => {
+                    authCtx.login(
+                      resp.data.result[0].name,
+                      resp.data.result[0].email,
+                      resp.data.result[0].img,
+                      resp.data.result[0].RollNumber,
+                      resp.data.result[0].School,
+                      resp.data.result[0].College,
+                      resp.data.result[0].MobileNo,
+                      resp.data.result[0].selected,
+                      Number(resp.data.result[0].access),
+                      resp.data.token,
+                      10800000
+                    );
+                    navigate("/MyProfile");
+                    return;
+                  });
+              } else {
+                localStorage.setItem("user", JSON.stringify(res.data));
+                navigate("/createprofile");
+              }
+            });
         })
         .catch((err) => console.log(err));
     }

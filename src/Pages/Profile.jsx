@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 
 // css
 import "./Css/Profilecss/profile.css";
@@ -12,6 +13,7 @@ import AuthContext from "./../store/auth-context";
 
 export default function Profile() {
   const authCtx = useContext(AuthContext);
+  console.log(authCtx.user.name)
 
   const navigate = useNavigate();
 
@@ -20,7 +22,6 @@ export default function Profile() {
     navigate("/Login");
     authCtx.logout();
   }
-
   return (
     <div className="profileBackground">
       <div className="pmainBox">
@@ -42,7 +43,9 @@ export default function Profile() {
 
               <p className="headInnerText">
                 <p>Profile Details</p>
-                <img src={penSvg} alt="" />
+                <Link to='/updateprofile'>
+                  <img src={penSvg} alt=""/>
+                </Link>
               </p>
             </div>
             <div className="details">
