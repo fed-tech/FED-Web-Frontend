@@ -84,6 +84,19 @@
   flex-wrap: wrap;
 }
 
+.logoutBtn {
+  background-color: #ffffff;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  height: 40px;
+  width: 70%;
+  border: none;
+  margin-top: 30px;
+  box-shadow: inset;
+  font-size: 20px;
+  border-radius: 2%;
+  cursor: pointer;
+}
 @media (max-width: 1200px) {
   .profileRight {
     margin-right: 2%;
@@ -146,11 +159,11 @@
   .proHeading {
     font-size: 28px;
   }
-
-  .dets {
+  
+  .dets, .dets1, .vals, .vals1 {
     font-size: 22px;
   }
-
+  
   .illuminating {
     padding: 6% 3% 2% 9%;
     /* width: 100%; */
@@ -169,24 +182,8 @@
     padding-bottom: 15%;
   }
 
-  .vals {
-    font-size: 20px;
-  }
 }
 
-.logoutBtn {
-  background-color: #ffffff;
-  color: black;
-  font-family: "Rubik", sans-serif;
-  height: 40px;
-  width: 70%;
-  border: none;
-  margin-top: 30px;
-  box-shadow: inset;
-  font-size: 20px;
-  border-radius: 2%;
-  cursor: pointer;
-}
 
 @media (max-width: 880px) {
   .profileLeft {
@@ -202,7 +199,7 @@
     font-size: 24px;
   }
 
-  .dets {
+  .dets .dets1, .vals, .vals1 {
     font-size: 20px;
   }
 
@@ -210,9 +207,6 @@
     font-size: 33px;
   }
 
-  .vals {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 650px) {
@@ -233,9 +227,6 @@
     padding-bottom: 15%;
   }
 
-  .vals {
-    font-size: 20px;
-  }
 }
 
 @media (max-width: 482px) {
@@ -243,7 +234,7 @@
     font-size: 22px;
   }
 
-  .dets {
+  .dets .dets1, .vals, .vals1 {
     font-size: 15px;
   }
 
@@ -251,9 +242,6 @@
     font-size: 30px;
   }
 
-  .vals {
-    font-size: 15px;
-  }
 }
 
 @media (max-width: 394px) {
@@ -261,7 +249,7 @@
     font-size: 22px;
   }
 
-  .dets {
+  .dets .dets1, .vals, .vals1 {
     font-size: 14px;
   }
 
@@ -269,16 +257,13 @@
     font-size: 30px;
   }
 
-  .vals {
-    font-size: 14px;
-  }
 }
 @media (max-width: 348px) {
   .proHeading {
     font-size: 22px;
   }
 
-  .dets {
+  .dets .dets1, .vals, .vals1 {
     font-size: 14px;
     padding:0;
   }
@@ -287,25 +272,17 @@
     font-size: 30px;
   }
 
-  .vals {
-    font-size: 14px;
-    
-  }
 }
 @media (max-width: 298px) {
   .proHeading {
     font-size: 22px;
   }
 
-  .dets {
-    font-size: 14px;
-  }
-
   .illuminating {
     font-size: 30px;
   }
 
-  .vals {
+  .vals, .vals1 {
     font-size: 14px;
     padding:15px;
   }

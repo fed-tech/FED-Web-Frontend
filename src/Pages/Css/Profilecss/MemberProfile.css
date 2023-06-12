@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Rubik:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 
@@ -23,23 +22,29 @@
     display: flex;
     flex-direction: column;
     width: 26.2%;
+    /* position: relative; */
 }
+
 .dashboard {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* position: absolute; */
+    /* cursor: col-resize; */
     border-right: 1px #999999 solid;
     padding: 62px;
     width: 100%;
     padding-bottom: 200px;
 }
+
 .dashboardTop {
     /* margin-top: 43px; */
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;  
+    justify-content: space-evenly;
 }
+
 .dashboardTop h1 {
     font-family: 'Manrope';
     font-style: normal;
@@ -56,6 +61,7 @@
     border-radius: 15px;
     margin-top: 27px;
 }
+
 .Position .name {
     margin-top: 17px;
     font-family: 'Mulish';
@@ -65,6 +71,7 @@
     letter-spacing: 0.005em;
     color: #EFEFEF;
 }
+
 .Position .position {
     margin-top: 9px;
     font-family: 'Mulish';
@@ -88,15 +95,20 @@
     line-height: 21px;
     letter-spacing: 0.005em;
 }
+
 .registrationStats {
     margin-bottom: 34px;
 }
-.registrationStats, .logout {
+
+.registrationStats,
+.logout {
     display: flex;
 }
+
 .dashboardBottom img {
     margin-right: 23px;
 }
+
 /* .left_panel--edge--4KIqx {
     cursor: ew-resize;
     position: fixed;
@@ -111,6 +123,8 @@
     background-image: url(../../../Img/Rectangle24.jpg);
     background-size: cover;
     width: 73.8%;
+    display: flex;
+    flex-direction: column;
     padding-left: 220px;
     padding-top: 162px;
 }
@@ -123,12 +137,172 @@
     flex-direction: column;
     padding-bottom: 27px;
 }
+
 .dets1,
 .vals1 {
-  font-family: "Rubik", sans-serif;
-  font-size: 28px;
-  padding:20px;
-  padding-left: 0;
-  margin-bottom: 30px;
+    font-family: "Rubik", sans-serif;
+    font-size: 28px;
+    padding: 20px;
+    padding-left: 0;
+    margin-bottom: 30px;
 }
 
+@media (max-width: 1300px) {
+    .memberRight {
+        padding-left: 200px;
+        width: 67%;
+    }
+
+    .memberLeft {
+        width: 33%;
+    }
+}
+
+@media (max-width: 1155px) {
+    .memberRight {
+        padding-left: 190px;
+        width: 64%;
+    }
+
+    .memberLeft {
+        width: 36%;
+    }
+
+    .memberLeft,
+    .memberRight {
+        padding-top: 130px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .dashboardTop h1 {
+        font-size: 25px;
+    }
+
+    .Position .name {
+        font-size: 26px;
+    }
+
+    .dashboardTop img {
+        height: 180px;
+        width: 180px;
+    }
+
+    .dashboardBottom {
+        font-size: 20px;
+    }
+
+    .memberRight {
+        padding-left: 120px;
+        width: 63%;
+    }
+
+    .memberLeft {
+        width: 37%;
+    }
+
+    .memberLeft,
+    .memberRight {
+        padding-top: 100px;
+    }
+
+    .proHeading {
+        width: 60%;
+        font-size: 30px;
+    }
+
+    .dets1,
+    .vals1 {
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 880px) {
+    .memberRight {
+        padding-left: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 67%;
+        padding-bottom: 60px;
+    }
+
+    .memberLeft {
+        width: 33%;
+    }
+}
+
+
+@media (max-width : 800px) {
+    .memberLeft {
+        display: none;
+    }
+
+    .memberRight {
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .proHeading {
+        width: 80%;
+    }
+    .memberRight {
+        padding: 40px 0;
+    }
+
+}
+
+@media (max-width: 482px) {
+
+    .dets1,
+    .vals,
+    .vals1 {
+        font-size: 20px;
+    }
+    .memberRight {
+        padding: 10px 0 40px 0;
+    }
+}
+
+@media (max-width: 394px) {
+    .proHeading {
+        font-size: 22px;
+    }
+
+    .dets, .dets1,
+    .vals,
+    .vals1 {
+        font-size: 18px;
+    }
+    .memberRight {
+        padding: 10px 10px 40px 10px;
+    }
+}
+
+@media (max-width: 348px) {
+    .proHeading {
+        font-size: 22px;
+    }
+
+    .dets, .dets1,
+    .vals,
+    .vals1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 298px) {
+    .proHeading {
+        font-size: 22px;
+    }
+
+    .vals,
+    .vals1 {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
