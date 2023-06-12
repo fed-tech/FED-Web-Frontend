@@ -77,8 +77,12 @@ function App() {
             />
             <Route
               path="/MyProfile/member"
-              element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
+              element={<TCO />}
             />
+            {/* <Route
+              path="/MyProfile/member"
+              element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
+            /> */}
             <Route
               path="/admin/Member"
               element={authCtx.user.access === 0 ? <Member /> : <Error />}

@@ -1,0 +1,35 @@
+.memberBackground {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.mainbox {
+    background-image: url(../../../Img/Rectangle24.jpg);
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    padding-top: 80px;
+    width: 100%;
+}
+
+.memberLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26.2%;
+}
+.dashboard {
+    padding-top: 62px;
+}
+
+.profilePic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+.memberRight {
+    width: 73.8%;
+    padding-left: 220px;
+}
