@@ -33,14 +33,16 @@ export default function TCO() {
                             <div className="logout">
                                 <img src={logoutSvg} alt="" />
                                 Logout
-                            </div>
+                            </div>  
 
                         </div>
                     </div>
                 </div>
+                {/* <div className="left_panel--edge--4KIqx" >
 
+                </div> */}
                 <div className="memberRight">
-                    <div className="profile">
+                    <div id="profile">
                         <div className="proHeading">
                             
                             <p className="headInnerText">
@@ -52,32 +54,32 @@ export default function TCO() {
                             <table className="profileTable">
                                 <tbody>
                                     <tr>
-                                        <td className="dets">Full Name</td>
-                                        <td className="vals">Shruti Kolla</td>
+                                        <td className="dets1">Full Name</td>
+                                        <td className="vals1">Shruti Kolla</td>
                                     </tr>
                                     <tr>
-                                        <td className="dets">Roll Number</td>
-                                        <td className="vals">2105279</td>
+                                        <td className="dets1">Roll Number</td>
+                                        <td className="vals1">2105279</td>
                                     </tr>
                                     <tr>
-                                        <td className="dets">Email ID</td>
-                                        <td className="vals">2105279@kiit.ac.in</td>
+                                        <td className="dets1">Email ID</td>
+                                        <td className="vals1">2105279@kiit.ac.in</td>
                                     </tr>
                                     <tr>
-                                        <td className="dets">Year</td>
-                                        <td className="vals">3rd</td>
+                                        <td className="dets1">Year</td>
+                                        <td className="vals1">3rd</td>
                                     </tr>
                                     <tr>
-                                        <td className="dets">School</td>
-                                        <td className="vals">CSE</td>
+                                        <td className="dets1">School</td>
+                                        <td className="vals1">CSE</td>
                                     </tr>
                                     <tr>
-                                        <td className="dets">College</td>
-                                        <td className="vals">KIIT</td>
+                                        <td className="dets1">College</td>
+                                        <td className="vals1">KIIT</td>
                                     </tr>
                                     <tr>
-                                        <td className="dets">Mobile No</td>
-                                        <td className="vals">7978773611</td>
+                                        <td className="dets1">Mobile No</td>
+                                        <td className="vals1">7978773611</td>
                                     </tr>
                                 </tbody>
                             </table>

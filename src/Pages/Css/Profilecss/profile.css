@@ -48,17 +48,6 @@
   padding-bottom: 3px;
 }
 
-.details {
-  /* display: flex; */
-}
-
-.keys {
-  width: 42.62%;
-}
-
-.values {
-  width: 57.38%;
-}
 
 .dets,
 .vals {
