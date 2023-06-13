@@ -44,7 +44,8 @@
     justify-content: space-evenly;
 }
 
-.dashboardTop h1, h2 {
+.dashboardTop h1,
+h2 {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 800;
@@ -57,6 +58,7 @@
 .dashboardTop h2 {
     display: none;
 }
+
 .profilePic img {
     width: 200px;
     height: 200px;
@@ -169,7 +171,8 @@
 
 @media (max-width: 1000px) {
 
-    .dashboardTop h1, h2 {
+    .dashboardTop h1,
+    h2 {
         font-size: 25px;
     }
 
@@ -219,7 +222,9 @@
         width: 67%;
         padding-bottom: 60px;
     }
-    .Position .name , .dashboardBottom {
+
+    .Position .name,
+    .dashboardBottom {
         font-weight: 500;
     }
 
@@ -235,11 +240,14 @@
         padding-right: 40px;
         padding-left: 40px;
     }
+
     .profilePic img {
         width: 50px;
         height: 50px;
     }
-    .dashboardTop h1,h2 {
+
+    .dashboardTop h1,
+    h2 {
         font-size: 20px;
     }
 
@@ -248,15 +256,18 @@
         font-weight: 400;
     }
 
-    .dashboardBottom p{
+    .dashboardBottom p {
         display: none;
     }
+
     .memberLeft {
         width: 28%;
     }
+
     .memberRight {
         width: 72%;
     }
+
     .dets1,
     .vals1 {
         font-size: 22px;
@@ -268,91 +279,119 @@
     .proHeading {
         width: 80%;
     }
+
     .memberRight {
         padding: 40px 0;
     }
+
     .memberLeft {
         padding-top: 40px;
     }
 }
+
 @media (max-width:650px) {
     .dashboardTop h1 {
         display: none;
     }
+
     .dashboardTop h2 {
         display: block;
     }
+
     .memberLeft {
         width: 20%;
     }
+
     .dashboard {
         padding-left: 25%;
         padding-right: 25%;
     }
+
     .memberRight {
         width: 80%;
     }
-    .memberLeft, .memberRight {
+
+    .memberLeft,
+    .memberRight {
         padding-top: 0px;
     }
 }
+
 @media(max-width : 575px) {
-    .dashboardTop h1,h2 {
+
+    .dashboardTop h1,
+    h2 {
         font-size: 16px;
     }
+
     .proHeading {
         padding-bottom: 40px;
         width: 70%;
     }
+
     .Position .name {
         font-size: 16px;
         font-weight: 400;
     }
+
     .headInnerText {
         font-size: 23px;
     }
+
     .dets1,
     .vals1 {
         font-size: 19px;
         padding: 15px 15px 15px 0;
     }
+
     .memberRight {
         justify-content: flex-start;
     }
 }
+
 @media (max-width: 482px) {
     .memberLeft {
         width: 17%;
     }
+
     .memberRight {
         width: 83%;
     }
+
     .dashboardTop img {
         width: 40px;
         height: 40px;
     }
-    .dashboardTop h1,h2 {
+
+    .dashboardTop h1,
+    h2 {
         font-size: 13px;
     }
+
     .Position .name {
         font-size: 13px;
         font-weight: 400;
     }
+
     .headInnerText {
         font-size: 20px;
     }
+
     .dets1,
     .vals,
     .vals1 {
         font-size: 16px;
     }
+
     .dashboard {
         padding-left: 15%;
         padding-right: 15%;
     }
+
     .memberRight {
         padding: 10px 0 40px 0;
     }
+
     .proHeading {
         padding-bottom: 30px;
     }
@@ -376,8 +415,35 @@
     }
 
     .vals,
-    .vals1, .dets1 {
+    .vals1,
+    .dets1 {
         font-size: 14px;
         padding: 15px;
     }
+}
+
+/* Registration css */
+
+.registrationsTop h1 {
+    font-family: 'Mulish';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 21px;
+    letter-spacing: 0.005em;
+    color: #FFFFFF;
+}
+
+.registrationsBottom {
+    margin-top: 91px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.registrationsBottom th {
+    padding: 28px 45px;
+    font-family: 'Manrope';
+font-weight: 600;
+font-size: 21.1512px;
+line-height: 29px;
 }

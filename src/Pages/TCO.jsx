@@ -146,7 +146,15 @@ export default function TCO() {
             <h1>NUMBER OF REGISTRATIONS</h1>
             <div className="filter"></div>
           </div>
-          <div className="registrationsBottom"></div>
+          <div className="registrationsBottom">
+            <div className="registrationTable">
+              <tr>
+                <th>Event Name</th>
+                <th>Registration Stats</th>
+                <th>Event Date</th>
+              </tr>
+            </div>
+          </div>
          </div>
           
          ) 
