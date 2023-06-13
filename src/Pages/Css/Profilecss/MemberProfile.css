@@ -22,21 +22,22 @@
     display: flex;
     flex-direction: column;
     width: 26.2%;
-    /* position: relative; */
 }
 
 .dashboard {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-right: 1px #999999 solid;
-    padding: 62px;
+    border-right: 3px solid #808080;
+    margin-top: 44px;
+    margin-bottom: 119px;
+    padding: 0 62px 62px 62px;
     width: 100%;
     padding-bottom: 200px;
 }
 
 .dashboardTop {
-    /* margin-top: 43px; */
+    padding-top: 18px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -168,7 +169,7 @@
 
 @media (max-width: 1000px) {
 
-    .dashboardTop h1 {
+    .dashboardTop h1, h2 {
         font-size: 25px;
     }
 
@@ -238,7 +239,7 @@
         width: 50px;
         height: 50px;
     }
-    .dashboardTop h1 {
+    .dashboardTop h1,h2 {
         font-size: 20px;
     }
 
@@ -270,46 +271,100 @@
     .memberRight {
         padding: 40px 0;
     }
-
+    .memberLeft {
+        padding-top: 40px;
+    }
 }
-
+@media (max-width:650px) {
+    .dashboardTop h1 {
+        display: none;
+    }
+    .dashboardTop h2 {
+        display: block;
+    }
+    .memberLeft {
+        width: 20%;
+    }
+    .dashboard {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+    .memberRight {
+        width: 80%;
+    }
+    .memberLeft, .memberRight {
+        padding-top: 0px;
+    }
+}
+@media(max-width : 575px) {
+    .dashboardTop h1,h2 {
+        font-size: 16px;
+    }
+    .proHeading {
+        padding-bottom: 40px;
+        width: 70%;
+    }
+    .Position .name {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .headInnerText {
+        font-size: 23px;
+    }
+    .dets1,
+    .vals1 {
+        font-size: 19px;
+        padding: 15px 15px 15px 0;
+    }
+    .memberRight {
+        justify-content: flex-start;
+    }
+}
 @media (max-width: 482px) {
-
+    .memberLeft {
+        width: 17%;
+    }
+    .memberRight {
+        width: 83%;
+    }
+    .dashboardTop img {
+        width: 40px;
+        height: 40px;
+    }
+    .dashboardTop h1,h2 {
+        font-size: 13px;
+    }
+    .Position .name {
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .headInnerText {
+        font-size: 20px;
+    }
     .dets1,
     .vals,
     .vals1 {
-        font-size: 20px;
+        font-size: 16px;
+    }
+    .dashboard {
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .memberRight {
         padding: 10px 0 40px 0;
     }
+    .proHeading {
+        padding-bottom: 30px;
+    }
 }
 
 @media (max-width: 394px) {
-    .proHeading {
-        font-size: 22px;
-    }
-
-    .dets, .dets1,
-    .vals,
-    .vals1 {
-        font-size: 18px;
-    }
     .memberRight {
         padding: 10px 10px 40px 15px;
     }
 }
 
 @media (max-width: 348px) {
-    .proHeading {
-        font-size: 22px;
-    }
-
-    .dets, .dets1,
-    .vals,
-    .vals1 {
-        font-size: 18px;
-    }
     .memberRight {
         padding: 10px 0 30px 15px;
     }
@@ -321,7 +376,7 @@
     }
 
     .vals,
-    .vals1 {
+    .vals1, .dets1 {
         font-size: 14px;
         padding: 15px;
     }

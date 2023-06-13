@@ -138,8 +138,19 @@ export default function TCO() {
         ) : (
           ""
         )}
-
-        {show === "Registration" ? "Registration Component" : ""}
+      
+        {show === "Registration" ?
+         (
+         <div className="memberRight">
+          <div className="registrationsTop">
+            <h1>NUMBER OF REGISTRATIONS</h1>
+            <div className="filter"></div>
+          </div>
+          <div className="registrationsBottom"></div>
+         </div>
+          
+         ) 
+         : ""}
       </div>
     </div>
   );

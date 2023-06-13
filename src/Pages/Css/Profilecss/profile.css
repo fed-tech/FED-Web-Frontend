@@ -224,14 +224,16 @@
   }
 
   .proHeading {
+    font-size: 15px;
     padding-bottom: 15%;
   }
+
 
 }
 
 @media (max-width: 482px) {
   .proHeading {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .dets .dets1, .vals, .vals1 {
@@ -246,7 +248,7 @@
 
 @media (max-width: 394px) {
   .proHeading {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .dets .dets1, .vals, .vals1 {
