@@ -51,10 +51,7 @@ export default function TCO() {
             </div>
           </div>
         </div>
-        {/* <div className="left_panel--edge--4KIqx" >
-
-                </div> */}
-
+        
         {show === "Profile" ? (
           <div className="memberRight">
             <div id="profile">

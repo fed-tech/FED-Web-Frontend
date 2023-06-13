@@ -109,23 +109,13 @@
     margin-right: 23px;
 }
 
-/* .left_panel--edge--4KIqx {
-    cursor: ew-resize;
-    position: fixed;
-    right: 0;
-    top: 42px;
-    height: 100%;
-    width: 6px;
-    margin-left: -3px;
-    left: 255px;
-} */
 .memberRight {
     background-image: url(../../../Img/Rectangle24.jpg);
     background-size: cover;
     width: 73.8%;
     display: flex;
     flex-direction: column;
-    padding-left: 220px;
+    align-items: center;
     padding-top: 162px;
 }
 
@@ -136,6 +126,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 27px;
+    margin-left: 30px;
 }
 
 .dets1,
@@ -149,7 +140,6 @@
 
 @media (max-width: 1300px) {
     .memberRight {
-        padding-left: 200px;
         width: 67%;
     }
 
@@ -160,7 +150,6 @@
 
 @media (max-width: 1155px) {
     .memberRight {
-        padding-left: 190px;
         width: 64%;
     }
 
@@ -194,7 +183,6 @@
     }
 
     .memberRight {
-        padding-left: 120px;
         width: 63%;
     }
 
@@ -222,7 +210,6 @@
 
 @media (max-width: 880px) {
     .memberRight {
-        padding-left: 20px;
         align-items: center;
         justify-content: center;
         width: 67%;
