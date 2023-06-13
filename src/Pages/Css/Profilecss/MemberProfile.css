@@ -29,8 +29,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* position: absolute; */
-    /* cursor: col-resize; */
     border-right: 1px #999999 solid;
     padding: 62px;
     width: 100%;
@@ -45,7 +43,7 @@
     justify-content: space-evenly;
 }
 
-.dashboardTop h1 {
+.dashboardTop h1, h2 {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 800;
@@ -55,6 +53,9 @@
     color: #999999;
 }
 
+.dashboardTop h2 {
+    display: none;
+}
 .profilePic img {
     width: 200px;
     height: 200px;
@@ -104,6 +105,7 @@
 .logout {
     display: flex;
     cursor: pointer;
+    align-items: center;
 }
 
 .dashboardBottom img {
@@ -216,24 +218,51 @@
         width: 67%;
         padding-bottom: 60px;
     }
+    .Position .name , .dashboardBottom {
+        font-weight: 500;
+    }
 
     .memberLeft {
         width: 33%;
     }
+
 }
 
 
-@media (max-width : 800px) {
-    .memberLeft {
+@media (max-width : 830px) {
+    .dashboard {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .profilePic img {
+        width: 50px;
+        height: 50px;
+    }
+    .dashboardTop h1 {
+        font-size: 20px;
+    }
+
+    .Position .name {
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    .dashboardBottom p{
         display: none;
     }
-
+    .memberLeft {
+        width: 28%;
+    }
     .memberRight {
-        width: 100%;
+        width: 72%;
+    }
+    .dets1,
+    .vals1 {
+        font-size: 22px;
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 690px) {
 
     .proHeading {
         width: 80%;

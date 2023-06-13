@@ -38,21 +38,18 @@ export default function TCO() {
           <div className="dashboard">
             <div className="dashboardTop">
               <h1>DASHBOARD</h1>
+              <h2>DASH</h2>
+              <h2>BOARD</h2>
               <div className="profilePic">
-                <Link>
-                    {authCtx.isLoggedIn ? (
-                      <img
-                        src={authCtx.user.pic}
-                        alt=""
-                        onClick={() => {
-                          set("Profile");
-                        }}
-                      />
-                      ) :(
-                        ""
-                      )}
 
-                </Link>
+                <img
+                  src={authCtx.user.pic}
+                  alt=""
+                  onClick={() => {
+                    set("Profile");
+                  }}
+                />
+
               </div>
               <div className="Position">
                 <p className="name">{authCtx.user.name}</p>
@@ -68,11 +65,11 @@ export default function TCO() {
                 }}
               >
                 <img src={regStatSvg} alt="" />
-                Registration Stats
+                <p> Registration Stats </p>
               </div>
               <div className="logout" onClick={handleLogout}>
                 <img src={logoutSvg} alt="" />
-                Logout
+                <p> Logout </p>
               </div>
             </div>
           </div>
