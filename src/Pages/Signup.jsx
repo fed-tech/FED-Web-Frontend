@@ -187,7 +187,8 @@ export default function Signup() {
                       resp.data.token,
                       10800000
                     );
-                    navigate("/MyProfile");
+                    // navigate("/MyProfile");
+                    navigate("/MyProfile/member");
                     return;
                   });
               } else {

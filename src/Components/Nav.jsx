@@ -47,7 +47,8 @@ export default function Nav(props) {
               </li>
               <li>
                 <NavLink
-                  to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+                  // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+                  to={authCtx.isLoggedIn ? "/MyProfile/member" : "Signup"}
                   className="liTag"
                 >
                   {authCtx.isLoggedIn ? (

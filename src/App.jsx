@@ -45,7 +45,6 @@ function App() {
         <Layout>
           <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           <NavMobile />
-          {/* <DashMobile /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Team" element={<Team />} />
@@ -79,7 +78,7 @@ function App() {
             />
             <Route
               path="/MyProfile/member"
-              element={<TCO />}
+              element={authCtx.isLoggedIn ? <TCO /> : <Signup/>}
             />
             {/* <Route
               path="/MyProfile/member"

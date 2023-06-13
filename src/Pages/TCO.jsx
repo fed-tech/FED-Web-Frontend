@@ -1,12 +1,31 @@
 import React, { useEffect, useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+
 // svg
 import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
 import penSvg from "../Img/pen-icon.svg";
+
 // css
 import "./Css/Profilecss/MemberProfile.css";
 
+
+// state
+import AuthContext from "./../store/auth-context";
+
 export default function TCO() {
+  const authCtx = useContext(AuthContext)
+  console.log(authCtx.user.name);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    console.log("logout");
+    navigate('/Login');
+    authCtx.logout();
+  }
+
+
   const [show, set] = useState("Profile");
 
   useEffect(() => {
@@ -20,17 +39,24 @@ export default function TCO() {
             <div className="dashboardTop">
               <h1>DASHBOARD</h1>
               <div className="profilePic">
-                <img
-                  src="https://wallpapers.com/images/featured/87h46gcobjl5e4xu.jpg"
-                  alt=""
-                  onClick={() => {
-                    set("Profile");
-                  }}
-                />
+                <Link>
+                    {authCtx.isLoggedIn ? (
+                      <img
+                        src={authCtx.user.pic}
+                        alt=""
+                        onClick={() => {
+                          set("Profile");
+                        }}
+                      />
+                      ) :(
+                        ""
+                      )}
+
+                </Link>
               </div>
               <div className="Position">
-                <p className="name">Shruti kolla</p>
-                <p className="position">Technical Executive</p>
+                <p className="name">{authCtx.user.name}</p>
+                {/* <p className="position">Technical Executive</p> */}
               </div>
             </div>
 
@@ -44,21 +70,36 @@ export default function TCO() {
                 <img src={regStatSvg} alt="" />
                 Registration Stats
               </div>
-              <div className="logout">
+              <div className="logout" onClick={handleLogout}>
                 <img src={logoutSvg} alt="" />
                 Logout
               </div>
             </div>
           </div>
         </div>
-        
+
         {show === "Profile" ? (
           <div className="memberRight">
             <div id="profile">
               <div className="proHeading">
+                {authCtx.user.access === 0 ? (
+                  <>
+                    <div>
+                      <Link to="/admin/Member">Member</Link>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                  </>
+                ) : (
+                  ""
+                )}
+
                 <p className="headInnerText">
                   <p>Profile Details</p>
-                  <img src={penSvg} alt="" />
+                  <Link to='/updateprofile'>
+                    <img src={penSvg} alt="" />
+                  </Link>
                 </p>
               </div>
               <div className="details">
@@ -66,31 +107,31 @@ export default function TCO() {
                   <tbody>
                     <tr>
                       <td className="dets1">Full Name</td>
-                      <td className="vals1">Shruti Kolla</td>
+                      <td className="vals1">{authCtx.user.name}</td>
                     </tr>
                     <tr>
                       <td className="dets1">Roll Number</td>
-                      <td className="vals1">2105279</td>
+                      <td className="vals1">{authCtx.user.rollNo}</td>
                     </tr>
                     <tr>
                       <td className="dets1">Email ID</td>
-                      <td className="vals1">2105279@kiit.ac.in</td>
+                      <td className="vals1">{authCtx.user.email}</td>
                     </tr>
                     <tr>
                       <td className="dets1">Year</td>
-                      <td className="vals1">3rd</td>
+                      <td className="vals1">{authCtx.user.selected}</td>
                     </tr>
                     <tr>
                       <td className="dets1">School</td>
-                      <td className="vals1">CSE</td>
+                      <td className="vals1">{authCtx.user.school}</td>
                     </tr>
                     <tr>
                       <td className="dets1">College</td>
-                      <td className="vals1">KIIT</td>
+                      <td className="vals1">{authCtx.user.college}</td>
                     </tr>
                     <tr>
                       <td className="dets1">Mobile No</td>
-                      <td className="vals1">7978773611</td>
+                      <td className="vals1">{authCtx.user.mobileNo}</td>
                     </tr>
                   </tbody>
                 </table>

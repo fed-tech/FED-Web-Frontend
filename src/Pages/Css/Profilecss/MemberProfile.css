@@ -103,6 +103,7 @@
 .registrationStats,
 .logout {
     display: flex;
+    cursor: pointer;
 }
 
 .dashboardBottom img {

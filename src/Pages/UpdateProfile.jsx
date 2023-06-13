@@ -145,7 +145,8 @@ function updateModal() {
               Number(resp.access)
             )
 
-            navigate('/MyProfile');
+            // navigate('/MyProfile');
+            navigate('/MyProfile/member');
             return;
             
           }
