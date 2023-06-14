@@ -423,13 +423,19 @@ h2 {
 }
 
 /* Registration css */
-
+.registrationsTop {
+    display: flex;
+    width: 90%;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+}
 .registrationsTop h1 {
     font-family: 'Mulish';
     font-weight: 700;
     font-size: 40px;
     line-height: 21px;
     letter-spacing: 0.005em;
+    margin-left: 50px;
     color: #FFFFFF;
 }
 

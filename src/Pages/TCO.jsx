@@ -26,7 +26,7 @@ export default function TCO() {
 
 
   const [show, set] = useState("Profile");
-  
+
   const [user, setUser] = useState("1")
   // 1 --> creative, tech, operations
   // 2 --> marketing
@@ -38,14 +38,14 @@ export default function TCO() {
   const clickedRegStats = () => {
     set("Registration");
     console.log(authCtx.user.access);
-    {authCtx.user.access === 0 ? "Admin" : ""}
-    {authCtx.user.access === 1 ? setUser("2") : ""}
-    {authCtx.user.access === 2 ? "director" : ""}
-    {authCtx.user.access === 3 ? setUser("1") : ""}
-    {authCtx.user.access === 4 ? setUser("1") : ""}
-    {authCtx.user.access === 5 ? setUser("2") : ""}
-    {authCtx.user.access === 6 ? setUser("1") : ""}
-    console.log("user: " ,user);
+    { authCtx.user.access === 0 ? "Admin" : "" }
+    { authCtx.user.access === 1 ? setUser("2") : "" }
+    { authCtx.user.access === 2 ? "director" : "" }
+    { authCtx.user.access === 3 ? setUser("1") : "" }
+    { authCtx.user.access === 4 ? setUser("1") : "" }
+    { authCtx.user.access === 5 ? setUser("2") : "" }
+    { authCtx.user.access === 6 ? setUser("1") : "" }
+    console.log("user: ", user);
   }
   return (
     <div className="memberBackground">
@@ -155,58 +155,61 @@ export default function TCO() {
         ) : (
           ""
         )}
-      
+
         {show === "Registration" ?
-          (user === "1" ?
-          (
-          <div className="memberRight">
-           <div className="registrationsTop">
-             <h1>NUMBER OF REGISTRATIONS</h1>
-             <div className="filter"></div>
-           </div>
-           <div className="registrationsBottom">
-               <table className="registrationTable">
-               <tr className="tableHead">
-                 <th>Event Name</th>
-                 <th>Registration Stats</th>
-                 <th>Event Date</th>
-               </tr>
- 
-               <tr className="tableData">
-                 <td>KALKI</td>
-                 <td>500</td>
-                 <td>13 FEBRUARY</td>
-               </tr>
-               <tr className="tableData">
-                 <td>KALKI</td>
-                 <td>500</td>
-                 <td>13 FEBRUARY</td>
-               </tr>
-               <tr className="tableData">
-                 <td>KALKI</td>
-                 <td>500</td>
-                 <td>13 FEBRUARY</td>
-               </tr>
-               <tr className="tableData">
-                 <td>KALKI</td>
-                 <td>500</td>
-                 <td>13 FEBRUARY</td>
-               </tr>
-               
- 
-               </table>
- 
-           </div>
-          </div>
-           
-          ) : 
-          (
-            <div className="memberRight">
-              <div>Marketing</div>
-            </div>
+          (user === "2" ?
+            (
+              <div className="memberRight">
+                <div className="registrationsTop">
+                  <h1>NUMBER OF REGISTRATIONS</h1>
+                  <div className="filter">Filter</div>
+                </div>
+                <div className="registrationsBottom">
+                  <table className="registrationTable">
+                    <tr className="tableHead">
+                      <th>Event Name</th>
+                      <th>Registration Stats</th>
+                      <th>Event Date</th>
+                    </tr>
+
+                    <tr className="tableData">
+                      <td>KALKI</td>
+                      <td>500</td>
+                      <td>13 FEBRUARY</td>
+                    </tr>
+                    <tr className="tableData">
+                      <td>KALKI</td>
+                      <td>500</td>
+                      <td>13 FEBRUARY</td>
+                    </tr>
+                    <tr className="tableData">
+                      <td>KALKI</td>
+                      <td>500</td>
+                      <td>13 FEBRUARY</td>
+                    </tr>
+                    <tr className="tableData">
+                      <td>KALKI</td>
+                      <td>500</td>
+                      <td>13 FEBRUARY</td>
+                    </tr>
+
+
+                  </table>
+
+                </div>
+              </div>
+
+            ) :
+            (
+              <div className="memberRight">
+                <div className="registrationsTop">
+                  <h1>EVENT REGISTRATIONS</h1>
+                  <div className="filter"></div>
+                </div>
+              </div>
+            )
           )
-          )
-         : ""}
+          : ""}
       </div>
     </div>
   );
