@@ -16,7 +16,6 @@ import AuthContext from "./../store/auth-context";
 
 export default function TCO() {
   const authCtx = useContext(AuthContext)
-  console.log(authCtx.user.name);
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -27,10 +26,27 @@ export default function TCO() {
 
 
   const [show, set] = useState("Profile");
-
+  
+  const [user, setUser] = useState("1")
+  // 1 --> creative, tech, operations
+  // 2 --> marketing
   useEffect(() => {
-    console.table(show);
-  }, [show]);
+    console.log(show);
+    console.log(user);
+  }, [show, user]);
+
+  const clickedRegStats = () => {
+    set("Registration");
+    console.log(authCtx.user.access);
+    {authCtx.user.access === 0 ? "Admin" : ""}
+    {authCtx.user.access === 1 ? setUser("2") : ""}
+    {authCtx.user.access === 2 ? "director" : ""}
+    {authCtx.user.access === 3 ? setUser("1") : ""}
+    {authCtx.user.access === 4 ? setUser("1") : ""}
+    {authCtx.user.access === 5 ? setUser("2") : ""}
+    {authCtx.user.access === 6 ? setUser("1") : ""}
+    console.log("user: " ,user);
+  }
   return (
     <div className="memberBackground">
       <div className="mainbox">
@@ -61,7 +77,8 @@ export default function TCO() {
               <div
                 className="registrationStats"
                 onClick={() => {
-                  set("Registration");
+                  // set("Registration");
+                  clickedRegStats()
                 }}
               >
                 <img src={regStatSvg} alt="" />
@@ -140,24 +157,55 @@ export default function TCO() {
         )}
       
         {show === "Registration" ?
-         (
-         <div className="memberRight">
-          <div className="registrationsTop">
-            <h1>NUMBER OF REGISTRATIONS</h1>
-            <div className="filter"></div>
+          (user === "1" ?
+          (
+          <div className="memberRight">
+           <div className="registrationsTop">
+             <h1>NUMBER OF REGISTRATIONS</h1>
+             <div className="filter"></div>
+           </div>
+           <div className="registrationsBottom">
+               <table className="registrationTable">
+               <tr className="tableHead">
+                 <th>Event Name</th>
+                 <th>Registration Stats</th>
+                 <th>Event Date</th>
+               </tr>
+ 
+               <tr className="tableData">
+                 <td>KALKI</td>
+                 <td>500</td>
+                 <td>13 FEBRUARY</td>
+               </tr>
+               <tr className="tableData">
+                 <td>KALKI</td>
+                 <td>500</td>
+                 <td>13 FEBRUARY</td>
+               </tr>
+               <tr className="tableData">
+                 <td>KALKI</td>
+                 <td>500</td>
+                 <td>13 FEBRUARY</td>
+               </tr>
+               <tr className="tableData">
+                 <td>KALKI</td>
+                 <td>500</td>
+                 <td>13 FEBRUARY</td>
+               </tr>
+               
+ 
+               </table>
+ 
+           </div>
           </div>
-          <div className="registrationsBottom">
-            <div className="registrationTable">
-              <tr>
-                <th>Event Name</th>
-                <th>Registration Stats</th>
-                <th>Event Date</th>
-              </tr>
+           
+          ) : 
+          (
+            <div className="memberRight">
+              <div>Marketing</div>
             </div>
-          </div>
-         </div>
-          
-         ) 
+          )
+          )
          : ""}
       </div>
     </div>

@@ -434,16 +434,39 @@ h2 {
 }
 
 .registrationsBottom {
-    margin-top: 91px;
+    margin-top: 54px;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
 }
-.registrationsBottom th {
-    padding: 28px 45px;
+
+.registrationTable {
+    width: 80%;
+}
+
+.tableData,
+.tableHead {
+    display: flex;
+    justify-content: space-between;
+    padding: 29px 42px;
+}
+
+.tableHead {
     font-family: 'Manrope';
-font-weight: 600;
-font-size: 21.1512px;
-line-height: 29px;
+    font-weight: 600;
+    font-size: 21.1512px;
+    line-height: 29px;
+}
+
+.tableData {
+    border: 1.5px #808080 solid;
+    background-color: #1C1B1B;
+    border-radius: 16px;
+    margin-bottom: 64px;
+
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 20.2296px;
+    line-height: 25px;
 }
