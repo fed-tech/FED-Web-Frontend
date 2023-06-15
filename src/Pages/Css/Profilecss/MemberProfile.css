@@ -86,6 +86,9 @@ h2 {
     letter-spacing: 0.005em;
     color: #999999;
 }
+.gotoPro {
+    cursor: pointer;
+}
 
 .dashboardBottom {
     margin-top: 51px;

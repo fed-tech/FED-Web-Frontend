@@ -56,20 +56,22 @@ export default function TCO() {
               <h1>DASHBOARD</h1>
               <h2>DASH</h2>
               <h2>BOARD</h2>
-              <div className="profilePic">
-
-                <img
-                  src={authCtx.user.pic}
-                  alt=""
+              <div className="gotoPro"
                   onClick={() => {
                     set("Profile");
-                  }}
-                />
+                  }}>
+                <div className="profilePic">
 
-              </div>
-              <div className="Position">
-                <p className="name">{authCtx.user.name}</p>
-                {/* <p className="position">Technical Executive</p> */}
+                  <img
+                    src={authCtx.user.pic}
+                    alt=""
+                  />
+
+                </div>
+                <div className="Position">
+                  <p className="name">{authCtx.user.name}</p>
+                  {/* <p className="position">Technical Executive</p> */}
+                </div>
               </div>
             </div>
 
@@ -157,7 +159,7 @@ export default function TCO() {
         )}
 
         {show === "Registration" ?
-          (user === "2" ?
+          (user === "1" ?
             (
               <div className="memberRight">
                 <div className="registrationsTop">
@@ -227,22 +229,22 @@ export default function TCO() {
                       </div>
 
                       <div className="media">
-                          <div className="source">
-                            <p>By Mail:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By Instagram:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By Whatsapp:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By LinkedIn:</p>
-                            <p>12345</p>
-                          </div>
+                        <div className="source">
+                          <p>By Mail:</p>
+                          <p>12345</p>
+                        </div>
+                        <div className="source">
+                          <p>By Instagram:</p>
+                          <p>12345</p>
+                        </div>
+                        <div className="source">
+                          <p>By Whatsapp:</p>
+                          <p>12345</p>
+                        </div>
+                        <div className="source">
+                          <p>By LinkedIn:</p>
+                          <p>12345</p>
+                        </div>
                       </div>
 
                     </div>
