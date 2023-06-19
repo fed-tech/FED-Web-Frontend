@@ -19,9 +19,9 @@
 .glassDiv {
   margin-top: 221px;
   background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 24px;
-  padding: 15px 70px 44px 70px;
+  padding: 20px 70px 44px 70px;
   width: 60%;
   max-width: 44%;
   margin-bottom: 48px;
@@ -32,7 +32,7 @@
   font-family: rubik;
   font-style: normal;
   text-shadow: 1px 0.496831px 1px #f45725;
-  font-size: 48px;
+  font-size: 37px;
   font-weight: 700;
 }
 .wFFFDiv {
@@ -149,10 +149,10 @@ input::placeholder {
 .spn:after {
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display: flex;
-  margin-left: 120px;
+  margin-left: 124px;
   transition: 0.3s;
 }
 .spn:hover:after {
@@ -160,7 +160,7 @@ input::placeholder {
   transition: width 0.3s linear;
 }
 .spn:hover {
-  color: blue;
+  color: #f45725;
 }
 
 .year {
@@ -174,13 +174,14 @@ input::placeholder {
   color: black;
 }
 .modal {
-  background: rgba(0, 0, 0, 0.635);
-  backdrop-filter: blur(10px);
+  background: black;
+  /* backdrop-filter: blur(10px); */
   text-align: center;
   align-items: center;
   height: 250px;
   width: 400px;
-  position: absolute;
+  position: fixed;
+  top : 40%;
   border-radius: 5%;
 }
 .modalcontent h2 {

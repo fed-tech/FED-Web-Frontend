@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 
 // css
 import "./Css/Profilecss/profile.css";
@@ -12,6 +13,7 @@ import AuthContext from "./../store/auth-context";
 
 export default function Profile() {
   const authCtx = useContext(AuthContext);
+  console.log(authCtx.user.name)
 
   const navigate = useNavigate();
 
@@ -20,16 +22,30 @@ export default function Profile() {
     navigate("/Login");
     authCtx.logout();
   }
-
   return (
     <div className="profileBackground">
       <div className="pmainBox">
         <div className="profileLeft">
           <div className="profile">
             <div className="proHeading">
+              {authCtx.user.access === 0 ? (
+                <>
+                  <div>
+                    <Link to="/admin/Member">Member</Link>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
+                </>
+              ) : (
+                ""
+              )}
+
               <p className="headInnerText">
                 <p>Profile Details</p>
-                <img src={penSvg} alt="" />
+                <Link to='/updateprofile'>
+                  <img src={penSvg} alt=""/>
+                </Link>
               </p>
             </div>
             <div className="details">
@@ -79,6 +95,15 @@ export default function Profile() {
               <span>ENTREPRENEUR</span>
             </p>
             <p>IN YOU</p>
+          </p>
+          <p style={{ textAlign: "right" }}>
+            {authCtx.user.access} ={authCtx.user.access === 0 ? "Admin" : ""}
+            {authCtx.user.access === 1 ? "User" : ""}
+            {authCtx.user.access === 2 ? "director" : ""}
+            {authCtx.user.access === 3 ? "creative member" : ""}
+            {authCtx.user.access === 4 ? "tech member" : ""}
+            {authCtx.user.access === 5 ? "marketing member" : ""}
+            {authCtx.user.access === 6 ? "operations member" : ""}
           </p>
         </div>
       </div>

@@ -15,8 +15,11 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
-import ResetPassword from "./Pages/ResetPassword"
-// import MyProfile from "./Components/Profile/MyProfile";
+import ResetPassword from "./Pages/ResetPassword";
+import ForgotPassword from "./Pages/ForgotPassword";
+import AddMember from "./Pages/AddMember";
+import Member from "./Pages/Member";
+import UpdateProfile from "./Pages/UpdateProfile"
 
 // Components
 import Nav from "./Components/Nav";
@@ -28,7 +31,6 @@ import AuthContext from "./store/auth-context";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
-import ForgotPassword from "./Pages/ForgotPassword";
 import CreateProfile from "./Pages/CreateProfile";
 import Page from "./Pages/Page";
 
@@ -77,6 +79,19 @@ function App() {
             <Route path="/resetpassword" element = {<ResetPassword/>}/>
             <Route path="/createprofile" element = {<CreateProfile/>}/>
             <Route path="/page" element = {<Page/>}/>
+            <Route
+              path="/admin/Member"
+              element={authCtx.user.access === 0 ? <Member /> : <Error />}
+            />
+            <Route
+              path="/admin/Member/AddMember"
+              element={authCtx.user.access === 0 ? <AddMember /> : <Error />}
+            />
+            <Route path="/forgotpassword" element={<ForgotPassword />} />
+            <Route path="/resetpassword" element={<ResetPassword />} />
+            <Route path="/createprofile" element={<CreateProfile />} />
+            <Route path="/updateprofile" element={<UpdateProfile />} />
+
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />

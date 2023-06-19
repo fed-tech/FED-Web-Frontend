@@ -19,6 +19,9 @@ import google from "../Img/Google.svg";
 import Swal from "sweetalert2";
 
 function Login(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -58,14 +61,10 @@ function Login(props) {
           username,
           password,
         });
+
         console.log(response);
-        console.log(response.data.result[0].name);
-        if (response.data.result[0].access === 1) console.log("admin");
-        else console.log("not admin");
 
         if (response.status === 200) {
-          // setCookie("auth_token", response.data.token);
-          // props.setIsLoggedIn(true);
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -75,9 +74,11 @@ function Login(props) {
             response.data.result[0].College,
             response.data.result[0].MobileNo,
             response.data.result[0].selected,
+            Number(response.data.result[0].access),
             response.data.token,
             10800000
           );
+
           navigate("/MyProfile");
           return;
         }
@@ -112,7 +113,7 @@ function Login(props) {
         )
         .then((res) => {
           const mail = res.data.email;
-          console.log(mail)
+          console.log(mail);
           axios
             .post("http://localhost:5000/auth/googleverification", {
               email: mail,
@@ -136,6 +137,7 @@ function Login(props) {
                       resp.data.result[0].College,
                       resp.data.result[0].MobileNo,
                       resp.data.result[0].selected,
+                      Number(resp.data.result[0].access),
                       resp.data.token,
                       10800000
                     );
@@ -146,12 +148,16 @@ function Login(props) {
                 Swal.fire({
                   icon: "error",
                   title: "Email does not exist",
-                  text:"Please signup first",
-                  confirmButtonText: "ok",
+                  text: "Please signup first",
+                  confirmButtonText: "OK",
                   confirmButtonColor: "#f45725",
                   background: "black",
-                  color:"white",
-              });
+                  color: "white",
+                  customClass: {
+                    title: "my-title-class",
+                    text: "my-text-class",
+                  },
+                });
                 navigate("/signup");
               }
             });
@@ -164,7 +170,7 @@ function Login(props) {
     <div className="full">
       <div className="inside">
         <div className="title1">
-          <p className="fed">FED</p>
+          <p className="FED">FED</p>
         </div>
         <div className="whitebox">
           <div className="hellopart">
@@ -210,7 +216,7 @@ function Login(props) {
             <p className="signup">
               Don't have an account?{" "}
               <Link to="/Signup">
-                <span className="spn">Signup</span>
+                <span className="spann">Signup</span>
               </Link>
             </p>
             <p id="errmssg" style={{ color: isinValid ? "red" : "white" }}>

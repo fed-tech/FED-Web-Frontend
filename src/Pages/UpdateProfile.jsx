@@ -1,22 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-
-import bcrypt from "bcryptjs-react";
-
-// axios
+import SuCss from "./Css/Signup.module.css";
+import AuthContext from "../store/auth-context";
 import axios from "axios";
-import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
-// Css
-import SuCss from "./Css/CreateProfile.module.css";
-
-// state
-import AuthContext from "./../store/auth-context";
-
-export default function CreateProfile() {
-  useEffect(() => {
-    window.scrollTo(0,0)
-  }, [])
+function updateModal() {
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -29,35 +17,40 @@ export default function CreateProfile() {
   const [errmssg, setErrMssg] = useState("Invalid");
 
   const options = [
+    // { value: "", text: "Year" },
     { value: "1st", text: "1st year" },
     { value: "2nd", text: "2nd year" },
     { value: "3rd", text: "3rd year" },
     { value: "4th", text: "4th year" },
     { value: "5th", text: "5th year" },
   ];
+
   const [showUser, setUser] = useState({
-    email: "",
-    Password: "",
-    name: "",
+    email: authCtx.user.email,
+    name:"",
     RollNumber: "",
     School: "",
     College: "",
     MobileNo: "",
-    img: "",
   });
 
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(authCtx.user.selected);
 
   const handleChange = (event) => {
     console.log(event.target.value);
     setSelected(event.target.value);
   };
-
   const DataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
-
+    if (name === "name") {
+      if (value === "") {
+        e.target.style.borderBottom = "2px solid  #FF0000";
+        e.target.style.outline = "none";
+      } else {
+        e.target.style.borderBottom = "2px solid  black";
+      }
+    }
     if (name === "RollNumber") {
       if (value === "") {
         e.target.style.borderBottom = "2px solid  #FF0000";
@@ -103,89 +96,60 @@ export default function CreateProfile() {
     console.log(showUser);
   };
 
-  useEffect(() => {
-    setIsinValid(false);
-  }, [showUser, selected]);
-
-  const handleCreateProfile = async (e) => {
-    e.preventDefault();
-    const profile = JSON.parse(localStorage.getItem('user'));
-    showUser.email = profile.email;
-    showUser.Password = profile.id;
-    showUser.name = profile.name;
-    showUser.img = profile.picture;
+  const handleUpdate = async (e) => {
     const {
       email,
-      Password,
       name,
       RollNumber,
       School,
       College,
       MobileNo,
-      img,
     } = showUser;
-    
-
-    const password = bcrypt.hashSync(
-      Password,
-      "$2b$10$Q0RPeouqYdTToq76zoccIO"
-    );
     if (
       name !== "" &&
       RollNumber !== "" &&
-      Password !== ""&&
       School !== "" &&
       College !== "" &&
       MobileNo !== "" &&
-      MobileNo.length<=12 &&
-      MobileNo.length>=10 &&
-      email !== "" &&
-      selected !== ""&&
-      img != ""
+      MobileNo.length <= 12 &&
+      MobileNo.length >= 10 &&
+      selected !== "Year"
     ) {
       const userObject = {
         name,
         email,
-        password,
         RollNumber,
         School,
         College,
         MobileNo,
         selected,
-        img,
       };
-      console.log("user object: ",userObject);
       try {
-        const response = await axios.post(
-          `http://localhost:5000/auth/googleregister`,
+        axios.post(
+          `http://localhost:5000/auth/updateProfile`,
           userObject
-        );
-        const success = response.status === 200;
-        if (success) {
-          const username = userObject.email;
-          const password = userObject.password;
-          axios.post(`http://localhost:5000/auth/login`, {
-            username,
-            password,
-          }).then((res)=>{
-            authCtx.login(
-              res.data.result[0].name,
-              res.data.result[0].email,
-              res.data.result[0].img,
-              res.data.result[0].RollNumber,
-              res.data.result[0].School,
-              res.data.result[0].College,
-              res.data.result[0].MobileNo,
-              res.data.result[0].selected,
-              Number(res.data.result[0].access),
-              res.data.token,
-              10800000
-            );
-            navigate("/MyProfile");
-            return;
+        ).then(async (res)=>{
+          if(res.status === 200)
+          {
+            const resp = res.data.response
 
-          })
-        }
+            authCtx.update(
+              resp.name,
+              resp.email,
+              resp.img,
+              resp.RollNumber,
+              resp.School,
+              resp.College,
+              resp.MobileNo,
+              resp.selected,
+              Number(resp.access)
+            )
+
+            navigate('/MyProfile');
+            return;
+            
+          }
+        });
       } catch (error) {
         setIsinValid(true);
         if (error.response.data.code === 1) {
@@ -198,26 +162,46 @@ export default function CreateProfile() {
         console.log(error);
       }
     } else {
-      if(MobileNo === "" || (MobileNo.length<=12 && MobileNo.length>=10))
-      {
-
+      if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
         setErrMssg("Please fill all the fields");
-      }
-      else{
+      } else {
         setIsinValid(true);
-        setErrMssg("Invalid mobile number")
+        setErrMssg("Invalid mobile number");
       }
     }
   };
+
+
+  useEffect(() => {
+    showUser.name = authCtx.user.name;
+    showUser.RollNumber = authCtx.user.rollNo;
+    showUser.MobileNo = authCtx.user.mobileNo;
+    showUser.College = authCtx.user.school;
+    showUser.School = authCtx.user.college;
+    document.getElementById("name").setAttribute("value", authCtx.user.name);
+    document.getElementById("rollNum").setAttribute("value", authCtx.user.rollNo);
+    document.getElementById("school").setAttribute("value", authCtx.user.school);
+    document.getElementById("college").setAttribute("value", authCtx.user.college);
+    document.getElementById("number").setAttribute("value", authCtx.user.mobileNo);
+  }, []);
+
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
-        <p className={SuCss.FED}>FED</p>
         <div className={SuCss.wFFFDiv}>
-          <div className={SuCss.helloDiv}> Create Profile</div>
-          <p className={SuCss.plsDiv}> Please enter Your Details</p>
+          <div className={SuCss.helloDiv}>Update Profile</div>
           <div className={SuCss.form}>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              onChange={DataInp}
+              style={{
+                borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
+              }}
+            />
             <input
               type="text"
               id="rollNum"
@@ -262,17 +246,17 @@ export default function CreateProfile() {
               value={selected}
               onChange={handleChange}
               className={SuCss.year}
+              placeholder="Year"
+              id="year"
             >
-              <option hidden>Year
-                </option>
               {options.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.text}
                 </option>
               ))}
             </select>
-            <button type="submit" className={SuCss.btn} onClick={handleCreateProfile}>
-              Create Profile
+            <button type="submit" className={SuCss.btn} onClick={handleUpdate}>
+              Update Profile
             </button>
             <p
               className={SuCss.signupErrDiv}
@@ -284,7 +268,7 @@ export default function CreateProfile() {
         </div>
       </div>
     </div>
-    
   );
 }
 
+export default updateModal;

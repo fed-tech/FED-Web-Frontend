@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+
 
 .full {
   background-image: url(../../Img/image-23.png);
@@ -16,19 +18,28 @@
 #errmssg{
   font-size: 14px;
 }
+
 .inside {
+  /* margin-top: 221px;
   background-color: rgba(0,0,0,0.3);
-  
-  height: 47.188rem;
+  border-radius: 5%;
+  padding: 15px 70px 44px 70px;  
   width:60%;
   max-width: 44%;
+  height: 47.188rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border-radius: 5%;
-  text-align: center;
-  padding: 15px 70px 44px 70px;  
+  text-align: center; */
+  margin-top: 221px;
+  background: rgba(0, 0, 0, 0.3);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 24px;
+  padding: 20px 70px 44px 70px;
+  width: 60%;
+  max-width: 44%;
+  margin-bottom: 48px;
 }
 .title1 {
   text-align: center;
@@ -44,6 +55,14 @@
    color: white;
    margin: 0;
    font-size: 2.313rem;
+}
+.FED {
+  text-align: center;
+  font-family: rubik;
+  font-style: normal;
+  text-shadow: 1px 0.496831px 1px #f45725;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .whitebox {
@@ -89,6 +108,7 @@
   line-height: 1.063rem;
   color: black;
 }
+
 .googlepart {
   margin: 1.875rem;
   height: 2.625rem;
@@ -100,6 +120,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.googlepart GoogleOAuthProvider {
+  width: 100%;
 }
 .icon {
   width: 1.063rem;
@@ -136,7 +160,7 @@
   color: black;
 }
 
-.spn {
+.spann {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -146,21 +170,21 @@
   color: black;
   text-decoration: none;
 }
-.spn:after{
+.spann:after{
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display:flex;
   margin-left: 155px;
   transition: 0.3s;
 }
-.spn:hover:after{
+.spann:hover:after{
   width: 25%;
   transition: width 0.3s linear;
 }
-.spn:hover{
-  color: blue;
+.spann:hover{
+  color: #f45725;
 }
 
 .login-btn{
@@ -252,7 +276,13 @@
 .forgotPassword p:hover{
   color: #f45725;
 }
-
+.my-text-class{
+  font-family: "Rubik", sans-serif;
+}
+.my-title-class
+{
+  font-family: "Rubik", sans-serif;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
   .inside {
     width: 50%;

@@ -1,38 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
 
-.full {
-  background-image: url(../../Img/image-23.png);
-  height: 64rem;
-  width: 100%;
+.full-page {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size:cover;
-  text-align: center;
-  color: black;
+  background-size: cover;
+  height: fit-content;
 }
-#errmssg{
+#errmssg1{
   font-size: 14px;
   margin-top: 15px;
   user-select: none;
 }
-.inside {
-  background-color: rgba(0,0,0,0.3);
-  
-  height: 29.569rem;
-  width:60%;
+.insidebox {
+  margin-top: 221px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  padding: 20px 70px 44px 70px;
+  width: 60%;
   max-width: 44%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 5%;
-  text-align: center;
-  padding: 15px 70px 44px 70px;  
+  margin-bottom: 48px;
 }
-.title1 {
+.title2 {
   text-align: center;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
@@ -42,33 +35,42 @@
   line-height: 3.688rem;
   margin-bottom: 4.25rem;
 }
-.title1 p{
+.title2 p{
    color: white;
    margin: 0;
    font-size: 2.313rem;
 }
 
-.whitebox {
-  width: 100%;
-  height: 34.569rem;
-  padding: 30px 57px;
-  padding-bottom: 77.5px;
+.FED {
+  text-align: center;
+  font-family: rubik;
+  font-style: normal;
+  text-shadow: 1px 0.496831px 1px #f45725;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.whitebox1 {
+  /* width: 100%; */
+  height: 20rem;
+  padding: 0px 57px;
+  margin-bottom: 100px;
   background: white;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   position: relative;
 }
-.hellopart{
+.hellopart1{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.welc {
+.welc1 {
   margin-top: 2rem;
   background-color: transparent;
   font-family: "Mulish", sans-serif;
@@ -79,8 +81,8 @@
   letter-spacing: 0.005em;
   color: black;
 }
-
-.det {
+/* 
+.det1 {
   width: 9.375rem;
   height: 1.063rem;
   background-color: transparent;
@@ -91,7 +93,10 @@
   line-height: 1.063rem;
   color: black;
 }
-.googlepart {
+#google {
+  color: black;
+}
+.googlepart1 {
   margin: 1.875rem;
   height: 2.625rem;
   width: 100%;
@@ -102,12 +107,15 @@
     align-items: center;
     justify-content: center;
 }
-.icon {
+.googlepart1 GoogleOAuthProvider {
+  width : 100%;
+}
+.icon1 {
   width: 1.063rem;
   height: 1.063rem;
   margin-right: 6px;
 }
-.log {
+.log1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -117,7 +125,7 @@
   color: black;
 }
 
-.or {
+.or1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -127,7 +135,7 @@
   color: black;
 }
 
-.signup {
+.signup1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -137,7 +145,7 @@
   color: black;
 }
 
-.spn {
+.spn1 {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
@@ -147,28 +155,28 @@
   color: black;
   text-decoration: none;
 }
-.spn:after{
+.spn1:after{
   content: "";
   width: 0;
-  height: 3px;
-  background-color: blue;
+  height: 2px;
+  background-color: #f45725;
   display:flex;
   margin-left: 155px;
   transition: 0.3s;
 }
-.spn:hover:after{
+.spn1:hover:after{
   width: 25%;
   transition: width 0.3s linear;
 }
-.spn:hover{
-  color: blue;
+.spn1:hover{
+  color: #f45725;
 }
 
-.login-btn{
+.login-btn1{
   width: 22.176rem;
   height: 2.446rem;
-}
-.logtwo {
+} */
+.logtwo1 {
   width: 100%;
   margin-top: 31.15px;
     padding: 7.3px;
@@ -206,7 +214,7 @@
   border-bottom: 1.5px solid black;
   
 }
-.username {
+.username1 {
   border: none;
   color: black;
   font-size: 0.75rem;
@@ -214,10 +222,10 @@
   font-family: "Mulish", sans-serif;
 
 }
-.username:focus {
+.username1:focus {
   outline: none;
 }
-.password {
+.password1 {
   border: none;
   color: black;
   font-size: 0.75rem;
@@ -225,10 +233,10 @@
   font-family: "Mulish", sans-serif;
 
 }
-.password:focus {
+.password1:focus {
   outline: none;
 }
-.signup {
+.signup1 {
   padding-top: 1.25rem;
 }
 
@@ -238,66 +246,72 @@
   border: 1px solid #ccc;
   outline: none;
 }
-.forgotPassword{
+.forgotPassword1{
   width: 100%;
   padding: 6.9px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.forgotPassword p{
+.forgotPassword1 p{
   color: black;
   cursor: pointer;
   font-family: "Mulish", sans-serif;
   font-size: 13px;
 }
-.forgotPassword p:hover{
+.forgotPassword1 p:hover{
   color: #f45725;
 }
-
+.my-text-class{
+  font-family: "Rubik", sans-serif;
+}
+.my-title-class
+{
+  font-family: "Rubik", sans-serif;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
-  .inside {
+  .insidebox {
     width: 50%;
     max-width: 50%;
   }
 }
 @media (max-width: 1000px) and (min-width: 800px) {
-  .inside {
+  .insidebox {
     width: 60%;
     max-width: 60%;
   }
 }
 @media (max-width: 800px) and (min-width: 760px) {
-  .inside {
+  .insidebox {
     width: 65%;
     max-width: 65%;
   }
 }
 @media (max-width: 760px) and (min-width: 530px) {
-  .inside {
+  .insidebox {
     width: 70%;
     max-width: 70%;
     padding: 15px 40px 40px 40px;
   }
 }
 @media (max-width: 530px) {
-  .inside {
+  .insidebox {
     width: 80%;
     max-width: 80%;
     padding: 15px 40px 40px 40px;
   }
-  .whitebox {
+  .whitebox1 {
     margin-top: 30.8px;
     padding: 35px 35px;
   }
 }
 @media (max-width: 400px) {
-  .inside {
+  .insidebox {
     width: 100%;
     max-width: 100%;
     padding: 15px 40px 40px 40px;
   }
-  .whitebox {
+  .whitebox1 {
     margin-top: 30.8px;
     padding: 30px 30px;
   }
