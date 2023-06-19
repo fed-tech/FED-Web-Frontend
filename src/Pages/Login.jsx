@@ -78,15 +78,7 @@ function Login(props) {
             response.data.token,
             10800000
           );
-          console.log(response.data.result[0].access);
-          if(response.data.result[0].access == '0'){
-            console.log("Taking to /page")
-            navigate("/page");
-          }
-          else{
-            console.log("Taking to /MyProfile")
-            navigate("/MyProfile");
-          }
+          navigate('/MyProfile')
           return;
         }
       } catch (err) {
@@ -148,13 +140,7 @@ function Login(props) {
                       resp.data.token,
                       10800000
                     );
-                    if(Number(resp.data.result[0].access) === 0){
-
-                      navigate("/page");
-                    }
-                    else{
-                      navigate("/MyProfile");
-                    }
+                    navigate('/MyProfile')
                     return;
                   });
               } else {

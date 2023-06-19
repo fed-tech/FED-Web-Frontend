@@ -73,12 +73,12 @@ function App() {
             />
             <Route
               path="/MyProfile"
-              element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
+              element={authCtx.isLoggedIn? (authCtx.user.access === 0?<Page/>:<Profile/>) : <Signup />}
             />
             <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
             <Route path="/resetpassword" element = {<ResetPassword/>}/>
             <Route path="/createprofile" element = {<CreateProfile/>}/>
-            <Route path="/page" element = {<Page/>}/>
+            {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
             <Route
               path="/admin/Member"
               element={authCtx.user.access === 0 ? <Member /> : <Error />}

@@ -7,9 +7,11 @@ import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 import ViewEvents from "../Components/Profile/ViewEvents";
 import AddEvent from "../Components/Profile/AddEvent";
 import AuthContext from "../store/auth-context";
+import { useNavigate } from "react-router-dom";
 
 function Page() {
   const [viewEvents,setViewEvents] = useState(true);
+  const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
   const handleView = (e)=>{
     e.target.style.color = '#f45725';
@@ -17,6 +19,10 @@ function Page() {
   }
   const handleAdd = ()=>{
     setViewEvents(false);
+  }
+  const handleLogout = ()=>{
+    navigate("/Login");
+    authCtx.logout();
   }
   return (
     <div className="Page_main">
@@ -49,7 +55,7 @@ function Page() {
                 <GroupsIcon />
                 Members
               </p>
-              <p>
+              <p onClick={handleLogout}>
                 <LogoutIcon />
                 Logout
               </p>
