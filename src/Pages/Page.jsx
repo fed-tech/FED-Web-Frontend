@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../Components/Profile/cssp/Page.css";
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -6,9 +6,11 @@ import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 import ViewEvents from "../Components/Profile/ViewEvents";
 import AddEvent from "../Components/Profile/AddEvent";
+import AuthContext from "../store/auth-context";
 
 function Page() {
   const [viewEvents,setViewEvents] = useState(true);
+  const authCtx = useContext(AuthContext);
   const handleView = (e)=>{
     e.target.style.color = '#f45725';
     setViewEvents(true);
@@ -16,7 +18,6 @@ function Page() {
   const handleAdd = ()=>{
     setViewEvents(false);
   }
-
   return (
     <div className="Page_main">
       <div className="Page">
@@ -26,12 +27,12 @@ function Page() {
               <h2 className="page_left_title">Dashboard</h2>
               <div className="member_img">
                 <img
-                  src="https://images.unsplash.com/photo-1682695797873-aa4cb6edd613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                  src={authCtx.user.pic}
                   alt=""
                 />
               </div>
               <div className="user_name_desig">
-                <h2 className="user_name">Binay Kumar Sahu</h2>
+                <h2 className="user_name">{authCtx.user.name}</h2>
                 <p className="designation">Sr Creative executive</p>
               </div>
             </div>

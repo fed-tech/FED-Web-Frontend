@@ -64,7 +64,7 @@ function Login(props) {
 
         console.log(response);
 
-        if (response.status === 200) {
+        if (response.status === 202) {
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -78,8 +78,15 @@ function Login(props) {
             response.data.token,
             10800000
           );
-
-          navigate("/MyProfile");
+          console.log(response.data.result[0].access);
+          if(response.data.result[0].access == '0'){
+            console.log("Taking to /page")
+            navigate("/page");
+          }
+          else{
+            console.log("Taking to /MyProfile")
+            navigate("/MyProfile");
+          }
           return;
         }
       } catch (err) {
@@ -141,7 +148,13 @@ function Login(props) {
                       resp.data.token,
                       10800000
                     );
-                    navigate("/MyProfile");
+                    if(Number(resp.data.result[0].access) === 0){
+
+                      navigate("/page");
+                    }
+                    else{
+                      navigate("/MyProfile");
+                    }
                     return;
                   });
               } else {

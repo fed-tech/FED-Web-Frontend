@@ -43,6 +43,9 @@
     align-items: center;
     margin-top: 10px;
 }
+.user_name_desig h2{
+    text-align: center;
+}
 .designation{
     color: #767676;
 }

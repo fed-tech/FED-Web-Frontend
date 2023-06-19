@@ -91,7 +91,6 @@ function App() {
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/createprofile" element={<CreateProfile />} />
             <Route path="/updateprofile" element={<UpdateProfile />} />
-
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
