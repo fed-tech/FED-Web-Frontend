@@ -431,7 +431,6 @@ h2 {
 .registrationsTop {
     display: flex;
     width: 90%;
-    /* align-items: flex-start; */
     justify-content: space-between;
 }
 .registrationsTop h1 {
@@ -548,11 +547,11 @@ h2 {
 }
 
 @media (max-width:1175px) {
-    .row , .tableHead{
+    .row , .tableHead, .tableData{
         padding: 29px 25px;
     }
     .tableHead {
-        margin-right: 20px;
+        margin-right: 10px;
     }
     .font1 {
         font-size: 19px;
@@ -560,10 +559,14 @@ h2 {
     .registrationTable {
         width: 90%;
     }
+    .registrationsTop h1{
+        line-height: 30px;
+    }
 }
 
 @media (max-width: 1040px) {
     .registrationsTop h1{
+        line-height: 30px;
         font-size: 35px;
     }
 
@@ -582,6 +585,12 @@ h2 {
     }
 }
 
+@media(max-width:880) {
+    .memberRight {
+        max-height: 880px;
+        overflow-y: auto;
+    }
+}
 @media (max-width:733px) {
     .registrationsTop h1{
         margin-left: 30px;
@@ -590,8 +599,11 @@ h2 {
         width:43%
     }
 
-    .row , .tableHead{
+    .row , .tableHead, .tableData{
         padding: 29px 15px;
+    }
+    .tableData {
+        padding-right: 50px;
     }
 
 }
@@ -601,10 +613,13 @@ h2 {
         font-size: 30px;
         margin-left: 25px;
     }
-    .row, .tableHead {
+    .row, .tableHead , .tableData{
         font-size: 16px;
         padding: 18px 9px;
     }
+        .tableData {
+        padding-right: 30px;
+    }   
     .font1 {
         font-size: 16px;
     }
@@ -642,6 +657,9 @@ h2 {
         margin-right: 10px;
         /* padding-right: 50px; */
         padding-left: 10px;
+    }
+    .tableData {
+        padding-right: 35px;
     }
     .registrationsTop h1{
         font-size: 25px;
