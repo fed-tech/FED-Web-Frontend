@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
 import penSvg from "../Img/pen-icon.svg";
+import filter from '../Img/Filter.svg';
 
 // css
 import "./Css/Profilecss/MemberProfile.css";
@@ -166,7 +167,8 @@ export default function TCO() {
               <div className="memberRight">
                 <div className="registrationsTop">
                   <h1>NUMBER OF REGISTRATIONS</h1>
-                  <div className="filter">Filter</div>
+                  <div className="filter">
+                    <img src={filter} alt="" />Filter</div>
                 </div>
                 <div className="registrationsBottom">
                   <table className="registrationTable">

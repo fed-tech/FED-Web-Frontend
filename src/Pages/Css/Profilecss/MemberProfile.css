@@ -126,8 +126,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding-top: 162px;
-    max-height: 1000px;
-    overflow-y: auto;
+    /* max-height: 1000px;
+    overflow-y: auto; */
 }
 
 #profile {
@@ -433,6 +433,22 @@ h2 {
     width: 90%;
     justify-content: space-between;
 }
+.filter {
+    background-color: #424243;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Mulish';
+font-weight: 500;
+font-size: 15.7863px;
+line-height: 20px;
+
+display: flex;
+align-items: center;
+
+}
+.filter img {
+    margin-right: 20px;
+}
 .registrationsTop h1 {
     font-family: 'Mulish';
     font-weight: 700;
@@ -585,12 +601,12 @@ h2 {
     }
 }
 
-@media(max-width:880) {
+/* @media(max-width:880) {
     .memberRight {
         max-height: 880px;
         overflow-y: auto;
     }
-}
+} */
 @media (max-width:733px) {
     .registrationsTop h1{
         margin-left: 30px;
