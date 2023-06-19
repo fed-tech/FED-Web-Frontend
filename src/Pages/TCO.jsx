@@ -161,7 +161,7 @@ export default function TCO() {
         )}
 
         {show === "Registration" ?
-          (user === "1" ?
+          (user === "2" ?
             (
               <div className="memberRight">
                 <div className="registrationsTop">
@@ -231,6 +231,7 @@ export default function TCO() {
                       </div>
 
                       <div className="media">
+                        <div className="mediaTop">
                         <div className="source">
                           <p>By Mail:</p>
                           <p>12345</p>
@@ -239,6 +240,9 @@ export default function TCO() {
                           <p>By Instagram:</p>
                           <p>12345</p>
                         </div>
+
+                        </div>
+                        <div className="mediaBottom">
                         <div className="source">
                           <p>By Whatsapp:</p>
                           <p>12345</p>
@@ -246,6 +250,8 @@ export default function TCO() {
                         <div className="source">
                           <p>By LinkedIn:</p>
                           <p>12345</p>
+                        </div>
+
                         </div>
                       </div>
 

@@ -126,6 +126,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding-top: 162px;
+    max-height: 1000px;
+    overflow-y: auto;
 }
 
 #profile {
@@ -489,7 +491,7 @@ h2 {
     /* align-items: center; */
     justify-content: space-evenly;
     padding: 29px 42px;
-    height: 247.53px;
+    /* height: 247.53px; */
     border: 1.5px #808080 solid;
     border-radius: 16px;
     margin-bottom: 64px;
@@ -510,25 +512,149 @@ h2 {
     margin: 30px 0;
 }
 
-.media {
+.media ,.mediaBottom, .mediaTop{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 100%;
 }
 .source {
     border: 1.5px #808080 solid;
     background-color: #1C1B1B;
     border-radius: 16px;
-    padding: 10px 0px 10px 10px;
+    padding: 10px;
 
-    height: 87px;
-    width: 20%;
+    /* height: 87px; */
+    margin-bottom: 20px;
+    height: 100%;
+    width: 45%;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.registrationTable td {
+.registrationTable td, th {
     width: 23%;
     text-align: center;
+}
+
+@media (max-width:1400px) {
+    .row {
+        font-size: 18px;
+        /* height: 280px; */
+    }
+    .source {
+        height: 90%;
+    }
+}
+
+@media (max-width:1175px) {
+    .row , .tableHead{
+        padding: 29px 25px;
+    }
+    .tableHead {
+        margin-right: 20px;
+    }
+    .font1 {
+        font-size: 19px;
+    }
+    .registrationTable {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1040px) {
+    .registrationsTop h1{
+        font-size: 35px;
+    }
+
+    .media {
+        flex-wrap: wrap;
+    }
+    .source {
+        margin-bottom: 0px;
+        height: 100%;
+        padding: 20px;
+        width: 40%;
+    
+    }
+    .mediaTop {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:733px) {
+    .registrationsTop h1{
+        margin-left: 30px;
+    }
+    .source {
+        width:43%
+    }
+
+    .row , .tableHead{
+        padding: 29px 15px;
+    }
+
+}
+
+@media(max-width: 620px) {
+    .registrationsTop h1{
+        font-size: 30px;
+        margin-left: 25px;
+    }
+    .row, .tableHead {
+        font-size: 16px;
+        padding: 18px 9px;
+    }
+    .font1 {
+        font-size: 16px;
+    }
+    .source {
+        width: 40%;
+    }
+    /* .mediaTop, .mediaBottom {
+        justify-content: space-between;
+    } */
+}
+@media(max-width: 580px) {
+    .registrationsTop h1{
+        font-size: 25px;
+        margin-left: 25px;
+    }
+
+    .source {
+        margin-bottom: 0px;
+        height: 100%;
+        padding: 12px;
+    }
+    .mediaTop {
+        margin-bottom: 8px;
+    }
+    .registrationTable th, td {
+        width: 30%;
+    }
+}
+
+@media (max-width: 425px) {
+    .source {
+        width: 44%;
+    }
+    .tableHead {
+        margin-right: 10px;
+        /* padding-right: 50px; */
+        padding-left: 10px;
+    }
+    .registrationsTop h1{
+        font-size: 25px;
+        line-height: 30px;
+        margin-left: 0;
+    }
+    .row{
+        font-size: 14px;
+    }
+    .font1 {
+        font-size: 14px;
+    }
+    .registrationTable {
+        width: 95%;
+    }
 }
