@@ -315,3 +315,16 @@
     font-size: 25px;
   }
 }
+.terms_and_policies{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.terms_and_policies a{
+  margin: 20px 10px 10px 10px;
+  /* text-decoration: none; */
+  font-family: "Manrope", sans-serif;
+
+}

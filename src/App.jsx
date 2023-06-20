@@ -33,6 +33,8 @@ import AuthContext from "./store/auth-context";
 import { Analytics } from "@vercel/analytics/react";
 import CreateProfile from "./Pages/CreateProfile";
 import Page from "./Pages/Page";
+import PrivacyPolicies from "./Pages/PrivacyPolicies";
+import TermsAndConditions from "./Pages/TermsAndConditions";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -91,6 +93,8 @@ function App() {
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/createprofile" element={<CreateProfile />} />
             <Route path="/updateprofile" element={<UpdateProfile />} />
+            <Route path="/privacypolicies" element={<PrivacyPolicies/>} />
+            <Route path="/termsandconditions" element={<TermsAndConditions/>} />
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />
