@@ -19,7 +19,7 @@ import ResetPassword from "./Pages/ResetPassword";
 import ForgotPassword from "./Pages/ForgotPassword";
 import AddMember from "./Pages/AddMember";
 import Member from "./Pages/Member";
-import UpdateProfile from "./Pages/UpdateProfile"
+import UpdateProfile from "./Pages/UpdateProfile";
 
 // Components
 import Nav from "./Components/Nav";
