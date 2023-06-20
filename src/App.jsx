@@ -15,6 +15,8 @@ import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
+import TCO from "./Pages/TCO";
+import DashMobile from "./Components/DashMobile";
 import ResetPassword from "./Pages/ResetPassword";
 import ForgotPassword from "./Pages/ForgotPassword";
 import AddMember from "./Pages/AddMember";
@@ -32,6 +34,7 @@ import AuthContext from "./store/auth-context";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 import CreateProfile from "./Pages/CreateProfile";
+import Page from "./Pages/Page";
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -72,8 +75,20 @@ function App() {
             />
             <Route
               path="/MyProfile"
-              element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
+              element={authCtx.isLoggedIn? (authCtx.user.access === 0?<Page/>:<Profile/>) : <Signup />}
             />
+            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
+            <Route path="/resetpassword" element = {<ResetPassword/>}/>
+            <Route path="/createprofile" element = {<CreateProfile/>}/>
+            {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
+            <Route
+              path="/MyProfile/member"
+              element={authCtx.isLoggedIn ? <TCO /> : <Signup/>}
+            />
+            {/* <Route
+              path="/MyProfile/member"
+              element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
+            /> */}
             <Route
               path="/admin/Member"
               element={authCtx.user.access === 0 ? <Member /> : <Error />}
@@ -86,7 +101,6 @@ function App() {
             <Route path="/resetpassword" element={<ResetPassword />} />
             <Route path="/createprofile" element={<CreateProfile />} />
             <Route path="/updateprofile" element={<UpdateProfile />} />
-
             <Route path="*" element={<Error />} />
           </Routes>
           <Footer />

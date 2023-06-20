@@ -1,0 +1,30 @@
+.addevent{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 77%;
+}
+.addevent form{
+    background: transparent;
+}
+.addevent form input{
+    border-bottom: 1px solid #767676;
+    margin-top: 40px;
+    color: white;
+}
+.addevent form input::placeholder{
+    color: #767676;
+}
+.addevent_date{
+    display: flex;
+    gap: 10px;
+}
+.addevent_submit_btn{
+    background-color:#f45725 ;
+    border-radius: 10px;
+    width: 30%;
+    cursor: pointer;
+    position: relative;
+    left: 90%;
+}

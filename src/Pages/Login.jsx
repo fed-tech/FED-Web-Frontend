@@ -64,7 +64,7 @@ function Login(props) {
 
         console.log(response);
 
-        if (response.status === 200) {
+        if (response.status === 202) {
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -79,7 +79,8 @@ function Login(props) {
             10800000
           );
 
-          navigate("/MyProfile");
+          // navigate("/MyProfile");
+          navigate("/MyProfile/member");
           return;
         }
       } catch (err) {
@@ -141,7 +142,8 @@ function Login(props) {
                       resp.data.token,
                       10800000
                     );
-                    navigate("/MyProfile");
+                    // navigate("/MyProfile");
+                    navigate("/MyProfile/member");
                     return;
                   });
               } else {
