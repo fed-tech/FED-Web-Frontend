@@ -40,7 +40,7 @@ export default function TCO() {
     set("Registration");
     console.log(authCtx.user.access);
     { authCtx.user.access === 0 ? "Admin" : "" }
-    { authCtx.user.access === 1 ? setUser("2") : "" }
+    { authCtx.user.access === 1 ? setUser("1") : "" }
     { authCtx.user.access === 2 ? "director" : "" }
     { authCtx.user.access === 3 ? setUser("1") : "" }
     { authCtx.user.access === 4 ? setUser("1") : "" }
@@ -98,294 +98,300 @@ export default function TCO() {
         </div>
 
         {show === "Profile" ? (
-          <div className="memberRight">
-            <div id="profile">
-              <div className="proHeading">
-                {authCtx.user.access === 0 ? (
-                  <>
-                    <div>
-                      <Link to="/admin/Member">Member</Link>
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                  </>
-                ) : (
-                  ""
-                )}
+          <div className="scroll">
+            <div className="memberRight">
+              <div id="profile">
+                <div className="proHeading">
+                  {authCtx.user.access === 0 ? (
+                    <>
+                      <div>
+                        <Link to="/admin/Member">Member</Link>
+                      </div>
+                      <br />
+                      <br />
+                      <br />
+                    </>
+                  ) : (
+                    ""
+                  )}
 
-                <p className="headInnerText">
-                  <p>Profile Details</p>
-                  <Link to='/updateprofile'>
-                    <img src={penSvg} alt="" />
-                  </Link>
-                </p>
-              </div>
-              <div className="details">
-                <table className="profileTable">
-                  <tbody>
-                    <tr>
-                      <td className="dets1">Full Name</td>
-                      <td className="vals1">{authCtx.user.name}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Roll Number</td>
-                      <td className="vals1">{authCtx.user.rollNo}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Email ID</td>
-                      <td className="vals1">{authCtx.user.email}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Year</td>
-                      <td className="vals1">{authCtx.user.selected}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">School</td>
-                      <td className="vals1">{authCtx.user.school}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">College</td>
-                      <td className="vals1">{authCtx.user.college}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Mobile No</td>
-                      <td className="vals1">{authCtx.user.mobileNo}</td>
-                    </tr>
-                  </tbody>
-                </table>
+                  <p className="headInnerText">
+                    <p>Profile Details</p>
+                    <Link to='/updateprofile'>
+                      <img src={penSvg} alt="" />
+                    </Link>
+                  </p>
+                </div>
+                <div className="details">
+                  <table className="profileTable">
+                    <tbody>
+                      <tr>
+                        <td className="dets1">Full Name</td>
+                        <td className="vals1">{authCtx.user.name}</td>
+                      </tr>
+                      <tr>
+                        <td className="dets1">Roll Number</td>
+                        <td className="vals1">{authCtx.user.rollNo}</td>
+                      </tr>
+                      <tr>
+                        <td className="dets1">Email ID</td>
+                        <td className="vals1">{authCtx.user.email}</td>
+                      </tr>
+                      <tr>
+                        <td className="dets1">Year</td>
+                        <td className="vals1">{authCtx.user.selected}</td>
+                      </tr>
+                      <tr>
+                        <td className="dets1">School</td>
+                        <td className="vals1">{authCtx.user.school}</td>
+                      </tr>
+                      <tr>
+                        <td className="dets1">College</td>
+                        <td className="vals1">{authCtx.user.college}</td>
+                      </tr>
+                      <tr>
+                        <td className="dets1">Mobile No</td>
+                        <td className="vals1">{authCtx.user.mobileNo}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
+
           </div>
         ) : (
           ""
         )}
 
         {show === "Registration" ?
-          (user === "2" ?
+          (user === "1" ?
             (
-              <div className="memberRight">
-                <div className="registrationsTop">
-                  <h1>NUMBER OF REGISTRATIONS</h1>
-                  <div className="filter">
-                    <img src={filter} alt="" />Filter</div>
-                </div>
-                <div className="registrationsBottom">
-                  <table className="registrationTable">
-                    <tr className="tableHead font1">
-                      <th>Event Name</th>
-                      <th>Registration Stats</th>
-                      <th>Event Date</th>
-                    </tr>
+              <div className="scroll">
+                <div className="memberRight">
+                  <div className="registrationsTop">
+                    <h1>NUMBER OF REGISTRATIONS</h1>
+                    <div className="filter">
+                      <img src={filter} alt="" />Filter</div>
+                  </div>
+                  <div className="registrationsBottom">
+                    <table className="registrationTable">
+                      <tr className="tableHead font1">
+                        <th>Event Name</th>
+                        <th>Registration Stats</th>
+                        <th>Event Date</th>
+                      </tr>
 
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
+                      <tr className="tableData font1">
+                        <td>KALKI</td>
+                        <td>500</td>
+                        <td>13 FEBRUARY</td>
+                      </tr>
+                      <tr className="tableData font1">
+                        <td>KALKI</td>
+                        <td>500</td>
+                        <td>13 FEBRUARY</td>
+                      </tr>
+                      <tr className="tableData font1">
+                        <td>KALKI</td>
+                        <td>500</td>
+                        <td>13 FEBRUARY</td>
+                      </tr>
+                      <tr className="tableData font1">
+                        <td>KALKI</td>
+                        <td>500</td>
+                        <td>13 FEBRUARY</td>
+                      </tr>
+                      <tr className="tableData font1">
+                        <td>KALKI</td>
+                        <td>500</td>
+                        <td>13 FEBRUARY</td>
+                      </tr>
+                      <tr className="tableData font1">
+                        <td>KALKI</td>
+                        <td>500</td>
+                        <td>13 FEBRUARY</td>
+                      </tr>
 
 
-                  </table>
+                    </table>
 
+                  </div>
                 </div>
               </div>
 
             ) :
             (
-              <div className="memberRight">
-                <div className="registrationsTop">
-                  <h1>EVENT REGISTRATIONS</h1>
-                  <div className="filter"></div>
+              <div className="scroll">
+                <div className="memberRight">
+                  <div className="registrationsTop">
+                    <h1>EVENT REGISTRATIONS</h1>
+                  </div>
+                  <div className="registrationsBottom">
+                    <table className="registrationTable">
+                      <tr className="tableHead font1">
+                        <th>Event Name</th>
+                        <th>Event Date</th>
+                        <th>No of Registrations</th>
+                      </tr>
+
+                      <div className="row">
+
+                        <tr className="eTableData">
+                          <td>KALKI</td>
+                          <td>13 FEBRUARY</td>
+                          <td>500</td>
+                        </tr>
+
+                        <div className="desc font1">
+                          Registration Stats
+                        </div>
+
+                        <div className="media">
+                          <div className="mediaTop">
+                            <div className="source">
+                              <p>By Mail:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By Instagram:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                          <div className="mediaBottom">
+                            <div className="source">
+                              <p>By Whatsapp:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By LinkedIn:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <div className="row">
+
+                        <tr className="eTableData">
+                          <td>KALKI</td>
+                          <td>13 FEBRUARY</td>
+                          <td>500</td>
+                        </tr>
+
+                        <div className="desc font1">
+                          Registration Stats
+                        </div>
+
+                        <div className="media">
+                          <div className="mediaTop">
+                            <div className="source">
+                              <p>By Mail:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By Instagram:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                          <div className="mediaBottom">
+                            <div className="source">
+                              <p>By Whatsapp:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By LinkedIn:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <div className="row">
+
+                        <tr className="eTableData">
+                          <td>KALKI</td>
+                          <td>13 FEBRUARY</td>
+                          <td>500</td>
+                        </tr>
+
+                        <div className="desc font1">
+                          Registration Stats
+                        </div>
+
+                        <div className="media">
+                          <div className="mediaTop">
+                            <div className="source">
+                              <p>By Mail:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By Instagram:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                          <div className="mediaBottom">
+                            <div className="source">
+                              <p>By Whatsapp:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By LinkedIn:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                      <div className="row">
+
+                        <tr className="eTableData">
+                          <td>KALKI</td>
+                          <td>13 FEBRUARY</td>
+                          <td>500</td>
+                        </tr>
+
+                        <div className="desc font1">
+                          Registration Stats
+                        </div>
+
+                        <div className="media">
+                          <div className="mediaTop">
+                            <div className="source">
+                              <p>By Mail:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By Instagram:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                          <div className="mediaBottom">
+                            <div className="source">
+                              <p>By Whatsapp:</p>
+                              <p>12345</p>
+                            </div>
+                            <div className="source">
+                              <p>By LinkedIn:</p>
+                              <p>12345</p>
+                            </div>
+
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </table>
+                  </div>
                 </div>
-                <div className="registrationsBottom"> 
-                  <table className="registrationTable">
-                    <tr className="tableHead font1">
-                      <th>Event Name</th>
-                      <th>Event Date</th>
-                      <th>No of Registrations</th>
-                    </tr>
-
-                    <div className="row">
-
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">
-                        Registration Stats
-                      </div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                        <div className="source">
-                          <p>By Mail:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By Instagram:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                        <div className="mediaBottom">
-                        <div className="source">
-                          <p>By Whatsapp:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By LinkedIn:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className="row">
-
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">
-                        Registration Stats
-                      </div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                        <div className="source">
-                          <p>By Mail:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By Instagram:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                        <div className="mediaBottom">
-                        <div className="source">
-                          <p>By Whatsapp:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By LinkedIn:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className="row">
-
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">
-                        Registration Stats
-                      </div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                        <div className="source">
-                          <p>By Mail:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By Instagram:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                        <div className="mediaBottom">
-                        <div className="source">
-                          <p>By Whatsapp:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By LinkedIn:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-                    <div className="row">
-
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">
-                        Registration Stats
-                      </div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                        <div className="source">
-                          <p>By Mail:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By Instagram:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                        <div className="mediaBottom">
-                        <div className="source">
-                          <p>By Whatsapp:</p>
-                          <p>12345</p>
-                        </div>
-                        <div className="source">
-                          <p>By LinkedIn:</p>
-                          <p>12345</p>
-                        </div>
-
-                        </div>
-                      </div>
-
-                    </div>
-
-                  </table>
-                </div>
-              </div>
+               </div> 
             )
           )
           : ""}
