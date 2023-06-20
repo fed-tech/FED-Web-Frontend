@@ -78,7 +78,9 @@ function Login(props) {
             response.data.token,
             10800000
           );
-          navigate('/MyProfile')
+
+          // navigate("/MyProfile");
+          navigate("/MyProfile/member");
           return;
         }
       } catch (err) {
@@ -140,7 +142,8 @@ function Login(props) {
                       resp.data.token,
                       10800000
                     );
-                    navigate('/MyProfile')
+                    // navigate("/MyProfile");
+                    navigate("/MyProfile/member");
                     return;
                   });
               } else {
