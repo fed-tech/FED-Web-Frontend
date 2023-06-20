@@ -181,7 +181,8 @@ export default function CreateProfile() {
               res.data.token,
               10800000
             );
-            navigate("/MyProfile");
+            // navigate("/MyProfile");
+            navigate("/MyProfile/member");
             return;
 
           })
