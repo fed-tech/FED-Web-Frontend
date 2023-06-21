@@ -103,6 +103,11 @@ export default function NavMobile(props) {
               )}
             </NavLink>
           </div>
+          <div class="mobileList">
+            <NavLink to="/Alumni" className="liTag">
+              Alumni
+            </NavLink>
+          </div>
         </div>
       </div>
     </header>

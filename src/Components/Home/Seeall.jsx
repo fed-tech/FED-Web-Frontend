@@ -7,7 +7,9 @@ import "./css/seeall.css";
 import Wcard from "../../Data/testimonial.json";
 
 function Seeall() {
-  React.useEffect(() => {       window.scrollTo(0, 0);     }, []);
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="seeall_page">
       <div className="sub_div">

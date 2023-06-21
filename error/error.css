@@ -1,0 +1,53 @@
+body{
+    background-color: #2B2B2B;
+    filter: drop-shadow(0px 4px 4px rgba(0,0,0,9.25));
+    background: linear-gradient(180deg, rgba(0,0,0,0.15)56.24%,#0F0E0E 100%);
+    
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 56.4593px;
+}
+
+.fedname{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    width: 95px;
+    height: 57px;
+}
+
+.one{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    gap: 161px;
+    width: 1205px;
+    height: 120px;
+    left: calc(50% - 1440px/2);
+    top: 0px;
+
+    background-color: black;
+}
+
+.logopart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 29px;
+    width: 184px;
+    height: 60px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
