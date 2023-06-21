@@ -5,7 +5,6 @@ export default function Registration2() {
         <div className="memberRight">
             <div className="registrationsTop">
                 <h1>EVENT REGISTRATIONS</h1>
-                <div className="filter"></div>
             </div>
             <div className="registrationsBottom">
                 <table className="registrationTable">
