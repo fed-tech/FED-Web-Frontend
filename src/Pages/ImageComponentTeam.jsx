@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Blurhash } from "react-blurhash";
+// import { Blurhash } from "react-blurhash";
 
 import "./../Components/Team/css/Core.css";
 
@@ -22,14 +22,14 @@ export default function ImageComponent({ src, blur }) {
           display: imageLoaded ? "none" : "inline",
         }}
       >
-        <Blurhash
+        {/* <Blurhash
           hash={blur}
           width={230}
           height={230}
           resolutionX={32}
           resolutionY={32}
           punch={1}
-        />
+        /> */}
       </div>
       <img
         src={src}
