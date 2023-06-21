@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import "./css/MobileNav.css";
 // state
 import AuthContext from "./../store/auth-context";
 
 export default function NavMobile(props) {
   const [count, setCount] = useState(false);
+
   function toggleEvent() {
     setCount(true);
   }

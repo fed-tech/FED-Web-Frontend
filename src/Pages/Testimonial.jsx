@@ -2,12 +2,17 @@ import React from "react";
 import { Animatedpage } from "../Components/Animatedpage";
 
 // css
-import "./../Components/Testimonial/Css/seeall.css";
+import SaCss from "./Css/seall.module.css";
 
-// json
+// Data
 import Wcard from "./../Data/testimonial.json";
 
 export default function Testimonial() {
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Animatedpage>
       <div className="seeall_page">
