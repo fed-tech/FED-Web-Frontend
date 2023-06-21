@@ -35,7 +35,7 @@ export default function Team() {
           </p>
           <div id="CoreTeam">
             {coreMember.map((data, i) => (
-              <Core mem={data} key={i} />
+              <Core mem={data} key={coreMember[i].id} />
             ))}
           </div>
         </div>
