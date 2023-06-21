@@ -48,65 +48,84 @@ function App() {
         <Layout>
           <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           <NavMobile />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Team" element={<Team />} />
-            <Route path="/Event" element={<Events />} />
-            <Route path="/Alumni" element={<Alumni />} />
-            <Route path="/Podcasts" element={<Podcasts />} />
-            <Route path="/Testimonial" element={<Seeall />} />
-            <Route
-              path="/Login"
-              element={
-                authCtx.isLoggedIn ? (
-                  <Profile setIsLoggedIn={setIsLoggedIn} />
-                ) : (
-                  <Login setIsLoggedIn={setIsLoggedIn} />
-                )
-              }
-            />
-            <Route
-              path="/Signup"
-              element={
-                authCtx.isLoggedIn ? (
-                  <Profile setIsLoggedIn={setIsLoggedIn} />
-                ) : (
-                  <Signup />
-                )
-              }
-            />
-            <Route
-              path="/MyProfile"
-              element={authCtx.isLoggedIn? (authCtx.user.access === 0?<Page/>:<Profile/>) : <Signup />}
-            />
-            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
-            <Route path="/resetpassword" element = {<ResetPassword/>}/>
-            <Route path="/createprofile" element = {<CreateProfile/>}/>
-            {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
-            <Route
-              path="/MyProfile/member"
-              element={authCtx.isLoggedIn ? <TCO /> : <Signup/>}
-            />
-            {/* <Route
+          <div className="page">
+            <div className="pageExt">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/Team" element={<Team />} />
+                <Route path="/Event" element={<Events />} />
+                <Route path="/Alumni" element={<Alumni />} />
+                <Route path="/Podcasts" element={<Podcasts />} />
+                <Route path="/Testimonial" element={<Seeall />} />
+                <Route
+                  path="/Login"
+                  element={
+                    authCtx.isLoggedIn ? (
+                      <Profile setIsLoggedIn={setIsLoggedIn} />
+                    ) : (
+                      <Login setIsLoggedIn={setIsLoggedIn} />
+                    )
+                  }
+                />
+                <Route
+                  path="/Signup"
+                  element={
+                    authCtx.isLoggedIn ? (
+                      <Profile setIsLoggedIn={setIsLoggedIn} />
+                    ) : (
+                      <Signup />
+                    )
+                  }
+                />
+                <Route
+                  path="/MyProfile"
+                  element={
+                    authCtx.isLoggedIn ? (
+                      authCtx.user.access === 0 ? (
+                        <Page />
+                      ) : (
+                        <Profile />
+                      )
+                    ) : (
+                      <Signup />
+                    )
+                  }
+                />
+                <Route path="/forgotpassword" element={<ForgotPassword />} />
+                <Route path="/resetpassword" element={<ResetPassword />} />
+                <Route path="/createprofile" element={<CreateProfile />} />
+                {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
+                <Route
+                  path="/MyProfile/member"
+                  element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
+                />
+                {/* <Route
               path="/MyProfile/member"
               element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
             /> */}
-            <Route
-              path="/admin/Member"
-              element={authCtx.user.access === 0 ? <Member /> : <Error />}
-            />
-            <Route
-              path="/admin/Member/AddMember"
-              element={authCtx.user.access === 0 ? <AddMember /> : <Error />}
-            />
-            <Route path="/forgotpassword" element={<ForgotPassword />} />
-            <Route path="/resetpassword" element={<ResetPassword />} />
-            <Route path="/createprofile" element={<CreateProfile />} />
-            <Route path="/updateprofile" element={<UpdateProfile />} />
-            <Route path="/privacypolicies" element={<PrivacyPolicies/>} />
-            <Route path="/termsandconditions" element={<TermsAndConditions/>} />
-            <Route path="*" element={<Error />} />
-          </Routes>
+                <Route
+                  path="/admin/Member"
+                  element={authCtx.user.access === 0 ? <Member /> : <Error />}
+                />
+                <Route
+                  path="/admin/Member/AddMember"
+                  element={
+                    authCtx.user.access === 0 ? <AddMember /> : <Error />
+                  }
+                />
+                <Route path="/forgotpassword" element={<ForgotPassword />} />
+                <Route path="/resetpassword" element={<ResetPassword />} />
+                <Route path="/createprofile" element={<CreateProfile />} />
+                <Route path="/updateprofile" element={<UpdateProfile />} />
+                <Route path="/privacypolicies" element={<PrivacyPolicies />} />
+                <Route
+                  path="/termsandconditions"
+                  element={<TermsAndConditions />}
+                />
+                <Route path="*" element={<Error />} />
+              </Routes>
+            </div>
+          </div>
           <Footer />
         </Layout>
       </BrowserRouter>
