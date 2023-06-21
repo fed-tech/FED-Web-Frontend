@@ -477,7 +477,12 @@ align-items: center;
     justify-content: space-between;
     padding: 29px 42px;
 }
-
+.scroll {
+    max-height: 700px;
+    overflow-y: auto;
+    padding-right: 40px;
+    margin-right: -40px;
+}
 .font1 {
     font-family: 'Manrope';
     font-weight: 600;
