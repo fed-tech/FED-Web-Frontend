@@ -55,6 +55,8 @@
 }
 
 .memImgDiv {
+  border-radius: 50%;
+  overflow: hidden;
   border-style: solid;
   border-width: 3px;
   border-color: #c4c4c4;
@@ -200,12 +202,12 @@
 }
 
 .CorememCardImg {
-  object-fit: cover;
-  aspect-ratio: 1/1;
   width: 100%;
   height: 100%;
-  border-radius: 10px;
   opacity: 1;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .flip-card-back {

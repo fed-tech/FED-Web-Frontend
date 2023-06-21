@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 
+// Img Component
+import ImageComponent from "../../Pages/ImageComponent";
+
 // css
 import "./css/Core.css";
 
@@ -34,7 +37,7 @@ export default function Core(props) {
         <div className="flip-card">
           <div className="flip-card-inner">
             <div className="coreMemMainCard">
-              <img src={props.mem.img} alt="" className="CorememCardImg" />
+              <ImageComponent src={props.mem.img} blur={props.mem.blur} />
               <div className="hoverDetailsMDiv">
                 {btn ? (
                   <>
