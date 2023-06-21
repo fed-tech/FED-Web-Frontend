@@ -15,3 +15,44 @@
     overflow-x:hidden;
 }
 }
+.comment {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+.text_2 {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  margin-bottom: 4px;
+  color: #f45725;
+  padding-top: 120px;
+}
+.text_3 {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+@media only screen and (max-width: 484px) {
+  .cardbox {
+    width: 320px;
+    margin-left: 40px;
+  }
+}
+@media only screen and (max-width: 477px) {
+  .seeall_page {
+    background-color: rgb(15, 14, 14);
+    overflow-x: hidden;
+  }
+}
