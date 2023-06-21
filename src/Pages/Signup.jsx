@@ -159,7 +159,7 @@ export default function Signup() {
         )
         .then((res) => {
           const mail = res.data.email;
-          console.log(mail)
+          console.log(mail);
           axios
             .post("http://localhost:5000/auth/googleverification", {
               email: mail,
@@ -389,8 +389,7 @@ export default function Signup() {
               onChange={handleChange}
               className={SuCss.year}
             >
-              <option hidden> Year
-                </option>
+              <option hidden> Year</option>
               {options.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.text}
