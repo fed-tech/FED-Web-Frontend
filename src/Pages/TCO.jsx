@@ -83,7 +83,6 @@ export default function TCO() {
               <div
                 className="registrationStats"
                 onClick={() => {
-                  // set("Registration");
                   clickedRegStats()
                 }}
               >
@@ -164,7 +163,7 @@ export default function TCO() {
         )}
 
         {show === "Registration" ?
-          (user === "1" ?
+          (user === "2" ?
             (
               <Registration1/>              
             ) :
