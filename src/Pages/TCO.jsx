@@ -1,6 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+// components
+import Registration1  from "./Registration1";
+import Registration2 from "./Registration2";
+
 // svg
 import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
@@ -11,21 +15,23 @@ import UpdateProfile from'./UpdateProfile';
 // css
 import "./Css/Profilecss/MemberProfile.css";
 
+
 // state
 import AuthContext from "./../store/auth-context";
 
 export default function TCO() {
-  const authCtx = useContext(AuthContext);
+  const authCtx = useContext(AuthContext)
   const navigate = useNavigate();
 
   const handleLogout = () => {
     console.log("logout");
-    navigate("/Login");
+    navigate('/Login');
     authCtx.logout();
-  };
+  }
+
 
   const [show, set] = useState("Profile");
-  const[showUpdateModal,setShowUpdateModal] = useState(false);
+
   const [user, setUser] = useState("1");
   // 1 --> creative, tech, operations
   // 2 --> marketing
@@ -37,48 +43,36 @@ export default function TCO() {
   const clickedRegStats = () => {
     set("Registration");
     console.log(authCtx.user.access);
-    {
-      authCtx.user.access === 0 ? "Admin" : "";
-    }
-    {
-      authCtx.user.access === 1 ? setUser("1") : "";
-    }
-    {
-      authCtx.user.access === 2 ? "director" : "";
-    }
-    {
-      authCtx.user.access === 3 ? setUser("1") : "";
-    }
-    {
-      authCtx.user.access === 4 ? setUser("1") : "";
-    }
-    {
-      authCtx.user.access === 5 ? setUser("2") : "";
-    }
-    {
-      authCtx.user.access === 6 ? setUser("1") : "";
-    }
+    { authCtx.user.access === 0 ? "Admin" : "" }
+    { authCtx.user.access === 1 ? setUser("2") : "" }
+    { authCtx.user.access === 2 ? "director" : "" }
+    { authCtx.user.access === 3 ? setUser("1") : "" }
+    { authCtx.user.access === 4 ? setUser("1") : "" }
+    { authCtx.user.access === 5 ? setUser("2") : "" }
+    { authCtx.user.access === 6 ? setUser("1") : "" }
     console.log("user: ", user);
   };
-
-
   return (
     <div className="memberBackground">
       <div className="mainbox">
         <div className="memberLeft">
           <div className="dashboard">
+
             <div className="dashboardTop">
               <h1>DASHBOARD</h1>
               <h2>DASH</h2>
               <h2>BOARD</h2>
-              <div
-                className="gotoPro"
+              <div className="gotoPro"
                 onClick={() => {
                   set("Profile");
-                }}
-              >
+                }}>
                 <div className="profilePic">
-                  <img src={authCtx.user.pic} alt="" />
+
+                  <img
+                    src={authCtx.user.pic}
+                    alt=""
+                  />
+
                 </div>
                 <div className="Position">
                   <p className="name">{authCtx.user.name}</p>
@@ -91,8 +85,7 @@ export default function TCO() {
               <div
                 className="registrationStats"
                 onClick={() => {
-                  // set("Registration");
-                  clickedRegStats();
+                  clickedRegStats()
                 }}
               >
                 <img src={regStatSvg} alt="" />
@@ -103,31 +96,32 @@ export default function TCO() {
                 <p> Logout </p>
               </div>
             </div>
+
           </div>
         </div>
 
         {show === "Profile" ? (
-          <div className="scroll">
-            <div className="memberRight">
-              <div id="profile">
-                <div className="proHeading">
-                  {authCtx.user.access === 0 ? (
-                    <>
-                      <div>
-                        <Link to="/admin/Member">Member</Link>
-                      </div>
-                      <br />
-                      <br />
-                      <br />
-                    </>
-                  ) : (
-                    ""
-                  )}
+          <div className="memberRight">
+            <div id="profile">
+              <div className="proHeading">
+                {authCtx.user.access === 0 ? (
+                  <>
+                    <div>
+                      <Link to="/admin/Member">Member</Link>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                  </>
+                ) : (
+                  ""
+                )}
 
                   <p className="headInnerText">
                     <p>Profile Details</p>
-                      <img src={penSvg} alt="" onClick={()=>setShowUpdateModal(true)}/>
-
+                    <Link to="/updateprofile">
+                      <img src={penSvg} alt="" />
+                    </Link>
                   </p>
                 </div>
                 <div className="details">
@@ -165,216 +159,23 @@ export default function TCO() {
                   </table>
                 </div>
               </div>
-            </div>
           </div>
         ) : (
           ""
         )}
 
-        {show === "Registration" ? (
-          user === "1" ? (
-            <div className="scroll">
-              <div className="memberRight">
-                <div className="registrationsTop">
-                  <h1>NUMBER OF REGISTRATIONS</h1>
-                  <div className="filter">
-                    <img src={filter} alt="" />
-                    Filter
-                  </div>
-                </div>
-                <div className="registrationsBottom">
-                  <table className="registrationTable">
-                    <tr className="tableHead font1">
-                      <th>Event Name</th>
-                      <th>Registration Stats</th>
-                      <th>Event Date</th>
-                    </tr>
-
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                    <tr className="tableData font1">
-                      <td>KALKI</td>
-                      <td>500</td>
-                      <td>13 FEBRUARY</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div className="scroll">
-              <div className="memberRight">
-                <div className="registrationsTop">
-                  <h1>EVENT REGISTRATIONS</h1>
-                </div>
-                <div className="registrationsBottom">
-                  <table className="registrationTable">
-                    <tr className="tableHead font1">
-                      <th>Event Name</th>
-                      <th>Event Date</th>
-                      <th>No of Registrations</th>
-                    </tr>
-
-                    <div className="row">
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">Registration Stats</div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                          <div className="source">
-                            <p>By Mail:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By Instagram:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                        <div className="mediaBottom">
-                          <div className="source">
-                            <p>By Whatsapp:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By LinkedIn:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">Registration Stats</div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                          <div className="source">
-                            <p>By Mail:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By Instagram:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                        <div className="mediaBottom">
-                          <div className="source">
-                            <p>By Whatsapp:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By LinkedIn:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">Registration Stats</div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                          <div className="source">
-                            <p>By Mail:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By Instagram:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                        <div className="mediaBottom">
-                          <div className="source">
-                            <p>By Whatsapp:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By LinkedIn:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <tr className="eTableData">
-                        <td>KALKI</td>
-                        <td>13 FEBRUARY</td>
-                        <td>500</td>
-                      </tr>
-
-                      <div className="desc font1">Registration Stats</div>
-
-                      <div className="media">
-                        <div className="mediaTop">
-                          <div className="source">
-                            <p>By Mail:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By Instagram:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                        <div className="mediaBottom">
-                          <div className="source">
-                            <p>By Whatsapp:</p>
-                            <p>12345</p>
-                          </div>
-                          <div className="source">
-                            <p>By LinkedIn:</p>
-                            <p>12345</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </table>
-                </div>
-              </div>
-            </div>
+        {show === "Registration" ?
+          (user === "2" ?
+            (
+              <Registration1/>              
+            ) :
+            (
+              <Registration2/>
+            )
           )
-        ) : (
+        : (
           ""
         )}
-        {showUpdateModal&&<UpdateProfile setShowUpdateModal={setShowUpdateModal}/>}
       </div>
     </div>
   );
