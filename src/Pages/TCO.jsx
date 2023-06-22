@@ -18,6 +18,7 @@ import "./Css/Profilecss/MemberProfile.css";
 
 // state
 import AuthContext from "./../store/auth-context";
+import updateModal from "./UpdateProfile";
 
 export default function TCO() {
   const authCtx = useContext(AuthContext)
@@ -31,7 +32,7 @@ export default function TCO() {
 
 
   const [show, set] = useState("Profile");
-
+  const[showUpdateModal,setShowUpdateModal] = useState(false);
   const [user, setUser] = useState("1");
   // 1 --> creative, tech, operations
   // 2 --> marketing
@@ -119,9 +120,7 @@ export default function TCO() {
 
                   <p className="headInnerText">
                     <p>Profile Details</p>
-                    <Link to="/updateprofile">
-                      <img src={penSvg} alt="" />
-                    </Link>
+                    <img src={penSvg} alt="" onClick={()=>setShowUpdateModal(true)}/>
                   </p>
                 </div>
                 <div className="details">
@@ -177,6 +176,7 @@ export default function TCO() {
           ""
         )}
       </div>
+      {showUpdateModal&&<UpdateProfile setShowUpdateModal = {setShowUpdateModal}/>}
     </div>
   );
 }
