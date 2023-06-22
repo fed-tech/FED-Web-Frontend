@@ -200,6 +200,7 @@
     background-color: black;
     font: mulish 19.8px;
     font-size: 19.8px;
+    cursor: pointer;
 }
 .input::placeholder {
   font-weight: 300;

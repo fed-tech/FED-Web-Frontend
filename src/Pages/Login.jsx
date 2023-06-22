@@ -78,9 +78,10 @@ function Login(props) {
             response.data.token,
             10800000
           );
-
+          console.log("access->",authCtx.user.access == "0")
+          {response.data.result[0].access == "0" ? navigate("/MyProfile/admin") :  navigate('/MyProfile/member');}
           // navigate("/MyProfile");
-          navigate("/MyProfile/member");
+          
           return;
         }
       } catch (err) {
@@ -142,8 +143,10 @@ function Login(props) {
                       resp.data.token,
                       10800000
                     );
+                    
+                    {resp.data.result[0].access == "0" ? navigate("/MyProfile/admin") :  navigate('/MyProfile/member');}
                     // navigate("/MyProfile");
-                    navigate("/MyProfile/member");
+                    // navigate("/MyProfile/member");
                     return;
                   });
               } else {

@@ -154,9 +154,9 @@ export const AuthContextProvider = (props) => {
         selected: selected,
         access: access,
       };
-
+      console.log("Update function called")
       localStorage.setItem("user", JSON.stringify(setuserdata));
-      // setUser(setuserdata);
+      setUser(setuserdata);
       
 
 
@@ -167,7 +167,7 @@ export const AuthContextProvider = (props) => {
       setToken(tokenData.token);
       setUserIsLoggedIn(true);
       logoutTimer = setTimeout(logoutHandler, tokenData.duration);
-      setUser(user);
+      // setUser(user);
       console.log(user);
     }
   }, [tokenData, logoutHandler]);

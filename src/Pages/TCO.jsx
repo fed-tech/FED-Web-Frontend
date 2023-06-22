@@ -6,6 +6,7 @@ import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
 import penSvg from "../Img/pen-icon.svg";
 import filter from "../Img/Filter.svg";
+import UpdateProfile from'./UpdateProfile';
 
 // css
 import "./Css/Profilecss/MemberProfile.css";
@@ -24,7 +25,7 @@ export default function TCO() {
   };
 
   const [show, set] = useState("Profile");
-
+  const[showUpdateModal,setShowUpdateModal] = useState(false);
   const [user, setUser] = useState("1");
   // 1 --> creative, tech, operations
   // 2 --> marketing
@@ -59,6 +60,8 @@ export default function TCO() {
     }
     console.log("user: ", user);
   };
+
+
   return (
     <div className="memberBackground">
       <div className="mainbox">
@@ -123,9 +126,8 @@ export default function TCO() {
 
                   <p className="headInnerText">
                     <p>Profile Details</p>
-                    <Link to="/updateprofile">
-                      <img src={penSvg} alt="" />
-                    </Link>
+                      <img src={penSvg} alt="" onClick={()=>setShowUpdateModal(true)}/>
+
                   </p>
                 </div>
                 <div className="details">
@@ -372,6 +374,7 @@ export default function TCO() {
         ) : (
           ""
         )}
+        {showUpdateModal&&<UpdateProfile setShowUpdateModal={setShowUpdateModal}/>}
       </div>
     </div>
   );

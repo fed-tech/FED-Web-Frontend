@@ -4,26 +4,32 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-import ViewEvents from "../Components/Profile/ViewEvents";
-import AddEvent from "../Components/Profile/AddEvent";
+import PersonIcon from "@mui/icons-material/Person";
 import AuthContext from "../store/auth-context";
 import { useNavigate } from "react-router-dom";
+import EventAdmin from "../Components/Profile/EventAdmin";
+import AdminProfile from "../Components/Profile/AdminProfile";
+import UpdateProfile from'./UpdateProfile';
+
 
 function Page() {
-  const [viewEvents,setViewEvents] = useState(true);
   const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
-  const handleView = (e)=>{
-    e.target.style.color = '#f45725';
-    setViewEvents(true);
-  }
-  const handleAdd = ()=>{
-    setViewEvents(false);
-  }
-  const handleLogout = ()=>{
+  const [profile, setProfile] = useState(true);
+  const [event, setEvent] = useState(false);
+  const [form, setFrom] = useState(false);
+  const [members, setMembers] = useState(false);
+  const[showUpdateModal,setShowUpdateModal] = useState(false);
+  const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
-  }
+  };
+  const toggleFunc = () => {
+    setProfile(!profile);
+    setEvent(!event);
+    setFrom(!form);
+    setMembers(!members);
+  };
   return (
     <div className="Page_main">
       <div className="Page">
@@ -32,10 +38,7 @@ function Page() {
             <div className="page_left_userInfo">
               <h2 className="page_left_title">Dashboard</h2>
               <div className="member_img">
-                <img
-                  src={authCtx.user.pic}
-                  alt=""
-                />
+                <img src={authCtx.user.pic} alt="" />
               </div>
               <div className="user_name_desig">
                 <h2 className="user_name">{authCtx.user.name}</h2>
@@ -43,7 +46,17 @@ function Page() {
               </div>
             </div>
             <div className="page_left_options">
-              <p>
+              <p
+                onClick={toggleFunc}
+                style={{ color: profile ? "#f45725" : "white" }}
+              >
+                <PersonIcon />
+                Profile
+              </p>
+              <p
+                onClick={toggleFunc}
+                style={{ color: event ? "#f45725" : "white" }}
+              >
                 <InsertInvitationIcon />
                 Events
               </p>
@@ -64,17 +77,10 @@ function Page() {
           <div className="vertical_line"></div>
         </div>
         <div className="page_right">
-          <div className="page_right_info">
-            <div className="info_headers">
-              <p onClick={handleView} style={{color:viewEvents?'#f45725':'white'}}>View Events</p>
-              <p onClick={handleAdd} style={{color:!viewEvents?'#f45725':'white'}}>Add Events</p>
-            </div>
-            <div className="info_content">
-              {viewEvents&&<ViewEvents />}
-              {!viewEvents&&<AddEvent/>}
-            </div>
-          </div>
+          {profile &&<AdminProfile setShowUpdateModal = {setShowUpdateModal}/>}
+          {event && <EventAdmin />}
         </div>
+      {showUpdateModal&&<UpdateProfile setShowUpdateModal = {setShowUpdateModal}/>}
       </div>
     </div>
   );

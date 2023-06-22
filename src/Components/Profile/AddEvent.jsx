@@ -25,7 +25,9 @@ function AddEvent() {
       title: form.title,
       description: form.about,
       image: form.poster,
-      date: fDate,
+      date: form.date,
+      month: form.month,
+      registration: form.reg_type
     }
     axios.post('http://localhost:5000/event/addevent',obj,{
       headers: {

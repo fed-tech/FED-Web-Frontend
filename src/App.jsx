@@ -77,7 +77,7 @@ function App() {
                     )
                   }
                 />
-                <Route
+                {/* <Route
                   path="/MyProfile"
                   element={
                     authCtx.isLoggedIn ? (
@@ -90,27 +90,25 @@ function App() {
                       <Signup />
                     )
                   }
-                />
-                <Route path="/forgotpassword" element={<ForgotPassword />} />
-                <Route path="/resetpassword" element={<ResetPassword />} />
-                <Route path="/createprofile" element={<CreateProfile />} />
+                /> */}
                 {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
                 <Route
                   path="/MyProfile/member"
-                  element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
+                  element={authCtx.isLoggedIn && authCtx.user.access != "0"? <TCO /> : <Signup />}
                 />
                 {/* <Route
               path="/MyProfile/member"
               element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
             /> */}
+                <Route path="/MyProfile/admin" element = {authCtx.isLoggedIn && authCtx.user.access == "0"? <Page/>: <Signup/>}/>
                 <Route
                   path="/admin/Member"
-                  element={authCtx.user.access === 0 ? <Member /> : <Error />}
+                  element={authCtx.user.access == "0" ? <Member /> : <Error />}
                 />
                 <Route
                   path="/admin/Member/AddMember"
                   element={
-                    authCtx.user.access === 0 ? <AddMember /> : <Error />
+                    authCtx.user.access == "0" ? <AddMember /> : <Error />
                   }
                 />
                 <Route path="/forgotpassword" element={<ForgotPassword />} />

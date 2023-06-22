@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import SuCss from "./Css/Signup.module.css";
+import "./Css/UpdateModal.css";
 import AuthContext from "../store/auth-context";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function updateModal() {
+
+function updateModal({ setShowUpdateModal }) {
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ function updateModal() {
 
   const [showUser, setUser] = useState({
     email: authCtx.user.email,
-    name:"",
+    name: "",
     RollNumber: "",
     School: "",
     College: "",
@@ -48,7 +49,7 @@ function updateModal() {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "2px solid  #767676";
       }
     }
     if (name === "RollNumber") {
@@ -56,7 +57,7 @@ function updateModal() {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "2px solid  #767676";
       }
     }
     if (name === "School") {
@@ -64,7 +65,7 @@ function updateModal() {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "2px solid  #767676";
       }
     }
     if (name === "College") {
@@ -72,7 +73,7 @@ function updateModal() {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "2px solid  #767676";
       }
     }
     if (name === "MobileNo") {
@@ -80,7 +81,7 @@ function updateModal() {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "2px solid  #767676";
       }
     }
     if (name === "Year") {
@@ -88,7 +89,7 @@ function updateModal() {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "2px solid  #767676";
       }
     }
 
@@ -97,14 +98,8 @@ function updateModal() {
   };
 
   const handleUpdate = async (e) => {
-    const {
-      email,
-      name,
-      RollNumber,
-      School,
-      College,
-      MobileNo,
-    } = showUser;
+    e.preventDefault();
+    const { email, name, RollNumber, School, College, MobileNo } = showUser;
     if (
       name !== "" &&
       RollNumber !== "" &&
@@ -125,32 +120,29 @@ function updateModal() {
         selected,
       };
       try {
-        axios.post(
-          `http://localhost:5000/auth/updateProfile`,
-          userObject
-        ).then(async (res)=>{
-          if(res.status === 200)
-          {
-            const resp = res.data.response
+        axios
+          .post(`http://localhost:5000/auth/updateProfile`, userObject)
+          .then((res) => {
+            if (res.status === 200) {
+              const resp = res.data.response;
 
-            authCtx.update(
-              resp.name,
-              resp.email,
-              resp.img,
-              resp.RollNumber,
-              resp.School,
-              resp.College,
-              resp.MobileNo,
-              resp.selected,
-              Number(resp.access)
-            )
+              authCtx.update(
+                resp.name,
+                resp.email,
+                resp.img,
+                resp.RollNumber,
+                resp.School,
+                resp.College,
+                resp.MobileNo,
+                resp.selected,
+                Number(resp.access)
+              );
 
-            // navigate('/MyProfile');
-            navigate('/MyProfile/member');
-            return;
-            
-          }
-        });
+              // setShowUpdateModal(false);
+              window.location.reload();
+              return;
+            }
+          });
       } catch (error) {
         setIsinValid(true);
         if (error.response.data.code === 1) {
@@ -173,7 +165,6 @@ function updateModal() {
     }
   };
 
-
   useEffect(() => {
     showUser.name = authCtx.user.name;
     showUser.RollNumber = authCtx.user.rollNo;
@@ -181,92 +172,99 @@ function updateModal() {
     showUser.College = authCtx.user.school;
     showUser.School = authCtx.user.college;
     document.getElementById("name").setAttribute("value", authCtx.user.name);
-    document.getElementById("rollNum").setAttribute("value", authCtx.user.rollNo);
-    document.getElementById("school").setAttribute("value", authCtx.user.school);
-    document.getElementById("college").setAttribute("value", authCtx.user.college);
-    document.getElementById("number").setAttribute("value", authCtx.user.mobileNo);
+    document
+      .getElementById("rollNum")
+      .setAttribute("value", authCtx.user.rollNo);
+    document
+      .getElementById("school")
+      .setAttribute("value", authCtx.user.school);
+    document
+      .getElementById("college")
+      .setAttribute("value", authCtx.user.college);
+    document
+      .getElementById("number")
+      .setAttribute("value", authCtx.user.mobileNo);
   }, []);
 
   return (
-    <div className={SuCss.mDiv}>
-      <div className={SuCss.glassDiv}>
-        <div className={SuCss.wFFFDiv}>
-          <div className={SuCss.helloDiv}>Update Profile</div>
-          <div className={SuCss.form}>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              onChange={DataInp}
-              style={{
-                borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="rollNum"
-              name="RollNumber"
-              placeholder="Roll Number"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="school"
-              name="School"
-              placeholder="School"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="college"
-              name="College"
-              placeholder="College"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="number"
-              id="number"
-              name="MobileNo"
-              placeholder="Mobile Number"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <select
-              value={selected}
-              onChange={handleChange}
-              className={SuCss.year}
-              placeholder="Year"
-              id="year"
-            >
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.text}
-                </option>
-              ))}
-            </select>
-            <button type="submit" className={SuCss.btn} onClick={handleUpdate}>
-              Update Profile
-            </button>
-            <p
-              className={SuCss.signupErrDiv}
-              style={{ color: isinValid ? "red" : "white" }}
-            >
-              {errmssg}
-            </p>
-          </div>
-        </div>
+    <div className="updateModal-overlay">
+      <div className="updateModal">
+        <h2>Update Profile</h2>
+        <form className="update_form">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            onChange={DataInp}
+            style={{
+              borderBottom: lastnameerr ? "2px solid red" : "2px solid #767676",
+            }}
+          />
+          <input
+            type="text"
+            id="rollNum"
+            name="RollNumber"
+            placeholder="Roll Number"
+            onChange={DataInp}
+            style={{
+              borderBottom: emailerr ? "2px solid red" : "2px solid #767676",
+            }}
+          />
+          <input
+            type="text"
+            id="school"
+            name="School"
+            placeholder="School"
+            onChange={DataInp}
+            style={{
+              borderBottom: emailerr ? "2px solid red" : "2px solid #767676",
+            }}
+          />
+          <input
+            type="text"
+            id="college"
+            name="College"
+            placeholder="College"
+            onChange={DataInp}
+            style={{
+              borderBottom: emailerr ? "2px solid red" : "2px solid #767676",
+            }}
+          />
+          <input
+            type="number"
+            id="number"
+            name="MobileNo"
+            placeholder="Mobile Number"
+            onChange={DataInp}
+            style={{
+              borderBottom: emailerr ? "2px solid red" : "2px solid #767676",
+            }}
+          />
+          <select
+            value={selected}
+            onChange={handleChange}
+            className="year"
+            placeholder="Year"
+            id="year"
+          >
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.text}
+              </option>
+            ))}
+          </select>
+          <button type="submit" className="btn" onClick={handleUpdate}>
+            Update Profile
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setShowUpdateModal(false)}
+          >
+            Close
+          </button>
+        </form>
       </div>
     </div>
   );
