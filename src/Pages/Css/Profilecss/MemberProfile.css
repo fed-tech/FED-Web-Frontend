@@ -31,7 +31,7 @@
     border-right: 3px solid #808080;
     margin-top: 44px;
     margin-bottom: 119px;
-    padding: 0 62px 62px 62px;
+    padding: 0 42px 42px 62px;
     width: 100%;
     padding-bottom: 200px;
 }
@@ -74,6 +74,8 @@ h2 {
     font-size: 30px;
     letter-spacing: 0.005em;
     color: #EFEFEF;
+    inline-size: 100%;
+    overflow-wrap: break-word;
 }
 
 .Position .position {
@@ -208,13 +210,17 @@ h2 {
     }
 
     .proHeading {
-        width: 60%;
+        /* width: 60%; */
         font-size: 30px;
     }
 
     .dets1,
     .vals1 {
         font-size: 24px;
+    }
+    .dashboard {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
 }
@@ -277,13 +283,17 @@ h2 {
     .vals1 {
         font-size: 22px;
     }
+    .dashboard {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 }
 
 @media (max-width: 690px) {
 
-    .proHeading {
+    /* .proHeading {
         width: 80%;
-    }
+    } */
 
     .memberRight {
         padding: 40px 0;
@@ -320,6 +330,10 @@ h2 {
     .memberRight {
         padding-top: 0px;
     }
+    .dashboard {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @media(max-width : 575px) {
@@ -351,6 +365,10 @@ h2 {
 
     .memberRight {
         justify-content: flex-start;
+    }
+    .dashboard {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 }
 

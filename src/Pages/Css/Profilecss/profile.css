@@ -38,7 +38,7 @@
   letter-spacing: 0.02em;
   line-height: 38px;
   padding-bottom: 99px;
-  width: 47.44%;
+  width: 60%;
 }
 
 .headInnerText {
@@ -178,7 +178,7 @@
   }
 
   .proHeading {
-    width: 58%;
+    /* width: 58%; */
     padding-bottom: 15%;
   }
 
@@ -190,8 +190,7 @@
     margin-left: 5%;
   }
 
-  .profileLeft,
-  .proHeading {
+  .profileLeft {
     width: 60%;
   }
 
@@ -214,10 +213,10 @@
     margin-top: 0px;
   }
 
-  .profileLeft,
-  .proHeading {
+  .profileLeft{
     width: 80%;
   }
+ 
 
   .illuminating {
     padding-top: 15%;

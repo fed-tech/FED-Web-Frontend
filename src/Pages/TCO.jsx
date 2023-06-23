@@ -117,7 +117,7 @@ export default function TCO() {
                 ) : (
                   ""
                 )}
-
+                
                   <p className="headInnerText">
                     <p>Profile Details</p>
                     <img src={penSvg} alt="" onClick={()=>setShowUpdateModal(true)}/>

@@ -9,14 +9,14 @@ function AdminProfile({setShowUpdateModal}) {
   const authCtx = useContext(AuthContext);
   return (
     <div className="admin-profile">
-      <div className="proHeading">
+      <div className="proHeadingg">
         <p className="headInnerText">
           <p>Profile Details</p>
 
           <img src={penSvg} alt="" onClick={()=>setShowUpdateModal(true)}/>
         </p>
       </div>
-      <div className="details">
+      <div className="detailss">
         <table className="profileTable">
           <tbody>
             <tr>
