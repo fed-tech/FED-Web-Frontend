@@ -39,7 +39,6 @@ function LoginForm() {
   const handlelogin = async (e) => {
     e.preventDefault();
 
-    email;
     if (email === "") {
       setEmailerr(true);
     }
