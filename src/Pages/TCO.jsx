@@ -10,14 +10,14 @@ import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
 import penSvg from "../Img/pen-icon.svg";
 import filter from "../Img/Filter.svg";
-import UpdateProfile from "./UpdateProfile";
+import UpdateProfile from "../Components/Profile/UpdateProfile";
 
 // css
 import "./Css/Profilecss/MemberProfile.css";
 
 // state
 import AuthContext from "./../store/auth-context";
-import updateModal from "./UpdateProfile";
+import updateModal from "../Components/Profile/UpdateProfile";
 
 export default function TCO() {
   const authCtx = useContext(AuthContext);
