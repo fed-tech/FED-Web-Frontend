@@ -1,8 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./Css/UpdateModal.css";
-import AuthContext from "../../store/auth-context";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+// css
+import "./Css/UpdateModal.css";
+
+// state
+import AuthContext from "../../store/auth-context";
+
+// axios
+import axios from "axios";
 
 function updateModal({ setShowUpdateModal }) {
   const authCtx = useContext(AuthContext);
@@ -137,7 +143,6 @@ function updateModal({ setShowUpdateModal }) {
                 Number(resp.access)
               );
 
-              // setShowUpdateModal(false);
               window.location.reload();
               return;
             }
