@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // Components
 import Youtube from "./Youtube";
-import Backdrop from "./Backdrop";
 
 // style
 import "./css/podcasts.css";
@@ -45,7 +44,7 @@ function Main(props) {
           </section>
           <section id="goToYoutube" style={{ display: "block" }}>
             <Youtube />
-            <Backdrop />
+            {/* <Backdrop /> */}
           </section>
         </>
       ) : (
@@ -77,7 +76,7 @@ function Main(props) {
           </section>
           <section id="goToYoutube" style={{ display: "none" }}>
             <Youtube />
-            <Backdrop />
+            {/* <Backdrop /> */}
           </section>
         </>
       )}
