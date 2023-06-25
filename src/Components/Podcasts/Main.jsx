@@ -6,7 +6,7 @@ import Youtube from "./Youtube";
 // style
 import "./css/podcasts.css";
 
-function Main(props) {
+function Main() {
   const [goToYoutube, setGoToYoutube] = useState(false);
 
   function newState() {
