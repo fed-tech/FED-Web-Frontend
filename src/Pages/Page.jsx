@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import "../Components/Profile/cssp/Page.css";
+import "../Components/Profile/css/Page.css";
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
