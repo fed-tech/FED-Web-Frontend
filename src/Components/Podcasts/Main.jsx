@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Youtube from "./Youtube";
 import Backdrop from "./Backdrop";
 import "./css1/podcasts.css";
-import { Animatedpage } from "../Animatedpage";
 function Main(props) {
   const [goToYoutube, setGoToYoutube] = useState(false);
 
@@ -68,7 +67,6 @@ function Main(props) {
         </>
       )}
     </>
-    // </Animatedpage>
   );
 }
 export default Main;
