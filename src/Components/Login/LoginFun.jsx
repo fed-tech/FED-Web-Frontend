@@ -1,11 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
-import { Link } from "react-router-dom";
-
-//  axios
-import axios from "axios";
-
-// state
-import AuthContext from "./../../store/auth-context";
+import React from "react";
 
 // css
 import LCss from "./Css/Loginpg.module.css";
