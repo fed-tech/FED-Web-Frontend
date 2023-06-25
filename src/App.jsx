@@ -56,6 +56,7 @@ function App() {
                 <Route path="/Alumni" element={<Alumni />} />
                 <Route path="/Podcasts" element={<Podcasts />} />
                 <Route path="/Testimonial" element={<Testimonial />} />
+
                 <Route
                   path="/Login"
                   element={
@@ -66,6 +67,7 @@ function App() {
                     )
                   }
                 />
+
                 <Route
                   path="/Signup"
                   element={
@@ -76,21 +78,7 @@ function App() {
                     )
                   }
                 />
-                {/* <Route
-                  path="/MyProfile"
-                  element={
-                    authCtx.isLoggedIn ? (
-                      authCtx.user.access === 0 ? (
-                        <Page />
-                      ) : (
-                        <Profile />
-                      )
-                    ) : (
-                      <Signup />
-                    )
-                  }
-                /> */}
-                {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
+
                 <Route
                   path="/MyProfile/member"
                   element={
@@ -101,10 +89,7 @@ function App() {
                     )
                   }
                 />
-                {/* <Route
-              path="/MyProfile/member"
-              element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
-            /> */}
+
                 <Route
                   path="/MyProfile/admin"
                   element={
@@ -115,10 +100,12 @@ function App() {
                     )
                   }
                 />
+
                 <Route
                   path="/admin/Member"
                   element={authCtx.user.access == "0" ? <Member /> : <Error />}
                 />
+
                 <Route
                   path="/admin/Member/AddMember"
                   element={
@@ -130,10 +117,12 @@ function App() {
                 <Route path="/createprofile" element={<CreateProfile />} />
                 <Route path="/updateprofile" element={<UpdateProfile />} />
                 <Route path="/privacypolicies" element={<PrivacyPolicies />} />
+
                 <Route
                   path="/termsandconditions"
                   element={<TermsAndConditions />}
                 />
+
                 <Route path="*" element={<Error />} />
               </Routes>
             </div>
