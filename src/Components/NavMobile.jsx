@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+
+// css
 import "./css/MobileNav.css";
 
 // state
@@ -12,6 +14,7 @@ export default function NavMobile(props) {
     setCount(true);
   }
   const authCtx = useContext(AuthContext);
+
   return (
     <header>
       <nav className="mobileNav">
