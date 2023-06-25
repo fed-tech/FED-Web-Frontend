@@ -125,28 +125,26 @@ function updateModal({ setShowUpdateModal }) {
         selected,
       };
       try {
-        axios
-          .post(`http://localhost:5000/auth/updateProfile`, userObject)
-          .then((res) => {
-            if (res.status === 200) {
-              const resp = res.data.response;
+        axios.post(`/auth/updateProfile`, userObject).then((res) => {
+          if (res.status === 200) {
+            const resp = res.data.response;
 
-              authCtx.update(
-                resp.name,
-                resp.email,
-                resp.img,
-                resp.RollNumber,
-                resp.School,
-                resp.College,
-                resp.MobileNo,
-                resp.selected,
-                Number(resp.access)
-              );
+            authCtx.update(
+              resp.name,
+              resp.email,
+              resp.img,
+              resp.RollNumber,
+              resp.School,
+              resp.College,
+              resp.MobileNo,
+              resp.selected,
+              Number(resp.access)
+            );
 
-              window.location.reload();
-              return;
-            }
-          });
+            window.location.reload();
+            return;
+          }
+        });
       } catch (error) {
         setIsinValid(true);
         if (error.response.data.code === 1) {
