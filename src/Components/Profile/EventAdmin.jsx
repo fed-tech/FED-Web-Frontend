@@ -32,6 +32,7 @@ function EventAdmin() {
           Add Events
         </p>
       </div>
+
       <div className="info_content">
         {viewEvents && <ViewEvents />}
         {!viewEvents && <AddEvent />}
