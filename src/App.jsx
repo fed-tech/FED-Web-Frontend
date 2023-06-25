@@ -48,6 +48,7 @@ import { Analytics } from "@vercel/analytics/react";
 // axios
 import axios from "axios";
 
+// BaseURL
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
