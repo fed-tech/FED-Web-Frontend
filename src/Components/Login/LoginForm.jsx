@@ -1,9 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Cookies, useCookies } from "react-cookie";
+import Swal from "sweetalert2";
 import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
-import Swal from "sweetalert2";
+
+// Components
+
+import Load from "./../Load";
 
 //  axios
 import axios from "axios";
