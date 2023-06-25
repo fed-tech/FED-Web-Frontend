@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // css
 import SaCss from "./Css/seall.module.css";
@@ -13,15 +13,20 @@ export default function Testimonial() {
   }, []);
 
   return (
-    <div className="seeall_page">
-      <div className="sub_div">
-        {Wcard.map((element) => {
+    <div className={SaCss.seeall_page}>
+      <div className={SaCss.sub_div}>
+        <div>
+          <p className={SaCss.Title}>
+            What do <span className={SaCss.spn}>they say</span> about us?
+          </p>
+        </div>
+        {Wcard.map((e, key) => {
           return (
-            <div className="mcard">
-              <div className="cardbox">
-                <p className="cmt">{element.comment}</p>
-                <p className="sp">{element.speaker_name}</p>
-                <p className="prg">{element.program_}</p>
+            <div className={SaCss.mcard} key={key}>
+              <div className={SaCss.cardbox}>
+                <p className={SaCss.cmt}>{e.comment}</p>
+                <p className={SaCss.sp}>{e.speaker_name}</p>
+                <p className={SaCss.prg}>{e.program_}</p>
               </div>
             </div>
           );
