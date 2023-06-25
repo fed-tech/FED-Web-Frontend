@@ -1,7 +1,12 @@
 import React, { useState } from "react";
+
+// Components
 import Youtube from "./Youtube";
 import Backdrop from "./Backdrop";
+
+// style
 import "./css1/podcasts.css";
+
 function Main(props) {
   const [goToYoutube, setGoToYoutube] = useState(false);
 
