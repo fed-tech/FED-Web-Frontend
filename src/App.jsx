@@ -11,7 +11,7 @@ import Error from "./Pages/Error";
 import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
-import Seeall from "./Components/Home/Seeall";
+import Testimonial from "./Pages/Testimonial";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import Profile from "./Pages/Profile";
@@ -55,7 +55,7 @@ function App() {
                 <Route path="/Event" element={<Events />} />
                 <Route path="/Alumni" element={<Alumni />} />
                 <Route path="/Podcasts" element={<Podcasts />} />
-                <Route path="/Testimonial" element={<Seeall />} />
+                <Route path="/Testimonial" element={<Testimonial />} />
                 <Route
                   path="/Login"
                   element={
