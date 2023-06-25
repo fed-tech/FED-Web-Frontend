@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 
-// axios
-import axios from "axios";
-
 // css
-import "./cssp/EventCards.css";
+import "./css/EventCards.css";
 
 function EventCards({ info }) {
   return (
