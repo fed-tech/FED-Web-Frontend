@@ -5,7 +5,7 @@ import Youtube from "./Youtube";
 import Backdrop from "./Backdrop";
 
 // style
-import "./css1/podcasts.css";
+import "./css/podcasts.css";
 
 function Main(props) {
   const [goToYoutube, setGoToYoutube] = useState(false);
