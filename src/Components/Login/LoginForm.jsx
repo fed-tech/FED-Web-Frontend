@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
 
 // Components
-
 import Load from "./../Load";
 
 //  axios
