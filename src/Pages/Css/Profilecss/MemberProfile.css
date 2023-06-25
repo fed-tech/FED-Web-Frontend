@@ -526,14 +526,11 @@ h2 {
 .row {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-evenly;
   padding: 29px 42px;
-  /* height: 247.53px; */
   border: 1.5px #808080 solid;
   border-radius: 16px;
   margin-bottom: 64px;
-
   font-family: "Mulish";
   font-weight: 600;
   font-size: 20.2296px;
@@ -563,12 +560,9 @@ h2 {
   background-color: #1c1b1b;
   border-radius: 16px;
   padding: 10px;
-
-  /* height: 87px; */
   margin-bottom: 20px;
   height: 100%;
   width: 45%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -583,7 +577,6 @@ th {
 @media (max-width: 1400px) {
   .row {
     font-size: 18px;
-    /* height: 280px; */
   }
 
   .source {
@@ -637,12 +630,6 @@ th {
   }
 }
 
-/* @media(max-width:880) {
-    .memberRight {
-        max-height: 880px;
-        overflow-y: auto;
-    }
-} */
 @media (max-width: 733px) {
   .registrationsTop h1 {
     margin-left: 30px;
@@ -687,10 +674,6 @@ th {
   .source {
     width: 40%;
   }
-
-  /* .mediaTop, .mediaBottom {
-        justify-content: space-between;
-    } */
 }
 
 @media (max-width: 580px) {
