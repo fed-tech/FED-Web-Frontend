@@ -50,42 +50,42 @@ function LoginForm() {
         const salt = import.meta.env.VITE_BCRYPT;
 
         console.log("import.meta.env.VITE_BCRYPT");
-        console.log(import.meta.env);
+        console.log(import.meta.env.VITE_BCRYPT);
 
-        // const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
+        const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
 
-        // console.log(password);
-        // console.log(document.cookie);
+        console.log(password);
+        console.log(document.cookie);
 
-        // const response = await axios.post(`/auth/login`, {
-        //   username: email,
-        //   password,
-        // });
+        const response = await axios.post(`/auth/login`, {
+          username: email,
+          password,
+        });
 
-        // console.log(response);
+        console.log(response);
 
-        // if (response.status === 202) {
-        //   await authCtx.login(
-        //     response.data.result[0].name,
-        //     response.data.result[0].email,
-        //     response.data.result[0].img,
-        //     response.data.result[0].RollNumber,
-        //     response.data.result[0].School,
-        //     response.data.result[0].College,
-        //     response.data.result[0].MobileNo,
-        //     response.data.result[0].selected,
-        //     Number(response.data.result[0].access),
-        //     response.data.token,
-        //     10800000
-        //   );
-        //   console.log("access->", authCtx.user.access == "0");
+        if (response.status === 202) {
+          await authCtx.login(
+            response.data.result[0].name,
+            response.data.result[0].email,
+            response.data.result[0].img,
+            response.data.result[0].RollNumber,
+            response.data.result[0].School,
+            response.data.result[0].College,
+            response.data.result[0].MobileNo,
+            response.data.result[0].selected,
+            Number(response.data.result[0].access),
+            response.data.token,
+            10800000
+          );
+          console.log("access->", authCtx.user.access == "0");
 
-        //   response.data.result[0].access == "0"
-        //     ? navigate("/MyProfile/admin")
-        //     : navigate("/MyProfile/member");
+          response.data.result[0].access == "0"
+            ? navigate("/MyProfile/admin")
+            : navigate("/MyProfile/member");
 
-        //   return;
-        // }
+          return;
+        }
       } catch (err) {
         setIsinValid(true);
 
