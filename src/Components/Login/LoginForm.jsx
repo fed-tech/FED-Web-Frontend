@@ -38,7 +38,8 @@ function LoginForm() {
 
   const handlelogin = async (e) => {
     e.preventDefault();
-    const username = email;
+
+    email;
     if (email === "") {
       setEmailerr(true);
     }
@@ -48,12 +49,14 @@ function LoginForm() {
       try {
         const password = bcrypt.hashSync(
           passwrd,
-          "$2b$10$Q0RPeouqYdTToq76zoccIO"
+          `${import.meta.env.VITE_BCRYPT}`
         );
+
         console.log(password);
         console.log(document.cookie);
+
         const response = await axios.post(`/auth/login`, {
-          username,
+          username: email,
           password,
         });
 
@@ -74,11 +77,10 @@ function LoginForm() {
             10800000
           );
           console.log("access->", authCtx.user.access == "0");
-          {
-            response.data.result[0].access == "0"
-              ? navigate("/MyProfile/admin")
-              : navigate("/MyProfile/member");
-          }
+
+          response.data.result[0].access == "0"
+            ? navigate("/MyProfile/admin")
+            : navigate("/MyProfile/member");
 
           return;
         }
