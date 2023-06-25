@@ -12,7 +12,6 @@ import LetsTalkBusiness from "./../Components/Home/LetsTalkBusiness";
 import "../Components/Home/css/space.css";
 import "../Components/Home/css/home.css";
 import "../Components/Home/css/testimonial.css";
-import { Animatedpage } from "../Components/Animatedpage";
 
 export default function Home() {
   // scroll to top
@@ -21,15 +20,13 @@ export default function Home() {
   }, []);
 
   return (
-    <Animatedpage>
-      <>
-        <Carousel />
-        <KnowUsCom />
-        <BelieveCom />
-        <Testimonial />
-        <WorkWith />
-        <LetsTalkBusiness />
-      </>
-    </Animatedpage>
+    <>
+      <Carousel />
+      <KnowUsCom />
+      <BelieveCom />
+      <Testimonial />
+      <WorkWith />
+      <LetsTalkBusiness />
+    </>
   );
 }
