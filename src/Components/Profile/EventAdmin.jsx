@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-import ViewEvents from "./ViewEvents";
+
+// Components
 import AddEvent from "./AddEvent";
+import ViewEvents from "./ViewEvents";
 
 function EventAdmin() {
-    const [viewEvents,setViewEvents] = useState(true);
-    const handleView = (e)=>{
-        e.target.style.color = '#f45725';
-        setViewEvents(true);
-      }
-      const handleAdd = ()=>{
-        setViewEvents(false);
-      }
+  const [viewEvents, setViewEvents] = useState(true);
+  const handleView = (e) => {
+    e.target.style.color = "#f45725";
+    setViewEvents(true);
+  };
+  const handleAdd = () => {
+    setViewEvents(false);
+  };
   return (
     <div className="page_right_info">
       <div className="info_headers">
