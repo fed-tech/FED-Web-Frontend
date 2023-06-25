@@ -44,7 +44,6 @@ function Main(props) {
           </section>
           <section id="goToYoutube" style={{ display: "block" }}>
             <Youtube />
-            {/* <Backdrop /> */}
           </section>
         </>
       ) : (
@@ -76,7 +75,6 @@ function Main(props) {
           </section>
           <section id="goToYoutube" style={{ display: "none" }}>
             <Youtube />
-            {/* <Backdrop /> */}
           </section>
         </>
       )}
