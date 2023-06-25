@@ -148,6 +148,8 @@ function Youtube(props) {
       title: titlech,
       para: parach,
     });
+
+    // Will scroll smoothly to the top of the next section
     document.querySelector(".container1").scrollIntoView();
   }
 
