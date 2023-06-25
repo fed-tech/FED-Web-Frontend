@@ -47,45 +47,49 @@ function LoginForm() {
       setPasswrderr(true);
     } else {
       try {
-        const password = bcrypt.hashSync(
-          passwrd,
-          `${import.meta.env.VITE_BCRYPT}`
-        );
+        const salt = import.meta.env.VITE_BCRYPT;
 
-        console.log(password);
-        console.log(document.cookie);
+        console.log("import.meta.env.VITE_BCRYPT");
+        console.log(import.meta.env);
 
-        const response = await axios.post(`/auth/login`, {
-          username: email,
-          password,
-        });
+        // const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
 
-        console.log(response);
+        // console.log(password);
+        // console.log(document.cookie);
 
-        if (response.status === 202) {
-          await authCtx.login(
-            response.data.result[0].name,
-            response.data.result[0].email,
-            response.data.result[0].img,
-            response.data.result[0].RollNumber,
-            response.data.result[0].School,
-            response.data.result[0].College,
-            response.data.result[0].MobileNo,
-            response.data.result[0].selected,
-            Number(response.data.result[0].access),
-            response.data.token,
-            10800000
-          );
-          console.log("access->", authCtx.user.access == "0");
+        // const response = await axios.post(`/auth/login`, {
+        //   username: email,
+        //   password,
+        // });
 
-          response.data.result[0].access == "0"
-            ? navigate("/MyProfile/admin")
-            : navigate("/MyProfile/member");
+        // console.log(response);
 
-          return;
-        }
+        // if (response.status === 202) {
+        //   await authCtx.login(
+        //     response.data.result[0].name,
+        //     response.data.result[0].email,
+        //     response.data.result[0].img,
+        //     response.data.result[0].RollNumber,
+        //     response.data.result[0].School,
+        //     response.data.result[0].College,
+        //     response.data.result[0].MobileNo,
+        //     response.data.result[0].selected,
+        //     Number(response.data.result[0].access),
+        //     response.data.token,
+        //     10800000
+        //   );
+        //   console.log("access->", authCtx.user.access == "0");
+
+        //   response.data.result[0].access == "0"
+        //     ? navigate("/MyProfile/admin")
+        //     : navigate("/MyProfile/member");
+
+        //   return;
+        // }
       } catch (err) {
         setIsinValid(true);
+
+        console.log(err);
 
         if (err.response.data.code === 4) {
           setErrMssg("Email not verified");
