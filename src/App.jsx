@@ -25,6 +25,7 @@ import CreateProfile from "./Pages/CreateProfile";
 import Page from "./Pages/Page";
 import PrivacyPolicies from "./Pages/PrivacyPolicies";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import Load from "./Components/Load";
 
 // Components
 import Nav from "./Components/Nav";
@@ -55,6 +56,7 @@ function App() {
           <div className="page">
             <div className="pageExt">
               <Routes>
+                <Route path="/Load" element={<Load />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/Team" element={<Team />} />
                 <Route path="/Event" element={<Events />} />
