@@ -4,6 +4,9 @@ import { Cookies, useCookies } from "react-cookie";
 import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
 
+// Components
+import LoginFun from "./../Components/Login/LoginFun";
+
 function Login(props) {
   // scroll to top
   useEffect(() => {
