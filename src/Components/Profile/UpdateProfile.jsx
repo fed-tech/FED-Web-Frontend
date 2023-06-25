@@ -46,6 +46,7 @@ function updateModal({ setShowUpdateModal }) {
     console.log(event.target.value);
     setSelected(event.target.value);
   };
+
   const DataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
