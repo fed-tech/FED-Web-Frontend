@@ -47,11 +47,6 @@ function LoginForm() {
       setPasswrderr(true);
     } else {
       try {
-        const salt = import.meta.env.VITE_BCRYPT;
-
-        console.log("import.meta.env.VITE_BCRYPT");
-        console.log(import.meta.env.VITE_BCRYPT);
-
         const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
 
         console.log(password);
