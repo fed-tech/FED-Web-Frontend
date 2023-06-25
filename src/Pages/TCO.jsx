@@ -30,7 +30,7 @@ export default function TCO() {
   };
 
   const [show, set] = useState("Profile");
-  const [showUpdateModal, setShowUpdateModal] = useState(false);
+  const [showUpdateModal, setShowUpdateModal] = useState(true);
   const [user, setUser] = useState("1");
 
   // 1 --> creative, tech, operations
