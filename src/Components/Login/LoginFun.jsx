@@ -182,52 +182,6 @@ function LoginFun() {
             <p className={LCss.welc}>Welcome Back</p>
             <p className={LCss.det}>Please Enter your details</p>
           </div>
-          <div className={LCss.googlepart} onClick={() => login()}>
-            <img src={google} className={LCss.icon}></img>
-            <p className={LCss.log}>Login with Google</p>
-          </div>
-          <p className={LCss.or}>Or</p>
-          <div className={LCss.user}>
-            <input
-              type="text"
-              placeholder="Email"
-              className={LCss.username}
-              onChange={(e) => setEmail(e.target.value)}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-          </div>
-          <div className={LCss.pass}>
-            <input
-              type="password"
-              placeholder="Password"
-              className={LCss.password}
-              onChange={(e) => setPassword(e.target.value)}
-              style={{
-                borderBottom: passwrderr ? "2px solid red" : "2px solid black",
-              }}
-            />
-          </div>
-          <div className={LCss.forgotPassword}>
-            <Link to="/forgotpassword">
-              <p>Forgot Password?</p>
-            </Link>
-          </div>
-          <button className={LCss.logtwo} onClick={handlelogin}>
-            Login
-          </button>
-          <div className={LCss.dont}>
-            <p className={LCss.signup}>
-              Don't have an account?{" "}
-              <Link to="/Signup">
-                <span className={LCss.spann}>Signup</span>
-              </Link>
-            </p>
-            <p id="errmssg" style={{ color: isinValid ? "red" : "white" }}>
-              {errmssg}
-            </p>
-          </div>
         </div>
       </div>
     </div>
