@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Animatedpage } from "../Animatedpage";
 import image from "./css1/images/image-27.png";
 import image1 from "./css1/images/image-29.png";
 import image2 from "./css1/images/youtube-28.png";
@@ -147,60 +146,58 @@ function Youtube(props) {
   }
 
   return (
-    <Animatedpage>
-      <div className="mainbody">
-        <div className="container1">
-          <div className="container2" style={{ width: "90%" }}>
-            <iframe
-              className="video_content"
-              width="100%"
-              height="480"
-              src={content.link}
-              title={content.title}
-              frameborder="0"
-              allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
+    <div className="mainbody">
+      <div className="container1">
+        <div className="container2" style={{ width: "90%" }}>
+          <iframe
+            className="video_content"
+            width="100%"
+            height="480"
+            src={content.link}
+            title={content.title}
+            frameborder="0"
+            allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div className="descriptiondiv">
-          <h4 className="heading1">Description:</h4>
-          <p className="firstdiv">{content.para}</p>
-        </div>
-        <div className="bottomcontainer">
-          <h4 className="heading2">Watch More</h4>
-          <div className="watchmore">
-            {cardList.map((cardList) => {
-              return (
-                <div
-                  className="div1"
-                  onClick={() => {
-                    transContent(cardList.link, cardList.title, cardList.para);
-                  }}
-                >
-                  <div className="underdiv1">
-                    <div className="items">
-                      <div className="imagediv">
-                        <img
-                          src={cardList.image}
-                          className="image1"
-                          alt="Empowering"
-                        ></img>
-                      </div>
-                      <div className="eti">
-                        <h4 className="empowering">{cardList.title}</h4>
-                        <h4 className="ep">{cardList.episode}</h4>
-                        <p className="paragraph">{cardList.para}</p>
-                      </div>
+      </div>
+      <div className="descriptiondiv">
+        <h4 className="heading1">Description:</h4>
+        <p className="firstdiv">{content.para}</p>
+      </div>
+      <div className="bottomcontainer">
+        <h4 className="heading2">Watch More</h4>
+        <div className="watchmore">
+          {cardList.map((cardList) => {
+            return (
+              <div
+                className="div1"
+                onClick={() => {
+                  transContent(cardList.link, cardList.title, cardList.para);
+                }}
+              >
+                <div className="underdiv1">
+                  <div className="items">
+                    <div className="imagediv">
+                      <img
+                        src={cardList.image}
+                        className="image1"
+                        alt="Empowering"
+                      ></img>
+                    </div>
+                    <div className="eti">
+                      <h4 className="empowering">{cardList.title}</h4>
+                      <h4 className="ep">{cardList.episode}</h4>
+                      <p className="paragraph">{cardList.para}</p>
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
-    </Animatedpage>
+    </div>
   );
 }
 export default Youtube;
