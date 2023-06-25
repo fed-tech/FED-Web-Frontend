@@ -9,8 +9,7 @@ import AuthContext from "../store/auth-context";
 import { useNavigate } from "react-router-dom";
 import EventAdmin from "../Components/Profile/EventAdmin";
 import AdminProfile from "../Components/Profile/AdminProfile";
-import UpdateProfile from'./UpdateProfile';
-
+import UpdateProfile from "../Components/Profile/UpdateProfile";
 
 function Page() {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ function Page() {
   const [event, setEvent] = useState(false);
   const [form, setFrom] = useState(false);
   const [members, setMembers] = useState(false);
-  const[showUpdateModal,setShowUpdateModal] = useState(false);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
@@ -77,10 +76,12 @@ function Page() {
           <div className="vertical_line"></div>
         </div>
         <div className="page_right">
-          {profile &&<AdminProfile setShowUpdateModal = {setShowUpdateModal}/>}
+          {profile && <AdminProfile setShowUpdateModal={setShowUpdateModal} />}
           {event && <EventAdmin />}
         </div>
-      {showUpdateModal&&<UpdateProfile setShowUpdateModal = {setShowUpdateModal}/>}
+        {showUpdateModal && (
+          <UpdateProfile setShowUpdateModal={setShowUpdateModal} />
+        )}
       </div>
     </div>
   );
