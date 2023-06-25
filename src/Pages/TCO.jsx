@@ -86,7 +86,6 @@ export default function TCO() {
                 </div>
                 <div className="Position">
                   <p className="name">{authCtx.user.name}</p>
-                  {/* <p className="position">Technical Executive</p> */}
                 </div>
               </div>
             </div>
