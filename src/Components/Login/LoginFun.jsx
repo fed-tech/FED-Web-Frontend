@@ -27,8 +27,7 @@ function LoginFun() {
   const [passwrderr, setPasswrderr] = useState(false);
   const [passwrd, setPassword] = useState("");
   const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("Invalid");
-  const [cookie, setCookie, removeCookie] = useCookies(["auth_token"]);
+  const [errmssg, setErrMssg] = useState("");
   const [codeResponse, setCodeResponse] = useState();
 
   useEffect(() => {
@@ -53,7 +52,7 @@ function LoginFun() {
         );
         console.log(password);
         console.log(document.cookie);
-        const response = await axios.post(`http://localhost:5000/auth/login`, {
+        const response = await axios.post(`/auth/login`, {
           username,
           password,
         });
