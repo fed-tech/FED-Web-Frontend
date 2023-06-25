@@ -32,6 +32,7 @@ export default function TCO() {
   const [show, set] = useState("Profile");
   const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [user, setUser] = useState("1");
+
   // 1 --> creative, tech, operations
   // 2 --> marketing
   useEffect(() => {
@@ -130,6 +131,7 @@ export default function TCO() {
                   <img
                     src={penSvg}
                     alt=""
+                    className="penSvgImg"
                     onClick={() => setShowUpdateModal(true)}
                   />
                 </p>
