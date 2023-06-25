@@ -17,6 +17,11 @@ import google from "../Img/Google.svg";
 
 import tick from "./../Img/tick.png";
 export default function Signup() {
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
