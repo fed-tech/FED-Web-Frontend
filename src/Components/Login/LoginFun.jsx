@@ -79,7 +79,6 @@ function LoginFun() {
               ? navigate("/MyProfile/admin")
               : navigate("/MyProfile/member");
           }
-          // navigate("/MyProfile");
 
           return;
         }
