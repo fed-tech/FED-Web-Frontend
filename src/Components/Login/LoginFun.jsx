@@ -18,7 +18,7 @@ import AuthContext from "./../store/auth-context";
 import LCss from "./Css/Loginpg.module.css";
 
 // img
-import google from "../Img/Google.svg";
+import google from "./../../assets/Login/Google.svg";
 
 function LoginFun() {
   const authCtx = useContext(AuthContext);
