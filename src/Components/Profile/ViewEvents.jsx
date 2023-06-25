@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import EventCards from './EventCards'
-import './cssp/ViewEvents.css'
-import axios from 'axios'
+import React, { useEffect, useState } from "react";
+
+// Components
+import EventCards from "./EventCards";
+
+// css
+import "./css/ViewEvents.css";
+
+// axios
+import axios from "axios";
 
 function ViewEvents() {
-  const [events,setEvents] = useState([]);
-  useEffect(()=>{
-    axios.get('http://localhost:5000/event/getevent').then((res)=>{
+  const [events, setEvents] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:5000/event/getevent").then((res) => {
       setEvents(res.data.event);
-
-    })
-
-  },[])
+    });
+  }, []);
   return (
-    <div className='viewevents'>
-        {/* <EventCards/>
+    <div className="viewevents">
+      {/* <EventCards/>
         <EventCards/>
         <EventCards/>
         <EventCards/>
@@ -23,11 +27,11 @@ function ViewEvents() {
         <EventCards/>
         <EventCards/>
         <EventCards/> */}
-        {events.map((i,idx)=>(
-          <EventCards key={idx} info = {i}/>
-        ))}
+      {events.map((i, idx) => (
+        <EventCards key={idx} info={i} />
+      ))}
     </div>
-  )
+  );
 }
 
-export default ViewEvents
+export default ViewEvents;
