@@ -4,13 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 // components
 import Registration1 from "./Registration1";
 import Registration2 from "./Registration2";
+import UpdateProfile from "./../Components/Profile/UpdateProfile";
 
 // svg
 import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
 import penSvg from "../Img/pen-icon.svg";
 import filter from "../Img/Filter.svg";
-import UpdateProfile from "../Components/Profile/UpdateProfile";
 
 // css
 import "./Css/Profilecss/MemberProfile.css";
