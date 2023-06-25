@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 // css
-import "./cssp/MyProfile.css";
+import "./css/MyProfile.css";
+
 export default function MyProfile() {
   const initialValues = {
     firstname: "",
@@ -9,13 +10,16 @@ export default function MyProfile() {
     email: "",
     password: "",
   };
+
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
@@ -114,7 +118,6 @@ export default function MyProfile() {
                   </p>
                   <br />
 
-                  
                   <p className="p1 font-generic">Or</p>
                   <div className="fname">
                     <input
@@ -123,7 +126,7 @@ export default function MyProfile() {
                       placeholder="First Name"
                       className="font-generic inputs in1"
                       value={formValues.firstname}
-                    onChange={handleChange}
+                      onChange={handleChange}
                     />
                     <hr className="hrs hr1" />
                     <div className="error1">{formErrors.firstname}</div>
@@ -141,7 +144,7 @@ export default function MyProfile() {
                     <hr className="hrs hr2" />
                     <div className="error2">{formErrors.lastname}</div>
                   </div>
-                  
+
                   <div className="email">
                     <input
                       type="email"
@@ -154,7 +157,7 @@ export default function MyProfile() {
                     <hr className="hrs hr3" />
                     <div className="error3">{formErrors.email}</div>
                   </div>
-                  
+
                   <div className="password">
                     <input
                       type="password"
@@ -167,7 +170,7 @@ export default function MyProfile() {
                     <hr className="hrs hr4" />
                     <div className="error4">{formErrors.password}</div>
                   </div>
-                  
+
                   <button type="submit" className="submit-btn">
                     Signup
                   </button>
