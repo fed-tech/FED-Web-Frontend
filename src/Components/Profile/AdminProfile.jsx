@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
-import "../../Pages/Css/Profilecss/profile.css";
-import penSvg from "../../Img/pen-icon.svg";
 import { Link } from "react-router-dom";
-import "./cssp/AdminProfile.css";
+
+// img
+import penSvg from "../../Img/pen-icon.svg";
+
+// css
+import "./css/AdminProfile.css";
+import "../../Pages/Css/Profilecss/profile.css";
+
+// state
 import AuthContext from "../../store/auth-context";
 
-function AdminProfile({setShowUpdateModal}) {
+function AdminProfile({ setShowUpdateModal }) {
   const authCtx = useContext(AuthContext);
   return (
     <div className="admin-profile">
@@ -13,7 +19,7 @@ function AdminProfile({setShowUpdateModal}) {
         <p className="headInnerText">
           <p>Profile Details</p>
 
-          <img src={penSvg} alt="" onClick={()=>setShowUpdateModal(true)}/>
+          <img src={penSvg} alt="" onClick={() => setShowUpdateModal(true)} />
         </p>
       </div>
       <div className="detailss">
