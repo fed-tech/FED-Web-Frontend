@@ -16,7 +16,6 @@ function Main(props) {
 
   return (
     <>
-      {/* {goToYoutube ? ( */}
       <>
         <section
           id="podcasts"
