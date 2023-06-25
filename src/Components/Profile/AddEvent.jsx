@@ -1,6 +1,12 @@
 import React, { useContext, useState } from "react";
-import "./css/AddEvent.css";
+
+// axios
 import axios from "axios";
+
+// css
+import "./css/AddEvent.css";
+
+// state
 import AuthContext from "../../store/auth-context";
 
 function AddEvent() {
