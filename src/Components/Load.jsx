@@ -1,7 +1,23 @@
 import React from "react";
 
+// css
+import LoadCss from "./css/Load.module.css";
+
 function Load() {
-  return <div>Load</div>;
+  return (
+    <>
+      <svg className={LoadCss.spinner} viewBox="0 0 50 50">
+        <circle
+          className={LoadCss.path}
+          cx="25"
+          cy="25"
+          r="20"
+          fill="none"
+          stroke-width="5"
+        ></circle>
+      </svg>
+    </>
+  );
 }
 
 export default Load;
