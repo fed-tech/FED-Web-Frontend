@@ -91,6 +91,8 @@ function LoginForm() {
       } catch (err) {
         setIsinValid(true);
 
+        setLaodState(false);
+
         console.log(err);
 
         if (err.response.data.code === 4) {
