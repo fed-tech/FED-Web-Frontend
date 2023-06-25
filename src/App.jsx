@@ -7,24 +7,32 @@ import Layout from "./Pages/Layout";
 // Pages
 import Home from "./Pages/Home";
 import Team from "./Pages/Team";
-import Error from "./Pages/Error";
 import Alumni from "./Pages/Alumni";
 import Events from "./Pages/Events";
 import Podcasts from "./Pages/Podcasts";
 import Testimonial from "./Pages/Testimonial";
+import PrivacyPolicies from "./Pages/PrivacyPolicies";
+import TermsAndConditions from "./Pages/TermsAndConditions";
+
+// Pages || Error
+import Error from "./Pages/Error";
+
+// Pages || Authentication
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import Profile from "./Pages/Profile";
-import TCO from "./Pages/TCO";
 import ResetPassword from "./Pages/ResetPassword";
 import ForgotPassword from "./Pages/ForgotPassword";
+import CreateProfile from "./Pages/CreateProfile";
+
+// Pages || Profiles
+import TCO from "./Pages/TCO";
+import Profile from "./Pages/Profile";
+
+// ?
 import AddMember from "./Pages/AddMember";
 import Member from "./Pages/Member";
 import UpdateProfile from "./Pages/UpdateProfile";
-import CreateProfile from "./Pages/CreateProfile";
 import Page from "./Pages/Page";
-import PrivacyPolicies from "./Pages/PrivacyPolicies";
-import TermsAndConditions from "./Pages/TermsAndConditions";
 
 // Components
 import Nav from "./Components/Nav";
