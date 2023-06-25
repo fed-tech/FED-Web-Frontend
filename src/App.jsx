@@ -31,7 +31,6 @@ import Profile from "./Pages/Profile";
 // ?
 import AddMember from "./Pages/AddMember";
 import Member from "./Pages/Member";
-import UpdateProfile from "./Pages/UpdateProfile";
 import Page from "./Pages/Page";
 
 // Components
@@ -129,7 +128,6 @@ function App() {
                 <Route path="/forgotpassword" element={<ForgotPassword />} />
                 <Route path="/resetpassword" element={<ResetPassword />} />
                 <Route path="/createprofile" element={<CreateProfile />} />
-                <Route path="/updateprofile" element={<UpdateProfile />} />
                 <Route path="/privacypolicies" element={<PrivacyPolicies />} />
 
                 <Route
