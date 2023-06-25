@@ -67,27 +67,9 @@ export default function NavMobile(props) {
               Our Team
             </NavLink>
           </div>
-          {/* <div className="mobileList">
-            <NavLink
-              to="/Alumni"
-              className="liTag"
-              onClick={() => setCount(false)}
-            >
-              Alumni
-            </NavLink>
-          </div> */}
-          {/* <div class="mobileList">
-            <HashLink
-              to="/#ContactUs"
-              className="liTag"
-              onClick={() => setCount(false)}
-            >
-              Contact Us
-            </HashLink>
-          </div> */}
+
           <div class="mobileList">
             <NavLink
-              // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
               to={authCtx.isLoggedIn ? "/MyProfile/member" : "Signup"}
               className="liTag"
             >
@@ -101,11 +83,6 @@ export default function NavMobile(props) {
               ) : (
                 "Login/SignUp"
               )}
-            </NavLink>
-          </div>
-          <div class="mobileList">
-            <NavLink to="/Alumni" className="liTag">
-              Alumni
             </NavLink>
           </div>
         </div>
