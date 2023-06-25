@@ -31,6 +31,7 @@ function LoginForm() {
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("");
   const [codeResponse, setCodeResponse] = useState();
+  const [LaodState, setLaodState] = useState(false);
 
   useEffect(() => {
     setIsinValid(false);
@@ -40,6 +41,8 @@ function LoginForm() {
 
   const handlelogin = async (e) => {
     e.preventDefault();
+
+    setLaodState(true);
 
     if (email === "") {
       setEmailerr(true);
@@ -74,6 +77,9 @@ function LoginForm() {
             response.data.token,
             10800000
           );
+
+          setLaodState(false);
+
           console.log("access->", authCtx.user.access == "0");
 
           response.data.result[0].access == "0"
@@ -212,7 +218,7 @@ function LoginForm() {
         </Link>
       </div>
       <button className={LCss.logtwo} onClick={handlelogin}>
-        Login
+        {LaodState ? <Load /> : <span>Login</span>}
       </button>
       <div className={LCss.dont}>
         <p className={LCss.signup}>
