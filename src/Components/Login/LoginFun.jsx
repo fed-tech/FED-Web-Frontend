@@ -5,14 +5,11 @@ import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
 import Swal from "sweetalert2";
 
-// Components
-import LoginFun from "./../Components/Login/LoginFun";
-
 //  axios
 import axios from "axios";
 
 // state
-import AuthContext from "./../store/auth-context";
+import AuthContext from "./../../store/auth-context";
 
 // css
 import LCss from "./Css/Loginpg.module.css";
