@@ -21,6 +21,10 @@ import ForgotPassword from "./Pages/ForgotPassword";
 import AddMember from "./Pages/AddMember";
 import Member from "./Pages/Member";
 import UpdateProfile from "./Pages/UpdateProfile";
+import CreateProfile from "./Pages/CreateProfile";
+import Page from "./Pages/Page";
+import PrivacyPolicies from "./Pages/PrivacyPolicies";
+import TermsAndConditions from "./Pages/TermsAndConditions";
 
 // Components
 import Nav from "./Components/Nav";
@@ -32,10 +36,6 @@ import AuthContext from "./store/auth-context";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
-import CreateProfile from "./Pages/CreateProfile";
-import Page from "./Pages/Page";
-import PrivacyPolicies from "./Pages/PrivacyPolicies";
-import TermsAndConditions from "./Pages/TermsAndConditions";
 
 function App() {
   const authCtx = useContext(AuthContext);
