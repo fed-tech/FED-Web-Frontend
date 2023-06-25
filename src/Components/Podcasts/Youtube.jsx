@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
-import image from "./css/images/image-27.png";
-import image1 from "./css/images/image-29.png";
-import image2 from "./css/images/youtube-28.png";
+
+// img
+import image from "./../../assets/PodCasts/image-27.png";
+import image1 from "./../../assets/PodCasts/image-29.png";
+import image2 from "./../../assets/PodCasts/youtube-28.png";
+
+// css
 import "./css/youtube.css";
+
 const cardList = [
   {
     episode: "EP 03",
