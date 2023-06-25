@@ -154,8 +154,6 @@ function Login(props) {
                         ? navigate("/MyProfile/admin")
                         : navigate("/MyProfile/member");
                     }
-                    // navigate("/MyProfile");
-                    // navigate("/MyProfile/member");
                     return;
                   });
               } else {
