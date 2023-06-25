@@ -218,7 +218,7 @@ function LoginForm() {
         </Link>
       </div>
       <button className={LCss.logtwo} onClick={handlelogin}>
-        {LaodState ? <Load /> : <span>Login</span>}
+        {LaodState ? <Load /> : <>Login</>}
       </button>
       <div className={LCss.dont}>
         <p className={LCss.signup}>
