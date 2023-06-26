@@ -116,7 +116,6 @@ export default function LetsTalkBusiness() {
   };
 
   return (
-    // <>
     <div class="letsTalkBusiness" id="ContactUs">
       <div class="letsTalkBusiness-left">
         <p class="business-heading">
