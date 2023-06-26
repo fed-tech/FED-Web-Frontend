@@ -45,6 +45,19 @@ export default function NavMobile() {
       </nav>
 
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
+        <div class="mobileList">
+          {authCtx.isLoggedIn && (
+            <NavLink to="/MyProfile" className="liTag">
+              <img
+                src={authCtx.user.pic}
+                alt=""
+                srcset=""
+                className="profile_img"
+              />
+            </NavLink>
+          )}
+        </div>
+
         <div class="mobileNavListChild">
           <div class="mobileList">
             <NavLink to="/" className="liTag" onClick={() => setCount(false)}>
@@ -76,6 +89,14 @@ export default function NavMobile() {
             >
               Our Team
             </NavLink>
+          </div>
+
+          <div class="mobileList">
+            {!authCtx.isLoggedIn && (
+              <NavLink to="/Login" className="liTag">
+                Login/SignUp
+              </NavLink>
+            )}
           </div>
         </div>
       </div>
