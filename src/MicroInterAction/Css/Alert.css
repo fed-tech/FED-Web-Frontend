@@ -1,15 +1,16 @@
 .alert-mDiv {
-  width: 850px;
+  width: 250px;
+  min-width: 250px;
   position: fixed;
-  right: 100px;
-  bottom: 200px;
+  right: 2%;
+  bottom: 4%;
 }
 
 .alert-container {
   position: relative;
   font-family: "Manrope", sans-serif;
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .symbol-container {
