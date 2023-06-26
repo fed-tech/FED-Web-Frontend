@@ -18,8 +18,6 @@ export default function LetsTalkBusiness() {
     message: "",
   });
 
-  // const [error, setError] = useState(false);
-
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
@@ -28,14 +26,6 @@ export default function LetsTalkBusiness() {
     text: "",
     val: false,
   });
-
-  // const variants = {
-  //   mainColor: "#FDEDED",
-  //   secondaryColor: "#F16360",
-  //   symbol: "error",
-  //   title: "Error",
-  //   text: "Please Fill All The Details",
-  // };
 
   const onChange = (e) => {
     const name = e.target.name;
