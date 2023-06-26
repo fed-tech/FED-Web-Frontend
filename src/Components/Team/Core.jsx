@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // Img Component
-import ImageComponent from "../../Pages/ImageComponent";
+import ImageComponent from "./ImageComponent";
 
 // css
 import "./css/Core.css";
