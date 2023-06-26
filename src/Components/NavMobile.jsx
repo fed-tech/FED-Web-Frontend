@@ -10,9 +10,7 @@ import AuthContext from "./../store/auth-context";
 export default function NavMobile() {
   const [count, setCount] = useState(false);
 
-  function toggleEvent() {
-    setCount(true);
-  }
+  const authCtx = useContext(AuthContext);
 
   return (
     <header>
@@ -24,7 +22,11 @@ export default function NavMobile() {
                 <p className="Cross">X</p>
               </div>
             ) : (
-              <div className="hamburger" id="ham" onClick={toggleEvent}>
+              <div
+                className="hamburger"
+                id="ham"
+                onClick={() => setCount(true)}
+              >
                 <div id="bur1"></div>
                 <div id="bur2"></div>
                 <div id="bur3"></div>
