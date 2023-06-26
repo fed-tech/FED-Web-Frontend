@@ -24,7 +24,7 @@ export default function LetsTalkBusiness() {
     symbol: "info",
     title: "Information",
     text: "Our newest module can be bought, or you can always just use our 30 day trial.",
-    val: true,
+    val: false,
   });
 
   const onChange = (e) => {
@@ -159,7 +159,9 @@ export default function LetsTalkBusiness() {
           </button>
         </form>
 
-        {variants.val ? <Alert variant={variants} val={setError} /> : ""}
+        {/* {variants.val ?  */}
+        <Alert variant={variants} val={setError} />
+        {/* : ""} */}
       </div>
     </div>
   );
