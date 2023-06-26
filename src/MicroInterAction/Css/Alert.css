@@ -3,6 +3,17 @@
   position: fixed;
   right: 2%;
   bottom: 4%;
+  transition: all 0.3s;
+}
+
+#show {
+  pointer-events: all;
+  transform: translateX(0%);
+}
+
+#hide {
+  pointer-events: none;
+  transform: translateX(200%);
 }
 
 .alert-container {
