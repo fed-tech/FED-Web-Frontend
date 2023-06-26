@@ -33,6 +33,7 @@ export default function NavMobile() {
               </div>
             )}
           </div>
+
           <Link to="/" className="LinkStyle" onClick={() => setCount(false)}>
             <div className="LogoDiv">
               <img src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png"></img>
@@ -42,6 +43,7 @@ export default function NavMobile() {
           <div id="Navdarkright"></div>
         </div>
       </nav>
+
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
         <div class="mobileNavListChild">
           <div class="mobileList">
@@ -49,11 +51,13 @@ export default function NavMobile() {
               Home
             </NavLink>
           </div>
+
           <div class="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/event" className="liTag">
               Events
             </NavLink>
           </div>
+
           <div class="mobileList">
             <NavLink
               to="/Podcasts"
@@ -63,6 +67,7 @@ export default function NavMobile() {
               Podcasts
             </NavLink>
           </div>
+
           <div class="mobileList">
             <NavLink
               to="/Team"
@@ -72,24 +77,6 @@ export default function NavMobile() {
               Our Team
             </NavLink>
           </div>
-          {/* <div className="mobileList">
-            <NavLink
-              to="/Alumni"
-              className="liTag"
-              onClick={() => setCount(false)}
-            >
-              Alumni
-            </NavLink>
-          </div> */}
-          {/* <div class="mobileList">
-            <HashLink
-              to="/#ContactUs"
-              className="liTag"
-              onClick={() => setCount(false)}
-            >
-              Contact Us
-            </HashLink>
-          </div> */}
         </div>
       </div>
     </header>
