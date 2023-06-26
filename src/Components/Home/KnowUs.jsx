@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import Content from "./../../Components/Home/Content";
 
 // Data
