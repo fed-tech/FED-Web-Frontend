@@ -24,7 +24,7 @@ export default function LetsTalkBusiness() {
     symbol: "",
     title: "",
     text: "",
-    val: false,
+    val: true,
   });
 
   const onChange = (e) => {
