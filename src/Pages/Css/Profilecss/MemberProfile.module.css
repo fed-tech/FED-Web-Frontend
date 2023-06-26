@@ -132,7 +132,7 @@ h2 {
     overflow-y: auto; */
 }
 
-#profile {
+.profile {
   color: #ffffff;
   font-family: rubik;
   font-weight: 300;
@@ -140,6 +140,20 @@ h2 {
   flex-direction: column;
   padding-bottom: 27px;
   margin-left: 30px;
+}
+.proHeading {
+  font-size: 32px;
+  letter-spacing: 0.02em;
+  line-height: 38px;
+  padding-bottom: 99px;
+  width: 60%;
+}
+
+.headInnerText {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid white 1px;
+  padding-bottom: 3px;
 }
 
 .dets1,
@@ -240,6 +254,11 @@ h2 {
   .memberLeft {
     width: 33%;
   }
+  
+  .proHeading {
+    font-size: 24px;
+  }
+
 }
 
 @media (max-width: 830px) {
@@ -287,9 +306,6 @@ h2 {
 }
 
 @media (max-width: 690px) {
-  /* .proHeading {
-        width: 80%;
-    } */
 
   .memberRight {
     padding: 40px 0;
@@ -413,6 +429,7 @@ h2 {
   }
 
   .proHeading {
+    font-size: 20px;
     padding-bottom: 30px;
   }
 }
@@ -421,11 +438,17 @@ h2 {
   .memberRight {
     padding: 10px 10px 40px 15px;
   }
+  .proHeading {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 348px) {
   .memberRight {
     padding: 10px 0 30px 15px;
+  }
+  .proHeading {
+    font-size: 22px;
   }
 }
 

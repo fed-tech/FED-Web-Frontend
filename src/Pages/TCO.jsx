@@ -13,7 +13,7 @@ import penSvg from "../Img/pen-icon.svg";
 import filter from "../Img/Filter.svg";
 
 // css
-import "./Css/Profilecss/MemberProfile.css";
+import tco from "./Css/Profilecss/MemberProfile.module.css";
 
 // state
 import AuthContext from "./../store/auth-context";
@@ -67,32 +67,32 @@ export default function TCO() {
     console.log("user: ", user);
   };
   return (
-    <div className="memberBackground">
-      <div className="mainbox">
-        <div className="memberLeft">
-          <div className="dashboard">
-            <div className="dashboardTop">
+    <div className={tco.memberBackground}>
+      <div className={tco.mainbox}>
+        <div className={tco.memberLeft}>
+          <div className={tco.dashboard}>
+            <div className={tco.dashboardTop}>
               <h1>DASHBOARD</h1>
               <h2>DASH</h2>
               <h2>BOARD</h2>
               <div
-                className="gotoPro"
+                className={tco.gotoPro}
                 onClick={() => {
                   set("Profile");
                 }}
               >
-                <div className="profilePic">
+                <div className={tco.profilePic}>
                   <img src={authCtx.user.pic} alt="" />
                 </div>
-                <div className="Position">
-                  <p className="name">{authCtx.user.name}</p>
+                <div className={tco.Position}>
+                  <p className={tco.name}>{authCtx.user.name}</p>
                 </div>
               </div>
             </div>
 
-            <div className="dashboardBottom">
+            <div className={tco.dashboardBottom}>
               <div
-                className="registrationStats"
+                className={tco.registrationStats}
                 onClick={() => {
                   clickedRegStats();
                 }}
@@ -100,7 +100,7 @@ export default function TCO() {
                 <img src={regStatSvg} alt="" />
                 <p> Registration Stats </p>
               </div>
-              <div className="logout" onClick={handleLogout}>
+              <div className={tco.logout} onClick={handleLogout}>
                 <img src={logoutSvg} alt="" />
                 <p> Logout </p>
               </div>
@@ -109,9 +109,9 @@ export default function TCO() {
         </div>
 
         {show === "Profile" ? (
-          <div className="memberRight">
-            <div id="profile">
-              <div className="proHeading">
+          <div className={tco.memberRight}>
+            <div className={tco.profile}>
+              <div className={tco.proHeading}>
                 {authCtx.user.access === 0 ? (
                   <>
                     <div>
@@ -125,50 +125,53 @@ export default function TCO() {
                   ""
                 )}
 
-                <p className="headInnerText">
+                <p className={tco.headInnerText}>
                   <p>Profile Details</p>
                   <img
                     src={penSvg}
                     alt=""
-                    className="penSvgImg"
+                    className={tco.penSvgImg}
                     onClick={() => setShowUpdateModal(true)}
                   />
                 </p>
               </div>
-              <div className="details">
-                <table className="profileTable">
-                  <tbody>
-                    <tr>
-                      <td className="dets1">Full Name</td>
-                      <td className="vals1">{authCtx.user.name}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Roll Number</td>
-                      <td className="vals1">{authCtx.user.rollNo}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Email ID</td>
-                      <td className="vals1">{authCtx.user.email}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Year</td>
-                      <td className="vals1">{authCtx.user.selected}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">School</td>
-                      <td className="vals1">{authCtx.user.school}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">College</td>
-                      <td className="vals1">{authCtx.user.college}</td>
-                    </tr>
-                    <tr>
-                      <td className="dets1">Mobile No</td>
-                      <td className="vals1">{authCtx.user.mobileNo}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+              <div className={tco.details}>
+              <table className={tco.profileTable}>
+                <tbody>
+                  <tr>
+                    <td className={tco.dets1}>Full Name</td>
+                    <td className={tco.vals1}>{authCtx.user.name}</td>
+                  </tr>
+                  <tr>
+                    <td className={tco.dets1}>Roll Number</td>
+                    <td className={tco.vals1}>{authCtx.user.rollNo}</td>
+                  </tr>
+                  <tr>
+                    <td className={tco.dets1}>Email ID</td>
+                    <td className={tco.vals1}>{authCtx.user.email}</td>
+                  </tr>
+                  <tr>
+                    <td className={tco.dets1}>Year</td>
+                    <td className={tco.vals1}>{authCtx.user.selected}</td>
+                  </tr>
+                  <tr>
+                    <td className={tco.dets1}>School</td>
+                    <td className={tco.vals1}>{authCtx.user.school}</td>
+                  </tr>
+                  <tr>
+                    <td className={tco.dets1}>College</td>
+                    <td className={tco.vals1}>{authCtx.user.college}</td>
+                  </tr>
+                  <tr>
+                    <td className={tco.dets1}>Mobile No</td>
+                    <td className={tco.vals1}>{authCtx.user.mobileNo}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button className={tco.logoutBtn} onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
             </div>
           </div>
         ) : (
@@ -176,7 +179,7 @@ export default function TCO() {
         )}
 
         {show === "Registration" ? (
-          user === "2" ? (
+          user === "1" ? (
             <Registration1 />
           ) : (
             <Registration2 />
