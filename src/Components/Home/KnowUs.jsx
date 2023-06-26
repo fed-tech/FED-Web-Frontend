@@ -26,6 +26,7 @@ export default function KnowUs() {
             mentors.
           </p>
         </div>
+
         {/* Why_What_How */}
         <div className="WhyHowWhatDiv">
           <Content knowus={knowus[0]} />
