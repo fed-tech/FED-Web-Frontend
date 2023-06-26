@@ -34,7 +34,7 @@ export default function LetsTalkBusiness() {
     secondaryColor: "#F16360",
     symbol: "error",
     title: "Error",
-    text: "The action was not carried out succesfully please try again.",
+    text: "Please Fill All The Details",
   };
 
   const onChange = (e) => {
@@ -85,62 +85,61 @@ export default function LetsTalkBusiness() {
   };
 
   return (
-    <div class="letsTalkBusiness" id="ContactUs">
-      <Alert variant={variants} />
+    <>
+      <div class="letsTalkBusiness" id="ContactUs">
+        <div class="letsTalkBusiness-left">
+          <p class="business-heading">
+            Let's Talk <span>Business</span>
+          </p>
+          <p class="business-text">
+            We'd love to hear from you! Whether you are curious about how our
+            society works, how you can participate in our webinars and events,
+            any recent updates or anything that interest you - we're ready to
+            answer any and all of your questions!
+          </p>
+        </div>
 
-      <div class="letsTalkBusiness-left">
-        <p class="business-heading">
-          Let's Talk <span>Business</span>
-        </p>
-        <p class="business-text">
-          We'd love to hear from you! Whether you are curious about how our
-          society works, how you can participate in our webinars and events, any
-          recent updates or anything that interest you - we're ready to answer
-          any and all of your questions!
-        </p>
-      </div>
+        <div class="letsTalkBusiness-right">
+          <form>
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                required
+                onChange={onChange}
+              />
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                required
+                onChange={onChange}
+              />
+            </div>
+            <div>
+              <label for="message" id="message">
+                Message:
+              </label>
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                value={formData.message}
+                required
+                onChange={onChange}
+              ></textarea>
+            </div>
+            <button type="submit" name="submit" onClick={sumbitFunction}>
+              {loadingEffect ? <Load /> : "Send"}
+            </button>
+          </form>
 
-      <div class="letsTalkBusiness-right">
-        <form>
-          <div>
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              required
-              onChange={onChange}
-            />
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              required
-              onChange={onChange}
-            />
-          </div>
-          <div>
-            <label for="message" id="message">
-              Message:
-            </label>
-            <textarea
-              name="message"
-              cols="30"
-              rows="10"
-              value={formData.message}
-              required
-              onChange={onChange}
-            ></textarea>
-          </div>
-          <button type="submit" name="submit" onClick={sumbitFunction}>
-            {loadingEffect ? <Load /> : "Send"}
-          </button>
-        </form>
-
-        {/* <div>
+          {/* <div>
           {error ? (
             <p>
               <Alert variant={variants} />
@@ -151,7 +150,9 @@ export default function LetsTalkBusiness() {
             </p>
           )}
         </div> */}
+        </div>
       </div>
-    </div>
+      <Alert variant={variants} />
+    </>
   );
 }
