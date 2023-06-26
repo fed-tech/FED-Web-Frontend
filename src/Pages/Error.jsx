@@ -11,6 +11,7 @@ function Errorpage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className={ErrCss.bg}>
       <div className={ErrCss.oops}>Oops!</div>
