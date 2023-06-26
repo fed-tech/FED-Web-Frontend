@@ -1,18 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
-
-// css
+import { HashLink } from "react-router-hash-link";
 import "./css/DesktopNav.css";
 
-// state
-import AuthContext from "./../store/auth-context";
-
-// axios
-import axios from "axios";
-
-export default function Nav(props) {
-  const authCtx = useContext(AuthContext);
-
+export default function Nav() {
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -45,23 +36,11 @@ export default function Nav(props) {
                   Our Team
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
-                  className="liTag"
-                >
-                  {authCtx.isLoggedIn ? (
-                    <img
-                      src={authCtx.user.pic}
-                      alt=""
-                      srcset=""
-                      className="profile_img"
-                    />
-                  ) : (
-                    "Login/SignUp"
-                  )}
-                </NavLink>
-              </li>
+              {/* <li>
+                <HashLink to="/#ContactUs" className="liTag">
+                  Contact Us
+                </HashLink>
+              </li> */}
             </ul>
           </div>
         </div>

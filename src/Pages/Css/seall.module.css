@@ -3,7 +3,6 @@
 }
 
 .sub_div {
-  /* background-color: rgb(15, 14, 14); */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -39,7 +38,6 @@
 }
 
 .cardbox {
-  /* padding: 0rem 0rem; */
   vertical-align: middle;
   position: relative;
   background-color: rgb(255, 255, 255);

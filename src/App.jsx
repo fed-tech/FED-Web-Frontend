@@ -1,81 +1,86 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { useEffect, useState, useContext } from "react";
+import React, { Suspense } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
 
 // Pages
-import Home from "./Pages/Home";
-import Team from "./Pages/Team";
-import Error from "./Pages/Error";
-import Alumni from "./Pages/Alumni";
-import Events from "./Pages/Events";
-import Podcasts from "./Pages/Podcasts";
-import Seeall from "./Components/Home/Seeall";
-import Login from "./Pages/Login";
-import Signup from "./Pages/Signup";
-import Profile from "./Pages/Profile";
-import ResetPassword from "./Pages/ResetPassword"
-// import MyProfile from "./Components/Profile/MyProfile";
+const Home = React.lazy(() => import("./Pages/Home"));
+const Team = React.lazy(() => import("./Pages/Team"));
+const Error = React.lazy(() => import("./Pages/Error"));
+const Alumni = React.lazy(() => import("./Pages/Alumni"));
+const Events = React.lazy(() => import("./Pages/Events"));
+const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
+const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
+
+// Loading
+import Loading from "./Pages/Loading";
 
 // Components
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import NavMobile from "./Components/NavMobile";
 
-// state
-import AuthContext from "./store/auth-context";
-
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
-import ForgotPassword from "./Pages/ForgotPassword";
-import CreateProfile from "./Pages/CreateProfile";
 
 function App() {
-  const authCtx = useContext(AuthContext);
-
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <>
       <BrowserRouter>
         <Layout>
-          <Nav isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          <Nav />
           <NavMobile />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Team" element={<Team />} />
-            <Route path="/Event" element={<Events />} />
-            <Route path="/Alumni" element={<Alumni />} />
-            <Route path="/Podcasts" element={<Podcasts />} />
-            <Route path="/Testimonial" element={<Seeall />} />
             <Route
-              path="/Login"
+              path="/Team"
               element={
-                authCtx.isLoggedIn ? (
-                  <Profile setIsLoggedIn={setIsLoggedIn} />
-                ) : (
-                  <Login setIsLoggedIn={setIsLoggedIn} />
-                )
+                <Suspense fallback={<Loading />}>
+                  <Team />
+                </Suspense>
               }
             />
             <Route
-              path="/Signup"
+              path="/Event"
               element={
-                authCtx.isLoggedIn ? (
-                  <Profile setIsLoggedIn={setIsLoggedIn} />
-                ) : (
-                  <Signup />
-                )
+                <Suspense fallback={<Loading />}>
+                  <Events />
+                </Suspense>
               }
             />
             <Route
-              path="/MyProfile"
-              element={authCtx.isLoggedIn ? <Profile /> : <Signup />}
+              path="/Alumni"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Alumni />
+                </Suspense>
+              }
             />
-            <Route path="/forgotpassword" element = {<ForgotPassword/>}/>
-            <Route path="/resetpassword" element = {<ResetPassword/>}/>
-            <Route path="/createprofile" element = {<CreateProfile/>}/>
-            <Route path="*" element={<Error />} />
+            <Route
+              path="/Podcasts"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Podcasts />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/Testimonial"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Testimonial />
+                </Suspense>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <Suspense fallback={<Loading />}>
+                  <Error />
+                </Suspense>
+              }
+            />
           </Routes>
           <Footer />
         </Layout>

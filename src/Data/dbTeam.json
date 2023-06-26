@@ -8,7 +8,8 @@
         "linkedin": "https://www.linkedin.com/in/rishabh-kant",
         "github": "https://github.com/RIshaabhKant",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da5e5f3d28f6085c6fa5c_RISHABH%20KANT.jpg",
-        "about": "Witnessing your own growth is a beautiful sight. FED is that valuable sight for me,The society has contributed to overall development of confidence and the my ability to learn. It helped me provide a vicinity to face Challenges and Working on them with the team has always been one of the perks of this place. I am earnestly grateful to serve as the President of the society and hope to go beyond to take FED at greater heights."
+        "about": "Witnessing your own growth is a beautiful sight. FED is that valuable sight for me,The society has contributed to overall development of confidence and the my ability to learn. It helped me provide a vicinity to face Challenges and Working on them with the team has always been one of the perks of this place. I am earnestly grateful to serve as the President of the society and hope to go beyond to take FED at greater heights.",
+        "blur": "LYECzla$tRoz_4azo#ozo#t6RkWB"
       },
       {
         "id": 1,
@@ -17,94 +18,108 @@
         "linkedin": "https://www.linkedin.com/in/navdeep-parewa-3b20121bb/",
         "github": "",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62fd1cea1b717f43bd4d984b_IMG_20220610_160538__01.jpg",
-        "about": "The nature of being an entrepreneur means that you fully embrace ambiguity and are comfortable with being challenged regularly. Being an entrepreneur is more than being a business owner; it's a perspective and a lifestyle. Fed gave me that thing, that spark to grow my personality and lifestyle. Fed is not just an organization, but a family where I met amazing persons, it gave me the best people best skills and the best life learnings"
+        "about": "The nature of being an entrepreneur means that you fully embrace ambiguity and are comfortable with being challenged regularly. Being an entrepreneur is more than being a business owner; it's a perspective and a lifestyle. Fed gave me that thing, that spark to grow my personality and lifestyle. Fed is not just an organization, but a family where I met amazing persons, it gave me the best people best skills and the best life learnings",
+        "blur": "LBAwU+ob?.x[05a}DnWB05RkxGWD"
       },
       {
+        "id": 2,
         "name": "Rishav Singh",
         "position": "Tech Director",
         "linkedin": "https://www.linkedin.com/in/rishav--singh/",
         "github": "https://github.com/TheDa21crj",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636000459bdab10dce6b88fc_DSC_0014-copy.jpg",
         "about": "The first is the innovator and the pace of innovation is faster than ever before. Being a part of FED, I have learned to adapt to incoming ideas with a blend of technology at an ever-increasing pace. As a technocrat, I aim to help and support the entire team to improve competitive advantage and drive strategy and growth.",
-        "id": 2
+        "blur": "L7A-3QI{uM-?IM?aVfDi~qIUMx%2"
       },
       {
+        "id": 3,
         "name": "Ayan Kumar Paul",
         "position": "Creative Director",
         "linkedin": "https://www.linkedin.com/in/ayanpaul2002/",
         "github": "https://github.com/Ayanpaul11",
         "img": "https://uploads-ssl.webflow.com/635fe4acd1af941207c580b7/635ffcd8bc91161b1567bfdd_Profileimage_.jpg",
         "about": "FED helped me advance to a new level by enabling me to go beyond simply learning to teach others. A layperson can just exclaim, 'Oh! What a gorgeous structure,' or 'What a wonderful car,' but only a creative person can make it look better. At FED, we prioritize providing the greatest platform to grow.",
-        "id": 3
+        "blur": "LBIhZ{$P00xb00%Js^R600Ee-rWF"
       },
       {
+        "id": 4,
         "name": "Nishant Giri",
         "position": "Marketing Director",
         "linkedin": "https://www.linkedin.com/in/nishant-giri-7003131b5",
         "github": "https://github.com/nishant-giri",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/636002e038a81b26f3bb2a40_IMG20221031161012-copy.jpg",
         "about": "I'd like to contribute to FED even more now that I've learned some of the greatest approaches from the cream of the crop. As the Director, I would ensure that FED has a comfortable and energetic working environment in addition to accomplishing the tasks promptly.",
-        "id": 4
+        "blur": "L7Eyk#3K3@}u3IvV@3t*3_%1}INs"
       },
       {
+        "id": 5,
         "name": "Sharoni Bose",
         "position": "Operation Director",
         "linkedin": "http://www.linkedin.com/in/sharoni-bose-/",
         "github": "http://github.com/sharonibose",
         "img": "https://uploads-ssl.webflow.com/635fe4acd1af941207c580b7/635ffd07defa8130406994c0_WhatsApp%20Image%202022-10-26%20at%2023.13.58.jpeg",
         "about": "At FED, I've discovered working in a focused, cohesive team encourages to a lot more learning and the ability to master new skills more quickly. Now I'm hopeful that working with FED would enable us to all reach new heights and discover uncharted territory.",
-        "id": 5
+        "blur": "LAHBSF00_Lxs0,sha#%M%zM#rYbe"
       }
     ],
     "Tech": [
       {
         "id": 1,
-        "name": "Achyut Vardhan",
-        "linkedin": "https://www.linkedin.com/in/achyut-vardhan-3a4905180/",
-        "github": "https://github.com/achyutvardhan",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2de611c2178c2fcb034d1_IMG-20221113-WA0064%20-%20Achyut%20Vardhan.jpg"
-      },
-      {
-        "id": 2,
         "name": "Antara Dubey",
         "linkedin": "https://www.linkedin.com/in/antara-dubey-573738228/",
         "github": "https://github.com/Antara-3011",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1e1b9dff2642a6d6fcbb3_IMG-20230214-WA0008%20-%20Antara%20Dubey.jpg"
-      },
-      {
-        "id": 3,
-        "name": "Muskan Bajaj ",
-        "linkedin": "https://www.linkedin.com/in/muskan-bajaj-705bb1244/",
-        "github": "https://github.com/muskan-bajaj",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1ddba63ea2263cf32c933_IMG_20230219_134340%20-%20228_MUSKAN%20BAJAJ.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Kolla gayatri shruti ",
-        "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
-        "github": "https://github.com/me-mystic",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg"
-      },
-      {
-        "id": 1,
-        "name": "Navya Verma",
-        "linkedin": "https://www.linkedin.com/in/navya-verma-53832424b",
-        "github": "https://github.com/NavyaVerma139",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd4485872ab2fb8834cf_Navya%20-%204084%20NAVYA%20VERMA.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1e1b9dff2642a6d6fcbb3_IMG-20230214-WA0008%20-%20Antara%20Dubey.jpg",
+        "blur": "L2FO$8_3m6~E0002Nf4T^kw0F#RN"
       },
       {
         "id": 2,
-        "name": "Vinit Agarwal",
-        "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
-        "github": "https://github.com/vinitagarwal007",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg"
+        "name": "Binay Kumar Sahu",
+        "instagram": "https://www.instagram.com/i_ambinaysahu/",
+        "linkedin": "https://www.linkedin.com/in/binay-sahu",
+        "github": "https://github.com/BinaySaahu",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6465be1f684e5287347f2c65_b.png",
+        "blur": "LTLW^R%%~p?akro#ayWBt5t5IVM{"
       },
       {
         "id": 3,
         "name": "Jaideep Bose",
         "linkedin": "https://www.linkedin.com/in/jaideep-bose-89a93725a/",
         "github": "https://github.com/jaideepbose51",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg",
+        "blur": "LDCjeAL4I8MaAPiaXTt8KGWTw~-r"
+      },
+      {
+        "id": 4,
+        "name": "Kolla gayatri shruti ",
+        "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
+        "github": "https://github.com/me-mystic",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1cd74e1e45a50d548d01b_Screenshot_20230208-023734_WhatsApp%20-%20279_kolla_gayatri%20_shruti.jpg",
+        "blur": "LRJHs|00S~I:?Gn+t7oc_NIor=xZ"
+      },
+      {
+        "id": 1,
+        "name": "Muskan Bajaj ",
+        "linkedin": "https://www.linkedin.com/in/muskan-bajaj-705bb1244/",
+        "github": "https://github.com/muskan-bajaj",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1ddba63ea2263cf32c933_IMG_20230219_134340%20-%20228_MUSKAN%20BAJAJ.jpg",
+        "blur": "LPKBL0~q_2M_-.M{IVt8xtWAM|og"
+      },
+      {
+        "id": 2,
+        "name": "Prityanshu Singh",
+        "instagram": "https://instagram.com/prityanshu__0111?igshid=OTk0YzhjMDVlZA==",
+        "linkedin": "https://www.linkedin.com/in/prityanshu-singh-a23115248",
+        "github": "https://github.com/PrityanshuSingh?fbclid=PAAaa5rY1-GB0XWcIJmb6QDBsajl1Tz_WRCMYJRzkEeUGqFgFhyNCKIK4p_Ss",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6465b144571834354f06de7e_IMG_20230518_103143.jpg",
+        "blur": "LFE{2?$x4mNg0iM{Iq%100xa_4In"
+      },
+      {
+        "id": 3,
+        "name": "Vinit Agarwal",
+        "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
+        "github": "https://github.com/vinitagarwal007",
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c3eb442405e72f07de2921_20221230_153031%20-%20Vinit%20Agarwal23.jpg",
+        "blur": "LgGk%jNHxuV[~VkCWDj]ozs:WBof"
       }
     ],
     "creative": [
@@ -113,84 +128,192 @@
         "name": "Shashank Singh",
         "linkedin": "https://www.linkedin.com/in/shashank-singh-368477226",
         "github": "https://github.com/shashank7659",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2e70fc27e22a55013743e_WhatsApp%20Image%202022-12-06%20at%2022.47.00%20-%20336_SHASHANK%20SINGH.jpg"
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2e70fc27e22a55013743e_WhatsApp%20Image%202022-12-06%20at%2022.47.00%20-%20336_SHASHANK%20SINGH.jpg",
+        "blur": "LBA,wjEN-;Io_Mr?Osr?9uWBR5s:"
       },
       {
         "id": 2,
         "name": "Semanti Das",
         "linkedin": "https://www.linkedin.com/in/semanti-das-a1aa38214",
         "github": "https://github.com/Semantidas",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d1ea69cfc019bd43e53e_IMG_20220114_132738_933%20-%20SEMANTI%20DAS.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d1ea69cfc019bd43e53e_IMG_20220114_132738_933%20-%20SEMANTI%20DAS.jpg",
+        "blur": "LmK_B[M{?bxu~qozxat7~qaeWCj?"
       },
       {
         "id": 3,
         "name": "Opika Dash",
         "linkedin": "https://www.linkedin.com/in/opika-dash-a3a18325b",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddb66b41ee77c326f2c47_Opika%20Dash.jpg"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddb66b41ee77c326f2c47_Opika%20Dash.jpg",
+        "blur": "LKIWNA%gyWnO8v-p$kNZ^kwgWEM|"
       },
       {
         "id": 4,
         "name": "Sayan Adhikari",
         "linkedin": "https://www.linkedin.com/in/sayan-adhikari-260447227/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2e80b243adc783c1196cd_SGCAM_20221227_133435213%20-%20Sayan%20Adhikari.jpg"
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2e80b243adc783c1196cd_SGCAM_20221227_133435213%20-%20Sayan%20Adhikari.jpg",
+        "blur": "L8AvwZ-:-Ns,~RxZElW=NskBogof"
       },
       {
         "id": 1,
         "name": "Shreya Raj",
         "linkedin": "https://www.linkedin.com/in/shreya-raj-952a0b246/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2e5cafd09f3f233fd65b3_d88ec3d0-17d6-4673-9e11-3e8921e6a11e%20-%20shreya%20raj.jpg"
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/63c2e5cafd09f3f233fd65b3_d88ec3d0-17d6-4673-9e11-3e8921e6a11e%20-%20shreya%20raj.jpg",
+        "blur": "LRJaDy_4B.%25T-=?Ho~5tI:m-$d"
       },
       {
         "id": 2,
         "name": "Rajashree Rajalaxmi Rout",
         "linkedin": "https://www.linkedin.com/in/rajashree-rajalaxmi-rout-01a14925a/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/642c24a1deb86f11e8ebdbea_1673681327316.jpg"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/642c24a1deb86f11e8ebdbea_1673681327316.jpg",
+        "blur": "LWH-_lR4~6TJvd%MJCozxUkCJ-SK"
       },
       {
         "id": 3,
         "name": "Shubham Kumar",
         "linkedin": "https://www.linkedin.com/in/shubham-kumar-b73527237/",
         "github": "https://github.com/Shubham2k02",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fc8b81c9356f6665f52e3b_SHUBHAM%20KUMAR.jpg"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fc8b81c9356f6665f52e3b_SHUBHAM%20KUMAR.jpg",
+        "blur": "LGEy}Gxu?c%2G3-oNboJ}O%1R5$*"
       },
       {
         "id": 4,
         "name": "Debapriya Jha",
         "linkedin": "https://www.linkedin.com/in/debapriya-jha-9a13ab222/",
         "github": "https://github.com/DebapriyaJha",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddb661b488fff5877e280_Debpriyo%20Jha.JPG"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddb661b488fff5877e280_Debpriyo%20Jha.JPG",
+        "blur": "LMEnSQw02uACP;S5-W#nyYoMwyoM"
       },
       {
         "id": 1,
         "name": "Sushil Gurung",
         "linkedin": "",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddb6689f4f07519824504_Sushil%20Gurung.jpg"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddb6689f4f07519824504_Sushil%20Gurung.jpg",
+        "blur": "LGFrVR0JpcrY+WR=$%tQB@xY-QNa"
       },
       {
         "id": 2,
         "name": "Prateek Singh ",
         "linkedin": "https://www.linkedin.com/in/prateek-singh-2a893a22a",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddddf6865b73d31a0febe_Prateek%20Singh.jpg"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fddddf6865b73d31a0febe_Prateek%20Singh.jpg",
+        "blur": "LBDS5p#ax]0{_LXUNM$N9sx[D*w^"
       },
       {
         "id": 3,
         "name": "Abhinav Singh",
         "linkedin": "https://www.linkedin.com/in/abhinav-singh-a4a269230",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fdde4ab969d858d09721d9_Abhinav%20Singh-min.jpg"
+        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fdde4ab969d858d09721d9_Abhinav%20Singh-min.jpg",
+        "blur": "L8FE}i0016n501~p#lw^01?Zv}58"
+      },
+      {
+        "id": 1,
+        "name": "Anurag Prasoon",
+        "linkedin": "https://linkedin.com/in/anuragprasoon",
+        "github": "https://github.com/anuragprasoon",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a21514ac68c3d5ce2d093_Anurag.jpg",
+        "blur": "LVH.A$^,bcx[~oohM}WU9ag1nmM{"
+      },
+      {
+        "id": 2,
+        "name": "Abir Sarkar",
+        "linkedin": "https://www.linkedin.com/in/abir-sarkar-809355230",
+        "github": "http://www.github.com/SARKARABIR",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a3b88ffc7d3ef56b4e38f_abir%20.png",
+        "blur": "LOF;NUoXNjW-}@awRpobW-oNWAj["
+      },
+      {
+        "id": 3,
+        "name": "Aditi Tapadar",
+        "linkedin": "https://www.linkedin.com/in/aditi-tapadar-b87895230",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2152fb9d4d54cc65ee56_Aditi.jpeg",
+        "blur": "LAD9YQ_2b^S$?d~Vbc%2?HW@?It8"
       },
       {
         "id": 4,
-        "name": "Vijay",
+        "name": "Ashish Pothal",
+        "linkedin": "https://www.linkedin.com/in/ashish-pothal",
+        "github": "https://github.com/arthishaxom",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a215164746fee1f8a61c7_Ashish.png",
+        "blur": "LnNnK[oe_Nof~VayM|fkb_fkMxae"
+      },
+      {
+        "id": 1,
+        "name": "Tangudu Vijay Sankar",
+        "linkedin": "https://www.linkedin.com/in/tangudu-vijay-sankar-3525b8230",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2151ce52a019d8fab3d0_Tungudu.jpg",
+        "blur": "LDF;__$$00aKE2S5tRXR01M{~V-:"
+      },
+      {
+        "id": 2,
+        "name": "Aman Das",
+        "linkedin": "https://www.linkedin.com/in/aman-das-54939422a/",
+        "github": "https://github.com/Aman-Das",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a21501b358211e77b753d_aman.jpg",
+        "blur": "LLIV-_,q?]%M^+ofl8ozrYbcIqsC"
+      },
+      {
+        "id": 3,
+        "name": "A Roshan",
         "linkedin": "",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fde3885fd495463af3ffad_Vijay.jpg"
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a3b88b920caa9e11ab435_a%20roshan%202.png",
+        "blur": "L8C~er0100}@00-;_3Ri02?G,;Eg"
+      },
+      {
+        "id": 4,
+        "name": "Aakash Kumar",
+        "linkedin": "https://www.linkedin.com/in/aakash-kumar-319251229",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2151548dd461f4242671_Aakash.jpg",
+        "blur": "LULW;9-oyX-n?]i{XTxDEMr;RPo2"
+      },
+      {
+        "id": 1,
+        "name": "Shanil Panda",
+        "linkedin": "https://www.linkedin.com/in/shanil-panda-0a6b10234/",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a21504ac68c3d5ce2cfc8_Shanil%20Panda.jpg",
+        "blur": "LaJHBeX8?aj[~pRj-:j[yEofaeWB"
+      },
+      {
+        "id": 2,
+        "name": "Anuj Kumar",
+        "linkedin": "http://instagram.com/biigfatpandaa",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a25e21b358211e77fe22a_Anuj%20Kumar.jpg",
+        "blur": "LPH1VnpI%h~A0gxtxYR+E1t7Rjoz"
+      },
+      {
+        "id": 3,
+        "name": "Anushka Khanvilkar",
+        "linkedin": "https://www.linkedin.com/in/anushka-khanvilkar-817758259",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a25171b358211e77f163f_Anushka.jpg",
+        "blur": "LLE2hC~U-or^tTRmV[s:R6v~xFNb"
+      },
+      {
+        "id": 4,
+        "name": "Sourav Kiran Routray",
+        "linkedin": "https://www.linkedin.com/in/sourav-kiran-routray-6a7942253",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2151e54349b00abdb8b1_Sourav.jpg",
+        "blur": "LmI4@TR*%Moy~VWBozoKNda{Rjay"
+      },
+      {
+        "id": 1,
+        "name": "Amaranand Kumar",
+        "linkedin": "https://www.linkedin.com/in/amaranand-kumar-91a3bb277",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2152b920caa9e101db1b_Amaranand.jpg",
+        "blur": "L27wNS0M0Ls9~V0MNws:-:0g~UM{"
       }
     ],
     "marketing": [
@@ -199,30 +322,194 @@
         "name": "Divyanshu yogeshwar",
         "linkedin": "https://www.linkedin.com/in/divyanshu-randive-07685b224",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ea50243adc946811ac57_PHOTO%20UPLOAD%20-%202325_DIVYANSHU%20YOGESHWAR%20RANDIVE.jpeg"
+        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ea50243adc946811ac57_PHOTO%20UPLOAD%20-%202325_DIVYANSHU%20YOGESHWAR%20RANDIVE.jpeg",
+        "blur": "LPH2GsM#~pIVbzD,xvs+t89GoNWB"
       },
       {
         "id": 2,
         "name": "Likhita Sahu",
         "linkedin": "",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2eaba8fc6752db28e7af5_IMG_20230113_231125%20-%20Likhita%201225.jpg"
+        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2eaba8fc6752db28e7af5_IMG_20230113_231125%20-%20Likhita%201225.jpg",
+        "blur": "LFF;$oEy0z=y*Iw0xabuEkt7-UM|"
+      },
+      {
+        "id": 3,
+        "name": "Parth",
+        "linkedin": "https://www.linkedin.com/in/parth-verma-100819252/",
+        "github": "https://github.com/White-Caffeine",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64553f903a388c004d57ac66_Snapchat-2011634124.jpg",
+        "blur": "L8C~VYv}110#005n=_-STx=w}rJA"
+      },
+      {
+        "id": 4,
+        "name": "Sakib Alam",
+        "linkedin": "https://www.linkedin.com/in/sakib-alam-22b20817a/",
+        "github": "https://github.com/Sakibalam03",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64554116f960006ef1aac8dd_20230210_002323_230.jpg",
+        "blur": "LeJa$P?H?GE1~qt7M|Rjt7j]Rjof"
+      },
+      {
+        "id": 1,
+        "name": "Shubham Mohapatra",
+        "linkedin": "http://linkedin.com/in/shubham-mohapatra-2558a4202",
+        "github": "https://github.com/Shubh290704",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/645549e8ee9e027395b58353_09F5FBF6-B187-4018-BC75-3F03A65520C2.jpg",
+        "blur": "L6DlTTIA5:0MI%%1M|oc00.7#9~B"
+      },
+      {
+        "id": 2,
+        "name": "Ryansh Rajput",
+        "linkedin": "https://www.linkedin.com/in/ryansh-rajput-5045b6275/",
+        "github": "https://github.com/RyanshRajput",
+        "img": "https://uploads-ssl.webflow.com/645661fff52e178a3f7e28d5/64566663963c9b6d9bac64ef_SAVE_20230212_240831%20(1).jpg",
+        "blur": "LdG*vHbvocn#~AIqt8s:%0R*xtt5"
+      },
+      {
+        "id": 3,
+        "name": "Chaitanya Gera",
+        "linkedin": "https://www.linkedin.com/in/chaitanya-gera-593681258",
+        "github": "https://github.com/chaitanya-g11",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64566e9ba99e7e7c96d45e23_WhatsApp%20Image%202023-05-06%20at%2019.57.51.jpg",
+        "blur": "LBCGGKT1_LRo9G%I9Ioc00rWITRk"
+      },
+      {
+        "id": 4,
+        "name": "Divyak Pratap Singh",
+        "linkedin": "https://www.linkedin.com/in/divyak-pratap-singh-8bb713230",
+        "github": "https://github.com/divyak21",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64567b5640990e2df2a31014_Screenshot_20230504-220154.png",
+        "blur": "L2ASritl.81a00R5NG]o~q.S$*K%"
+      },
+      {
+        "id": 1,
+        "name": "Kinjal Chandra",
+        "linkedin": "https://www.linkedin.com/in/kinjal-chandra-185376275/",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dcba26bca4516c107d_Kinjal.jpeg",
+        "blur": "LJEVc.D*k7Iq4qs.NfxW~pWUoMaL"
+      },
+      {
+        "id": 2,
+        "name": "Niladri Bhattacharya",
+        "linkedin": "https://www.linkedin.com/in/niladri-bhattacharya-a673b4146",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dd892d47d068e11833_Niladri.jpg",
+        "blur": "LAECg[02-b.ANV~CE:jCHr-.=~E1"
+      },
+      {
+        "id": 3,
+        "name": "Ankit Sinha",
+        "linkedin": "https://www.linkedin.com/in/ankit-sinha-0431b325b/",
+        "github": "https://github.com/AnkitSinha22",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dda370e0480c63c5ee_Ankit.jpg",
+        "blur": "LcQJZUD$~q?v?HRiIUo#fka#RjjZ"
+      },
+      {
+        "id": 4,
+        "name": "Riddhi Agrawal",
+        "linkedin": "https://www.linkedin.com/in/riddhi-agrawal-684b98236/",
+        "github": "https://github.com/Riddhi13Agrawal",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dd3f5779469c676203_Riddhi.jpg",
+        "blur": "LjI;-VIp%1Rj~oofWEofWFt7RjWU"
+      },
+      {
+        "id": 1,
+        "name": "Manish Shankar Prasad",
+        "linkedin": "https://www.linkedin.com/in/manish-shankar-1bab6b22b",
+        "github": "https://github.com/RAGE-12",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fd6dd18cc4bdfb4cf35dc_Manish.jpg",
+        "blur": "L7KnxWP2[7~RYM000g%iM|0Lbyai"
+      },
+      {
+        "id": 2,
+        "name": "Deepanshu Pandey",
+        "linkedin": "https://www.linkedin.com/in/deepanshu-pandey-743284244",
+        "github": "https://github.com/Deepanshu7771",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/645fdb53c1cf8ec3f5e906bb_Deepanshu.png",
+        "blur": "L7JuGd00--kV00tRIA%g%W?a~pM|"
+      },
+      {
+        "id": 3,
+        "name": "Krishanu Roy",
+        "linkedin": "https://www.linkedin.com/in/krishanu-roy-145a36225",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646132ad215f1e3513bf6236_Krishanu.jpg",
+        "blur": "LKGbq,D#pZf.cIR4V}o}yEact8WY"
+      },
+      {
+        "id": 4,
+        "name": "Sarthak Singh",
+        "linkedin": "https://www.linkedin.com/in/sarthak-singh-450a31261",
+        "github": "https://github.com/Sarthak045",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/64554df56e4de7a47ec5b77f_IMG_8857.jpg",
+        "blur": "LZH_f3M{xuM|Mws:t6M|~oV?%1R-"
+      },
+      {
+        "id": 1,
+        "name": "Gudla Sai Surya",
+        "linkedin": "https://www.linkedin.com/in/gudla-sai-surya-9258a7241",
+        "github": "https://github.com/GudlaSaiSurya",
+        "img": "https://uploads-ssl.webflow.com/64651f3e56e006468e1527e5/64651f917b4a9989b809fcc3_croped%20profikle.jpg",
+        "blur": "LQI};PD#~qbF%wI9ozf6_3ITD*WC"
+      },
+      {
+        "id": 2,
+        "name": "Aditya Kumar Mohapatra",
+        "linkedin": "https://www.linkedin.com/in/aditya-kumar-mohapatra-830997258",
+        "github": "https://github.com/mr-drex",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/646775f1569abb3f79fafaac_WhatsApp%20Image%202023-05-06%20at%2021.51.45.jpg",
+        "blur": "LNHxH2nSPlJ5%QbFS6NFuPR*#XnO"
+      },
+      {
+        "id": 3,
+        "name": "Mohit Sharma",
+        "linkedin": "https://www.linkedin.com/in/mohitsharma7667",
+        "github": "https://github.com/MohitSharma2312",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/6466546772e48a444d12c1a1_profile%20pic.png",
+        "blur": "LiKwqY5u?boz~VNgNHs+Nas8WBfj"
+      },
+      {
+        "id": 4,
+        "name": "Arnav Kapur",
+        "linkedin": "https://www.linkedin.com/in/arnav-kapur-079925255/",
+        "github": "https://github.com/ArnavKap",
+        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/646659aaa37555d0f8c0c54a_WhatsApp%20Image%202023-05-18%20at%2022.27.14.jpg",
+        "blur": "LZLEZyD%~qxu-;M|IUkCIUxFIURj"
+      },
+      {
+        "id": 1,
+        "name": "Aaditya Raj",
+        "linkedin": "https://www.linkedin.com/in/aaditya-raj-20535420a",
+        "github": "https://github.com/1Addy3",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a2aa50462344c094cc44a_AAditya%20raj_11zon.jpg",
+        "blur": "LHD]PN_4%gTK^*V?9GS557NGxG=|"
+      },
+      {
+        "id": 2,
+        "name": "Suyash Pandey",
+        "linkedin": "https://www.linkedin.com/in/suyash-pandey-78417524a/",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/646774f0c779aebe41032111_suyash-photo.jpg",
+        "blur": "LHJa+h4n?wrq1RIT%hRj4T$e%Mxt"
       }
     ],
     "operation": [
       {
         "id": 1,
-        "name": "Shashnak Shivam",
+        "name": "Shashank Shivam",
         "linkedin": "https://www.linkedin.com/in/shashank-s-40738410b/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ec536a0062d4c212bf93_Picsart_22-02-11_15-54-53-297%20-%20Shashank%20Shivam.jpg"
+        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ec536a0062d4c212bf93_Picsart_22-02-11_15-54-53-297%20-%20Shashank%20Shivam.jpg",
+        "blur": "LeI#Mtg3%zWU~oR*ogafNGj@oft7"
       },
       {
         "id": 2,
         "name": "Avinash Pandey",
         "linkedin": "https://www.linkedin.com/in/dispuzzler/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ebf49428270d3eda9f65_profile-pic%20(3)%20-%20210_Avinash%20Pandey.png"
+        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2ebf49428270d3eda9f65_profile-pic%20(3)%20-%20210_Avinash%20Pandey.png",
+        "blur": "LdIO97D%?vRP_NRP%MNG-obbRjoe"
       },
       {
         "id": 3,
@@ -230,7 +517,8 @@
         "instagram": "https://instagram.com/a.ryannn_?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/aryan-pandey-5b65231b4",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c7999922533ac007f5e0_asa.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c7999922533ac007f5e0_asa.jpg",
+        "blur": "L7B3=~~V=li^tHOGN4M_0JtmO_Ri"
       },
       {
         "id": 4,
@@ -238,7 +526,8 @@
         "instagram": "https://instagram.com/ayush.raana?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/ayush-kumar-rana-b4907b225",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450bfd59922539de1077b9b_IMG-20220723-WA0025%20(2).jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450bfd59922539de1077b9b_IMG-20220723-WA0025%20(2).jpg",
+        "blur": "LVDw22?wNGRP%$yDMyRP.9tRRjWB"
       },
       {
         "id": 1,
@@ -246,7 +535,8 @@
         "instagram": "https://instagram.com/ayushiiii._.8?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/ayushi-giri-251137268",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b24ec1949769c64a59b2_Snapchat-672423520%20-%20199_AYUSHI%20GIRI.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b24ec1949769c64a59b2_Snapchat-672423520%20-%20199_AYUSHI%20GIRI.jpg",
+        "blur": "L6Ch[~}@5*I:~X57WXxa_M$%-Vt5"
       },
       {
         "id": 2,
@@ -254,7 +544,8 @@
         "instagram": "https://instagram.com/flummox.irl?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/dev-shubhankar-492181265",
         "github": "https://github.com/Cout-dev",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b7084f92fc1b3c52ce98_IMG_20230502_123445.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b7084f92fc1b3c52ce98_IMG_20230502_123445.jpg",
+        "blur": "LrI~Muofxua#%%oLV@fQV?f6jFfk"
       },
       {
         "id": 3,
@@ -262,7 +553,8 @@
         "instagram": "https://instagram.com/eshaann17?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/eshan-modh-36898722b",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450cc37cc93b4306c9aaf41_ss.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450cc37cc93b4306c9aaf41_ss.jpg",
+        "blur": "LUJ+1DxvoftS~Xs8kBjYtmX9RPae"
       },
       {
         "id": 4,
@@ -270,7 +562,8 @@
         "instagram": "https://instagram.com/gourav__vardhan?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/gourav-vardhan-panigrahi-448a48221/",
         "github": "https://github.com/Gourav1000",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b5706996fc170f0f77ac_Screenshot_20230227_224025_Gallery%20-%20GOURAV%20VARDHAN%20PANIGRAHI.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b5706996fc170f0f77ac_Screenshot_20230227_224025_Gallery%20-%20GOURAV%20VARDHAN%20PANIGRAHI.jpg",
+        "blur": "LRJ*;l0K~qx]~Cs+bJi_yXIor=Rj"
       },
       {
         "id": 1,
@@ -278,7 +571,8 @@
         "instagram": "",
         "linkedin": "https://www.linkedin.com/in/harsh-kumar-27a124231",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450be3da3e63f4439afd4de_harsh.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450be3da3e63f4439afd4de_harsh.jpg",
+        "blur": "LRHe8?E3~WXn?aIox[j]?HIVRPoz"
       },
       {
         "id": 2,
@@ -286,7 +580,8 @@
         "instagram": "https://instagram.com/nutellaaenthusiast?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/monalisa-p-6474a0214/",
         "github": "https://github.com/lizzz25",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b602dcbf17c8ae9723c3_Polish_20230227_224006049%20-%20287_MONALISA%20PAL.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b602dcbf17c8ae9723c3_Polish_20230227_224006049%20-%20287_MONALISA%20PAL.jpg",
+        "blur": "L}I5Soay~qj[offPayj[WCj[j[az"
       },
       {
         "id": 3,
@@ -294,7 +589,8 @@
         "instagram": "https://instagram.com/_ritabrata_paul_?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/ritabrata-paul-544531224",
         "github": "https://github.com/Tatai26",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b832a23597f0885ac88e_IMG-20230227-WA0094%20-%20Ritabrata%20Paul.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b832a23597f0885ac88e_IMG-20230227-WA0094%20-%20Ritabrata%20Paul.jpg",
+        "blur": "LAKxPM?c4.t,00nN.Tpd00R4;K-;"
       },
       {
         "id": 4,
@@ -302,7 +598,8 @@
         "instagram": "https://instagram.com/kya_hua_sarthak?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/sarthak-sharma-2428a7256",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c0a7a698ed213e127281_s.2.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c0a7a698ed213e127281_s.2.jpg",
+        "blur": "LPLofvs~EfN0[7o{xajG~A%KRkj="
       },
       {
         "id": 1,
@@ -310,7 +607,8 @@
         "instagram": "https://instagram.com/_sukiriti.ii?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/sukirti-kashyap-ab8490254",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b8c930efcd2a1d8fac77_IMG_20230127_125931%20-%20Sukirti%20(1).jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b8c930efcd2a1d8fac77_IMG_20230127_125931%20-%20Sukirti%20(1).jpg",
+        "blur": "LOLe~7s~EfN0[7o{xajG~T%KRkj="
       },
       {
         "id": 2,
@@ -318,15 +616,17 @@
         "instagram": "https://instagram.com/attherateujjawal17?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/ujjawal-kumar-817989256",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c5df6f603706ab9d584d_uj.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c5df6f603706ab9d584d_uj.jpg",
+        "blur": "LLHf9+v|p{pI0UkXJBR*avRjrWaK"
       },
       {
         "id": 3,
-        "name": "SHOURYJEET GUPTA",
+        "name": "Shouryjeet Gupta",
         "instagram": "https://instagram.com/shoury.jeet?igshid=ZDdkNTZiNTM=",
         "linkedin": "https://www.linkedin.com/in/shouryjeet-gupta-319260255",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645120e9739c0115080a754b_WhatsApp%20Image%202023-05-02%20at%2014.41.16.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645120e9739c0115080a754b_WhatsApp%20Image%202023-05-02%20at%2014.41.16.jpg",
+        "blur": "LIK1UXxsT|s,~pxu?bt60fbbMdt7"
       },
       {
         "id": 4,
@@ -334,23 +634,50 @@
         "instagram": "https://instagram.com/_iam_sayeed_?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/sayeed-anwar-a23a91216/",
         "github": "https://github.com/sayeedanwar-28",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6451221b466415d341064440_s.0.png"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6451221b466415d341064440_s.0.png",
+        "blur": "L4BMi8O=9Z}s009a?bod5=-A4oEz"
       },
       {
         "id": 1,
-        "name": "Soham Mazumdar",
-        "instagram": "https://instagram.com/03sxham03?igshid=ZDdkNTZiNTM=",
-        "linkedin": "https://www.linkedin.com/in/soham-mazumdar-159148222/",
-        "github": "https://github.com/SohamOPP",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6451246e136b875b89d95be7_new.jpg"
-      },
-      {
-        "id": 2,
         "name": "Samidh Daschaudhuri",
         "instagram": "https://instagram.com/samidhhh?igshid=YmMyMTA2M2Y=",
         "linkedin": "https://www.linkedin.com/in/samidh-daschaudhuri-b875841ab",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645126ef61a70320bc269027_IMG_0509.JPG"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645126ef61a70320bc269027_IMG_0509.JPG",
+        "blur": "LHBzC4?b_3Rj~qofxuM{M{Rjofj["
+      },
+      {
+        "id": 2,
+        "name": "Ayush Raj",
+        "instagram": "https://instagram.com/_.ayushhhhhhh?igshid=ZDdkNTZiNTM=",
+        "linkedin": "https://www.linkedin.com/in/ayush-raj-ab0837262",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6454eb797ae02d5b820a80a3_as.jpg",
+        "blur": "LlJuM%soR+M{~qjYWYWBV@WBV@tR"
+      },
+      {
+        "id": 3,
+        "name": "Aparna Aryalakshami",
+        "linkedin": "https://www.linkedin.com/in/aparna-arylakshami-b95425255",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd14a49e84e5f1e0169_Aparna.jpg",
+        "blur": "LAGa?.^j~oRk?bodNIM|xuR*-AjY"
+      },
+      {
+        "id": 4,
+        "name": "Tushar Anand",
+        "linkedin": "https://www.linkedin.com/in/tushar-anand-395ba6272",
+        "github": "https://github.com/TusharAnand17",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd0fb9d4d54cc45a1b7_Tushar.jpg",
+        "blur": "L484SRtk_I58~n^~9]SwIo%Ii~={"
+      },
+      {
+        "id": 1,
+        "name": "Shradha Sahay",
+        "linkedin": "https://www.linkedin.com/in/shradha-sahay-3ab123222",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/646a3d660462344c095ec4b0_shraddha.png",
+        "blur": "LTKAEl-E.8RN%QNeE8e?Omx.-Nt4"
       }
     ],
     "alumni": [
@@ -358,91 +685,106 @@
         "name": "Anushka Arora",
         "linkedin": "http://www.linkedin.com/in/anuksha-arora",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d8e654bf2b55e12b890f9_anuksha%20arora.jpeg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d8e654bf2b55e12b890f9_anuksha%20arora.jpeg",
+        "blur": "LVIhHTjb~pR*~VWBM{oJt6ofNGof"
       },
       {
         "name": "Anvesh Pathak",
         "linkedin": "https://www.linkedin.com/in/anvesh-pathak/",
         "github": "https://github.com/anvesh-pathak",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc929f6823c3e24c29379_Anvesh%20Pathak-min.png"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc929f6823c3e24c29379_Anvesh%20Pathak-min.png",
+        "blur": "LJF=p:M{~qtR00f6D%RjNb%MM_jF"
       },
       {
         "name": "Dipanjan Bakshi",
         "linkedin": "https://www.linkedin.com/in/dipanjan-bakshi-b63432194",
         "github": "https://github.com/Dipanjanbakshi",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc6f4befa7e292b00cb29_DIPANJAN%20BAKSHI.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc6f4befa7e292b00cb29_DIPANJAN%20BAKSHI.jpg",
+        "blur": "LKNJ,xxu.S4:~WWAyExu58kDVXaJ"
       },
       {
         "name": "Harsh Priyadarshi",
         "linkedin": "https://www.linkedin.com/in/harsh-priyadarshi-003798191/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da9bf774e3f5255af38f5_HARSH%20PRIYADARSHI.jpeg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da9bf774e3f5255af38f5_HARSH%20PRIYADARSHI.jpeg",
+        "blur": "L[Mjz9e._Nf+%KM|WCxtM{WCs:t6"
       },
       {
         "name": "Jitosoma Paul",
         "linkedin": "https://www.linkedin.com/in/jitosoma-paul-34331820a/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc8d2aed3b2458ec2f2e3_Jitosoma%20Paul.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc8d2aed3b2458ec2f2e3_Jitosoma%20Paul.jpg",
+        "blur": "LQJ8Y7t8~qju?cogIUj@IVkCxuj]"
       },
       {
         "name": "Khushali Verma",
         "linkedin": "http://linkedin.com/in/khushali-verma-242a2319a",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62e18e0f281d7d4e78f5caaf_WhatsApp%20Image%202022-07-27%20at%208.02.00%20PM.jpeg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62e18e0f281d7d4e78f5caaf_WhatsApp%20Image%202022-07-27%20at%208.02.00%20PM.jpeg",
+        "blur": "LbJtk+D%?^RktkNFxuogOrRinPn%"
       },
       {
         "name": "Muskan Chaddha",
         "linkedin": "https://www.linkedin.com/in/muskan-chaddha-a693891a4",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d91103be4dd28ccd30596_Muskan%20Chaddha.jpeg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d91103be4dd28ccd30596_Muskan%20Chaddha.jpeg",
+        "blur": "LfOzJPV@.8xvRhayt7j@_NofMxae"
       },
       {
         "name": "Neha Kaushik",
         "linkedin": "https://www.linkedin.com/in/neha-kaushik-258b2b19a/",
         "github": "https://github.com/Neha-Kaushik3",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc6f55141a8a880dfe84f_NEHA%20KAUSHIK.png"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc6f55141a8a880dfe84f_NEHA%20KAUSHIK.png",
+        "blur": "L1G[c^~q%|000000~XE0000000~q"
       },
       {
         "name": "Pritam Mahapatra ",
         "linkedin": "https://www.linkedin.com/in/pritam-mahapatra-8a0534195",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d914532efec5b784d61f9_Pritam%20Mahapatra.jpeg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d914532efec5b784d61f9_Pritam%20Mahapatra.jpeg",
+        "blur": "LLCYOewAV}=?=kxLWFr=9hogScIo"
       },
       {
         "name": "Rahul Sinha",
         "linkedin": "",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc9f0a9d11313f19b0719_Rahul%20Sinha.jpeg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629dc9f0a9d11313f19b0719_Rahul%20Sinha.jpeg",
+        "blur": "LlKBK|xu~qR*%NkCM{WBs:j[a}a#"
       },
       {
         "name": "Rishab Pratap",
         "linkedin": "https://www.linkedin.com/in/rishab-pratap-40aa65202",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629db0e7b61221ccd2878cf4_RISHAB%20PRATAP.png"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629db0e7b61221ccd2878cf4_RISHAB%20PRATAP.png",
+        "blur": "LPC?THFfM|nh~BNys+WAM|xC%1NH"
       },
       {
         "name": "Sanskar Srivastav",
         "linkedin": "https://www.linkedin.com/in/sanskar-srivastav-b243761b3",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62f1537160a799258755bf5d_ss.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62f1537160a799258755bf5d_ss.jpg",
+        "blur": "LtI=A1-:M_WA_4%MM|af-;t7a}oM"
       },
       {
         "name": "Shrey Kumar",
         "linkedin": "https://www.linkedin.com/in/kumar-shrey-66491b216/",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629daa0cb9ecd2bf569cb33b_KUMAR%20SHREY.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629daa0cb9ecd2bf569cb33b_KUMAR%20SHREY.jpg",
+        "blur": "LWFOia~WT1Iqoz%M%M%2ozf+nhn%"
       },
       {
         "name": "Swet raj singh",
         "linkedin": "",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d931bff46201328b55726_Swet%20raj%20singh.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629d931bff46201328b55726_Swet%20raj%20singh.jpg",
+        "blur": "LjLg6Rt7?It7~Cnj%Mof9tniM_WB"
       },
       {
-        "name": "VEER SHARMA",
+        "name": "Veer Sharma",
         "linkedin": "https://www.linkedin.com/in/veersharma",
         "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da5df5b281548afb59021_veer.jpg"
+        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da5df5b281548afb59021_veer.jpg",
+        "blur": "LMJkDvrD%~Fx0%F|sk-TcusW#l%f"
       }
     ]
   }
