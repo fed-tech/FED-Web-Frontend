@@ -4,7 +4,7 @@ import React from "react";
 import Believe from "./Believe";
 
 // img
-import Emoji from "../../Img/thinking-face_1f914.png";
+import Emoji from "./../../assets/Home/thingingIcon.png";
 
 export default function BelieveCom() {
   return (
