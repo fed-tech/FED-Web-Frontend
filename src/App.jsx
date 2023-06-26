@@ -31,57 +31,61 @@ function App() {
         <Layout>
           <Nav />
           <NavMobile />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/Team"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Team />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/Event"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Events />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/Alumni"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Alumni />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/Podcasts"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Podcasts />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/Testimonial"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Testimonial />
-                </Suspense>
-              }
-            />
-            <Route
-              path="*"
-              element={
-                <Suspense fallback={<Loading />}>
-                  <Error />
-                </Suspense>
-              }
-            />
-          </Routes>
+          <div className="page">
+            <div className="pageExt">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route
+                  path="/Team"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Team />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/Event"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Events />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/Alumni"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Alumni />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/Podcasts"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Podcasts />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/Testimonial"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Testimonial />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="*"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Error />
+                    </Suspense>
+                  }
+                />
+              </Routes>
+            </div>
+          </div>
           <Footer />
         </Layout>
       </BrowserRouter>
