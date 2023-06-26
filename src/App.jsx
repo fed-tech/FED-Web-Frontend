@@ -24,6 +24,15 @@ import NavMobile from "./Components/NavMobile";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
+// state
+import AuthContext from "./store/auth-context";
+
+// axios
+import axios from "axios";
+
+// BaseURL
+axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
+
 function App() {
   return (
     <>
