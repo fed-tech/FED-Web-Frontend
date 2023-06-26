@@ -16,10 +16,12 @@ export default function BelieveCom() {
             <img src={Emoji} alt="" />
           </span>
         </p>
+
         <div className="believeCenterDiv">
           <Believe />
         </div>
       </section>
+
       <div className="space"></div>
     </>
   );
