@@ -14,10 +14,6 @@ export default function LetsTalkBusiness() {
     message: "",
   });
 
-  // useEffect(() => {
-  //   console.table(formData);
-  // }, [formData]);
-
   const onChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -39,8 +35,6 @@ export default function LetsTalkBusiness() {
         };
 
         const response = await axios.post(`/contact/postcontact`, data);
-
-        console.log(response);
 
         if (response.data.status === true) {
           setFormData({
@@ -81,11 +75,23 @@ export default function LetsTalkBusiness() {
         <form>
           <div>
             <label for="name">Name:</label>
-            <input type="text" name="name" required onChange={onChange} />
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              required
+              onChange={onChange}
+            />
           </div>
           <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" required onChange={onChange} />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              required
+              onChange={onChange}
+            />
           </div>
           <div>
             <label for="message" id="message">
@@ -95,6 +101,7 @@ export default function LetsTalkBusiness() {
               name="message"
               cols="30"
               rows="10"
+              value={formData.message}
               required
               onChange={onChange}
             ></textarea>
