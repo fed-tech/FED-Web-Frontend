@@ -130,7 +130,7 @@ function LoginForm() {
         const mail = res.data.email;
         console.log(mail);
         axios
-          .post("http://localhost:5000/auth/googleverification", {
+          .post("/auth/googleverification", {
             email: mail,
           })
           .then((response) => {
@@ -138,7 +138,7 @@ function LoginForm() {
               const username = response.data.email;
               const password = response.data.password;
               axios
-                .post(`http://localhost:5000/auth/login`, {
+                .post(`/auth/login`, {
                   username,
                   password,
                 })
@@ -178,6 +178,7 @@ function LoginForm() {
                   text: "my-text-class",
                 },
               });
+
               navigate("/signup");
             }
           });
