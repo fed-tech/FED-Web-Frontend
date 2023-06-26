@@ -12,7 +12,12 @@ const Alumni = React.lazy(() => import("./Pages/Alumni"));
 const Events = React.lazy(() => import("./Pages/Events"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
+
+// Pages || Authentication
 const Login = React.lazy(() => import("./Pages/Login"));
+const SignUp = React.lazy(() => import("./Pages/SignUp"));
+
+// Pages || Profiles
 
 // Loading
 import Loading from "./MicroInterAction/Loading";
