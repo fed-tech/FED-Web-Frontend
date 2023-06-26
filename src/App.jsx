@@ -43,7 +43,14 @@ function App() {
           <div className="page">
             <div className="pageExt">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route
+                  path="/"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Home />
+                    </Suspense>
+                  }
+                />
                 <Route
                   path="/Team"
                   element={
