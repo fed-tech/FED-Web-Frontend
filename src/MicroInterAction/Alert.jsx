@@ -17,9 +17,11 @@ export const Alert = ({ variant, val }) => {
           className="symbol-container"
           style={{ background: variant.secondaryColor }}
         >
-          <span class="material-symbols-outlined symbol colorIcon">
-            {variant.symbol}
-          </span>{" "}
+          <div>
+            <span class="material-symbols-outlined symbol colorIcon">
+              {variant.symbol}
+            </span>
+          </div>
         </div>
         <div className="description-container">
           <span className="description-title">{variant.title}:</span>
