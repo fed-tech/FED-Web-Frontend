@@ -70,11 +70,11 @@ export default function LetsTalkBusiness() {
           });
 
           setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
+            mainColor: "#EDFEEE",
+            secondaryColor: "#5CB660",
+            symbol: "check_circle",
+            title: "Success",
+            text: "We'll revert back to you soon!",
             val: true,
           });
         } else {
@@ -88,7 +88,6 @@ export default function LetsTalkBusiness() {
             text: "An Unexpected Error Occured",
             val: true,
           });
-          // setError("");
         }
       } catch (error) {
         setLoad(false);
