@@ -1,7 +1,11 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
+// css
 import "./css/DesktopNav.css";
+
+// state
+import AuthContext from "./../store/auth-context";
 
 export default function Nav() {
   return (
