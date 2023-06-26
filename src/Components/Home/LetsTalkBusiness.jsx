@@ -75,7 +75,7 @@ export default function LetsTalkBusiness() {
             symbol: "",
             title: "",
             text: "",
-            val: false,
+            val: true,
           });
         } else {
           setLoad(false);
