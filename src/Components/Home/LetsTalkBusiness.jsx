@@ -115,7 +115,7 @@ export default function LetsTalkBusiness() {
             ></textarea>
           </div>
           <button type="submit" name="submit" onClick={sumbitFunction}>
-            Send
+            {loadingEffect ? <Load /> : "Send"}
           </button>
         </form>
 
