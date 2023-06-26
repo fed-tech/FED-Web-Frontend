@@ -42,6 +42,22 @@ export default function Nav() {
                   Our Team
                 </NavLink>
               </li>
+              <li>
+                {authCtx.isLoggedIn ? (
+                  <NavLink to="/MyProfile" className="liTag">
+                    <img
+                      src={authCtx.user.pic}
+                      alt=""
+                      srcset=""
+                      className="profile_img"
+                    />
+                  </NavLink>
+                ) : (
+                  <NavLink to="/Login" className="liTag">
+                    Login/SignUp
+                  </NavLink>
+                )}
+              </li>
             </ul>
           </div>
         </div>
