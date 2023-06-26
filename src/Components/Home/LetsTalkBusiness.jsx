@@ -19,11 +19,11 @@ export default function LetsTalkBusiness() {
   });
 
   const [variants, setError] = useState({
-    mainColor: "#E5F6FD",
-    secondaryColor: "#1AB1F5",
-    symbol: "info",
-    title: "Information",
-    text: "Our newest module can be bought, or you can always just use our 30 day trial.",
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
     val: false,
   });
 
@@ -159,9 +159,7 @@ export default function LetsTalkBusiness() {
           </button>
         </form>
 
-        {/* {variants.val ?  */}
-        <Alert variant={variants} val={setError} />
-        {/* : ""} */}
+        {variants.val ? <Alert variant={variants} val={setError} /> : ""}
       </div>
     </div>
   );
