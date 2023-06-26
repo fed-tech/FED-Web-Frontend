@@ -18,14 +18,16 @@ export const Alert = ({ variant }) => {
           className="symbol-container"
           style={{ background: variant.secondaryColor }}
         >
-          <span class="material-symbols-outlined symbol">{variant.symbol}</span>{" "}
+          <span class="material-symbols-outlined symbol colorIcon">
+            {variant.symbol}
+          </span>{" "}
         </div>
         <div className="description-container">
           <span className="description-title">{variant.title}:</span>
           <span className="description-text">{variant.text}</span>
         </div>
         <a className="symbol-close-link" onClick={() => setOpen(false)}>
-          <span class="material-symbols-outlined ">close</span>
+          <span class="material-symbols-outlined  colorIcon">close</span>
         </a>
       </div>
     );
