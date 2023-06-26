@@ -52,18 +52,18 @@ function App() {
                   }
                 />
                 <Route
-                  path="/Team"
-                  element={
-                    <Suspense fallback={<Loading />}>
-                      <Team />
-                    </Suspense>
-                  }
-                />
-                <Route
                   path="/Event"
                   element={
                     <Suspense fallback={<Loading />}>
                       <Events />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/Team"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Team />
                     </Suspense>
                   }
                 />
