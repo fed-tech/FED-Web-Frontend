@@ -1,3 +1,7 @@
+.alert-mDiv {
+  width: 250px;
+}
+
 .alert-container {
   display: flex;
 }
