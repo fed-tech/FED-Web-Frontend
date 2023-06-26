@@ -159,7 +159,7 @@ export default function LetsTalkBusiness() {
           </button>
         </form>
 
-        {variants.val ? <Alert variant={variants} val={setError} /> : ""}
+        <Alert variant={variants} val={setError} />
       </div>
     </div>
   );
