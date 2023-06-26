@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 
+// Components
+import Load from "./../../MicroInterAction/Load";
+
 // axios
 import axios from "axios";
 
@@ -8,6 +11,7 @@ import "./css/LetsTalkBusiness.css";
 
 export default function LetsTalkBusiness() {
   const [error, setError] = useState(null);
+  const [loadingEffect, setLoad] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,6 +27,7 @@ export default function LetsTalkBusiness() {
 
   const sumbitFunction = async (e) => {
     e.preventDefault();
+    setLoad(true);
 
     const { name, email, message } = formData;
 
@@ -37,6 +42,8 @@ export default function LetsTalkBusiness() {
         const response = await axios.post(`/contact/postcontact`, data);
 
         if (response.data.status === true) {
+          setLoad(false);
+
           setFormData({
             name: "",
             email: "",
@@ -45,12 +52,15 @@ export default function LetsTalkBusiness() {
 
           setError(null);
         } else {
+          setLoad(false);
           setError("An Unexpected Error Occured");
         }
       } catch (error) {
+        setLoad(false);
         setError("An Unexpected Error Occured");
       }
     } else {
+      setLoad(false);
       setError("Please Fill All The Details");
     }
   };
