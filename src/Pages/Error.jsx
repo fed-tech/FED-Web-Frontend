@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import ErrCss from "./Css/err.module.css";
 
 // assets
-import Errimage from "./../assets/Layer 3.svg";
+import Errimage from "./../assets/Error/Layer 3.svg";
 
 function Errorpage() {
   // scroll to top
