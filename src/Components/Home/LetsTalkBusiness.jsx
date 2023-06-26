@@ -14,9 +14,9 @@ export default function LetsTalkBusiness() {
     message: "",
   });
 
-  useEffect(() => {
-    console.table(formData);
-  }, [formData]);
+  // useEffect(() => {
+  //   console.table(formData);
+  // }, [formData]);
 
   const onChange = (e) => {
     const name = e.target.name;
@@ -38,11 +38,11 @@ export default function LetsTalkBusiness() {
           message,
         };
 
-        const response = await axios.post(`/contact/postcontact`, {
-          data,
-        });
+        const response = await axios.post(`/contact/postcontact`, data);
 
-        if (response.ok) {
+        console.log(response);
+
+        if (response.data.status === true) {
           setFormData({
             name: "",
             email: "",
@@ -53,13 +53,12 @@ export default function LetsTalkBusiness() {
         } else {
           setError("An Unexpected Error Occured");
         }
-
-        console.log(response);
       } catch (error) {
         console.log(error);
         setError("An Unexpected Error Occured");
       }
     } else {
+      console.log("Fill**************");
       setError("Please Fill All The Details");
     }
   };
@@ -81,19 +80,19 @@ export default function LetsTalkBusiness() {
       <div class="letsTalkBusiness-right">
         <form>
           <div>
-            <label for="Name">Name:</label>
-            <input type="text" name="Name" required onChange={onChange} />
+            <label for="name">Name:</label>
+            <input type="text" name="name" required onChange={onChange} />
           </div>
           <div>
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" required onChange={onChange} />
+            <label for="email">Email:</label>
+            <input type="email" name="email" required onChange={onChange} />
           </div>
           <div>
-            <label for="Message" id="message">
+            <label for="message" id="message">
               Message:
             </label>
             <textarea
-              name="Message"
+              name="message"
               cols="30"
               rows="10"
               required
@@ -105,7 +104,7 @@ export default function LetsTalkBusiness() {
           </button>
         </form>
 
-        {error ? <p>{error}</p> : ""}
+        <div>{error ? <p>{error}</p> : ""}</div>
       </div>
     </div>
   );
