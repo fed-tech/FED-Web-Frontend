@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import ImageComponent from "../../Pages/ImageComponentTeam";
+import ImageComponent from "./ImageComponentTeam";
 
 export default function Domain(props) {
   const [showContent2, setshowContent2] = useState(true);
