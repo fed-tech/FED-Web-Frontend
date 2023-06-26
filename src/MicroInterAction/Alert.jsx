@@ -5,7 +5,7 @@ import "./Css/Alert.css";
 
 export const Alert = ({ variant, val }) => {
   return (
-    <div className="alert-mDiv">
+    <div className="alert-mDiv" id={variant.val ? "show" : "hide"}>
       <div
         className="alert-container"
         style={{
