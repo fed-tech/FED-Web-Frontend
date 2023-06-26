@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // css
@@ -8,6 +8,8 @@ import "./css/DesktopNav.css";
 import AuthContext from "./../store/auth-context";
 
 export default function Nav() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <header className="Navigation">
       <nav className="desktopNav">
