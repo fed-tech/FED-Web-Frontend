@@ -86,9 +86,7 @@ export default function LetsTalkBusiness() {
 
   return (
     <div class="letsTalkBusiness" id="ContactUs">
-      {/* {variants.map((variant) => ( */}
       <Alert variant={variants} />
-      {/* ))} */}
 
       <div class="letsTalkBusiness-left">
         <p class="business-heading">
