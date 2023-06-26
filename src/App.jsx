@@ -60,6 +60,14 @@ function App() {
                   }
                 />
                 <Route
+                  path="/Podcasts"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Podcasts />
+                    </Suspense>
+                  }
+                />
+                <Route
                   path="/Team"
                   element={
                     <Suspense fallback={<Loading />}>
@@ -72,14 +80,6 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <Alumni />
-                    </Suspense>
-                  }
-                />
-                <Route
-                  path="/Podcasts"
-                  element={
-                    <Suspense fallback={<Loading />}>
-                      <Podcasts />
                     </Suspense>
                   }
                 />
