@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -35,6 +35,7 @@ import axios from "axios";
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
+  const authCtx = useContext(AuthContext);
   return (
     <>
       <BrowserRouter>
@@ -93,14 +94,27 @@ function App() {
                   }
                 />
 
-                <Route
-                  path="/Login"
-                  element={
-                    <Suspense fallback={<Loading />}>
-                      <Login />
-                    </Suspense>
-                  }
-                />
+                {!authCtx.isLoggedIn && (
+                  <Route
+                    path="/Login"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Login />
+                      </Suspense>
+                    }
+                  />
+                )}
+
+                {authCtx.isLoggedIn && (
+                  <Route
+                    path="/MyProfile"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Login />
+                      </Suspense>
+                    }
+                  />
+                )}
 
                 <Route
                   path="*"
