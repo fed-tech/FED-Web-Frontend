@@ -2,23 +2,63 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 281px;
     margin-left: 10px;
     justify-content: center;
     background-color: rgb(60, 58, 58);
+    height: 300px;
 }
 .event_img{
-    height: auto;
+    height: 60%;
     width: 100%;
 }
 .event_img img{
-    height: auto;
+    height: 100%;
     width: 100%;
 }
 .event_content{
-    text-align: center;
-    margin: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 40%;
+    
 }
 .event_content h2{
-    font-size: 20px;
+    font-size: 1.5rem;
+}
+.date_and_month{
+    display: flex;
+    align-items: center;
+}
+.date_and_month p{
+    margin: 5px;
+    font-size: 1.5rem;
+}
+@media(max-width:1408px)
+{
+  .eventcards{
+
+    width: 90%;
+}
+
+}
+@media(max-width:1008px)
+{
+  .eventcards{
+
+    width: 80%;
+}
+
+}
+@media(max-width:550px)
+{
+  .eventcards{
+
+    width: 90%;
+}
+
 }

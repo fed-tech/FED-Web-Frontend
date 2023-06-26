@@ -1,0 +1,201 @@
+.Page_main {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    color: #FFFFFF;
+
+}
+
+.Page {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+    width: 100%;
+     
+
+}
+
+.page_left {
+    padding-top: 162px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26.2%;
+}
+
+.page_left_dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: 3px solid #808080;
+    margin-top: 44px;
+    margin-bottom: 119px;
+    padding: 0 42px 42px 62px;
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+.page_left_dashboardTop {
+    padding-top: 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page_left_dashboardTop h1,
+h2 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26.0215px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #999999;
+    text-align: center;
+}
+.member_profilePic{
+    display: flex;
+    justify-content: center;
+}
+
+
+.member_profilePic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    margin-top: 27px;
+    /* object-fit:scale-down; */
+}
+
+.page_left_position .user_name {
+    margin-top: 17px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 0.005em;
+    color: #EFEFEF;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+}
+.page_left_position .designation {
+    margin-top: 17px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: 0.005em;
+    color: #808080;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.Position .position {
+    margin-top: 9px;
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.005em;
+    color: #999999;
+}
+.page_left_gotoPro {
+    cursor: pointer;
+}
+
+.page_left_dashboardBottom {
+    margin-top: 51px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    font-family: 'Manrope';
+    font-weight: 700;
+    font-size: 22.0914px;
+    line-height: 21px;
+    letter-spacing: 0.005em;
+    align-items: center;
+}
+.dashboardBottom_options{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* justify-content: space-around; */
+    width: 42%;
+    margin-bottom: 34px;
+}
+.dashboardBottom_options p{
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+.dashboardBottom_options:hover p{
+    color:#f45725;
+}
+.dashboardBottom_options:hover .dashboardBottom_icons>path{
+    color:#f45725;
+}
+
+.page_right{
+    padding-top: 162px;
+    background-image: url(/src/Img/Rectangle24.jpg);
+    background-size: cover;
+    width: 73.8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 162px;
+}
+
+@media (max-width: 1000px){
+    .page_left, .page_right {
+        padding-top: 100px;
+    }
+    .page_right{
+        width: 63%;
+    }
+    .page_left{
+        width: 37%;
+    }
+    .page_left_dashboard {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .page_left_dashboard h2{
+        font-size: 25px;
+    }
+    .page_left_dashboardTop img{
+        height: 180px;
+        width: 180px;
+    }
+    .page_left_position .user_name{
+        font-size: 26px;
+
+    }
+    .page_left_dashboardBottom {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1300px){
+    .page_left{
+        width: 33%;
+    }
+    .page_right{
+        width: 67%;
+    }
+}
+@media (max-width: 1155px){
+    .page_left, .page_right {
+        padding-top: 130px;
+    }
+    .page_left{
+        width: 36%;
+    }
+    .page_right{
+        width: 64%;
+    }
+}

@@ -15,16 +15,13 @@ import AuthContext from "./../store/auth-context";
 
 export default function CreateProfile() {
   useEffect(() => {
-    window.scrollTo(0,0)
-  }, [])
+    window.scrollTo(0, 0);
+  }, []);
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
 
   const [emailerr, setEmailerr] = useState(false);
-  const [passwrderr, setPasswrderr] = useState(false);
-  const [firstNameerr, setfirstnameerr] = useState(false);
-  const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
 
@@ -56,49 +53,23 @@ export default function CreateProfile() {
   const DataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-
-
-    if (name === "RollNumber") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
+    if(value === "")
+    {
+      e.target.style.borderBottom = "2px solid  #FF0000";
+      e.target.style.outline = "none";
     }
-    if (name === "School") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "College") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
+    else{
+      e.target.style.borderBottom = "2px solid  black";
+
     }
     if (name === "MobileNo") {
-      if (value === "" || value.length > 12 || value.length < 10) {
+      if (value.length > 12 || value.length < 10) {
         e.target.style.borderBottom = "2px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
         e.target.style.borderBottom = "2px solid  black";
       }
     }
-    if (name === "Year") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-
     setUser({ ...showUser, [name]: value });
     console.log(showUser);
   };
@@ -109,7 +80,7 @@ export default function CreateProfile() {
 
   const handleCreateProfile = async (e) => {
     e.preventDefault();
-    const profile = JSON.parse(localStorage.getItem('user'));
+    const profile = JSON.parse(localStorage.getItem("user"));
     showUser.email = profile.email;
     showUser.Password = profile.id;
     showUser.name = profile.name;
@@ -124,23 +95,19 @@ export default function CreateProfile() {
       MobileNo,
       img,
     } = showUser;
-    
 
-    const password = bcrypt.hashSync(
-      Password,
-      "$2b$10$Q0RPeouqYdTToq76zoccIO"
-    );
+    const password = bcrypt.hashSync(Password, "$2b$10$Q0RPeouqYdTToq76zoccIO");
     if (
       name !== "" &&
       RollNumber !== "" &&
-      Password !== ""&&
+      Password !== "" &&
       School !== "" &&
       College !== "" &&
       MobileNo !== "" &&
-      MobileNo.length<=12 &&
-      MobileNo.length>=10 &&
+      MobileNo.length <= 12 &&
+      MobileNo.length >= 10 &&
       email !== "" &&
-      selected !== ""&&
+      selected !== "" &&
       img != ""
     ) {
       const userObject = {
@@ -154,38 +121,29 @@ export default function CreateProfile() {
         selected,
         img,
       };
-      console.log("user object: ",userObject);
+      console.log("user object: ", userObject);
       try {
         const response = await axios.post(
           `http://localhost:5000/auth/googleregister`,
           userObject
         );
-        const success = response.status === 200;
-        if (success) {
-          const username = userObject.email;
-          const password = userObject.password;
-          axios.post(`http://localhost:5000/auth/login`, {
-            username,
-            password,
-          }).then((res)=>{
-            authCtx.login(
-              res.data.result[0].name,
-              res.data.result[0].email,
-              res.data.result[0].img,
-              res.data.result[0].RollNumber,
-              res.data.result[0].School,
-              res.data.result[0].College,
-              res.data.result[0].MobileNo,
-              res.data.result[0].selected,
-              Number(res.data.result[0].access),
-              res.data.token,
-              10800000
-            );
-            // navigate("/MyProfile");
-            navigate("/MyProfile/member");
-            return;
+        if (response.status === 202) {
+          authCtx.login(
+            response.data.user.name,
+            response.data.user.email,
+            response.data.user.img,
+            response.data.user.RollNumber,
+            response.data.user.School,
+            response.data.user.College,
+            response.data.user.MobileNo,
+            response.data.user.selected,
+            Number(response.data.user.access),
+            response.data.token,
+            10800000
+          );
+          navigate("/MyProfile");
 
-          })
+          return;
         }
       } catch (error) {
         setIsinValid(true);
@@ -199,15 +157,12 @@ export default function CreateProfile() {
         console.log(error);
       }
     } else {
-      if(MobileNo === "" || (MobileNo.length<=12 && MobileNo.length>=10))
-      {
-
+      if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
         setErrMssg("Please fill all the fields");
-      }
-      else{
+      } else {
         setIsinValid(true);
-        setErrMssg("Invalid mobile number")
+        setErrMssg("Invalid mobile number");
       }
     }
   };
@@ -264,15 +219,18 @@ export default function CreateProfile() {
               onChange={handleChange}
               className={SuCss.year}
             >
-              <option hidden>Year
-                </option>
+              <option hidden>Year</option>
               {options.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.text}
                 </option>
               ))}
             </select>
-            <button type="submit" className={SuCss.btn} onClick={handleCreateProfile}>
+            <button
+              type="submit"
+              className={SuCss.btn}
+              onClick={handleCreateProfile}
+            >
               Create Profile
             </button>
             <p
@@ -285,7 +243,5 @@ export default function CreateProfile() {
         </div>
       </div>
     </div>
-    
   );
 }
-

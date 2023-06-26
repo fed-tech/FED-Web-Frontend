@@ -10,7 +10,10 @@ function EventCards({info}) {
         </div>
         <div className='event_content'>
             <h2>{info.title}</h2>
-            <p>{info.date}</p>
+            <div className="date_and_month">
+              <p>{info.date}</p>
+              <p>{info.month}</p>
+            </div>
         </div>
       
     </div>

@@ -78,10 +78,10 @@ function Login(props) {
             response.data.token,
             10800000
           );
-          console.log("access->",authCtx.user.access == "0")
-          {response.data.result[0].access == "0" ? navigate("/MyProfile/admin") :  navigate('/MyProfile/member');}
-          // navigate("/MyProfile");
-          
+          console.log("access->", response.data.result[0].access == "0");
+
+          navigate("/MyProfile");
+
           return;
         }
       } catch (err) {
@@ -101,73 +101,65 @@ function Login(props) {
     onSuccess: (response) => setCodeResponse(response),
   });
 
+  const loginWithGoogle = async () => {
+    try {
+      const googleResponse = await axios.get(
+        `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
+        {
+          headers: {
+            Authorization: `Bearer ${codeResponse.access_token}`,
+            Accept: "application/json",
+          },
+        }
+      );
+      const mail = googleResponse.data.email;
+      console.log(mail);
+      const response = await axios.post(
+        "http://localhost:5000/auth/googleverification",
+        {
+          email: mail,
+        }
+      );
+      if (response.status === 202) {
+        authCtx.login(
+          response.data.user.name,
+          response.data.user.email,
+          response.data.user.img,
+          response.data.user.RollNumber,
+          response.data.user.School,
+          response.data.user.College,
+          response.data.user.MobileNo,
+          response.data.user.selected,
+          Number(response.data.user.access),
+          response.data.token,
+          10800000
+        );
+        navigate("/MyProfile");
+        return;
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Email does not exist",
+          text: "Please signup first",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#f45725",
+          background: "black",
+          color: "white",
+          customClass: {
+            title: "my-title-class",
+            text: "my-text-class",
+          },
+        });
+        navigate("/signup");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     if (codeResponse) {
-      axios
-        .get(
-          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
-          {
-            headers: {
-              Authorization: `Bearer ${codeResponse.access_token}`,
-              Accept: "application/json",
-            },
-          }
-        )
-        .then((res) => {
-          const mail = res.data.email;
-          console.log(mail);
-          axios
-            .post("http://localhost:5000/auth/googleverification", {
-              email: mail,
-            })
-            .then((response) => {
-              if (response.data.code === 1) {
-                const username = response.data.email;
-                const password = response.data.password;
-                axios
-                  .post(`http://localhost:5000/auth/login`, {
-                    username,
-                    password,
-                  })
-                  .then((resp) => {
-                    authCtx.login(
-                      resp.data.result[0].name,
-                      resp.data.result[0].email,
-                      resp.data.result[0].img,
-                      resp.data.result[0].RollNumber,
-                      resp.data.result[0].School,
-                      resp.data.result[0].College,
-                      resp.data.result[0].MobileNo,
-                      resp.data.result[0].selected,
-                      Number(resp.data.result[0].access),
-                      resp.data.token,
-                      10800000
-                    );
-                    
-                    {resp.data.result[0].access == "0" ? navigate("/MyProfile/admin") :  navigate('/MyProfile/member');}
-                    // navigate("/MyProfile");
-                    // navigate("/MyProfile/member");
-                    return;
-                  });
-              } else {
-                Swal.fire({
-                  icon: "error",
-                  title: "Email does not exist",
-                  text: "Please signup first",
-                  confirmButtonText: "OK",
-                  confirmButtonColor: "#f45725",
-                  background: "black",
-                  color: "white",
-                  customClass: {
-                    title: "my-title-class",
-                    text: "my-text-class",
-                  },
-                });
-                navigate("/signup");
-              }
-            });
-        })
-        .catch((err) => console.log(err));
+      loginWithGoogle();
     }
   }, [codeResponse]);
 

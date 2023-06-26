@@ -16,28 +16,15 @@ import AuthContext from "./../store/auth-context";
 import google from "../Img/Google.svg";
 
 import tick from "./../Img/tick.png";
+import SignupForm from "../Components/SignupForm";
 export default function Signup() {
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
-
-  const [emailerr, setEmailerr] = useState(false);
-  const [passwrderr, setPasswrderr] = useState(false);
-  const [firstNameerr, setfirstnameerr] = useState(false);
-  const [lastnameerr, setlastNameerr] = useState(false);
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
   const [modal, setModal] = useState(false);
-
-  const options = [
-    { value: "1st", text: "1st year" },
-    { value: "2nd", text: "2nd year" },
-    { value: "3rd", text: "3rd year" },
-    { value: "4th", text: "4th year" },
-    { value: "5th", text: "5th year" },
-  ];
-
   const [showUser, setUser] = useState({
     email: "",
     Password: "",
@@ -46,160 +33,63 @@ export default function Signup() {
     RollNumber: "",
     School: "",
     College: "",
-    MobileNo: "",
+    MobileNo: "+91",
   });
-
   const [selected, setSelected] = useState("");
-
-  const handleChange = (event) => {
-    console.log(event.target.value);
-    setSelected(event.target.value);
-  };
-
-  const DataInp = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    if (name === "email") {
-      if (value.indexOf("@") === -1 || value.indexOf(".") === -1) {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    } else if (value === "") {
-      e.target.style.borderBottom = "2px solid  #FF0000";
-      e.target.style.outline = "none";
-    }
-
-    if (name === "Password") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "FirstName") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "LastName") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "RollNumber") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "School") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "College") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "MobileNo") {
-      if (value === "" || value.length > 12 || value.length < 10) {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-    if (name === "Year") {
-      if (value === "") {
-        e.target.style.borderBottom = "2px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
-        e.target.style.borderBottom = "2px solid  black";
-      }
-    }
-
-    setUser({ ...showUser, [name]: value });
-    console.log(showUser);
-  };
 
   const login = useGoogleLogin({
     onSuccess: (response) => setCodeResponse(response),
   });
+  const loginWithGoogle = async () => {
+    try {
+      const googleResponse = await axios.get(
+        `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
+        {
+          headers: {
+            Authorization: `Bearer ${codeResponse.access_token}`,
+            Accept: "application/json",
+          },
+        }
+      );
+      const mail = googleResponse.data.email;
+      const response = await axios.post(
+        "http://localhost:5000/auth/googleverification",
+        {
+          email: mail,
+        }
+      );
+      console.log(response);
+      if (response.status === 202) {
+        authCtx.login(
+          response.data.user.name,
+          response.data.user.email,
+          response.data.user.img,
+          response.data.user.RollNumber,
+          response.data.user.School,
+          response.data.user.College,
+          response.data.user.MobileNo,
+          response.data.user.selected,
+          Number(response.data.user.access),
+          response.data.token,
+          10800000
+        );
+        navigate("/MyProfile");
+        return;
+      } else {
+        localStorage.setItem("user", JSON.stringify(googleResponse.data));
+        navigate("/createprofile");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   useEffect(() => {
     if (codeResponse) {
-      axios
-        .get(
-          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
-          {
-            headers: {
-              Authorization: `Bearer ${codeResponse.access_token}`,
-              Accept: "application/json",
-            },
-          }
-        )
-        .then((res) => {
-          const mail = res.data.email;
-          console.log(mail);
-          axios
-            .post("http://localhost:5000/auth/googleverification", {
-              email: mail,
-            })
-            .then((response) => {
-              if (response.data.code === 1) {
-                const username = response.data.email;
-                const password = response.data.password;
-                axios
-                  .post(`http://localhost:5000/auth/login`, {
-                    username,
-                    password,
-                  })
-                  .then((resp) => {
-                    authCtx.login(
-                      resp.data.result[0].name,
-                      resp.data.result[0].email,
-                      resp.data.result[0].img,
-                      resp.data.result[0].RollNumber,
-                      resp.data.result[0].School,
-                      resp.data.result[0].College,
-                      resp.data.result[0].MobileNo,
-                      resp.data.result[0].selected,
-                      Number(resp.data.result[0].access),
-                      resp.data.token,
-                      10800000
-                    );
-                    // navigate("/MyProfile");
-                    navigate("/MyProfile/member");
-                    return;
-                  });
-              } else {
-                localStorage.setItem("user", JSON.stringify(res.data));
-                navigate("/createprofile");
-              }
-            });
-        })
-        .catch((err) => console.log(err));
+      loginWithGoogle();
     }
   }, [codeResponse]);
+
 
   useEffect(() => {
     setIsinValid(false);
@@ -251,16 +141,7 @@ export default function Signup() {
         );
         const success = response.status === 200;
         if (success) {
-          // Swal.fire({
-          //   icon: "success",
-          //   title: "SignuUp Successfully",
-          //   text: "Please check your mail",
-          //   confirmButtonText: "ok",
-          //   confirmButtonColor: "#f45725",
-          //   SwalModalColor: "black",
-          // });
           setModal(!modal);
-          // navigate("/Login");
         }
       } catch (error) {
         setIsinValid(true);
@@ -302,100 +183,7 @@ export default function Signup() {
 
           <p className={SuCss.OrText}>Or</p>
           <div className={SuCss.form}>
-            <input
-              id="first_name"
-              type="text"
-              name="FirstName"
-              placeholder="First Name"
-              onChange={DataInp}
-              style={{
-                borderBottom: firstNameerr
-                  ? "2px solid red"
-                  : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="last_name"
-              name="LastName"
-              placeholder="Last Name"
-              onChange={DataInp}
-              style={{
-                borderBottom: lastnameerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="rollNum"
-              name="RollNumber"
-              placeholder="Roll Number"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="school"
-              name="School"
-              placeholder="School"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="text"
-              id="college"
-              name="College"
-              placeholder="College"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="number"
-              id="number"
-              name="MobileNo"
-              placeholder="Mobile Number"
-              onChange={DataInp}
-              style={{
-                borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <input
-              type="password"
-              id="password"
-              name="Password"
-              placeholder="Password"
-              onChange={DataInp}
-              style={{
-                borderBottom: passwrderr ? "2px solid red" : "2px solid black",
-              }}
-            />
-            <select
-              value={selected}
-              onChange={handleChange}
-              className={SuCss.year}
-            >
-              <option hidden> Year</option>
-              {options.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.text}
-                </option>
-              ))}
-            </select>
+            <SignupForm showUser = {showUser} setUser = {setUser} setSelected = {setSelected} selected = {selected}/>
             <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
               SignUp
             </button>

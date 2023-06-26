@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import React, { useEffect, useState, useContext } from "react";
 
 // Layout
@@ -14,14 +14,12 @@ import Podcasts from "./Pages/Podcasts";
 import Seeall from "./Components/Home/Seeall";
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
-import Profile from "./Pages/Profile";
 import TCO from "./Pages/TCO";
 import DashMobile from "./Components/DashMobile";
 import ResetPassword from "./Pages/ResetPassword";
 import ForgotPassword from "./Pages/ForgotPassword";
 import AddMember from "./Pages/AddMember";
 import Member from "./Pages/Member";
-import UpdateProfile from "./Pages/UpdateProfile";
 
 // Components
 import Nav from "./Components/Nav";
@@ -61,7 +59,7 @@ function App() {
                   path="/Login"
                   element={
                     authCtx.isLoggedIn ? (
-                      <Profile setIsLoggedIn={setIsLoggedIn} />
+                      <Navigate to='/MyProfile'/>
                     ) : (
                       <Login setIsLoggedIn={setIsLoggedIn} />
                     )
@@ -71,36 +69,17 @@ function App() {
                   path="/Signup"
                   element={
                     authCtx.isLoggedIn ? (
-                      <Profile setIsLoggedIn={setIsLoggedIn} />
+                      <Navigate to='/MyProfile'/>
                     ) : (
                       <Signup />
                     )
                   }
                 />
-                {/* <Route
-                  path="/MyProfile"
-                  element={
-                    authCtx.isLoggedIn ? (
-                      authCtx.user.access === 0 ? (
-                        <Page />
-                      ) : (
-                        <Profile />
-                      )
-                    ) : (
-                      <Signup />
-                    )
-                  }
-                /> */}
-                {/* <Route path="/page" element = {authCtx.isLoggedIn && authCtx.user.access === 0?<Page/>:<Signup/>}/> */}
+                
                 <Route
-                  path="/MyProfile/member"
-                  element={authCtx.isLoggedIn && authCtx.user.access != "0"? <TCO /> : <Signup />}
+                  path="/MyProfile"
+                  element={authCtx.isLoggedIn? (authCtx.user.access == "0"?<Page/>:<TCO/>): <Navigate to='/Login'/>}
                 />
-                {/* <Route
-              path="/MyProfile/member"
-              element={authCtx.isLoggedIn ? <TCO /> : <Signup />}
-            /> */}
-                <Route path="/MyProfile/admin" element = {authCtx.isLoggedIn && authCtx.user.access == "0"? <Page/>: <Signup/>}/>
                 <Route
                   path="/admin/Member"
                   element={authCtx.user.access == "0" ? <Member /> : <Error />}
@@ -114,7 +93,6 @@ function App() {
                 <Route path="/forgotpassword" element={<ForgotPassword />} />
                 <Route path="/resetpassword" element={<ResetPassword />} />
                 <Route path="/createprofile" element={<CreateProfile />} />
-                <Route path="/updateprofile" element={<UpdateProfile />} />
                 <Route path="/privacypolicies" element={<PrivacyPolicies />} />
                 <Route
                   path="/termsandconditions"
