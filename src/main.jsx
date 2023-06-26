@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 
+// Google Auth
+import { GoogleOAuthProvider } from "@react-oauth/google";
+
 // Provider
 import { AuthContextProvider } from "./store/auth-context";
 
