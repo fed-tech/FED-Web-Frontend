@@ -6,7 +6,7 @@ import penSvg from "../../Img/pen-icon.svg";
 
 // css
 import "./css/AdminProfile.css";
-import "../../Pages/Css/Profilecss/profile.css";
+// import "../../Pages/Css/Profilecss/profile.css";
 
 // state
 import AuthContext from "../../store/auth-context";

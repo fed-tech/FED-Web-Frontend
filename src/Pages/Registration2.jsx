@@ -1,141 +1,144 @@
 import React from "react";
 
+// css
+import tco from "./Css/Profilecss/MemberProfile.module.css";
+
 export default function Registration2() {
   return (
-    <div className="memberRight">
-      <div className="registrationsTop">
+    <div className={tco.memberRight}>
+      <div className={tco.registrationsTop}>
         <h1>EVENT REGISTRATIONS</h1>
       </div>
-      <div className="registrationsBottom">
-        <table className="registrationTable">
-          <tr className="tableHead font1">
+      <div className={tco.registrationsBottom}>
+        <table className={tco.registrationTable}>
+          <tr className={`${tco.tableHead} ${tco.font1}`}>
             <th>Event Name</th>
             <th>Event Date</th>
             <th>No of Registrations</th>
           </tr>
-          <div className="scroll">
-            <div className="row">
-              <tr className="eTableData">
+          <div className={tco.scroll}>
+            <div className={tco.row}>
+              <tr className={tco.eTableData}>
                 <td>KALKI</td>
                 <td>13 FEBRUARY</td>
                 <td>500</td>
               </tr>
 
-              <div className="desc font1">Registration Stats</div>
+              <div className={`${tco.desc} ${tco.font1}`}>Registration Stats</div>
 
-              <div className="media">
-                <div className="mediaTop">
-                  <div className="source">
+              <div className={tco.media}>
+                <div className={tco.mediaTop}>
+                  <div className={tco.source}>
                     <p>By Mail:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By Instagram:</p>
                     <p>12345</p>
                   </div>
                 </div>
-                <div className="mediaBottom">
-                  <div className="source">
+                <div className={tco.mediaBottom}>
+                  <div className={tco.source}>
                     <p>By Whatsapp:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By LinkedIn:</p>
                     <p>12345</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <tr className="eTableData">
+            <div className={tco.row}>
+              <tr className={tco.eTableData}>
                 <td>KALKI</td>
                 <td>13 FEBRUARY</td>
                 <td>500</td>
               </tr>
 
-              <div className="desc font1">Registration Stats</div>
+              <div className={`${tco.desc} ${tco.font1}`}>Registration Stats</div>
 
-              <div className="media">
-                <div className="mediaTop">
-                  <div className="source">
+              <div className={tco.media}>
+                <div className={tco.mediaTop}>
+                  <div className={tco.source}>
                     <p>By Mail:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By Instagram:</p>
                     <p>12345</p>
                   </div>
                 </div>
-                <div className="mediaBottom">
-                  <div className="source">
+                <div className={tco.mediaBottom}>
+                  <div className={tco.source}>
                     <p>By Whatsapp:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By LinkedIn:</p>
                     <p>12345</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <tr className="eTableData">
+            <div className={tco.row}>
+              <tr className={tco.eTableData}>
                 <td>KALKI</td>
                 <td>13 FEBRUARY</td>
                 <td>500</td>
               </tr>
 
-              <div className="desc font1">Registration Stats</div>
+              <div className={`${tco.desc} ${tco.font1}`}>Registration Stats</div>
 
-              <div className="media">
-                <div className="mediaTop">
-                  <div className="source">
+              <div className={tco.media}>
+                <div className={tco.mediaTop}>
+                  <div className={tco.source}>
                     <p>By Mail:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By Instagram:</p>
                     <p>12345</p>
                   </div>
                 </div>
-                <div className="mediaBottom">
-                  <div className="source">
+                <div className={tco.mediaBottom}>
+                  <div className={tco.source}>
                     <p>By Whatsapp:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By LinkedIn:</p>
                     <p>12345</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <tr className="eTableData">
+            <div className={tco.row}>
+              <tr className={tco.eTableData}>
                 <td>KALKI</td>
                 <td>13 FEBRUARY</td>
                 <td>500</td>
               </tr>
 
-              <div className="desc font1">Registration Stats</div>
+              <div className={`${tco.desc} ${tco.font1}`}>Registration Stats</div>
 
-              <div className="media">
-                <div className="mediaTop">
-                  <div className="source">
+              <div className={tco.media}>
+                <div className={tco.mediaTop}>
+                  <div className={tco.source}>
                     <p>By Mail:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By Instagram:</p>
                     <p>12345</p>
                   </div>
                 </div>
-                <div className="mediaBottom">
-                  <div className="source">
+                <div className={tco.mediaBottom}>
+                  <div className={tco.source}>
                     <p>By Whatsapp:</p>
                     <p>12345</p>
                   </div>
-                  <div className="source">
+                  <div className={tco.source}>
                     <p>By LinkedIn:</p>
                     <p>12345</p>
                   </div>

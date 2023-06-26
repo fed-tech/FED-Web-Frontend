@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 // css
-import "./Css/Profilecss/profile.css";
+import pro from "./Css/Profilecss/profile.module.css";
 
 // img
 import penSvg from "../Img/pen-icon.svg";
@@ -22,11 +22,11 @@ export default function Profile() {
     authCtx.logout();
   }
   return (
-    <div className="profileBackground">
-      <div className="pmainBox">
-        <div className="profileLeft">
-          <div className="profile">
-            <div className="proHeading">
+    <div className={pro.profileBackground}>
+      <div className={pro.pmainBox}>
+        <div className={pro.profileLeft}>
+          <div className={pro.profile}>
+            <div className={pro.proHeading}>
               {authCtx.user.access === 0 ? (
                 <>
                   <div>
@@ -40,54 +40,54 @@ export default function Profile() {
                 ""
               )}
 
-              <p className="headInnerText">
+              <p className={pro.headInnerText}>
                 <p>Profile Details</p>
                 <Link to="/updateprofile">
                   <img src={penSvg} alt="" />
                 </Link>
               </p>
             </div>
-            <div className="details">
-              <table className="profileTable">
+            <div className={pro.details}>
+              <table className={pro.profileTable}>
                 <tbody>
                   <tr>
-                    <td className="dets">Full Name</td>
-                    <td className="vals">{authCtx.user.name}</td>
+                    <td className={pro.dets}>Full Name</td>
+                    <td className={pro.vals}>{authCtx.user.name}</td>
                   </tr>
                   <tr>
-                    <td className="dets">Roll Number</td>
-                    <td className="vals">{authCtx.user.rollNo}</td>
+                    <td className={pro.dets}>Roll Number</td>
+                    <td className={pro.vals}>{authCtx.user.rollNo}</td>
                   </tr>
                   <tr>
-                    <td className="dets">Email ID</td>
-                    <td className="vals">{authCtx.user.email}</td>
+                    <td className={pro.dets}>Email ID</td>
+                    <td className={pro.vals}>{authCtx.user.email}</td>
                   </tr>
                   <tr>
-                    <td className="dets">Year</td>
-                    <td className="vals">{authCtx.user.selected}</td>
+                    <td className={pro.dets}>Year</td>
+                    <td className={pro.vals}>{authCtx.user.selected}</td>
                   </tr>
                   <tr>
-                    <td className="dets">School</td>
-                    <td className="vals">{authCtx.user.school}</td>
+                    <td className={pro.dets}>School</td>
+                    <td className={pro.vals}>{authCtx.user.school}</td>
                   </tr>
                   <tr>
-                    <td className="dets">College</td>
-                    <td className="vals">{authCtx.user.college}</td>
+                    <td className={pro.dets}>College</td>
+                    <td className={pro.vals}>{authCtx.user.college}</td>
                   </tr>
                   <tr>
-                    <td className="dets">Mobile No</td>
-                    <td className="vals">{authCtx.user.mobileNo}</td>
+                    <td className={pro.dets}>Mobile No</td>
+                    <td className={pro.vals}>{authCtx.user.mobileNo}</td>
                   </tr>
                 </tbody>
               </table>
-              <button className="logoutBtn" onClick={handleLogout}>
+              <button className={pro.logoutBtn} onClick={handleLogout}>
                 Logout
               </button>
             </div>
           </div>
         </div>
-        <div className="profileRight">
-          <p className="illuminating">
+        <div className={pro.profileRight}>
+          <p className={pro.illuminating}>
             <p>ILLUMINATIING</p>
             <p>THE</p>
             <p>
