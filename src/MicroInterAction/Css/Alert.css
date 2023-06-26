@@ -28,6 +28,11 @@
   font-weight: 700;
 }
 
+.description-text,
+.description-title {
+  color: #000;
+}
+
 .symbol-close-link {
   cursor: pointer;
 }
