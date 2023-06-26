@@ -48,11 +48,9 @@ export default function LetsTalkBusiness() {
           setError("An Unexpected Error Occured");
         }
       } catch (error) {
-        console.log(error);
         setError("An Unexpected Error Occured");
       }
     } else {
-      console.log("Fill**************");
       setError("Please Fill All The Details");
     }
   };
