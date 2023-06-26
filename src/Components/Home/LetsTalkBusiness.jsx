@@ -19,11 +19,11 @@ export default function LetsTalkBusiness() {
   });
 
   const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
+    mainColor: "#E5F6FD",
+    secondaryColor: "#1AB1F5",
+    symbol: "info",
+    title: "Information",
+    text: "Our newest module can be bought, or you can always just use our 30 day trial.",
     val: true,
   });
 
