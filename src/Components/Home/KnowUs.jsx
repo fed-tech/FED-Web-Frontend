@@ -7,7 +7,7 @@ import Content from "./../../Components/Home/Content";
 import knowus from "./../../Data/db";
 
 // Image
-import women from "./../../Img/image 7.png";
+import women from "./../../assets/Home/laptopWoman.png";
 
 export default function KnowUs() {
   return (
