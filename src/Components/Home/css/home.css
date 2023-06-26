@@ -1,0 +1,642 @@
+.backgroundImg {
+  width: 100%;
+  height: 740px;
+}
+
+.Beleiver {
+  margin-top: -1px;
+  padding-top: 5px;
+  background-color: #0f0e0e;
+}
+
+#message {
+  text-shadow: 10px 10px 50px lightgray;
+}
+
+#appleIcon,
+#appleIcon img {
+  width: 50px;
+  height: 50px;
+}
+
+#KnowUspTag {
+  margin-top: 95px;
+}
+
+.KnowUspTag,
+#KnowUspTag {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+  background-color: transparent;
+}
+
+#KnowUspTag {
+  margin-top: 95px;
+}
+
+.KnowUspTag {
+  color: #f45725;
+}
+
+.womenWithALaptop {
+  background-color: transparent;
+  width: 100px;
+  height: 104px;
+  margin: 50px 0px;
+}
+
+#womenBelowText {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  background-color: transparent;
+  text-align: center;
+  width: 60%;
+  margin-bottom: 90px;
+}
+
+.WhyHowWhatDiv {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #0f0e0e;
+  margin-top: -30px;
+}
+
+.whyDiv,
+.HowDiv,
+.WhatDiv {
+  padding: 20px 20px 41px 20px;
+  width: 26%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.whyDiv {
+  margin-right: 30px;
+}
+
+.WhatDiv {
+  margin-left: 30px;
+}
+
+.whyDiv .CardDesPTag {
+  padding-bottom: 75px;
+}
+
+.WhatDiv .CardDesPTag {
+  padding-bottom: 47px;
+}
+.why,
+.how,
+.what {
+  background-color: transparent;
+}
+
+.questionpTag {
+  background-color: transparent;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 30px 0px;
+}
+
+.questionpTag span,
+.CardDesPTag span,
+.BelievePTag span,
+.believeCenterCol p span,
+.userName,
+.Seeall,
+.Seeall span,
+.WeWorkWithPTag span,
+.LetsTalkBusiness span,
+.textFed span,
+.carouselTopTextDiv p span {
+  background-color: transparent;
+  color: #f45725;
+}
+
+.CardDesPTag {
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
+.BelievePTag {
+  text-align: center;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 59px;
+  margin: 0px 0px 90px 0px;
+}
+
+.believeCenterDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.believeCenterCol {
+  width: 60%;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.believeCenterCol p {
+  background-color: transparent;
+  margin: 30px;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
+.testDivMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.testDivChild {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testDiv {
+  position: relative;
+  background-color: #fff;
+  padding: 24px;
+  width: 40%;
+  height: 294px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.testpTag {
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
+.userDiv {
+  background-color: transparent;
+  width: 277px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.UserIcon {
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  margin-right: 30px;
+}
+
+.userDisDiv {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+
+.userName {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  margin-bottom: 4px;
+}
+
+.userPost {
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #000000;
+}
+
+.Seeall {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  color: #f45725;
+  float: right;
+  margin-right: 15%;
+}
+
+#Seeall {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: 0.005em;
+  text-decoration-line: underline;
+}
+
+.Seeall span {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.SeeallDiv {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.WeWorkWith {
+  padding: 90px 0px;
+  background-color: #fff;
+}
+
+.WeWorkWithPTag {
+  margin-bottom: 90px;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 59px;
+  color: #0f0e0e;
+  text-align: center;
+}
+
+.carousel-cell {
+  width: 100%;
+}
+
+.carousel-cell:before {
+  display: block;
+}
+
+.corousal {
+  background-color: transparent;
+  margin-bottom: 90px;
+}
+
+.cardMain {
+  width: 250px;
+  height: 250px;
+  border-radius: 24px;
+  background-color: #fff;
+  /* margin-left: 10px; */
+}
+
+.cardImgTag {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #fff;
+}
+
+.pTagDivWork {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.workptagDes {
+  background-color: transparent;
+  width: 60%;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.005em;
+  text-align: center;
+  color: #000;
+  margin-top: 90px;
+}
+
+.businessMDiv {
+  background-image: url("../../Img/Rectangle-89.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90.5px 130.5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.businessMDivleft {
+  width: 50%;
+  background-color: transparent;
+}
+
+.businessMDivright {
+  width: 42%;
+  background-color: transparent;
+}
+
+.LetsTalkBusiness {
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 80px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.LetsTalkBusinessSubtitle {
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+}
+
+.businessMDivright div {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.businessMDivright div label {
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  color: #f45725;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: transparent;
+}
+
+.businessMDivright div input,
+.businessMDivright div textarea {
+  color: #000;
+  background-color: #fff;
+  padding: 6px;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  margin-bottom: 35px;
+  outline: none;
+  border: 2px solid #f45725;
+  border-radius: 6px;
+}
+
+.businessMDivright div textarea {
+  height: 200px;
+  resize: none;
+  background-color: #fff;
+}
+
+.businessMDivright button {
+  outline: none;
+  width: 100%;
+  border-width: 0px;
+  border-radius: 6px;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #f45725;
+  cursor: pointer;
+  height: 64px;
+}
+
+.carouselTopTextDiv {
+  background-color: transparent;
+  position: absolute;
+  left: 30px;
+  bottom: 230px;
+}
+
+.carouselTopTextDiv p {
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 80px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 980px) {
+  .WhyHowWhatDiv {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .whyDiv,
+  .HowDiv {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 30px;
+  }
+
+  .WhatDiv {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .whyDiv,
+  .HowDiv,
+  .WhatDiv {
+    width: 80%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .userDisDiv {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .businessMDiv {
+    padding: 90.5px 80px;
+  }
+
+  .businessMDivright {
+    width: 46%;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .testDivChild,
+  .businessMDiv {
+    flex-direction: column;
+  }
+
+  .testDivMain {
+    margin-bottom: 0px;
+  }
+
+  .testDiv {
+    width: 100%;
+    margin: 20px 0px;
+  }
+
+  .businessMDivleft,
+  .businessMDivright {
+    width: 100%;
+  }
+
+  .businessMDivleft {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .BelievePTag,
+  .WeWorkWithPTag,
+  .LetsTalkBusiness {
+    font-size: 40px;
+  }
+
+  #appleIcon,
+  #appleIcon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .LetsTalkBusinessSubtitle {
+    font-size: 14px;
+  }
+
+  .BelievePTag,
+  .WeWorkWithPTag,
+  .LetsTalkBusiness {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  #appleIcon,
+  #appleIcon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .believeCenterCol,
+  .workptagDes {
+    width: 80%;
+  }
+
+  .testpTag {
+    margin-bottom: 40px;
+  }
+
+  .WeWorkWith {
+    padding: 60px 0px;
+  }
+
+  .businessMDiv {
+    padding: 60px 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .BelievePTag,
+  .WeWorkWithPTag,
+  .LetsTalkBusiness {
+    font-size: 30px;
+  }
+
+  #appleIcon,
+  #appleIcon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .userDisDiv {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .BelievePTag,
+  .WeWorkWithPTag,
+  .LetsTalkBusiness {
+    font-size: 20px;
+  }
+
+  #appleIcon,
+  #appleIcon img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .userDisDiv {
+    width: 30%;
+  }
+}
+
+.slide-track {
+  overflow: hidden;
+}
