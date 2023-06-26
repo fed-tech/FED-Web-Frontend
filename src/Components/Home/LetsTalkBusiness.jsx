@@ -18,24 +18,24 @@ export default function LetsTalkBusiness() {
     message: "",
   });
 
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
-  // const [error, setError] = useState({
-  //   mainColor: "",
-  //   secondaryColor: "",
-  //   symbol: "",
-  //   title: "",
-  //   text: "",
-  //   val: true,
-  // });
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
 
-  const variants = {
-    mainColor: "#FDEDED",
-    secondaryColor: "#F16360",
-    symbol: "error",
-    title: "Error",
-    text: "Please Fill All The Details",
-  };
+  // const variants = {
+  //   mainColor: "#FDEDED",
+  //   secondaryColor: "#F16360",
+  //   symbol: "error",
+  //   title: "Error",
+  //   text: "Please Fill All The Details",
+  // };
 
   const onChange = (e) => {
     const name = e.target.name;
@@ -69,90 +69,110 @@ export default function LetsTalkBusiness() {
             message: "",
           });
 
-          setError(null);
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });
         } else {
           setLoad(false);
-          setError("An Unexpected Error Occured");
+
+          setError({
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "An Unexpected Error Occured",
+            val: true,
+          });
+          // setError("");
         }
       } catch (error) {
         setLoad(false);
-        setError("An Unexpected Error Occured");
+
+        setError({
+          mainColor: "#FDEDED",
+          secondaryColor: "#F16360",
+          symbol: "error",
+          title: "Error",
+          text: "An Unexpected Error Occured",
+          val: true,
+        });
       }
     } else {
       setLoad(false);
-      setError("Please Fill All The Details");
+
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
     }
   };
 
   return (
-    <>
-      <div class="letsTalkBusiness" id="ContactUs">
-        <div class="letsTalkBusiness-left">
-          <p class="business-heading">
-            Let's Talk <span>Business</span>
-          </p>
-          <p class="business-text">
-            We'd love to hear from you! Whether you are curious about how our
-            society works, how you can participate in our webinars and events,
-            any recent updates or anything that interest you - we're ready to
-            answer any and all of your questions!
-          </p>
-        </div>
-
-        <div class="letsTalkBusiness-right">
-          <form>
-            <div>
-              <label for="name">Name:</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                required
-                onChange={onChange}
-              />
-            </div>
-            <div>
-              <label for="email">Email:</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                required
-                onChange={onChange}
-              />
-            </div>
-            <div>
-              <label for="message" id="message">
-                Message:
-              </label>
-              <textarea
-                name="message"
-                cols="30"
-                rows="10"
-                value={formData.message}
-                required
-                onChange={onChange}
-              ></textarea>
-            </div>
-            <button type="submit" name="submit" onClick={sumbitFunction}>
-              {loadingEffect ? <Load /> : "Send"}
-            </button>
-          </form>
-
-          {/* <div>
-          {error ? (
-            <p>
-              <Alert variant={variants} />
-            </p>
-          ) : (
-            <p>
-              <Alert variant={variants} />
-            </p>
-          )}
-        </div> */}
-        </div>
+    // <>
+    <div class="letsTalkBusiness" id="ContactUs">
+      <div class="letsTalkBusiness-left">
+        <p class="business-heading">
+          Let's Talk <span>Business</span>
+        </p>
+        <p class="business-text">
+          We'd love to hear from you! Whether you are curious about how our
+          society works, how you can participate in our webinars and events, any
+          recent updates or anything that interest you - we're ready to answer
+          any and all of your questions!
+        </p>
       </div>
-      <Alert variant={variants} />
-    </>
+
+      <div class="letsTalkBusiness-right">
+        <form>
+          <div>
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              required
+              onChange={onChange}
+            />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              required
+              onChange={onChange}
+            />
+          </div>
+          <div>
+            <label for="message" id="message">
+              Message:
+            </label>
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              value={formData.message}
+              required
+              onChange={onChange}
+            ></textarea>
+          </div>
+          <button type="submit" name="submit" onClick={sumbitFunction}>
+            {loadingEffect ? <Load /> : "Send"}
+          </button>
+        </form>
+
+        {variants.val ? <Alert variant={variants} val={setError} /> : ""}
+      </div>
+    </div>
   );
 }
