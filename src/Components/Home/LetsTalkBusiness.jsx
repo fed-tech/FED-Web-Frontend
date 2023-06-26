@@ -104,6 +104,8 @@ export default function LetsTalkBusiness() {
             Send
           </button>
         </form>
+
+        {error ? <p>{error}</p> : ""}
       </div>
     </div>
   );
