@@ -14,7 +14,7 @@ const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
 
 // Loading
-import Loading from "./Pages/Loading";
+import Loading from "./MicroInterAction/Loading";
 
 // Components
 import Nav from "./Components/Nav";
