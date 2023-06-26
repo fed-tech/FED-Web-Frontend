@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // Components
 import Load from "./../../MicroInterAction/Load";
+import { Alert } from "./../../MicroInterAction/Alert";
 
 // axios
 import axios from "axios";
@@ -10,13 +11,31 @@ import axios from "axios";
 import "./css/LetsTalkBusiness.css";
 
 export default function LetsTalkBusiness() {
-  const [error, setError] = useState(null);
   const [loadingEffect, setLoad] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const [error, setError] = useState(false);
+
+  // const [error, setError] = useState({
+  //   mainColor: "",
+  //   secondaryColor: "",
+  //   symbol: "",
+  //   title: "",
+  //   text: "",
+  //   val: true,
+  // });
+
+  const variants = {
+    mainColor: "#FDEDED",
+    secondaryColor: "#F16360",
+    symbol: "error",
+    title: "Error",
+    text: "The action was not carried out succesfully please try again.",
+  };
 
   const onChange = (e) => {
     const name = e.target.name;
@@ -67,6 +86,10 @@ export default function LetsTalkBusiness() {
 
   return (
     <div class="letsTalkBusiness" id="ContactUs">
+      {/* {variants.map((variant) => ( */}
+      <Alert variant={variants} />
+      {/* ))} */}
+
       <div class="letsTalkBusiness-left">
         <p class="business-heading">
           Let's Talk <span>Business</span>
@@ -119,7 +142,17 @@ export default function LetsTalkBusiness() {
           </button>
         </form>
 
-        <div>{error ? <p>{error}</p> : ""}</div>
+        {/* <div>
+          {error ? (
+            <p>
+              <Alert variant={variants} />
+            </p>
+          ) : (
+            <p>
+              <Alert variant={variants} />
+            </p>
+          )}
+        </div> */}
       </div>
     </div>
   );
