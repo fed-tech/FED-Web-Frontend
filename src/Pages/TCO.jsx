@@ -2,18 +2,16 @@ import React, { useEffect, useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 // components
-import Registration1  from "./Registration1";
+import Registration1 from "./Registration1";
 import Registration2 from "./Registration2";
 
 // svg
 import regStatSvg from "../Img/registrationStats.svg";
 import logoutSvg from "../Img/ion_log-out.svg";
-import penSvg from "../Img/pen-icon.svg";
-import filter from "../Img/Filter.svg";
-import UpdateProfile from'../Components/Profile/UpdateProfile';
+import UpdateProfile from '../Components/Profile/UpdateProfile';
 
 // css
-import "./Css/Profilecss/MemberProfile.css";
+import tco from "./Css/Profilecss/MemberProfile.module.css";
 
 
 // state
@@ -32,7 +30,7 @@ export default function TCO() {
 
 
   const [show, set] = useState("Profile");
-  const[showUpdateModal,setShowUpdateModal] = useState(false);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
   const [user, setUser] = useState("1");
   // 1 --> creative, tech, operations
   // 2 --> marketing
@@ -54,45 +52,41 @@ export default function TCO() {
     console.log("user: ", user);
   };
   return (
-    <div className="memberBackground">
-      <div className="mainbox">
-        <div className="memberLeft">
-          <div className="dashboard">
-
-            <div className="dashboardTop">
+    <div className={tco.memberBackground}>
+      <div className={tco.mainbox}>
+        <div className={tco.memberLeft}>
+          <div className={tco.dashboard}>
+            <div className={tco.dashboardTop}>
               <h1>DASHBOARD</h1>
               <h2>DASH</h2>
               <h2>BOARD</h2>
-              <div className="gotoPro"
+              <div
+                className={tco.gotoPro}
                 onClick={() => {
                   set("Profile");
+
                 }}>
-                <div className="profilePic">
-
-                  <img
-                    src={authCtx.user.pic}
-                    alt=""
-                  />
-
+                <div className={tco.profilePic}>
+                  <img src={authCtx.user.pic} alt="" />
                 </div>
-                <div className="Position">
-                  <p className="name">{authCtx.user.name}</p>
-                  {/* <p className="position">Technical Executive</p> */}
+                <div className={tco.Position}>
+                  <p className={tco.name}>{authCtx.user.name}</p>
                 </div>
               </div>
             </div>
 
-            <div className="dashboardBottom">
+            <div className={tco.dashboardBottom}>
               <div
-                className="registrationStats"
+                className={tco.registrationStats}
                 onClick={() => {
-                  clickedRegStats()
+                  clickedRegStats();
                 }}
               >
                 <img src={regStatSvg} alt="" />
                 <p> Registration Stats </p>
               </div>
-              <div className="logout" onClick={handleLogout}>
+
+              <div className={tco.logout} onClick={handleLogout}>
                 <img src={logoutSvg} alt="" />
                 <p> Logout </p>
               </div>
@@ -101,8 +95,9 @@ export default function TCO() {
         </div>
 
         {show === "Profile" ? (
-          <div className="memberRight">
-            <Profile setShowUpdateModal={setShowUpdateModal}/>
+          <div className={tco.memberRight}>
+
+            <Profile setShowUpdateModal={setShowUpdateModal} />
           </div>
         ) : (
           ""
@@ -111,17 +106,17 @@ export default function TCO() {
         {show === "Registration" ?
           (user === "2" ?
             (
-              <Registration1/>              
+              <Registration1 />
             ) :
             (
-              <Registration2/>
+              <Registration2 />
             )
           )
-        : (
-          ""
-        )}
+          : (
+            ""
+          )}
       </div>
-      {showUpdateModal&&<UpdateProfile setShowUpdateModal = {setShowUpdateModal}/>}
+      {showUpdateModal && <UpdateProfile setShowUpdateModal={setShowUpdateModal} />}
     </div>
   );
 }
