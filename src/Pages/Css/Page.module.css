@@ -50,11 +50,11 @@ h2 {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 800;
-    font-size: 26.0215px;
+    /* font-size: 26.0215px; */
     line-height: 24px;
     letter-spacing: 0.005em;
     color: #999999;
-    text-align: center;
+    /* text-align: center; */
 }
 .member_profilePic{
     display: flex;
