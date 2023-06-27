@@ -44,7 +44,7 @@
 }
 
 .dashboardTop h1,
-.dashboard h2 {
+.dashboardTop h2 {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
@@ -75,6 +75,7 @@
   color: #efefef;
   inline-size: 100%;
   overflow-wrap: break-word;
+  text-align: center;
 }
 
 .Position .position {
@@ -141,6 +142,7 @@
   padding-bottom: 27px;
   margin-left: 30px;
 }
+
 .proHeading {
   font-size: 32px;
   letter-spacing: 0.02em;
@@ -191,6 +193,7 @@
 }
 
 @media (max-width: 1000px) {
+
   .dashboardTop h1,
   .dashboardTop h2 {
     font-size: 25px;
@@ -254,7 +257,7 @@
   .memberLeft {
     width: 33%;
   }
-  
+
   .proHeading {
     font-size: 24px;
   }
@@ -436,6 +439,7 @@
   .memberRight {
     padding: 10px 10px 40px 15px;
   }
+
   .proHeading {
     font-size: 18px;
   }
@@ -445,6 +449,7 @@
   .memberRight {
     padding: 10px 0 30px 15px;
   }
+
   .proHeading {
     font-size: 22px;
   }
@@ -608,6 +613,7 @@ th {
 }
 
 @media (max-width: 1175px) {
+
   .row,
   .tableHead,
   .tableData {
