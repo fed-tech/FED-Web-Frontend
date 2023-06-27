@@ -1,0 +1,18 @@
+input {
+    border-bottom: 1px solid white;
+    margin-bottom: 104px;
+}
+input::placeholder{
+    color: white;
+}
+
+form {
+    width:70%;
+}
+
+.formBottom {
+    display: flex;
+}
+.formBottom>input {
+    width: 27%;
+}

@@ -44,7 +44,7 @@
 }
 
 .dashboardTop h1,
-h2 {
+.dashboard h2 {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
@@ -192,7 +192,7 @@ h2 {
 
 @media (max-width: 1000px) {
   .dashboardTop h1,
-  h2 {
+  .dashboardTop h2 {
     font-size: 25px;
   }
 
@@ -273,7 +273,7 @@ h2 {
   }
 
   .dashboardTop h1,
-  h2 {
+  .dashboardTop h2 {
     font-size: 20px;
   }
 
@@ -350,8 +350,7 @@ h2 {
 }
 
 @media (max-width: 575px) {
-  .dashboardTop h1,
-  h2 {
+  .dashboardTop h2 {
     font-size: 16px;
   }
 
@@ -399,8 +398,7 @@ h2 {
     height: 40px;
   }
 
-  .dashboardTop h1,
-  h2 {
+  .dashboardTop h2 {
     font-size: 13px;
   }
 
