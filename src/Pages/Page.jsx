@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
+import EventForm from "../Components/Profile/EventForm";
 
 function Page() {
   const navigate = useNavigate();
@@ -74,7 +75,9 @@ function Page() {
                 <p style={{ color: event && "#f45725"}}
                  >Events</p>
               </div>
-              <div className={pageCss.dashboardBottom_options}>
+              <div 
+              onClick={handleForm}
+              className={pageCss.dashboardBottom_options}>
                 <PlaylistAddIcon className={pageCss.dashboardBottom_icons}/>
                 <p>Form</p>
               </div>
@@ -92,6 +95,7 @@ function Page() {
         <div className={pageCss.page_right}>
           {profile && <Profile setShowUpdateModal={setShowUpdateModal} />}
           {event && <EventAdmin />}
+          {form && <EventForm/>}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />
