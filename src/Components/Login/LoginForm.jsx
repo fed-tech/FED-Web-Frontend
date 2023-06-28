@@ -150,19 +150,6 @@ function LoginForm() {
         navigate("/MyProfile");
         return;
       } else {
-        // Swal.fire({
-        //   icon: "error",
-        //   title: "Email does not exist",
-        //   text: "Please signup first",
-        //   confirmButtonText: "OK",
-        //   confirmButtonColor: "#f45725",
-        //   background: "black",
-        //   color: "white",
-        //   customClass: {
-        //     title: "my-title-class",
-        //     text: "my-text-class",
-        //   },
-        // });
         console.log("Login Done 💯💯💯💯💯");
         // navigate("/signup");
       }
