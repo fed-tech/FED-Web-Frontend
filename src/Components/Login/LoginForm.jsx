@@ -13,25 +13,24 @@ import axios from "axios";
 import AuthContext from "../../store/auth-context";
 
 // img
-import google from "../../Img/Google.svg";
-import Swal from "sweetalert2";
+import google from "./../../assets/Login/Google.svg";
+// import Swal from "sweetalert2";
 
 function LoginForm() {
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
-  
-  const [user,setUser] = useState({
-    email:"",
-    passwrd:""
-  })
+
+  const [user, setUser] = useState({
+    email: "",
+    passwrd: "",
+  });
 
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
 
   const DataInp = (e) => {
-
     const name = e.target.name;
     const value = e.target.value;
 
@@ -55,14 +54,13 @@ function LoginForm() {
     console.log(user);
   };
 
-  const {email,passwrd} = user;
+  const { email, passwrd } = user;
 
   const handlelogin = async (e) => {
-
     e.preventDefault();
 
     const username = email;
-     if(email != "" && passwrd != "") {
+    if (email != "" && passwrd != "") {
       try {
         const password = bcrypt.hashSync(
           passwrd,
@@ -106,9 +104,9 @@ function LoginForm() {
         }
         console.log(err);
       }
-    }else{
-        setIsinValid(true);
-        setErrMssg("Please fill all the fields")
+    } else {
+      setIsinValid(true);
+      setErrMssg("Please fill all the fields");
     }
   };
 
@@ -152,20 +150,21 @@ function LoginForm() {
         navigate("/MyProfile");
         return;
       } else {
-        Swal.fire({
-          icon: "error",
-          title: "Email does not exist",
-          text: "Please signup first",
-          confirmButtonText: "OK",
-          confirmButtonColor: "#f45725",
-          background: "black",
-          color: "white",
-          customClass: {
-            title: "my-title-class",
-            text: "my-text-class",
-          },
-        });
-        navigate("/signup");
+        // Swal.fire({
+        //   icon: "error",
+        //   title: "Email does not exist",
+        //   text: "Please signup first",
+        //   confirmButtonText: "OK",
+        //   confirmButtonColor: "#f45725",
+        //   background: "black",
+        //   color: "white",
+        //   customClass: {
+        //     title: "my-title-class",
+        //     text: "my-text-class",
+        //   },
+        // });
+        console.log("Login Done 💯💯💯💯💯");
+        // navigate("/signup");
       }
     } catch (err) {
       console.log(err);
