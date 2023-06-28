@@ -120,13 +120,15 @@ function LoginForm() {
         }
       );
       const mail = googleResponse.data.email;
+
       console.log(mail);
-      const response = await axios.post(
-        "http://localhost:5000/auth/googleverification",
-        {
-          email: mail,
-        }
-      );
+
+      const response = await axios.post("/auth/googleverification", {
+        email: mail,
+      });
+
+      console.log(response);
+
       if (response.status === 202) {
         authCtx.login(
           response.data.user.name,
@@ -141,10 +143,11 @@ function LoginForm() {
           response.data.token,
           10800000
         );
-        navigate("/MyProfile");
+        // navigate("/MyProfile");
+        console.log("Login Done 💯💯💯💯💯");
         return;
       } else {
-        console.log("Login Done 💯💯💯💯💯");
+        console.log("signup");
         // navigate("/signup");
       }
     } catch (err) {
