@@ -194,32 +194,40 @@ function LoginForm() {
         <p className={Lcss.log}>Login with Google</p>
       </div>
       <p className={Lcss.or}>Or</p>
-      <div className={Lcss.user}>
-        <input
-          type="text"
-          placeholder="Email"
-          className={Lcss.username}
-          onChange={DataInp}
-          name="email"
-        />
-      </div>
-      <div className={Lcss.pass}>
-        <input
-          type="password"
-          placeholder="Password"
-          className={Lcss.password}
-          onChange={DataInp}
-          name="passwrd"
-        />
-      </div>
-      <div className={Lcss.forgotPassword}>
-        <Link to="/forgotpassword">
-          <p>Forgot Password?</p>
-        </Link>
-      </div>
-      <button className={Lcss.logtwo} onClick={handlelogin}>
-        {loadingEffect ? <Load /> : "Login"}
-      </button>
+
+      <form>
+        <div className={Lcss.user}>
+          <input
+            type="text"
+            placeholder="Email"
+            className={Lcss.username}
+            onChange={DataInp}
+            name="email"
+            required
+          />
+        </div>
+        <div className={Lcss.pass}>
+          <input
+            type="password"
+            placeholder="Password"
+            className={Lcss.password}
+            onChange={DataInp}
+            name="passwrd"
+            min="1"
+            max="10"
+            required
+          />
+        </div>
+        <div className={Lcss.forgotPassword}>
+          <Link to="/forgotpassword">
+            <p>Forgot Password?</p>
+          </Link>
+        </div>
+        <button className={Lcss.logtwo} type="submit" onClick={handlelogin}>
+          {loadingEffect ? <Load /> : "Login"}
+        </button>
+      </form>
+
       <div className={Lcss.dont}>
         <p className={Lcss.signup}>
           Don't have an account?{" "}
