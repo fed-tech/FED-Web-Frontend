@@ -25,7 +25,6 @@ import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
   const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
   const [loadingEffect, setLoad] = useState(false);
 
@@ -90,6 +89,15 @@ function LoginForm() {
         if (response.status === 202) {
           setLoad(false);
 
+          setError({
+            mainColor: "#EDFEEE",
+            secondaryColor: "#5CB660",
+            symbol: "check_circle",
+            title: "Success",
+            text: "",
+            val: true,
+          });
+
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -134,7 +142,7 @@ function LoginForm() {
             val: true,
           });
 
-          setErrMssg("Invalid credentials");
+          // setErrMssg("Invalid credentials");
         }
         console.log(err);
       }
