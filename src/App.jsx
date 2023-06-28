@@ -32,7 +32,7 @@ import AuthContext from "./store/auth-context";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 import CreateProfile from "./Pages/CreateProfile";
-import Page from "./Pages/Page";
+import Page from "./Pages/AdminPage";
 import PrivacyPolicies from "./Pages/PrivacyPolicies";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 
