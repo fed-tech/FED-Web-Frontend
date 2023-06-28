@@ -203,7 +203,7 @@ function LoginForm() {
       <div className={Lcss.dont}>
         <p className={Lcss.signup}>
           Don't have an account?{" "}
-          <Link to="/Register">
+          <Link to="/Register" className="LinkStyle">
             <span className={Lcss.spann}>Signup</span>
           </Link>
         </p>
