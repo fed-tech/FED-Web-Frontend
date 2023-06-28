@@ -150,14 +150,12 @@
 }
 
 .spann {
-  background-color: transparent;
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 1.063rem;
-  color: black;
-  text-decoration: none;
+  color: #000;
   transition: all 0.3s;
 }
 
