@@ -1,6 +1,10 @@
 import React from "react";
+
+// Components
 import LoginForm from "./LoginForm";
-import Lcss from './css/loginpg.module.css'
+
+// Css
+import Lcss from "./css/loginpg.module.css";
 
 function LoginFun() {
   return (
@@ -16,7 +20,7 @@ function LoginFun() {
               <p className={Lcss.det}>Please Enter your details</p>
             </div>
             <>
-                <LoginForm/> 
+              <LoginForm />
             </>
           </div>
         </div>
