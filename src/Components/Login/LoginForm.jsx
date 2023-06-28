@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useGoogleLogin } from "@react-oauth/google";
 
 // Components
+import Load from "./../../MicroInterAction/Load";
 import { Alert } from "./../../MicroInterAction/Alert";
 
 // bcrypt
@@ -23,14 +24,24 @@ import Lcss from "./css/loginpg.module.css";
 import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
+  const [isinValid, setIsinValid] = useState(false);
+  const [errmssg, setErrMssg] = useState("Invalid");
+  const [codeResponse, setCodeResponse] = useState();
+  const [loadingEffect, setLoad] = useState(false);
+
   const [user, setUser] = useState({
     email: "",
     passwrd: "",
   });
 
-  const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("Invalid");
-  const [codeResponse, setCodeResponse] = useState();
+  const [variants, setError] = useState({
+    mainColor: "#EDFEEE",
+    secondaryColor: "#5CB660",
+    symbol: "check_circle",
+    title: "Success",
+    text: "We'll revert back to you soon!",
+    val: false,
+  });
 
   const authCtx = useContext(AuthContext);
 
@@ -61,6 +72,7 @@ function LoginForm() {
 
   const handlelogin = async (e) => {
     e.preventDefault();
+    setLoad(true);
 
     const { email, passwrd } = user;
 
@@ -76,6 +88,8 @@ function LoginForm() {
         console.log(response);
 
         if (response.status === 202) {
+          setLoad(false);
+
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -96,6 +110,7 @@ function LoginForm() {
           return;
         }
       } catch (err) {
+        setLoad(false);
         setIsinValid(true);
 
         if (err.response.data.code === 4) {
@@ -106,6 +121,7 @@ function LoginForm() {
         console.log(err);
       }
     } else {
+      setLoad(false);
       setIsinValid(true);
       setErrMssg("Please fill all the fields");
     }
@@ -135,7 +151,7 @@ function LoginForm() {
 
       console.log(response.data);
 
-      if (response.data.status === "true") {
+      if (response.data.status === true) {
         authCtx.login(
           response.data.user.name,
           response.data.user.email,
@@ -202,7 +218,7 @@ function LoginForm() {
         </Link>
       </div>
       <button className={Lcss.logtwo} onClick={handlelogin}>
-        Login
+        {loadingEffect ? <Load /> : "Login"}
       </button>
       <div className={Lcss.dont}>
         <p className={Lcss.signup}>
