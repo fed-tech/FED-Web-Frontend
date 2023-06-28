@@ -62,10 +62,11 @@
     border-bottom: none;
     margin: 10px 0px;
 }
-.event_poster button{
+.event_poster .preview_btn{
     background-color: transparent;
     border: 1px solid #f45725;
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
+    text-decoration: none;
 }

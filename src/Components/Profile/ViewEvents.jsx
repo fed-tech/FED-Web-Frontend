@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import EventCards from './EventCards'
 import './cssp/ViewEvents.css'
-import AuthContext from '../../store/auth-context';
 import axios from 'axios';
 
 function ViewEvents() {

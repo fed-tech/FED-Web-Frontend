@@ -19,6 +19,7 @@ function AddEvent({setViewEvents}) {
     setForm({...form, [name]: value})
 
   }
+  console.log(form)
   const handleSubmit = async (e)=>{
     e.preventDefault();
     const obj = {
@@ -47,12 +48,12 @@ function AddEvent({setViewEvents}) {
   }
   return (
     <div className='addevent'>
-        <form action="" onSubmit={handleSubmit}>
+        <form action="">
             <input type="text" placeholder='Event Title' name='title' onChange={dataInp}/>
             <input type="text" placeholder='About the Event' name='about' onChange={dataInp}/>
             <div className='event_poster'>
               <input type="text" placeholder='Poster Link' name='poster' onChange={dataInp}/>
-              <button>Preview</button>
+              <a href={form.poster} target='blank' className='preview_btn'>Preview</a>
             </div>
             <div className='addevent_date'>
                 <input type="text" placeholder='Event Date' name='date' onChange={dataInp}/>
@@ -60,7 +61,7 @@ function AddEvent({setViewEvents}) {
             </div>
             <input type="text" placeholder='Registration Type' name='reg_type' onChange={dataInp}/>
             <div className='inp_btn'>
-              <input type="submit" value="Submit" className='addevent_submit_btn'/>
+              <input type="submit" value="Submit" className='addevent_submit_btn' onClick={handleSubmit}/>
             </div>
         </form>
     </div>

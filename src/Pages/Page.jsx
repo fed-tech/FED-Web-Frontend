@@ -69,7 +69,7 @@ function Page() {
                 onClick={handleEvent}
                 className="dashboardBottom_options"
               >
-                <InsertInvitationIcon className="dashboardBottom_icons"  htmlColor = {event && "#f45725"}/>
+                <InsertInvitationIcon className="dashboardBottom_icons"  id = {event?"hello":""} />
                 <p style={{ color: event && "#f45725"}}
                  >Events</p>
               </div>

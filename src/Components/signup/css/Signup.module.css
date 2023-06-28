@@ -215,14 +215,14 @@ input::placeholder {
 }
 .mobileno_container input{
   margin-top: 0;
+
 }
 .mobileno_container p{
-  border-bottom: 2px solid black;
   color: #808080;
-  padding: 9.7px 0px;
-}
-#number{
- 
+  padding: 10px 23.2px;
+  border-bottom: 1px solid black;
+
+  
 }
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
