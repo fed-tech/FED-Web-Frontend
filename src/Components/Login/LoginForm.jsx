@@ -58,7 +58,7 @@ function LoginForm() {
       e.target.style.borderBottom = "1.5px solid transparent";
       e.target.style.outline = "none";
     } else {
-      e.target.style.borderBottom = "1.5px solid  transparent";
+      e.target.style.borderBottom = "1.5px solid transparent";
     }
 
     if (name === "email") {
