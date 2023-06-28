@@ -50,7 +50,6 @@ function LoginForm() {
     }
 
     setUser({ ...user, [name]: value });
-    console.log(user);
   };
 
   const { email, passwrd } = user;
