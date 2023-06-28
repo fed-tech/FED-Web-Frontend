@@ -14,6 +14,8 @@ import "./index.css";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AuthContextProvider>
-    <App />
+    <GoogleOAuthProvider clientId="606182598951-2jbnd8127rc2hoaoapfm3te6t6bl8p72.apps.googleusercontent.com">
+      <App />
+    </GoogleOAuthProvider>
   </AuthContextProvider>
 );
