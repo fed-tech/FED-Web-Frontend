@@ -214,26 +214,23 @@
   border-bottom: 1.5px solid black;
 }
 
-.user input {
-  line-height: 1.063em;
-  text-align: left;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  padding: 10.6px 23.2px;
-  width: 100%;
-  border-bottom: 1.5px solid black;
-}
-
+.user input,
 .pass input {
   line-height: 1.063em;
   text-align: left;
   background-color: transparent;
   outline: none;
   border: none;
-  padding: 10.6px 23.2px 0px 23.2px;
   width: 100%;
-  /* border-bottom: 1.5px solid black; */
+}
+
+.user input {
+  padding: 10.6px 23.2px;
+  border-bottom: 1.5px solid black;
+}
+
+.pass input {
+  padding: 10.6px 23.2px 0px 23.2px;
 }
 
 .username,
