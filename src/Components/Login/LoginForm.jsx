@@ -127,9 +127,9 @@ function LoginForm() {
         email: mail,
       });
 
-      console.log(response);
+      console.log(response.data);
 
-      if (response.status === 202) {
+      if (response.data.code === 1) {
         authCtx.login(
           response.data.user.name,
           response.data.user.email,
