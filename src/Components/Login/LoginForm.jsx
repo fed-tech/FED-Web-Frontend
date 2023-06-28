@@ -123,7 +123,17 @@ function LoginForm() {
     } else {
       setLoad(false);
       setIsinValid(true);
-      setErrMssg("Please fill all the fields");
+
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
+
+      // setErrMssg("Please fill all the fields");
     }
   };
 
