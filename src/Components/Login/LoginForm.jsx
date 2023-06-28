@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
-import bcrypt from "bcryptjs-react";
 import { Link, useNavigate } from "react-router-dom";
+
+// Oauth
 import { useGoogleLogin } from "@react-oauth/google";
 
-//css
-import Lcss from "./css/loginpg.module.css";
+// bcrypt
+import bcrypt from "bcryptjs-react";
 
 //  axios
 import axios from "axios";
@@ -12,14 +13,13 @@ import axios from "axios";
 // state
 import AuthContext from "../../store/auth-context";
 
+//css
+import Lcss from "./css/loginpg.module.css";
+
 // img
 import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
-  const authCtx = useContext(AuthContext);
-
-  const navigate = useNavigate();
-
   const [user, setUser] = useState({
     email: "",
     passwrd: "",
@@ -28,6 +28,10 @@ function LoginForm() {
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
+
+  const authCtx = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const DataInp = (e) => {
     const name = e.target.name;
