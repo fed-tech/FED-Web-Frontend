@@ -161,6 +161,8 @@ function LoginForm() {
 
   const loginWithGoogle = async () => {
     try {
+      setLoad(true);
+
       const googleResponse = await axios.get(
         `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
         {
@@ -180,6 +182,8 @@ function LoginForm() {
       console.log(response.data);
 
       if (response.data.status === true) {
+        setLoad(false);
+
         authCtx.login(
           response.data.user.name,
           response.data.user.email,
@@ -193,14 +197,36 @@ function LoginForm() {
           response.data.token,
           10800000
         );
-        // navigate("/MyProfile");
+
         console.log("Login Done 💯💯💯💯💯");
+
+        navigate("/MyProfile");
         return;
       } else {
-        console.log("signup");
-        // navigate("/signup");
+        setLoad(false);
+
+        if (response.data.code === 4) {
+          setError({
+            mainColor: "#E5F6FD",
+            secondaryColor: "#1AB1F5",
+            symbol: "info",
+            title: "Information",
+            text: "Email not verified",
+            val: true,
+          });
+        } else if (response.data.code === 2) {
+          setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Check it out",
+            text: "Invalid Credentials",
+            val: true,
+          });
+        }
       }
     } catch (err) {
+      setLoad(false);
       console.log(err);
     }
   };
