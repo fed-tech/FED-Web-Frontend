@@ -198,15 +198,23 @@
 .user,
 .pass {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6.9px;
   width: 100%;
 }
 
-.user input,
-.pass input {
+.user {
+  flex-direction: column;
+  padding: 6.9px;
+}
+
+.pass {
+  flex-direction: row;
+  padding: 6.9px;
+  border-bottom: 1.5px solid black;
+}
+
+.user input {
   line-height: 1.063em;
   text-align: left;
   background-color: transparent;
@@ -215,6 +223,17 @@
   padding: 10.6px 23.2px;
   width: 100%;
   border-bottom: 1.5px solid black;
+}
+
+.pass input {
+  line-height: 1.063em;
+  text-align: left;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 10.6px 23.2px 0px 23.2px;
+  width: 100%;
+  /* border-bottom: 1.5px solid black; */
 }
 
 .username,
