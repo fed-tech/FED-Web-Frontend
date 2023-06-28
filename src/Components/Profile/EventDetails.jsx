@@ -32,7 +32,6 @@ function EventDetails({cardNo}) {
           <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
-          {/* <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
@@ -40,13 +39,6 @@ function EventDetails({cardNo}) {
           <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
           <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div> */}
         </div>
         <div className={eventCss.btns}>
           <button className={eventCss.edit}>Edit</button>
