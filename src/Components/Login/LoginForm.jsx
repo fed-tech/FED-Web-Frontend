@@ -235,9 +235,6 @@ function LoginForm() {
             <span className={Lcss.spann}>Signup</span>
           </Link>
         </p>
-        <p id="errmssg" style={{ color: isinValid ? "red" : "white" }}>
-          {errmssg}
-        </p>
       </div>
 
       <Alert variant={variants} val={setError} />
