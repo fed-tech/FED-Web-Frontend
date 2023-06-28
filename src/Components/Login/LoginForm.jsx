@@ -119,7 +119,6 @@ function LoginForm() {
         }
       } catch (err) {
         setLoad(false);
-        // setIsinValid(true);
 
         if (err.response.data.code === 4) {
           setError({
@@ -130,8 +129,6 @@ function LoginForm() {
             text: "Email not verified",
             val: true,
           });
-
-          // setErrMssg("Email not verified");
         } else if (err.response.data.code === 2) {
           setError({
             mainColor: "#FFC0CB",
@@ -141,14 +138,11 @@ function LoginForm() {
             text: "Invalid Credentials",
             val: true,
           });
-
-          // setErrMssg("Invalid credentials");
         }
         console.log(err);
       }
     } else {
       setLoad(false);
-      // setIsinValid(true);
 
       setError({
         mainColor: "#FFC0CB",
@@ -158,8 +152,6 @@ function LoginForm() {
         text: "Please Fill All The Details",
         val: true,
       });
-
-      // setErrMssg("Please fill all the fields");
     }
   };
 
@@ -218,10 +210,6 @@ function LoginForm() {
       loginWithGoogle();
     }
   }, [codeResponse]);
-
-  // useEffect(() => {
-  //   setIsinValid(false);
-  // }, [user]);
 
   return (
     <>
