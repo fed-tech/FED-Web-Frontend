@@ -125,6 +125,15 @@ function LoginForm() {
 
           // setErrMssg("Email not verified");
         } else if (err.response.data.code === 2) {
+          setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Check it out",
+            text: "Invalid Credentials",
+            val: true,
+          });
+
           setErrMssg("Invalid credentials");
         }
         console.log(err);
