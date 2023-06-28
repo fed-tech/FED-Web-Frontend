@@ -52,10 +52,10 @@ function LoginForm() {
     setUser({ ...user, [name]: value });
   };
 
-  const { email, passwrd } = user;
-
   const handlelogin = async (e) => {
     e.preventDefault();
+
+    const { email, passwrd } = user;
 
     const username = email;
     if (email != "" && passwrd != "") {
