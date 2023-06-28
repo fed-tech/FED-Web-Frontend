@@ -1,14 +1,22 @@
-import React, { useContext, useEffect, useState } from "react";
-import pageCss from "./Css/Page.module.css";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+//icons
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
+
+//state
 import AuthContext from "../store/auth-context";
-import { useNavigate } from "react-router-dom";
+
+//components
 import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
+
+//css
+import pageCss from "./Css/Page.module.css";
 
 function Page() {
   const navigate = useNavigate();
@@ -52,7 +60,6 @@ function Page() {
       <div className={pageCss.Page}>
         <div className={pageCss.page_left}>
           <div className={pageCss.page_left_dashboard}>
-            
             <div className={pageCss.page_left_dashboardTop} onClick={handleProfile}>
               <h2 className={pageCss.page_left_title}>Dashboard</h2>
               <div className={pageCss.page_left_gotoPro}>
