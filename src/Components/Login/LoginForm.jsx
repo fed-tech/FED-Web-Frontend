@@ -114,7 +114,16 @@ function LoginForm() {
         setIsinValid(true);
 
         if (err.response.data.code === 4) {
-          setErrMssg("Email not verified");
+          setError({
+            mainColor: "#E5F6FD",
+            secondaryColor: "#1AB1F5",
+            symbol: "info",
+            title: "Information",
+            text: "Email not verified",
+            val: true,
+          });
+
+          // setErrMssg("Email not verified");
         } else if (err.response.data.code === 2) {
           setErrMssg("Invalid credentials");
         }
