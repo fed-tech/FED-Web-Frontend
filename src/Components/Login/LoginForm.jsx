@@ -195,7 +195,7 @@ function LoginForm() {
       </div>
       <p className={Lcss.or}>Or</p>
 
-      <form>
+      <form className={Lcss.formTag}>
         <div className={Lcss.user}>
           <input
             type="text"
