@@ -24,7 +24,7 @@ import Lcss from "./css/loginpg.module.css";
 import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
-  const [isinValid, setIsinValid] = useState(false);
+  // const [isinValid, setIsinValid] = useState(false);
   const [codeResponse, setCodeResponse] = useState();
   const [loadingEffect, setLoad] = useState(false);
 
@@ -34,11 +34,11 @@ function LoginForm() {
   });
 
   const [variants, setError] = useState({
-    mainColor: "#EDFEEE",
-    secondaryColor: "#5CB660",
-    symbol: "check_circle",
-    title: "Success",
-    text: "We'll revert back to you soon!",
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
     val: false,
   });
 
@@ -119,7 +119,7 @@ function LoginForm() {
         }
       } catch (err) {
         setLoad(false);
-        setIsinValid(true);
+        // setIsinValid(true);
 
         if (err.response.data.code === 4) {
           setError({
@@ -148,7 +148,7 @@ function LoginForm() {
       }
     } else {
       setLoad(false);
-      setIsinValid(true);
+      // setIsinValid(true);
 
       setError({
         mainColor: "#FFC0CB",
@@ -219,9 +219,9 @@ function LoginForm() {
     }
   }, [codeResponse]);
 
-  useEffect(() => {
-    setIsinValid(false);
-  }, [user]);
+  // useEffect(() => {
+  //   setIsinValid(false);
+  // }, [user]);
 
   return (
     <>
