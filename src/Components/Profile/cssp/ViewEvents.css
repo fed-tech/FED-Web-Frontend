@@ -12,6 +12,16 @@
     height: 100%;
     
 }
+.viewEventDets {
+  margin-left: 20px;
+  width: 85%;
+  height: 100%;
+}
+.viewEventss{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 @media(max-width:1408px)
 {
   .viewevents{

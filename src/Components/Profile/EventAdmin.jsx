@@ -8,6 +8,7 @@ import AuthContext from "../../store/auth-context";
 function EventAdmin() {
   const [viewEvents, setViewEvents] = useState(true);
   const [showEvent, setShow] = useState(false);
+  const [cardNo, setCardNo] = useState("");
   const authCtx = useContext(AuthContext);
   const handleView = (e) => {
     e.target.style.color = "#f45725";
@@ -34,7 +35,7 @@ function EventAdmin() {
         </p>
       </div>
       <div className="info_content">
-        {viewEvents && <ViewEvents showEvent = {showEvent} setShow = {setShow}/>}
+        {viewEvents && <ViewEvents showEvent = {showEvent} setShow = {setShow} setCardNo = {setCardNo} cardNo= {cardNo}/>}
         {!viewEvents && <AddEvent setViewEvents={setViewEvents} />}
       </div>
     </div>

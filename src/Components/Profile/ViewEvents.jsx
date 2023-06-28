@@ -4,7 +4,7 @@ import './cssp/ViewEvents.css'
 import axios from 'axios';
 import EventDetails from './EventDetails';
 
-function ViewEvents({showEvent,setShow}) {
+function ViewEvents({showEvent,setShow, setCardNo, cardNo}) {
   const [events,setEvents] = useState([]);
   const loadEvents = async()=>{
     const response = await axios.get("http://localhost:5000/event/getevent");
@@ -18,10 +18,17 @@ function ViewEvents({showEvent,setShow}) {
     loadEvents();
   }, []);
   return (
-    <div className='viewevents'>
-        {showEvent?<EventDetails/>:events.map((i,idx)=>(
-          <EventCards key={idx} info = {i} setShow = {setShow}/>
-        ))}
+    <div className='viewEventss'>
+        {showEvent?
+        <div className="viewEventDets">
+          <EventDetails cardNo = {cardNo}/>
+        </div>
+        :
+        <div className="viewevents">
+          {events.map((i,idx)=>(
+            <EventCards key={idx} info = {i} setShow = {setShow} setCardNo = {setCardNo} cardNo = {cardNo}/>
+          ))}
+        </div>}
     </div>
   )
 }
