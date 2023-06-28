@@ -24,7 +24,6 @@ import Lcss from "./css/loginpg.module.css";
 import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
-  // const [isinValid, setIsinValid] = useState(false);
   const [codeResponse, setCodeResponse] = useState();
   const [loadingEffect, setLoad] = useState(false);
 
@@ -220,7 +219,7 @@ function LoginForm() {
             secondaryColor: "#FF69B4",
             symbol: "pets",
             title: "Check it out",
-            text: "Invalid Credentials",
+            text: "Please Sign Up first",
             val: true,
           });
         }
