@@ -55,18 +55,18 @@ function LoginForm() {
     const value = e.target.value;
 
     if (value === "") {
-      e.target.style.borderBottom = "2px solid transparent";
+      e.target.style.borderBottom = "1.5px solid transparent";
       e.target.style.outline = "none";
     } else {
-      e.target.style.borderBottom = "2px solid  transparent";
+      e.target.style.borderBottom = "1.5px solid  transparent";
     }
 
     if (name === "email") {
       if (value.indexOf("@") === -1 || value.indexOf(".") === -1) {
-        e.target.style.borderBottom = "2px solid  #FF0000";
+        e.target.style.borderBottom = "1.5px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
-        e.target.style.borderBottom = "2px solid  black";
+        e.target.style.borderBottom = "1.5px solid  black";
       }
     }
 
