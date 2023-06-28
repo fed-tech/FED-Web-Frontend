@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 // Oauth
 import { useGoogleLogin } from "@react-oauth/google";
 
+// Components
+import { Alert } from "./../../MicroInterAction/Alert";
+
 // bcrypt
 import bcrypt from "bcryptjs-react";
 
@@ -167,6 +170,7 @@ function LoginForm() {
   useEffect(() => {
     setIsinValid(false);
   }, [user]);
+
   return (
     <>
       <div className={Lcss.googlepart} onClick={() => login()}>
@@ -211,6 +215,8 @@ function LoginForm() {
           {errmssg}
         </p>
       </div>
+
+      <Alert variant={variants} val={setError} />
     </>
   );
 }
