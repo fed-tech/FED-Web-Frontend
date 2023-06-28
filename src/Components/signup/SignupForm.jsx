@@ -13,7 +13,7 @@ import SuCss from "./css/Signup.module.css";
 // state
 import AuthContext from "../../store/auth-context";
 
-import google from "../../Img/Google.svg";
+import google from "./../../assets/Login/Google.svg";
 
 function SignupForm() {
   const [showUser, setUser] = useState({
@@ -93,7 +93,16 @@ function SignupForm() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
-    const {email, Password, FirstName, LastName, RollNumber, School, College, MobileNo} = showUser;
+    const {
+      email,
+      Password,
+      FirstName,
+      LastName,
+      RollNumber,
+      School,
+      College,
+      MobileNo,
+    } = showUser;
     const name = FirstName + " " + LastName;
     if (
       name !== "" &&
