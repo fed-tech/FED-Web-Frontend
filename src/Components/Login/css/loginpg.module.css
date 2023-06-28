@@ -218,27 +218,21 @@
 }
 
 .username {
+  outline: none;
   border: none;
   color: black;
   font-size: 0.75rem;
   padding: 0.313rem;
   font-family: "Mulish", sans-serif;
-}
-
-.username:focus {
-  outline: none;
 }
 
 .password {
+  outline: none;
   border: none;
   color: black;
   font-size: 0.75rem;
   padding: 0.313rem;
   font-family: "Mulish", sans-serif;
-}
-
-.password:focus {
-  outline: none;
 }
 
 .signup {
