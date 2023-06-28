@@ -1,22 +1,18 @@
-import React, { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+// css
 
-//icons
+import pageCss from "./Css/Page.module.css";
+
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-
-//state
 import AuthContext from "../store/auth-context";
-
-//components
+import { useNavigate } from "react-router-dom";
 import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
-
-//css
-import pageCss from "./Css/Page.module.css";
+import EventForm from "../Components/Profile/EventForm";
 
 function Page() {
   const navigate = useNavigate();
@@ -30,62 +26,67 @@ function Page() {
     navigate("/Login");
     authCtx.logout();
   };
-  const handleProfile = ()=>{
+  const handleProfile = () => {
     setProfile(true);
     setEvent(false);
     setFrom(false);
     setMembers(false);
   }
-  const handleEvent = ()=>{
+  const handleEvent = () => {
     setProfile(false);
     setEvent(true);
     setFrom(false);
     setMembers(false);
   }
-  const handleForm = ()=>{
+  const handleForm = () => {
     setProfile(false);
     setEvent(false);
     setFrom(true);
     setMembers(false);
   }
-  const handleMembers = ()=>{
+  const handleMembers = () => {
     setProfile(false);
     setEvent(false);
     setFrom(false);
     setMembers(true);
   }
-  
+
   return (
     <div className={pageCss.Page_main}>
       <div className={pageCss.Page}>
-        <div className={pageCss.page_left}>
-          <div className={pageCss.page_left_dashboard}>
-            <div className={pageCss.page_left_dashboardTop} onClick={handleProfile}>
-              <h2 className={pageCss.page_left_title}>Dashboard</h2>
-              <div className={pageCss.page_left_gotoPro}>
-                <div className={pageCss.member_profilePic}>
+        <div className={pageCss.pageLeft}>
+          <div className={pageCss.dashboard}>
+
+            <div className={pageCss.dashboardTop} onClick={handleProfile}>
+              <h1>DASHBOARD</h1>
+              <h2>DASH</h2>
+              <h2>BOARD</h2>
+              <div className={pageCss.gotoPro}>
+                <div className={pageCss.profilePic}>
                   <img src={authCtx.user.pic} alt="" />
                 </div>
-                <div className={pageCss.page_left_position}>
-                  <h2 className={pageCss.user_name}>{authCtx.user.name}</h2>
+                <div className={pageCss.Position}>
+                  <p className={pageCss.name}>{authCtx.user.name}</p>
                   <p className={pageCss.designation}>Admin</p>
                 </div>
               </div>
             </div>
-            <div className={pageCss.page_left_dashboardBottom}>
+            <div className={pageCss.dashboardBottom}>
               <div
                 onClick={handleEvent}
-                className={pageCss.dashboardBottom_options}
+                className={event?`${pageCss.dashboardBottom_options} ${pageCss.hello}`:`${pageCss.dashboardBottom_options}`}
               >
-                <InsertInvitationIcon className={pageCss.dashboardBottom_icons} id ={pageCss[event?"hello":""]}/>
-                <p style={{ color: event && "#f45725"}}
-                 >Events</p>
+                <InsertInvitationIcon className={pageCss.dashboardBottom_icons}/>
+                <p
+                >Events</p>
               </div>
-              <div className={pageCss.dashboardBottom_options}>
+              <div
+                onClick={handleForm}
+                className={form?`${pageCss.dashboardBottom_options} ${pageCss.hello}`:`${pageCss.dashboardBottom_options}`} >
                 <PlaylistAddIcon className={pageCss.dashboardBottom_icons}/>
                 <p>Form</p>
               </div>
-              <div className={pageCss.dashboardBottom_options}>
+              <div className={members?`${pageCss.dashboardBottom_options} ${pageCss.hello}`:`${pageCss.dashboardBottom_options}`}>
                 <GroupsIcon className={pageCss.dashboardBottom_icons}/>
                 <p>Members</p>
               </div>
@@ -96,9 +97,10 @@ function Page() {
             </div>
           </div>
         </div>
-        <div className={pageCss.page_right}>
+        <div className={pageCss.pageRight}>
           {profile && <Profile setShowUpdateModal={setShowUpdateModal} />}
           {event && <EventAdmin />}
+          {form && <EventForm />}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />

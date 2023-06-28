@@ -7,10 +7,12 @@ import AuthContext from "../../store/auth-context";
 
 function EventAdmin() {
   const [viewEvents, setViewEvents] = useState(true);
+  const [showEvent, setShow] = useState(false);
   const authCtx = useContext(AuthContext);
   const handleView = (e) => {
     e.target.style.color = "#f45725";
     setViewEvents(true);
+    setShow(false)
   };
   const handleAdd = () => {
     setViewEvents(false);
@@ -32,7 +34,7 @@ function EventAdmin() {
         </p>
       </div>
       <div className="info_content">
-        {viewEvents && <ViewEvents />}
+        {viewEvents && <ViewEvents showEvent = {showEvent} setShow = {setShow}/>}
         {!viewEvents && <AddEvent setViewEvents={setViewEvents} />}
       </div>
     </div>

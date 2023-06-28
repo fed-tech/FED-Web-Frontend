@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import EventCards from './EventCards'
 import './cssp/ViewEvents.css'
 import axios from 'axios';
+import EventDetails from './EventDetails';
 
-function ViewEvents() {
+function ViewEvents({showEvent,setShow}) {
   const [events,setEvents] = useState([]);
   const loadEvents = async()=>{
     const response = await axios.get("http://localhost:5000/event/getevent");
@@ -18,8 +19,8 @@ function ViewEvents() {
   }, []);
   return (
     <div className='viewevents'>
-        {events.map((i,idx)=>(
-          <EventCards key={idx} info = {i}/>
+        {showEvent?<EventDetails/>:events.map((i,idx)=>(
+          <EventCards key={idx} info = {i} setShow = {setShow}/>
         ))}
     </div>
   )
