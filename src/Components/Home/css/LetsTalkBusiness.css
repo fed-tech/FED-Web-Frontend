@@ -1,158 +1,158 @@
 .letsTalkBusiness {
-    background-image: url("https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63ac31959b0396295e982bcb_Rectangle-89.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 90.5px 130.5px;
-    display: flex;
-    justify-content: space-between;
+  background-image: url("https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63ac31959b0396295e982bcb_Rectangle-89.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 90.5px 130.5px;
+  display: flex;
+  justify-content: space-between;
 }
-  
+
 .letsTalkBusiness-left {
-    width: 50%;
-    background-color: transparent;
+  width: 50%;
+  background-color: transparent;
 }
-  
+
 .letsTalkBusiness-right {
-    width: 42%;
-    background-color: transparent;
+  width: 42%;
+  background-color: transparent;
 }
-  
+
 .business-heading {
-    background-color: transparent;
-    font-family: "Rubik", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 80px;
-    letter-spacing: 0.005em;
-    color: #ffffff;
-    margin-bottom: 20px;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 80px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
+  margin-bottom: 20px;
 }
-  
+
 .business-text {
-    background-color: transparent;
-    font-family: "Manrope", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 0.005em;
-    color: #ffffff;
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  color: #ffffff;
 }
-  
+
 .letsTalkBusiness-right div {
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
 }
-  
+
 .letsTalkBusiness-right div label {
-    background-color: transparent;
-    font-family: "Manrope", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 0.005em;
-    color: #f45725;
-    margin-bottom: 10px;
+  background-color: transparent;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  color: #f45725;
+  margin-bottom: 10px;
 }
-  
+
 form {
-    background-color: transparent;
+  background-color: transparent;
 }
-  
+
 .letsTalkBusiness-right div input,
 .letsTalkBusiness-right div textarea {
-    color: #000;
-    background-color: #fff;
-    padding: 6px;
-    font-family: "Manrope", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 40px;
-    letter-spacing: 0.005em;
-    margin-bottom: 35px;
-    outline: none;
-    border: 2px solid #f45725;
-    border-radius: 6px;
+  color: #000;
+  background-color: #fff;
+  padding: 6px;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  margin-bottom: 35px;
+  outline: none;
+  border: 2px solid #f45725;
+  border-radius: 6px;
 }
-  
+
 .letsTalkBusiness-right div textarea {
-    height: 200px;
-    resize: none;
+  height: 200px;
+  resize: none;
 }
-  
+
 .letsTalkBusiness-right button {
-    width: 100%;
-    border-width: 0px;
-    border-radius: 6px;
-    padding: 20px;
-    font-family: "Rubik", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    color: #ffffff;
-    background-color: #f45725;
-    cursor: pointer;
-    height: 64px;
+  width: 100%;
+  border-width: 0px;
+  border-radius: 6px;
+  padding: 20px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #f45725;
+  cursor: pointer;
+  height: 64px;
 }
 
 @media only screen and (max-width: 900px) {
-    .letsTalkBusiness {
-        padding: 90.5px 80px;
-    }
-  
-    .letsTalkBusiness-right {
-        width: 46%;
-    }
+  .letsTalkBusiness {
+    padding: 90.5px 80px;
+  }
+
+  .letsTalkBusiness-right {
+    width: 46%;
+  }
 }
 
 @media only screen and (max-width: 810px) {
-    .letsTalkBusiness {
-        flex-direction: column;
-    }
-  
-    .letsTalkBusiness-left,
-    .letsTalkBusiness-right {
-        width: 100%;
-    }
-  
-    .letsTalkBusiness-left {
-      margin-bottom: 30px;
-    }
+  .letsTalkBusiness {
+    flex-direction: column;
+  }
+
+  .letsTalkBusiness-left,
+  .letsTalkBusiness-right {
+    width: 100%;
+  }
+
+  .letsTalkBusiness-left {
+    margin-bottom: 30px;
+  }
 }
 
 @media only screen and (max-width: 720px) {
-    .business-heading {
-        font-size: 40px;
-    }
+  .business-heading {
+    font-size: 40px;
+  }
 }
 
 @media only screen and (max-width: 650px) {
-    .business-text {
-        font-size: 14px;
-    }
-    .business-heading {
-        font-size: 38px;
-        margin-bottom: 20px;
-    }
-    .letsTalkBusiness {
-        padding: 60px 20px;
-    }
+  .business-text {
+    font-size: 14px;
+  }
+  .business-heading {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+  .letsTalkBusiness {
+    padding: 60px 20px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
-    .business-heading {
-        font-size: 30px;
-    }
+  .business-heading {
+    font-size: 30px;
+  }
 }
 
 @media only screen and (max-width: 375px) {
-    .business-heading {
-        font-size: 20px;
-    }
+  .business-heading {
+    font-size: 20px;
+  }
 }
