@@ -20,12 +20,17 @@ import AuthContext from "../../store/auth-context";
 //css
 import Lcss from "./css/loginpg.module.css";
 
+// icons
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+
 // img
 import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
   const [codeResponse, setCodeResponse] = useState();
   const [loadingEffect, setLoad] = useState(false);
+  const [see, hide] = useState(false);
 
   const [user, setUser] = useState({
     email: "",
@@ -271,6 +276,7 @@ function LoginForm() {
             max="10"
             required
           />
+          <VisibilityOffIcon className={Lcss.iconSee} />
         </div>
         <div className={Lcss.forgotPassword}>
           <Link to="/forgotpassword">
