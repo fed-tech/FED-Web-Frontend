@@ -12,11 +12,11 @@
     justify-content: center;
     margin-top: 120px;
     width: 100%;
-     
+
 
 }
 
-.page_left {
+.pageLeft {
     padding-top: 162px;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@
     width: 26.2%;
 }
 
-.page_left_dashboard {
+.dashboard {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,33 +36,38 @@
     padding-bottom: 200px;
 }
 
-.page_left_dashboardTop {
+.dashboardTop {
     padding-top: 18px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     align-items: center;
 }
 
-.page_left_dashboardTop h1,
-h2 {
+.dashboardTop h1,
+.dashboardTop h2 {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 800;
-    /* font-size: 26.0215px; */
+    font-size: 26.0215px;
     line-height: 24px;
     letter-spacing: 0.005em;
     color: #999999;
-    /* text-align: center; */
+    text-align: center;
 }
-.member_profilePic{
+
+.dashboardTop h2 {
+    display: none;
+}
+
+.profilePic {
     display: flex;
     justify-content: center;
 }
 
 
-.member_profilePic img {
+.profilePic img {
     width: 200px;
     height: 200px;
     border-radius: 15px;
@@ -70,7 +75,7 @@ h2 {
     /* object-fit:scale-down; */
 }
 
-.page_left_position .user_name {
+.Position .name {
     margin-top: 17px;
     font-family: 'Mulish';
     font-style: normal;
@@ -79,9 +84,11 @@ h2 {
     letter-spacing: 0.005em;
     color: #EFEFEF;
     inline-size: 100%;
+    text-align: center;
     overflow-wrap: break-word;
 }
-.page_left_position .designation {
+
+/* .Position .designation {
     margin-top: 17px;
     font-family: 'Mulish';
     font-style: normal;
@@ -91,11 +98,11 @@ h2 {
     color: #808080;
     inline-size: 100%;
     overflow-wrap: break-word;
-    text-align: center;
-}
+} */
 
-.Position .position {
+.Position .designation {
     margin-top: 9px;
+    text-align: center;
     font-family: 'Mulish';
     font-style: normal;
     font-weight: 700;
@@ -104,11 +111,12 @@ h2 {
     letter-spacing: 0.005em;
     color: #999999;
 }
-.page_left_gotoPro {
+
+.gotoPro {
     cursor: pointer;
 }
 
-.page_left_dashboardBottom {
+.dashboardBottom {
     margin-top: 51px;
     width: 100%;
 
@@ -121,7 +129,8 @@ h2 {
     letter-spacing: 0.005em;
     align-items: center;
 }
-.dashboardBottom_options{
+
+.dashboardBottom_options {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -129,16 +138,20 @@ h2 {
     width: 42%;
     margin-bottom: 34px;
 }
-.dashboardBottom_options p{
+
+.dashboardBottom_options p {
     margin-left: 10px;
     transition: all 0.3s;
 }
-.dashboardBottom_options:hover p{
-    color:#f45725;
+
+.dashboardBottom_options:hover p {
+    color: #f45725;
 }
-.dashboardBottom_options:hover .dashboardBottom_icons>path{
-    color:#f45725;
+
+.dashboardBottom_options:hover .dashboardBottom_icons>path {
+    color: #f45725;
 }
+
 
 #hello path{
     color:#f45725;
@@ -147,6 +160,7 @@ h2 {
 
 .page_right{
     padding-top: 162px;
+    padding-bottom: 100px;
     background-image: url(/src/Img/Rectangle24.jpg);
     background-size: cover;
     width: 73.8%;
@@ -156,51 +170,369 @@ h2 {
     padding-top: 162px;
 }
 
-@media (max-width: 1000px){
-    .page_left, .page_right {
+@media (max-width: 1000px) {
+
+    .pageLeft,
+    .pageRight {
         padding-top: 100px;
     }
-    .page_right{
+
+    .pageRight {
         width: 63%;
     }
-    .page_left{
+
+    .pageLeft{
         width: 37%;
     }
-    .page_left_dashboard {
+
+    .dashboard {
         padding-left: 40px;
         padding-right: 40px;
     }
-    .page_left_dashboard h2{
+
+    .dashboard h1 {
         font-size: 25px;
     }
-    .page_left_dashboardTop img{
+
+    .dashboardTop img {
         height: 180px;
         width: 180px;
     }
-    .page_left_position .user_name{
+
+    .Position .name {
         font-size: 26px;
 
     }
-    .page_left_dashboardBottom {
+
+    .dashboardBottom {
         font-size: 20px;
     }
 }
-@media (max-width: 1300px){
-    .page_left{
+
+@media (max-width: 1300px) {
+    .pageLeft {
         width: 33%;
     }
-    .page_right{
+
+    .pageRight{
         width: 67%;
     }
 }
-@media (max-width: 1155px){
-    .page_left, .page_right {
+
+@media (max-width: 1155px) {
+
+    .pageLeft,
+    .pageRight {
         padding-top: 130px;
     }
-    .page_left{
+
+    .pageLeft {
         width: 36%;
     }
-    .page_right{
+
+    .pageRight {
         width: 64%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .pageRight{
+        width: 67%;
+    }
+
+    .pageLeft {
+        width: 33%;
+    }
+}
+
+@media (max-width: 1155px) {
+    .pageRight {
+        width: 64%;
+    }
+
+    .pageLeft {
+        width: 36%;
+    }
+
+    .pageLeft,
+    .pageRight {
+        padding-top: 130px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .dashboardTop h1,
+    .dashboardTop h2 {
+        font-size: 25px;
+    }
+
+    .Position .name {
+        font-size: 26px;
+    }
+
+    .dashboardTop img {
+        height: 180px;
+        width: 180px;
+    }
+
+    .dashboardBottom {
+        font-size: 20px;
+    }
+
+    .pageRight {
+        width: 63%;
+    }
+
+    .pageLeft {
+        width: 37%;
+    }
+
+    .pageLeft,
+    .pageRight {
+        padding-top: 100px;
+    }
+
+    .proHeading {
+        /* width: 60%; */
+        font-size: 30px;
+    }
+
+    .dets1,
+    .vals1 {
+        font-size: 24px;
+    }
+
+    .dashboard {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media (max-width: 880px) {
+    .pageRight {
+        align-items: center;
+        justify-content: center;
+        width: 67%;
+        padding-bottom: 60px;
+    }
+
+    .Position .name,
+    .dashboardBottom {
+        font-weight: 500;
+    }
+
+    .pageLeft {
+        width: 33%;
+    }
+
+    .proHeading {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .dashboard {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .profilePic img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dashboardTop h1,
+    .dashboardTop h2 {
+        font-size: 20px;
+        text-align: unset;
+    }
+    .Position name {
+        inline-size: 50%;
+    }
+    .profilePic {
+        justify-content: unset;
+    }
+
+    .dashboardTop,
+    .dashboardBottom {
+        align-items: flex-start;
+    }
+
+    .Position .name,
+    .Position .designation {
+        font-size: 20px;
+        text-align: unset;
+        font-weight: 400;
+    }
+
+    .dashboardBottom p {
+        display: none;
+    }
+
+    .pageLeft {
+        width: 28%;
+    }
+
+    .pageRight {
+        width: 72%;
+    }
+
+    .dets1,
+    .vals1 {
+        font-size: 22px;
+    }
+
+    .dashboard {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 690px) {
+
+    .pageRight {
+        padding: 40px 0;
+    }
+
+    .pageLeft {
+        padding-top: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .dashboardTop h1 {
+        display: none;
+    }
+
+    .dashboardTop h2 {
+        display: block;
+    }
+
+    .pageLeft {
+        width: 20%;
+    }
+
+    .dashboard {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+    .pageRight {
+        width: 80%;
+    }
+
+    .pageLeft,
+    .pageRight {
+        padding-top: 0px;
+    }
+
+    .dashboard {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .dashboardTop h2 {
+        font-size: 16px;
+    }
+
+    .proHeading {
+        padding-bottom: 40px;
+        width: 70%;
+    }
+
+    .Position .name {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .headInnerText {
+        font-size: 23px;
+    }
+
+    .dets1,
+    .vals1 {
+        font-size: 19px;
+        padding: 15px 15px 15px 0;
+    }
+
+    .pageRight {
+        justify-content: flex-start;
+    }
+
+    .dashboard {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 482px) {
+    .pageLeft {
+        width: 17%;
+    }
+
+    .pageRight {
+        width: 83%;
+    }
+
+    .dashboardTop img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .dashboardTop h2 {
+        font-size: 13px;
+    }
+
+    .Position .name {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .headInnerText {
+        font-size: 20px;
+    }
+
+    .dets1,
+    .vals,
+    .vals1 {
+        font-size: 16px;
+    }
+
+    .dashboard {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .pageRight {
+        padding: 10px 0 40px 0;
+    }
+
+    .proHeading {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 394px) {
+    .pageRight {
+        padding: 10px 10px 40px 15px;
+    }
+
+    .proHeading {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 348px) {
+    .pageRight {
+        padding: 10px 0 30px 15px;
+    }
+
+    .proHeading {
+        font-size: 22px;
     }
 }
