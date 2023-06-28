@@ -1,5 +1,5 @@
 .alert-mDiv {
-  width: 250px;
+  width: 350px;
   position: fixed;
   right: 2%;
   bottom: 4%;
@@ -36,7 +36,7 @@
 
 .description-container {
   font-size: 1.05rem;
-  margin: 15px 20px;
+  margin: 15px 35px 15px 7px;
   width: 100%;
 }
 
