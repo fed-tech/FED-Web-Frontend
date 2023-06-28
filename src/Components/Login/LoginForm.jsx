@@ -119,17 +119,16 @@ function LoginForm() {
           },
         }
       );
-      const mail = googleResponse.data.email;
 
-      console.log(mail);
+      let data = {
+        email: googleResponse.data.email,
+      };
 
-      const response = await axios.post("/auth/googleverification", {
-        email: mail,
-      });
+      const response = await axios.post("/auth/googleverification", data);
 
       console.log(response.data);
 
-      if (response.data.code === 1) {
+      if (response.data.status === "true") {
         authCtx.login(
           response.data.user.name,
           response.data.user.email,
