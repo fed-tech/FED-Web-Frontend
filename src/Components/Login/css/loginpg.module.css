@@ -230,6 +230,13 @@
   font-size: 14px;
 }
 
+.iconSee {
+}
+
+.iconSee path {
+  color: #000;
+}
+
 .signup {
   padding-top: 1.25rem;
 }
