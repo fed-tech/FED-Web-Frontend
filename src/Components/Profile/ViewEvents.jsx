@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import EventCards from "./EventCards";
 
 // css
-import "./css/ViewEvents.css";
+import viewevents from "./css/ViewEvents.module.css";
 
 // axios
 import axios from "axios";
@@ -17,7 +17,7 @@ function ViewEvents() {
     });
   }, []);
   return (
-    <div className="viewevents">
+    <div className={viewevents.viewevents}>
       {/* <EventCards/>
         <EventCards/>
         <EventCards/>

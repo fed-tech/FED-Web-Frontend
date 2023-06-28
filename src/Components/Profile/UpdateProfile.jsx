@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 // css
-import "./Css/UpdateModal.css";
+import updatemodal from "./Css/UpdateModal.module.css";
 
 // state
 import AuthContext from "../../store/auth-context";
@@ -190,10 +190,10 @@ function updateModal({ setShowUpdateModal }) {
   }, []);
 
   return (
-    <div className="updateModal-overlay">
-      <div className="updateModal">
+    <div className={updatemodal.updateModal-overlay}>
+      <div className={updatemodal.updateModal}>
         <h2>Update Profile</h2>
-        <form className="update_form">
+        <form className={updatemodal.update_form}>
           <input
             type="text"
             id="name"
@@ -247,7 +247,7 @@ function updateModal({ setShowUpdateModal }) {
           <select
             value={selected}
             onChange={handleChange}
-            className="year"
+            className={updatemodal.year}
             placeholder="Year"
             id="year"
           >
@@ -257,12 +257,12 @@ function updateModal({ setShowUpdateModal }) {
               </option>
             ))}
           </select>
-          <button type="submit" className="btn" onClick={handleUpdate}>
+          <button type="submit" className={updatemodal.updateModal.btn} onClick={handleUpdate}>
             Update Profile
           </button>
           <button
             type="button"
-            className="btn"
+            className={updatemodal.updateModal.btn}
             onClick={() => setShowUpdateModal(false)}
           >
             Close
