@@ -191,6 +191,10 @@
   text-align: left;
 }
 
+.formTag {
+  width: 100%;
+}
+
 .user,
 .pass {
   display: flex;
