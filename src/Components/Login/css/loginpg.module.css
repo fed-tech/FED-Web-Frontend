@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
-
 .full {
   background-image: url(https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png);
   height: 64rem;
@@ -11,11 +10,12 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-size:cover;
+  background-size: cover;
   text-align: center;
   color: black;
 }
-#errmssg{
+
+#errmssg {
   font-size: 14px;
 }
 
@@ -41,6 +41,7 @@
   max-width: 44%;
   margin-bottom: 48px;
 }
+
 .title1 {
   text-align: center;
   background-color: transparent;
@@ -51,11 +52,13 @@
   line-height: 3.688rem;
   margin-bottom: 4.25rem;
 }
-.title1 p{
-   color: white;
-   margin: 0;
-   font-size: 2.313rem;
+
+.title1 p {
+  color: white;
+  margin: 0;
+  font-size: 2.313rem;
 }
+
 .FED {
   text-align: center;
   font-family: rubik;
@@ -78,7 +81,8 @@
   justify-content: space-evenly;
   position: relative;
 }
-.hellopart{
+
+.hellopart {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -117,19 +121,21 @@
   border: 0.056rem solid black;
   border-radius: 0.667rem;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .googlepart GoogleOAuthProvider {
   width: 100%;
 }
+
 .icon {
   width: 1.063rem;
   height: 1.063rem;
   margin-right: 6px;
 }
+
 .log {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
@@ -155,7 +161,7 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   line-height: 1.063rem;
   color: black;
 }
@@ -165,43 +171,33 @@
   font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   line-height: 1.063rem;
   color: black;
   text-decoration: none;
 }
-.spann:after{
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #f45725;
-  display:flex;
-  margin-left: 155px;
-  transition: 0.3s;
-}
-.spann:hover:after{
-  width: 25%;
-  transition: width 0.3s linear;
-}
-.spann:hover{
+
+.spann:hover {
   color: #f45725;
 }
 
-.login-btn{
+.login-btn {
   width: 22.176rem;
   height: 2.446rem;
 }
+
 .logtwo {
   width: 100%;
-    margin-top: 42.15px;
-    padding: 7.3px;
-    border-radius: 7.3px;
-    border: black;
-    background-color: black;
-    font: mulish 19.8px;
-    font-size: 19.8px;
-    cursor: pointer;
+  margin-top: 42.15px;
+  padding: 7.3px;
+  border-radius: 7.3px;
+  border: black;
+  background-color: black;
+  font: mulish 19.8px;
+  font-size: 19.8px;
+  cursor: pointer;
 }
+
 .input::placeholder {
   font-weight: 300;
   font-size: 0.938rem;
@@ -210,15 +206,19 @@
   color: black;
   text-align: left;
 }
-.user,.pass{
+
+.user,
+.pass {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6.9px;
-    width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6.9px;
+  width: 100%;
 }
-.user input,.pass input{
+
+.user input,
+.pass input {
   line-height: 1.063em;
   text-align: left;
   background-color: transparent;
@@ -227,30 +227,32 @@
   padding: 10.6px 23.2px;
   width: 100%;
   border-bottom: 1.5px solid black;
-  
 }
+
 .username {
   border: none;
   color: black;
   font-size: 0.75rem;
   padding: 0.313rem;
   font-family: "Mulish", sans-serif;
-
 }
+
 .username:focus {
   outline: none;
 }
+
 .password {
   border: none;
   color: black;
   font-size: 0.75rem;
   padding: 0.313rem;
   font-family: "Mulish", sans-serif;
-
 }
+
 .password:focus {
   outline: none;
 }
+
 .signup {
   padding-top: 1.25rem;
 }
@@ -261,47 +263,55 @@
   border: 1px solid #ccc;
   outline: none;
 }
-.forgotPassword{
+
+.forgotPassword {
   width: 100%;
   padding: 6.9px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.forgotPassword p{
+
+.forgotPassword p {
   color: black;
   cursor: pointer;
   font-family: "Mulish", sans-serif;
   font-size: 13px;
 }
-.forgotPassword p:hover{
+
+.forgotPassword p:hover {
   color: #f45725;
 }
-.my-text-class{
+
+.my-text-class {
   font-family: "Rubik", sans-serif;
 }
-.my-title-class
-{
+
+.my-title-class {
   font-family: "Rubik", sans-serif;
 }
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .inside {
     width: 50%;
     max-width: 50%;
   }
 }
+
 @media (max-width: 1000px) and (min-width: 800px) {
   .inside {
     width: 60%;
     max-width: 60%;
   }
 }
+
 @media (max-width: 800px) and (min-width: 760px) {
   .inside {
     width: 65%;
     max-width: 65%;
   }
 }
+
 @media (max-width: 760px) and (min-width: 530px) {
   .inside {
     width: 70%;
@@ -309,23 +319,27 @@
     padding: 15px 40px 40px 40px;
   }
 }
+
 @media (max-width: 530px) {
   .inside {
     width: 80%;
     max-width: 80%;
     padding: 15px 40px 40px 40px;
   }
+
   .whitebox {
     margin-top: 30.8px;
     padding: 35px 35px;
   }
 }
+
 @media (max-width: 400px) {
   .inside {
     width: 100%;
     max-width: 100%;
     padding: 15px 40px 40px 40px;
   }
+
   .whitebox {
     margin-top: 30.8px;
     padding: 30px 30px;
