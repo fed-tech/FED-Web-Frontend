@@ -267,7 +267,7 @@ function LoginForm() {
         </div>
         <div className={Lcss.pass}>
           <input
-            type="password"
+            type={see ? "text" : "password"}
             placeholder="Password"
             className={Lcss.password}
             onChange={DataInp}
@@ -276,7 +276,17 @@ function LoginForm() {
             max="10"
             required
           />
-          <VisibilityOffIcon className={Lcss.iconSee} />
+          {see ? (
+            <RemoveRedEyeIcon
+              className={Lcss.iconSee}
+              onClick={() => hide(!see)}
+            />
+          ) : (
+            <VisibilityOffIcon
+              className={Lcss.iconSee}
+              onClick={() => hide(!see)}
+            />
+          )}
         </div>
         <div className={Lcss.forgotPassword}>
           <Link to="/forgotpassword">
