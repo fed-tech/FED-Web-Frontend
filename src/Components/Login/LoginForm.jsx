@@ -55,7 +55,7 @@ function LoginForm() {
     const value = e.target.value;
 
     if (value === "") {
-      e.target.style.borderBottom = "2px solid  #FF0000";
+      e.target.style.borderBottom = "2px solid transparent";
       e.target.style.outline = "none";
     } else {
       e.target.style.borderBottom = "2px solid  transparent";
