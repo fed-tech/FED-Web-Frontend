@@ -57,16 +57,12 @@ function LoginForm() {
 
     const { email, passwrd } = user;
 
-    const username = email;
     if (email != "" && passwrd != "") {
       try {
-        const password = bcrypt.hashSync(
-          passwrd,
-          "$2b$10$Q0RPeouqYdTToq76zoccIO"
-        );
+        const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
 
-        const response = await axios.post(`http://localhost:5000/auth/login`, {
-          username,
+        const response = await axios.post("/auth/login", {
+          username: email,
           password,
         });
 
