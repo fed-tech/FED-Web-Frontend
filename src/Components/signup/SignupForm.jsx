@@ -272,10 +272,6 @@ function SignupForm() {
     }
   };
 
-  useEffect(() => {
-    console.table(showUser);
-  }, [showUser]);
-
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
