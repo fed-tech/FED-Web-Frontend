@@ -223,6 +223,7 @@ function SignupForm() {
             placeholder="First Name"
             className={SuCss.inpTag}
             onChange={DataInp}
+            required
           />
           <input
             type="text"
@@ -231,6 +232,7 @@ function SignupForm() {
             placeholder="Last Name"
             className={SuCss.inpTag}
             onChange={DataInp}
+            required
           />
         </div>
 
@@ -241,6 +243,7 @@ function SignupForm() {
           placeholder="Email"
           className={SuCss.inpTag}
           onChange={DataInp}
+          required
         />
         <input
           type="text"
@@ -249,6 +252,7 @@ function SignupForm() {
           placeholder="Roll Number"
           className={SuCss.inpTag}
           onChange={DataInp}
+          required
         />
         <input
           type="text"
@@ -257,6 +261,7 @@ function SignupForm() {
           placeholder="School"
           className={SuCss.inpTag}
           onChange={DataInp}
+          required
         />
         <input
           type="text"
@@ -265,6 +270,7 @@ function SignupForm() {
           placeholder="College"
           className={SuCss.inpTag}
           onChange={DataInp}
+          required
         />
         <div className={SuCss.mobileno_container}>
           <p className={SuCss.mobileno91}>+91</p>
@@ -275,6 +281,7 @@ function SignupForm() {
             placeholder="Mobile Number"
             className={SuCss.inpTag}
             onChange={DataInp}
+            required
           />
         </div>
         <input
@@ -284,9 +291,15 @@ function SignupForm() {
           placeholder="Password"
           className={SuCss.inpTag}
           onChange={DataInp}
+          required
         />
 
-        <select value={selected} onChange={handleChange} className={SuCss.year}>
+        <select
+          value={selected}
+          onChange={handleChange}
+          required
+          className={SuCss.year}
+        >
           <option hidden> Year</option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
