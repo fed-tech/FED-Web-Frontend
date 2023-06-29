@@ -21,18 +21,6 @@ function SignUp() {
   return (
     <>
       <SignUpFun />
-      {/* {modal && (
-        <div className={SuCss.modal}>
-          <div className={SuCss.modalcontent}>
-            <img src={tick}></img>
-            <h2>SignUp Successfully!</h2>
-            <h3>Please check your mail !!</h3>
-            <button className={SuCss.ok} onClick={toggleModel}>
-              OK
-            </button>
-          </div>
-        </div>
-      )} */}
     </>
   );
 }
