@@ -329,10 +329,7 @@ function SignupForm() {
 
   return (
     <>
-      <div className={SuCss.googleDiv} onClick={() => login()}>
-        <img src={google} className="icon"></img>
-        <p className={SuCss.googleText}>SignUp with google</p>
-      </div>
+      <GoogleSignUp setLoad={setLoad} />
 
       <Or />
 
