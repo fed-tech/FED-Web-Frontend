@@ -231,7 +231,9 @@ function SignupForm() {
   };
 
   useEffect(() => {
-    document.addEventListener("mousedown", handler);
+    if (DropShow) {
+      document.addEventListener("mousedown", handler);
+    }
   });
 
   const handler = (e) => {
