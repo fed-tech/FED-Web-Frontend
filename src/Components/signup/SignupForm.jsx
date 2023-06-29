@@ -208,7 +208,23 @@ function SignupForm() {
     }
 
     if (name == "College") {
-      console.log(collage);
+      let changeDrop = "Kalinga Institute of Industrial Technology"
+        .toLowerCase()
+        .includes(value);
+
+      if (changeDrop) {
+        hideDrop(true);
+      } else {
+        hideDrop(false);
+      }
+
+      if (value === "") {
+        hideDrop(false);
+        e.target.style.borderBottom = "1px solid  #FF0000";
+        e.target.style.outline = "none";
+      } else {
+        e.target.style.borderBottom = "1px solid  black";
+      }
     }
 
     setUser({ ...showUser, [name]: value });
