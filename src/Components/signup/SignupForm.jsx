@@ -32,10 +32,12 @@ function SignupForm() {
   const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
+
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
   const [DropShow, hideDrop] = useState(false);
+  const [ClgName, setClgName] = useState("");
 
   let menu = useRef();
 
@@ -252,6 +254,10 @@ function SignupForm() {
     }
   };
 
+  // useEffect(() => {
+  //   console.log(ClgName);
+  // }, [ClgName]);
+
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
@@ -329,6 +335,12 @@ function SignupForm() {
             <div
               className={SuCss.DropDownmDiv}
               id={DropShow ? "showDropMenuClg" : "hideDropMenuClg"}
+              onClick={() => {
+                setUser({
+                  College: "Kalinga Institute of Industrial Technology",
+                });
+                hideDrop(false);
+              }}
             >
               Kalinga Institute of Industrial Technology
             </div>
