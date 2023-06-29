@@ -215,8 +215,6 @@ function SignupForm() {
           text: "Please Fill All The Details",
           val: true,
         });
-
-        // setErrMssg("Please fill all the fields");
       } else {
         setIsinValid(true);
 
