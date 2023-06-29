@@ -236,6 +236,7 @@ function SignupForm() {
           />
         </div>
 
+        {/* email */}
         <input
           type="email"
           id="email"
@@ -245,6 +246,8 @@ function SignupForm() {
           onChange={DataInp}
           required
         />
+
+        {/* Roll Number */}
         <input
           type="text"
           id="rollNum"
