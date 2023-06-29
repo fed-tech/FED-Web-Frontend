@@ -247,6 +247,15 @@
   margin-top: 0;
 }
 
+.DropDownmDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 0px 0px 5px 5px;
+  padding: 5px 0px;
+}
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;
