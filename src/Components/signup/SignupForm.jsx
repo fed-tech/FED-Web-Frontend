@@ -169,10 +169,12 @@ function SignupForm() {
     { value: "4th", text: "4th year" },
     { value: "5th", text: "5th year" },
   ];
+
   const handleChange = (event) => {
     console.log(event.target.value);
     setSelected(event.target.value);
   };
+
   const DataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
