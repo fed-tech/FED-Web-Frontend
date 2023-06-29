@@ -195,8 +195,6 @@ function SignupForm() {
             text: "Invalid email format",
             val: true,
           });
-
-          // setErrMssg("Invalid email format");
         }
 
         console.log(error);
