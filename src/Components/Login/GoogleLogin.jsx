@@ -17,10 +17,6 @@ import AuthContext from "../../store/auth-context";
 //css
 import Lcss from "./css/loginpg.module.css";
 
-// icons
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
-
 // img
 import google from "./../../assets/Login/Google.svg";
 
@@ -127,9 +123,13 @@ export default function GoogleLogin() {
   }, [codeResponse]);
 
   return (
-    <div className={Lcss.googlepart} onClick={() => login()}>
-      <img src={google} className={Lcss.icon}></img>
-      <p className={Lcss.log}>Login with Google</p>
-    </div>
+    <>
+      <div className={Lcss.googlepart} onClick={() => login()}>
+        <img src={google} className={Lcss.icon}></img>
+        <p className={Lcss.log}>Login with Google</p>
+      </div>
+
+      <Alert variant={variants} val={setError} />
+    </>
   );
 }
