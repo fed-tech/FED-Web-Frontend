@@ -213,7 +213,7 @@ function SignupForm() {
       </div>
 
       <p className={SuCss.OrText}>Or</p>
-      <div className={SuCss.form}>
+      <form className={SuCss.form}>
         {/* Name */}
         <div>
           <input
@@ -310,7 +310,7 @@ function SignupForm() {
         >
           {errmssg}
         </p>
-      </div>
+      </form>
     </>
   );
 }
