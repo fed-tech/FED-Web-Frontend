@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import LoginForm from "./LoginForm";
+import Header from "./Header";
 
 // Css
 import Lcss from "./css/loginpg.module.css";
@@ -15,13 +16,8 @@ function LoginFun() {
             <p className={Lcss.FED}>FED</p>
           </div>
           <div className={Lcss.whitebox}>
-            <div className={Lcss.hellopart}>
-              <p className={Lcss.welc}>Welcome Back</p>
-              <p className={Lcss.det}>Please Enter your details</p>
-            </div>
-            <>
-              <LoginForm />
-            </>
+            <Header title="Welcome Back" des="Please Enter your details" />
+            <LoginForm />
           </div>
         </div>
       </div>
