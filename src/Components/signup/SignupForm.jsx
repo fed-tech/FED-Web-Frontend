@@ -216,6 +216,7 @@ function SignupForm() {
         e.target.style.borderBottom = "1px solid  black";
       }
     }
+
     if (name === "MobileNo") {
       if (value.length == 10) {
         e.target.style.borderBottom = "1px solid  black";
