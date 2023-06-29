@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // css
 import "./Css/Alert.css";
@@ -33,4 +34,9 @@ export const Alert = ({ variant, val }) => {
       </div>
     </div>
   );
+};
+
+Alert.propTypes = {
+  variant: PropTypes.object.isRequired,
+  val: PropTypes.func.isRequired,
 };
