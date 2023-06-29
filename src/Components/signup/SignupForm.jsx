@@ -257,7 +257,7 @@ function SignupForm() {
           onChange={DataInp}
         />
         <div className={SuCss.mobileno_container}>
-          <p>+91</p>
+          <p className={SuCss.mobileno91}>+91</p>
           <input
             type="number"
             id="number"
