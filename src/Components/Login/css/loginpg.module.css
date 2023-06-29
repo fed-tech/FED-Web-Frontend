@@ -134,10 +134,11 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  margin-bottom: 30px;
 }
 
 .orLine {
-  width: 20px;
+  width: 70px;
   height: 1px;
   background-color: #000;
 }
