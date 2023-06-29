@@ -208,11 +208,11 @@ function SignupForm() {
     }
 
     if (name == "College") {
-      let changeDrop = "Kalinga Institute of Industrial Technology"
-        .toLowerCase()
-        .includes(value);
-
-      if (changeDrop) {
+      if (
+        "Kalinga Institute of Industrial Technology"
+          .toLowerCase()
+          .includes(value)
+      ) {
         hideDrop(true);
       } else {
         hideDrop(false);
@@ -239,6 +239,16 @@ function SignupForm() {
   const handler = (e) => {
     if (!menu.current.contains(e.target)) {
       hideDrop(false);
+    }
+  };
+
+  const DropCheck = () => {
+    if (
+      "Kalinga Institute of Industrial Technology"
+        .toLowerCase()
+        .includes(showUser.College)
+    ) {
+      hideDrop(true);
     }
   };
 
@@ -310,7 +320,7 @@ function SignupForm() {
               className={SuCss.inpTag}
               onChange={DataInp}
               onFocus={() => {
-                hideDrop(true);
+                DropCheck();
               }}
               spellcheck="true"
               autocomplete="off"
