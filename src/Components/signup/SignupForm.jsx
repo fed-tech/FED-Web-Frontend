@@ -37,6 +37,8 @@ function SignupForm() {
   const [codeResponse, setCodeResponse] = useState();
   const [DropShow, hideDrop] = useState(false);
 
+  let menu = useRef();
+
   const login = useGoogleLogin({
     onSuccess: (response) => setCodeResponse(response),
   });
@@ -208,8 +210,19 @@ function SignupForm() {
     console.log(showUser);
   };
 
+  useEffect(() => {
+    document.addEventListener("mousedown", handler);
+  });
+
+  const handler = (e) => {
+    if (!menu.current.contains(e.target)) {
+      hideDrop(false);
+    }
+  };
+
   const DropDown = async (e) => {
     console.log("Down");
+    hideDrop(true);
   };
 
   return (
@@ -271,7 +284,7 @@ function SignupForm() {
           </div>
 
           {/* College */}
-          <div>
+          <div ref={menu}>
             <input
               type="text"
               id="college"
@@ -282,9 +295,13 @@ function SignupForm() {
               onFocus={DropDown}
               required
             />
+            {/* {DropShow ? ( */}
             <div className={SuCss.DropDownmDiv}>
               Kalinga Institute of Industrial Technology
             </div>
+            {/* ) : (
+              ""
+            )} */}
           </div>
 
           {/* School */}
