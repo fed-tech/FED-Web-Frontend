@@ -47,6 +47,8 @@ const GoogleSignUp = ({ setLoad }) => {
 
   const loginWithGoogle = async () => {
     try {
+      setLoad(true);
+
       const googleResponse = await axios.get(
         `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
         {
@@ -83,6 +85,8 @@ const GoogleSignUp = ({ setLoad }) => {
       }
     } catch (err) {
       console.log(err);
+
+      setLoad(false);
     }
   };
 
