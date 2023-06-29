@@ -293,6 +293,8 @@ function SignupForm() {
             required
           />
         </div>
+
+        {/* Password */}
         <input
           type="password"
           id="password"
