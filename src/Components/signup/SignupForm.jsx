@@ -206,8 +206,12 @@ function SignupForm() {
         e.target.style.borderBottom = "1px solid  black";
       }
     }
+
+    if (name == "College") {
+      console.log(collage);
+    }
+
     setUser({ ...showUser, [name]: value });
-    console.log(showUser);
   };
 
   useEffect(() => {
@@ -219,8 +223,6 @@ function SignupForm() {
       hideDrop(false);
     }
   };
-
-  // const DropDown = async (e) => ;
 
   return (
     <>
