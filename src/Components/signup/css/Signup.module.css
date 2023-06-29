@@ -247,18 +247,25 @@
   margin-top: 0;
 }
 
+.CollegeInpmDIv {
+  position: relative;
+}
+
 .DropDownmDiv {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fff;
   color: #000;
   border-radius: 0px 0px 5px 5px;
-  padding: 5px 0px;
+  padding: 10px 5px;
   text-align: center;
   font-family: "Mulish", sans-serif;
   box-shadow: 0px 1px 1px 1px grey;
   cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
 }
 
 @media (max-width: 1200px) and (min-width: 1000px) {
