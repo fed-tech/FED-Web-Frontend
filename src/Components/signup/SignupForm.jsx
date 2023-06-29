@@ -220,14 +220,7 @@ function SignupForm() {
     }
   };
 
-  const DropDown = async (e) => {
-    console.log("Down");
-    hideDrop(true);
-  };
-
-  useEffect(() => {
-    console.log(DropShow);
-  }, [DropShow]);
+  // const DropDown = async (e) => ;
 
   return (
     <>
@@ -296,7 +289,9 @@ function SignupForm() {
               placeholder="College"
               className={SuCss.inpTag}
               onChange={DataInp}
-              onFocus={DropDown}
+              onFocus={() => {
+                hideDrop(true);
+              }}
               spellcheck="true"
               autocomplete="off"
               required
