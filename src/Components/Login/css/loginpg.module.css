@@ -136,18 +136,10 @@
   gap: 5px;
 }
 
-.orLine1,
-.orLine2 {
+.orLine {
   width: 70px;
   height: 0.5px;
-}
-
-.orLine1 {
-  background-image: linear-gradient(to right, #fff, #000);
-}
-
-.orLine2 {
-  background-image: linear-gradient(to right, #000, #fff);
+  background-color: #000;
 }
 
 .or {
