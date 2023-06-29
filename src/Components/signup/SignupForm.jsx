@@ -313,7 +313,7 @@ function SignupForm() {
         </button>
         <p className={SuCss.member}>
           Already a member?{" "}
-          <Link to="/Login">
+          <Link to="/Login" className="LinkStyle">
             <span className={SuCss.spn}>Login</span>
           </Link>
         </p>
