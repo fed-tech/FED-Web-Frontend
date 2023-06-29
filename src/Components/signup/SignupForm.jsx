@@ -300,10 +300,7 @@ function SignupForm() {
           required
           className={SuCss.year}
         >
-          <option hidden className={SuCss.disabledYear}>
-            {" "}
-            Year
-          </option>
+          <option hidden> Year</option>
           {options.map((option) => (
             <option key={option.value} value={option.value}>
               {option.text}
