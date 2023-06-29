@@ -124,6 +124,7 @@ function SignupForm() {
       College,
       MobileNo,
     } = showUser;
+
     const name = FirstName + " " + LastName;
     if (
       name !== "" &&
