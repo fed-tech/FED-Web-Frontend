@@ -29,7 +29,6 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import google from "./../../assets/Login/Google.svg";
 
 function LoginForm() {
-  const [codeResponse, setCodeResponse] = useState();
   const [loadingEffect, setLoad] = useState(false);
   const [see, hide] = useState(false);
 
