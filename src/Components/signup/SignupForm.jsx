@@ -415,12 +415,6 @@ function SignupForm() {
             <span className={SuCss.spn}>Login</span>
           </Link>
         </p>
-        {/* <p
-          className={SuCss.signupErrDiv}
-          style={{ color: isinValid ? "red" : "white" }}
-        >
-          {errmssg}
-        </p> */}
       </div>
 
       <Alert variant={variants} val={setError} />
