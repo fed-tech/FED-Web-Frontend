@@ -5,7 +5,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useGoogleLogin } from "@react-oauth/google";
 
 // Components
-import Load from "./../../MicroInterAction/Load";
 import { Alert } from "./../../MicroInterAction/Alert";
 
 //  axios
@@ -21,6 +20,8 @@ import Lcss from "./css/loginpg.module.css";
 import google from "./../../assets/Login/Google.svg";
 
 export default function GoogleLogin() {
+  const [loadingEffect, setLoad] = useState(false);
+  const [codeResponse, setCodeResponse] = useState();
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
