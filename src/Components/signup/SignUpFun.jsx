@@ -1,4 +1,5 @@
 import React from "react";
+
 // Css
 import SuCss from "./css/Signup.module.css";
 
@@ -6,7 +7,6 @@ import SuCss from "./css/Signup.module.css";
 import SignupForm from "./SignupForm";
 
 function SignUpFun() {
-  
   return (
     <>
       <div className={SuCss.mDiv}>
@@ -16,7 +16,7 @@ function SignUpFun() {
             <div className={SuCss.helloDiv}> Hello There</div>
             <p className={SuCss.plsDiv}> Please enter Your Details</p>
             <>
-            <SignupForm/>
+              <SignupForm />
             </>
           </div>
         </div>
