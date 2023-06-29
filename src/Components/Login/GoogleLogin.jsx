@@ -25,6 +25,19 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import google from "./../../assets/Login/Google.svg";
 
 export default function GoogleLogin() {
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
+
+  const authCtx = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
   const login = useGoogleLogin({
     onSuccess: (response) => setCodeResponse(response),
   });
