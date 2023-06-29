@@ -198,8 +198,8 @@ function LoginForm() {
           )}
         </div>
         <div className={Lcss.forgotPassword}>
-          <Link to="/forgotpassword">
-            <p>Forgot Password?</p>
+          <Link to="/forgotpassword" className="LinkStyle">
+            <p className={Lcss.forgotPasswordPTag}>Forgot Password?</p>
           </Link>
         </div>
         <button className={Lcss.logtwo} type="submit" onClick={handlelogin}>
