@@ -38,6 +38,14 @@ function SignupForm() {
     val: false,
   });
 
+  const options = [
+    { value: "1st", text: "1st year" },
+    { value: "2nd", text: "2nd year" },
+    { value: "3rd", text: "3rd year" },
+    { value: "4th", text: "4th year" },
+    { value: "5th", text: "5th year" },
+  ];
+
   let menu = useRef();
 
   const handleSignUp = async (e) => {
@@ -148,14 +156,6 @@ function SignupForm() {
       }
     }
   };
-
-  const options = [
-    { value: "1st", text: "1st year" },
-    { value: "2nd", text: "2nd year" },
-    { value: "3rd", text: "3rd year" },
-    { value: "4th", text: "4th year" },
-    { value: "5th", text: "5th year" },
-  ];
 
   const handleChange = (event) => {
     setSelected(event.target.value);
