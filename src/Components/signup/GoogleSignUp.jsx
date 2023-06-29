@@ -58,12 +58,18 @@ const GoogleSignUp = ({ setLoad }) => {
           },
         }
       );
+
       const mail = googleResponse.data.email;
+
       const response = await axios.post("/auth/googleverification", {
         email: mail,
       });
+
       console.log(response);
+
       if (response.status === 202) {
+        setLoad(false);
+
         authCtx.login(
           response.data.user.name,
           response.data.user.email,
@@ -77,7 +83,14 @@ const GoogleSignUp = ({ setLoad }) => {
           response.data.token,
           10800000
         );
-        navigate("/MyProfile");
+
+        if (authCtx.target == null) {
+          navigate("/MyProfile");
+        } else {
+          navigate(`/${authCtx.target}`);
+          authCtx.settarget(null);
+        }
+
         return;
       } else {
         localStorage.setItem("user", JSON.stringify(googleResponse.data));
