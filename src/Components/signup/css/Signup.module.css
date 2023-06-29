@@ -189,7 +189,6 @@ input::placeholder {
 
 .modal {
   background: black;
-  /* backdrop-filter: blur(10px); */
   text-align: center;
   align-items: center;
   height: 250px;
@@ -233,14 +232,22 @@ input::placeholder {
   margin-top: 24.6px;
 }
 
-.mobileno_container input {
-  margin-top: 0;
+.mobileno91 {
+  margin-right: 7px;
+  /* background-color: red; */
+  /* color: #808080; */
+  color: #000;
+  /* padding: 0px; */
+  padding: 10.6px 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+  /* border-bottom: 1px solid black; */
 }
 
-.mobileno_container p {
-  color: #808080;
-  padding: 10px 23.2px;
-  border-bottom: 1px solid black;
+.mobileno_container input {
+  margin-top: 0;
 }
 
 @media (max-width: 1200px) and (min-width: 1000px) {
