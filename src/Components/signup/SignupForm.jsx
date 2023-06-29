@@ -273,6 +273,7 @@ function SignupForm() {
           placeholder="Password"
           onChange={DataInp}
         />
+
         <select value={selected} onChange={handleChange} className={SuCss.year}>
           <option hidden> Year</option>
           {options.map((option) => (
