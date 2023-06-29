@@ -280,6 +280,21 @@ function SignupForm() {
           required
         />
 
+        {/* Year */}
+        <select
+          value={selected}
+          onChange={handleChange}
+          required
+          className={SuCss.year}
+        >
+          <option hidden> Year</option>
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.text}
+            </option>
+          ))}
+        </select>
+
         {/* Phone Number */}
         <div className={SuCss.mobileno_container}>
           <p className={SuCss.mobileno91}>+91</p>
@@ -304,20 +319,6 @@ function SignupForm() {
           onChange={DataInp}
           required
         />
-
-        <select
-          value={selected}
-          onChange={handleChange}
-          required
-          className={SuCss.year}
-        >
-          <option hidden> Year</option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.text}
-            </option>
-          ))}
-        </select>
 
         <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
           SignUp
