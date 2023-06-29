@@ -219,9 +219,12 @@ function SignupForm() {
   });
 
   const handler = (e) => {
-    // if()
-    if (!menu.current.contains(e.target)) {
-      hideDrop(false);
+    try {
+      if (!menu.current.contains(e.target)) {
+        hideDrop(false);
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
