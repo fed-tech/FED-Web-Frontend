@@ -161,7 +161,11 @@ function LoginForm() {
   return (
     <>
       <GoogleLogin setLoad={setLoad} />
-      <p className={Lcss.or}>Or</p>
+      <div>
+        <div></div>
+        <p className={Lcss.or}>Or</p>
+        <div></div>
+      </div>
 
       <form className={Lcss.formTag}>
         <div className={Lcss.user}>
