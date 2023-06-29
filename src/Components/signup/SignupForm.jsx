@@ -228,8 +228,6 @@ function SignupForm() {
           text: "Invalid mobile number",
           val: true,
         });
-
-        // setErrMssg("Invalid mobile number");
       }
     }
   };
