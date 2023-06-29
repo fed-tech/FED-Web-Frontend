@@ -127,7 +127,6 @@ function SignupForm() {
     } = showUser;
 
     const name = FirstName + " " + LastName;
-    // console.table(showUser);
 
     if (
       name !== "" &&
@@ -164,9 +163,13 @@ function SignupForm() {
 
         const success = response.status === 200;
         if (success) {
-          setModal(!modal);
+          setLoad(false);
+
+          // setModal(!modal);
         }
       } catch (error) {
+        setLoad(false);
+
         setIsinValid(true);
         if (error.response.data.code === 1) {
           setErrMssg("User already exists");
@@ -260,6 +263,7 @@ function SignupForm() {
   });
 
   const handler = (e) => {
+    // if()
     if (!menu.current.contains(e.target)) {
       hideDrop(false);
     }
