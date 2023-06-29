@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
@@ -35,6 +35,7 @@ function SignupForm() {
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
+  const [DropShow, hideDrop] = useState(false);
 
   const login = useGoogleLogin({
     onSuccess: (response) => setCodeResponse(response),
@@ -207,6 +208,10 @@ function SignupForm() {
     console.log(showUser);
   };
 
+  const DropDown = async (e) => {
+    console.log("Down");
+  };
+
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
@@ -274,8 +279,12 @@ function SignupForm() {
               placeholder="College"
               className={SuCss.inpTag}
               onChange={DataInp}
+              onFocus={DropDown}
               required
             />
+            <div className={SuCss.DropDownmDiv}>
+              Kalinga Institute of Industrial Technology
+            </div>
           </div>
 
           {/* School */}
