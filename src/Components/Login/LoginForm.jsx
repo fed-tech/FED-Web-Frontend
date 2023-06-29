@@ -181,8 +181,6 @@ function LoginForm() {
             className={Lcss.password}
             onChange={DataInp}
             name="passwrd"
-            min="1"
-            max="10"
             required
           />
           {see ? (
