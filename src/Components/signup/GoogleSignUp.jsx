@@ -21,6 +21,19 @@ import SuCss from "./css/Signup.module.css";
 import google from "./../../assets/Login/Google.svg";
 
 const GoogleSignUp = ({ setLoad }) => {
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
+
+  const authCtx = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
