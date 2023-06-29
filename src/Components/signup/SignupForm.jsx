@@ -156,8 +156,7 @@ function SignupForm() {
       try {
         const response = await axios.post(`/auth/register`, userObject);
 
-        const success = response.status === 200;
-        if (success) {
+        if (response.status === 200) {
           setLoad(false);
 
           // setModal(!modal);
