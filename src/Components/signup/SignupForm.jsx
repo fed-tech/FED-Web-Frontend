@@ -43,8 +43,6 @@ function SignupForm() {
 
   let menu = useRef();
 
-  const navigate = useNavigate();
-
   const handleSignUp = async (e) => {
     e.preventDefault();
 
