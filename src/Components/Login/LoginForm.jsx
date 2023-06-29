@@ -209,7 +209,13 @@ function LoginForm() {
 
         console.log("Login Done 💯💯💯💯💯");
 
-        navigate("/MyProfile");
+        if (authCtx.target == null) {
+          navigate("/MyProfile");
+        } else {
+          navigate(`/${authCtx.target}`);
+          authCtx.settarget(null);
+        }
+
         return;
       } else {
         setLoad(false);
