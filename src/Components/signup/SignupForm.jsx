@@ -225,6 +225,10 @@ function SignupForm() {
     hideDrop(true);
   };
 
+  useEffect(() => {
+    console.log(DropShow);
+  }, [DropShow]);
+
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
@@ -284,7 +288,7 @@ function SignupForm() {
           </div>
 
           {/* College */}
-          <div ref={menu}>
+          <div ref={menu} className={SuCss.CollegeInpmDIv}>
             <input
               type="text"
               id="college"
@@ -293,10 +297,15 @@ function SignupForm() {
               className={SuCss.inpTag}
               onChange={DataInp}
               onFocus={DropDown}
+              spellcheck="true"
+              autocomplete="off"
               required
             />
             {/* {DropShow ? ( */}
-            <div className={SuCss.DropDownmDiv}>
+            <div
+              className={SuCss.DropDownmDiv}
+              id={DropShow ? "showDropMenuClg" : "hideDropMenuClg"}
+            >
               Kalinga Institute of Industrial Technology
             </div>
             {/* ) : (
