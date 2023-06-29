@@ -5,7 +5,6 @@ import { useGoogleLogin } from "@react-oauth/google";
 
 // axios
 import axios from "axios";
-// import Swal from "sweetalert2";
 
 // Css
 import SuCss from "./css/Signup.module.css";
