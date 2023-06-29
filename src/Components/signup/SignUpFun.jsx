@@ -1,10 +1,10 @@
 import React from "react";
 
+// Components
+import SignupForm from "./SignupForm";
+
 // Css
 import SuCss from "./css/Signup.module.css";
-
-//signupform
-import SignupForm from "./SignupForm";
 
 function SignUpFun() {
   return (
