@@ -127,7 +127,7 @@ function SignupForm() {
     } = showUser;
 
     const name = FirstName + " " + LastName;
-    console.table(showUser);
+    // console.table(showUser);
 
     if (
       name !== "" &&
@@ -141,6 +141,8 @@ function SignupForm() {
       Password !== "" &&
       selected !== ""
     ) {
+      setLoad(true);
+
       const password = bcrypt.hashSync(
         Password,
         "$2b$10$Q0RPeouqYdTToq76zoccIO"
@@ -195,7 +197,6 @@ function SignupForm() {
   ];
 
   const handleChange = (event) => {
-    console.log(event.target.value);
     setSelected(event.target.value);
   };
 
