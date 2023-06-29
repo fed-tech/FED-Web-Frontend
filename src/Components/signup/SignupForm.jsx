@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { useGoogleLogin } from "@react-oauth/google";
 import bcrypt from "bcryptjs-react";
 
 // Components
@@ -141,10 +140,7 @@ function SignupForm() {
     ) {
       setLoad(true);
 
-      const password = bcrypt.hashSync(
-        Password,
-        "$2b$10$Q0RPeouqYdTToq76zoccIO"
-      );
+      const password = bcrypt.hashSync(Password, import.meta.env.VITE_BCRYPT);
 
       const userObject = {
         name,
