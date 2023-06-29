@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
+import bcrypt from "bcryptjs-react";
 
 // Components
 import Or from "./../Login/Or";
