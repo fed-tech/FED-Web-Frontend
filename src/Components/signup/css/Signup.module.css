@@ -251,10 +251,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: #fff;
+  color: #000;
   border-radius: 0px 0px 5px 5px;
   padding: 5px 0px;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  box-shadow: 0px 1px 1px 1px grey;
+  cursor: pointer;
 }
+/* .DropDownmDiv:hover {
+  box-shadow: 0px 0px 0px grey;
+} */
 
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
