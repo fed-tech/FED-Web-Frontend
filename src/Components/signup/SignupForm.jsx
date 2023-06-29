@@ -257,6 +257,8 @@ function SignupForm() {
           onChange={DataInp}
           required
         />
+
+        {/* School */}
         <input
           type="text"
           id="school"
@@ -266,6 +268,8 @@ function SignupForm() {
           onChange={DataInp}
           required
         />
+
+        {/* College */}
         <input
           type="text"
           id="college"
@@ -275,6 +279,7 @@ function SignupForm() {
           onChange={DataInp}
           required
         />
+
         <div className={SuCss.mobileno_container}>
           <p className={SuCss.mobileno91}>+91</p>
           <input
