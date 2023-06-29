@@ -147,6 +147,7 @@ function SignupForm() {
         Password,
         "$2b$10$Q0RPeouqYdTToq76zoccIO"
       );
+
       const userObject = {
         name,
         email,
@@ -157,11 +158,10 @@ function SignupForm() {
         MobileNo,
         selected,
       };
+
       try {
-        const response = await axios.post(
-          `http://localhost:5000/auth/register`,
-          userObject
-        );
+        const response = await axios.post(`/auth/register`, userObject);
+
         const success = response.status === 200;
         if (success) {
           setModal(!modal);
@@ -178,6 +178,8 @@ function SignupForm() {
         console.log(error);
       }
     } else {
+      setLoad(false);
+
       if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
         setErrMssg("Please fill all the fields");
