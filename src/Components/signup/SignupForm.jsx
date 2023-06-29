@@ -356,6 +356,7 @@ function SignupForm() {
               id={DropShow ? "showDropMenuClg" : "hideDropMenuClg"}
               onClick={() => {
                 setUser({
+                  ...showUser,
                   College: "Kalinga Institute of Industrial Technology",
                 });
                 hideDrop(false);
