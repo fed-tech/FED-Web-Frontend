@@ -98,11 +98,11 @@ function SignupForm() {
           setLoad(false);
 
           setError({
-            mainColor: "#EDFEEE",
-            secondaryColor: "#5CB660",
-            symbol: "check_circle",
-            title: "Success",
-            text: "",
+            mainColor: "#E5F6FD",
+            secondaryColor: "#1AB1F5",
+            symbol: "info",
+            title: "Information",
+            text: "Please check your mail",
             val: true,
           });
         }
