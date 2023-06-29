@@ -3,6 +3,9 @@ import { useNavigate, Link } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 import { useGoogleLogin } from "@react-oauth/google";
 
+// Components
+import Or from "./../Login/Or";
+
 // axios
 import axios from "axios";
 
@@ -211,7 +214,8 @@ function SignupForm() {
         <p className={SuCss.googleText}>SignUp with google</p>
       </div>
 
-      <p className={SuCss.OrText}>Or</p>
+      <Or />
+
       <div className={SuCss.form}>
         <form>
           {/* Name */}
