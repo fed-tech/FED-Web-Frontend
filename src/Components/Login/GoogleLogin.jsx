@@ -115,6 +115,15 @@ export default function GoogleLogin({ setLoad }) {
       console.log(err);
 
       setLoad(false);
+
+      setError({
+        mainColor: "#FDEDED",
+        secondaryColor: "#F16360",
+        symbol: "error",
+        title: "Error",
+        text: "The action was not carried out succesfully please try again.",
+        val: true,
+      });
     }
   };
 
