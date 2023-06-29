@@ -204,6 +204,7 @@ function SignupForm() {
     setUser({ ...showUser, [name]: value });
     console.log(showUser);
   };
+
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
