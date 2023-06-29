@@ -127,6 +127,7 @@ function SignupForm() {
     } = showUser;
 
     const name = FirstName + " " + LastName;
+    console.table(showUser);
 
     if (
       name !== "" &&
@@ -270,6 +271,10 @@ function SignupForm() {
       hideDrop(true);
     }
   };
+
+  useEffect(() => {
+    console.table(showUser);
+  }, [showUser]);
 
   return (
     <>
