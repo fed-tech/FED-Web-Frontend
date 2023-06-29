@@ -169,13 +169,12 @@
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 1.063rem;
-  color: #000;
+  color: #f45725;
   transition: all 0.3s;
   text-decoration: underline;
 }
 
 .spann:hover {
-  color: #f45725;
   text-decoration: none;
 }
 
