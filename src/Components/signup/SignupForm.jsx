@@ -19,6 +19,8 @@ import AuthContext from "../../store/auth-context";
 
 function SignupForm() {
   const [loadingEffect, setLoad] = useState(false);
+  const [selected, setSelected] = useState("");
+  const [DropShow, hideDrop] = useState(false);
   const [showUser, setUser] = useState({
     email: "",
     Password: "",
@@ -39,76 +41,9 @@ function SignupForm() {
     val: false,
   });
 
-  const [selected, setSelected] = useState("");
-  const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("Invalid");
-  const [codeResponse, setCodeResponse] = useState();
-  const [DropShow, hideDrop] = useState(false);
-  const [ClgName, setClgName] = useState("");
-
   let menu = useRef();
 
-  const authCtx = useContext(AuthContext);
-
   const navigate = useNavigate();
-
-  // const login = useGoogleLogin({
-  //   onSuccess: (response) => setCodeResponse(response),
-  // });
-
-  // const loginWithGoogle = async () => {
-  //   try {
-  //     const googleResponse = await axios.get(
-  //       `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${codeResponse.access_token}`,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${codeResponse.access_token}`,
-  //           Accept: "application/json",
-  //         },
-  //       }
-  //     );
-  //     const mail = googleResponse.data.email;
-  //     const response = await axios.post(
-  //       "http://localhost:5000/auth/googleverification",
-  //       {
-  //         email: mail,
-  //       }
-  //     );
-  //     console.log(response);
-  //     if (response.status === 202) {
-  //       authCtx.login(
-  //         response.data.user.name,
-  //         response.data.user.email,
-  //         response.data.user.img,
-  //         response.data.user.RollNumber,
-  //         response.data.user.School,
-  //         response.data.user.College,
-  //         response.data.user.MobileNo,
-  //         response.data.user.selected,
-  //         Number(response.data.user.access),
-  //         response.data.token,
-  //         10800000
-  //       );
-  //       navigate("/MyProfile");
-  //       return;
-  //     } else {
-  //       localStorage.setItem("user", JSON.stringify(googleResponse.data));
-  //       navigate("/createprofile");
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (codeResponse) {
-  //     loginWithGoogle();
-  //   }
-  // }, [codeResponse]);
-
-  // useEffect(() => {
-  //   // setIsinValid(false);
-  // }, [showUser, selected]);
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -171,7 +106,6 @@ function SignupForm() {
       } catch (error) {
         setLoad(false);
 
-        setIsinValid(true);
         if (error.response.data.code === 1) {
           setError({
             mainColor: "#FFC0CB",
@@ -199,8 +133,6 @@ function SignupForm() {
       setLoad(false);
 
       if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
-        setIsinValid(true);
-
         setError({
           mainColor: "#FFC0CB",
           secondaryColor: "#FF69B4",
@@ -210,8 +142,6 @@ function SignupForm() {
           val: true,
         });
       } else {
-        setIsinValid(true);
-
         setError({
           mainColor: "#FFF4E5",
           secondaryColor: "#FFA117",
