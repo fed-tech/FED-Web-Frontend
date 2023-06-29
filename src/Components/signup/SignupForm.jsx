@@ -325,18 +325,19 @@ function SignupForm() {
             SignUp
           </button>
         </form>
+
         <p className={SuCss.member}>
           Already a member?{" "}
           <Link to="/Login" className="LinkStyle">
             <span className={SuCss.spn}>Login</span>
           </Link>
         </p>
-        <p
+        {/* <p
           className={SuCss.signupErrDiv}
           style={{ color: isinValid ? "red" : "white" }}
         >
           {errmssg}
-        </p>
+        </p> */}
       </div>
     </>
   );
