@@ -14,9 +14,6 @@ import axios from "axios";
 // Css
 import SuCss from "./css/Signup.module.css";
 
-// state
-import AuthContext from "../../store/auth-context";
-
 function SignupForm() {
   const [loadingEffect, setLoad] = useState(false);
   const [selected, setSelected] = useState("");
