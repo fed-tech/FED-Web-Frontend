@@ -199,7 +199,7 @@ function SignupForm() {
       }
     }
     if (name === "MobileNo") {
-      if (value.length > 12 || value.length < 10) {
+      if (value.length == 10) {
         e.target.style.borderBottom = "1px solid  #FF0000";
         e.target.style.outline = "none";
       } else {
