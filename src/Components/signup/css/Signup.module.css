@@ -48,14 +48,16 @@
 
 .helloDiv {
   color: black;
-  font: 27px mulish;
+  font-size: 27px;
+  font-family: "Mulish", sans-serif;
   font-weight: 600;
 }
 
 .plsDiv {
   margin-top: 3.8px;
   color: black;
-  font: 13.5px mulish;
+  font-size: 13.5px;
+  font-family: "Mulish", sans-serif;
   font-weight: 300;
 }
 
@@ -72,19 +74,22 @@
   align-items: center;
 }
 
+.googleText,
+.OrText {
+  font-size: 13.5px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+}
+
 .googleText {
   text-align: center;
   color: black;
-  font: 13.5px mulish;
-  font-weight: 300;
 }
 
 .OrText {
   margin-top: 22.5px;
   text-align: center;
   color: black;
-  font: 13.5px mulish;
-  font-weight: 300;
 }
 
 .form {
@@ -110,7 +115,7 @@ input {
 input::placeholder {
   font-weight: 300;
   font-size: 0.938rem;
-  font-family: Mulish;
+  font-family: "Mulish", sans-serif;
   font-style: normal;
   color: black;
   text-align: left;
@@ -128,14 +133,14 @@ input::placeholder {
   border-radius: 7.3px;
   border: black;
   background-color: black;
-  font: mulish 19.8px;
+  font-family: "Mulish", sans-serif;
   font-size: 19.8px;
   cursor: pointer;
 }
 
 .member {
   margin-top: 19.8px;
-  font-family: Mulish;
+  font-family: "Mulish", sans-serif;
   color: black;
   font-size: 13.5px;
 }
