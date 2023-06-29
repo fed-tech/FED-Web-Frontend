@@ -129,6 +129,18 @@
   color: black;
 }
 
+.orMDIv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orLine {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
 .or {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
