@@ -301,16 +301,12 @@ function SignupForm() {
               autocomplete="off"
               required
             />
-            {/* {DropShow ? ( */}
             <div
               className={SuCss.DropDownmDiv}
               id={DropShow ? "showDropMenuClg" : "hideDropMenuClg"}
             >
               Kalinga Institute of Industrial Technology
             </div>
-            {/* ) : (
-              ""
-            )} */}
           </div>
 
           {/* School */}
