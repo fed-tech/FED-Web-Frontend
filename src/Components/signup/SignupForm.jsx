@@ -5,6 +5,8 @@ import { useGoogleLogin } from "@react-oauth/google";
 
 // Components
 import Or from "./../Login/Or";
+import Load from "./../../MicroInterAction/Load";
+import { Alert } from "./../../MicroInterAction/Alert";
 
 // axios
 import axios from "axios";
@@ -28,11 +30,17 @@ function SignupForm() {
     College: "",
     MobileNo: "+91",
   });
+
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
+
   const [selected, setSelected] = useState("");
-  const authCtx = useContext(AuthContext);
-
-  const navigate = useNavigate();
-
   const [isinValid, setIsinValid] = useState(false);
   const [errmssg, setErrMssg] = useState("Invalid");
   const [codeResponse, setCodeResponse] = useState();
@@ -40,6 +48,10 @@ function SignupForm() {
   const [ClgName, setClgName] = useState("");
 
   let menu = useRef();
+
+  const authCtx = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const login = useGoogleLogin({
     onSuccess: (response) => setCodeResponse(response),
@@ -413,6 +425,8 @@ function SignupForm() {
           {errmssg}
         </p> */}
       </div>
+
+      <Alert variant={variants} val={setError} />
     </>
   );
 }
