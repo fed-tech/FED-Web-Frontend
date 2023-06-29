@@ -283,14 +283,9 @@
 }
 
 .forgotPasswordPTag {
-  color: black;
-  cursor: pointer;
-  font-family: "Mulish", sans-serif;
   font-size: 13px;
-}
-
-.forgotPassword p:hover {
   color: #f45725;
+  font-family: "Mulish", sans-serif;
 }
 
 .my-text-class {
