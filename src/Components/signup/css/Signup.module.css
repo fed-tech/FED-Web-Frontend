@@ -145,11 +145,6 @@
   font-size: 13.5px;
 }
 
-.member span {
-  color: black;
-  font-weight: 600;
-}
-
 .nameInpDiv {
   display: flex;
   justify-content: center;
