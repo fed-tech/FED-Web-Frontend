@@ -21,7 +21,7 @@ function SignUp() {
   return (
     <>
       <SignUpFun />
-      {modal && (
+      {/* {modal && (
         <div className={SuCss.modal}>
           <div className={SuCss.modalcontent}>
             <img src={tick}></img>
@@ -32,7 +32,7 @@ function SignUp() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }
