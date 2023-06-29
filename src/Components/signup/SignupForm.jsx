@@ -247,16 +247,19 @@ function SignupForm() {
           required
         />
 
-        {/* Roll Number */}
-        <input
-          type="text"
-          id="rollNum"
-          name="RollNumber"
-          placeholder="Roll Number"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
+        {/* Phone Number */}
+        <div className={SuCss.mobileno_container}>
+          <p className={SuCss.mobileno91}>+91</p>
+          <input
+            type="number"
+            id="number"
+            name="MobileNo"
+            placeholder="Mobile Number"
+            className={SuCss.inpTag}
+            onChange={DataInp}
+            required
+          />
+        </div>
 
         {/* College */}
         <input
@@ -280,6 +283,17 @@ function SignupForm() {
           required
         />
 
+        {/* Roll Number */}
+        <input
+          type="text"
+          id="rollNum"
+          name="RollNumber"
+          placeholder="Roll Number"
+          className={SuCss.inpTag}
+          onChange={DataInp}
+          required
+        />
+
         {/* Year */}
         <select
           value={selected}
@@ -294,20 +308,6 @@ function SignupForm() {
             </option>
           ))}
         </select>
-
-        {/* Phone Number */}
-        <div className={SuCss.mobileno_container}>
-          <p className={SuCss.mobileno91}>+91</p>
-          <input
-            type="number"
-            id="number"
-            name="MobileNo"
-            placeholder="Mobile Number"
-            className={SuCss.inpTag}
-            onChange={DataInp}
-            required
-          />
-        </div>
 
         {/* Password */}
         <input
