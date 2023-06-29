@@ -19,8 +19,7 @@ import Lcss from "./css/loginpg.module.css";
 // img
 import google from "./../../assets/Login/Google.svg";
 
-export default function GoogleLogin() {
-  const [loadingEffect, setLoad] = useState(false);
+export default function GoogleLogin({ setLoad }) {
   const [codeResponse, setCodeResponse] = useState();
   const [variants, setError] = useState({
     mainColor: "",
