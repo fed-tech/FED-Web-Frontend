@@ -25,9 +25,6 @@ import Lcss from "./css/loginpg.module.css";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
-// img
-import google from "./../../assets/Login/Google.svg";
-
 function LoginForm() {
   const [loadingEffect, setLoad] = useState(false);
   const [see, hide] = useState(false);
