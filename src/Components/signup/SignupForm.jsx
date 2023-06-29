@@ -258,17 +258,6 @@ function SignupForm() {
           required
         />
 
-        {/* School */}
-        <input
-          type="text"
-          id="school"
-          name="School"
-          placeholder="School"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
-
         {/* College */}
         <input
           type="text"
@@ -280,6 +269,18 @@ function SignupForm() {
           required
         />
 
+        {/* School */}
+        <input
+          type="text"
+          id="school"
+          name="School"
+          placeholder="School"
+          className={SuCss.inpTag}
+          onChange={DataInp}
+          required
+        />
+
+        {/* Phone Number */}
         <div className={SuCss.mobileno_container}>
           <p className={SuCss.mobileno91}>+91</p>
           <input
