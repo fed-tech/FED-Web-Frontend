@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs-react";
 
 // Components
 import Or from "./../Login/Or";
+import GoogleSignUp from "./GoogleSignUp";
 import Load from "./../../MicroInterAction/Load";
 import { Alert } from "./../../MicroInterAction/Alert";
 
