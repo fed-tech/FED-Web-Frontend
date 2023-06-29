@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 // Components
 import GoogleLogin from "./GoogleLogin";
+import Or from "./Or";
 import Load from "./../../MicroInterAction/Load";
 import { Alert } from "./../../MicroInterAction/Alert";
 
@@ -161,7 +162,7 @@ function LoginForm() {
   return (
     <>
       <GoogleLogin setLoad={setLoad} />
-
+      <Or />
       <form className={Lcss.formTag}>
         <div className={Lcss.user}>
           <input
