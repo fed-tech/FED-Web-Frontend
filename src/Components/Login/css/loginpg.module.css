@@ -282,7 +282,7 @@
   align-items: center;
 }
 
-.forgotPassword p {
+.forgotPasswordPTag {
   color: black;
   cursor: pointer;
   font-family: "Mulish", sans-serif;
