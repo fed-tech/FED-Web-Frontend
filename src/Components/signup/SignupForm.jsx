@@ -266,15 +266,17 @@ function SignupForm() {
           </div>
 
           {/* College */}
-          <input
-            type="text"
-            id="college"
-            name="College"
-            placeholder="College"
-            className={SuCss.inpTag}
-            onChange={DataInp}
-            required
-          />
+          <div>
+            <input
+              type="text"
+              id="college"
+              name="College"
+              placeholder="College"
+              className={SuCss.inpTag}
+              onChange={DataInp}
+              required
+            />
+          </div>
 
           {/* School */}
           <input
