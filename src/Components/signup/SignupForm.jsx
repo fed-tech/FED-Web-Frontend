@@ -166,16 +166,43 @@ function SignupForm() {
           setLoad(false);
 
           // setModal(!modal);
+
+          setError({
+            mainColor: "#EDFEEE",
+            secondaryColor: "#5CB660",
+            symbol: "check_circle",
+            title: "Success",
+            text: "",
+            val: true,
+          });
         }
       } catch (error) {
         setLoad(false);
 
         setIsinValid(true);
         if (error.response.data.code === 1) {
-          setErrMssg("User already exists");
+          setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Check it out",
+            text: "User already exists",
+            val: true,
+          });
+
+          // setErrMssg("User already exists");
         }
         if (error.response.data.code === 2) {
-          setErrMssg("Invalid email format");
+          setError({
+            mainColor: "#FFF4E5",
+            secondaryColor: "#FFA117",
+            symbol: "warning",
+            title: "Warning",
+            text: "Invalid email format",
+            val: true,
+          });
+
+          // setErrMssg("Invalid email format");
         }
 
         console.log(error);
@@ -185,10 +212,30 @@ function SignupForm() {
 
       if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
-        setErrMssg("Please fill all the fields");
+
+        setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "pets",
+          title: "Check it out",
+          text: "Please Fill All The Details",
+          val: true,
+        });
+
+        // setErrMssg("Please fill all the fields");
       } else {
         setIsinValid(true);
-        setErrMssg("Invalid mobile number");
+
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Invalid mobile number",
+          val: true,
+        });
+
+        // setErrMssg("Invalid mobile number");
       }
     }
   };
