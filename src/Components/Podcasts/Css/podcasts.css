@@ -1,0 +1,122 @@
+.KnowUsmDiv {
+  height: fit-content;
+  padding: 1rem 0px 6rem 0px;
+  background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coverTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 5%;
+  margin-top: 180px;
+}
+
+.para1,
+.para2 {
+  width: auto;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+}
+
+.para2 {
+  color: #f45725;
+}
+
+.para3 {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 110%;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  text-align: center;
+  width: 50%;
+  margin-bottom: 90px;
+  word-wrap: break-word;
+}
+
+.cover-btn {
+  border-width: 0px;
+  cursor: pointer;
+  background-color: #f45725;
+  width: 370px;
+  height: 64px;
+  border-radius: 6px;
+  padding: 20px;
+  gap: 10px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 0%;
+  font-weight: 800;
+}
+
+.cover-btn:hover,
+.cover-btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+@media screen and (max-width: 640px) {
+  .para3 {
+    width: 100%;
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  .para1,
+  .para2 {
+    width: 100%;
+    font-size: 40px;
+    margin-bottom: 14px;
+  }
+
+  .KnowUsmDiv {
+    padding: 0px 10%;
+    width: 100%;
+    padding-bottom: 50px;
+  }
+
+  .coverTitle {
+    margin-bottom: 0%;
+    margin-top: 0%;
+  }
+
+  .coverTitle {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container1 {
+    padding-top: 54px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cover-btn {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .para1,
+  .para2 {
+    width: 100%;
+    font-size: 25px;
+  }
+}

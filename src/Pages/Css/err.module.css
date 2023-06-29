@@ -1,0 +1,62 @@
+.bg {
+  background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png");
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 160px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.oops {
+  font-family: "Montserrat", sans-serif;
+  font-size: 88px;
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+  padding-top: 200px;
+  font-weight: bold;
+}
+
+.notfound {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  color: #f45725;
+  text-align: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.the_page {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  color: aliceblue;
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+}
+.cycle_image {
+  padding-top: 110px;
+}
+@media only screen and (max-width: 1030px) {
+  .bg {
+    overflow-x: hidden;
+  }
+  .cycleimage {
+    height: 80%;
+    width: 80%;
+  }
+  .oops {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .notfound {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .the_page {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
