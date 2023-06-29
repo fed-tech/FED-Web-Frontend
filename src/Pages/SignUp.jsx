@@ -10,6 +10,7 @@ function SignUp() {
   }, []);
 
   const [modal, setModal] = useState(false);
+
   const navigate = useNavigate();
 
   const toggleModel = () => {
