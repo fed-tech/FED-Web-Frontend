@@ -215,7 +215,7 @@ function SignupForm() {
       <p className={SuCss.OrText}>Or</p>
       <form className={SuCss.form}>
         {/* Name */}
-        <div>
+        <div className={SuCss.nameInpDiv}>
           <input
             id="first_name"
             type="text"
