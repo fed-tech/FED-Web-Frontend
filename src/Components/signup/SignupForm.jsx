@@ -18,8 +18,6 @@ import SuCss from "./css/Signup.module.css";
 // state
 import AuthContext from "../../store/auth-context";
 
-import google from "./../../assets/Login/Google.svg";
-
 function SignupForm() {
   const [loadingEffect, setLoad] = useState(false);
   const [showUser, setUser] = useState({
