@@ -218,10 +218,10 @@ function SignupForm() {
     }
     if (name === "MobileNo") {
       if (value.length == 10) {
-        e.target.style.borderBottom = "1px solid  #FF0000";
-        e.target.style.outline = "none";
-      } else {
         e.target.style.borderBottom = "1px solid  black";
+      } else {
+        e.target.style.outline = "none";
+        e.target.style.borderBottom = "1px solid  #FF0000";
       }
     }
 
