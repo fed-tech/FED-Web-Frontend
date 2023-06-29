@@ -324,6 +324,7 @@ function SignupForm() {
               name="College"
               placeholder="College"
               className={SuCss.inpTag}
+              value={showUser.College}
               onChange={DataInp}
               onFocus={() => {
                 DropCheck();
