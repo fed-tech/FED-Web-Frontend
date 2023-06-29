@@ -241,7 +241,6 @@ function SignupForm() {
   return (
     <>
       <GoogleSignUp setLoad={setLoad} />
-
       <Or />
 
       <div className={SuCss.form}>
