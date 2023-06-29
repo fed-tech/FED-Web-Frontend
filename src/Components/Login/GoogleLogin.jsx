@@ -112,8 +112,9 @@ export default function GoogleLogin({ setLoad }) {
         }
       }
     } catch (err) {
-      setLoad(false);
       console.log(err);
+
+      setLoad(false);
     }
   };
 
