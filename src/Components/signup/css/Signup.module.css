@@ -165,27 +165,12 @@
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 1.063rem;
-  color: black;
-  text-decoration: none;
-}
-
-.spn:after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #f45725;
-  display: flex;
-  margin-left: 124px;
-  transition: 0.3s;
-}
-
-.spn:hover:after {
-  width: 25%;
-  transition: width 0.3s linear;
+  color: #f45725;
+  text-decoration: underline;
 }
 
 .spn:hover {
-  color: #f45725;
+  text-decoration: none;
 }
 
 .year {
