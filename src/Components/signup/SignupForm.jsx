@@ -20,6 +20,7 @@ import AuthContext from "../../store/auth-context";
 import google from "./../../assets/Login/Google.svg";
 
 function SignupForm() {
+  const [loadingEffect, setLoad] = useState(false);
   const [showUser, setUser] = useState({
     email: "",
     Password: "",
@@ -266,10 +267,6 @@ function SignupForm() {
     }
   };
 
-  // useEffect(() => {
-  //   console.log(ClgName);
-  // }, [ClgName]);
-
   return (
     <>
       <div className={SuCss.googleDiv} onClick={() => login()}>
@@ -408,7 +405,7 @@ function SignupForm() {
           />
 
           <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
-            SignUp
+            {loadingEffect ? <Load /> : "SignUp"}
           </button>
         </form>
 
