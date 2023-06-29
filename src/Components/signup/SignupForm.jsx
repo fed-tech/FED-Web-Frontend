@@ -183,8 +183,6 @@ function SignupForm() {
             text: "User already exists",
             val: true,
           });
-
-          // setErrMssg("User already exists");
         }
         if (error.response.data.code === 2) {
           setError({
