@@ -114,6 +114,7 @@ function SignupForm() {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+
     const {
       email,
       Password,
