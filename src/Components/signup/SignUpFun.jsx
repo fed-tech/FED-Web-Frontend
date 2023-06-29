@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import SignupForm from "./SignupForm";
+import Header from "./../Login/Header";
 
 // Css
 import SuCss from "./css/Signup.module.css";
@@ -13,11 +14,8 @@ function SignUpFun() {
         <div className={SuCss.glassDiv}>
           <p className={SuCss.FED}>FED</p>
           <div className={SuCss.wFFFDiv}>
-            <div className={SuCss.helloDiv}> Hello There</div>
-            <p className={SuCss.plsDiv}> Please enter Your Details</p>
-            <>
-              <SignupForm />
-            </>
+            <Header title="Hello There" des="Please enter Your Details" />
+            <SignupForm />
           </div>
         </div>
       </div>
