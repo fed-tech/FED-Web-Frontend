@@ -117,8 +117,11 @@
   font-size: 0.938rem;
   font-family: "Mulish", sans-serif;
   font-style: normal;
-  color: black;
   text-align: left;
+}
+
+.disabledYear {
+  color: #757575;
 }
 
 .hrs {
