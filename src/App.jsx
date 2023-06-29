@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import React, { Suspense, useContext } from "react";
 
 // Layout
@@ -100,7 +100,7 @@ function App() {
                   }
                 />
 
-                {!authCtx.isLoggedIn && (
+                {!authCtx.isLoggedIn ? (
                   <Route
                     path="/Login"
                     element={
@@ -109,9 +109,11 @@ function App() {
                       </Suspense>
                     }
                   />
+                ) : (
+                  <Navigate to="/MyProfile" />
                 )}
 
-                {!authCtx.isLoggedIn && (
+                {!authCtx.isLoggedIn ? (
                   <Route
                     path="/Register"
                     element={
@@ -120,9 +122,11 @@ function App() {
                       </Suspense>
                     }
                   />
+                ) : (
+                  <Navigate to="/MyProfile" />
                 )}
 
-                {authCtx.isLoggedIn && (
+                {authCtx.isLoggedIn ? (
                   <Route
                     path="/MyProfile"
                     element={
@@ -131,6 +135,8 @@ function App() {
                       </Suspense>
                     }
                   />
+                ) : (
+                  <Navigate to="/Login" />
                 )}
 
                 <Route
