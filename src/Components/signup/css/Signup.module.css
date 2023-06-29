@@ -31,6 +31,7 @@
   font-size: 37px;
   font-weight: 700;
 }
+
 .wFFFDiv {
   margin-top: 30.8px;
   padding: 30px 57px;
@@ -44,6 +45,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .helloDiv {
   color: black;
   font: 27px mulish;
@@ -56,6 +58,7 @@
   font: 13.5px mulish;
   font-weight: 300;
 }
+
 .googleDiv {
   margin-top: 40.6px;
   border: 1px solid black;
@@ -68,12 +71,14 @@
   gap: 12px;
   align-items: center;
 }
+
 .googleText {
   text-align: center;
   color: black;
   font: 13.5px mulish;
   font-weight: 300;
 }
+
 .OrText {
   margin-top: 22.5px;
   text-align: center;
@@ -81,6 +86,7 @@
   font: 13.5px mulish;
   font-weight: 300;
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -89,6 +95,7 @@
   padding: 6.9px;
   width: 100%;
 }
+
 input {
   width: 100%;
   margin-top: 24.6px;
@@ -99,6 +106,7 @@ input {
   color: black;
   border-bottom: 1px solid black;
 }
+
 input::placeholder {
   font-weight: 300;
   font-size: 0.938rem;
@@ -107,10 +115,12 @@ input::placeholder {
   color: black;
   text-align: left;
 }
+
 .hrs {
   width: 100%;
   height: 1px;
 }
+
 .btn {
   width: 100%;
   margin-top: 42.15px;
@@ -122,16 +132,19 @@ input::placeholder {
   font-size: 19.8px;
   cursor: pointer;
 }
+
 .member {
   margin-top: 19.8px;
   font-family: Mulish;
   color: black;
   font-size: 13.5px;
 }
+
 .member span {
   color: black;
   font-weight: 600;
 }
+
 .spn {
   background-color: transparent;
   font-family: "Mulish", sans-serif;
@@ -142,6 +155,7 @@ input::placeholder {
   color: black;
   text-decoration: none;
 }
+
 .spn:after {
   content: "";
   width: 0;
@@ -151,10 +165,12 @@ input::placeholder {
   margin-left: 124px;
   transition: 0.3s;
 }
+
 .spn:hover:after {
   width: 25%;
   transition: width 0.3s linear;
 }
+
 .spn:hover {
   color: #f45725;
 }
@@ -166,9 +182,11 @@ input::placeholder {
   padding: 10px;
   border: 2px solid black;
 }
+
 .year option {
   color: black;
 }
+
 .modal {
   background: black;
   /* backdrop-filter: blur(10px); */
@@ -180,14 +198,17 @@ input::placeholder {
   top: 40%;
   border-radius: 5%;
 }
+
 .modalcontent h2 {
   font-family: "Rubik", sans-serif;
   padding-top: 20px;
 }
+
 .modalcontent h3 {
   font-family: "Rubik", sans-serif;
   padding-top: 10px;
 }
+
 .ok {
   margin-top: 40px;
   width: 90px;
@@ -198,10 +219,12 @@ input::placeholder {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+
 .modalcontent img {
   width: 200px;
   margin-top: -60px;
 }
+
 .mobileno_container {
   display: flex;
   justify-content: center;
@@ -209,32 +232,38 @@ input::placeholder {
   width: 100%;
   margin-top: 24.6px;
 }
+
 .mobileno_container input {
   margin-top: 0;
 }
+
 .mobileno_container p {
   color: #808080;
   padding: 10px 23.2px;
   border-bottom: 1px solid black;
 }
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;
     max-width: 50%;
   }
 }
+
 @media (max-width: 1000px) and (min-width: 800px) {
   .glassDiv {
     width: 60%;
     max-width: 60%;
   }
 }
+
 @media (max-width: 800px) and (min-width: 760px) {
   .glassDiv {
     width: 65%;
     max-width: 65%;
   }
 }
+
 @media (max-width: 760px) and (min-width: 530px) {
   .glassDiv {
     width: 70%;
@@ -242,23 +271,27 @@ input::placeholder {
     padding: 15px 40px 40px 40px;
   }
 }
+
 @media (max-width: 530px) {
   .glassDiv {
     width: 80%;
     max-width: 80%;
     padding: 15px 40px 40px 40px;
   }
+
   .wFFFDiv {
     margin-top: 30.8px;
     padding: 35px 35px;
   }
 }
+
 @media (max-width: 400px) {
   .glassDiv {
     width: 100%;
     max-width: 100%;
     padding: 15px 40px 40px 40px;
   }
+
   .wFFFDiv {
     margin-top: 30.8px;
     padding: 30px 30px;
