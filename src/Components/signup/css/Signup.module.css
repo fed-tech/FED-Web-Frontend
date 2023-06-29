@@ -104,7 +104,7 @@
 .inpTag {
   width: 100%;
   margin-top: 24.6px;
-  padding: 10.6px 23.2px;
+  padding: 7px 0px 7px 7px;
   background-color: transparent;
   outline: none;
   border: none;
@@ -148,6 +148,14 @@
 .member span {
   color: black;
   font-weight: 600;
+}
+
+.nameInpDiv {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  gap: 0px 15px;
 }
 
 .spn {
