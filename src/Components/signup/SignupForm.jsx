@@ -127,6 +127,7 @@ function SignupForm() {
     } = showUser;
 
     const name = FirstName + " " + LastName;
+
     if (
       name !== "" &&
       RollNumber !== "" &&
