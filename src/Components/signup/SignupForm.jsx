@@ -159,8 +159,6 @@ function SignupForm() {
         if (response.status === 200) {
           setLoad(false);
 
-          // setModal(!modal);
-
           setError({
             mainColor: "#EDFEEE",
             secondaryColor: "#5CB660",
