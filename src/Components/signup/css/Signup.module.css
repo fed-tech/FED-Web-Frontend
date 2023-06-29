@@ -101,7 +101,7 @@
   width: 100%;
 }
 
-input {
+.inpTag {
   width: 100%;
   margin-top: 24.6px;
   padding: 10.6px 23.2px;
@@ -112,7 +112,7 @@ input {
   border-bottom: 1px solid black;
 }
 
-input::placeholder {
+.inpTag::placeholder {
   font-weight: 300;
   font-size: 0.938rem;
   font-family: "Mulish", sans-serif;
