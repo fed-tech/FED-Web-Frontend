@@ -214,25 +214,32 @@ function SignupForm() {
 
       <p className={SuCss.OrText}>Or</p>
       <div className={SuCss.form}>
-        <input
-          id="first_name"
-          type="text"
-          name="FirstName"
-          placeholder="First Name"
-          onChange={DataInp}
-        />
-        <input
-          type="text"
-          id="last_name"
-          name="LastName"
-          placeholder="Last Name"
-          onChange={DataInp}
-        />
+        {/* Name */}
+        <div>
+          <input
+            id="first_name"
+            type="text"
+            name="FirstName"
+            placeholder="First Name"
+            className={SuCss.inpTag}
+            onChange={DataInp}
+          />
+          <input
+            type="text"
+            id="last_name"
+            name="LastName"
+            placeholder="Last Name"
+            className={SuCss.inpTag}
+            onChange={DataInp}
+          />
+        </div>
+
         <input
           type="email"
           id="email"
           name="email"
           placeholder="Email"
+          className={SuCss.inpTag}
           onChange={DataInp}
         />
         <input
@@ -240,6 +247,7 @@ function SignupForm() {
           id="rollNum"
           name="RollNumber"
           placeholder="Roll Number"
+          className={SuCss.inpTag}
           onChange={DataInp}
         />
         <input
@@ -247,6 +255,7 @@ function SignupForm() {
           id="school"
           name="School"
           placeholder="School"
+          className={SuCss.inpTag}
           onChange={DataInp}
         />
         <input
@@ -254,6 +263,7 @@ function SignupForm() {
           id="college"
           name="College"
           placeholder="College"
+          className={SuCss.inpTag}
           onChange={DataInp}
         />
         <div className={SuCss.mobileno_container}>
@@ -263,6 +273,7 @@ function SignupForm() {
             id="number"
             name="MobileNo"
             placeholder="Mobile Number"
+            className={SuCss.inpTag}
             onChange={DataInp}
           />
         </div>
@@ -271,6 +282,7 @@ function SignupForm() {
           id="password"
           name="Password"
           placeholder="Password"
+          className={SuCss.inpTag}
           onChange={DataInp}
         />
 
@@ -282,6 +294,7 @@ function SignupForm() {
             </option>
           ))}
         </select>
+
         <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
           SignUp
         </button>
