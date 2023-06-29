@@ -213,117 +213,118 @@ function SignupForm() {
       </div>
 
       <p className={SuCss.OrText}>Or</p>
-      <form className={SuCss.form}>
-        {/* Name */}
-        <div className={SuCss.nameInpDiv}>
+      <div className={SuCss.form}>
+        <form>
+          {/* Name */}
+          <div className={SuCss.nameInpDiv}>
+            <input
+              id="first_name"
+              type="text"
+              name="FirstName"
+              placeholder="First Name"
+              className={SuCss.inpTag}
+              onChange={DataInp}
+              required
+            />
+            <input
+              type="text"
+              id="last_name"
+              name="LastName"
+              placeholder="Last Name"
+              className={SuCss.inpTag}
+              onChange={DataInp}
+              required
+            />
+          </div>
+
+          {/* email */}
           <input
-            id="first_name"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            className={SuCss.inpTag}
+            onChange={DataInp}
+            required
+          />
+
+          {/* Phone Number */}
+          <div className={SuCss.mobileno_container}>
+            <p className={SuCss.mobileno91}>+91</p>
+            <input
+              type="number"
+              id="number"
+              name="MobileNo"
+              placeholder="Mobile Number"
+              className={SuCss.inpTag}
+              onChange={DataInp}
+              required
+            />
+          </div>
+
+          {/* College */}
+          <input
             type="text"
-            name="FirstName"
-            placeholder="First Name"
+            id="college"
+            name="College"
+            placeholder="College"
             className={SuCss.inpTag}
             onChange={DataInp}
             required
           />
+
+          {/* School */}
           <input
             type="text"
-            id="last_name"
-            name="LastName"
-            placeholder="Last Name"
+            id="school"
+            name="School"
+            placeholder="School"
             className={SuCss.inpTag}
             onChange={DataInp}
             required
           />
-        </div>
 
-        {/* email */}
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Email"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
-
-        {/* Phone Number */}
-        <div className={SuCss.mobileno_container}>
-          <p className={SuCss.mobileno91}>+91</p>
+          {/* Roll Number */}
           <input
-            type="number"
-            id="number"
-            name="MobileNo"
-            placeholder="Mobile Number"
+            type="text"
+            id="rollNum"
+            name="RollNumber"
+            placeholder="Roll Number"
             className={SuCss.inpTag}
             onChange={DataInp}
             required
           />
-        </div>
 
-        {/* College */}
-        <input
-          type="text"
-          id="college"
-          name="College"
-          placeholder="College"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
+          {/* Year */}
+          <select
+            value={selected}
+            onChange={handleChange}
+            required
+            className={SuCss.year}
+          >
+            <option hidden> Year</option>
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.text}
+              </option>
+            ))}
+          </select>
 
-        {/* School */}
-        <input
-          type="text"
-          id="school"
-          name="School"
-          placeholder="School"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
+          {/* Password */}
+          <input
+            type="password"
+            id="password"
+            name="Password"
+            placeholder="Password"
+            className={SuCss.inpTag}
+            onChange={DataInp}
+            required
+          />
 
-        {/* Roll Number */}
-        <input
-          type="text"
-          id="rollNum"
-          name="RollNumber"
-          placeholder="Roll Number"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
-
-        {/* Year */}
-        <select
-          value={selected}
-          onChange={handleChange}
-          required
-          className={SuCss.year}
-        >
-          <option hidden> Year</option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.text}
-            </option>
-          ))}
-        </select>
-
-        {/* Password */}
-        <input
-          type="password"
-          id="password"
-          name="Password"
-          placeholder="Password"
-          className={SuCss.inpTag}
-          onChange={DataInp}
-          required
-        />
-
-        <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
-          SignUp
-        </button>
-
+          <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
+            SignUp
+          </button>
+        </form>
         <p className={SuCss.member}>
           Already a member?{" "}
           <Link to="/Login" className="LinkStyle">
@@ -336,7 +337,7 @@ function SignupForm() {
         >
           {errmssg}
         </p>
-      </form>
+      </div>
     </>
   );
 }
