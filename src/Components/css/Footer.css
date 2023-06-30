@@ -215,11 +215,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Manrope", sans-serif;
 }
 
 .terms_and_policies a {
   margin: 20px 10px 10px 10px;
-  font-family: "Manrope", sans-serif;
 }
 
 @media screen and (max-width: 1150px) {
