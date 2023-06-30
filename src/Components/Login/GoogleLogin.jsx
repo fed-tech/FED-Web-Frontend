@@ -109,6 +109,15 @@ export default function GoogleLogin({ setLoad }) {
             text: "Please Sign Up first",
             val: true,
           });
+        } else {
+          setError({
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "An Unexpected Error Occurred",
+            val: true,
+          });
         }
       }
     } catch (err) {
