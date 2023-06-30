@@ -4,9 +4,19 @@ import PropTypes from "prop-types";
 // css
 import CPCss from "./css/CompleteProfile.module.css";
 
+// icons
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
 function CompleteProfile(props) {
   console.log(props);
-  return <div className={CPCss.mDiv}>Complete Profile</div>;
+  return (
+    <div className={CPCss.mDiv}>
+      <div className={CPCss.mDivCon}>
+        Complete Profile
+        <ArrowBackIcon className={CPCss.ArrowBackIcon} />
+      </div>
+    </div>
+  );
 }
 
 CompleteProfile.propTypes = {};
