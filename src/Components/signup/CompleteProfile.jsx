@@ -6,7 +6,7 @@ import CPCss from "./css/CompleteProfile.module.css";
 
 function CompleteProfile(props) {
   console.log(props);
-  return <div className={CPCss.mDiv}>CompleteProfile</div>;
+  return <div className={CPCss.mDiv}>Complete Profile</div>;
 }
 
 CompleteProfile.propTypes = {};
