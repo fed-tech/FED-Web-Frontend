@@ -1,10 +1,8 @@
 .mDiv {
-  position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png"); */
+  background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
