@@ -101,14 +101,8 @@ export default function GoogleLogin({ setLoad }) {
             val: true,
           });
         } else if (response.data.code === 2) {
-          setError({
-            mainColor: "#FFC0CB",
-            secondaryColor: "#FF69B4",
-            symbol: "pets",
-            title: "Check it out",
-            text: "Please Sign Up first",
-            val: true,
-          });
+          localStorage.setItem("user", JSON.stringify(googleResponse.data));
+          navigate("/createprofile");
         } else {
           setError({
             mainColor: "#FDEDED",
