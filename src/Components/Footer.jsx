@@ -251,7 +251,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <p>©</p>
+          <p className="copyrightPTag">© 2019-2023, fedkiit.com</p>
         </div>
       </footer>
     </section>
