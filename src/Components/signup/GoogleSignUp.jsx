@@ -125,7 +125,7 @@ const GoogleSignUp = ({ setLoad }) => {
       </div>
 
       <Alert variant={variants} val={setError} />
-      <CompleteProfile data={passData} />
+      <CompleteProfile data={passData} set={setGoogleData} />
     </>
   );
 };
