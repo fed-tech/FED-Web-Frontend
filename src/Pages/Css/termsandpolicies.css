@@ -1,0 +1,29 @@
+.privacy_policies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    font-family: "Manrope", sans-serif;
+    width: 100%;
+}
+.privacy_policies_content{
+    margin-top: 60px;
+    padding: 93px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.privacy_policies_content p{
+    margin-top: 15px;
+}
+.privacy_policies_content h1{
+    text-align: center;
+    /* margin-top: 10px; */
+}
