@@ -216,9 +216,11 @@
   justify-content: center;
   align-items: center;
   font-family: "Manrope", sans-serif;
+  font-weight: 300;
+  /* background-color: red; */
 }
 
-.terms_and_policies a {
+.tap1Div {
   margin: 20px 10px 10px 10px;
 }
 
