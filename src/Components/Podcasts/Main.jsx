@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Youtube from "./Youtube";
 
 // style
-import "./css/podcasts.css";
+import "./Css/podcasts.css";
 
 function Main() {
   const [goToYoutube, setGoToYoutube] = useState(false);
