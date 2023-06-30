@@ -80,3 +80,18 @@ input[type="number"] {
   visibility: hidden;
   pointer-events: none;
 }
+
+#showCreate {
+  /* opacity: 1; */
+  /* visibility: visible; */
+  width: 40%;
+  pointer-events: all;
+  /* transform: translateX(0%); */
+}
+#hideCreate {
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  width: 0;
+  pointer-events: none;
+  /* transform: translateX(200%); */
+}
