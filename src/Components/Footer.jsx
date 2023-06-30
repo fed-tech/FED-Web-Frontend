@@ -240,13 +240,13 @@ export default function Footer() {
         <div className="tnpMDiv">
           <div className="terms_and_policies">
             <div className="tap1Div">
-              <Link to="/T&C" target="blank" className="LinkStyle">
+              <Link to="/T&C" className="LinkStyle">
                 Terms and conditions
               </Link>
             </div>
             <dv className="dotDIv"></dv>
             <div className="tap1Div">
-              <Link to="/PrivacyPolicies" target="blank" className="LinkStyle">
+              <Link to="/PrivacyPolicies" className="LinkStyle">
                 Privacy policy
               </Link>
             </div>
