@@ -1,16 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // css
 import "./css/MobileNav.css";
 
-// state
-import AuthContext from "./../store/auth-context";
-
 export default function NavMobile() {
   const [count, setCount] = useState(false);
-
-  const authCtx = useContext(AuthContext);
 
   return (
     <header>
