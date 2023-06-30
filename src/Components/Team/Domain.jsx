@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import ImageComponent from "./ImageComponentTeam";
+
 export default function Domain(props) {
   const [showContent2, setshowContent2] = useState(true);
   const [show2, setshow2] = useState(false);
@@ -9,8 +11,6 @@ export default function Domain(props) {
       setshowContent2(false), setshow2(true);
     }, 3000);
   });
-
-  var RandomNumber = Math.floor(Math.random() * 3) + 1;
 
   return (
     <>
@@ -27,7 +27,7 @@ export default function Domain(props) {
       {show2 ? (
         <div className="memDivMain">
           <div className="memImgDiv">
-            <img src={props.mem.img} alt="" className="memImg" />
+            <ImageComponent src={props.mem.img} blur={props.mem.blur} />
             {props.mem.linkedin === "" && props.mem.github === "" ? (
               ""
             ) : (
@@ -75,7 +75,7 @@ export default function Domain(props) {
               </div>
             )}
           </div>
-          <p className={`memName name${RandomNumber}`}>{props.mem.name}</p>
+          <p className={`memName name${props.mem.id}`}>{props.mem.name}</p>
         </div>
       ) : (
         <div></div>

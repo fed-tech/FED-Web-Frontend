@@ -1,4 +1,6 @@
 import React from "react";
+
+// Components
 import Img from "./Work";
 
 export default function WorkWith() {
@@ -8,6 +10,7 @@ export default function WorkWith() {
         <p className="WeWorkWithPTag">
           We <span>work</span> with...
         </p>
+
         {/* Slider */}
         <div className="slideParentDiv">
           <div className="slider">
@@ -16,6 +19,7 @@ export default function WorkWith() {
             </div>
           </div>
         </div>
+
         <div className="pTagDivWork">
           <p className="workptagDes">
             We wish to express our deepest gratitude to our sponsors for their
