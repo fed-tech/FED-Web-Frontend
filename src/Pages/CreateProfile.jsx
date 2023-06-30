@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs-react";
 
 // axios
 import axios from "axios";
-import Swal from "sweetalert2";
 
 // Css
 import SuCss from "./Css/CreateProfile.module.css";
@@ -53,14 +52,11 @@ export default function CreateProfile() {
   const DataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    if(value === "")
-    {
+    if (value === "") {
       e.target.style.borderBottom = "2px solid  #FF0000";
       e.target.style.outline = "none";
-    }
-    else{
+    } else {
       e.target.style.borderBottom = "2px solid  black";
-
     }
     if (name === "MobileNo") {
       if (value.length > 12 || value.length < 10) {
