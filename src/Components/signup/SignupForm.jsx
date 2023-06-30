@@ -109,6 +109,8 @@ function SignupForm() {
       } catch (error) {
         setLoad(false);
 
+        console.log(error.response.data.code === 1);
+
         if (error.response.data.code === 1) {
           setError({
             mainColor: "#FFC0CB",
@@ -118,6 +120,8 @@ function SignupForm() {
             text: "User already exists",
             val: true,
           });
+
+          return;
         }
         if (error.response.data.code === 2) {
           setError({
@@ -128,6 +132,7 @@ function SignupForm() {
             text: "Invalid email format",
             val: true,
           });
+          return;
         } else {
           setError({
             mainColor: "#FDEDED",
@@ -137,6 +142,7 @@ function SignupForm() {
             text: "An Unexpected Error Occurred",
             val: true,
           });
+          return;
         }
 
         console.log(error);
