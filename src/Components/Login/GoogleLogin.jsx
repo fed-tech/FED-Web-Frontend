@@ -102,7 +102,7 @@ export default function GoogleLogin({ setLoad }) {
           });
         } else if (response.data.code === 2) {
           localStorage.setItem("user", JSON.stringify(googleResponse.data));
-          navigate("/createprofile");
+          navigate("/CreateProfile");
         } else {
           setError({
             mainColor: "#FDEDED",
