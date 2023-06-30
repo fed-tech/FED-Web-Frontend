@@ -1,9 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+// css
+import CPCss from "./css/CompleteProfile.module.css";
+
 function CompleteProfile(props) {
   console.log(props);
-  return <div>CompleteProfile</div>;
+  return <div className={CPCss.mDiv}>CompleteProfile</div>;
 }
 
 CompleteProfile.propTypes = {};
