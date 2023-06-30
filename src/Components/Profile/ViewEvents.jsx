@@ -21,13 +21,6 @@ function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
     <div className='viewEventss'>
       {showEvent ?
         <EventDetails cardNo={cardNo} />
-        // <div className='fullPage'>
-        //   <div className="viewEventDets">
-        //   </div>
-        //   <div className="expt">
-            
-        //   </div>
-        // </div> 
         :
         <div className="viewevents">
           {events.map((i, idx) => (
