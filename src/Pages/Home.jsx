@@ -14,7 +14,7 @@ import "../Components/Home/css/home.css";
 import "../Components/Home/css/testimonial.css";
 
 export default function Home() {
-  // scroll to tops
+  // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
