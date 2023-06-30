@@ -16,7 +16,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
 }
 
 @media only screen and (max-width: 650px) {
