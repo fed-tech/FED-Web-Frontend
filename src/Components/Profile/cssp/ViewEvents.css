@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
+.viewevents{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 1px;
+    overflow-y: scroll;
+    margin-left: 20px;
+    width: 85%;
+    height: 100%;
+    
+}
+.viewEventDets {
+  margin-left: 20px;
+  width: 85%;
+  height: 100%;
+}
+.viewEventss{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media(max-width:1408px)
+{
+  .viewevents{
+
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+@media(max-width:1008px)
+{
+  .viewevents{
+
+    grid-template-columns: repeat(1, 1fr);
+}
+
+}

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // css
 import "./css/DesktopNav.css";
 
+// state
+import AuthContext from "./../store/auth-context";
+
 export default function Nav() {
+  const authCtx = useContext(AuthContext);
+
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -36,6 +41,22 @@ export default function Nav() {
                 <NavLink to="/Team" className="liTag">
                   Our Team
                 </NavLink>
+              </li>
+              <li>
+                {authCtx.isLoggedIn ? (
+                  <NavLink to="/MyProfile" className="liTag">
+                    <img
+                      src={authCtx.user.pic}
+                      alt=""
+                      srcset=""
+                      className="profile_img"
+                    />
+                  </NavLink>
+                ) : (
+                  <NavLink to="/Login" className="liTag">
+                    Login/SignUp
+                  </NavLink>
+                )}
               </li>
             </ul>
           </div>

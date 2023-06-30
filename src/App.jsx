@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -17,6 +17,14 @@ const TermsAndConditions = React.lazy(() =>
   import("./Pages/TermsAndConditions")
 );
 
+// Pages || Authentication
+const Login = React.lazy(() => import("./Pages/Login"));
+const SignUp = React.lazy(() => import("./Pages/SignUp"));
+
+// Pages || Profiles
+const Profile = React.lazy(() => import("./Pages/Profile"));
+const AdminPage = React.lazy(() => import("./Pages/AdminPage"));
+
 // Loading
 import Loading from "./MicroInterAction/Loading";
 
@@ -28,6 +36,9 @@ import NavMobile from "./Components/NavMobile";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
+// state
+import AuthContext from "./store/auth-context";
+
 // axios
 import axios from "axios";
 
@@ -35,6 +46,7 @@ import axios from "axios";
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
+  const authCtx = useContext(AuthContext);
   return (
     <>
       <BrowserRouter>
@@ -110,6 +122,40 @@ function App() {
                     </Suspense>
                   }
                 />
+
+                {!authCtx.isLoggedIn && (
+                  <Route
+                    path="/Login"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <Login />
+                      </Suspense>
+                    }
+                  />
+                )}
+
+                {!authCtx.isLoggedIn && (
+                  <Route
+                    path="/Register"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <SignUp />
+                      </Suspense>
+                    }
+                  />
+                )}
+
+                {authCtx.isLoggedIn && (
+                  <Route
+                    path="/MyProfile"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        {/* <Profile /> */}
+                        <AdminPage />
+                      </Suspense>
+                    }
+                  />
+                )}
 
                 <Route
                   path="*"
