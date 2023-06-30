@@ -19,7 +19,7 @@
 }
 .fullPage {
   width: 100%;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -35,6 +35,7 @@
 }
 .viewEventss{
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
 }

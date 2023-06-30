@@ -20,14 +20,14 @@ function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
   return (
     <div className='viewEventss'>
       {showEvent ?
-        <div className='fullPage'>
-          <div className="viewEventDets">
-            <EventDetails cardNo={cardNo} />
-          </div>
-          <div className="expt">
+        <EventDetails cardNo={cardNo} />
+        // <div className='fullPage'>
+        //   <div className="viewEventDets">
+        //   </div>
+        //   <div className="expt">
             
-          </div>
-        </div>
+        //   </div>
+        // </div> 
         :
         <div className="viewevents">
           {events.map((i, idx) => (

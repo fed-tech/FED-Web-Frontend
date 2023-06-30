@@ -11,7 +11,7 @@ function EventDetails({ cardNo }) {
     // console.log('fired')
   }
   return (
-    <div>
+    <div className={eventCss.fullPage}>
       <div className={eventCss.details}>
         <div className={eventCss.eventName}>
           {/* <img src={cardNo.image} alt="" /> */}
@@ -48,10 +48,10 @@ function EventDetails({ cardNo }) {
           <div className={eventCss.form}>Form 1</div>
 
         </div>
-        <div className={eventCss.btns}>
-          <button className={eventCss.edit}>Edit</button>
-          <button className={eventCss.delete}>Delete</button>
-        </div>
+      </div>
+      <div className={eventCss.gradient}>
+        <button className={eventCss.edit}>Edit</button>
+        <button className={eventCss.delete}>Delete</button>
       </div>
     </div>
   )
