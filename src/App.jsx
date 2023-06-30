@@ -113,6 +113,15 @@ function App() {
                   }
                 />
 
+                <Route
+                  path="/T&C"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <TermsAndConditions />
+                    </Suspense>
+                  }
+                />
+
                 {!authCtx.isLoggedIn && (
                   <Route
                     path="/Login"
