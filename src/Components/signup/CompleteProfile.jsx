@@ -12,8 +12,11 @@ function CompleteProfile(props) {
   return (
     <div className={CPCss.mDiv}>
       <div className={CPCss.mDivCon}>
-        Complete Profile
         <ArrowBackIcon className={CPCss.ArrowBackIcon} />
+        <div>
+          <p className={CPCss.CreateProfile}>Create Profile</p>
+          <p className={CPCss.Please}>Please enter Your Details</p>
+        </div>
       </div>
     </div>
   );
