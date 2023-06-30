@@ -12,6 +12,10 @@ const Alumni = React.lazy(() => import("./Pages/Alumni"));
 const Events = React.lazy(() => import("./Pages/Events"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
+const PrivacyPolicies = React.lazy(() => import("./Pages/PrivacyPolicies"));
+const TermsAndConditions = React.lazy(() =>
+  import("./Pages/TermsAndConditions")
+);
 
 // Pages || Authentication
 const Login = React.lazy(() => import("./Pages/Login"));
@@ -96,6 +100,15 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <Testimonial />
+                    </Suspense>
+                  }
+                />
+
+                <Route
+                  path="/PrivacyPolicies"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <PrivacyPolicies />
                     </Suspense>
                   }
                 />
