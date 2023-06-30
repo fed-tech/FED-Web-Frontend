@@ -109,6 +109,8 @@ function SignupForm() {
       } catch (error) {
         setLoad(false);
 
+        console.log(error);
+
         console.log(error.response.data.code === 1);
 
         if (error.response.data.code === 1) {
@@ -144,8 +146,6 @@ function SignupForm() {
           });
           return;
         }
-
-        console.log(error);
       }
     } else {
       setLoad(false);
