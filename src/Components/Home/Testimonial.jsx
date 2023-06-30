@@ -9,12 +9,14 @@ export default function Testimonial() {
       <p className="BelievePTag">
         What do <span>they say</span> about us?
       </p>
+
       <div className="testDivMain">
         <div className="testDivChild">
           <Card testi={testi[0]} />
           <Card testi={testi[1]} />
         </div>
       </div>
+
       <div className="SeeallDiv">
         <p className="Seeall">
           <Link to="/Testimonial" className="LinkStyle">
@@ -22,6 +24,7 @@ export default function Testimonial() {
           </Link>
         </p>
       </div>
+
       <div className="space2"></div>
     </section>
   );

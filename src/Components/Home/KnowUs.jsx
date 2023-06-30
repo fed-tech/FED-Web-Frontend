@@ -1,11 +1,13 @@
 import React from "react";
+
+// Components
 import Content from "./../../Components/Home/Content";
 
 // Data
 import knowus from "./../../Data/db";
 
 // Image
-import women from "./../../Img/image 7.png";
+import women from "./../../assets/Home/laptopWoman.png";
 
 export default function KnowUs() {
   return (
@@ -26,6 +28,7 @@ export default function KnowUs() {
             mentors.
           </p>
         </div>
+
         {/* Why_What_How */}
         <div className="WhyHowWhatDiv">
           <Content knowus={knowus[0]} />

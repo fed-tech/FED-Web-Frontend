@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import ImageComponent from "../../Pages/ImageComponentTeam";
+import ImageComponent from "./ImageComponentTeam";
 
 export default function Domain(props) {
   const [showContent2, setshowContent2] = useState(true);
@@ -28,7 +28,6 @@ export default function Domain(props) {
         <div className="memDivMain">
           <div className="memImgDiv">
             <ImageComponent src={props.mem.img} blur={props.mem.blur} />
-            {/* <img src={props.mem.img} alt="" className="memImg" /> */}
             {props.mem.linkedin === "" && props.mem.github === "" ? (
               ""
             ) : (

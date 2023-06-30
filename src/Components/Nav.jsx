@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+
+// css
 import "./css/DesktopNav.css";
 
 export default function Nav() {
@@ -36,11 +37,6 @@ export default function Nav() {
                   Our Team
                 </NavLink>
               </li>
-              {/* <li>
-                <HashLink to="/#ContactUs" className="liTag">
-                  Contact Us
-                </HashLink>
-              </li> */}
             </ul>
           </div>
         </div>

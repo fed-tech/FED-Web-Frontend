@@ -40,6 +40,7 @@ export default function Team() {
           </div>
         </div>
         <div className="space" />
+
         {/* Technical */}
         <Departments
           name="Technical"
@@ -48,6 +49,7 @@ export default function Team() {
           data={domain.Tech}
         />
         <div className="space" />
+
         {/* Creative */}
         <Departments
           name="Creative"
@@ -56,6 +58,7 @@ export default function Team() {
           data={domain.creative}
         />
         <div className="space" />
+
         {/* Marketing */}
         <Departments
           name="Marketing"
@@ -64,6 +67,7 @@ export default function Team() {
           data={domain.marketing}
         />
         <div className="space" />
+
         {/* Operations */}
         <Departments
           name="Operations"

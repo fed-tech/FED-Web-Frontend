@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
-import image from "./css1/images/image-27.png";
-import image1 from "./css1/images/image-29.png";
-import image2 from "./css1/images/youtube-28.png";
-import "./css1/youtube.css";
+import React, { useState } from "react";
+
+// img
+import image from "./../../assets/PodCasts/image-27.png";
+import image1 from "./../../assets/PodCasts/image-29.png";
+import image2 from "./../../assets/PodCasts/youtube-28.png";
+
+// css
+import "./css/youtube.css";
+
 const cardList = [
   {
     episode: "EP 03",
@@ -128,6 +133,7 @@ const cardList = [
     link: "https://www.youtube.com/embed/TZkBzFK_zQU?autoplay=1&mute=1&enablejsapi=1&rel=0",
   },
 ];
+
 function Youtube(props) {
   const [content, setcontent] = useState({
     link: "https://www.youtube.com/embed/tqGsqwp67-g",
@@ -142,6 +148,8 @@ function Youtube(props) {
       title: titlech,
       para: parach,
     });
+
+    // Will scroll smoothly to the top of the next section
     document.querySelector(".container1").scrollIntoView();
   }
 

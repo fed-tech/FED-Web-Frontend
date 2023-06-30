@@ -1,6 +1,11 @@
 import React from "react";
+
+// Components
 import Believe from "./Believe";
-import Emoji from "../../Img/thinking-face_1f914.png";
+
+// img
+import Emoji from "./../../assets/Home/thingingIcon.png";
+
 export default function BelieveCom() {
   return (
     <>
@@ -11,10 +16,12 @@ export default function BelieveCom() {
             <img src={Emoji} alt="" />
           </span>
         </p>
+
         <div className="believeCenterDiv">
           <Believe />
         </div>
       </section>
+
       <div className="space"></div>
     </>
   );
