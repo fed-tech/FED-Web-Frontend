@@ -128,6 +128,15 @@ function SignupForm() {
             text: "Invalid email format",
             val: true,
           });
+        } else {
+          setError({
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "An Unexpected Error Occurred",
+            val: true,
+          });
         }
 
         console.log(error);
