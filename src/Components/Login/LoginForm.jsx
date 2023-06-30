@@ -133,6 +133,8 @@ function LoginForm() {
             text: "Email not verified",
             val: true,
           });
+
+          return;
         } else if (err.response.data.code === 2) {
           setError({
             mainColor: "#FFC0CB",
@@ -140,6 +142,17 @@ function LoginForm() {
             symbol: "pets",
             title: "Check it out",
             text: "Invalid Credentials",
+            val: true,
+          });
+
+          return;
+        } else {
+          setError({
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "An Unexpected Error Occurred",
             val: true,
           });
         }
