@@ -73,12 +73,10 @@ input[type="number"] {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
-  /* transform: translateY(0%); */
 }
 
 #hideDropMenuClg {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  /* transform: translateY(-200%); */
 }
