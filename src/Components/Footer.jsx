@@ -252,10 +252,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="terms_and_policies">
-          <Link to="/termsandconditions" target="blank">
+          <Link to="/termsandconditions" target="blank" className="LinkStyle">
             Terms and conditions
           </Link>
-          <Link to="/privacypolicies" target="blank">
+          <Link to="/PrivacyPolicies" target="blank" className="LinkStyle">
             Privacy policy
           </Link>
         </div>
