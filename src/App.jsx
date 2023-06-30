@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Suspense, useContext } from "react";
+import React, { Suspense } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -12,13 +12,10 @@ const Alumni = React.lazy(() => import("./Pages/Alumni"));
 const Events = React.lazy(() => import("./Pages/Events"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
-
-// Pages || Authentication
-const Login = React.lazy(() => import("./Pages/Login"));
-const SignUp = React.lazy(() => import("./Pages/SignUp"));
-
-// Pages || Profiles
-const Profile = React.lazy(() => import("./Pages/Profile"));
+const PrivacyPolicies = React.lazy(() => import("./Pages/PrivacyPolicies"));
+const TermsAndConditions = React.lazy(() =>
+  import("./Pages/TermsAndConditions")
+);
 
 // Loading
 import Loading from "./MicroInterAction/Loading";
@@ -31,9 +28,6 @@ import NavMobile from "./Components/NavMobile";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
-// state
-import AuthContext from "./store/auth-context";
-
 // axios
 import axios from "axios";
 
@@ -41,7 +35,6 @@ import axios from "axios";
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
-  const authCtx = useContext(AuthContext);
   return (
     <>
       <BrowserRouter>
@@ -100,38 +93,23 @@ function App() {
                   }
                 />
 
-                {!authCtx.isLoggedIn && (
-                  <Route
-                    path="/Login"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <Login />
-                      </Suspense>
-                    }
-                  />
-                )}
+                <Route
+                  path="/PrivacyPolicies"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <PrivacyPolicies />
+                    </Suspense>
+                  }
+                />
 
-                {!authCtx.isLoggedIn && (
-                  <Route
-                    path="/Register"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <SignUp />
-                      </Suspense>
-                    }
-                  />
-                )}
-
-                {authCtx.isLoggedIn && (
-                  <Route
-                    path="/MyProfile"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <Profile />
-                      </Suspense>
-                    }
-                  />
-                )}
+                <Route
+                  path="/T&C"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <TermsAndConditions />
+                    </Suspense>
+                  }
+                />
 
                 <Route
                   path="*"
