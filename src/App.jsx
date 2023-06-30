@@ -23,6 +23,7 @@ const SignUp = React.lazy(() => import("./Pages/SignUp"));
 
 // Pages || Profiles
 const Profile = React.lazy(() => import("./Pages/Profile"));
+const AdminPage = React.lazy(() => import("./Pages/AdminPage"));
 
 // Loading
 import Loading from "./MicroInterAction/Loading";
@@ -149,7 +150,8 @@ function App() {
                     path="/MyProfile"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <Profile />
+                        {/* <Profile /> */}
+                        <AdminPage />
                       </Suspense>
                     }
                   />
