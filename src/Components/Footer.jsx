@@ -243,6 +243,7 @@ export default function Footer() {
               Terms and conditions
             </Link>
           </div>
+          <dv className="dotDIv"></dv>
           <div className="tap1Div">
             <Link to="/PrivacyPolicies" target="blank" className="LinkStyle">
               Privacy policy
