@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./css/Footer.css";
 import { HashLink } from "react-router-hash-link";
+
+// css
+import "./css/Footer.css";
+
 export default function Footer() {
   return (
     <section id="footer">
