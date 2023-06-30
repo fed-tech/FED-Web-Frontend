@@ -6,7 +6,7 @@ import image1 from "./../../assets/PodCasts/image-29.png";
 import image2 from "./../../assets/PodCasts/youtube-28.png";
 
 // css
-import "./css/youtube.css";
+import "./Css/youtube.css";
 
 const cardList = [
   {
@@ -176,13 +176,14 @@ function Youtube(props) {
       <div className="bottomcontainer">
         <h4 className="heading2">Watch More</h4>
         <div className="watchmore">
-          {cardList.map((cardList) => {
+          {cardList.map((cardList, key) => {
             return (
               <div
                 className="div1"
                 onClick={() => {
                   transContent(cardList.link, cardList.title, cardList.para);
                 }}
+                key={key}
               >
                 <div className="underdiv1">
                   <div className="items">
