@@ -9,6 +9,22 @@
   height: fit-content;
 }
 
+.mtMDiv {
+  position: relative;
+  margin-top: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+@media only screen and (max-width: 650px) {
+  .mtMDiv {
+    margin-top: 48px;
+  }
+}
+
 .signupErrDiv {
   font-size: 14px;
 }
