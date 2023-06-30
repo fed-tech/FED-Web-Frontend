@@ -8,11 +8,6 @@ import CPCss from "./css/CompleteProfile.module.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function CompleteProfile(props) {
-  console.log(props);
-
-  // useEffect(() => {
-  //   console.log();
-  // }, [props.data]);
   return (
     <div
       className={CPCss.mDiv}
