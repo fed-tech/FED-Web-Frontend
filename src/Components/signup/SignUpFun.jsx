@@ -11,11 +11,13 @@ function SignUpFun() {
   return (
     <>
       <div className={SuCss.mDiv}>
-        <div className={SuCss.glassDiv}>
-          <p className={SuCss.FED}>FED</p>
-          <div className={SuCss.wFFFDiv}>
-            <Header title="Hello There" des="Please enter Your Details" />
-            <SignupForm />
+        <div className={SuCss.mtMDiv}>
+          <div className={SuCss.glassDiv}>
+            <p className={SuCss.FED}>FED</p>
+            <div className={SuCss.wFFFDiv}>
+              <Header title="Hello There" des="Please enter Your Details" />
+              <SignupForm />
+            </div>
           </div>
         </div>
       </div>
