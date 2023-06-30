@@ -17,13 +17,6 @@ const TermsAndConditions = React.lazy(() =>
   import("./Pages/TermsAndConditions")
 );
 
-// Pages || Authentication
-const Login = React.lazy(() => import("./Pages/Login"));
-const SignUp = React.lazy(() => import("./Pages/SignUp"));
-
-// Pages || Profiles
-const Profile = React.lazy(() => import("./Pages/Profile"));
-
 // Loading
 import Loading from "./MicroInterAction/Loading";
 
@@ -121,39 +114,6 @@ function App() {
                     </Suspense>
                   }
                 />
-
-                {!authCtx.isLoggedIn && (
-                  <Route
-                    path="/Login"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <Login />
-                      </Suspense>
-                    }
-                  />
-                )}
-
-                {!authCtx.isLoggedIn && (
-                  <Route
-                    path="/Register"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <SignUp />
-                      </Suspense>
-                    }
-                  />
-                )}
-
-                {authCtx.isLoggedIn && (
-                  <Route
-                    path="/MyProfile"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <Profile />
-                      </Suspense>
-                    }
-                  />
-                )}
 
                 <Route
                   path="*"
