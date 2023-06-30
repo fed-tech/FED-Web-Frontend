@@ -15,9 +15,11 @@
 
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.5),
-    rgba(255, 255, 255, 0.3)
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3)
   );
+  /* background: rgba(0, 0, 0, 0.3); */
+
   backdrop-filter: blur(4px);
   box-shadow: 10px 10px 100px rgba(161, 161, 161, 0.5);
   /* background-color: #ff0000; */
