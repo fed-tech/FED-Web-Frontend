@@ -30,4 +30,21 @@
   top: 20px;
   left: 30px;
   color: #fff;
+  cursor: pointer;
+}
+
+.CreateProfile,
+.Please {
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+}
+
+.CreateProfile {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.Please {
+  font-size: 13.5px;
+  font-weight: 300;
 }
