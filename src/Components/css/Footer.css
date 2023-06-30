@@ -229,10 +229,6 @@
   background-color: #6c6c6c;
 }
 
-.tap1Div {
-  /* margin: 20px 10px 10px 10px; */
-}
-
 @media screen and (max-width: 1150px) {
   .bottomdiv {
     flex-direction: column;
