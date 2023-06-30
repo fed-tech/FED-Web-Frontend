@@ -94,7 +94,7 @@ const GoogleSignUp = ({ setLoad }) => {
         return;
       } else {
         localStorage.setItem("user", JSON.stringify(googleResponse.data));
-        navigate("/createprofile");
+        navigate("/CreateProfile");
       }
     } catch (err) {
       console.log(err);
