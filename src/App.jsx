@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Suspense, useContext } from "react";
+import React, { Suspense } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -28,9 +28,6 @@ import NavMobile from "./Components/NavMobile";
 // Analytics
 import { Analytics } from "@vercel/analytics/react";
 
-// state
-import AuthContext from "./store/auth-context";
-
 // axios
 import axios from "axios";
 
@@ -38,7 +35,6 @@ import axios from "axios";
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
-  const authCtx = useContext(AuthContext);
   return (
     <>
       <BrowserRouter>
