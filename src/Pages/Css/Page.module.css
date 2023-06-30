@@ -3,6 +3,7 @@
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
     color: #FFFFFF;
 
 }
@@ -88,17 +89,7 @@
     overflow-wrap: break-word;
 }
 
-/* .Position .designation {
-    margin-top: 17px;
-    font-family: 'Mulish';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    letter-spacing: 0.005em;
-    color: #808080;
-    inline-size: 100%;
-    overflow-wrap: break-word;
-} */
+
 
 .Position .designation {
     margin-top: 9px;
