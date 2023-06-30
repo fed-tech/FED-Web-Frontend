@@ -2,7 +2,6 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 40%;
   height: 96%;
   margin: 2% 0px;
   z-index: 1;
@@ -13,6 +12,10 @@
     rgba(0, 0, 0, 0.3)
   );
   backdrop-filter: blur(4px);
+  /* transform: translateX(200%);
+  opacity: 0; */
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
 .mDivCon {
