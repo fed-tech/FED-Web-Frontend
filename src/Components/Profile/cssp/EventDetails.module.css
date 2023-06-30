@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+
+.details {
+    width: 100%;
+}
+
+.eventDesc,
+.eventName,
+.moreDetails,
+.forms, .btns {
+    width: 100%;
+}
+
+.eventName {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.eventName img {
+    width: 184.861px;
+    margin-right: 33.14px;
+}
+
+.eventName h1 {
+    color: #D9D9D9;
+    font-size: 50px;
+    font-family: Mulish;
+    font-weight: 600;
+}
+
+.eventDesc {
+    border-radius: 10px;
+    border: 1px solid #808080;
+    padding: 17px;
+    color: #FFF;
+    font-size: 24px;
+    font-family: Mulish;
+    font-weight: 600;
+    line-height: 161%;
+    margin-bottom: 51px;
+}
+
+.moreDetails {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 41px;
+}
+
+.date,
+.regType {
+    color: #D9D9D9;
+    font-size: 30px;
+    font-family: Mulish;
+    font-weight: 600;
+}
+
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    align-items:flex-start;
+    /* justify-content: space-evenly; */
+    height: 350px;
+    overflow: auto;
+}
+.form {
+    border-radius: 10px;
+    border: 1px solid #808080;
+    padding: 22px 41px;
+    width: 203px;
+    /* height: 89px; */
+    font-size: 36px;
+    font-family: Mulish;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-right: 30px;
+}
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 52px;
+}
+.edit, .delete {
+    color: #FFF;
+    font-size: 24.891px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 7px 30px;
+    border-radius: 458.004px;
+    background: #F45725;
+    border: none;
+}
+.edit {
+    margin-right: 30px;
+}
