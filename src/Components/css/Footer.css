@@ -210,6 +210,18 @@
   font-weight: 800;
 }
 
+.terms_and_policies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.terms_and_policies a {
+  margin: 20px 10px 10px 10px;
+  /* text-decoration: none; */
+  font-family: "Manrope", sans-serif;
+}
+
 @media screen and (max-width: 1150px) {
   .bottomdiv {
     flex-direction: column;
@@ -308,7 +320,6 @@
 }
 
 @media screen and (max-width: 370px) {
-
   .para1,
   .para2 {
     width: 100%;
