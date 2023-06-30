@@ -18,7 +18,8 @@ export default function Footer() {
           <div className="footerleft">
             <div className="row1">
               <h4>Community</h4>
-              {/* ../ContactUs */}
+
+              {/* ContactUs */}
               <HashLink to="/#ContactUs" className="footerleftlink">
                 Contact
               </HashLink>
@@ -28,11 +29,13 @@ export default function Footer() {
             </div>
             <div className="row2">
               <h4>About Us</h4>
-              {/* ../KnowUs */}
+
+              {/* KnowUs */}
               <HashLink smooth to="/#KnowUs" className="footerleftlink">
                 Manifesto
               </HashLink>
-              {/* ../work */}
+
+              {/* work */}
               <HashLink smooth to="/#work" className="footerleftlink">
                 Partner
               </HashLink>
@@ -135,11 +138,6 @@ export default function Footer() {
                     </radialGradient>
                   </defs>
                 </svg>
-                {/* <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fc55e11aacde597f36_instagram.png"
-                  alt="instaimg"
-                  className="iconimg"
-                /> */}
               </a>
               <a
                 href="https://www.linkedin.com/company/fedkiit/"
@@ -175,11 +173,6 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-                {/* <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fd33698b3915d77ef1_linkedin.png"
-                  alt="linkedinimg"
-                  className="iconimg"
-                /> */}
               </a>
               <a
                 href="https://open.spotify.com/show/3s0jcteh4gcNcJeECstoMj?si=G7NjOL73Qxq4K6r3fy_-VA&utm_source=whatsapp&nd=1"
@@ -200,11 +193,6 @@ export default function Footer() {
                     fill="white"
                   />
                 </svg>
-                {/* <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fb3ba6d10f3bf1435c_spotify.png"
-                  alt="spotifyimg"
-                  className="iconimg"
-                /> */}
               </a>
               <a
                 href="https://www.youtube.com/channel/UC7LjeEyGyr656BU2VpCbCJA"
@@ -225,11 +213,6 @@ export default function Footer() {
                   />
                   <path d="M16.25 15V25L26.25 20L16.25 15Z" fill="white" />
                 </svg>
-                {/* <img
-                  src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63ad87fa33698b5829d77e9a_youtube.png"
-                  alt="youtubeimg"
-                  className="iconimg"
-                /> */}
               </a>
             </div>
           </div>
