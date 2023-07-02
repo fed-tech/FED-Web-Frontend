@@ -33,53 +33,57 @@ function EventDetails({ cardNo, setShow }) {
   }, []);
   return (
     <div className={eventCss.fullPage}>
-      <div className={eventCss.details}>
-        <div className={eventCss.eventName}>
-          <img src={cardNo.image} alt="" />
-          {/* <img src={logo} alt="" /> */}
-          <h1>{cardNo.title}</h1>
-          {/* <h1>Stonkaholic</h1> */}
-        </div>
-        <div className={eventCss.eventDesc}>
-          About the Event : {cardNo.description}
-        </div>
-        {/* <div className={eventCss.eventDesc}>
-          About the Event : If you are immersed in the world of trading, you've unquestionably come across stocks and investments.This incredible competition allows all the participants to experience hands-on stock trading and hone their financial literacy. Trade with virtual money as you 
-        </div> */}
-        <div className={eventCss.moreDetails}>
-          <div className={eventCss.date}>
-            Event Date : {cardNo.date} {cardNo.month}
+      <div className={eventCss.detailsHead}>
+          <div className={eventCss.eventName}>
+            <img src={cardNo.image} alt="" />
+            <h1>{cardNo.title}</h1>
           </div>
-          <div className={eventCss.regType}>
-            Registration : {cardNo.registration}
+      </div>
+      <div className={eventCss.scroll}>
+        <div className={eventCss.details}>
+          <div className={eventCss.eventDesc}>
+            About the Event : {cardNo.description}
+          </div>
+
+          <div className={eventCss.moreDetails}>
+            <div className={eventCss.date}>
+              Event Date : {cardNo.date} {cardNo.month}
+            </div>
+            <div className={eventCss.regType}>
+              Registration : {cardNo.registration}
+            </div>
+          </div>
+          <div className={eventCss.forms}>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+            <div className={eventCss.form}>Form 1</div>
+
           </div>
         </div>
-        <div className={eventCss.forms}>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-        </div>
-        <div className={eventCss.btns}>
-          <button className={eventCss.edit}>Edit</button>
-          <button className={eventCss.delete} onClick={handleDelete}>
-            Delete
-          </button>
-        </div>
+      </div>
+      <div className={eventCss.gradient}>
+        <button className={eventCss.edit}>Edit</button>
+        <button className={eventCss.delete} onClick={handleDelete}>
+          Delete
+        </button>
       </div>
     </div>
   );
