@@ -3,6 +3,9 @@
 .details {
     width: 100%;
 }
+.btns button{
+    cursor: pointer;
+}
 
 .eventDesc,
 .eventName,

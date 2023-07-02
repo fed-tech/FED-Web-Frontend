@@ -16,17 +16,17 @@ function ViewEvents({showEvent,setShow, setCardNo, cardNo}) {
   }
   useEffect(() => {
     loadEvents();
-  }, []);
+  }, [showEvent]);
   return (
     <div className='viewEventss'>
         {showEvent?
         <div className="viewEventDets">
-          <EventDetails cardNo = {cardNo}/>
+          <EventDetails cardNo = {cardNo} setShow = {setShow}/>
         </div>
         :
         <div className="viewevents">
           {events.map((i,idx)=>(
-            <EventCards key={idx} info = {i} setShow = {setShow} setCardNo = {setCardNo} cardNo = {cardNo}/>
+            <EventCards key={idx} info = {i} setShow = {setShow} setCardNo = {setCardNo}/>
           ))}
         </div>}
     </div>

@@ -34,9 +34,11 @@ import CreateProfile from "./Pages/CreateProfile";
 import Page from "./Pages/AdminPage";
 import PrivacyPolicies from "./Pages/PrivacyPolicies";
 import TermsAndConditions from "./Pages/TermsAndConditions";
+import axios from "axios";
 
 function App() {
   const authCtx = useContext(AuthContext);
+  axios.defaults.baseURL = 'http://localhost:5000';
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
