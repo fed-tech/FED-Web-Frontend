@@ -13,7 +13,7 @@ import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
 import EventForm from "../Components/Profile/EventForm";
-import AddMember from "../Components/Profile/AddMember";
+import MembersAdmin from "../Components/Profile/Admin Member/MembersAdmin";
 
 function Page() {
   const navigate = useNavigate();
@@ -121,7 +121,7 @@ function Page() {
           {profile && <Profile setShowUpdateModal={setShowUpdateModal} />}
           {event && <EventAdmin />}
           {form && <EventForm />}
-          {members && <AddMember />}
+          {members && <MembersAdmin />}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />

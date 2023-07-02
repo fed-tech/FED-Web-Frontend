@@ -1,23 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 
-.heading {
-    width: 70%;
-    margin-bottom: 49px;
-}
-.heading h1{
-    font-size: 45px;
-    font-family: Mulish;
-    font-weight: 700;
-    letter-spacing: 0.225px;
-    width: 100%;
-}
 .memInputs {
     width:70%;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
-.memInputs input{
+.memInputs input, .memInputs select{
     background-color: transparent;
     border: none;
     height: 25px;
@@ -25,6 +15,16 @@
     margin-bottom: 104px;
     font-size: 23px;
     padding-left: 10px;
+}
+.memInputs select{
+    color: white;
+    height: fit-content;
+    outline: none;
+}
+
+.memInputs select option{
+    color: black;
+    font-size: 20px;
 }
 .memInputs input::placeholder{
     /* color: white; */
@@ -46,6 +46,7 @@
     background: #F45725;
     border: none;
     width: fit-content;
+    cursor: pointer;
 }
 
 .divButton{
@@ -56,11 +57,5 @@
 @media (max-width:1310px) {
     .memInputs input::placeholder{
         font-size: 21px;
-    }
-    .heading h1 {
-        font-size: 42px;
-    }
-    .memInputs {
-        width: 75%;
     }
 }
