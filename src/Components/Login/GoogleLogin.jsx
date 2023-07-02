@@ -101,12 +101,15 @@ export default function GoogleLogin({ setLoad }) {
             val: true,
           });
         } else if (response.data.code === 2) {
+          localStorage.setItem("user", JSON.stringify(googleResponse.data));
+          navigate("/CreateProfile");
+        } else {
           setError({
-            mainColor: "#FFC0CB",
-            secondaryColor: "#FF69B4",
-            symbol: "pets",
-            title: "Check it out",
-            text: "Please Sign Up first",
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "An Unexpected Error Occurred",
             val: true,
           });
         }

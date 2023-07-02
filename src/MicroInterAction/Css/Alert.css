@@ -4,6 +4,7 @@
   right: 2%;
   bottom: 4%;
   transition: all 0.3s;
+  z-index: 2;
 }
 
 #show {

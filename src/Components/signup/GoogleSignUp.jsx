@@ -7,6 +7,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 
 // Components
 import { Alert } from "./../../MicroInterAction/Alert";
+import CompleteProfile from "./CompleteProfile";
 
 //  axios
 import axios from "axios";
@@ -22,6 +23,7 @@ import google from "./../../assets/Login/Google.svg";
 
 const GoogleSignUp = ({ setLoad }) => {
   const [codeResponse, setCodeResponse] = useState();
+  const [passData, setGoogleData] = useState([]);
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
@@ -93,8 +95,11 @@ const GoogleSignUp = ({ setLoad }) => {
 
         return;
       } else {
-        localStorage.setItem("user", JSON.stringify(googleResponse.data));
-        navigate("/createprofile");
+        setLoad(false);
+
+        setGoogleData(googleResponse.data);
+        // localStorage.setItem("user", JSON.stringify(googleResponse.data));
+        // navigate("/CreateProfile");
       }
     } catch (err) {
       console.log(err);
@@ -120,6 +125,7 @@ const GoogleSignUp = ({ setLoad }) => {
       </div>
 
       <Alert variant={variants} val={setError} />
+      <CompleteProfile data={passData} set={setGoogleData} />
     </>
   );
 };

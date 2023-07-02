@@ -20,6 +20,7 @@ const TermsAndConditions = React.lazy(() =>
 // Pages || Authentication
 const Login = React.lazy(() => import("./Pages/Login"));
 const SignUp = React.lazy(() => import("./Pages/SignUp"));
+const CreateProfile = React.lazy(() => import("./Pages/CreateProfile"));
 
 // Pages || Profiles
 const Profile = React.lazy(() => import("./Pages/Profile"));
@@ -144,6 +145,15 @@ function App() {
                     }
                   />
                 )}
+
+                <Route
+                  path="/CreateProfile"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <CreateProfile />
+                    </Suspense>
+                  }
+                />
 
                 {authCtx.isLoggedIn && (
                   <Route
