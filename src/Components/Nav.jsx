@@ -46,11 +46,16 @@ export default function Nav(props) {
                 </NavLink>
               </li>
               <li>
+                <NavLink to="/Alumni" className="liTag">
+                  Alumni
+                </NavLink>
+              </li>
+              <li>
                 <NavLink
                   // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
                   // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile/admin" : "/MyProfile/member") : "Signup"}
                   // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile" : "/MyProfile/member") : "Signup"}
-                  to={authCtx.isLoggedIn ? "/MyProfile"  : "Signup"}
+                  to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
                   className="liTag"
                 >
                   {authCtx.isLoggedIn ? (
@@ -63,11 +68,6 @@ export default function Nav(props) {
                   ) : (
                     "Login/SignUp"
                   )}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/Alumni" className="liTag">
-                  Alumni
                 </NavLink>
               </li>
             </ul>
