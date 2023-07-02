@@ -88,7 +88,7 @@ export default function NavMobile(props) {
           <div class="mobileList">
             <NavLink
               // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
-              to={authCtx.isLoggedIn ? "/MyProfile/member" : "Signup"}
+              to={authCtx.isLoggedIn ? "/MyProfile/member" : "Register"}
               className="liTag"
             >
               {authCtx.isLoggedIn ? (

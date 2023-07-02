@@ -55,7 +55,7 @@ export default function Nav(props) {
                   // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
                   // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile/admin" : "/MyProfile/member") : "Signup"}
                   // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile" : "/MyProfile/member") : "Signup"}
-                  to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+                  to={authCtx.isLoggedIn ? "/MyProfile" : "Register"}
                   className="liTag"
                 >
                   {authCtx.isLoggedIn ? (
