@@ -112,7 +112,7 @@ function LoginForm() {
           );
           console.log("access->", response.data.result[0].access == "0");
 
-          if (authCtx.target == null) {
+          if (authCtx.target == "") {
             navigate("/MyProfile");
           } else {
             navigate(`/${authCtx.target}`);
