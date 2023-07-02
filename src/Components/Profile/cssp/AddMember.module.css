@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+
+.heading {
+    width: 70%;
+    margin-bottom: 49px;
+}
+.heading h1{
+    font-size: 45px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.225px;
+    width: 100%;
+}
+.memInputs {
+    width:70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.memInputs input{
+    background-color: transparent;
+    border: none;
+    height: 25px;
+    border-bottom: 1px solid white;
+    margin-bottom: 104px;
+    font-size: 23px;
+    padding-left: 10px;
+}
+.memInputs input::placeholder{
+    /* color: white; */
+    font-size: 25px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.125px;
+}
+.memInputs input:focus{
+    outline: none;
+}
+.saveBtn {
+    color: #FFF;
+    font-size: 24.891px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 7px 30px;
+    border-radius: 458.004px;
+    background: #F45725;
+    border: none;
+    width: fit-content;
+}
+
+.divButton{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:1310px) {
+    .memInputs input::placeholder{
+        font-size: 21px;
+    }
+    .heading h1 {
+        font-size: 42px;
+    }
+    .memInputs {
+        width: 75%;
+    }
+}

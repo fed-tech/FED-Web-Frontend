@@ -13,6 +13,7 @@ import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
 import EventForm from "../Components/Profile/EventForm";
+import AddMember from "../Components/Profile/AddMember";
 
 function Page() {
   const navigate = useNavigate();
@@ -31,32 +32,31 @@ function Page() {
     setEvent(false);
     setFrom(false);
     setMembers(false);
-  }
+  };
   const handleEvent = () => {
     setProfile(false);
     setEvent(true);
     setFrom(false);
     setMembers(false);
-  }
+  };
   const handleForm = () => {
     setProfile(false);
     setEvent(false);
     setFrom(true);
     setMembers(false);
-  }
+  };
   const handleMembers = () => {
     setProfile(false);
     setEvent(false);
     setFrom(false);
     setMembers(true);
-  }
+  };
 
   return (
     <div className={pageCss.Page_main}>
       <div className={pageCss.Page}>
         <div className={pageCss.pageLeft}>
           <div className={pageCss.dashboard}>
-
             <div className={pageCss.dashboardTop} onClick={handleProfile}>
               <h1>DASHBOARD</h1>
               <h2>DASH</h2>
@@ -74,24 +74,44 @@ function Page() {
             <div className={pageCss.dashboardBottom}>
               <div
                 onClick={handleEvent}
-                className={event?`${pageCss.dashboardBottom_options} ${pageCss.hello}`:`${pageCss.dashboardBottom_options}`}
+                className={
+                  event
+                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                    : `${pageCss.dashboardBottom_options}`
+                }
               >
-                <InsertInvitationIcon className={pageCss.dashboardBottom_icons}/>
-                <p
-                >Events</p>
+                <InsertInvitationIcon
+                  className={pageCss.dashboardBottom_icons}
+                />
+                <p>Events</p>
               </div>
               <div
                 onClick={handleForm}
-                className={form?`${pageCss.dashboardBottom_options} ${pageCss.hello}`:`${pageCss.dashboardBottom_options}`} >
-                <PlaylistAddIcon className={pageCss.dashboardBottom_icons}/>
+                className={
+                  form
+                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                    : `${pageCss.dashboardBottom_options}`
+                }
+              >
+                <PlaylistAddIcon className={pageCss.dashboardBottom_icons} />
                 <p>Form</p>
               </div>
-              <div className={members?`${pageCss.dashboardBottom_options} ${pageCss.hello}`:`${pageCss.dashboardBottom_options}`}>
-                <GroupsIcon className={pageCss.dashboardBottom_icons}/>
+              <div
+                onClick={handleMembers}
+                className={
+                  members
+                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                    : `${pageCss.dashboardBottom_options}`
+                }
+              >
+                <GroupsIcon className={pageCss.dashboardBottom_icons} />
                 <p>Members</p>
               </div>
-              <div onClick={handleLogout} className={pageCss.dashboardBottom_options}>
-                <LogoutIcon className={pageCss.dashboardBottom_icons}/>
+              <div
+                onClick={handleLogout}
+                className={pageCss.dashboardBottom_options}
+              >
+                <LogoutIcon className={pageCss.dashboardBottom_icons} />
                 <p>Logout</p>
               </div>
             </div>
@@ -101,6 +121,7 @@ function Page() {
           {profile && <Profile setShowUpdateModal={setShowUpdateModal} />}
           {event && <EventAdmin />}
           {form && <EventForm />}
+          {members && <AddMember />}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />
