@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // css
@@ -7,7 +7,10 @@ import "./css/DesktopNav.css";
 // state
 import AuthContext from "./../store/auth-context";
 
-export default function Nav() {
+// axios
+import axios from "axios";
+
+export default function Nav(props) {
   const authCtx = useContext(AuthContext);
 
   return (
@@ -43,20 +46,29 @@ export default function Nav() {
                 </NavLink>
               </li>
               <li>
-                {authCtx.isLoggedIn ? (
-                  <NavLink to="/MyProfile" className="liTag">
+                <NavLink
+                  // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+                  // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile/admin" : "/MyProfile/member") : "Signup"}
+                  // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile" : "/MyProfile/member") : "Signup"}
+                  to={authCtx.isLoggedIn ? "/MyProfile"  : "Signup"}
+                  className="liTag"
+                >
+                  {authCtx.isLoggedIn ? (
                     <img
                       src={authCtx.user.pic}
                       alt=""
                       srcset=""
                       className="profile_img"
                     />
-                  </NavLink>
-                ) : (
-                  <NavLink to="/Login" className="liTag">
-                    Login/SignUp
-                  </NavLink>
-                )}
+                  ) : (
+                    "Login/SignUp"
+                  )}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/Alumni" className="liTag">
+                  Alumni
+                </NavLink>
               </li>
             </ul>
           </div>
