@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
@@ -15,6 +15,9 @@ import CPCss from "./css/CompleteProfile.module.css";
 
 // icons
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+
+// state
+import AuthContext from "../../store/auth-context";
 
 function CompleteProfile(props) {
   const [loadingEffect, setLoad] = useState(false);
@@ -40,6 +43,8 @@ function CompleteProfile(props) {
   });
 
   let menu = useRef();
+
+  const authCtx = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -167,7 +172,9 @@ function CompleteProfile(props) {
       try {
         const response = await axios.post(`/auth/googleregister`, userObject);
 
-        if (response.status === 202) {
+        console.log(response.data);
+
+        if (response.data.status === true) {
           authCtx.login(
             response.data.user.name,
             response.data.user.email,
@@ -181,10 +188,15 @@ function CompleteProfile(props) {
             response.data.token,
             10800000
           );
+
+          props.set(false);
+
           navigate("/MyProfile");
 
           return;
         } else {
+          setLoad(false);
+
           setError({
             mainColor: "#FDEDED",
             secondaryColor: "#F16360",
