@@ -161,6 +161,26 @@ function CompleteProfile(props) {
       };
 
       try {
+        const response = await axios.post(`/auth/googleregister`, userObject);
+
+        if (response.status === 202) {
+          authCtx.login(
+            response.data.user.name,
+            response.data.user.email,
+            response.data.user.img,
+            response.data.user.RollNumber,
+            response.data.user.School,
+            response.data.user.College,
+            response.data.user.MobileNo,
+            response.data.user.selected,
+            Number(response.data.user.access),
+            response.data.token,
+            10800000
+          );
+          navigate("/MyProfile");
+
+          return;
+        }
       } catch (error) {
         console.log(error);
 
@@ -210,30 +230,6 @@ function CompleteProfile(props) {
         });
       }
     }
-
-    //   try {
-    //     const response = await axios.post(
-    //       `http://localhost:5000/auth/googleregister`,
-    //       userObject
-    //     );
-    //     if (response.status === 202) {
-    //       authCtx.login(
-    //         response.data.user.name,
-    //         response.data.user.email,
-    //         response.data.user.img,
-    //         response.data.user.RollNumber,
-    //         response.data.user.School,
-    //         response.data.user.College,
-    //         response.data.user.MobileNo,
-    //         response.data.user.selected,
-    //         Number(response.data.user.access),
-    //         response.data.token,
-    //         10800000
-    //       );
-    //       navigate("/MyProfile");
-
-    //       return;
-    //     }
   };
 
   return (
