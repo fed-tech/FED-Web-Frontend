@@ -8,7 +8,26 @@ import CPCss from "./css/CompleteProfile.module.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function CompleteProfile(props) {
-  console.log(props.data);
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    if (value === "") {
+      e.target.style.borderBottom = "2px solid  #FF0000";
+      e.target.style.outline = "none";
+    } else {
+      e.target.style.borderBottom = "2px solid  black";
+    }
+    if (name === "MobileNo") {
+      if (value.length > 12 || value.length < 10) {
+        e.target.style.borderBottom = "2px solid  #FF0000";
+        e.target.style.outline = "none";
+      } else {
+        e.target.style.borderBottom = "2px solid  black";
+      }
+    }
+    setUser({ ...showUser, [name]: value });
+    console.log(showUser);
+  };
   return (
     <div
       className={CPCss.mDiv}
@@ -25,7 +44,38 @@ function CompleteProfile(props) {
           <p className={CPCss.Please}>Please enter Your Details</p>
         </div>
 
-        <div className={CPCss.WhiteBackGround}>cvvvvvvvvvvvvvvv</div>
+        <div className={CPCss.WhiteBackGround}>
+          <form className={CPCss.FormTag}>
+            <input
+              type="text"
+              id="rollNum"
+              name="RollNumber"
+              placeholder="Roll Number"
+              onChange={DataInp}
+            />
+            <input
+              type="text"
+              id="school"
+              name="School"
+              placeholder="School"
+              onChange={DataInp}
+            />
+            <input
+              type="text"
+              id="college"
+              name="College"
+              placeholder="College"
+              onChange={DataInp}
+            />
+            <input
+              type="number"
+              id="number"
+              name="MobileNo"
+              placeholder="Mobile Number"
+              onChange={DataInp}
+            />
+          </form>
+        </div>
       </div>
     </div>
   );
