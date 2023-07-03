@@ -90,3 +90,15 @@ input[type="number"] {
   width: 0;
   pointer-events: none;
 }
+
+@media only screen and (max-width: 800px) {
+  #showCreate {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #showCreate {
+    width: 100%;
+  }
+}
