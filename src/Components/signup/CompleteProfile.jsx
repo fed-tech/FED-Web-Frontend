@@ -48,25 +48,28 @@ function CompleteProfile(props) {
           <form className={CPCss.FormTag}>
             <input
               type="text"
-              id="rollNum"
-              name="RollNumber"
-              placeholder="Roll Number"
-              onChange={DataInp}
-            />
-            <input
-              type="text"
-              id="school"
-              name="School"
-              placeholder="School"
-              onChange={DataInp}
-            />
-            <input
-              type="text"
               id="college"
               name="College"
               placeholder="College"
               onChange={DataInp}
             />
+            <div>
+              <input
+                type="text"
+                id="rollNum"
+                name="RollNumber"
+                placeholder="Roll Number"
+                onChange={DataInp}
+              />
+              <input
+                type="text"
+                id="school"
+                name="School"
+                placeholder="School"
+                onChange={DataInp}
+              />
+            </div>
+
             <input
               type="number"
               id="number"
