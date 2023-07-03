@@ -1,8 +1,8 @@
 .mDiv {
   position: fixed;
-  top: -4.2%;
   right: 0px;
-  height: 100%;
+  top: -4.3%;
+  bottom: -4.3%;
   margin: 2% 0px;
   border-radius: 8px 0px 0px 8px;
   background: linear-gradient(
