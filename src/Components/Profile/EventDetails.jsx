@@ -77,6 +77,7 @@ function EventDetails({ cardNo, setShow }) {
             <div className={eventCss.form}>Form 1</div>
 
           </div>
+          <div className={eventCss.space}></div>
         </div>
       </div>
       <div className={eventCss.gradient}>

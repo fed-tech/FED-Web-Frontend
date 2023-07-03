@@ -13,8 +13,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 600px;
     overflow-y: auto;
+}
+.space {
+    height:25%;
 }
 .detailsHead {
     width: 83.42%;
@@ -142,10 +145,10 @@
         row-gap: 20px;
         column-gap: 25px;
     }
-    .scroll {
+    /* .scroll {
     height: 700px;
 
-    }
+    } */
     .date,
     .regType {
         font-size: 25px;
@@ -226,6 +229,7 @@
     .forms {
         row-gap: 20px;
         row-gap: 20px;
+        padding-bottom: 100px;
     }
 
     .form {
@@ -242,5 +246,23 @@
     }
     .eventDesc {
         font-size: 18px;
+    }
+}
+@media(max-width:470px) {
+    .eventName img {
+        width:140px;
+    }
+    .eventName h1 {
+        font-size: 32px;
+    }
+    .scroll {
+        width: 98.7%;
+    }
+    .details {
+        width:95%;
+    }
+    .detailsHead {
+        width: 93.765%;
+        margin-top: 10px;
     }
 }
