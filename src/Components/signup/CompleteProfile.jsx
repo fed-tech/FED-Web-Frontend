@@ -24,6 +24,8 @@ function CompleteProfile(props) {
           <p className={CPCss.CreateProfile}>Create Profile</p>
           <p className={CPCss.Please}>Please enter Your Details</p>
         </div>
+
+        <div className={CPCss.WhiteBackGround}>cvvvvvvvvvvvvvvv</div>
       </div>
     </div>
   );
