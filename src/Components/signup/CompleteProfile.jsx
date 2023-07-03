@@ -103,6 +103,7 @@ function CompleteProfile(props) {
               />
             </div>
 
+            {/* Year */}
             <select
               value={selected}
               onChange={handleChange}
