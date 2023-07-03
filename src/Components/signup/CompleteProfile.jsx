@@ -234,17 +234,6 @@ function CompleteProfile(props) {
 
     //       return;
     //     }
-    //   } catch (error) {
-    //     setIsinValid(true);
-    //     if (error.response.data.code === 1) {
-    //       setErrMssg("User already exists");
-    //     }
-    //     if (error.response.data.code === 2) {
-    //       setErrMssg("Invalid email format");
-    //     }
-
-    //     console.log(error);
-    //   }
   };
 
   return (
