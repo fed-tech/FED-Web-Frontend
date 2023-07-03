@@ -125,91 +125,91 @@ function CompleteProfile(props) {
 
   const handleCreateProfile = async (e) => {
     e.preventDefault();
-    const profile = JSON.parse(localStorage.getItem("user"));
-    showUser.email = profile.email;
-    showUser.Password = profile.id;
-    showUser.name = profile.name;
-    showUser.img = profile.picture;
-    const {
-      email,
-      Password,
-      name,
-      RollNumber,
-      School,
-      College,
-      MobileNo,
-      img,
-    } = showUser;
 
-    const password = bcrypt.hashSync(Password, "$2b$10$Q0RPeouqYdTToq76zoccIO");
+    console.log("name -> " + props.data.name);
+    console.log("Password -> " + props.data.id);
+    console.log("email -> " + props.data.email);
+    console.log("picture -> " + props.data.picture);
+
+    const { RollNumber, School, College, MobileNo } = showUser;
+
     if (
-      name !== "" &&
+      props.data.name !== "" &&
+      props.data.id !== "" &&
+      props.data.email !== "" &&
+      props.data.picture !== "" &&
       RollNumber !== "" &&
-      Password !== "" &&
       School !== "" &&
       College !== "" &&
-      MobileNo !== "" &&
-      MobileNo.length <= 12 &&
-      MobileNo.length >= 10 &&
-      email !== "" &&
-      selected !== "" &&
-      img != ""
+      MobileNo.length === 10
     ) {
+      const password = bcrypt.hashSync(
+        props.data.id,
+        "$2b$10$Q0RPeouqYdTToq76zoccIO"
+      );
+
       const userObject = {
-        name,
-        email,
-        password,
+        name: props.data.name,
+        email: props.data.email,
+        password: password,
+        img: props.data.picture,
         RollNumber,
         School,
         College,
         MobileNo,
         selected,
-        img,
       };
-      console.log("user object: ", userObject);
-      try {
-        const response = await axios.post(
-          `http://localhost:5000/auth/googleregister`,
-          userObject
-        );
-        if (response.status === 202) {
-          authCtx.login(
-            response.data.user.name,
-            response.data.user.email,
-            response.data.user.img,
-            response.data.user.RollNumber,
-            response.data.user.School,
-            response.data.user.College,
-            response.data.user.MobileNo,
-            response.data.user.selected,
-            Number(response.data.user.access),
-            response.data.token,
-            10800000
-          );
-          navigate("/MyProfile");
-
-          return;
-        }
-      } catch (error) {
-        setIsinValid(true);
-        if (error.response.data.code === 1) {
-          setErrMssg("User already exists");
-        }
-        if (error.response.data.code === 2) {
-          setErrMssg("Invalid email format");
-        }
-
-        console.log(error);
-      }
     } else {
-      if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
-        setIsinValid(true);
+      if (MobileNo.length !== 10) {
         setErrMssg("Please fill all the fields");
       } else {
-        setIsinValid(true);
         setErrMssg("Invalid mobile number");
       }
     }
+
+    //   try {
+    //     const response = await axios.post(
+    //       `http://localhost:5000/auth/googleregister`,
+    //       userObject
+    //     );
+    //     if (response.status === 202) {
+    //       authCtx.login(
+    //         response.data.user.name,
+    //         response.data.user.email,
+    //         response.data.user.img,
+    //         response.data.user.RollNumber,
+    //         response.data.user.School,
+    //         response.data.user.College,
+    //         response.data.user.MobileNo,
+    //         response.data.user.selected,
+    //         Number(response.data.user.access),
+    //         response.data.token,
+    //         10800000
+    //       );
+    //       navigate("/MyProfile");
+
+    //       return;
+    //     }
+    //   } catch (error) {
+    //     setIsinValid(true);
+    //     if (error.response.data.code === 1) {
+    //       setErrMssg("User already exists");
+    //     }
+    //     if (error.response.data.code === 2) {
+    //       setErrMssg("Invalid email format");
+    //     }
+
+    //     console.log(error);
+    //   }
+    // } else {
+    //   if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
+    //     setIsinValid(true);
+    //     setErrMssg("Please fill all the fields");
+    //   } else {
+    //     setIsinValid(true);
+    //     setErrMssg("Invalid mobile number");
+    //   }
+    // }
   };
 
   return (
@@ -317,7 +317,7 @@ function CompleteProfile(props) {
               className={CPCss.btn}
               onClick={handleCreateProfile}
             >
-              Create Profile
+              {loadingEffect ? <Load /> : "Create Profile"}
             </button>
           </form>
         </div>
