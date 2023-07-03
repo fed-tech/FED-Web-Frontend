@@ -1,10 +1,9 @@
 .mDiv {
-  position: absolute;
-  bottom: 0px;
+  position: fixed;
+  top: -4.2%;
   right: 0px;
-  height: 96%;
+  height: 100%;
   margin: 2% 0px;
-  z-index: 1;
   border-radius: 8px 0px 0px 8px;
   background: linear-gradient(
     to right bottom,
@@ -14,6 +13,7 @@
   backdrop-filter: blur(4px);
   overflow: hidden;
   transition: all 0.3s;
+  z-index: 3;
 }
 
 .mDivCon {
