@@ -100,7 +100,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0px 10px;
+  gap: 0px 30px;
+}
+
+#widthIngTagDiv1 {
+  width: 25%;
 }
 
 .year {
