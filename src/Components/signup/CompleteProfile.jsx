@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
+// Components
+import Load from "./../../MicroInterAction/Load";
+import { Alert } from "./../../MicroInterAction/Alert";
+
 // css
 import CPCss from "./css/CompleteProfile.module.css";
 
@@ -8,8 +12,9 @@ import CPCss from "./css/CompleteProfile.module.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function CompleteProfile(props) {
-  const [selected, setSelected] = useState("");
+  const [loadingEffect, setLoad] = useState(false);
   const [DropShow, hideDrop] = useState(false);
+  const [selected, setSelected] = useState("");
   const [showUser, setUser] = useState({
     email: "",
     Password: "",
@@ -118,6 +123,95 @@ function CompleteProfile(props) {
     }
   };
 
+  const handleCreateProfile = async (e) => {
+    e.preventDefault();
+    const profile = JSON.parse(localStorage.getItem("user"));
+    showUser.email = profile.email;
+    showUser.Password = profile.id;
+    showUser.name = profile.name;
+    showUser.img = profile.picture;
+    const {
+      email,
+      Password,
+      name,
+      RollNumber,
+      School,
+      College,
+      MobileNo,
+      img,
+    } = showUser;
+
+    const password = bcrypt.hashSync(Password, "$2b$10$Q0RPeouqYdTToq76zoccIO");
+    if (
+      name !== "" &&
+      RollNumber !== "" &&
+      Password !== "" &&
+      School !== "" &&
+      College !== "" &&
+      MobileNo !== "" &&
+      MobileNo.length <= 12 &&
+      MobileNo.length >= 10 &&
+      email !== "" &&
+      selected !== "" &&
+      img != ""
+    ) {
+      const userObject = {
+        name,
+        email,
+        password,
+        RollNumber,
+        School,
+        College,
+        MobileNo,
+        selected,
+        img,
+      };
+      console.log("user object: ", userObject);
+      try {
+        const response = await axios.post(
+          `http://localhost:5000/auth/googleregister`,
+          userObject
+        );
+        if (response.status === 202) {
+          authCtx.login(
+            response.data.user.name,
+            response.data.user.email,
+            response.data.user.img,
+            response.data.user.RollNumber,
+            response.data.user.School,
+            response.data.user.College,
+            response.data.user.MobileNo,
+            response.data.user.selected,
+            Number(response.data.user.access),
+            response.data.token,
+            10800000
+          );
+          navigate("/MyProfile");
+
+          return;
+        }
+      } catch (error) {
+        setIsinValid(true);
+        if (error.response.data.code === 1) {
+          setErrMssg("User already exists");
+        }
+        if (error.response.data.code === 2) {
+          setErrMssg("Invalid email format");
+        }
+
+        console.log(error);
+      }
+    } else {
+      if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
+        setIsinValid(true);
+        setErrMssg("Please fill all the fields");
+      } else {
+        setIsinValid(true);
+        setErrMssg("Invalid mobile number");
+      }
+    }
+  };
+
   return (
     <div
       className={CPCss.mDiv}
@@ -217,6 +311,14 @@ function CompleteProfile(props) {
                 </option>
               ))}
             </select>
+
+            <button
+              type="submit"
+              className={CPCss.btn}
+              onClick={handleCreateProfile}
+            >
+              Create Profile
+            </button>
           </form>
         </div>
       </div>
