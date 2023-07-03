@@ -74,9 +74,10 @@
 }
 
 .inpTag {
+  outline: none;
   width: 100%;
   margin-top: 24.6px;
-  padding: 10.6px 23.2px;
+  padding: 10.6px 12px;
   background-color: transparent;
   outline: none;
   border: none;
@@ -91,4 +92,12 @@
   font-style: normal;
   color: black;
   text-align: left;
+}
+
+.rowInpDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0px 10px;
 }
