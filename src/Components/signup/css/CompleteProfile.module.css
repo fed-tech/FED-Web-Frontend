@@ -72,3 +72,23 @@
   align-items: center;
   gap: 10px 0px;
 }
+
+.inpTag {
+  width: 100%;
+  margin-top: 24.6px;
+  padding: 10.6px 23.2px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.inpTag::placeholder {
+  font-weight: 300;
+  font-size: 0.938rem;
+  font-family: Mulish;
+  font-style: normal;
+  color: black;
+  text-align: left;
+}
