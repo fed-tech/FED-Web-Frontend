@@ -2,7 +2,7 @@
   position: fixed;
   right: 0px;
   top: -4.3%;
-  bottom: -4.3%;
+  bottom: -5.3%;
   margin: 2% 0px;
   border-radius: 8px 0px 0px 8px;
   background: linear-gradient(
@@ -57,7 +57,7 @@
   background-color: #fff;
   color: #000;
   border-radius: 10px;
-  width: 80%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
