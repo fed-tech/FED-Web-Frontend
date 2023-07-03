@@ -102,3 +102,14 @@
   align-items: center;
   gap: 0px 10px;
 }
+
+.year {
+  width: 100%;
+  margin-top: 24.6px;
+  color: black;
+  padding: 10px;
+  border: 2px solid black;
+}
+.year option {
+  color: black;
+}
