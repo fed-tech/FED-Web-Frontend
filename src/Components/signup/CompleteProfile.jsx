@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import bcrypt from "bcryptjs-react";
 
 // Components
 import Load from "./../../MicroInterAction/Load";
 import { Alert } from "./../../MicroInterAction/Alert";
+
+// axios
+import axios from "axios";
 
 // css
 import CPCss from "./css/CompleteProfile.module.css";
