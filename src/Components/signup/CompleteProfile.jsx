@@ -126,11 +126,6 @@ function CompleteProfile(props) {
   const handleCreateProfile = async (e) => {
     e.preventDefault();
 
-    console.log("name -> " + props.data.name);
-    console.log("Password -> " + props.data.id);
-    console.log("email -> " + props.data.email);
-    console.log("picture -> " + props.data.picture);
-
     const { RollNumber, School, College, MobileNo } = showUser;
 
     if (
@@ -180,6 +175,15 @@ function CompleteProfile(props) {
           navigate("/MyProfile");
 
           return;
+        } else {
+          setError({
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "An Unexpected Error Occured",
+            val: true,
+          });
         }
       } catch (error) {
         console.log(error);
