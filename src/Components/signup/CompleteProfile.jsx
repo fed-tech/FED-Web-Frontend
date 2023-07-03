@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 
 // Components
@@ -39,6 +40,8 @@ function CompleteProfile(props) {
   });
 
   let menu = useRef();
+
+  const navigate = useNavigate();
 
   const DataInp = (e) => {
     const name = e.target.name;
@@ -142,6 +145,8 @@ function CompleteProfile(props) {
       College !== "" &&
       MobileNo.length === 10
     ) {
+      setLoad(true);
+
       const password = bcrypt.hashSync(
         props.data.id,
         import.meta.env.VITE_BCRYPT
