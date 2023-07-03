@@ -160,10 +160,26 @@ function CompleteProfile(props) {
         selected,
       };
     } else {
+      setLoad(false);
+
       if (MobileNo.length !== 10) {
-        setErrMssg("Please fill all the fields");
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Invalid mobile number",
+          val: true,
+        });
       } else {
-        setErrMssg("Invalid mobile number");
+        setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "pets",
+          title: "Check it out",
+          text: "Please Fill All The Details",
+          val: true,
+        });
       }
     }
 
@@ -322,6 +338,8 @@ function CompleteProfile(props) {
           </form>
         </div>
       </div>
+
+      <Alert variant={variants} val={setError} />
     </div>
   );
 }
