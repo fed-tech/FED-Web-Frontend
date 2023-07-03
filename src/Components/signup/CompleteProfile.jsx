@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 // css
@@ -8,6 +8,8 @@ import CPCss from "./css/CompleteProfile.module.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function CompleteProfile(props) {
+  const [selected, setSelected] = useState("");
+
   const DataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -28,6 +30,20 @@ function CompleteProfile(props) {
     setUser({ ...showUser, [name]: value });
     console.log(showUser);
   };
+
+  const handleChange = (event) => {
+    console.log(event.target.value);
+    setSelected(event.target.value);
+  };
+
+  const options = [
+    { value: "1st", text: "1st year" },
+    { value: "2nd", text: "2nd year" },
+    { value: "3rd", text: "3rd year" },
+    { value: "4th", text: "4th year" },
+    { value: "5th", text: "5th year" },
+  ];
+
   return (
     <div
       className={CPCss.mDiv}
@@ -81,6 +97,19 @@ function CompleteProfile(props) {
               placeholder="Mobile Number"
               onChange={DataInp}
             />
+
+            <select
+              value={selected}
+              onChange={handleChange}
+              className={CPCss.year}
+            >
+              <option hidden>Year</option>
+              {options.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.text}
+                </option>
+              ))}
+            </select>
           </form>
         </div>
       </div>
