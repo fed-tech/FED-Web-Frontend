@@ -49,6 +49,7 @@ function CompleteProfile(props) {
             <input
               type="text"
               id="college"
+              className={CPCss.inpTag}
               name="College"
               placeholder="College"
               onChange={DataInp}
@@ -57,6 +58,7 @@ function CompleteProfile(props) {
               <input
                 type="text"
                 id="rollNum"
+                className={CPCss.inpTag}
                 name="RollNumber"
                 placeholder="Roll Number"
                 onChange={DataInp}
@@ -64,6 +66,7 @@ function CompleteProfile(props) {
               <input
                 type="text"
                 id="school"
+                className={CPCss.inpTag}
                 name="School"
                 placeholder="School"
                 onChange={DataInp}
@@ -73,6 +76,7 @@ function CompleteProfile(props) {
             <input
               type="number"
               id="number"
+              className={CPCss.inpTag}
               name="MobileNo"
               placeholder="Mobile Number"
               onChange={DataInp}
