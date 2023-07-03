@@ -115,3 +115,32 @@
 .year option {
   color: black;
 }
+
+.mobileno_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* margin-top: 24.6px; */
+}
+
+.mobileno91 {
+  margin-right: 7px;
+  font-size: 13.5px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  color: #000;
+  padding: 10.6px 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #616161;
+  border-width: 1px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  cursor: not-allowed;
+}
+
+.mobileno_container input {
+  margin-top: 0;
+}
