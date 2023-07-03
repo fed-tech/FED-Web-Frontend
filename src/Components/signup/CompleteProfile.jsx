@@ -89,6 +89,20 @@ function CompleteProfile(props) {
               />
             </div>
 
+            {/* Phone Number */}
+            <div className={CPCss.mobileno_container}>
+              <p className={CPCss.mobileno91}>+91</p>
+              <input
+                type="number"
+                id="number"
+                name="MobileNo"
+                placeholder="Mobile Number"
+                className={CPCss.inpTag}
+                onChange={DataInp}
+                required
+              />
+            </div>
+
             <input
               type="number"
               id="number"
