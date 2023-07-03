@@ -48,8 +48,27 @@ function CompleteProfile(props) {
         e.target.style.borderBottom = "1px solid  black";
       }
     }
+
+    if (name == "College") {
+      if (
+        "Kalinga Institute of Industrial Technology"
+          .toLowerCase()
+          .includes(value)
+      ) {
+        hideDrop(true);
+      } else {
+        hideDrop(false);
+      }
+
+      if (value === "") {
+        hideDrop(false);
+        e.target.style.borderBottom = "1px solid  #FF0000";
+        e.target.style.outline = "none";
+      } else {
+        e.target.style.borderBottom = "1px solid  black";
+      }
+    }
     setUser({ ...showUser, [name]: value });
-    console.log(showUser);
   };
 
   const handleChange = (event) => {
@@ -87,6 +106,14 @@ function CompleteProfile(props) {
         .toLowerCase()
         .includes(showUser.College)
     ) {
+      console.log(` "Kalinga Institute of Industrial Technology"
+      .toLowerCase()
+      .includes(showUser.College)`);
+      console.log(
+        "Kalinga Institute of Industrial Technology"
+          .toLowerCase()
+          .includes(showUser.College)
+      );
       hideDrop(true);
     }
   };
@@ -94,8 +121,8 @@ function CompleteProfile(props) {
   return (
     <div
       className={CPCss.mDiv}
-      id="showCreate"
-      // id={Object.keys(props.data).length > 0 ? "showCreate" : "hideCreate"}
+      // id="showCreate"
+      id={Object.keys(props.data).length > 0 ? "showCreate" : "hideCreate"}
     >
       <div className={CPCss.mDivCon}>
         <ArrowBackIcon
