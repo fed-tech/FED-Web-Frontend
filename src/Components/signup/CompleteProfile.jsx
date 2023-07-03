@@ -71,14 +71,17 @@ function CompleteProfile(props) {
               onChange={DataInp}
             />
             <div className={CPCss.rowInpDiv}>
+              {/* Roll Number */}
               <input
                 type="number"
-                id="rollNum"
+                id={CPCss.widthIngTagDiv1}
                 className={CPCss.inpTag}
                 name="RollNumber"
                 placeholder="Roll Number"
                 onChange={DataInp}
               />
+
+              {/* School */}
               <input
                 type="text"
                 id="school"
