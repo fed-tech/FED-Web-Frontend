@@ -103,15 +103,6 @@ function CompleteProfile(props) {
               />
             </div>
 
-            <input
-              type="number"
-              id="number"
-              className={CPCss.inpTag}
-              name="MobileNo"
-              placeholder="Mobile Number"
-              onChange={DataInp}
-            />
-
             <select
               value={selected}
               onChange={handleChange}
