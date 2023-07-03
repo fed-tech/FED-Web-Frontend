@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 // css
@@ -10,6 +10,16 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 function CompleteProfile(props) {
   const [selected, setSelected] = useState("");
   const [DropShow, hideDrop] = useState(false);
+  const [showUser, setUser] = useState({
+    email: "",
+    Password: "",
+    name: "",
+    RollNumber: "",
+    School: "",
+    College: "",
+    MobileNo: "",
+    img: "",
+  });
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
@@ -61,6 +71,26 @@ function CompleteProfile(props) {
     }
   });
 
+  const handler = (e) => {
+    try {
+      if (!menu.current.contains(e.target)) {
+        hideDrop(false);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const DropCheck = () => {
+    if (
+      "Kalinga Institute of Industrial Technology"
+        .toLowerCase()
+        .includes(showUser.College)
+    ) {
+      hideDrop(true);
+    }
+  };
+
   return (
     <div
       className={CPCss.mDiv}
@@ -80,13 +110,13 @@ function CompleteProfile(props) {
         <div className={CPCss.WhiteBackGround}>
           <form className={CPCss.FormTag}>
             {/* College */}
-            <div ref={menu} className={SuCss.CollegeInpmDIv}>
+            <div ref={menu} className={CPCss.CollegeInpmDIv}>
               <input
                 type="text"
                 id="college"
                 name="College"
                 placeholder="College"
-                className={SuCss.inpTag}
+                className={CPCss.inpTag}
                 value={showUser.College}
                 onChange={DataInp}
                 onFocus={() => {
@@ -97,7 +127,7 @@ function CompleteProfile(props) {
                 required
               />
               <div
-                className={SuCss.DropDownmDiv}
+                className={CPCss.DropDownmDiv}
                 id={DropShow ? "showDropMenuClg" : "hideDropMenuClg"}
                 onClick={() => {
                   setUser({
