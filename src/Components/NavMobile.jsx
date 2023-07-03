@@ -45,7 +45,7 @@ export default function NavMobile() {
       </nav>
 
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
-        <div class="mobileList">
+        <div class="mobileListProfile">
           {authCtx.isLoggedIn && (
             <NavLink to="/MyProfile" className="liTag">
               <img
