@@ -260,7 +260,6 @@ function CompleteProfile(props) {
   return (
     <div
       className={CPCss.mDiv}
-      // id="showCreate"
       id={Object.keys(props.data).length > 0 ? "showCreate" : "hideCreate"}
     >
       <div className={CPCss.mDivCon}>
