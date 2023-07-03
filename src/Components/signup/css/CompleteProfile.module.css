@@ -71,7 +71,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px 0px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .inpTag {
@@ -169,4 +169,16 @@
   cursor: pointer;
   transition: all 0.2s;
   width: 100%;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 7.3px;
+  border-radius: 7.3px;
+  border: black;
+  background-color: black;
+  font: mulish 19.8px;
+  font-size: 19.8px;
+  cursor: pointer;
 }
