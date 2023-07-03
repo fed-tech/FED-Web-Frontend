@@ -8,10 +8,12 @@ import CPCss from "./css/CompleteProfile.module.css";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function CompleteProfile(props) {
+  console.log(props.data);
   return (
     <div
       className={CPCss.mDiv}
-      id={Object.keys(props.data).length > 0 ? "showCreate" : "hideCreate"}
+      id="showCreate"
+      // id={Object.keys(props.data).length > 0 ? "showCreate" : "hideCreate"}
     >
       <div className={CPCss.mDivCon}>
         <ArrowBackIcon
