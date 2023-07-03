@@ -56,7 +56,7 @@ function CompleteProfile(props) {
             />
             <div className={CPCss.rowInpDiv}>
               <input
-                type="text"
+                type="number"
                 id="rollNum"
                 className={CPCss.inpTag}
                 name="RollNumber"
