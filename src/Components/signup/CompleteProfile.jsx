@@ -9,6 +9,17 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function CompleteProfile(props) {
   const [selected, setSelected] = useState("");
+  const [DropShow, hideDrop] = useState(false);
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
+
+  let menu = useRef();
 
   const DataInp = (e) => {
     const name = e.target.name;
@@ -44,6 +55,12 @@ function CompleteProfile(props) {
     { value: "5th", text: "5th year" },
   ];
 
+  useEffect(() => {
+    if (DropShow) {
+      document.addEventListener("mousedown", handler);
+    }
+  });
+
   return (
     <div
       className={CPCss.mDiv}
@@ -62,14 +79,38 @@ function CompleteProfile(props) {
 
         <div className={CPCss.WhiteBackGround}>
           <form className={CPCss.FormTag}>
-            <input
-              type="text"
-              id="college"
-              className={CPCss.inpTag}
-              name="College"
-              placeholder="College"
-              onChange={DataInp}
-            />
+            {/* College */}
+            <div ref={menu} className={SuCss.CollegeInpmDIv}>
+              <input
+                type="text"
+                id="college"
+                name="College"
+                placeholder="College"
+                className={SuCss.inpTag}
+                value={showUser.College}
+                onChange={DataInp}
+                onFocus={() => {
+                  DropCheck();
+                }}
+                spellcheck="true"
+                autocomplete="off"
+                required
+              />
+              <div
+                className={SuCss.DropDownmDiv}
+                id={DropShow ? "showDropMenuClg" : "hideDropMenuClg"}
+                onClick={() => {
+                  setUser({
+                    ...showUser,
+                    College: "Kalinga Institute of Industrial Technology",
+                  });
+                  hideDrop(false);
+                }}
+              >
+                Kalinga Institute of Industrial Technology
+              </div>
+            </div>
+
             <div className={CPCss.rowInpDiv}>
               {/* Roll Number */}
               <input
