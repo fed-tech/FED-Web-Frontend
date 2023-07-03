@@ -31,6 +31,7 @@ export default function CreateProfile() {
     { value: "4th", text: "4th year" },
     { value: "5th", text: "5th year" },
   ];
+
   const [showUser, setUser] = useState({
     email: "",
     Password: "",
@@ -162,6 +163,7 @@ export default function CreateProfile() {
       }
     }
   };
+
   return (
     <div className={SuCss.mDiv}>
       <div className={SuCss.glassDiv}>
