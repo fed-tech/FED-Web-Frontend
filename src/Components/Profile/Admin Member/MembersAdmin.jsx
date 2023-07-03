@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import memberCSS from "./css/MembersAdmin.module.css";
-import AddMember from "./AddMember";
+
 import ViewMembers from "./ViewMembers";
+import ViewAlumni from "./ViewAlumni";
+import AddMember from "./AddMember";
 
 export default function MembersAdmin() {
   const [memNav, setMemNav] = useState({
@@ -54,6 +56,7 @@ export default function MembersAdmin() {
       </div>
       <div className={memberCSS.content}>
         {memNav.viewMem && <ViewMembers />}
+        {memNav.viewAlumni && <ViewAlumni />}
         {memNav.addMem && <AddMember />}
       </div>
     </div>

@@ -28,6 +28,9 @@ export default function ViewMembers() {
           image={data.img}
           name={data.name}
           access={data.access}
+          isMember={true}
+          email={data.email}
+          memberData={memberData}
         />
       ))}
     </div>

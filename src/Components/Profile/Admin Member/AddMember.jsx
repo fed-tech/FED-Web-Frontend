@@ -58,7 +58,7 @@ export default function AddMember() {
         window.scrollTo(0, 0);
       }
     } catch (err) {
-      console.log(err.response.data);
+      console.log(err);
     }
   };
 
