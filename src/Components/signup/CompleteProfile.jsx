@@ -159,6 +159,34 @@ function CompleteProfile(props) {
         MobileNo,
         selected,
       };
+
+      try {
+      } catch (error) {
+        console.log(error);
+
+        setLoad(false);
+
+        if (error.response.data.code === 1) {
+          setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Check it out",
+            text: "User already exists",
+            val: true,
+          });
+        }
+        if (error.response.data.code === 2) {
+          setError({
+            mainColor: "#FFF4E5",
+            secondaryColor: "#FFA117",
+            symbol: "warning",
+            title: "Warning",
+            text: "Invalid email format",
+            val: true,
+          });
+        }
+      }
     } else {
       setLoad(false);
 
@@ -217,15 +245,6 @@ function CompleteProfile(props) {
 
     //     console.log(error);
     //   }
-    // } else {
-    //   if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
-    //     setIsinValid(true);
-    //     setErrMssg("Please fill all the fields");
-    //   } else {
-    //     setIsinValid(true);
-    //     setErrMssg("Invalid mobile number");
-    //   }
-    // }
   };
 
   return (
