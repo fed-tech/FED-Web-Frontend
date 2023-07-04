@@ -104,6 +104,10 @@ function TermsAndConditions() {
           membership.
         </p>
         <p>
+          Please note that refunds and cancellations will only be accepted
+          during the registration period of the event.
+        </p>
+        <p>
           If you have any questions or concerns regarding these Terms and
           Conditions, please contact the society organizers for clarification.
         </p>
