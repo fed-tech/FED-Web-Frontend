@@ -92,9 +92,10 @@ function TermsAndConditions() {
         </p>
         <p>
           <strong>9. Payments:</strong> <br />
-          a. all the payments done through this website is refundable by{" "}
-          <strong>Federation of Entrepreneurship </strong> <br />
-          b. The organisation never ask for payment other than this website
+          a. Please note that refunds and cancellations will only be accepted
+          during the registration period of the event.
+          <br /> b. The organisation never ask for payment other than this
+          website
         </p>
         <p>
           By joining <strong>Federation of Entrepreneurship </strong> at Kalinga
@@ -102,10 +103,6 @@ function TermsAndConditions() {
           read, understood, and agreed to these Terms and Conditions. Failure to
           comply with these terms may result in the termination of your
           membership.
-        </p>
-        <p>
-          Please note that refunds and cancellations will only be accepted
-          during the registration period of the event.
         </p>
         <p>
           If you have any questions or concerns regarding these Terms and
