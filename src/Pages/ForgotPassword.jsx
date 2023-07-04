@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../Pages/Css/forgotpass.css";
-import Swal from "sweetalert2";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 function ForgotPassword() {

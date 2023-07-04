@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../Pages/Css/resetpass.css";
-import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 

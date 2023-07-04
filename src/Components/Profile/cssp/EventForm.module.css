@@ -17,8 +17,6 @@
     display: flex;
     justify-content: center;
     width: 95%;
-    height: 800px;
-    overflow-y: auto;
 }
 
 .formDiv {
@@ -49,7 +47,9 @@
 .formBottom>input {
     width: 27%;
 }
-
+.Btn {
+    padding: 70px;
+}
 .saveBtn {
     color: #FFF;
     font-size: 24.891px;

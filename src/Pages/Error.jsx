@@ -5,11 +5,9 @@ import "./Css/err.css";
 
 // assets
 import Errimage from "./../assets/Layer 3.svg";
-import { Animatedpage } from "../Components/Animatedpage";
 
 function Errorpage() {
   return (
-    <Animatedpage>
       <div className="bg">
         <div className="oops">Oops!</div>
         <p className="notfound">Error 404 page not found</p>
@@ -22,7 +20,6 @@ function Errorpage() {
           <img src={Errimage} className="cycleimage" alt=""></img>
         </div>
       </div>
-    </Animatedpage>
   );
 }
 export default Errorpage;

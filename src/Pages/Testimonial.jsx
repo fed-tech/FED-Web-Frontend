@@ -1,5 +1,4 @@
 import React from "react";
-import { Animatedpage } from "../Components/Animatedpage";
 
 // css
 import SaCss from "./Css/seall.module.css";
@@ -14,7 +13,6 @@ export default function Testimonial() {
   }, []);
 
   return (
-    <Animatedpage>
       <div className="seeall_page">
         <div className="sub_div">
           {Wcard.map((element) => {
@@ -30,6 +28,5 @@ export default function Testimonial() {
           })}
         </div>
       </div>
-    </Animatedpage>
   );
 }
