@@ -75,7 +75,7 @@ function TermsAndConditions() {
         <p>
           <strong>7. Amendments and Termination:</strong> <br />
           a.
-          <strong>Federation of Entrepreneurship</strong> reserves the right to
+          <strong> Federation of Entrepreneurship</strong> reserves the right to
           amend these Terms and Conditions at any time. Any changes will be
           communicated to the members in advance. <br />
           b. The society organizers may terminate your membership if you violate
