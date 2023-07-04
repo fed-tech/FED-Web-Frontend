@@ -17,8 +17,8 @@
     display: flex;
     justify-content: center;
     width: 95%;
-    height: 800px;
-    overflow-y: auto;
+    max-height: 100%;
+    overflow: auto;
 }
 
 .formDiv {
