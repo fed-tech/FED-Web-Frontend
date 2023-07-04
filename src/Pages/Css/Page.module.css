@@ -301,8 +301,6 @@
 
 @media (max-width: 880px) {
     .pageRight {
-        align-items: center;
-        justify-content: center;
         width: 67%;
         padding-bottom: 60px;
     }

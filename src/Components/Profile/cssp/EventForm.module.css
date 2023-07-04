@@ -1,57 +1,198 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 
 .head {
-    width: 70%;
+    width: 80.75%;
     margin-bottom: 49px;
 }
-.head h1{
+
+.head h1 {
     font-size: 45px;
-font-family: Mulish;
-font-weight: 700;
-letter-spacing: 0.225px;
-width: 100%;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.225px;
+    width: 100%;
 }
-.formDiv>input, .formBottom>input {
+
+.form {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 800px;
+    overflow-y: auto;
+}
+
+.formDiv {
+    width: 85%;
+    text-align: center;
+}
+
+.formDiv>input,
+.formBottom>input {
     border-bottom: 1px solid white;
     margin-bottom: 104px;
 }
-.formDiv>input::placeholder, .formBottom>input::placeholder{
+
+.formDiv>input::placeholder,
+.formBottom>input::placeholder {
     color: white;
-font-size: 25px;
-font-family: Mulish;
-font-weight: 700;
-letter-spacing: 0.125px;
+    font-size: 25px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.125px;
 }
-.formDiv {
-    width:70%;
-    text-align: center;
-}
+
 .formBottom {
     display: flex;
     justify-content: space-between;
 }
+
 .formBottom>input {
     width: 27%;
 }
+
 .saveBtn {
     color: #FFF;
-font-size: 24.891px;
-font-family: Mulish;
-font-weight: 600;
-padding: 7px 30px;
-border-radius: 458.004px;
-background: #F45725;
-border: none;
+    font-size: 24.891px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 7px 30px;
+    border-radius: 458.004px;
+    background: #F45725;
+    border: none;
 }
 
-@media (max-width:1310px) {
-    .formDiv>input::placeholder, .formBottom>input::placeholder {
-        font-size: 21px;
-    }
+
+@media (max-width:1400px) {
     .head h1 {
         font-size: 42px;
     }
+    .form {
+        width: 98%;
+    }
     .formDiv {
-        width: 75%;
+        width:90%;
+    }
+    .head {
+        width: 86.2%;
+    }
+}
+
+@media (max-width:1310px) {
+
+    .formDiv>input::placeholder,
+    .formBottom>input::placeholder {
+        font-size: 21px;
+    }
+
+    .formDiv input,
+    .formBottom input {
+        margin-bottom: 80px;
+    }
+
+    .formBottom>input::placeholder {
+        text-align: center;
+    }
+
+    .formDiv {
+        width: 89%;
+    }
+}
+
+
+@media (max-width:1142px) {
+
+    .formDiv input,
+    .formBottom input {
+        margin-bottom: 50px;
+    }
+
+    .formDiv>input{
+        padding: 7px 14px;
+
+    }
+    .formBottom>input {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width:920px) {
+    .head h1 {
+        font-size: 40px;
+    }
+
+    .saveBtn {
+        font-size: 20px;
+
+    }
+}
+@media(max-width:795px) {
+    .form {
+        width: 98%;
+    }
+    .formDiv {
+        width:95%;
+    }
+    .formBottom input {
+        width: 30%;
+    }
+    .head {
+        width: 86.2%;
+    }
+}
+@media (max-width:720px) {
+    .head h1 {
+        font-size: 38px;
+    }
+
+    .saveBtn {
+        font-size: 20px;
+
+    }
+
+}
+
+@media (max-width:520px) {
+    .head h1 {
+        font-size: 35px;
+    }
+
+    .saveBtn {
+        font-size: 18px;
+    }
+
+    .formDiv>input::placeholder,
+    .formBottom>input::placeholder {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:470px) {
+
+    .formBottom input {
+        width: 31%;
+    }
+    .head h1 {
+        font-size: 32px;
+    }
+    .form {
+        width: 98%;
+    }
+    .formDiv {
+        width:98%;
+    }
+    .head {
+        width: 86.2%;
+    }
+    .formDiv>input::placeholder,
+    .formBottom>input::placeholder {
+        font-size: 14px;
+    }
+    
+    .formDiv>input{
+        padding: 7px 14px;
+
+    }
+    .formBottom>input {
+        padding: 3px 6px;
     }
 }
