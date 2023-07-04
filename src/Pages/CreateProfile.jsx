@@ -5,7 +5,6 @@ import bcrypt from "bcryptjs-react";
 
 // axios
 import axios from "axios";
-import Swal from "sweetalert2";
 
 // Css
 import SuCss from "./Css/CreateProfile.module.css";

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Animatedpage } from "../Animatedpage";
 import image from "./css1/images/image-27.png";
 import image1 from "./css1/images/image-29.png";
 import image2 from "./css1/images/youtube-28.png";
@@ -147,7 +146,6 @@ function Youtube(props) {
   }
 
   return (
-    <Animatedpage>
       <div className="mainbody">
         <div className="container1">
           <div className="container2" style={{ width: "90%" }}>
@@ -200,7 +198,6 @@ function Youtube(props) {
           </div>
         </div>
       </div>
-    </Animatedpage>
   );
 }
 export default Youtube;

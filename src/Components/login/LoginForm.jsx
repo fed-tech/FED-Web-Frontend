@@ -14,7 +14,6 @@ import AuthContext from "../../store/auth-context";
 
 // img
 import google from "../../Img/Google.svg";
-import Swal from "sweetalert2";
 
 function LoginForm() {
   const authCtx = useContext(AuthContext);

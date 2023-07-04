@@ -9,11 +9,9 @@ import Card from "./../../Data/card.json";
 // Icons
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Animatedpage } from "../Animatedpage";
 
 function OurAlumni() {
   return (
-    <Animatedpage>
       <section className="alumni">
         <div className="main_body">
           <div className="ouralumni">
@@ -56,7 +54,6 @@ function OurAlumni() {
           })}
         </div>
       </section>
-    </Animatedpage>
   );
 }
 export default OurAlumni;
