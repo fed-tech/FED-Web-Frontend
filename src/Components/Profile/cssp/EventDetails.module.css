@@ -7,11 +7,25 @@
     flex-direction: column;
     align-items: center;
 }
-.details {
-    width: 85%;
-    max-height: 800px;
+
+.scroll {
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 600px;
     overflow-y: auto;
 }
+.space {
+    height:25%;
+}
+.detailsHead {
+    width: 83.42%;
+}
+.details {
+    width: 86%;
+}
+
 .gradient {
     display: flex;
     align-items: center;
@@ -19,18 +33,16 @@
     position: absolute;
     display: fl;
     bottom: -100px;
-    height: 300px;
+    height: 400px;
     width: 100%;
-    background: linear-gradient(0deg, #0E0E0E 49.48%, rgba(14, 14, 14, 0.00) 100%);
+    background: linear-gradient(0deg, #000000 49.48%, rgba(14, 14, 14, 0.00) 100%);
 }
-.btns button{
-    cursor: pointer;
-}
+
 
 .eventDesc,
 .eventName,
 .moreDetails,
-.forms, .btns {
+.forms {
     width: 100%;
 }
 
@@ -82,28 +94,27 @@
 .forms {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 25px;
-    column-gap: 2px;
+    row-gap: 20px;
+    column-gap: 15px;
 }
+
 .form {
     border-radius: 10px;
     border: 1px solid #808080;
-    padding: 22px 41px;
-    width: 204px;
+    /* padding: 22px 41px; */
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 89px;
     font-size: 36px;
     font-family: Mulish;
     font-weight: 600;
 }
-.btns {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    position:sticky;
-    bottom: 52px;
-    z-index: +1; */
-}
-.edit, .delete {
+
+.edit,
+.delete {
     color: #FFF;
     font-size: 24.891px;
     font-family: Mulish;
@@ -113,6 +124,145 @@
     background: #F45725;
     border: none;
 }
+
 .edit {
     margin-right: 30px;
+}
+
+@media (max-width:1400px) {
+    .eventName h1 {
+        font-size: 45px;
+    }
+
+    .form {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:1300px) {
+    .forms {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+        column-gap: 25px;
+    }
+    /* .scroll {
+    height: 700px;
+
+    } */
+    .date,
+    .regType {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:1142px) {
+    .forms {
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+        column-gap: 15px;
+    }
+
+    .form {
+        height: 110px;
+    }
+
+    .date,
+    .regType {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:920px) {
+    .eventName h1 {
+        font-size: 40px;
+    }
+
+    .forms {
+        row-gap: 15px;
+    }
+
+    .form {
+        font-size: 26px;
+    }
+
+    .date,
+    .regType {
+        font-size: 22px;
+    }
+    .edit, .delete {
+    font-size: 20px;
+
+    }
+}
+@media (max-width:720px) {
+    .eventName h1 {
+        font-size: 38px;
+    }
+
+    .forms {
+        row-gap: 15px;
+        col-gap: 20px;
+    }
+
+    .form {
+        font-size: 23px;
+        height: 100px;
+    }
+
+    .date,
+    .regType {
+        font-size: 20px;
+    }
+    .edit, .delete {
+    font-size: 20px;
+
+    }
+    .eventDesc {
+        font-size: 20px;
+    }
+}
+@media (max-width:520px) {
+    .eventName h1 {
+        font-size: 35px;
+    }
+
+    .forms {
+        row-gap: 20px;
+        row-gap: 20px;
+        padding-bottom: 100px;
+    }
+
+    .form {
+        font-size: 18px;
+    }
+
+    .date,
+    .regType {
+        font-size: 18px;
+    }
+    .edit, .delete {
+    font-size: 18px;
+
+    }
+    .eventDesc {
+        font-size: 18px;
+    }
+}
+@media(max-width:470px) {
+    .eventName img {
+        width:140px;
+    }
+    .eventName h1 {
+        font-size: 32px;
+    }
+    .scroll {
+        width: 98.7%;
+    }
+    .details {
+        width:95%;
+    }
+    .detailsHead {
+        width: 93.765%;
+        margin-top: 10px;
+    }
 }
