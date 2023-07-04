@@ -22,7 +22,10 @@ export default function Form() {
                         <input type="text" placeholder='Field Type*' />
                         <input type="text" placeholder='Field Type*' />
                     </div>
+                    <div className={formCss.Btn}>
                     <button className={formCss.saveBtn}>SAVE</button>
+
+                    </div>
                 </form>
             </div>
         </>
