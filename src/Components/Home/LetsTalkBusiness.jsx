@@ -128,8 +128,6 @@ export default function LetsTalkBusiness() {
           </span>
           <br />
           <span>fedkiit@gmail.com</span>
-          <br />
-          <pre>+91 7979782588</pre>
         </p>
       </div>
 
