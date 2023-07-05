@@ -122,12 +122,12 @@ export default function LetsTalkBusiness() {
         <p>Federation Of Entrepreneurship Development KIIT</p>
         <p>
           <span>
-            Campus 11, KIIT Deemed to be University, Bhubaneswar, Odisha.
+            Campus 11, KIIT Deemed to be University, Bhubaneswar, Odisha.,
+            <br />
+            751024
           </span>
           <br />
           <span>fedkiit@gmail.com</span>
-          <br />
-          <pre>+91 7979782588</pre>
         </p>
       </div>
 
