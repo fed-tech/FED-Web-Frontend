@@ -283,9 +283,15 @@
   width: 100%;
 }
 
+.tandCDiv {
+  margin-top: 15px;
+}
+
 .acceptLabel {
+  font-family: "Mulish", sans-serif;
   color: #000;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 @media (max-width: 1200px) and (min-width: 1000px) {
