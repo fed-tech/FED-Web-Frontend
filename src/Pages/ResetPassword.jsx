@@ -71,6 +71,8 @@ function ForgotPassword() {
           navigate("/Login");
         }
       } else {
+        setLoad(false);
+
         setErr("Please enter correct password");
       }
     } catch (err) {
