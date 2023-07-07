@@ -14,7 +14,6 @@ import { Alert } from "./../MicroInterAction/Alert";
 function ForgotPassword() {
   const [otp, setOtp] = useState("");
   const [email, setEmail] = useState("");
-  const [err, setErr] = useState("Invalid");
   const [showBtn, setShowBtn] = useState(false);
   const [loadingEffect, setLoad] = useState(false);
   const [variants, setError] = useState({
