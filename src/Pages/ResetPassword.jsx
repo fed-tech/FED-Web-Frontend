@@ -5,13 +5,16 @@ import bcrypt from "bcryptjs-react";
 // css
 import "./Css/resetpass.css";
 
+// axios
 import axios from "axios";
 
 function ForgotPassword() {
-  const navigate = useNavigate();
   const [newPass, setNewPass] = useState("");
   const [cnfPass, setCnfPass] = useState("");
   const [err, setErr] = useState("Invalid");
+
+  const navigate = useNavigate();
+
   const handleChangePassword = async (e) => {
     e.preventDefault();
     if (cnfPass === "" || newPass === "") {
