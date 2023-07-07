@@ -58,6 +58,7 @@
   color: #000;
   border-radius: 10px;
   width: 60%;
+  max-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
