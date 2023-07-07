@@ -54,6 +54,8 @@ function ForgotPassword() {
 
       if (res.status === 200) {
         setShowBtn(true);
+        setLoad(false);
+
         setError({
           mainColor: "#EDFEEE",
           secondaryColor: "#5CB660",
