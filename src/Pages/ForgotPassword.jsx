@@ -8,6 +8,7 @@ import "./Css/forgotpass.css";
 import axios from "axios";
 
 // Components
+import Load from "./../MicroInterAction/Load";
 import { Alert } from "./../MicroInterAction/Alert";
 
 function ForgotPassword() {
@@ -15,6 +16,7 @@ function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [err, setErr] = useState("Invalid");
   const [showBtn, setShowBtn] = useState(false);
+  const [loadingEffect, setLoad] = useState(false);
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
@@ -40,27 +42,39 @@ function ForgotPassword() {
       console.log(res);
 
       if (res.status === 200) {
-        Swal.fire({
-          title: "OTP Sent",
-          text: "Please check your mail",
-          icon: "success",
-          confirmButtonText: "OK",
-          confirmButtonColor: "#f45725",
-          background: "black",
-          color: "white",
-          customClass: {
-            text: "my-text-class",
-            title: "my-title-class",
-          },
-        });
         setShowBtn(true);
+        setError({
+          mainColor: "#EDFEEE",
+          secondaryColor: "#5CB660",
+          symbol: "check_circle",
+          title: "Success",
+          text: "Please check your mail !",
+          val: true,
+        });
       }
     } catch (err) {
-      if (err.response.status === 401) {
-        setErr("Email does not exist");
-        return;
-      }
       console.log(err);
+
+      if (err.response.status === 401) {
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Email does not exist.",
+          val: true,
+        });
+        return;
+      } else {
+        setError({
+          mainColor: "#FDEDED",
+          secondaryColor: "#F16360",
+          symbol: "error",
+          title: "Error",
+          text: "An Unexpected Error Occured",
+          val: true,
+        });
+      }
     }
   };
 
@@ -140,12 +154,12 @@ function ForgotPassword() {
             </div>
             {!showBtn && (
               <button className="logtwo1" onClick={handleSendOtp}>
-                Send OTP
+                {loadingEffect ? <Load /> : "Send OTP"}
               </button>
             )}
             {showBtn && (
               <button className="logtwo1" onClick={handleConfirmOtp}>
-                Verify OTP
+                {loadingEffect ? <Load /> : "Verify OTP"}
               </button>
             )}
             <p
