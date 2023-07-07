@@ -96,6 +96,7 @@ function ForgotPassword() {
       console.log(err);
     }
   };
+
   useEffect(() => {
     setErr("Invalid");
   }, [email, otp]);
