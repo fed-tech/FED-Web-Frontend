@@ -117,9 +117,6 @@ function ForgotPassword() {
               placeholder="Email"
               className="username1"
               onChange={(e) => setEmail(e.target.value)}
-              //   style={{
-              //     borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              //   }}
             />
             {showBtn && (
               <input
@@ -127,9 +124,6 @@ function ForgotPassword() {
                 placeholder="Enter OTP"
                 className="username1"
                 onChange={(e) => setOtp(e.target.value)}
-                //   style={{
-                //     borderBottom: emailerr ? "2px solid red" : "2px solid black",
-                //   }}
               />
             )}
           </div>
