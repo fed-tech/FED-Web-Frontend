@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import "./Css/resetpass.css";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
+
+// css
+import "./Css/resetpass.css";
 
 import axios from "axios";
 
