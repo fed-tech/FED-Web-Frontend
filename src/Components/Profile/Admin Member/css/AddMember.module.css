@@ -2,10 +2,12 @@
 
 .memInputs {
     width:70%;
+    height: 110%;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    overflow-y: scroll;
 }
 .memInputs input, .memInputs select{
     background-color: transparent;

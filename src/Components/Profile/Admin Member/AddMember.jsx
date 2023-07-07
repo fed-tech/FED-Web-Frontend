@@ -17,7 +17,9 @@ export default function AddMember() {
     email: "",
     img: "",
     access: "",
-    hashID: "",
+    blur: "",
+    github: "",
+    linkedin: "",
   });
 
   const DataInp = (e) => {
@@ -32,14 +34,16 @@ export default function AddMember() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, img, access, hashID } = data;
+    const { name, email, img, access, blur, github, linkedin } = data;
 
     if (
       name === "" ||
       email === "" ||
       access == "" ||
       img == "" ||
-      hashID == ""
+      blur == "" ||
+      github == "" ||
+      linkedin == ""
     ) {
       console.log("Please Fill All Fields");
       return;
@@ -52,7 +56,9 @@ export default function AddMember() {
           name,
           access,
           img,
-          hashID,
+          blur,
+          github,
+          linkedin,
         },
         {
           headers: {
@@ -62,7 +68,15 @@ export default function AddMember() {
       );
       if (res.data.status) {
         console.log(res.data.status);
-        setData({ name: "", email: "", img: "", access: "", hashID: "" });
+        setData({
+          name: "",
+          email: "",
+          img: "",
+          access: "",
+          blur: "",
+          github: "",
+          linkedin: "",
+        });
         window.scrollTo(0, 0);
       }
     } catch (err) {
@@ -107,8 +121,22 @@ export default function AddMember() {
         <input
           type="text"
           placeholder="Hash ID of the image"
-          name="hashID"
-          value={data.hashID}
+          name="blur"
+          value={data.blur}
+          onChange={DataInp}
+        />
+        <input
+          type="text"
+          placeholder="GitHub ID"
+          name="github"
+          value={data.github}
+          onChange={DataInp}
+        />
+        <input
+          type="text"
+          placeholder="LinkedIn ID"
+          name="linkedin"
+          value={data.linkedin}
           onChange={DataInp}
         />
         <div className="divButton">

@@ -75,7 +75,7 @@ export default function Domain(props) {
               </div>
             )}
           </div>
-          <p className={`memName name${props.mem.id}`}>{props.mem.name}</p>
+          <p className={`memName name${props.id}`}>{props.mem.name}</p>
         </div>
       ) : (
         <div></div>
