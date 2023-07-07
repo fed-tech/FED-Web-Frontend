@@ -25,6 +25,7 @@ function ForgotPassword() {
 
     const email = localStorage.getItem("Email");
     const passwrd = cnfPass;
+
     const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
     try {
       if (cnfPass === newPass) {
