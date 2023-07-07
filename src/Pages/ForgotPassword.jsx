@@ -126,6 +126,7 @@ function ForgotPassword() {
       });
       return;
     }
+
     try {
       const res = await axios.post("/auth/validate", {
         email,
