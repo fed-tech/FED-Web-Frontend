@@ -98,10 +98,6 @@ function ForgotPassword() {
     }
   };
 
-  useEffect(() => {
-    setErr("Invalid");
-  }, [newPass, cnfPass]);
-
   return (
     <>
       <div className="full3">
