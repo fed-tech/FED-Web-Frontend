@@ -10,8 +10,6 @@ function SignUp() {
     window.scrollTo(0, 0);
   }, []);
 
-  const [modal, setModal] = useState(false);
-
   return (
     <>
       <SignUpFun />
