@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../Pages/Css/resetpass.css";
+import "./Css/resetpass.css";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 
