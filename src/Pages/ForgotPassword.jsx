@@ -14,6 +14,7 @@ function ForgotPassword() {
   const [showBtn, setShowBtn] = useState(false);
 
   const navigate = useNavigate();
+
   const handleSendOtp = async (e) => {
     e.preventDefault();
     if (email === "") {
