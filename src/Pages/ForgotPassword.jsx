@@ -29,8 +29,11 @@ function ForgotPassword() {
 
   const handleSendOtp = async (e) => {
     e.preventDefault();
+    setLoad(true);
 
     if (email === "") {
+      setLoad(false);
+
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -41,6 +44,7 @@ function ForgotPassword() {
       });
       return;
     }
+
     try {
       const res = await axios.post("/auth/sendotp", {
         email,
