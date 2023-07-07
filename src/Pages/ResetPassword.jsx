@@ -78,18 +78,12 @@ function ForgotPassword() {
               placeholder="New password"
               className="username3"
               onChange={(e) => setNewPass(e.target.value)}
-              //   style={{
-              //     borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              //   }}
             />
             <input
               type="password"
               placeholder="Confirm password"
               className="username3"
               onChange={(e) => setCnfPass(e.target.value)}
-              //   style={{
-              //     borderBottom: emailerr ? "2px solid red" : "2px solid black",
-              //   }}
             />
           </div>
           <button className="logtwo3" onClick={handleChangePassword}>
