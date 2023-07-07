@@ -18,7 +18,7 @@ function ForgotPassword() {
     }
     const email = localStorage.getItem("Email");
     const passwrd = cnfPass;
-    const password = bcrypt.hashSync(passwrd, "$2b$10$Q0RPeouqYdTToq76zoccIO");
+    const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
     try {
       if (cnfPass === newPass) {
         const res = await axios.post("/auth/changepassword", {
