@@ -21,10 +21,10 @@ function ForgotPassword() {
     const password = bcrypt.hashSync(passwrd, "$2b$10$Q0RPeouqYdTToq76zoccIO");
     try {
       if (cnfPass === newPass) {
-        const res = await axios.post(
-          "http://localhost:5000/auth/changepassword",
-          { email, password }
-        );
+        const res = await axios.post("/auth/changepassword", {
+          email,
+          password,
+        });
         if (res.status === 200) {
           Swal.fire({
             title: "Password reset successfully",
