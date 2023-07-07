@@ -20,6 +20,8 @@ const TermsAndConditions = React.lazy(() =>
 // Pages || Authentication
 const Login = React.lazy(() => import("./Pages/Login"));
 const SignUp = React.lazy(() => import("./Pages/SignUp"));
+const ResetPassword = React.lazy(() => import("./Pages/ResetPassword"));
+const ForgotPassword = React.lazy(() => import("./Pages/ForgotPassword"));
 
 // Pages || Profiles
 const Profile = React.lazy(() => import("./Pages/AdminPage"));
@@ -139,6 +141,28 @@ function App() {
                     element={
                       <Suspense fallback={<Loading />}>
                         <SignUp />
+                      </Suspense>
+                    }
+                  />
+                )}
+
+                {!authCtx.isLoggedIn && (
+                  <Route
+                    path="/forgotpassword"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <ForgotPassword />
+                      </Suspense>
+                    }
+                  />
+                )}
+
+                {!authCtx.isLoggedIn && (
+                  <Route
+                    path="/resetpassword"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        <ResetPassword />
                       </Suspense>
                     }
                   />
