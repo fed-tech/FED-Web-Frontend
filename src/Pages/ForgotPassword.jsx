@@ -165,10 +165,6 @@ function ForgotPassword() {
     }
   };
 
-  useEffect(() => {
-    setErr("Invalid");
-  }, [email, otp]);
-
   return (
     <>
       <div className="full-page">
