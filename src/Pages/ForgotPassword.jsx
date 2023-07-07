@@ -24,6 +24,7 @@ function ForgotPassword() {
     text: "",
     val: false,
   });
+
   const navigate = useNavigate();
 
   const handleSendOtp = async (e) => {
