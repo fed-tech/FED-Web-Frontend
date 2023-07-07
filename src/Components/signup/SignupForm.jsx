@@ -387,6 +387,12 @@ function SignupForm() {
             required
           />
 
+          {/* T&C */}
+          <input type="checkbox" name="tandC" id="tandC" />
+          <label htmlFor="tandC" className={SuCss.acceptLabel}>
+            I accept
+          </label>
+
           <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
             {loadingEffect ? <Load /> : "SignUp"}
           </button>
