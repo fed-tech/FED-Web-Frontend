@@ -114,6 +114,8 @@ function ForgotPassword() {
       });
       return;
     } else if (otp === "") {
+      setLoad(false);
+
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
