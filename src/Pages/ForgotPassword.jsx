@@ -132,6 +132,8 @@ function ForgotPassword() {
         navigate("/resetpassword");
       }
     } catch (err) {
+      console.log(err);
+
       if (err.response.status === 401) {
         setError({
           mainColor: "#FFF4E5",
@@ -150,8 +152,16 @@ function ForgotPassword() {
           text: "Incorrect OTP.",
           val: true,
         });
+      } else {
+        setError({
+          mainColor: "#FDEDED",
+          secondaryColor: "#F16360",
+          symbol: "error",
+          title: "Error",
+          text: "An Unexpected Error Occured",
+          val: true,
+        });
       }
-      console.log(err);
     }
   };
 
