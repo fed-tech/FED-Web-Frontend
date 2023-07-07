@@ -14,10 +14,6 @@ function SignUp() {
 
   const navigate = useNavigate();
 
-  const toggleModel = () => {
-    setModal(!modal);
-    navigate("/Login");
-  };
   return (
     <>
       <SignUpFun />
