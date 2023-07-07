@@ -392,11 +392,11 @@ function SignupForm() {
             <input type="checkbox" name="tandC" id="tandC" />
             <label htmlFor="tandC" className={SuCss.acceptLabel}>
               I agree to FED's{" "}
-              <Link to="/T&C" className="LinkStyle">
+              <Link to="/T&C" className="LinkStyle" target="_blank">
                 Terms and Conditions
               </Link>{" "}
               and{" "}
-              <Link to="/PrivacyPolicies" className="LinkStyle">
+              <Link to="/PrivacyPolicies" className="LinkStyle" target="_blank">
                 Privacy Policy
               </Link>
               .
