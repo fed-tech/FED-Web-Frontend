@@ -134,6 +134,8 @@ function ForgotPassword() {
       });
 
       if (res.status === 200) {
+        setLoad(false);
+
         setError({
           mainColor: "#EDFEEE",
           secondaryColor: "#5CB660",
