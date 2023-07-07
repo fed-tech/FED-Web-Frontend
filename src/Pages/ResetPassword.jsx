@@ -8,10 +8,23 @@ import "./Css/resetpass.css";
 // axios
 import axios from "axios";
 
+// Components
+import Load from "./../MicroInterAction/Load";
+import { Alert } from "./../MicroInterAction/Alert";
+
 function ForgotPassword() {
   const [err, setErr] = useState("Invalid");
   const [newPass, setNewPass] = useState("");
   const [cnfPass, setCnfPass] = useState("");
+  const [loadingEffect, setLoad] = useState(false);
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
 
   const navigate = useNavigate();
 
