@@ -56,7 +56,9 @@ function ForgotPassword() {
 
   const handleConfirmOtp = async (e) => {
     e.preventDefault();
+
     console.log(email);
+
     if (email === "") {
       setErr("Please enter the email");
       return;
@@ -65,7 +67,7 @@ function ForgotPassword() {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/auth/validate", {
+      const res = await axios.post("/auth/validate", {
         email,
         otp,
       });
