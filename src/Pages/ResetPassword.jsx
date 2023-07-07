@@ -17,6 +17,7 @@ function ForgotPassword() {
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
+
     if (cnfPass === "" || newPass === "") {
       setErr("Please fill all the fields");
       return;
