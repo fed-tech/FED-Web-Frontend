@@ -17,6 +17,7 @@ function ForgotPassword() {
 
   const handleSendOtp = async (e) => {
     e.preventDefault();
+
     if (email === "") {
       setErr("Please enter the email");
       return;
