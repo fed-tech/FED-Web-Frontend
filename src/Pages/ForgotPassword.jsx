@@ -206,12 +206,6 @@ function ForgotPassword() {
                 {loadingEffect ? <Load /> : "Verify OTP"}
               </button>
             )}
-            <p
-              id="errmssg1"
-              style={{ color: err !== "Invalid" ? "red" : "white" }}
-            >
-              {err}
-            </p>
           </div>
         </div>
       </div>
