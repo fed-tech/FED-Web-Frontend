@@ -294,6 +294,10 @@
   margin-left: 5px;
 }
 
+.acceptLabel a {
+  text-decoration: underline;
+}
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;
