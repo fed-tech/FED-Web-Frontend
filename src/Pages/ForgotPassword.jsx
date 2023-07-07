@@ -174,6 +174,8 @@ function ForgotPassword() {
           val: true,
         });
       } else {
+        setLoad(false);
+
         setError({
           mainColor: "#FDEDED",
           secondaryColor: "#F16360",
