@@ -92,10 +92,24 @@ function ForgotPassword() {
     console.log(email);
 
     if (email === "") {
-      setErr("Please enter the email");
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
       return;
     } else if (otp === "") {
-      setErr("Please enter the otp");
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
       return;
     }
     try {
@@ -105,25 +119,37 @@ function ForgotPassword() {
       });
 
       if (res.status === 200) {
-        Swal.fire({
-          title: "OTP Verified successfully",
-          icon: "success",
-          confirmButtonText: "OK",
-          confirmButtonColor: "#f45725",
-          background: "black",
-          color: "white",
-          customClass: {
-            title: "my-title-class",
-          },
+        setError({
+          mainColor: "#EDFEEE",
+          secondaryColor: "#5CB660",
+          symbol: "check_circle",
+          title: "Success",
+          text: "OTP Verified successfully",
+          val: true,
         });
+
         localStorage.setItem("Email", email);
         navigate("/resetpassword");
       }
     } catch (err) {
       if (err.response.status === 401) {
-        setErr("Email Invalid");
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Email does not exist.",
+          val: true,
+        });
       } else if (err.response.status === 403) {
-        setErr("Incorrect OTP");
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Incorrect OTP.",
+          val: true,
+        });
       }
       console.log(err);
     }
