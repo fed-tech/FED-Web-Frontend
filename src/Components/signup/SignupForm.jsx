@@ -388,10 +388,20 @@ function SignupForm() {
           />
 
           {/* T&C */}
-          <input type="checkbox" name="tandC" id="tandC" />
-          <label htmlFor="tandC" className={SuCss.acceptLabel}>
-            I accept
-          </label>
+          <div className={SuCss.tandCDiv}>
+            <input type="checkbox" name="tandC" id="tandC" />
+            <label htmlFor="tandC" className={SuCss.acceptLabel}>
+              I agree to FED's{" "}
+              <Link to="/T&C" className="LinkStyle">
+                Terms and Conditions
+              </Link>{" "}
+              and{" "}
+              <Link to="/PrivacyPolicies" className="LinkStyle">
+                Privacy Policy
+              </Link>
+              .
+            </label>
+          </div>
 
           <button type="submit" className={SuCss.btn} onClick={handleSignUp}>
             {loadingEffect ? <Load /> : "SignUp"}
