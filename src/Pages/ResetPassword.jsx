@@ -27,6 +27,7 @@ function ForgotPassword() {
     const passwrd = cnfPass;
 
     const password = bcrypt.hashSync(passwrd, import.meta.env.VITE_BCRYPT);
+
     try {
       if (cnfPass === newPass) {
         const res = await axios.post("/auth/changepassword", {
