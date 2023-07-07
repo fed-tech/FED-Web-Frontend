@@ -53,6 +53,7 @@ function ForgotPassword() {
       console.log(err);
     }
   };
+
   const handleConfirmOtp = async (e) => {
     e.preventDefault();
     console.log(email);
