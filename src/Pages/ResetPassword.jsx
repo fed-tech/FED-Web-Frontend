@@ -103,41 +103,39 @@ function ForgotPassword() {
   }, [newPass, cnfPass]);
 
   return (
-    <div className="full3">
-      <div className="inside3">
-        <div className="title3">
-          <p className="fed">FED</p>
-        </div>
-        <div className="whitebox3">
-          <div className="hellopart3">
-            <p className="welc3">Reset Password</p>
+    <>
+      <div className="full3">
+        <div className="inside3">
+          <div className="title3">
+            <p className="fed">FED</p>
           </div>
-          <div className="user3">
-            <input
-              type="password"
-              placeholder="New password"
-              className="username3"
-              onChange={(e) => setNewPass(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Confirm password"
-              className="username3"
-              onChange={(e) => setCnfPass(e.target.value)}
-            />
+          <div className="whitebox3">
+            <div className="hellopart3">
+              <p className="welc3">Reset Password</p>
+            </div>
+            <div className="user3">
+              <input
+                type="password"
+                placeholder="New password"
+                className="username3"
+                onChange={(e) => setNewPass(e.target.value)}
+              />
+              <input
+                type="password"
+                placeholder="Confirm password"
+                className="username3"
+                onChange={(e) => setCnfPass(e.target.value)}
+              />
+            </div>
+            <button className="logtwo3" onClick={handleChangePassword}>
+              {loadingEffect ? <Load /> : "Change Password"}
+            </button>
           </div>
-          <button className="logtwo3" onClick={handleChangePassword}>
-            Change Password
-          </button>
-          <p
-            id="errmssg3"
-            style={{ color: err !== "Invalid" ? "red" : "white" }}
-          >
-            {err}
-          </p>
         </div>
       </div>
-    </div>
+
+      <Alert variant={variants} val={setError} />
+    </>
   );
 }
 
