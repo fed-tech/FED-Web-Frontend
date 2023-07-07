@@ -152,6 +152,8 @@ function ForgotPassword() {
       console.log(err);
 
       if (err.response.status === 401) {
+        setLoad(false);
+
         setError({
           mainColor: "#FFF4E5",
           secondaryColor: "#FFA117",
