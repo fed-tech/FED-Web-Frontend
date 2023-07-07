@@ -23,11 +23,12 @@ function ForgotPassword() {
       return;
     }
     try {
-      const res = await axios.post("http://localhost:5000/auth/sendotp", {
+      const res = await axios.post("/auth/sendotp", {
         email,
       });
 
       console.log(res);
+
       if (res.status === 200) {
         Swal.fire({
           title: "OTP Sent",
