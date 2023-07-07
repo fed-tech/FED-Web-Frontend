@@ -56,17 +56,17 @@ function ForgotPassword() {
           password,
         });
         if (res.status === 200) {
-          Swal.fire({
-            title: "Password reset successfully",
-            icon: "success",
-            confirmButtonText: "OK",
-            confirmButtonColor: "#f45725",
-            background: "black",
-            color: "white",
-            customClass: {
-              title: "my-title-class",
-            },
+          setLoad(false);
+
+          setError({
+            mainColor: "#EDFEEE",
+            secondaryColor: "#5CB660",
+            symbol: "check_circle",
+            title: "Success",
+            text: "Password reset successfully !!",
+            val: true,
           });
+
           localStorage.removeItem("Email");
           navigate("/Login");
         }
