@@ -69,6 +69,8 @@ function ForgotPassword() {
       console.log(err);
 
       if (err.response.status === 401) {
+        setLoad(false);
+
         setError({
           mainColor: "#FFF4E5",
           secondaryColor: "#FFA117",
@@ -79,6 +81,8 @@ function ForgotPassword() {
         });
         return;
       } else {
+        setLoad(false);
+
         setError({
           mainColor: "#FDEDED",
           secondaryColor: "#F16360",
@@ -98,6 +102,8 @@ function ForgotPassword() {
     console.log(email);
 
     if (email === "") {
+      setLoad(false);
+
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
