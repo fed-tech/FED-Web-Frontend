@@ -9,9 +9,9 @@ import "./Css/resetpass.css";
 import axios from "axios";
 
 function ForgotPassword() {
+  const [err, setErr] = useState("Invalid");
   const [newPass, setNewPass] = useState("");
   const [cnfPass, setCnfPass] = useState("");
-  const [err, setErr] = useState("Invalid");
 
   const navigate = useNavigate();
 
