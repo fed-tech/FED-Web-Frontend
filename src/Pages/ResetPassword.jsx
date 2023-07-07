@@ -73,10 +73,28 @@ function ForgotPassword() {
       } else {
         setLoad(false);
 
-        setErr("Please enter correct password");
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Please enter correct password.",
+          val: true,
+        });
       }
     } catch (err) {
       console.log(err);
+
+      setLoad(false);
+
+      setError({
+        mainColor: "#FDEDED",
+        secondaryColor: "#F16360",
+        symbol: "error",
+        title: "Error",
+        text: "An Unexpected Error Occured",
+        val: true,
+      });
     }
   };
 
