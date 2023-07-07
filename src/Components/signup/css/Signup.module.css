@@ -283,6 +283,11 @@
   width: 100%;
 }
 
+.acceptLabel {
+  color: #000;
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;
