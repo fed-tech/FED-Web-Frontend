@@ -100,6 +100,7 @@ function ForgotPassword() {
   useEffect(() => {
     setErr("Invalid");
   }, [email, otp]);
+
   return (
     <div className="full-page">
       <div className="insidebox">
