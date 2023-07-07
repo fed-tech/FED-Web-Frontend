@@ -11,7 +11,7 @@
   background-size: cover;
   height: fit-content;
 }
-#errmssg1{
+#errmssg1 {
   font-size: 14px;
   margin-top: 15px;
   user-select: none;
@@ -35,10 +35,10 @@
   line-height: 3.688rem;
   margin-bottom: 4.25rem;
 }
-.title2 p{
-   color: white;
-   margin: 0;
-   font-size: 2.313rem;
+.title2 p {
+  color: white;
+  margin: 0;
+  font-size: 2.313rem;
 }
 
 .FED {
@@ -63,7 +63,7 @@
   justify-content: center;
   position: relative;
 }
-.hellopart1{
+.hellopart1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -179,13 +179,13 @@
 .logtwo1 {
   width: 100%;
   margin-top: 31.15px;
-    padding: 7.3px;
-    border-radius: 7.3px;
-    border: black;
-    background-color: black;
-    font: mulish 19.8px;
-    font-size: 15.8px;
-    cursor: pointer;
+  padding: 7.3px;
+  border-radius: 7.3px;
+  border: black;
+  background-color: black;
+  font: mulish 19.8px;
+  font-size: 15.8px;
+  cursor: pointer;
 }
 .input::placeholder {
   font-weight: 300;
@@ -195,15 +195,17 @@
   color: black;
   text-align: left;
 }
-.user,.pass{
+.user,
+.pass {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 6.9px;
-    width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6.9px;
+  width: 100%;
 }
-.user input,.pass input{
+.user input,
+.pass input {
   line-height: 1.063em;
   text-align: left;
   background-color: transparent;
@@ -212,7 +214,6 @@
   padding: 10.6px 23.2px;
   width: 100%;
   border-bottom: 1.5px solid black;
-  
 }
 .username1 {
   border: none;
@@ -220,7 +221,6 @@
   font-size: 0.75rem;
   padding: 0.313rem;
   font-family: "Mulish", sans-serif;
-
 }
 .username1:focus {
   outline: none;
@@ -231,7 +231,6 @@
   font-size: 0.75rem;
   padding: 0.313rem;
   font-family: "Mulish", sans-serif;
-
 }
 .password1:focus {
   outline: none;
@@ -246,27 +245,26 @@
   border: 1px solid #ccc;
   outline: none;
 }
-.forgotPassword1{
+.forgotPassword1 {
   width: 100%;
   padding: 6.9px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.forgotPassword1 p{
+.forgotPassword1 p {
   color: black;
   cursor: pointer;
   font-family: "Mulish", sans-serif;
   font-size: 13px;
 }
-.forgotPassword1 p:hover{
+.forgotPassword1 p:hover {
   color: #f45725;
 }
-.my-text-class{
+.my-text-class {
   font-family: "Rubik", sans-serif;
 }
-.my-title-class
-{
+.my-title-class {
   font-family: "Rubik", sans-serif;
 }
 @media (max-width: 1200px) and (min-width: 1000px) {
