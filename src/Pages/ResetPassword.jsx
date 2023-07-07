@@ -37,7 +37,6 @@ function ForgotPassword() {
         if (res.status === 200) {
           Swal.fire({
             title: "Password reset successfully",
-            // text: "Please check your mail",
             icon: "success",
             confirmButtonText: "OK",
             confirmButtonColor: "#f45725",
