@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
-import "./Css/forgotpass.css";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+// css
+import "./Css/forgotpass.css";
+
+// axios
+import axios from "axios";
+
 function ForgotPassword() {
-  const navigate = useNavigate();
-  const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
-  const [showBtn, setShowBtn] = useState(false);
+  const [email, setEmail] = useState("");
   const [err, setErr] = useState("Invalid");
+  const [showBtn, setShowBtn] = useState(false);
+
+  const navigate = useNavigate();
   const handleSendOtp = async (e) => {
     e.preventDefault();
     if (email === "") {
