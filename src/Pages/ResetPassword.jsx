@@ -30,9 +30,17 @@ function ForgotPassword() {
 
   const handleChangePassword = async (e) => {
     e.preventDefault();
+    setLoad(true);
 
     if (cnfPass === "" || newPass === "") {
-      setErr("Please fill all the fields");
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
       return;
     }
 
