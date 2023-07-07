@@ -57,9 +57,11 @@ function ForgotPassword() {
       console.log(err);
     }
   };
+
   useEffect(() => {
     setErr("Invalid");
   }, [newPass, cnfPass]);
+
   return (
     <div className="full3">
       <div className="inside3">
