@@ -27,6 +27,7 @@ function SignupForm() {
     School: "",
     College: "",
     MobileNo: "+91",
+    tandC: false,
   });
 
   const [variants, setError] = useState({
@@ -60,6 +61,7 @@ function SignupForm() {
       School,
       College,
       MobileNo,
+      tandC,
     } = showUser;
 
     const name = FirstName + " " + LastName;
@@ -74,7 +76,8 @@ function SignupForm() {
       MobileNo.length >= 10 &&
       email !== "" &&
       Password !== "" &&
-      selected !== ""
+      selected !== "" &&
+      tandC
     ) {
       setLoad(true);
 
@@ -169,6 +172,16 @@ function SignupForm() {
           val: true,
         });
       }
+      if (tandC != true) {
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Please accept the terms and condition",
+          val: true,
+        });
+      }
     }
   };
 
@@ -223,8 +236,12 @@ function SignupForm() {
         e.target.style.borderBottom = "1px solid  black";
       }
     }
-
-    setUser({ ...showUser, [name]: value });
+    if (name === "tandC") {
+      setUser({ ...showUser, tandC: e.target.checked });
+    } else {
+      setUser({ ...showUser, [name]: value });
+    }
+    // setUser({ ...showUser, [name]: value });
   };
 
   useEffect(() => {
@@ -389,7 +406,14 @@ function SignupForm() {
 
           {/* T&C */}
           <div className={SuCss.tandCDiv}>
-            <input type="checkbox" name="tandC" id="tandC" />
+            <input
+              type="checkbox"
+              name="tandC"
+              id="tandC"
+              checked={setUser.tandC}
+              onChange={DataInp}
+              required
+            />
             <label htmlFor="tandC" className={SuCss.acceptLabel}>
               I agree to FED's{" "}
               <Link to="/T&C" className="LinkStyle" target="_blank">
