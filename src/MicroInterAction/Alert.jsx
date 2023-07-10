@@ -7,24 +7,16 @@ import axios from "axios";
 
 export const Alert = ({ variant, val, email }) => {
   const [sent, setSent] = useState(false);
-  const [text, setText] = useState(
-    "Email not verified! Resend verification mail"
-  );
 
   const resendMail = async () => {
-    if (!sent) {
-      try {
-        const response = await axios.get(`/auth/resendMail/${email}`);
-        console.log(response);
-        if (response.status == 200) {
-          setText("Mail sent! Please check your mail");
-          setSent(true);
-        }
-      } catch (e) {
-        console.log(e);
+    try {
+      const response = await axios.get(`/auth/resendMail/${email}`);
+      console.log(response);
+      if (response.status == 200) {
+        setSent(true);
       }
-    } else {
-      console.log("Mail Sent!!!");
+    } catch (e) {
+      console.log(e);
     }
   };
 
@@ -51,13 +43,26 @@ export const Alert = ({ variant, val, email }) => {
           <span className="description-title">{variant.title}:</span>
           {variant.text == "email" ? (
             <>
-              <span
-                className="description-text"
-                onClick={resendMail}
-                style={{ cursor: !sent ? "pointer" : "auto" }}
-              >
+              <span className="description-text">
                 {" "}
-                {text}
+                {sent ? (
+                  <>Mail sent! Please check your mail</>
+                ) : (
+                  <>
+                    Email not verified!{" "}
+                    <span
+                      style={{
+                        textDecoration: "underline",
+                        color: "red",
+                        cursor: "pointer",
+                      }}
+                      onClick={resendMail}
+                    >
+                      Resend
+                    </span>{" "}
+                    verification mail
+                  </>
+                )}
               </span>
             </>
           ) : (
