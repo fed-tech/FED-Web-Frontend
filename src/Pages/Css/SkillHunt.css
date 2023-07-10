@@ -91,7 +91,7 @@
 #CloseIcon {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 30px;
   z-index: 2;
   cursor: pointer;
   background-color: black;
@@ -125,7 +125,7 @@
   /* bottom: 0px; */
   /* left: 0px; */
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 32px;
 }
@@ -187,7 +187,6 @@
 .popTDiv {
   display: flex;
   justify-content: space-between;
-  margin-right: 50px;
 }
 
 .popCOntentDiv {
@@ -495,6 +494,49 @@ input{
 
 .hide {
     display: none;
+}
+
+.popUPSucessDiv{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popUpChildDivHome{
+    position: relative;
+    border-radius: 32px;
+    background-color: #0f0e0e;
+    height: 50vh;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.cancelSuccess{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: 100%;
+}
+.cancelSuccess img{
+    cursor: pointer;
+}
+.popUpChildDivHome p{
+    font-family: "Manrope", sans-serif;
+
+}
+.sucssGif img{
+    object-fit: contain;
+    height: 200px;
 }
 
 @keyframes slide {
