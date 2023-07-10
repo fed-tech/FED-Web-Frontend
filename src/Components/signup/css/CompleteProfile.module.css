@@ -184,3 +184,23 @@
   font-size: 19.8px;
   cursor: pointer;
 }
+
+.tandCDiv {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.acceptLabel {
+  font-family: "Mulish", sans-serif;
+  color: #000;
+  cursor: pointer;
+  margin-left: 7px;
+  text-align: justify;
+  width: 100%;
+}
+
+.acceptLabel a {
+  color: #f45725;
+  text-decoration: underline;
+}
