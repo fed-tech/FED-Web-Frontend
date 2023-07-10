@@ -47,7 +47,11 @@ export default function NavMobile() {
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
         <div class="mobileListProfile">
           {authCtx.isLoggedIn && (
-            <NavLink to="/MyProfile" className="liTag">
+            <NavLink
+              to="/MyProfile"
+              className="liTag"
+              onClick={() => setCount(false)}
+            >
               <img
                 src={authCtx.user.pic}
                 alt=""
