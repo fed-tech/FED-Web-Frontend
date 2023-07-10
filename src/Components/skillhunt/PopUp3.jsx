@@ -9,6 +9,8 @@ function PopUp3({ dataInp, info }) {
   };
   const toggleNotAttended = () => {
     setAttended(false);
+    const data = { target: { name: "previousEvent", value: "none" } };
+    dataInp(data);
   };
   return (
     <>
@@ -35,7 +37,7 @@ function PopUp3({ dataInp, info }) {
             This is my first time
           </button>
         </div>
-        {attended === true && <AttendedEvnt info={info} dataInp={dataInp}/>}
+        {attended === true && <AttendedEvnt info={info} dataInp={dataInp} />}
         <h3 className="step-title h3marginTop">
           How did you get to know event this event?
         </h3>
@@ -45,10 +47,10 @@ function PopUp3({ dataInp, info }) {
               onChange={dataInp}
               type="radio"
               id="InstagramFirstTeam"
-              name="KnowEventFirstTeam"
+              name="gotToKnow"
               value="Instagram"
               required
-              checked={info.KnowEventFirstTeam === "Instagram"}
+              checked={info.gotToKnow === "Instagram"}
             />
             <label htmlFor="InstagramFirstTeam" className="labelTagInp">
               Instagram
@@ -59,9 +61,9 @@ function PopUp3({ dataInp, info }) {
               onChange={dataInp}
               type="radio"
               id="EmailFirstTeam"
-              name="KnowEventFirstTeam"
+              name="gotToKnow"
               value="Email"
-              checked={info.KnowEventFirstTeam === "Email"}
+              checked={info.gotToKnow === "Email"}
             />
             <label htmlFor="EmailFirstTeam" className="labelTagInp">
               Email
@@ -73,9 +75,9 @@ function PopUp3({ dataInp, info }) {
               onChange={dataInp}
               type="radio"
               id="FriendsFirstTeam"
-              name="KnowEventFirstTeam"
+              name="gotToKnow"
               value="Friends"
-              checked={info.KnowEventFirstTeam === "Friends"}
+              checked={info.gotToKnow === "Friends"}
             />
             <label htmlFor="FriendsFirstTeam" className="labelTagInp">
               Friends
@@ -86,9 +88,9 @@ function PopUp3({ dataInp, info }) {
               onChange={dataInp}
               type="radio"
               id="OtherFirstTeam"
-              name="KnowEventFirstTeam"
+              name="gotToKnow"
               value="Other"
-              checked={info.KnowEventFirstTeam === "Other"}
+              checked={info.gotToKnow === "Other"}
             />
             <label htmlFor="OtherFirstTeam" className="labelTagInp">
               Other

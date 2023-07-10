@@ -91,7 +91,7 @@
 #CloseIcon {
   position: absolute;
   top: 30px;
-  right: 30px;
+  right: 40px;
   z-index: 2;
   cursor: pointer;
   background-color: black;
@@ -125,7 +125,7 @@
   /* bottom: 0px; */
   /* left: 0px; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-radius: 32px;
 }
@@ -187,6 +187,7 @@
 .popTDiv {
   display: flex;
   justify-content: space-between;
+  margin-right: 50px;
 }
 
 .popCOntentDiv {

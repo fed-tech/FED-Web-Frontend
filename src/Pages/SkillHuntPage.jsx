@@ -1,24 +1,20 @@
 import React, { useState } from "react";
-import './Css/SkillHunt.css'
-import PopUpModal from "../Components/skill hunt/PopUpModal";
-import regImg from '../assets/SkillHunt/point.png'
+import "./Css/SkillHunt.css";
+import PopUpModal from "../Components/skillhunt/PopUpModal";
+import regImg from "../assets/SkillHunt/point.png";
 
 function SkillHuntPage() {
-    const[showPopUp,setShowPopUp] = useState(false);
-    const handlePopUp = (e)=>{
-        setShowPopUp(true);
-    }
+  const [showPopUp, setShowPopUp] = useState(false);
+  const handlePopUp = (e) => {
+    setShowPopUp(true);
+  };
   return (
     <div className="SkillHuntPage">
       <section id="omega">
-        <div className="mainContainer">
-        
-        </div>
+        <div className="mainContainer"></div>
         <div class="btnDivReg">
           <button class="box-type" onClick={handlePopUp}>
-            <h2 class="reg" >
-              Register Now
-            </h2>
+            <h2 class="reg">Register Now</h2>
             {/* <!-- <h2 class="reg">Coming Soon</h2> --> */}
             <img src={regImg} alt="" srcset="" id="point" />
           </button>
@@ -32,7 +28,7 @@ function SkillHuntPage() {
           to Attend
         </div>
       </div>
-      {showPopUp&&<PopUpModal setShowPopUp = {setShowPopUp}/>}
+      {showPopUp && <PopUpModal setShowPopUp={setShowPopUp} />}
     </div>
   );
 }

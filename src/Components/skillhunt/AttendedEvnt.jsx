@@ -1,6 +1,6 @@
 import React from "react";
 
-function AttendedEvnt({info,dataInp}) {
+function AttendedEvnt({ info, dataInp }) {
   return (
     <>
       <div class="cardeve" id="div3" data-step>
@@ -8,26 +8,26 @@ function AttendedEvnt({info,dataInp}) {
         <div class="inpDivC">
           <div class="radiobgnDiv">
             <input
-              onChange = {dataInp}
+              onChange={dataInp}
               type="radio"
               id="StonkaholicTeam"
-              name="WhichOneTeam"
-              value="Stonkaholic"
+              name="previousEvent"
+              value="Omega"
               required
-              checked = {info.WhichOneTeam === "Stonkaholic"}
+              checked={info.previousEvent === "Omega"}
             />
             <label for="StonkaholicTeam" class="labelTagInp">
-              Stonkaholic
+              Omega
             </label>
           </div>
-          <div class="radiobgnDiv">
+          {/* <div class="radiobgnDiv">
             <input
-              onChange = {dataInp}
+              onChange={dataInp}
               type="radio"
               id="PitchersTeam"
-              name="WhichOneTeam"
+              name="previousEvent"
               value="Pitchers"
-              checked = {info.WhichOneTeam === "Pitchers"}
+              checked={info.previousEvent === "Pitchers"}
             />
             <label for="PitchersTeam" class="labelTagInp">
               Pitchers
@@ -36,32 +36,45 @@ function AttendedEvnt({info,dataInp}) {
           </div>
           <div class="radiobgnDiv">
             <input
-              onChange = {dataInp}
+              onChange={dataInp}
               type="radio"
               id="OmegaTeam"
               name="WhichOneTeam"
               value="Omega"
-              checked = {info.WhichOneTeam === "Omega"}
+              checked={info.WhichOneTeam === "Omega"}
             />
             <label for="OmegaTeam" class="labelTagInp">
               Omega
             </label>
+          </div> */}
+          <div class="radiobgnDiv">
+            <input
+              onChange={dataInp}
+              type="radio"
+              id="OtherWhichOneTeam"
+              name="previousEvent"
+              value="BlockChain"
+              checked={info.previousEvent === "BlockChain"}
+            />
+            <label for="OtherWhichOneTeam" class="labelTagInp">
+              Block Chain
+            </label>
           </div>
           <div class="radiobgnDiv">
             <input
-              onChange = {dataInp}
+              onChange={dataInp}
               type="radio"
               id="OtherWhichOneTeam"
-              name="WhichOneTeam"
+              name="previousEvent"
               value="Other"
-              checked = {info.WhichOneTeam === "Other"}
+              checked={info.previousEvent === "Other"}
             />
             <label for="OtherWhichOneTeam" class="labelTagInp">
               Other
             </label>
           </div>
         </div>
-        
+
         <p id="toogle-talkshow" class="toogle"></p>
       </div>
     </>
