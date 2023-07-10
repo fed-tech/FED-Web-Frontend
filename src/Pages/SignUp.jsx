@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 // Components
 import SignUpFun from "../Components/signup/SignUpFun";
@@ -10,14 +9,6 @@ function SignUp() {
     window.scrollTo(0, 0);
   }, []);
 
-  const [modal, setModal] = useState(false);
-
-  const navigate = useNavigate();
-
-  const toggleModel = () => {
-    setModal(!modal);
-    navigate("/Login");
-  };
   return (
     <>
       <SignUpFun />

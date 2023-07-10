@@ -68,10 +68,16 @@
 .liTag:hover {
   color: #f45725;
 }
-.profile_img{
-  height: 30px;
+
+.profile_img {
+  width: 40px;
+  height: 40px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   border-radius: 50%;
+  margin-top: -6px;
 }
+
 @media only screen and (max-width: 900px) {
   .listDiv {
     width: 75%;

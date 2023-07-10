@@ -38,6 +38,19 @@ export default function NavMobile(props) {
         </div>
       </nav>
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
+        <div class="mobileListProfile">
+          {authCtx.isLoggedIn && (
+            <NavLink to="/MyProfile" className="liTag">
+              <img
+                src={authCtx.user.pic}
+                alt=""
+                srcset=""
+                className="profile_img"
+              />
+            </NavLink>
+          )}
+        </div>
+
         <div class="mobileNavListChild">
           <div class="mobileList">
             <NavLink to="/" className="liTag" onClick={() => setCount(false)}>

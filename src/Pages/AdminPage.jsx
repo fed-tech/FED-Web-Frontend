@@ -13,9 +13,13 @@ import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
 import EventForm from "../Components/Profile/EventForm";
-import MembersAdmin from "../Components/Profile/Admin Member/MembersAdmin";
 
 function Page() {
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
   const [profile, setProfile] = useState(true);
@@ -97,7 +101,6 @@ function Page() {
                 <p>Form</p>
               </div>
               <div
-                onClick={handleMembers}
                 className={
                   members
                     ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
@@ -121,7 +124,6 @@ function Page() {
           {profile && <Profile setShowUpdateModal={setShowUpdateModal} />}
           {event && <EventAdmin />}
           {form && <EventForm />}
-          {members && <MembersAdmin />}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />

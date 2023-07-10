@@ -283,6 +283,26 @@
   width: 100%;
 }
 
+.tandCDiv {
+  width: 120%;
+  margin-top: 20px;
+  margin-left: -10%;
+}
+
+.acceptLabel {
+  font-family: "Mulish", sans-serif;
+  color: #000;
+  cursor: pointer;
+  margin-left: 7px;
+  text-align: justify;
+  width: 100%;
+}
+
+.acceptLabel a {
+  color: #f45725;
+  text-decoration: underline;
+}
+
 @media (max-width: 1200px) and (min-width: 1000px) {
   .glassDiv {
     width: 50%;
