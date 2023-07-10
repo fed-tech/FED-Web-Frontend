@@ -86,7 +86,7 @@ const GoogleSignUp = ({ setLoad }) => {
           10800000
         );
 
-        if (authCtx.target == null) {
+        if (authCtx.target == "") {
           navigate("/MyProfile");
         } else {
           navigate(`/${authCtx.target}`);

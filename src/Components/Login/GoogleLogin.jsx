@@ -82,7 +82,7 @@ export default function GoogleLogin({ setLoad }) {
 
         console.log("Login Done 💯💯💯💯💯");
 
-        if (authCtx.target == null) {
+        if (authCtx.target == "") {
           navigate("/MyProfile");
         } else {
           navigate(`/${authCtx.target}`);
