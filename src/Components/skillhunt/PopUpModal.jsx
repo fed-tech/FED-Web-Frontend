@@ -87,15 +87,15 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
     ) {
       try {
         console.log(info);
-        const response = await axios.post("/form/register", info, {
-          headers: { Authorization: `${authCtx.token}` },
-        });
-        console.log("duh");
-        console.log(response);
+        // const response = await axios.post("/form/register", info, {
+        //   headers: { Authorization: `${authCtx.token}` },
+        // });
+        // console.log("duh");
+        // console.log(response);
         // if (response.status === 200) {
         //   console.log(info);
-        //   // setSuccess(true);
-        //   setShowPopUp(false);
+        // setSuccess(true);
+        setShowPopUp(false);
         // }
       } catch (err) {
         console.log(err);
