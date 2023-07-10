@@ -12,11 +12,11 @@ function updateModal({ setShowUpdateModal }) {
   const [errmssg, setErrMssg] = useState("Invalid");
   const [showUser, setUser] = useState({
     email: authCtx.user.email,
-    name: "",
-    RollNumber: "",
-    School: "",
-    College: "",
-    MobileNo: "",
+    name : authCtx.user.name,
+    RollNumber : authCtx.user.rollNo,
+    School : authCtx.user.school,
+    College : authCtx.user.college,
+    MobileNo : authCtx.user.mobileNo
   });
 
   const [selected, setSelected] = useState(authCtx.user.selected);

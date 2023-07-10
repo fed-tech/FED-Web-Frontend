@@ -10,7 +10,7 @@
     padding: 20px;
     padding-left: 100px;
 }
-.addevent input{
+.addevent input,select{
     margin-bottom: 44px;
     padding: 10px 0px;
     border-bottom: 2px solid #808080;
@@ -43,8 +43,19 @@
     align-items: center;
     justify-content: space-between;
 }
-.addevent_date input{
+.addevent_date select{
     width: 36%;
+}
+
+#reg_type{
+    width: 100%;
+}
+#reg_type option{
+    background-color: #808080;
+}
+
+.addevent_date select option{
+    background-color: #808080;
 }
 .addevent form{
     width: 60%;

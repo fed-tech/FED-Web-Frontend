@@ -38,6 +38,10 @@
     background: linear-gradient(0deg, #000000 49.48%, rgba(14, 14, 14, 0.00) 100%);
 }
 
+.gradient button{
+    cursor: pointer;
+}
+
 
 .eventDesc,
 .eventName,

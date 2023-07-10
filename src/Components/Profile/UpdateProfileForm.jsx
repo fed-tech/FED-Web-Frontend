@@ -44,7 +44,7 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
         type="text"
         id="name"
         name="name"
-        value={authCtx.user.name}
+        value={showUser.name}
         placeholder="Name"
         onChange={DataInp}
       />
@@ -52,7 +52,7 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
         type="text"
         id="rollNum"
         name="RollNumber"
-        value={authCtx.user.rollNo}
+        value={showUser.RollNumber}
         placeholder="Roll Number"
         onChange={DataInp}
       />
@@ -60,7 +60,7 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
         type="text"
         id="school"
         name="School"
-        value={authCtx.user.school}
+        value={showUser.School}
         placeholder="School"
         onChange={DataInp}
       />
@@ -68,7 +68,7 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
         type="text"
         id="college"
         name="College"
-        value={authCtx.user.college}
+        value={showUser.College}
         placeholder="College"
         onChange={DataInp}
       />
@@ -76,7 +76,7 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
         type="number"
         id="number"
         name="MobileNo"
-        value={authCtx.user.mobileNo}
+        value={showUser.MobileNo}
         placeholder="Mobile Number"
         onChange={DataInp}
       />

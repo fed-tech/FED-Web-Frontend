@@ -1,0 +1,68 @@
+.editModalOverlay{
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editModal{
+    background-color: rgb(47, 46, 46);
+    color: #fff;
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.editModal .selectField{
+    width: 90%;
+    color: #fff;
+    padding: 10px 5px;
+    margin-top: 10px;
+    background: transparent;
+    margin-bottom: 0;
+
+}
+.editModal h2{
+    text-align: center;
+    color: #fff;
+    margin: 5px;
+
+}
+.edit_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edit_form input{
+    width: 90%;
+    color: #fff;
+    padding: 10px 5px;
+    margin-top: 10px;
+    background: transparent;
+    
+}
+.edit_form select option{
+    
+    background:#767676;
+    
+}
+.edit_form input{
+    border-bottom: 1px solid #767676;
+    
+
+}
+.editModal .btn{
+    cursor: pointer;
+    background-color: #f45725;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}

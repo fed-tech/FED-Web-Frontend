@@ -1,14 +1,17 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // css
 import eventCss from "./cssp/EventDetails.module.css";
 import axios from "axios";
 import AuthContext from "../../store/auth-context";
+import EditModal from "./EditModal";
 
 // logo
 // import logo from "../../Img/image26.png"
-function EventDetails({ cardNo, setShow }) {
+function EventDetails({ cardNo, setShow, setCardNo }) {
   const authCtx = useContext(AuthContext);
+
+  const [editModal,setEditModal] = useState(false);
 
   const handleDelete = async () => {
     const id = cardNo._id;
@@ -27,7 +30,6 @@ function EventDetails({ cardNo, setShow }) {
       console.log(err);
     }
   };
-
   useEffect(() => {
     console.log(cardNo);
   }, []);
@@ -81,11 +83,12 @@ function EventDetails({ cardNo, setShow }) {
         </div>
       </div>
       <div className={eventCss.gradient}>
-        <button className={eventCss.edit}>Edit</button>
+        <button className={eventCss.edit} onClick={()=> setEditModal(true)}>Edit</button>
         <button className={eventCss.delete} onClick={handleDelete}>
           Delete
         </button>
       </div>
+      {editModal&&<EditModal setEditModal = {setEditModal} cardNo = {cardNo} setCardNo = {setCardNo}/>}
     </div>
   );
 }

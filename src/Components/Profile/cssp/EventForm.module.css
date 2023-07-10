@@ -28,6 +28,8 @@
 .formBottom>input {
     border-bottom: 1px solid white;
     margin-bottom: 104px;
+    color: white;
+    font-size: 25px;
 }
 
 .formDiv>input::placeholder,

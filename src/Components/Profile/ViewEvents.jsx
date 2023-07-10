@@ -20,7 +20,7 @@ function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
   return (
     <div className='viewEventss'>
         {showEvent?
-          <EventDetails cardNo = {cardNo} setShow = {setShow}/>
+          <EventDetails cardNo = {cardNo} setShow = {setShow} setCardNo = {setCardNo}/>
         :
         <div className="viewevents">
           {events.map((i,idx)=>(
