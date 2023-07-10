@@ -7,9 +7,11 @@ import cancel from "../../assets/SkillHunt/XCircle.png";
 import axios from "axios";
 import { Alert } from "../../MicroInterAction/Alert";
 import AuthContext from "../../store/auth-context";
+import Load from "../../MicroInterAction/Load";
 
 function PopUpModal({ setShowPopUp, setSuccess }) {
   const [count, setCount] = useState(1);
+  const [loadingEffect, setLoad] = useState(false);
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
@@ -22,7 +24,6 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
 
   const [info, setInfo] = useState({
     formid: "64ac549a6d7bb3846341a298",
-    ContactNumber: "",
     age: "",
     skillToTeach: "",
     socialMedia: "",
@@ -36,17 +37,10 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
   const handlePrev = () => {
     setCount((prev) => prev - 1);
   };
-  const {
-    ContactNumber,
-    age,
-    skillToTeach,
-    socialMedia,
-    previousEvent,
-    gotToKnow,
-  } = info;
+  const { age, skillToTeach, socialMedia, previousEvent, gotToKnow } = info;
   const handleNext = () => {
     if (count === 1) {
-      if (ContactNumber != "" && age != "" && skillToTeach != "") {
+      if (age != "" && skillToTeach != "") {
         setCount((prev) => prev + 1);
         console.log("Count->", count);
       } else {
@@ -77,9 +71,9 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoad(true);
     // console.lxog(info);
     if (
-      ContactNumber != "" &&
       age != "" &&
       skillToTeach != "" &&
       previousEvent != "" &&
@@ -87,19 +81,40 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
     ) {
       try {
         console.log(info);
-        // const response = await axios.post("/form/register", info, {
-        //   headers: { Authorization: `${authCtx.token}` },
-        // });
+        const response = await axios.post("/form/register", info, {
+          headers: { Authorization: `${authCtx.token}` },
+        });
         // console.log("duh");
-        // console.log(response);
-        // if (response.status === 200) {
-        //   console.log(info);
-        // setSuccess(true);
-        setShowPopUp(false);
-        // }
+        console.log(response);
+        if (response.status === 200) {
+          setLoad(false);
+          console.log(info);
+          setSuccess(true);
+          setShowPopUp(false);
+        }
       } catch (err) {
+        setLoad(false);
         console.log(err);
+        setError({
+          mainColor: "#FDEDED",
+          secondaryColor: "#F16360",
+          symbol: "error",
+          title: "Error",
+          text: "An Unexpected Error Occurred",
+          val: true,
+        });
       }
+    } else {
+      setLoad(false);
+
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
     }
   };
 
@@ -132,7 +147,7 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
               )}
               {count >= 2 && (
                 <button type="button" class="NextBtn" onClick={handleSubmit}>
-                  Submit
+                  {loadingEffect ? <Load /> : "Submit"}
                 </button>
               )}
               {count < 2 && (

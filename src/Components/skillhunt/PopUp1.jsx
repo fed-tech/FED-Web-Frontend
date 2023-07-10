@@ -28,7 +28,7 @@ function PopUp1({ dataInp, info }) {
               required
             />
           </div> */}
-          <h3 className="step-title h3marginTop">Whatsapp Number</h3>
+          {/* <h3 className="step-title h3marginTop">Whatsapp Number</h3>
           <div className="popTDiv">
             <input
               onChange={dataInp}
@@ -42,7 +42,7 @@ function PopUp1({ dataInp, info }) {
               required
               value={info.ContactNumber}
             />
-          </div>
+          </div> */}
           <h3 className="step-title h3marginTop">Age</h3>
           <div className="popTDiv">
             <input

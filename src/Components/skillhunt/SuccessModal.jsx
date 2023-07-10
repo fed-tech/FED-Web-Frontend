@@ -1,20 +1,25 @@
 import React from "react";
-import '../../Pages/Css/SkillHunt.css';
-import cross from '../../assets/SkillHunt/XCircle.png';
-import success from "../../assets/SkillHunt/Success.gif"
+import "../../Pages/Css/SkillHunt.css";
+import cross from "../../assets/SkillHunt/XCircle.png";
+import success from "../../assets/SkillHunt/Success.gif";
 
-function SuccessModal({setSuccess}) {
-  const handleClose = ()=>{
+function SuccessModal({ setSuccess }) {
+  const handleClose = () => {
     setSuccess(false);
-
-  }
+  };
   return (
     <>
       <div class="popUPSucessDiv" id="add">
         <div class="popUpChildDivHome">
-          <div className="cancelSuccess"><img src={cross} alt="" onClick={handleClose}/></div>
-          <p>You have Successfully Registered in Skill Hunt.</p>
-          <div className="sucssGif"><img src={success} alt="" /></div>
+          <div className="cancelSuccess">
+            <img src={cross} alt="" onClick={handleClose} />
+          </div>
+          <p className="successText">
+            You have Successfully Registered in Skill Hunt.
+          </p>
+          <div className="sucssGif">
+            <img src={success} alt="" />
+          </div>
         </div>
       </div>
     </>

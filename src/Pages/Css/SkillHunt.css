@@ -534,6 +534,15 @@ input{
     font-family: "Manrope", sans-serif;
 
 }
+.successText{
+  font-size: x-large;
+}
+
+.sucssGif{
+  margin: 30px 0px;
+
+}
+
 .sucssGif img{
     object-fit: contain;
     height: 200px;
