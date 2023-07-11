@@ -18,6 +18,7 @@
 .leftDiv {
   width: 45%;
   display: flex;
+  font-family: "Mulish", sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
