@@ -23,6 +23,7 @@ function SkillHuntPage() {
 
   const handlePopUp = (e) => {
     if (authCtx.token == null) {
+      authCtx.settarget("event");
       redirect("/Login");
     } else {
       setShowPopUp(true);
@@ -40,7 +41,6 @@ function SkillHuntPage() {
   return (
     <>
       <div>
-        {/* <div className="mainContainer"></div> */}
         {authCtx.isLoggedIn ? (
           <>
             {regForm ? (

@@ -119,6 +119,8 @@ function LoginForm() {
           console.log("====================================");
           console.log("access->", response.data.result[0].access == "0");
 
+          console.log("authCtx.target -> ", authCtx.target);
+
           if (authCtx.target == "") {
             navigate("/MyProfile");
           } else {
@@ -130,9 +132,6 @@ function LoginForm() {
         }
       } catch (err) {
         setLoad(false);
-
-        console.log("**************************************err.response.data");
-        console.log(err);
 
         if (err.response.data.code === 4) {
           setError({
