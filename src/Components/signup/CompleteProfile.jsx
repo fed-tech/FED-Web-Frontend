@@ -158,10 +158,8 @@ function CompleteProfile(props) {
     ) {
       setLoad(true);
 
-      const password = bcrypt.hashSync(
-        props.data.id,
-        import.meta.env.VITE_BCRYPT
-      );
+      const password = props.data.id;
+
 
       const userObject = {
         name: props.data.name,

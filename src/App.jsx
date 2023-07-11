@@ -42,7 +42,6 @@ import AuthContext from "./store/auth-context";
 
 // axios
 import axios from "axios";
-import SkillHuntPage from "./Pages/SkillHuntPage";
 
 // BaseURL
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
@@ -106,12 +105,6 @@ function App() {
                     </Suspense>
                   }
                 />
-
-                <Route path="/skillHunt" element={
-                    <Suspense fallback={<Loading />}>
-                      <SkillHuntPage />
-                    </Suspense>
-                  }/>
 
                 <Route
                   path="/PrivacyPolicies"

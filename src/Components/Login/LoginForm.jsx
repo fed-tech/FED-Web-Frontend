@@ -85,7 +85,7 @@ function LoginForm() {
 
         console.log(response);
 
-        if (response.status === 202) {
+        if (response.data.status === true) {
           setLoad(false);
 
           setError({
