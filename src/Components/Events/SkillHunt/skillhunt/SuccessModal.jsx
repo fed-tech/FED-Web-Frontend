@@ -1,7 +1,7 @@
 import React from "react";
-import "../../Pages/Css/SkillHunt.css";
-import cross from "../../assets/SkillHunt/XCircle.png";
-import success from "../../assets/SkillHunt/Success.gif";
+import "./../Css/SkillHunt.css";
+import cross from "./../../../../assets/SkillHunt/XCircle.png";
+import success from "./../../../../assets/SkillHunt/Success.gif";
 
 function SuccessModal({ setSuccess }) {
   const handleClose = () => {
