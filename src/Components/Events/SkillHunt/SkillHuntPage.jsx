@@ -56,7 +56,7 @@ function SkillHuntPage() {
                     !regStatus && handlePopUp();
                   }}
                 >
-                  <h2>{regStatus ? "Thank You" : "Coming Soon"}</h2>
+                  <h2>{regStatus ? "Thank You" : "Register Now!!"}</h2>
                   <img src={regImg} alt="" srcset="" id="point" />
                 </div>
               </>
@@ -65,7 +65,7 @@ function SkillHuntPage() {
         ) : (
           <>
             <div className="btnDivReg" onClick={handlePopUp}>
-              <h2>Registration Now!!</h2>
+              <h2>Register Now!!</h2>
               <img src={regImg} alt="" srcset="" id="point" />
             </div>
           </>
