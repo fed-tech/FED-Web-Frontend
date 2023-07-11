@@ -1,0 +1,58 @@
+.addMember{
+    padding-top: 120px;
+    padding-bottom: 50px;
+    background-color: #0F0E0E;
+}
+
+.addMemberInner{
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.5);
+}
+
+.addMemName,.addMemEmail,.addMemDept,.addMemImage{
+    margin-top: 30px;
+}
+
+.addMemNameInput,.addMemEmailInput,.addMemImageInput{
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.addMemNameInput::placeholder,.addMemEmailInput::placeholder,.addMemImageInput::placeholder{
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.addMemNameH,.addMemEmailH,.addMemDeptH,.addMemImageH{
+    font-size: larger;
+}
+
+.addMemDeptInput{
+    width: 100%;
+    padding: 10.6px 23.2px;
+    background-color: transparent;
+    color: white;
+    border: 1px white solid;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.addMemDeptO{
+    color: black;
+}
+
+.addMemButton button{
+    background-color: #f45725;
+    padding: 10px;
+    color: white;
+    font: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}

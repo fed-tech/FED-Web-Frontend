@@ -1,0 +1,352 @@
+.full {
+  background-image: url(https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png);
+  height: 64rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: black;
+}
+
+#errmssg {
+  font-size: 14px;
+}
+
+.inside {
+  margin-top: 221px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+  padding: 20px 70px 44px 70px;
+  width: 60%;
+  max-width: 44%;
+  margin-bottom: 48px;
+}
+
+.title1 {
+  text-align: center;
+  background-color: transparent;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3.938rem;
+  line-height: 3.688rem;
+  margin-bottom: 40px;
+}
+
+.title1 p {
+  color: white;
+  margin: 0;
+  font-size: 2.313rem;
+}
+
+.FED {
+  text-align: center;
+  font-family: rubik;
+  font-style: normal;
+  text-shadow: 1px 0.496831px 1px #f45725;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.whitebox {
+  width: 100%;
+  height: 34.569rem;
+  padding: 30px 57px;
+  padding-bottom: 77.5px;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.hellopart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welc {
+  margin-top: 2rem;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.688rem;
+  line-height: 2.063rem;
+  letter-spacing: 0.005em;
+  color: black;
+}
+
+.det {
+  width: 9.375rem;
+  height: 1.063rem;
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
+  color: black;
+}
+
+.googlepart {
+  margin: 1.875rem;
+  height: 2.625rem;
+  width: 100%;
+  padding: 12.8px;
+  border: 0.056rem solid black;
+  border-radius: 0.667rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.googlepart GoogleOAuthProvider {
+  width: 100%;
+}
+
+.icon {
+  width: 1.063rem;
+  height: 1.063rem;
+  margin-right: 6px;
+}
+
+.log {
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 1.063rem;
+  color: black;
+}
+
+.orMDIv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.orLine {
+  width: 70px;
+  height: 0.5px;
+  background-color: #000;
+}
+
+.or {
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.063rem;
+  color: black;
+}
+
+.signup {
+  background-color: transparent;
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.063rem;
+  color: black;
+}
+
+.spann {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.063rem;
+  color: #f45725;
+  transition: all 0.3s;
+  text-decoration: underline;
+}
+
+.spann:hover {
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 22.176rem;
+  height: 2.446rem;
+}
+
+.logtwo {
+  width: 100%;
+  margin-top: 42.15px;
+  padding: 7.3px;
+  border-radius: 7.3px;
+  border: black;
+  background-color: black;
+  font: mulish 19.8px;
+  font-size: 19.8px;
+  cursor: pointer;
+}
+
+.input::placeholder {
+  font-weight: 300;
+  font-size: 0.938rem;
+  font-family: Mulish;
+  font-style: normal;
+  color: black;
+  text-align: left;
+}
+
+.formTag {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.user,
+.pass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.user {
+  flex-direction: column;
+  padding: 6.9px;
+}
+
+.pass {
+  flex-direction: row;
+  padding: 6.9px;
+  border-bottom: 1.5px solid black;
+}
+
+.user input,
+.pass input {
+  line-height: 1.063em;
+  text-align: left;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.user input {
+  padding: 10.6px 23.2px;
+  border-bottom: 1.5px solid black;
+}
+
+.pass input {
+  padding: 10.6px 23.2px 0px 23.2px;
+}
+
+.username,
+.password {
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 0.75rem;
+  padding: 0.313rem;
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.iconSee path {
+  color: #000;
+}
+
+.signup {
+  padding-top: 1.25rem;
+}
+
+.form-control:focus {
+  border-color: #ccc;
+  box-shadow: #ccc;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.forgotPassword {
+  width: 100%;
+  padding: 6.9px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.forgotPasswordPTag {
+  font-size: 13px;
+  color: #f45725;
+  font-family: "Mulish", sans-serif;
+}
+
+.my-text-class {
+  font-family: "Rubik", sans-serif;
+}
+
+.my-title-class {
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 1200px) and (min-width: 1000px) {
+  .inside {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 800px) {
+  .inside {
+    width: 60%;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 760px) {
+  .inside {
+    width: 65%;
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 760px) and (min-width: 530px) {
+  .inside {
+    width: 70%;
+    max-width: 70%;
+    padding: 15px 40px 40px 40px;
+  }
+}
+
+@media (max-width: 530px) {
+  .inside {
+    width: 80%;
+    max-width: 80%;
+    padding: 15px 40px 40px 40px;
+  }
+
+  .whitebox {
+    margin-top: 30.8px;
+    padding: 35px 35px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inside {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 40px 40px 40px;
+  }
+
+  .whitebox {
+    margin-top: 30.8px;
+    padding: 30px 30px;
+  }
+}
