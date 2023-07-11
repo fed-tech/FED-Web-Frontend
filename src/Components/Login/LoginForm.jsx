@@ -132,7 +132,7 @@ function LoginForm() {
         setLoad(false);
 
         console.log("err.response.data");
-        console.log(err.response);
+        console.log(err);
 
         if (err.response.data.code === 4) {
           setError({
