@@ -21,16 +21,12 @@ function SkillHuntPage() {
     <>
       <div>
         <div className="mainContainer"></div>
-        {/* <div class="btnDivReg">
-          <button class="box-type" onClick={handlePopUp}>
-            <h2 class="reg">Register Now</h2>
-            {/* <!-- <h2 class="reg">Coming Soon</h2> --> */}
-        {/* <img src={regImg} alt="" srcset="" id="point" /> */}
-        {/* </button> */}
-        {/* </div> * */}
 
-        <div className="btnDivReg">
-          <h2>Coming Soon</h2>
+        <div className="btnDivReg" onClick={handlePopUp}>
+          <h2>
+            Coming Soon
+            {/* Register Now */}
+          </h2>
           <img src={regImg} alt="" srcset="" id="point" />
         </div>
       </div>
