@@ -197,7 +197,12 @@ function CompleteProfile(props) {
 
           props.set(false);
 
-          navigate("/MyProfile");
+          if (authCtx.target == "") {
+            navigate("/MyProfile");
+          } else {
+            navigate(`/${authCtx.target}`);
+            authCtx.settarget(null);
+          }
 
           return;
         } else {
