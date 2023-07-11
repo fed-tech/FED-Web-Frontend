@@ -158,8 +158,9 @@ function CompleteProfile(props) {
     ) {
       setLoad(true);
 
-      const password = props.data.id;
+      console.log("-------------------------");
 
+      const password = props.data.id;
 
       const userObject = {
         name: props.data.name,
@@ -176,7 +177,7 @@ function CompleteProfile(props) {
       try {
         const response = await axios.post(`/auth/googleregister`, userObject);
 
-        console.log(response.data);
+        console.log("response.data.status", response.data.status);
 
         if (response.data.status === true) {
           authCtx.login(
@@ -188,6 +189,7 @@ function CompleteProfile(props) {
             response.data.user.College,
             response.data.user.MobileNo,
             response.data.user.selected,
+            response.data.user.regForm,
             Number(response.data.user.access),
             response.data.token,
             10800000
@@ -195,7 +197,12 @@ function CompleteProfile(props) {
 
           props.set(false);
 
-          navigate("/MyProfile");
+          if (authCtx.target == "") {
+            navigate("/MyProfile");
+          } else {
+            navigate(`/${authCtx.target}`);
+            authCtx.settarget(null);
+          }
 
           return;
         } else {

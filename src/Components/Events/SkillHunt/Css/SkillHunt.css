@@ -106,7 +106,8 @@
   position: relative;
   border-radius: 32px;
   background-color: #0f0e0e;
-  height: fit-content;
+  max-height: fit-content;
+  min-height: 30vh;
   width: 60%;
   padding: 30px;
 }
