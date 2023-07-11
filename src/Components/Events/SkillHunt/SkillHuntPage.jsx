@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 // Components
-import PopUpModal from "../../skillhunt/PopUpModal";
-import SuccessModal from "../../skillhunt/SuccessModal";
+import PopUpModal from "./skillhunt/PopUpModal";
+import SuccessModal from "./skillhunt/SuccessModal";
 
 // img
 import regImg from "./../../../assets/SkillHunt/point.png";
@@ -18,24 +18,29 @@ function SkillHuntPage() {
   };
 
   return (
-    <div className="SkillHuntPage">
-      <section id="omega">
+    <>
+      <div>
         <div className="mainContainer"></div>
-        <div class="btnDivReg">
+        {/* <div class="btnDivReg">
           <button class="box-type" onClick={handlePopUp}>
             <h2 class="reg">Register Now</h2>
             {/* <!-- <h2 class="reg">Coming Soon</h2> --> */}
-            <img src={regImg} alt="" srcset="" id="point" />
-          </button>
+        {/* <img src={regImg} alt="" srcset="" id="point" /> */}
+        {/* </button> */}
+        {/* </div> * */}
+
+        <div className="btnDivReg">
+          <h2>Coming Soon</h2>
+          <img src={regImg} alt="" srcset="" id="point" />
         </div>
-      </section>
+      </div>
 
       {/* <!-- alert --> */}
       {showSuccess && <SuccessModal setSuccess={setSuccess} />}
       {showPopUp && (
         <PopUpModal setShowPopUp={setShowPopUp} setSuccess={setSuccess} />
       )}
-    </div>
+    </>
   );
 }
 
