@@ -32,7 +32,6 @@ function SkillHuntPage() {
   return (
     <>
       <div>
-        {/* <div className="mainContainer"></div> */}
         {authCtx.isLoggedIn ? (
           <>
             {localStorage.getItem("regForm") ? (
