@@ -11,6 +11,7 @@ import regImg from "./../../../assets/SkillHunt/point.png";
 import "./Css/SkillHunt.css";
 import AuthContext from "../../../store/auth-context";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function SkillHuntPage() {
   const [showPopUp, setShowPopUp] = useState(false);
@@ -31,11 +32,19 @@ function SkillHuntPage() {
   };
 
   useEffect(() => {
-    if (authCtx.token) {
-      if (authCtx.user.regForm?.length == 1) {
-        setRegForm(true);
+    const req = async () => {
+      try {
+        const response = await axios.get(
+          "/form/getuserform?formid=64ac549a6d7bb3846341a298",
+          { headers: { Authorization: `${authCtx.token}` } }
+        );
+        setRegForm(response.data);
+      } catch (err) {
+        console.log(err);
       }
-    }
+    };
+
+    req();
   }, []);
 
   return (
