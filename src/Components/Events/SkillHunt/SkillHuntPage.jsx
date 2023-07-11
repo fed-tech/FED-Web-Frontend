@@ -2,8 +2,10 @@ import React, { useState } from "react";
 
 // Components
 import PopUpModal from "../../skillhunt/PopUpModal";
-import regImg from "../assets/SkillHunt/point.png";
 import SuccessModal from "../../skillhunt/SuccessModal";
+
+// img
+import regImg from "./../../../assets/SkillHunt/point.png";
 
 // css
 import "./Css/SkillHunt.css";
