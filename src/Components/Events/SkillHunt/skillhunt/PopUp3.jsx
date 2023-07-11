@@ -3,7 +3,7 @@ import AttendedEvnt from "./AttendedEvnt";
 import NotAttended from "./NotAttended";
 
 function PopUp3({ dataInp, info }) {
-  const [attended, setAttended] = useState(false);
+  const [attended, setAttended] = useState(null);
   const toggleAttended = () => {
     setAttended(true);
   };
@@ -38,7 +38,7 @@ function PopUp3({ dataInp, info }) {
           </button>
         </div>
         {attended === true && <AttendedEvnt info={info} dataInp={dataInp} />}
-        <h3 className="step-title h3marginTop">
+        {attended !== null(<><h3 className="step-title h3marginTop">
           How did you get to know event this event?
         </h3>
         <div className="inpDivC">
@@ -96,7 +96,7 @@ function PopUp3({ dataInp, info }) {
               Other
             </label>
           </div>
-        </div>
+        </div></>)}
       </div>
     </>
   );
