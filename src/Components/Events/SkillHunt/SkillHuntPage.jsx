@@ -31,7 +31,7 @@ function SkillHuntPage() {
   };
 
   useEffect(() => {
-    if (authCtx.token) {
+    if (authCtx.token != null) {
       if (authCtx.user.regForm.includes("64ac549a6d7bb3846341a298")) {
         setRegForm(true);
       }
