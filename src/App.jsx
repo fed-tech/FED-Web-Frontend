@@ -107,11 +107,14 @@ function App() {
                   }
                 />
 
-                <Route path="/skillHunt" element={
+                <Route
+                  path="/skillHunt"
+                  element={
                     <Suspense fallback={<Loading />}>
                       <SkillHuntPage />
                     </Suspense>
-                  }/>
+                  }
+                />
 
                 <Route
                   path="/PrivacyPolicies"
