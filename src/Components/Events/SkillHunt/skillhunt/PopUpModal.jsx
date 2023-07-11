@@ -1,13 +1,13 @@
 import React, { useContext, useRef, useState } from "react";
-import "../../Pages/Css/SkillHunt.css";
+import "./../Css/SkillHunt.css";
 import PopUp1 from "./PopUp1";
 import PopUp2 from "./PopUp2";
 import PopUp3 from "./PopUp3";
-import cancel from "../../assets/SkillHunt/XCircle.png";
+import cancel from "./../../../../assets/SkillHunt/XCircle.png";
 import axios from "axios";
-import { Alert } from "../../MicroInterAction/Alert";
-import AuthContext from "../../store/auth-context";
-import Load from "../../MicroInterAction/Load";
+import { Alert } from "./../../../../MicroInterAction/Alert";
+import AuthContext from "./../../../../store/auth-context";
+import Load from "./../../../../MicroInterAction/Load";
 
 function PopUpModal({ setShowPopUp, setSuccess }) {
   const [count, setCount] = useState(1);
@@ -20,6 +20,7 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
     text: "",
     val: false,
   });
+
   const authCtx = useContext(AuthContext);
 
   const [info, setInfo] = useState({
@@ -30,6 +31,7 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
     previousEvent: "",
     gotToKnow: "",
   });
+
   const dataInp = (e) => {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
