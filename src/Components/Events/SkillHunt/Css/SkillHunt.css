@@ -106,7 +106,7 @@
   position: relative;
   border-radius: 32px;
   background-color: #0f0e0e;
-  height: 85vh;
+  height: fit-content;
   width: 60%;
   padding: 30px;
 }
