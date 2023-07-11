@@ -14,6 +14,7 @@ function SkillHuntPage() {
   const handlePopUp = (e) => {
     setShowPopUp(true);
   };
+
   return (
     <div className="SkillHuntPage">
       <section id="omega">
