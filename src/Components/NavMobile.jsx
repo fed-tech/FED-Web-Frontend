@@ -97,7 +97,11 @@ export default function NavMobile() {
 
           <div class="mobileList">
             {!authCtx.isLoggedIn && (
-              <NavLink to="/Login" className="liTag">
+              <NavLink
+                to="/Login"
+                className="liTag"
+                onClick={() => setCount(false)}
+              >
                 Login/SignUp
               </NavLink>
             )}
