@@ -75,7 +75,7 @@ function TermsAndConditions() {
         <p>
           <strong>7. Amendments and Termination:</strong> <br />
           a.
-          <strong> Federation of Entrepreneurship</strong> reserves the right to
+          <strong>Federation of Entrepreneurship</strong> reserves the right to
           amend these Terms and Conditions at any time. Any changes will be
           communicated to the members in advance. <br />
           b. The society organizers may terminate your membership if you violate
@@ -92,10 +92,9 @@ function TermsAndConditions() {
         </p>
         <p>
           <strong>9. Payments:</strong> <br />
-          a. Please note that refunds and cancellations will only be accepted
-          during the registration period of the event.
-          <br /> b. The organisation never ask for payment other than this
-          website
+          a. all the payments done through this website is refundable by{" "}
+          <strong>Federation of Entrepreneurship </strong> <br />
+          b. The organisation never ask for payment other than this website
         </p>
         <p>
           By joining <strong>Federation of Entrepreneurship </strong> at Kalinga

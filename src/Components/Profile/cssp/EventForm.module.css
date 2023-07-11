@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+
+.head {
+    width: 70%;
+    margin-bottom: 49px;
+}
+.head h1{
+    font-size: 45px;
+font-family: Mulish;
+font-weight: 700;
+letter-spacing: 0.225px;
+width: 100%;
+}
+.formDiv>input, .formBottom>input {
+    border-bottom: 1px solid white;
+    margin-bottom: 104px;
+}
+.formDiv>input::placeholder, .formBottom>input::placeholder{
+    color: white;
+font-size: 25px;
+font-family: Mulish;
+font-weight: 700;
+letter-spacing: 0.125px;
+}
+.formDiv {
+    width:70%;
+    text-align: center;
+}
+.formBottom {
+    display: flex;
+    justify-content: space-between;
+}
+.formBottom>input {
+    width: 27%;
+}
+.saveBtn {
+    color: #FFF;
+font-size: 24.891px;
+font-family: Mulish;
+font-weight: 600;
+padding: 7px 30px;
+border-radius: 458.004px;
+background: #F45725;
+border: none;
+}
+
+@media (max-width:1310px) {
+    .formDiv>input::placeholder, .formBottom>input::placeholder {
+        font-size: 21px;
+    }
+    .head h1 {
+        font-size: 42px;
+    }
+    .formDiv {
+        width: 75%;
+    }
+}

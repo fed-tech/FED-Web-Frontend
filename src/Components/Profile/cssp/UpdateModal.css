@@ -1,0 +1,59 @@
+.updateModal-overlay{
+    position: fixed; 
+    z-index: 10; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.updateModal{
+    background-color: rgb(47, 46, 46);
+    color: #fff;
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.updateModal h2{
+    text-align: center;
+    color: #fff;
+    margin: 5px;
+
+}
+.update_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.update_form input,select{
+    width: 90%;
+    color: #fff;
+    padding: 10px 5px;
+    margin-top: 10px;
+    background: transparent;
+    
+}
+.update_form select option{
+    
+    background:#767676;
+    
+}
+.update_form input{
+    border-bottom: 1px solid #767676;
+    
+
+}
+.updateModal .btn{
+    cursor: pointer;
+    background-color: #f45725;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
