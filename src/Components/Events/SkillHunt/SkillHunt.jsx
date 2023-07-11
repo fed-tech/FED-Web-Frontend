@@ -14,7 +14,7 @@ export default function SkillHunt() {
     <div className={SHCss.mDiv}>
       <div className={SHCss.ContDiv}>
         <div className={SHCss.leftDiv}>
-          <img src={skillhuntlogo} alt="" />
+          <img src={skillhuntlogo} alt="" className={SHCss.ImgTagSkillTag} />
           <p>
             “Talent you have naturally. Skill is only developed by hours and
             hours and hours of beating on your craft” ~Will Smith
