@@ -6,15 +6,16 @@ import RegBtn from "./SkillHuntPage";
 // css
 import SHCss from "./Css/SkillHunt.module.css";
 
-// img
-import skillhuntlogo from "./../../../assets/SkillHunt/skillhuntlogo.png";
-
 export default function SkillHunt() {
   return (
     <div className={SHCss.mDiv}>
       <div className={SHCss.ContDiv}>
         <div className={SHCss.leftDiv}>
-          <img src={skillhuntlogo} alt="" className={SHCss.ImgTagSkillTag} />
+          <img
+            src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/64ad21753343f7de91db6213_skillhuntlogo.png"
+            alt=""
+            className={SHCss.ImgTagSkillTag}
+          />
           <div>
             <RegBtn />
           </div>
