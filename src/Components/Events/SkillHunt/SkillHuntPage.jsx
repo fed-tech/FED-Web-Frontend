@@ -11,11 +11,14 @@ import regImg from "./../../../assets/SkillHunt/point.png";
 import "./Css/SkillHunt.css";
 import AuthContext from "../../../store/auth-context";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Load from "../../../MicroInterAction/Load";
 
 function SkillHuntPage() {
   const [showPopUp, setShowPopUp] = useState(false);
   const [showSuccess, setSuccess] = useState(false);
   const [regStatus, setRegStatus] = useState(false);
+  const [loadingEffect, setLoad] = useState(false);
 
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
@@ -31,11 +34,21 @@ function SkillHuntPage() {
   };
 
   useEffect(() => {
-    if (authCtx.token) {
-      if (authCtx.user.regForm?.length == 1) {
-        setRegForm(true);
+    const req = async () => {
+      setLoad(true);
+      try {
+        const response = await axios.get(
+          "/form/getuserform?formid=64ac549a6d7bb3846341a298",
+          { headers: { Authorization: `${authCtx.token}` } }
+        );
+        setRegForm(response.data);
+        setLoad(false);
+      } catch (err) {
+        console.log(err);
       }
-    }
+    };
+
+    req();
   }, []);
 
   return (
@@ -45,7 +58,7 @@ function SkillHuntPage() {
           <>
             {regForm ? (
               <div className="btnDivReg">
-                <h2>Already Registered!</h2>
+                <h2>{loadingEffect ? <Load /> : "Already Registered!"}</h2>
               </div>
             ) : (
               <>
@@ -56,7 +69,13 @@ function SkillHuntPage() {
                     !regStatus && handlePopUp();
                   }}
                 >
-                  <h2>{regStatus ? "Thank You" : "Register Now!!"}</h2>
+                  <h2>
+                    {regStatus ? (
+                      <>{loadingEffect ? <Load /> : "Thank You"} </>
+                    ) : (
+                      <>{loadingEffect ? <Load /> : "Register Now!!"} </>
+                    )}
+                  </h2>
                   <img src={regImg} alt="" srcset="" id="point" />
                 </div>
               </>
