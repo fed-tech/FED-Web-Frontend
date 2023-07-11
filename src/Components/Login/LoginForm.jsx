@@ -83,8 +83,11 @@ function LoginForm() {
           password,
         });
 
-        console.log(response.data.status);
-        console.log(response.data.status === true);
+        console.log(response.data);
+        console.log(
+          "response.data.status === true",
+          response.data.status === true
+        );
 
         if (response.data.status === true) {
           setLoad(false);
@@ -127,6 +130,9 @@ function LoginForm() {
         }
       } catch (err) {
         setLoad(false);
+
+        console.log("response.data");
+        console.log(response.data);
 
         if (err.response.data.code === 4) {
           setError({
