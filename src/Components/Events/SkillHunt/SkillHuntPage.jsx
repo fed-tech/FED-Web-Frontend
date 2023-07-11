@@ -65,31 +65,11 @@ function SkillHuntPage() {
         ) : (
           <>
             <div className="btnDivReg" onClick={handlePopUp}>
-              <h2>Coming Soon</h2>
+              <h2>Registration Now!!</h2>
               <img src={regImg} alt="" srcset="" id="point" />
             </div>
           </>
         )}
-        {/* {localStorage.getItem("regForm") ? (
-          <div className="btnDivReg">
-            <h2>
-              {authCtx.isLoggedIn ? "Already Registered!" : "Coming Soon"}
-            </h2>
-          </div>
-        ) : (
-          <div
-            className="btnDivReg"
-            onClick={() => {
-              console.log(regStatus);
-              !regStatus && handlePopUp();
-            }}
-          >
-            <h2>
-              {regStatus ? "Thank You" : "Coming Soon"}
-            </h2>
-            <img src={regImg} alt="" srcset="" id="point" />
-          </div>
-        )} */}
       </div>
 
       {/* <!-- alert --> */}
