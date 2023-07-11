@@ -22,6 +22,7 @@ function SkillHuntPage() {
 
   const handlePopUp = (e) => {
     if (authCtx.token == null) {
+      authCtx.token = "/event";
       redirect("/Login");
     } else {
       setShowPopUp(true);
