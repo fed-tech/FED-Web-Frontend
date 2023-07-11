@@ -32,7 +32,7 @@ function SkillHuntPage() {
 
   useEffect(() => {
     if (authCtx.token) {
-      if (authCtx.user.regForm.length == 1) {
+      if (authCtx.user.regForm?.length == 1) {
         setRegForm(true);
       }
     }
