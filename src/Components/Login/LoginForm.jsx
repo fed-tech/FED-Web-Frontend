@@ -131,8 +131,8 @@ function LoginForm() {
       } catch (err) {
         setLoad(false);
 
-        console.log("response.data");
-        console.log(response.data);
+        console.log("err.response.data");
+        console.log(err.response.data);
 
         if (err.response.data.code === 4) {
           setError({
