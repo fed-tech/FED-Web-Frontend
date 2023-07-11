@@ -1,5 +1,8 @@
 import React from "react";
 
+// Components
+import RegBtn from "./SkillHuntPage";
+
 // css
 import SHCss from "./Css/SkillHunt.module.css";
 
@@ -28,6 +31,9 @@ export default function SkillHunt() {
             this chance to connect, receive feedback, and collaborate! Join
             Skill Hunt now and let your talent shine!
           </p>
+          <div>
+            <RegBtn />
+          </div>
         </div>
       </div>
     </div>
