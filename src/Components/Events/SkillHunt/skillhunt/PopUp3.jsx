@@ -38,7 +38,7 @@ function PopUp3({ dataInp, info }) {
           </button>
         </div>
         {attended === true && <AttendedEvnt info={info} dataInp={dataInp} />}
-        {attended !== null(<><h3 className="step-title h3marginTop">
+        {attended !== null&&(<><h3 className="step-title h3marginTop">
           How did you get to know event this event?
         </h3>
         <div className="inpDivC">
