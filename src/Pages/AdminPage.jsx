@@ -30,6 +30,7 @@ function Page() {
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
+    localStorage.deleteItem("regForm");
   };
 
   return (

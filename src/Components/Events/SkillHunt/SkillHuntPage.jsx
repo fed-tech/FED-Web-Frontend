@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 function SkillHuntPage() {
   const [showPopUp, setShowPopUp] = useState(false);
   const [showSuccess, setSuccess] = useState(false);
+  const [regStatus, setRegStatus] = useState(false);
 
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
@@ -30,26 +31,66 @@ function SkillHuntPage() {
   return (
     <>
       <div>
-        <div className="mainContainer"></div>
-        {localStorage.getItem("regForm") ? (
+        {/* <div className="mainContainer"></div> */}
+        {authCtx.isLoggedIn ? (
+          <>
+            {!localStorage.getItem("regForm") ? (
+              <div className="btnDivReg">
+                <h2>Already Registered!</h2>
+              </div>
+            ) : (
+              <>
+                <div
+                  className="btnDivReg"
+                  onClick={() => {
+                    console.log(regStatus);
+                    !regStatus && handlePopUp();
+                  }}
+                >
+                  <h2>{regStatus ? "Thank You" : "Coming Soon"}</h2>
+                  <img src={regImg} alt="" srcset="" id="point" />
+                </div>
+              </>
+            )}
+          </>
+        ) : (
+          <>
+            <div className="btnDivReg" onClick={handlePopUp}>
+              <h2>Coming Soon</h2>
+              <img src={regImg} alt="" srcset="" id="point" />
+            </div>
+          </>
+        )}
+        {/* {localStorage.getItem("regForm") ? (
           <div className="btnDivReg">
-            <h2>Already Registered!</h2>
+            <h2>
+              {authCtx.isLoggedIn ? "Already Registered!" : "Coming Soon"}
+            </h2>
           </div>
         ) : (
-          <div className="btnDivReg" onClick={handlePopUp}>
+          <div
+            className="btnDivReg"
+            onClick={() => {
+              console.log(regStatus);
+              !regStatus && handlePopUp();
+            }}
+          >
             <h2>
-              Coming Soon
-              {/* Register */}
+              {regStatus ? "Thank You" : "Coming Soon"}
             </h2>
             <img src={regImg} alt="" srcset="" id="point" />
           </div>
-        )}
+        )} */}
       </div>
 
       {/* <!-- alert --> */}
       {showSuccess && <SuccessModal setSuccess={setSuccess} />}
       {showPopUp && (
-        <PopUpModal setShowPopUp={setShowPopUp} setSuccess={setSuccess} />
+        <PopUpModal
+          setShowPopUp={setShowPopUp}
+          setSuccess={setSuccess}
+          setRegStatus={setRegStatus}
+        />
       )}
     </>
   );

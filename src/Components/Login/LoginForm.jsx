@@ -87,7 +87,8 @@ function LoginForm() {
 
         if (response.data.status === true) {
           setLoad(false);
-          response.data.user.regForm.includes("64ac549a6d7bb3846341a298")
+          console.log(response.data.result[0]);
+          response.data.result[0].regForm.includes("64ac549a6d7bb3846341a298")
             ? localStorage.setItem("regForm", true)
             : localStorage.setItem("regForm", false);
 
@@ -100,6 +101,7 @@ function LoginForm() {
             val: true,
           });
 
+          console.log("----------------------------------------");
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -113,6 +115,7 @@ function LoginForm() {
             response.data.token,
             10800000
           );
+          console.log("====================================");
           console.log("access->", response.data.result[0].access == "0");
 
           if (authCtx.target == "") {

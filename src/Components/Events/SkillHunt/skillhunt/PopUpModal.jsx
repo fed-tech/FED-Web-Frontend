@@ -93,6 +93,7 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
           console.log(info);
           setSuccess(true);
           setShowPopUp(false);
+          setRegStatus(true);
         }
       } catch (err) {
         setLoad(false);
