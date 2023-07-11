@@ -121,7 +121,7 @@ function LoginForm() {
           console.log("====================================");
           console.log("access->", response.data.result[0].access == "0");
 
-          console.log(first);
+          console.log("authCtx.target -> ", authCtx.target);
 
           if (authCtx.target == "") {
             navigate("/MyProfile");
