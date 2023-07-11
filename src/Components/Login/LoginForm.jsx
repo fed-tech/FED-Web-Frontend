@@ -91,9 +91,6 @@ function LoginForm() {
 
         if (response.data.status === true) {
           setLoad(false);
-          response.data.result[0].regForm.includes("64ac549a6d7bb3846341a298")
-            ? localStorage.setItem("regForm", true)
-            : localStorage.setItem("regForm", false);
 
           setError({
             mainColor: "#EDFEEE",
@@ -114,6 +111,7 @@ function LoginForm() {
             response.data.result[0].College,
             response.data.result[0].MobileNo,
             response.data.result[0].selected,
+            response.data.result[0].regForm,
             Number(response.data.result[0].access),
             response.data.token,
             10800000

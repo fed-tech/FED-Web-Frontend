@@ -65,9 +65,6 @@ export default function GoogleLogin({ setLoad }) {
 
       if (response.data.status === true) {
         setLoad(false);
-        response.data.user.regForm.includes("64ac549a6d7bb3846341a298")
-          ? localStorage.setItem("regForm", true)
-          : localStorage.setItem("regForm", false);
 
         authCtx.login(
           response.data.user.name,
@@ -78,6 +75,7 @@ export default function GoogleLogin({ setLoad }) {
           response.data.user.College,
           response.data.user.MobileNo,
           response.data.user.selected,
+          response.data.user.regForm,
           Number(response.data.user.access),
           response.data.token,
           10800000

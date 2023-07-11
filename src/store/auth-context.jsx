@@ -15,6 +15,7 @@ const AuthContext = React.createContext({
     mobileNo: "",
     selected: "",
     access: "",
+    regForm: [],
   },
   target: null,
   login: async (token) => {},
@@ -104,6 +105,7 @@ export const AuthContextProvider = (props) => {
     college,
     mobileNo,
     selected,
+    regForm,
     access,
     token,
     expirationTime
@@ -119,6 +121,7 @@ export const AuthContextProvider = (props) => {
       mobileNo: mobileNo,
       selected: selected,
       access: access,
+      regForm: regForm,
     };
 
     localStorage.setItem("user", JSON.stringify(setuserdata));
@@ -143,7 +146,8 @@ export const AuthContextProvider = (props) => {
     college,
     mobileNo,
     selected,
-    access
+    access,
+    regForm
   ) => {
     const setuserdata = {
       name: name,
@@ -155,6 +159,7 @@ export const AuthContextProvider = (props) => {
       mobileNo: mobileNo,
       selected: selected,
       access: access,
+      regForm: regForm,
     };
     console.log("Update function called");
     localStorage.setItem("user", JSON.stringify(setuserdata));

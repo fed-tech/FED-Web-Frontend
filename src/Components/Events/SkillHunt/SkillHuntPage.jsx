@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // Components
 import PopUpModal from "./skillhunt/PopUpModal";
@@ -19,6 +19,7 @@ function SkillHuntPage() {
 
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
+  const [regForm, setRegForm] = useState(false);
 
   const handlePopUp = (e) => {
     if (authCtx.token == null) {
@@ -28,13 +29,21 @@ function SkillHuntPage() {
     }
   };
 
+  useEffect(() => {
+    if (authCtx.token) {
+      if (authCtx.user.regForm.includes("64ac549a6d7bb3846341a298")) {
+        setRegForm(true);
+      }
+    }
+  }, []);
+
   return (
     <>
       <div>
         {/* <div className="mainContainer"></div> */}
         {authCtx.isLoggedIn ? (
           <>
-            {localStorage.getItem("regForm") ? (
+            {regForm ? (
               <div className="btnDivReg">
                 <h2>Already Registered!</h2>
               </div>
