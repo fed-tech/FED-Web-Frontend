@@ -91,7 +91,7 @@ function LoginForm() {
 
         if (response.data.status === true) {
           setLoad(false);
-          response.data.user.regForm.includes("64ac549a6d7bb3846341a298")
+          response.data.result[0].regForm.includes("64ac549a6d7bb3846341a298")
             ? localStorage.setItem("regForm", true)
             : localStorage.setItem("regForm", false);
 
