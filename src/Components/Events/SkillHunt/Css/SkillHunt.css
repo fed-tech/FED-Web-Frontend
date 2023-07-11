@@ -37,6 +37,8 @@
   padding: 16px 40px;
   background-color: #f45725;
   border-radius: 12px;
+  cursor: pointer;
+  margin-top: 40px;
 }
 
 #point {
