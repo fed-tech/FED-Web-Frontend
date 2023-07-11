@@ -83,7 +83,8 @@ function LoginForm() {
           password,
         });
 
-        console.log(response);
+        console.log(response.data.status);
+        console.log(response.data.status === true);
 
         if (response.data.status === true) {
           setLoad(false);
