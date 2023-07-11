@@ -83,11 +83,14 @@ function LoginForm() {
           password,
         });
 
-        console.log(response);
+        console.log(response.data);
+        console.log(
+          "response.data.status === true",
+          response.data.status === true
+        );
 
         if (response.data.status === true) {
           setLoad(false);
-          console.log(response.data.result[0]);
           response.data.result[0].regForm.includes("64ac549a6d7bb3846341a298")
             ? localStorage.setItem("regForm", true)
             : localStorage.setItem("regForm", false);
@@ -129,6 +132,9 @@ function LoginForm() {
         }
       } catch (err) {
         setLoad(false);
+
+        console.log("**************************************err.response.data");
+        console.log(err);
 
         if (err.response.data.code === 4) {
           setError({
