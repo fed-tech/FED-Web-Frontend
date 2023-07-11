@@ -33,11 +33,6 @@ export default function Nav() {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/skillHunt" className="liTag">
-                  Skill Hunt
-                </NavLink>
-              </li>
-              <li>
                 <NavLink to="/Podcasts" className="liTag">
                   Podcasts
                 </NavLink>
