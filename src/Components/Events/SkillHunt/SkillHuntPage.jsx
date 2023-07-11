@@ -25,7 +25,7 @@ function SkillHuntPage() {
         <div className="btnDivReg" onClick={handlePopUp}>
           <h2>
             Coming Soon
-            {/* Register Now */}
+            {/* Register */}
           </h2>
           <img src={regImg} alt="" srcset="" id="point" />
         </div>
