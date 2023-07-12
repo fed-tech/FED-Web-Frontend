@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   width: 26.2%;
-  min-width: 150px;
+  min-width: 160px;
 }
 
 .dashboard {
@@ -48,10 +48,10 @@
   font-style: normal;
   font-weight: 800;
   /* font-size: 26.0215px; */
-  font-size: clamp(1.2rem, 1.4vw + 1rem, 1.626rem);
+  font-size: clamp(1.1rem, 1.2vw + 1rem, 1.626rem);
   /* line-height: 24px;/ */
-  font-size: clamp(1.3rem, 1.5vw + 1rem, 1.5rem);
-  letter-spacing: 0.005em;
+  line-height: clamp(1.2rem, 1.5vw + 1rem, 1.5rem);
+  /* letter-spacing: 0.005em; */
   color: #999999;
   text-align: center;
 }
