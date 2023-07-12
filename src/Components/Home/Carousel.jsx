@@ -25,7 +25,7 @@ export default class SimpleSlider extends Component {
         <Slider {...settings}>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/6207279ea8b662d5e168a394/64ada2d37797f06482d999df_desktop%20poster.png"
+              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/64ae2d29b8a56c3c661ed97e_image%20349%20(1).png"
               para1="Got Skills?"
               coloredPara="Unleash"
               para2="your inner apple"
