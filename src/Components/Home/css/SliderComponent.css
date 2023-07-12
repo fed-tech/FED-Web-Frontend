@@ -48,6 +48,22 @@
     margin-right: 50px ;
     margin-left: 50px;
   }
+  
+.carouselButton{
+  background-color: #f45725;
+  color: white;
+    font-family: "Manrope";
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.005em;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
   @media only screen and (max-width: 1000px) {
     .textFed {
@@ -84,6 +100,12 @@
       line-height: 35px;
       margin-left: 25px;
     }
+
+    .carouselButton{
+      font-size: 16px;
+      line-height: 35px;
+      margin-left: 25px;
+    }
   }
 
   @media only screen and (max-width: 650px) {
@@ -101,6 +123,13 @@
       line-height: 150%;
       font-size: 14px;
       margin-right: 25px;
+      margin-left: 25px;
+    }
+
+    .carouselButton{
+      font-weight: 500;
+      line-height: 150%;
+      font-size: 14px;
       margin-left: 25px;
     }
   
