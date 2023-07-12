@@ -151,9 +151,11 @@
 .hello path {
   color: #f45725;
 }
+
 .hello p {
   color: #f45725;
 }
+
 .pageRight {
   padding-top: 162px;
   padding-bottom: 100px;
@@ -339,9 +341,11 @@
     font-size: 20px;
     text-align: unset;
   }
+
   .Position name {
     inline-size: 50%;
   }
+
   .profilePic {
     justify-content: unset;
   }
