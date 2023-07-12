@@ -121,7 +121,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  /* justify-content: space-around; */
   width: 42%;
   margin-bottom: 34px;
 }
