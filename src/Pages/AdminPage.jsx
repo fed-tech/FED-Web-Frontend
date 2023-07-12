@@ -10,7 +10,9 @@ import Profile from "../Components/Profile/Profile";
 
 function Page() {
   const [designation, setDesignation] = useState("");
+
   const navigate = useNavigate();
+
   const authCtx = useContext(AuthContext);
 
   // scroll to top
