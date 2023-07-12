@@ -88,8 +88,8 @@
 
 .designation {
   margin-top: 10px;
-  font-size: 20px;
-  line-height: 25px;
+  font-size: clamp(0.4rem, 0.5vw + 1rem, 1.25rem);
+  line-height: clamp(0.5rem, 0.6vw + 1rem, 1.563rem);
   color: #999999;
 }
 
