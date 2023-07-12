@@ -43,8 +43,8 @@
   padding-top: 18px;
 }
 
-.dashboardTop h1 {
-  font-family: "Manrope";
+.DASHBOARD {
+  font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 800;
   /* font-size: 26.0215px; */
@@ -71,7 +71,7 @@
 
 .Position .name {
   margin-top: 17px;
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -85,7 +85,7 @@
 .Position .designation {
   margin-top: 9px;
   text-align: center;
-  font-family: "Mulish";
+  font-family: "Mulish", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -109,7 +109,7 @@
 
   display: flex;
   flex-direction: column;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-weight: 700;
   font-size: 22.0914px;
   line-height: 21px;
@@ -175,10 +175,6 @@
   .dashboard {
     padding-left: 40px;
     padding-right: 40px;
-  }
-
-  .dashboard h1 {
-    font-size: 25px;
   }
 
   .Position .name {
