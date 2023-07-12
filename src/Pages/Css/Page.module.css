@@ -41,8 +41,7 @@
   padding-top: 18px;
 }
 
-.dashboardTop h1,
-.dashboardTop h2 {
+.dashboardTop h1 {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 800;
@@ -51,10 +50,6 @@
   letter-spacing: 0.005em;
   color: #999999;
   text-align: center;
-}
-
-.dashboardTop h2 {
-  display: none;
 }
 
 .profilePic {
@@ -195,11 +190,6 @@
     font-size: 25px;
   }
 
-  .dashboardTop img {
-    height: 180px;
-    width: 180px;
-  }
-
   .Position .name {
     font-size: 26px;
   }
@@ -260,18 +250,8 @@
 }
 
 @media (max-width: 1000px) {
-  .dashboardTop h1,
-  .dashboardTop h2 {
-    font-size: 25px;
-  }
-
   .Position .name {
     font-size: 26px;
-  }
-
-  .dashboardTop img {
-    height: 180px;
-    width: 180px;
   }
 
   .dashboardBottom {
@@ -340,12 +320,6 @@
     height: 50px;
   }
 
-  .dashboardTop h1,
-  .dashboardTop h2 {
-    font-size: 20px;
-    text-align: unset;
-  }
-
   .Position name {
     inline-size: 50%;
   }
@@ -354,7 +328,6 @@
     justify-content: unset;
   }
 
-  .dashboardTop,
   .dashboardBottom {
     align-items: flex-start;
   }
@@ -400,14 +373,6 @@
 }
 
 @media (max-width: 650px) {
-  .dashboardTop h1 {
-    display: none;
-  }
-
-  .dashboardTop h2 {
-    display: block;
-  }
-
   .pageLeft {
     width: 20%;
   }
@@ -433,10 +398,6 @@
 }
 
 @media (max-width: 575px) {
-  .dashboardTop h2 {
-    font-size: 16px;
-  }
-
   .proHeading {
     padding-bottom: 40px;
     width: 70%;
@@ -474,15 +435,6 @@
 
   .pageRight {
     width: 83%;
-  }
-
-  .dashboardTop img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .dashboardTop h2 {
-    font-size: 13px;
   }
 
   .Position .name {
