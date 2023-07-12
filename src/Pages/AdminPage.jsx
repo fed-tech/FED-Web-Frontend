@@ -45,7 +45,7 @@ function Page() {
         <div className={pageCss.pageLeft}>
           <div className={pageCss.dashboard}>
             <div className={pageCss.dashboardTop}>
-              <h1>DASHBOARD</h1>
+              <h1 className={pageCss.dashboardTop}>DASHBOARD</h1>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
                   <img src={authCtx.user.pic} alt="" />
