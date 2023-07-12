@@ -52,7 +52,17 @@
 .carouselButton{
   background-color: #f45725;
   color: white;
-  border: none;
+    font-family: "Manrope";
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 40px;
+    letter-spacing: 0.005em;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
   @media only screen and (max-width: 1000px) {
