@@ -422,23 +422,3 @@
     padding-bottom: 30px;
   }
 }
-
-@media (max-width: 394px) {
-  .pageRight {
-    padding: 10px 10px 40px 15px;
-  }
-
-  .proHeading {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 348px) {
-  .pageRight {
-    padding: 10px 0 30px 15px;
-  }
-
-  .proHeading {
-    font-size: 22px;
-  }
-}
