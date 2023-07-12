@@ -69,28 +69,27 @@
   /* object-fit:scale-down; */
 }
 
-.Position .name {
-  margin-top: 17px;
+.name,
+.designation {
   font-family: "Mulish", sans-serif;
+  text-align: center;
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
   letter-spacing: 0.005em;
+}
+
+.name {
+  margin-top: 17px;
+  font-size: 30px;
   color: #efefef;
   inline-size: 100%;
-  text-align: center;
   overflow-wrap: break-word;
 }
 
-.Position .designation {
+.designation {
   margin-top: 9px;
-  text-align: center;
-  font-family: "Mulish", sans-serif;
-  font-style: normal;
-  font-weight: 700;
   font-size: 20px;
   line-height: 25px;
-  letter-spacing: 0.005em;
   color: #999999;
 }
 
@@ -177,10 +176,6 @@
     padding-right: 40px;
   }
 
-  .Position .name {
-    font-size: 26px;
-  }
-
   .dashboardBottom {
     font-size: 20px;
   }
@@ -237,10 +232,6 @@
 }
 
 @media (max-width: 1000px) {
-  .Position .name {
-    font-size: 26px;
-  }
-
   .dashboardBottom {
     font-size: 20px;
   }
@@ -282,7 +273,6 @@
     padding-bottom: 60px;
   }
 
-  .Position .name,
   .dashboardBottom {
     font-weight: 500;
   }
@@ -317,13 +307,6 @@
 
   .dashboardBottom {
     align-items: flex-start;
-  }
-
-  .Position .name,
-  .Position .designation {
-    font-size: 20px;
-    text-align: unset;
-    font-weight: 400;
   }
 
   .dashboardBottom p {
@@ -390,11 +373,6 @@
     width: 70%;
   }
 
-  .Position .name {
-    font-size: 16px;
-    font-weight: 400;
-  }
-
   .headInnerText {
     font-size: 23px;
   }
@@ -422,11 +400,6 @@
 
   .pageRight {
     width: 83%;
-  }
-
-  .Position .name {
-    font-size: 13px;
-    font-weight: 400;
   }
 
   .headInnerText {
