@@ -22,6 +22,13 @@ export default function SliderComponent(props) {
           {props.para2}
         </p>
         <p className="textFedDescription">{props.para3}</p>
+        {props.button == "true" ? (
+          <>
+            <button className="carouselButton">Register Now!!</button>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
