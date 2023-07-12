@@ -1,16 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
-// css
+import { useNavigate } from "react-router-dom";
 
+// Components
+import Profile from "../Components/Profile/Profile";
+
+// state
+import AuthContext from "../store/auth-context";
+
+// css
 import pageCss from "./Css/Page.module.css";
 
+// icons
 import LogoutIcon from "@mui/icons-material/Logout";
-import AuthContext from "../store/auth-context";
-import { useNavigate } from "react-router-dom";
-import Profile from "../Components/Profile/Profile";
 
 function Page() {
   const [designation, setDesignation] = useState("");
+
   const navigate = useNavigate();
+
   const authCtx = useContext(AuthContext);
 
   // scroll to top
@@ -38,9 +45,7 @@ function Page() {
         <div className={pageCss.pageLeft}>
           <div className={pageCss.dashboard}>
             <div className={pageCss.dashboardTop}>
-              <h1>DASHBOARD</h1>
-              <h2>DASH</h2>
-              <h2>BOARD</h2>
+              <h1 className={pageCss.DASHBOARD}>DASHBOARD</h1>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
                   <img src={authCtx.user.pic} alt="" />
