@@ -422,3 +422,14 @@
     padding-bottom: 30px;
   }
 }
+
+@media only screen and (max-width: 410px) {
+  .pageLeft {
+    min-width: 100px;
+  }
+
+  .DASHBOARD,
+  .name {
+    display: none;
+  }
+}
