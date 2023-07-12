@@ -80,8 +80,8 @@
 
 .name {
   margin-top: 15px;
-  font-size: clamp(0.4rem, 0.5vw + 1rem, 1.875rem);
-  line-height: clamp(1.4rem, 1.7vw + 1rem, 1.9rem);
+  font-size: clamp(0.4rem, 0.5vw + 1rem, 1.8rem);
+  line-height: clamp(0.5rem, 0.6vw + 1rem, 1.9rem);
   color: #efefef;
   overflow-wrap: break-word;
 }
