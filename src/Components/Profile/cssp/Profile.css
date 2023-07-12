@@ -283,6 +283,12 @@
   }
 }
 
+@media only screen and (max-width: 450px) {
+  #profile {
+    margin-left: 0px;
+  }
+}
+
 @media (max-width: 394px) {
   .memberRight {
     padding: 10px 10px 40px 15px;
