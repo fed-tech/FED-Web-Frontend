@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Components
 import Profile from "../Components/Profile/Profile";
-import LogoutIcon from "@mui/icons-material/Logout";
+
+// state
+import AuthContext from "../store/auth-context";
 
 // css
 import pageCss from "./Css/Page.module.css";
 
-// state
-import AuthContext from "../store/auth-context";
+// icons
+import LogoutIcon from "@mui/icons-material/Logout";
 
 function Page() {
   const [designation, setDesignation] = useState("");
