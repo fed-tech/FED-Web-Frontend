@@ -79,15 +79,15 @@
 }
 
 .name {
-  margin-top: 17px;
-  font-size: 30px;
+  margin-top: 15px;
+  font-size: clamp(0.4rem, 0.5vw + 1rem, 1.875rem);
+  line-height: clamp(1.4rem, 1.7vw + 1rem, 1.9rem);
   color: #efefef;
-  inline-size: 100%;
   overflow-wrap: break-word;
 }
 
 .designation {
-  margin-top: 9px;
+  margin-top: 10px;
   font-size: 20px;
   line-height: 25px;
   color: #999999;
