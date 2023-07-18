@@ -53,7 +53,7 @@ function SkillHuntPage() {
 
   return (
     <>
-      <div>
+      {/* <div>
         {authCtx.isLoggedIn ? (
           <>
             {regForm ? (
@@ -64,16 +64,16 @@ function SkillHuntPage() {
               <>
                 <div
                   className="btnDivReg"
-                  onClick={() => {
-                    console.log(regStatus);
-                    !regStatus && handlePopUp();
-                  }}
+                  // onClick={() => {
+                  //   console.log(regStatus);
+                  //   !regStatus && handlePopUp();
+                  // }}
                 >
                   <h2>
                     {regStatus ? (
                       <>{loadingEffect ? <Load /> : "Thank You"} </>
                     ) : (
-                      <>{loadingEffect ? <Load /> : "Register Now!!"} </>
+                      <>{loadingEffect ? <Load /> : "Register Closed!!"} </>
                     )}
                   </h2>
                   <img src={regImg} alt="" srcset="" id="point" />
@@ -89,6 +89,9 @@ function SkillHuntPage() {
             </div>
           </>
         )}
+      </div> */}
+      <div className="btnDivReg">
+        <h2>Register Closed</h2>
       </div>
 
       {/* <!-- alert --> */}
