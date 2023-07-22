@@ -2,12 +2,11 @@ import React, { useEffect, useState } from 'react'
 import './cssp/EventCards.css'
 import axios from 'axios'
 
-function EventCards({info,setShow, setCardNo, cardNo}) {
+function EventCards({info,setShow, setCardNo}) {
   const handleShow = ()=>{
     setShow(true)
     setCardNo(info)
     // console.log(cardNo)
-    // console.log(info);
   }
   return (
     <div className='eventcards' onClick={handleShow}>
