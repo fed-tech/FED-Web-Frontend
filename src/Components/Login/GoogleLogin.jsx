@@ -19,8 +19,10 @@ import Lcss from "./css/loginpg.module.css";
 
 // img
 import google from "./../../assets/Login/Google.svg";
+import CompleteProfile from "../signup/CompleteProfile";
 
 export default function GoogleLogin({ setLoad }) {
+  const [passData, setGoogleData] = useState([]);
   const [codeResponse, setCodeResponse] = useState();
   const [variants, setError] = useState({
     mainColor: "",
@@ -80,7 +82,7 @@ export default function GoogleLogin({ setLoad }) {
 
         console.log("Login Done 💯💯💯💯💯");
 
-        if (authCtx.target == null) {
+        if (authCtx.target == "") {
           navigate("/MyProfile");
         } else {
           navigate(`/${authCtx.target}`);
@@ -102,7 +104,8 @@ export default function GoogleLogin({ setLoad }) {
           });
         } else if (response.data.code === 2) {
           localStorage.setItem("user", JSON.stringify(googleResponse.data));
-          navigate("/CreateProfile");
+          setGoogleData(googleResponse.data);
+          // navigate("/CreateProfile");
         } else {
           setError({
             mainColor: "#FDEDED",
@@ -142,8 +145,8 @@ export default function GoogleLogin({ setLoad }) {
         <img src={google} className={Lcss.icon}></img>
         <p className={Lcss.log}>Login with Google</p>
       </div>
-
       <Alert variant={variants} val={setError} />
+      <CompleteProfile data={passData} set={setGoogleData} />;
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs-react";
 
 // Components
@@ -32,6 +32,7 @@ function CompleteProfile(props) {
     College: "",
     MobileNo: "",
     img: "",
+    tandC: false,
   });
   const [variants, setError] = useState({
     mainColor: "",
@@ -85,7 +86,11 @@ function CompleteProfile(props) {
         e.target.style.borderBottom = "1px solid  black";
       }
     }
-    setUser({ ...showUser, [name]: value });
+    if (name === "tandC") {
+      setUser({ ...showUser, tandC: e.target.checked });
+    } else {
+      setUser({ ...showUser, [name]: value });
+    }
   };
 
   const handleChange = (event) => {
@@ -138,7 +143,7 @@ function CompleteProfile(props) {
   const handleCreateProfile = async (e) => {
     e.preventDefault();
 
-    const { RollNumber, School, College, MobileNo } = showUser;
+    const { RollNumber, School, College, MobileNo, tandC } = showUser;
 
     if (
       props.data.name !== "" &&
@@ -148,7 +153,8 @@ function CompleteProfile(props) {
       RollNumber !== "" &&
       School !== "" &&
       College !== "" &&
-      MobileNo.length === 10
+      MobileNo.length === 10 &&
+      tandC
     ) {
       setLoad(true);
 
@@ -254,6 +260,16 @@ function CompleteProfile(props) {
           val: true,
         });
       }
+      if (tandC != true) {
+        setError({
+          mainColor: "#FFF4E5",
+          secondaryColor: "#FFA117",
+          symbol: "warning",
+          title: "Warning",
+          text: "Please accept the terms and condition",
+          val: true,
+        });
+      }
     }
   };
 
@@ -355,6 +371,33 @@ function CompleteProfile(props) {
                 </option>
               ))}
             </select>
+
+            {/* T and C */}
+            <div className={CPCss.tandCDiv}>
+              <input
+                type="checkbox"
+                name="tandC"
+                id="tandC"
+                checked={setUser.tandC}
+                onChange={DataInp}
+                required
+              />
+              <label htmlFor="tandC" className={CPCss.acceptLabel}>
+                I agree to FED's{" "}
+                <Link to="/T&C" className="LinkStyle" target="_blank">
+                  Terms and Conditions
+                </Link>{" "}
+                and{" "}
+                <Link
+                  to="/PrivacyPolicies"
+                  className="LinkStyle"
+                  target="_blank"
+                >
+                  Privacy Policy
+                </Link>
+                .
+              </label>
+            </div>
 
             <button
               type="submit"

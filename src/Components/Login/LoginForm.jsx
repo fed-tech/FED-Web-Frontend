@@ -130,7 +130,7 @@ function LoginForm() {
             secondaryColor: "#1AB1F5",
             symbol: "info",
             title: "Information",
-            text: "Email not verified",
+            text: "email",
             val: true,
           });
 
@@ -227,7 +227,7 @@ function LoginForm() {
         </p>
       </div>
 
-      <Alert variant={variants} val={setError} />
+      <Alert variant={variants} val={setError} email={user.email} />
     </>
   );
 }
