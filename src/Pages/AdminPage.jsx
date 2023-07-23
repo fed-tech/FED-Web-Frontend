@@ -1,6 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-// css
+import { useNavigate } from "react-router-dom";
 
+// Components
+import Profile from "../Components/Profile/Profile";
+
+// state
+import AuthContext from "../store/auth-context";
+
+// css
 import pageCss from "./Css/Page.module.css";
 
 import GroupsIcon from "@mui/icons-material/Groups";
@@ -75,10 +82,8 @@ function Page() {
       <div className={pageCss.Page}>
         <div className={pageCss.pageLeft}>
           <div className={pageCss.dashboard}>
-            <div className={pageCss.dashboardTop} onClick={handleProfile}>
-              <h1>DASHBOARD</h1>
-              <h2>DASH</h2>
-              <h2>BOARD</h2>
+            <div className={pageCss.dashboardTop}>
+              <h1 className={pageCss.DASHBOARD}>DASHBOARD</h1>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
                   <img src={authCtx.user.pic} alt="" />

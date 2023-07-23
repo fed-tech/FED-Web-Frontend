@@ -75,6 +75,7 @@ export default function GoogleLogin({ setLoad }) {
           response.data.user.College,
           response.data.user.MobileNo,
           response.data.user.selected,
+          response.data.user.regForm,
           Number(response.data.user.access),
           response.data.token,
           10800000

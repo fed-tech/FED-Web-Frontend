@@ -9,7 +9,7 @@ import { Alert } from "./../../../../MicroInterAction/Alert";
 import AuthContext from "./../../../../store/auth-context";
 import Load from "./../../../../MicroInterAction/Load";
 
-function PopUpModal({ setShowPopUp, setSuccess }) {
+function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const [count, setCount] = useState(1);
   const [loadingEffect, setLoad] = useState(false);
   const [variants, setError] = useState({
@@ -93,6 +93,7 @@ function PopUpModal({ setShowPopUp, setSuccess }) {
           console.log(info);
           setSuccess(true);
           setShowPopUp(false);
+          setRegStatus(true);
         }
       } catch (err) {
         setLoad(false);

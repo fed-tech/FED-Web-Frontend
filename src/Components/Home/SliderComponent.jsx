@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./css/SliderComponent.css";
 
 export default function SliderComponent(props) {
+  const redirect = useNavigate();
   return (
     <div className="carousel">
       <div
@@ -22,6 +24,20 @@ export default function SliderComponent(props) {
           {props.para2}
         </p>
         <p className="textFedDescription">{props.para3}</p>
+        {props.button == "true" ? (
+          <>
+            <button
+              className="carouselButton"
+              onClick={() => {
+                redirect("/event");
+              }}
+            >
+              Register Now!!
+            </button>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );

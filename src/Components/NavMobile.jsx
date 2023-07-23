@@ -121,7 +121,11 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
           <div class="mobileList">
-            <NavLink to="/Alumni" className="liTag">
+            <NavLink
+              to="/Alumni"
+              className="liTag"
+              onClick={() => setCount(false)}
+            >
               Alumni
             </NavLink>
           </div>

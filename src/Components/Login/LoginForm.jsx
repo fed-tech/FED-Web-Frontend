@@ -83,9 +83,13 @@ function LoginForm() {
           password,
         });
 
-        console.log(response);
+        console.log(response.data);
+        console.log(
+          "response.data.status === true",
+          response.data.status === true
+        );
 
-        if (response.status === 202) {
+        if (response.data.status === true) {
           setLoad(false);
 
           setError({
@@ -97,6 +101,7 @@ function LoginForm() {
             val: true,
           });
 
+          console.log("----------------------------------------");
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -106,11 +111,15 @@ function LoginForm() {
             response.data.result[0].College,
             response.data.result[0].MobileNo,
             response.data.result[0].selected,
+            response.data.result[0].regForm,
             Number(response.data.result[0].access),
             response.data.token,
             10800000
           );
+          console.log("====================================");
           console.log("access->", response.data.result[0].access == "0");
+
+          console.log("authCtx.target -> ", authCtx.target);
 
           if (authCtx.target == "") {
             navigate("/MyProfile");
