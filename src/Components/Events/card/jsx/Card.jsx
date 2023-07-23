@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "../css/eventCard.css";
+import RegForm from './regForm'
 
 import { eventcard } from "../../../../Data/eventcard.js";
 
 export default function Card() {
   const [regLive, setRegLive] = useState(true);
-  const [register, setRegister] = useState();
+  const [register, setRegister] = useState(false);
   return (
     <div className="cards">
       {eventcard.map((data) => {
@@ -34,7 +35,7 @@ export default function Card() {
                   {data.dis.d4}
                 </div>
                 {regLive
-                  ? <a className="regBtn" onClick={()=> setRegister(true)}>Registration Open</a>
+                  ? <a className="regBtn" onClick={() => setRegister(true)}>Registration Open</a>
                   :
                   <a className="regBtn">
                     Registration Closed
@@ -59,6 +60,8 @@ export default function Card() {
           </div>
         );
       })}
+      {register &&
+        <RegForm />}
     </div>
   );
 }

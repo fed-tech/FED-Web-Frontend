@@ -1,0 +1,9 @@
+.regFormPopUp {
+    position: relative;
+    border-radius: 32px;
+    background-color: #0f0e0e;
+    max-height: fit-content;
+    min-height: 30vh;
+    width: 60%;
+    padding: 30px;
+}
