@@ -1,21 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Components
-import Profile from "../Components/Profile/Profile";
-
 // state
 import AuthContext from "../store/auth-context";
 
 // css
 import pageCss from "./Css/Page.module.css";
 
+// Components
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-import AuthContext from "../store/auth-context";
-import { useNavigate } from "react-router-dom";
 import EventAdmin from "../Components/Profile/EventAdmin";
 import UpdateProfile from "../Components/Profile/UpdateProfile";
 import Profile from "../Components/Profile/Profile";
