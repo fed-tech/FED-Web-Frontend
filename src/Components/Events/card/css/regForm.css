@@ -1,9 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
+
 .regFormPopUp {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fontDets, input::placeholder, input {
+    font-family: mulish;
+    font-size: 1.25rem;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+.form {
     position: relative;
     border-radius: 32px;
     background-color: #0f0e0e;
     max-height: fit-content;
     min-height: 30vh;
     width: 60%;
-    padding: 30px;
+    padding: 30px 50px;
+}
+.inpField {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+label {
+    max-width: 20%;
+}
+input {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+.input {
+    width: 75%;
+}
+.radioLabel {
+    margin-right: 20%;
+}
+.radioInp {
+    width: unset;
+    margin: 0;
+    margin-right: 5px;
 }
