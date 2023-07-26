@@ -33,7 +33,7 @@
         {
             "title":"Languages you know",
             "type":"checkbox",
-            "value":["C++", "Java", "C", "Python", "Javascript"],
+            "value":["C++", "Java", "C", "Python", "Javascript", "gjhdsb", "fsjvb"],
             "placeholder":""
         }
     ]

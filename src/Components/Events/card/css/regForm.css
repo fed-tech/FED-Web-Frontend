@@ -10,14 +10,17 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.fontDets, input::placeholder, input {
+.fontDets{
+    font-family: mulish;
+    font-weight: 700;
+    font-size: 1.45rem;
+}
+input::placeholder, input {
     font-family: mulish;
     font-size: 1.25rem;
 }
-
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
 }
@@ -29,23 +32,25 @@
     min-height: 30vh;
     width: 60%;
     padding: 30px 50px;
+    overflow-y: auto;
 }
 .inpField {
     display: flex;
-    align-items: center;
-    margin-bottom: 30px;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 30px;
+    margin-bottom: 40px;
     justify-content: space-between;
 }
-label {
-    max-width: 20%;
-}
+
 input {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 15px;
+    border-radius: 13px;
     width: 100%;
+    border: rgb(145, 141, 141) solid 1px;
 }
 .input {
-    width: 75%;
+    width: 90%;
 }
 .radioLabel {
     margin-right: 20%;
@@ -53,5 +58,16 @@ input {
 .radioInp {
     width: unset;
     margin: 0;
-    margin-right: 5px;
+    margin-right: 7px;
+}
+.radioDiv {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    line-height: 0px;
+    flex-flow: row wrap;
+}
+.radioDiv div {
+    align-items: center;
+    display: flex;
 }
