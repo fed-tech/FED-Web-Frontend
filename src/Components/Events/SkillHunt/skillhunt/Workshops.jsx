@@ -1,19 +1,6 @@
 import React from "react";
 
-export default function Workshops({
-  checkBoxInp,
-  workshops,
-  disabled,
-  all,
-  setWorkshops,
-}) {
-  if (all) {
-    setWorkshops({
-      cloud: true,
-      trade: true,
-      graphics: true,
-    });
-  }
+export default function Workshops({ checkBoxInp, workshops, disabled, all }) {
   return (
     <>
       <h3 className="step-title h3marginTop">Interested Workshops</h3>

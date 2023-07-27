@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Workshops from "./Workshops";
 
-function PopUp1({ dataInp, info, setInterestedWorkshop }) {
+function PopUp1({ dataInp, info, setInterestedWorkshop, checked, setChecked }) {
   const [workshops, setWorkshops] = useState({
     cloud: false,
     trade: false,
@@ -12,7 +12,7 @@ function PopUp1({ dataInp, info, setInterestedWorkshop }) {
     trade: false,
     graphics: false,
   });
-  const [checked, setChecked] = useState(0);
+  // const [checked, setChecked] = useState(0);
 
   const checkBoxInp = (e) => {
     const { name, value } = e.target;
@@ -100,8 +100,10 @@ function PopUp1({ dataInp, info, setInterestedWorkshop }) {
               all={false}
             />
           )}
-          {info.packages === "three-workshop" && (
-            <Workshops all={true} setWorkshops={setWorkshops} />
+          {info.packages === "three-workshop" ? (
+            <Workshops all={true} />
+          ) : (
+            <></>
           )}
           <p id="toogle-talkshow" className="toogle"></p>
         </div>

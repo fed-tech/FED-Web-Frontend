@@ -10,6 +10,7 @@ import AuthContext from "./../../../../store/auth-context";
 import Load from "./../../../../MicroInterAction/Load";
 
 function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
+  const [checked, setChecked] = useState(0);
   const [count, setCount] = useState(1);
   const [loadingEffect, setLoad] = useState(false);
   const [variants, setError] = useState({
@@ -29,9 +30,9 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     age: "",
     packages: "",
     workshops: {},
-    // socialMedia: "",
-    // previousEvent: "",
-    // gotToKnow: "",
+    previousEvent: "",
+    gotToKnow: "",
+    referral: "",
   });
 
   const dataInp = (e) => {
@@ -41,12 +42,24 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const handlePrev = () => {
     setCount((prev) => prev - 1);
   };
-  const { age, packages, socialMedia, previousEvent, gotToKnow } = info;
+  const { age, packages, previousEvent, gotToKnow, referral } = info;
   const handleNext = () => {
     if (count === 1) {
-      info.workshops = interestedWorkshop;
-      console.log(info);
-      if (age != "" && packages != "") {
+      if (packages === "three-workshop") {
+        info.workshops = {
+          cloud: true,
+          trade: true,
+          graphics: true,
+        };
+      } else {
+        info.workshops = interestedWorkshop;
+      }
+
+      if (
+        age != "" &&
+        packages != "" &&
+        (packages === "three-workshop" || checked == 2)
+      ) {
         setCount((prev) => prev + 1);
         console.log("Count->", count);
       } else {
@@ -60,8 +73,31 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
         });
       }
     } else if (count === 2) {
-      if (previousEvent != "" && gotToKnow != "") {
-        setCount((prev) => prev + 1);
+      console.log(info);
+      if (previousEvent != "") {
+        if (gotToKnow != "") {
+          if (gotToKnow === "Referral" && referral != "") {
+            setCount((prev) => prev + 1);
+          } else {
+            setError({
+              mainColor: "#FFC0CB",
+              secondaryColor: "#FF69B4",
+              symbol: "pets",
+              title: "Check it out",
+              text: "Please Fill All The Details",
+              val: true,
+            });
+          }
+        } else {
+          setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Check it out",
+            text: "Please Fill All The Details",
+            val: true,
+          });
+        }
       } else {
         setError({
           mainColor: "#FFC0CB",
@@ -143,6 +179,8 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
                   dataInp={dataInp}
                   info={info}
                   setInterestedWorkshop={setInterestedWorkshop}
+                  checked={checked}
+                  setChecked={setChecked}
                 />
               )}
               {count === 2 && <PopUp3 dataInp={dataInp} info={info} />}
@@ -158,12 +196,12 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
                   Previous
                 </button>
               )}
-              {count >= 2 && (
+              {count >= 3 && (
                 <button type="button" class="NextBtn" onClick={handleSubmit}>
                   {loadingEffect ? <Load /> : "Submit"}
                 </button>
               )}
-              {count < 2 && (
+              {count < 3 && (
                 <button type="button" class="NextBtn" onClick={handleNext}>
                   Next
                 </button>
