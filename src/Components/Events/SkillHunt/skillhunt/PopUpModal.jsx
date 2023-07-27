@@ -127,35 +127,35 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
       gotToKnow != "" &&
       transaction != ""
     ) {
-      console.log(info);
-      setSuccess(true);
-      setShowPopUp(false);
-      setRegStatus(true);
-      // try {
-      //   console.log(info);
-      //   const response = await axios.post("/form/register", info, {
-      //     headers: { Authorization: `${authCtx.token}` },
-      //   });
-      //   console.log(response);
-      //   if (response.status === 200) {
-      //     setLoad(false);
-      //     console.log(info);
-      //     setSuccess(true);
-      //     setShowPopUp(false);
-      //     setRegStatus(true);
-      //   }
-      // } catch (err) {
-      //   setLoad(false);
-      //   console.log(err);
-      //   setError({
-      //     mainColor: "#FDEDED",
-      //     secondaryColor: "#F16360",
-      //     symbol: "error",
-      //     title: "Error",
-      //     text: "An Unexpected Error Occurred",
-      //     val: true,
-      //   });
-      // }
+      // console.log(info);
+      // setSuccess(true);
+      // setShowPopUp(false);
+      // setRegStatus(true);
+      try {
+        console.log(info);
+        const response = await axios.post("/form/register", info, {
+          headers: { Authorization: `${authCtx.token}` },
+        });
+        console.log(response);
+        if (response.status === 200) {
+          setLoad(false);
+          console.log(info);
+          setSuccess(true);
+          setShowPopUp(false);
+          setRegStatus(true);
+        }
+      } catch (err) {
+        setLoad(false);
+        console.log(err);
+        setError({
+          mainColor: "#FDEDED",
+          secondaryColor: "#F16360",
+          symbol: "error",
+          title: "Error",
+          text: "An Unexpected Error Occurred",
+          val: true,
+        });
+      }
     } else {
       setLoad(false);
 
