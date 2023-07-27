@@ -33,6 +33,7 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     previousEvent: "",
     gotToKnow: "",
     referral: "",
+    transaction: "",
   });
 
   const dataInp = (e) => {
@@ -42,7 +43,8 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const handlePrev = () => {
     setCount((prev) => prev - 1);
   };
-  const { age, packages, previousEvent, gotToKnow, referral } = info;
+  const { age, packages, previousEvent, gotToKnow, referral, transaction } =
+    info;
   const handleNext = () => {
     if (count === 1) {
       if (packages === "three-workshop") {
@@ -76,7 +78,10 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
       console.log(info);
       if (previousEvent != "") {
         if (gotToKnow != "") {
-          if (gotToKnow === "Referral" && referral != "") {
+          if (
+            gotToKnow != "Referral" ||
+            (gotToKnow === "Referral" && referral != "")
+          ) {
             setCount((prev) => prev + 1);
           } else {
             setError({
@@ -117,36 +122,40 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     // console.lxog(info);
     if (
       age != "" &&
-      skillToTeach != "" &&
+      packages != "" &&
       previousEvent != "" &&
-      gotToKnow != ""
+      gotToKnow != "" &&
+      transaction != ""
     ) {
-      try {
-        console.log(info);
-        const response = await axios.post("/form/register", info, {
-          headers: { Authorization: `${authCtx.token}` },
-        });
-        // console.log("duh");
-        console.log(response);
-        if (response.status === 200) {
-          setLoad(false);
-          console.log(info);
-          setSuccess(true);
-          setShowPopUp(false);
-          setRegStatus(true);
-        }
-      } catch (err) {
-        setLoad(false);
-        console.log(err);
-        setError({
-          mainColor: "#FDEDED",
-          secondaryColor: "#F16360",
-          symbol: "error",
-          title: "Error",
-          text: "An Unexpected Error Occurred",
-          val: true,
-        });
-      }
+      console.log(info);
+      setSuccess(true);
+      setShowPopUp(false);
+      setRegStatus(true);
+      // try {
+      //   console.log(info);
+      //   const response = await axios.post("/form/register", info, {
+      //     headers: { Authorization: `${authCtx.token}` },
+      //   });
+      //   console.log(response);
+      //   if (response.status === 200) {
+      //     setLoad(false);
+      //     console.log(info);
+      //     setSuccess(true);
+      //     setShowPopUp(false);
+      //     setRegStatus(true);
+      //   }
+      // } catch (err) {
+      //   setLoad(false);
+      //   console.log(err);
+      //   setError({
+      //     mainColor: "#FDEDED",
+      //     secondaryColor: "#F16360",
+      //     symbol: "error",
+      //     title: "Error",
+      //     text: "An Unexpected Error Occurred",
+      //     val: true,
+      //   });
+      // }
     } else {
       setLoad(false);
 
@@ -184,6 +193,7 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
                 />
               )}
               {count === 2 && <PopUp3 dataInp={dataInp} info={info} />}
+              {count === 3 && <PopUp2 dataInp={dataInp} info={info} />}
             </form>
             <div class="btn">
               {count > 1 && (
