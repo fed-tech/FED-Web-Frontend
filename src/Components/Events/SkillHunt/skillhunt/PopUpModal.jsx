@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./../Css/SkillHunt.css";
 import PopUp1 from "./PopUp1";
 import PopUp2 from "./PopUp2";
@@ -23,13 +23,15 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
 
   const authCtx = useContext(AuthContext);
 
+  const [interestedWorkshop, setInterestedWorkshop] = useState({});
   const [info, setInfo] = useState({
-    formid: "64ac549a6d7bb3846341a298",
+    formid: "64c29e1a4e0aca04b0f34b47",
     age: "",
-    skillToTeach: "",
-    socialMedia: "",
-    previousEvent: "",
-    gotToKnow: "",
+    packages: "",
+    workshops: {},
+    // socialMedia: "",
+    // previousEvent: "",
+    // gotToKnow: "",
   });
 
   const dataInp = (e) => {
@@ -39,10 +41,12 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const handlePrev = () => {
     setCount((prev) => prev - 1);
   };
-  const { age, skillToTeach, socialMedia, previousEvent, gotToKnow } = info;
+  const { age, packages, socialMedia, previousEvent, gotToKnow } = info;
   const handleNext = () => {
     if (count === 1) {
-      if (age != "" && skillToTeach != "") {
+      info.workshops = interestedWorkshop;
+      console.log(info);
+      if (age != "" && packages != "") {
         setCount((prev) => prev + 1);
         console.log("Count->", count);
       } else {
@@ -134,7 +138,13 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
               id="CloseIcon"
             />
             <form data-multi-step class="single-form">
-              {count === 1 && <PopUp1 dataInp={dataInp} info={info} />}
+              {count === 1 && (
+                <PopUp1
+                  dataInp={dataInp}
+                  info={info}
+                  setInterestedWorkshop={setInterestedWorkshop}
+                />
+              )}
               {count === 2 && <PopUp3 dataInp={dataInp} info={info} />}
             </form>
             <div class="btn">

@@ -287,11 +287,15 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   margin-left: 5px;
   height: 10px;
   accent-color: #f45725;
   transform: scale(1.5);
+}
+
+input[type="checkbox"][disabled]{
+  accent-color: #f45725;
 }
 
 .labelTagInp {

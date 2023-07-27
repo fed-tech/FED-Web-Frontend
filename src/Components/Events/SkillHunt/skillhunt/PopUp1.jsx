@@ -1,48 +1,55 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import Workshops from "./Workshops";
 
-function PopUp1({ dataInp, info }) {
+function PopUp1({ dataInp, info, setInterestedWorkshop }) {
+  const [workshops, setWorkshops] = useState({
+    cloud: false,
+    trade: false,
+    graphics: false,
+  });
+  const [disabled, setDisabled] = useState({
+    cloud: false,
+    trade: false,
+    graphics: false,
+  });
+  const [checked, setChecked] = useState(0);
+
+  const checkBoxInp = (e) => {
+    const { name, value } = e.target;
+    if (workshops[name]) {
+      setWorkshops({ ...workshops, [name]: false });
+      setChecked(checked - 1);
+    } else {
+      setWorkshops({ ...workshops, [name]: true });
+      setChecked(checked + 1);
+    }
+  };
+
+  useEffect(() => {
+    if (checked == 2) {
+      setDisabled({
+        cloud: !workshops.cloud,
+        trade: !workshops.trade,
+        graphics: !workshops.graphics,
+      });
+    } else {
+      setDisabled({
+        cloud: false,
+        trade: false,
+        graphics: false,
+      });
+    }
+  }, [checked]);
+
+  useEffect(() => {
+    setInterestedWorkshop(workshops);
+  }, [workshops]);
+
   return (
     <>
       <div className="cardeve" id="div1" data-step>
         <h3 className="step-title">Basic Details</h3>
         <div className="form-group">
-          {/* <div className="popTDiv">
-            <input
-              onChange={dataInp}
-              type="text"
-              name="firstName"
-              className="inpTagPry inpInRow"
-              id="firstName"
-              placeholder="First Name"
-              required
-              value={info.firstName}
-            />
-            <input
-              onChange={dataInp}
-              type="text"
-              name="lastName"
-              className="inpTagPry inpInRow"
-              id="LastName"
-              value={info.lastName}
-              placeholder="Last Name"
-              required
-            />
-          </div> */}
-          {/* <h3 className="step-title h3marginTop">Whatsapp Number</h3>
-          <div className="popTDiv">
-            <input
-              onChange={dataInp}
-              type="number"
-              name="ContactNumber"
-              className="inpTagPry"
-              id="MobNumber"
-              placeholder="Contact Number"
-              minlength="10"
-              maxlength="10"
-              required
-              value={info.ContactNumber}
-            />
-          </div> */}
           <h3 className="step-title h3marginTop">Age</h3>
           <div className="popTDiv">
             <input
@@ -56,57 +63,46 @@ function PopUp1({ dataInp, info }) {
               value={info.age}
             />
           </div>
-          {/* <h3 className="step-title h3marginTop">E-mail</h3>
-          <div className="popTDiv">
-            <input
-              onChange={dataInp}
-              type="email"
-              name="email"
-              id="mail"
-              className="inpTagPry inpInRow"
-              placeholder="email@xyz.com"
-              required
-              value={info.email}
-            />
-          </div> */}
-          <h3 className="step-title h3marginTop">Preferred Skill To Teach</h3>
-          <div className="popTDiv">
-            <input
-              onChange={dataInp}
-              type="text"
-              name="skillToTeach"
-              id="skillToTeach"
-              className="inpTagPry inpInRow"
-              placeholder="Preferred Skill To Teach"
-              required
-              value={info.skillToTeach}
-            />
+          <h3 className="step-title h3marginTop">Preferred Package</h3>
+          <div className="inpDivC">
+            <div className="radiobgnDiv">
+              <input
+                onChange={dataInp}
+                type="radio"
+                id="twoSessions"
+                name="packages"
+                value="two-workshop"
+                checked={info.packages === "two-workshop"}
+              />
+              <label htmlFor="twoSessions" className="labelTagInp">
+                Two Workshop and Speaker Session
+              </label>
+            </div>
+            <div className="radiobgnDiv">
+              <input
+                onChange={dataInp}
+                type="radio"
+                id="threeSessions"
+                name="packages"
+                value="three-workshop"
+                checked={info.packages === "three-workshop"}
+              />
+              <label htmlFor="threeSessions" className="labelTagInp">
+                Three Workshop and Speaker Session
+              </label>
+            </div>
           </div>
-          <h3 className="step-title h3marginTop">Social Media Link (If Any)</h3>
-          <div className="popTDiv">
-            <input
-              onChange={dataInp}
-              type="text"
-              name="socialMedia"
-              id="social"
-              className="inpTagPry inpInRow"
-              placeholder="Instagram/LinkedIn/GitHub"
-              value={info.socialMedia}
+          {info.packages === "two-workshop" && (
+            <Workshops
+              checkBoxInp={checkBoxInp}
+              workshops={workshops}
+              disabled={disabled}
+              all={false}
             />
-          </div>
-          {/* <h3 className="step-title h3marginTop">You are from the School of</h3>
-          <div className="popTDiv">
-            <input
-              onChange={dataInp}
-              type="text"
-              name="school"
-              id="InstitutionName"
-              className="inpTagPry inpInRow"
-              placeholder="ex: Electronics"
-              required
-              value={info.school}
-            />
-          </div> */}
+          )}
+          {info.packages === "three-workshop" && (
+            <Workshops all={true} setWorkshops={setWorkshops} />
+          )}
           <p id="toogle-talkshow" className="toogle"></p>
         </div>
       </div>
