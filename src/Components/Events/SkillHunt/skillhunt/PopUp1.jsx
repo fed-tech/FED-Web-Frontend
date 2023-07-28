@@ -1,49 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Workshops from "./Workshops";
 
-function PopUp1({ dataInp, info, setInterestedWorkshop, checked, setChecked }) {
-  const [workshops, setWorkshops] = useState({
-    cloud: false,
-    trade: false,
-    graphics: false,
-  });
-  const [disabled, setDisabled] = useState({
-    cloud: false,
-    trade: false,
-    graphics: false,
-  });
-  // const [checked, setChecked] = useState(0);
-
+function PopUp1({ dataInp, info, setInfo }) {
   const checkBoxInp = (e) => {
-    const { name, value } = e.target;
-    if (workshops[name]) {
-      setWorkshops({ ...workshops, [name]: false });
-      setChecked(checked - 1);
+    const { name } = e.target;
+    if (info.workshops[name]) {
+      setInfo({ ...info, workshops: { ...info.workshops, [name]: false } });
     } else {
-      setWorkshops({ ...workshops, [name]: true });
-      setChecked(checked + 1);
+      setInfo({ ...info, workshops: { ...info.workshops, [name]: true } });
     }
   };
-
-  useEffect(() => {
-    if (checked == 2) {
-      setDisabled({
-        cloud: !workshops.cloud,
-        trade: !workshops.trade,
-        graphics: !workshops.graphics,
-      });
-    } else {
-      setDisabled({
-        cloud: false,
-        trade: false,
-        graphics: false,
-      });
-    }
-  }, [checked]);
-
-  useEffect(() => {
-    setInterestedWorkshop(workshops);
-  }, [workshops]);
 
   return (
     <>
@@ -63,19 +29,63 @@ function PopUp1({ dataInp, info, setInterestedWorkshop, checked, setChecked }) {
               value={info.age}
             />
           </div>
-          <h3 className="step-title h3marginTop">Preferred Package</h3>
+          <h3 className="step-title h3marginTop">Interested Workshops</h3>
+          <div className="inpDivC">
+            <div className="radiobgnDiv">
+              <input
+                onChange={checkBoxInp}
+                type="checkbox"
+                id="cloud"
+                name="cloud"
+                value="cloud"
+                checked={info.workshops.cloud}
+              />
+              <label htmlFor="cloud" className="labelTagInp">
+                Cloud
+              </label>
+            </div>
+            <div className="radiobgnDiv">
+              <input
+                onChange={checkBoxInp}
+                type="checkbox"
+                id="trade"
+                name="trade"
+                value="trade"
+                checked={info.workshops.trade}
+              />
+              <label htmlFor="trade" className="labelTagInp">
+                Trade
+              </label>
+            </div>
+            <div className="radiobgnDiv">
+              <input
+                onChange={checkBoxInp}
+                type="checkbox"
+                id="graphics"
+                name="graphics"
+                value="graphics"
+                checked={info.workshops.graphics}
+              />
+              <label htmlFor="graphics" className="labelTagInp">
+                Graphics
+              </label>
+            </div>
+          </div>
+          <h3 className="step-title h3marginTop">
+            Do you want access to the Speaker Session?
+          </h3>
           <div className="inpDivC">
             <div className="radiobgnDiv">
               <input
                 onChange={dataInp}
                 type="radio"
                 id="twoSessions"
-                name="packages"
-                value="two-workshop"
-                checked={info.packages === "two-workshop"}
+                name="speaker"
+                value="true"
+                checked={info.speaker == "true"}
               />
               <label htmlFor="twoSessions" className="labelTagInp">
-                Two Workshop and Speaker Session
+                Yes
               </label>
             </div>
             <div className="radiobgnDiv">
@@ -83,28 +93,15 @@ function PopUp1({ dataInp, info, setInterestedWorkshop, checked, setChecked }) {
                 onChange={dataInp}
                 type="radio"
                 id="threeSessions"
-                name="packages"
-                value="three-workshop"
-                checked={info.packages === "three-workshop"}
+                name="speaker"
+                value="false"
+                checked={info.speaker == "false"}
               />
               <label htmlFor="threeSessions" className="labelTagInp">
-                Three Workshop and Speaker Session
+                No
               </label>
             </div>
           </div>
-          {info.packages === "two-workshop" && (
-            <Workshops
-              checkBoxInp={checkBoxInp}
-              workshops={workshops}
-              disabled={disabled}
-              all={false}
-            />
-          )}
-          {info.packages === "three-workshop" ? (
-            <Workshops all={true} />
-          ) : (
-            <></>
-          )}
           <p id="toogle-talkshow" className="toogle"></p>
         </div>
       </div>

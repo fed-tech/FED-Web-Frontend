@@ -10,7 +10,6 @@ import AuthContext from "./../../../../store/auth-context";
 import Load from "./../../../../MicroInterAction/Load";
 
 function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
-  const [checked, setChecked] = useState(0);
   const [count, setCount] = useState(1);
   const [loadingEffect, setLoad] = useState(false);
   const [variants, setError] = useState({
@@ -24,12 +23,15 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
 
   const authCtx = useContext(AuthContext);
 
-  const [interestedWorkshop, setInterestedWorkshop] = useState({});
   const [info, setInfo] = useState({
     formid: "64c29e1a4e0aca04b0f34b47",
     age: "",
-    packages: "",
-    workshops: {},
+    workshops: {
+      cloud: false,
+      trade: false,
+      graphics: false,
+    },
+    speaker: "",
     previousEvent: "",
     gotToKnow: "",
     referral: "",
@@ -40,28 +42,29 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
   };
+
   const handlePrev = () => {
     setCount((prev) => prev - 1);
   };
-  const { age, packages, previousEvent, gotToKnow, referral, transaction } =
-    info;
+
+  const {
+    age,
+    workshops,
+    speaker,
+    previousEvent,
+    gotToKnow,
+    referral,
+    transaction,
+  } = info;
+
   const handleNext = () => {
     if (count === 1) {
-      if (packages === "three-workshop") {
-        info.workshops = {
-          cloud: true,
-          trade: true,
-          graphics: true,
-        };
-      } else {
-        info.workshops = interestedWorkshop;
-      }
-
       if (
         age != "" &&
-        packages != "" &&
-        (packages === "three-workshop" || checked == 2)
+        Object.values(workshops).includes(true) &&
+        speaker != ""
       ) {
+        console.log(info);
         setCount((prev) => prev + 1);
         console.log("Count->", count);
       } else {
@@ -75,7 +78,6 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
         });
       }
     } else if (count === 2) {
-      console.log(info);
       if (previousEvent != "") {
         if (gotToKnow != "") {
           if (
@@ -119,18 +121,14 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoad(true);
-    // console.lxog(info);
     if (
       age != "" &&
-      packages != "" &&
+      Object.values(workshops).includes(true) &&
+      speaker != "" &&
       previousEvent != "" &&
       gotToKnow != "" &&
       transaction != ""
     ) {
-      // console.log(info);
-      // setSuccess(true);
-      // setShowPopUp(false);
-      // setRegStatus(true);
       try {
         console.log(info);
         const response = await axios.post("/form/register", info, {
@@ -184,13 +182,7 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
             />
             <form data-multi-step class="single-form">
               {count === 1 && (
-                <PopUp1
-                  dataInp={dataInp}
-                  info={info}
-                  setInterestedWorkshop={setInterestedWorkshop}
-                  checked={checked}
-                  setChecked={setChecked}
-                />
+                <PopUp1 dataInp={dataInp} info={info} setInfo={setInfo} />
               )}
               {count === 2 && <PopUp3 dataInp={dataInp} info={info} />}
               {count === 3 && <PopUp2 dataInp={dataInp} info={info} />}

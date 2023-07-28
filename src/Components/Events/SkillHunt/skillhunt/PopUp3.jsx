@@ -12,6 +12,7 @@ function PopUp3({ dataInp, info }) {
     const data = { target: { name: "previousEvent", value: "none" } };
     dataInp(data);
   };
+
   return (
     <>
       <div className="cardeve" id="div2" data-step>

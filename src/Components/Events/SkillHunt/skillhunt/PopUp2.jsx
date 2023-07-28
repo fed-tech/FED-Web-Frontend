@@ -2,13 +2,6 @@ import React, { useState } from "react";
 import QR from "./QR";
 
 function PopUp2({ dataInp, info }) {
-  const [inOtherSociety, setInOtherSociety] = useState(false);
-  const yes = () => {
-    setInOtherSociety(true);
-  };
-  const no = () => {
-    setInOtherSociety(false);
-  };
   return (
     <>
       <div className="cardeve" id="div1_2" data-step-1>
@@ -17,10 +10,10 @@ function PopUp2({ dataInp, info }) {
           preferred workshop then the allotment or cancellation of allotment of
           learning workshops will be at the sole discretion of FED.
         </h3>
-        {info.packages === "three-workshop" && (
+        {info.speaker === "true" && (
           <QR qrLink="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/64c2cfe0bb7f8dae8d14746d_Picture2.png" />
         )}
-        {info.packages === "two-workshop" && (
+        {info.speaker === "false" && (
           <QR qrLink="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/64c2ceaf78167dd32ed57513_Picture1.png" />
         )}
         <h3 className="step-title h3marginTop">
