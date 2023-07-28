@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./../Css/SkillHunt.css";
 import PopUp1 from "./PopUp1";
 import PopUp2 from "./PopUp2";
@@ -56,6 +56,20 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     referral,
     transaction,
   } = info;
+  
+  useEffect(()=>{
+    setTimeout(() => {
+      setError({
+        mainColor: "",
+        secondaryColor: "",
+        symbol: "",
+        title: "",
+        text: "",
+        val: false,
+      });
+    }, 10000);
+  },[variants])
+
 
   const handleNext = () => {
     if (count === 1) {
@@ -127,7 +141,8 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
       speaker != "" &&
       previousEvent != "" &&
       gotToKnow != "" &&
-      transaction != ""
+      transaction != "" &&
+      transaction.length == 4
     ) {
       try {
         console.log(info);
