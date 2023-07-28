@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-export default function Workshops({ checkBoxInp, workshops, disabled, all }) {
+export default function Workshops({ checkBoxInp, workshops, disabled, all,info }) {
   return (
     <>
       <h3 className="step-title h3marginTop">Interested Workshops</h3>
@@ -12,7 +12,7 @@ export default function Workshops({ checkBoxInp, workshops, disabled, all }) {
             id="cloud"
             name="cloud"
             value="cloud"
-            checked={!all ? workshops.cloud : true}
+            checked={!all ? info.workshops.cloud : true}
             disabled={!all ? disabled.cloud : false}
           />
           <label htmlFor="cloud" className="labelTagInp">
@@ -26,7 +26,7 @@ export default function Workshops({ checkBoxInp, workshops, disabled, all }) {
             id="trade"
             name="trade"
             value="trade"
-            checked={!all ? workshops.trade : true}
+            checked={!all ? info.workshops.trade : true}
             disabled={!all ? disabled.trade : false}
           />
           <label htmlFor="trade" className="labelTagInp">
@@ -40,7 +40,7 @@ export default function Workshops({ checkBoxInp, workshops, disabled, all }) {
             id="graphics"
             name="graphics"
             value="graphics"
-            checked={!all ? workshops.graphics : true}
+            checked={!all ? info.workshops.graphics : true}
             disabled={!all ? disabled.graphics : false}
           />
           <label htmlFor="graphics" className="labelTagInp">
