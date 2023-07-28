@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import Workshops from "./Workshops";
+import React from "react";
 
 function PopUp1({ dataInp, info, setInfo }) {
   const checkBoxInp = (e) => {

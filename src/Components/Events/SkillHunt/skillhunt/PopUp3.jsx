@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AttendedEvnt from "./AttendedEvnt";
-import NotAttended from "./NotAttended";
 import { useEffect } from "react";
 
 function PopUp3({ dataInp, info }) {
