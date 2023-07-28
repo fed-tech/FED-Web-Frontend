@@ -38,7 +38,7 @@ function SkillHuntPage() {
       setLoad(true);
       try {
         const response = await axios.get(
-          "/form/getuserform?formid=64ac549a6d7bb3846341a298",
+          "/form/getuserform?formid=64c29e1a4e0aca04b0f34b47",
           { headers: { Authorization: `${authCtx.token}` } }
         );
         setRegForm(response.data);
@@ -53,7 +53,7 @@ function SkillHuntPage() {
 
   return (
     <>
-      {/* <div>
+      <div>
         {authCtx.isLoggedIn ? (
           <>
             {regForm ? (
@@ -64,16 +64,16 @@ function SkillHuntPage() {
               <>
                 <div
                   className="btnDivReg"
-                  // onClick={() => {
-                  //   console.log(regStatus);
-                  //   !regStatus && handlePopUp();
-                  // }}
+                  onClick={() => {
+                    console.log(regStatus);
+                    !regStatus && handlePopUp();
+                  }}
                 >
                   <h2>
                     {regStatus ? (
                       <>{loadingEffect ? <Load /> : "Thank You"} </>
                     ) : (
-                      <>{loadingEffect ? <Load /> : "Register Closed!!"} </>
+                      <>{loadingEffect ? <Load /> : "Register Now!!"} </>
                     )}
                   </h2>
                   <img src={regImg} alt="" srcset="" id="point" />
@@ -89,10 +89,10 @@ function SkillHuntPage() {
             </div>
           </>
         )}
-      </div> */}
-      <div className="btnDivReg">
-        <h2>Register Closed</h2>
       </div>
+      {/* <div className="btnDivReg">
+        <h2>Register Closed</h2>
+      </div> */}
 
       {/* <!-- alert --> */}
       {showSuccess && <SuccessModal setSuccess={setSuccess} />}

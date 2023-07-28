@@ -16,6 +16,21 @@
   padding-top: 174px;
 }
 
+/* .cardeve{
+  height: 90%;
+  overflow-y: scroll;
+} */
+
+.qr{
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.qr img{
+  height: 100%;
+}
+
 #popm {
   position: fixed;
   top: 0px;
@@ -106,10 +121,11 @@
   position: relative;
   border-radius: 32px;
   background-color: #0f0e0e;
-  max-height: fit-content;
+  max-height: 90%;
   min-height: 30vh;
   width: 60%;
   padding: 30px;
+  overflow-y: scroll;
 }
 
 .h3marginTop {
@@ -287,11 +303,15 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type="radio"] {
+input[type="radio"], input[type="checkbox"] {
   margin-left: 5px;
   height: 10px;
   accent-color: #f45725;
   transform: scale(1.5);
+}
+
+input[type="checkbox"][disabled]{
+  accent-color: #f45725;
 }
 
 .labelTagInp {
@@ -521,7 +541,7 @@ input {
   position: relative;
   border-radius: 32px;
   background-color: #0f0e0e;
-  height: 50vh;
+  /* height: 50vh; */
   width: 50%;
   padding: 30px;
   display: flex;
@@ -547,6 +567,10 @@ input {
 
 .successText {
   font-size: x-large;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sucssGif {
@@ -556,6 +580,18 @@ input {
 .sucssGif img {
   object-fit: contain;
   height: 200px;
+}
+
+.whatsapp{
+  background-color: white;
+  width: fit-content;
+  color: green;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 5px 16px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 @keyframes slide {

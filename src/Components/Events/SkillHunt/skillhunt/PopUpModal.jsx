@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./../Css/SkillHunt.css";
 import PopUp1 from "./PopUp1";
 import PopUp2 from "./PopUp2";
@@ -24,25 +24,61 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const authCtx = useContext(AuthContext);
 
   const [info, setInfo] = useState({
-    formid: "64ac549a6d7bb3846341a298",
+    formid: "64c29e1a4e0aca04b0f34b47",
     age: "",
-    skillToTeach: "",
-    socialMedia: "",
+    workshops: {
+      cloud: false,
+      trade: false,
+      graphics: false,
+    },
+    speaker: "",
     previousEvent: "",
     gotToKnow: "",
+    referral: "",
+    transaction: "",
   });
 
   const dataInp = (e) => {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
   };
+
   const handlePrev = () => {
     setCount((prev) => prev - 1);
   };
-  const { age, skillToTeach, socialMedia, previousEvent, gotToKnow } = info;
+
+  const {
+    age,
+    workshops,
+    speaker,
+    previousEvent,
+    gotToKnow,
+    referral,
+    transaction,
+  } = info;
+  
+  useEffect(()=>{
+    setTimeout(() => {
+      setError({
+        mainColor: "",
+        secondaryColor: "",
+        symbol: "",
+        title: "",
+        text: "",
+        val: false,
+      });
+    }, 10000);
+  },[variants])
+
+
   const handleNext = () => {
     if (count === 1) {
-      if (age != "" && skillToTeach != "") {
+      if (
+        age != "" &&
+        Object.values(workshops).includes(true) &&
+        speaker != ""
+      ) {
+        console.log(info);
         setCount((prev) => prev + 1);
         console.log("Count->", count);
       } else {
@@ -56,8 +92,33 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
         });
       }
     } else if (count === 2) {
-      if (previousEvent != "" && gotToKnow != "") {
-        setCount((prev) => prev + 1);
+      if (previousEvent != "") {
+        if (gotToKnow != "") {
+          if (
+            gotToKnow != "Referral" ||
+            (gotToKnow === "Referral" && referral != "")
+          ) {
+            setCount((prev) => prev + 1);
+          } else {
+            setError({
+              mainColor: "#FFC0CB",
+              secondaryColor: "#FF69B4",
+              symbol: "pets",
+              title: "Check it out",
+              text: "Please Fill All The Details",
+              val: true,
+            });
+          }
+        } else {
+          setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Check it out",
+            text: "Please Fill All The Details",
+            val: true,
+          });
+        }
       } else {
         setError({
           mainColor: "#FFC0CB",
@@ -74,19 +135,20 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoad(true);
-    // console.lxog(info);
     if (
       age != "" &&
-      skillToTeach != "" &&
+      Object.values(workshops).includes(true) &&
+      speaker != "" &&
       previousEvent != "" &&
-      gotToKnow != ""
+      gotToKnow != "" &&
+      transaction != "" &&
+      transaction.length == 4
     ) {
       try {
         console.log(info);
         const response = await axios.post("/form/register", info, {
           headers: { Authorization: `${authCtx.token}` },
         });
-        // console.log("duh");
         console.log(response);
         if (response.status === 200) {
           setLoad(false);
@@ -134,8 +196,11 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
               id="CloseIcon"
             />
             <form data-multi-step class="single-form">
-              {count === 1 && <PopUp1 dataInp={dataInp} info={info} />}
+              {count === 1 && (
+                <PopUp1 dataInp={dataInp} info={info} setInfo={setInfo} />
+              )}
               {count === 2 && <PopUp3 dataInp={dataInp} info={info} />}
+              {count === 3 && <PopUp2 dataInp={dataInp} info={info} />}
             </form>
             <div class="btn">
               {count > 1 && (
@@ -148,12 +213,12 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
                   Previous
                 </button>
               )}
-              {count >= 2 && (
+              {count >= 3 && (
                 <button type="button" class="NextBtn" onClick={handleSubmit}>
                   {loadingEffect ? <Load /> : "Submit"}
                 </button>
               )}
-              {count < 2 && (
+              {count < 3 && (
                 <button type="button" class="NextBtn" onClick={handleNext}>
                   Next
                 </button>
