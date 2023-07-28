@@ -35,6 +35,36 @@
             "type":"checkbox",
             "value":["C++", "Java", "C", "Python", "Javascript", "gjhdsb", "fsjvb"],
             "placeholder":""
+        },
+        {
+            "title":"Age",
+            "type":"number",
+            "value":"your age",
+            "placeholder":"your age"
+        }, 
+        {
+            "title":"Gender",
+            "type":"radio",
+            "value":["male", "female", "other"],
+            "placeholder":""
+        },
+        {
+            "title":"DOB",
+            "type":"date",
+            "value":"",
+            "placeholder":""
+        },
+        {
+            "title":"Time",
+            "type":"time",
+            "value":"",
+            "placeholder":""
+        },
+        {
+            "title":"Languages you know",
+            "type":"checkbox",
+            "value":["C++", "Java", "C", "Python", "Javascript", "gjhdsb", "fsjvb"],
+            "placeholder":""
         }
     ]
 }

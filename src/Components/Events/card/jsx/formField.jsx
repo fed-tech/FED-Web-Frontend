@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-export default function formField({ ...field }) {
+export default function formField({count, setCount, ...field }) {
+
     return (
         <div className='fontDets'>
             {field.type === "radio" || field.type === "checkbox"?
@@ -22,7 +23,6 @@ export default function formField({ ...field }) {
                     </div>
                 </div>
             }
-
         </div>
     );
 }

@@ -10,6 +10,23 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    /* padding: 30px; */
+}
+.nextBtn {
+    width:300px;
+    background-color:#222222 ;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+}
+.prevBtn {
+    width:300px;
+    background-color:#222222 ;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
 }
 
 .fontDets{
@@ -25,13 +42,16 @@ input::placeholder, input {
     filter: invert(1);
 }
 .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     border-radius: 32px;
     background-color: #0f0e0e;
     max-height: fit-content;
     min-height: 30vh;
     width: 60%;
-    padding: 30px 50px;
+    padding:  50px;
     overflow-y: auto;
 }
 .inpField {
@@ -39,8 +59,8 @@ input::placeholder, input {
     flex-direction: column;
     /* align-items: center; */
     gap: 30px;
-    margin-bottom: 40px;
-    justify-content: space-between;
+    margin-bottom: 50px;
+    justify-content: center;
 }
 
 input {
@@ -51,6 +71,11 @@ input {
 }
 .input {
     width: 90%;
+}
+
+.inpField>label {
+    /* margin-bottom: 20px; */
+    /* font-size: 1.7rem; */
 }
 .radioLabel {
     margin-right: 20%;
@@ -70,4 +95,8 @@ input {
 .radioDiv div {
     align-items: center;
     display: flex;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
 }
