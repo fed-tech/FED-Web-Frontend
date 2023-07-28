@@ -33,20 +33,19 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
                 />
                 {visibleFields}
                 <div className="btns">
-                    <div>
-                        {count < formData.formelement.length - limit && (
-                            <button className="nextBtn" onClick={handleNext}>
-                                Next
-                            </button>
-                        )}
-                    </div>
-                    <div>
-                        {count !== 0 && (
-                            <button className="prevBtn" onClick={handlePrev}>
-                                Previous
-                            </button>
-                        )}
-                    </div>
+                    {count < formData.formelement.length - limit && (
+                        <button className="nextBtn" onClick={handleNext}>
+                            Next
+                        </button>
+                    )}
+                    {count !== 0 && (
+                        <button className="prevBtn" onClick={handlePrev}>
+                            Previous
+                        </button>
+                    )}
+                    {count >= formData.formelement.length - limit && (
+                        <input className="prevBtn" type="submit" />
+                    )}
                 </div>
             </div>
         </div>

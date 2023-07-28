@@ -4,67 +4,78 @@
             "title":"Name",
             "type":"text",
             "value":"type your name",
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"Age",
             "type":"number",
             "value":"your age",
-            "placeholder":"your age"
+            "placeholder":"your age",
+            "required":true
         }, 
         {
             "title":"Gender",
             "type":"radio",
             "value":["male", "female", "other"],
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"DOB",
             "type":"date",
             "value":"",
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"Time",
             "type":"time",
             "value":"",
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"Languages you know",
             "type":"checkbox",
             "value":["C++", "Java", "C", "Python", "Javascript", "gjhdsb", "fsjvb"],
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"Age",
             "type":"number",
             "value":"your age",
-            "placeholder":"your age"
+            "placeholder":"your age",
+            "required":true
         }, 
         {
             "title":"Gender",
             "type":"radio",
             "value":["male", "female", "other"],
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"DOB",
             "type":"date",
             "value":"",
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"Time",
             "type":"time",
             "value":"",
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         },
         {
             "title":"Languages you know",
             "type":"checkbox",
             "value":["C++", "Java", "C", "Python", "Javascript", "gjhdsb", "fsjvb"],
-            "placeholder":""
+            "placeholder":"",
+            "required":true
         }
     ]
 }
