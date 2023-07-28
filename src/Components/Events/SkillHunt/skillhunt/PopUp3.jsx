@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AttendedEvnt from "./AttendedEvnt";
 import NotAttended from "./NotAttended";
+import { useEffect } from "react";
 
 function PopUp3({ dataInp, info }) {
   const [attended, setAttended] = useState(null);
@@ -12,6 +13,14 @@ function PopUp3({ dataInp, info }) {
     const data = { target: { name: "previousEvent", value: "none" } };
     dataInp(data);
   };
+  useEffect(()=>{
+    if(info.previousEvent==="none"){
+      setAttended(false)
+    }
+    if(["Omega","BlockChain","Other"].includes(info.previousEvent)){
+      setAttended(true)
+    }
+  },[])
   return (
     <>
       <div className="cardeve" id="div2" data-step>

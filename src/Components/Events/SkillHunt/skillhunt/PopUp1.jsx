@@ -98,6 +98,7 @@ function PopUp1({ dataInp, info, setInterestedWorkshop, checked, setChecked }) {
               workshops={workshops}
               disabled={disabled}
               all={false}
+              info={info}
             />
           )}
           {info.packages === "three-workshop" ? (
