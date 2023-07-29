@@ -1,13 +1,23 @@
 import React, { useContext, useEffect, useState } from "react";
-import "./../Css/SkillHunt.css";
+
+// Components
 import PopUp1 from "./PopUp1";
 import PopUp2 from "./PopUp2";
 import PopUp3 from "./PopUp3";
-import cancel from "./../../../../assets/SkillHunt/XCircle.png";
-import axios from "axios";
-import { Alert } from "./../../../../MicroInterAction/Alert";
-import AuthContext from "./../../../../store/auth-context";
 import Load from "./../../../../MicroInterAction/Load";
+import { Alert } from "./../../../../MicroInterAction/Alert";
+
+// axios
+import axios from "axios";
+
+// Context
+import AuthContext from "./../../../../store/auth-context";
+
+// img
+import cancel from "./../../../../assets/SkillHunt/XCircle.png";
+
+// css
+import "./../Css/SkillHunt.css";
 
 function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
   const [count, setCount] = useState(1);
@@ -56,8 +66,8 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     referral,
     transaction,
   } = info;
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     setTimeout(() => {
       setError({
         mainColor: "",
@@ -68,15 +78,15 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
         val: false,
       });
     }, 10000);
-  },[variants])
-
+  }, [variants]);
 
   const handleNext = () => {
     if (count === 1) {
       if (
         age != "" &&
-        Object.values(workshops).includes(true) &&
-        speaker != ""
+        Object.values(workshops).includes(true)
+        //  &&
+        // speaker != ""
       ) {
         console.log(info);
         setCount((prev) => prev + 1);
@@ -183,7 +193,6 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     }
   };
 
-  // console.log(info);
   return (
     <>
       <div id="popm">
