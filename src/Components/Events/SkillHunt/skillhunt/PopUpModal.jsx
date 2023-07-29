@@ -41,7 +41,7 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
       trade: false,
       graphics: false,
     },
-    speaker: "",
+    speaker: "Yes",
     previousEvent: "",
     gotToKnow: "",
     referral: "",
@@ -148,7 +148,7 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     if (
       age != "" &&
       Object.values(workshops).includes(true) &&
-      speaker != "" &&
+      // speaker != "" &&
       previousEvent != "" &&
       gotToKnow != "" &&
       transaction != "" &&
