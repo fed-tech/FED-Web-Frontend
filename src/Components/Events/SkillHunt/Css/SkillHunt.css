@@ -338,11 +338,6 @@ input[type="checkbox"][disabled]{
   line-height: 24px;
   margin-left: 20px;
 }
-
-.PreviousBtn {
-  display: none;
-}
-
 .selectedDiv {
   width: 200px;
   padding: 10px;
@@ -729,13 +724,13 @@ input {
     cursor: pointer;
   }
 
-  .PreviousBTnDes {
+  /* .PreviousBTnDes {
     display: none;
-  }
+  } */
 
-  #btnPrevious {
+  /* #btnPrevious {
     display: none;
-  }
+  } */
 
   .inpDivTChild {
     flex-direction: column;
@@ -746,7 +741,11 @@ input {
   }
 
   .btn {
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .btn button{
+    width: 40%;
   }
 
   #error {
@@ -779,6 +778,26 @@ input {
     /* background-color: rgba(0, 0, 0, 0.5); */
     border-radius: 0px;
     width: 100%;
+  }
+
+  .successText{
+    font-size: 16px;
+  }
+
+  .sucssGif img {
+    object-fit: contain;
+    height: 150px;
+  }
+
+  .whatsapp{
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .popUpChildDivHome {
+    width: 80%;
   }
 }
 
