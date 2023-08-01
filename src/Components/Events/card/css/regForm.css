@@ -12,18 +12,10 @@
     justify-content: center;
     /* padding: 30px; */
 }
+
 .nextBtn {
-    width:300px;
-    background-color:#222222 ;
-    padding: 15px 20px;
-    border-radius: 15px;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-}
-.prevBtn {
-    width:300px;
-    background-color:#222222 ;
+    width: 300px;
+    background-color: #222222;
     padding: 15px 20px;
     border-radius: 15px;
     border: none;
@@ -31,18 +23,37 @@
     cursor: pointer;
 }
 
-.fontDets{
+.prevBtn {
+    width: 300px;
+    background-color: #222222;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fontDets {
     font-family: mulish;
     font-weight: 700;
     font-size: 1.45rem;
 }
-input::placeholder, input {
+
+input::placeholder,
+input {
     font-family: mulish;
     font-size: 1.25rem;
 }
+
 ::-webkit-calendar-picker-indicator {
     filter: invert(1);
+    cursor: pointer;
 }
+
+input[type="checkbox"] {
+    accent-color: #f45725;
+}
+
 .form {
     display: flex;
     flex-direction: column;
@@ -53,9 +64,10 @@ input::placeholder, input {
     max-height: fit-content;
     min-height: 30vh;
     width: 60%;
-    padding:  50px;
+    padding: 50px;
     overflow-y: auto;
 }
+
 .inpField {
     display: flex;
     flex-direction: column;
@@ -71,6 +83,7 @@ input {
     width: 100%;
     border: rgb(145, 141, 141) solid 1px;
 }
+
 .inputField {
     width: 90%;
 }
@@ -79,14 +92,17 @@ input {
     /* margin-bottom: 20px; */
     /* font-size: 1.7rem; */
 }
+
 .radioLabel {
     margin-right: 20%;
 }
+
 .radioInp {
     width: unset;
     margin: 0;
     margin-right: 7px;
 }
+
 .radioDiv {
     display: flex;
     align-items: center;
@@ -94,10 +110,12 @@ input {
     line-height: 0px;
     flex-flow: row wrap;
 }
+
 .radioDiv div {
     align-items: center;
     display: flex;
 }
+
 .btns {
     display: flex;
     justify-content: space-between;
