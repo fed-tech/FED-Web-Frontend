@@ -53,7 +53,7 @@ function SkillHuntPage() {
 
   return (
     <>
-      <div>
+      {/* <div>
         {authCtx.isLoggedIn ? (
           <>
             {regForm ? (
@@ -89,10 +89,10 @@ function SkillHuntPage() {
             </div>
           </>
         )}
-      </div>
-      {/* <div className="btnDivReg">
-        <h2>Register Closed</h2>
       </div> */}
+      <div className="btnDivReg">
+        <h2>Register Closed</h2>
+      </div>
 
       {/* <!-- alert --> */}
       {showSuccess && <SuccessModal setSuccess={setSuccess} />}
