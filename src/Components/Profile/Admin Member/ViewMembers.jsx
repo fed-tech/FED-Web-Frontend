@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MemCards from "./MemCards";
 import axios from "axios";
 
 import viewMemCSS from "./css/ViewMembers.module.css";
+import AuthContext from "../../../store/auth-context";
 
 export default function ViewMembers() {
   const [members, setMembers] = useState([]);
+  const authCtx = useContext(AuthContext);
 
   const memberData = async () => {
-    const response = await axios.get("/member/");
+    const response = await axios.get("/member/", {
+      headers: { Authorization: authCtx.token },
+    });
     if (response.status === 202) {
       setMembers(response.data.users);
     } else {
