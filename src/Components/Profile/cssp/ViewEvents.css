@@ -17,8 +17,25 @@
   width: 85%;
   height: 100%;
 }
+.fullPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.expt {
+  position: sticky;
+  bottom: 0;
+  width: 99.99%;
+  height: 50%;
+  overflow-x: hidden;
+  /* z-index: -1; */
+  overflow: hidden;
+  background: linear-gradient(0deg, #0E0E0E 49.48%, rgba(14, 14, 14, 0.00) 100%);
+}
 .viewEventss{
   width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
 }

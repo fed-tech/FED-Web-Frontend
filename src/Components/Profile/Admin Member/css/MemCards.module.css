@@ -1,0 +1,45 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    margin-left: 10px;
+    background-color: rgb(60, 58, 58);
+    height: 290px;
+    padding-top: 12px;
+}
+
+.memImg{
+    height: 60%;
+    width: 90%;
+}
+
+.memImg img{
+    height: 100%;
+    width: 100%;
+}
+
+.memContent{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.memButton{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 12px;
+}
+
+.memButton button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 3px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
