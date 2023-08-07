@@ -11,10 +11,28 @@ font-weight: 700;
 letter-spacing: 0.225px;
 width: 100%;
 }
-.formDiv>input, .formBottom>input {
+.formtitle{
+    border: none;
+    padding: 10px;
+    width:90%;
+    margin-bottom: 95px;
+    background: none;
+    border-bottom:3px solid #4B4B4B;
+
+}
+.formaddfield{
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: none;
+    border-bottom:3px solid #4B4B4B;
+
+}
+/*.formDiv>input, .formBottom>input {
     border-bottom: 1px solid white;
     margin-bottom: 104px;
-}
+}*/
 .formDiv>input::placeholder, .formBottom>input::placeholder{
     color: white;
 font-size: 25px;
@@ -22,10 +40,10 @@ font-family: Mulish;
 font-weight: 700;
 letter-spacing: 0.125px;
 }
-.formDiv {
+/*.formDiv {
     width:70%;
     text-align: center;
-}
+}*/
 .formBottom {
     display: flex;
     justify-content: space-between;
@@ -44,6 +62,7 @@ background: #F45725;
 border: none;
 }
 
+
 @media (max-width:1310px) {
     .formDiv>input::placeholder, .formBottom>input::placeholder {
         font-size: 21px;
@@ -53,5 +72,8 @@ border: none;
     }
     .formDiv {
         width: 75%;
+    }
+    .formBottom{
+        display: block;
     }
 }

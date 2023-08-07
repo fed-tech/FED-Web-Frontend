@@ -11,17 +11,20 @@ export default function Form() {
 
             </div>
             <form action="" className={formCss.formDiv}>
-                <input type="text" placeholder='Form Title*' />
-                <input type="text" placeholder='About Event*' />
-                <input type="text" placeholder='Event Type*' />
-                <input type="text" placeholder='Amount' />
-                <input type="text" placeholder='Priority' />
+                <input type="text" className={formCss.formtitle} placeholder='Form Title*' />
+                <input type="text" className={formCss.formtitle} placeholder='About Event*' />
+                <input type="text" className={formCss.formtitle} placeholder='Event Type*' />
+                <input type="text" className={formCss.formtitle} placeholder='Amount' />
+                <input type="text" className={formCss.formtitle} placeholder='Priority' />
                 <div className={formCss.formBottom}>
-                    <input type="text" placeholder='Field Name*' />
-                    <input type="text" placeholder='Field Type*' />
-                    <input type="text" placeholder='Field Type*' />
+                    <input type="text" className={formCss.formaddfield} placeholder='Field Name*' />
+                    <input type="text" className={formCss.formaddfield} placeholder='Field Type*' />
+                    <input type="text" className={formCss.formaddfield} placeholder='Field Type*' />
                 </div>
+                <div>
+                <button className={formCss.saveBtn}>ADD FIELD</button>
                 <button className={formCss.saveBtn}>SAVE</button>
+                </div>
             </form>
         </>
     );

@@ -189,6 +189,15 @@ function App() {
                     </Suspense>
                   }
                 />
+            
+              <Route
+                  path="/newform"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <AdminPage />
+                    </Suspense>
+                  }
+                />
               </Routes>
             </div>
           </div>
