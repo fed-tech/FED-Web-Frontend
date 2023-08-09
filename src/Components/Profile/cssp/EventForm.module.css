@@ -14,8 +14,8 @@ width: 100%;
 .formtitle{
     border: none;
     padding: 10px;
-    width:90%;
-    margin-bottom: 95px;
+    width:100%;
+    margin-bottom: 40px;
     background: none;
     border-bottom:3px solid #4B4B4B;
 
@@ -40,10 +40,10 @@ font-family: Mulish;
 font-weight: 700;
 letter-spacing: 0.125px;
 }
-/*.formDiv {
-    width:70%;
+.formDiv {
+    width:75%;
     text-align: center;
-}*/
+}
 .formBottom {
     display: flex;
     justify-content: space-between;
@@ -53,19 +53,29 @@ letter-spacing: 0.125px;
 }
 .saveBtn {
     color: #FFF;
-font-size: 24.891px;
+font-size: 20px;
 font-family: Mulish;
 font-weight: 600;
 padding: 7px 30px;
 border-radius: 458.004px;
 background: #F45725;
 border: none;
+float: right;
+margin-left: 10px;
+margin-bottom: 10px;
+}
+select {
+    width: 90%;
+    color: #fff;
+    padding: 10px 5px;
+    background: transparent;
+    font-size: 25px;
 }
 
 
-@media (max-width:1310px) {
+@media only screen and (max-width: 600px) {
     .formDiv>input::placeholder, .formBottom>input::placeholder {
-        font-size: 21px;
+        font-size: 18px;
     }
     .head h1 {
         font-size: 42px;
@@ -73,7 +83,14 @@ border: none;
     .formDiv {
         width: 75%;
     }
-    .formBottom{
+    .formBottom {
         display: block;
+    }
+    .formBottom>input {
+        width: 100%;
+        margin-bottom: 40px ;
+    }
+    select{
+        font-size: 18px;
     }
 }

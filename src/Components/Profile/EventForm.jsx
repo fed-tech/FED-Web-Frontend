@@ -13,7 +13,11 @@ export default function Form() {
             <form action="" className={formCss.formDiv}>
                 <input type="text" className={formCss.formtitle} placeholder='Form Title*' />
                 <input type="text" className={formCss.formtitle} placeholder='About Event*' />
-                <input type="text" className={formCss.formtitle} placeholder='Event Type*' />
+                <select id="eventType" className={formCss.formtitle} placeholder='Event Type*'>
+                <option value="free" default>Event Type</option>
+                <option value="paid">Paid</option>
+                <option value="free">Free</option>
+                </select>    
                 <input type="text" className={formCss.formtitle} placeholder='Amount' />
                 <input type="text" className={formCss.formtitle} placeholder='Priority' />
                 <div className={formCss.formBottom}>
