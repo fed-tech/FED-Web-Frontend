@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 // css
 import formCss from "../Profile/cssp/EventForm.module.css";
 
 export default function Form() {
+    
+    const formBottomRef = useRef(null);
+
+    useEffect(() => {
+        const formBottom = formBottomRef.current;
+        formBottom.addEventListener('wheel', (event) => {
+        if (event.deltaY !== 0) {
+            event.preventDefault();
+            formBottom.scrollLeft += event.deltaY;
+        }
+        });
+    }, []);
+    
     return (
         <>
             <div className={formCss.head}>
@@ -20,7 +33,7 @@ export default function Form() {
                 </select>    
                 <input type="text" className={formCss.formtitle} placeholder='Amount' />
                 <input type="text" className={formCss.formtitle} placeholder='Priority' />
-                <div className={formCss.formBottom}>
+                <div ref={formBottomRef} className={formCss.formBottom}>
                     <input type="text" className={formCss.formaddfield} placeholder='Field Name*' />
                     <input type="text" className={formCss.formaddfield} placeholder='Field Type*' />
                     <input type="text" className={formCss.formaddfield} placeholder='Field Type*' />

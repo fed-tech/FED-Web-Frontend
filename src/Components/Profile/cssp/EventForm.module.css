@@ -27,7 +27,9 @@ width: 100%;
     margin-right: 20px;
     background: none;
     border-bottom:3px solid #4B4B4B;
-
+    display: flex;
+    flex-shrink: 0; /* Prevent the container from shrinking */
+    margin-right: 10px; 
 }
 /*.formDiv>input, .formBottom>input {
     border-bottom: 1px solid white;
@@ -44,20 +46,33 @@ letter-spacing: 0.125px;
     width:75%;
     text-align: center;
 }
+
 .formBottom {
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-bottom:30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+.formBottom::-webkit-scrollbar {
+  display: none;
+}
+
 .formBottom>input {
-    width: 27%;
+    width: 203px;
 }
+
 .saveBtn {
     color: #FFF;
 font-size: 20px;
 font-family: Mulish;
 font-weight: 600;
 padding: 7px 30px;
-border-radius: 458.004px;
+border-radius: 6px;
+cursor: pointer;
 background: #F45725;
 border: none;
 float: right;
@@ -84,8 +99,18 @@ select {
         width: 75%;
     }
     .formBottom {
-        display: block;
+        display:flex;
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom:30px;
     }
+
+    .formaddfield{
+        height: 50px;
+        width:100%;
+        flex-shrink: 0;    
+    }
+
     .formBottom>input {
         width: 100%;
         margin-bottom: 40px ;
