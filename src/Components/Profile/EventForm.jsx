@@ -5,17 +5,30 @@ import formCss from "../Profile/cssp/EventForm.module.css";
 import AddField from './AddField';
 export default function Form() {
 
-    const [showFields, setShowFields] = useState(1);
-
-    let fields = [];
-
-    for (let i = 0; i < showFields; i++) {
-        fields.push(<AddField key={i} />)
+    const [showFields, setShowFields] = useState([{}]);
+    const handleDelete = (e, idx) => {
+        e.preventDefault();
+        console.log("deleted", idx);
+        setShowFields(prev => {
+            const updatedFields = [...prev];
+            updatedFields.splice(idx, 1);
+            return updatedFields;
+        });
     }
+    const fields = showFields.map((i, idx) => {
+        return <AddField
+            key={idx}
+            idx={idx}
+            setShowFields={setShowFields}
+            handleDelete={(e => handleDelete(e, idx))}
+        />
+    })
 
     const handleAdd = (event) => {
         event.preventDefault();
-        setShowFields(prev => prev + 1);
+        setShowFields(prev => {
+            return [...prev, prev.push({})];
+        });
     }
     // const formBottomRef = useRef(null);
 
