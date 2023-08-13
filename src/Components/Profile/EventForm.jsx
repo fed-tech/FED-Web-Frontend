@@ -6,6 +6,26 @@ import AddField from './AddField';
 export default function Form() {
 
     const [showFields, setShowFields] = useState([{}]);
+
+    const handleSave = (e) => {
+        // Create a JSON object from showFields
+        e.preventDefault();
+        const formData = {
+            formTitle: '', // Add your form title here
+            aboutEvent: '', // Add your about event text here
+            eventType: '', // Add your event type here
+            amount: '', // Add your amount value here
+            priority: '', // Add your priority value here
+            fields: showFields,
+        };
+
+        // Convert formData object to JSON string
+        const formDataJSON = JSON.stringify(formData);
+
+        // Now you can do whatever you want with the formDataJSON
+        console.log(formDataJSON);
+    };
+
     const handleDelete = (e, idx) => {
         e.preventDefault();
         console.log("deleted", idx);
@@ -20,6 +40,7 @@ export default function Form() {
             key={idx}
             idx={idx}
             setShowFields={setShowFields}
+            showFields={showFields}
             handleDelete={(e => handleDelete(e, idx))}
         />
     })
@@ -61,7 +82,7 @@ export default function Form() {
                 {fields}
                 <div>
                     <button className={formCss.saveBtn} onClick={handleAdd}>ADD FIELD</button>
-                    <button className={formCss.saveBtn}>SAVE</button>
+                    <button className={formCss.saveBtn} onClick={handleSave}>SAVE</button>
                 </div>
             </form>
         </>
