@@ -1,22 +1,34 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 // css
 import formCss from "../Profile/cssp/EventForm.module.css";
-
+import AddField from './AddField';
 export default function Form() {
-    
-    const formBottomRef = useRef(null);
 
-    useEffect(() => {
-        const formBottom = formBottomRef.current;
-        formBottom.addEventListener('wheel', (event) => {
-        if (event.deltaY !== 0) {
-            event.preventDefault();
-            formBottom.scrollLeft += event.deltaY;
-        }
-        });
-    }, []);
-    
+    const [showFields, setShowFields] = useState(1);
+
+    let fields = [];
+
+    for (let i = 0; i < showFields; i++) {
+        fields.push(<AddField key={i} />)
+    }
+
+    const handleAdd = (event) => {
+        event.preventDefault();
+        setShowFields(prev => prev + 1);
+    }
+    // const formBottomRef = useRef(null);
+
+    // useEffect(() => {
+    //     const formBottom = formBottomRef.current;
+    //     formBottom.addEventListener('wheel', (event) => {
+    //     if (event.deltaY !== 0) {
+    //         event.preventDefault();
+    //         formBottom.scrollLeft += event.deltaY;
+    //     }
+    //     });
+    // }, []);
+
     return (
         <>
             <div className={formCss.head}>
@@ -27,20 +39,16 @@ export default function Form() {
                 <input type="text" className={formCss.formtitle} placeholder='Form Title*' />
                 <input type="text" className={formCss.formtitle} placeholder='About Event*' />
                 <select id="eventType" className={formCss.formtitle} placeholder='Event Type*'>
-                <option value="free" default>Event Type</option>
-                <option value="paid">Paid</option>
-                <option value="free">Free</option>
-                </select>    
+                    <option value="free" default>Event Type</option>
+                    <option value="paid">Paid</option>
+                    <option value="free">Free</option>
+                </select>
                 <input type="text" className={formCss.formtitle} placeholder='Amount' />
                 <input type="text" className={formCss.formtitle} placeholder='Priority' />
-                <div ref={formBottomRef} className={formCss.formBottom}>
-                    <input type="text" className={formCss.formaddfield} placeholder='Field Name*' />
-                    <input type="text" className={formCss.formaddfield} placeholder='Field Type*' />
-                    <input type="text" className={formCss.formaddfield} placeholder='Field Type*' />
-                </div>
+                {fields}
                 <div>
-                <button className={formCss.saveBtn}>ADD FIELD</button>
-                <button className={formCss.saveBtn}>SAVE</button>
+                    <button className={formCss.saveBtn} onClick={handleAdd}>ADD FIELD</button>
+                    <button className={formCss.saveBtn}>SAVE</button>
                 </div>
             </form>
         </>
