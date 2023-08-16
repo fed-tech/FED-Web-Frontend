@@ -5,37 +5,33 @@ import formCss from "../Profile/cssp/EventForm.module.css";
 import AddField from './AddField';
 export default function Form() {
 
-    const [showFields, setShowFields] = useState([{}]);
-
+    const [showFields, setShowFields] = useState({ fields: [{}] });
     const handleSave = (e) => {
-        // Create a JSON object from showFields
         e.preventDefault();
-        const formData = {
-            formTitle: '', // Add your form title here
-            aboutEvent: '', // Add your about event text here
-            eventType: '', // Add your event type here
-            amount: '', // Add your amount value here
-            priority: '', // Add your priority value here
-            fields: showFields,
-        };
+        const formDetails = showFields;
 
-        // Convert formData object to JSON string
-        const formDataJSON = JSON.stringify(formData);
+        const formDataJSON = JSON.stringify(formDetails);
 
-        // Now you can do whatever you want with the formDataJSON
         console.log(formDataJSON);
     };
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setShowFields(prev => {
+            const formData = { ...prev, [name]: value };
+            return formData;
+        })
+    }
 
     const handleDelete = (e, idx) => {
         e.preventDefault();
         console.log("deleted", idx);
         setShowFields(prev => {
-            const updatedFields = [...prev];
-            updatedFields.splice(idx, 1);
+            const updatedFields = {...prev};
+            updatedFields.fields.splice(idx, 1);
             return updatedFields;
         });
     }
-    const fields = showFields.map((i, idx) => {
+    const fields = showFields.fields.map((i, idx) => {
         return <AddField
             key={idx}
             idx={idx}
@@ -48,7 +44,10 @@ export default function Form() {
     const handleAdd = (event) => {
         event.preventDefault();
         setShowFields(prev => {
-            return [...prev, prev.push({})];
+            const currState = {...prev}
+            currState.fields.push({});
+            return currState;
+            // return {...prev, prev.fields};
         });
     }
     // const formBottomRef = useRef(null);
@@ -70,15 +69,21 @@ export default function Form() {
 
             </div>
             <form action="" className={formCss.formDiv}>
-                <input type="text" className={formCss.formtitle} placeholder='Form Title*' />
-                <input type="text" className={formCss.formtitle} placeholder='About Event*' />
-                <select id="eventType" className={formCss.formtitle} placeholder='Event Type*'>
+                <input onChange={handleChange}
+                    name="formTitle"
+                    type="text" className={formCss.formtitle} placeholder='Form Title*' />
+                <input onChange={handleChange}
+                    type="text" className={formCss.formtitle} placeholder='About Event*' />
+                <select id="eventType"
+                    name="eventType" className={formCss.formtitle} placeholder='Event Type*'>
                     <option value="free" default>Event Type</option>
                     <option value="paid">Paid</option>
                     <option value="free">Free</option>
                 </select>
-                <input type="text" className={formCss.formtitle} placeholder='Amount' />
-                <input type="text" className={formCss.formtitle} placeholder='Priority' />
+                <input onChange={handleChange}
+                    name="amount" type="text" className={formCss.formtitle} placeholder='Amount' />
+                <input onChange={handleChange}
+                    name="priority" type="text" className={formCss.formtitle} placeholder='Priority' />
                 {fields}
                 <div>
                     <button className={formCss.saveBtn} onClick={handleAdd}>ADD FIELD</button>
