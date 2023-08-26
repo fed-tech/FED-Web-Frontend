@@ -5,9 +5,6 @@ import formCss from "../Profile/cssp/EventForm.module.css";
 import addCss from "../Profile/cssp/AddField.module.css"
 export default function AddField({ idx, setShowFields, showFields, handleDelete }) {
 
-    console.log(showFields);
-    console.log(showFields.fields);
-
     const handleValues = (e) => {
         const { name, value } = e.target;
         console.log(name, value);
@@ -39,6 +36,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     onChange={handleValues}
                     name="name"
                     value={showFields.fields[idx].name}
+                    required
                 />
                 <input
                     type="text"
@@ -47,6 +45,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     onChange={handleValues}
                     name="type"
                     value={showFields.fields[idx].type}
+                    required
                 />
                 <input
                     type="text"
@@ -55,6 +54,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     onChange={handleValues}
                     name="value"
                     value={showFields.fields[idx].value}
+                    required
                 />
                 {idx !== 0 &&
                     <button
