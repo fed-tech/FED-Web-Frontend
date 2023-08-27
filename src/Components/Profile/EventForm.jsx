@@ -60,7 +60,6 @@ export default function Form() {
             const currState = {...prev}
             currState.fields.push({});
             return currState;
-            // return {...prev, prev.fields};
         });
     }
 
@@ -127,7 +126,7 @@ export default function Form() {
                 <input id="amount" onChange={handleChange} hidden={hideAmount} required={!hideAmount}
                     name="amount" type="number" className={formCss.formtitle} placeholder='Amount*' />
                 <input onChange={handleChange} required
-                    name="priority" type="text" className={formCss.formtitle} placeholder='Priority*' />
+                    name="priority" type="number" className={formCss.formtitle} placeholder='Priority*' />
                 {fields}
                 <div>
                     <button className={formCss.saveBtn} onClick={handleAdd}>ADD FIELD</button>

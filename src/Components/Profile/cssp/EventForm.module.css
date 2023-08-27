@@ -13,8 +13,9 @@
     width: 100%;
 }
 
-.formtitle {
+.formtitle, select {
     border: none;
+    outline: none;
     padding: 10px;
     width: 100%;
     margin-bottom: 40px;
@@ -27,8 +28,11 @@
     color: black;
     background-color: rgb(194, 194, 194);
 }
-
-.formaddfield {
+.formDropDown {
+    color: black;
+    background-color: rgb(194, 194, 194);
+}
+.formaddfield, .formBottom select {
     border: none;
     padding: 10px;
     margin-bottom: 20px;
@@ -46,7 +50,7 @@
     margin-bottom: 104px;
 }*/
 .formDiv>input::placeholder,
-.formBottom>input::placeholder {
+.formBottom>input::placeholder, .formBottom select, select {
     color: white;
     font-size: 22px;
     font-family: Mulish;
@@ -68,15 +72,22 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+.formBottom select {
+    margin-right: 20px;
+    outline: none;
+    margin: 0 10px 20px 0;
+}
 
 .formBottom::-webkit-scrollbar {
     display: none;
 }
 
-.formBottom>input {
+.formBottom>input, .formBottom select {
     width: 203px;
 }
-
+input {
+    outline: none;
+}
 .saveBtn {
     color: #FFF;
     font-size: 20px;
@@ -103,7 +114,7 @@ select {
 
 @media only screen and (max-width: 600px) {
 
-    .formDiv>input::placeholder,
+    .formDiv>input::placeholder, select
     .formBottom>input::placeholder {
         font-size: 18px;
     }
@@ -123,7 +134,7 @@ select {
         margin-bottom: 30px;
     }
 
-    .formaddfield {
+    .formaddfield, .formBottom select {
         height: 50px;
         width: 100%;
         flex-shrink: 0;
@@ -134,7 +145,7 @@ select {
         margin-bottom: 40px;
     }
 
-    select {
+    /* select {
         font-size: 18px;
-    }
+    } */
 }

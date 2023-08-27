@@ -18,7 +18,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
         //     return currState;
         // })
         setShowFields(prev => {
-            const currState = {...prev};
+            const currState = { ...prev };
             currState.fields[idx] = {
                 ...currState.fields[idx],
                 [name]: value
@@ -38,7 +38,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     value={showFields.fields[idx].name}
                     required
                 />
-                <input
+                {/* <input
                     type="text"
                     className={formCss.formaddfield}
                     placeholder='Field Type*'
@@ -46,7 +46,21 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     name="type"
                     value={showFields.fields[idx].type}
                     required
-                />
+                /> */}
+                <select
+                    value={showFields.fields[idx].type}
+                    name="type"
+                    onChange={handleValues}
+                    className={formCss.formaddfield}
+                    required>
+                    <option value="" hidden >Field Type*</option>
+                    <option value="text" className={formCss.formDropDown}>text</option>
+                    <option value="number" className={formCss.formDropDown}>number</option>
+                    <option value="radio" className={formCss.formDropDown}>radio</option>
+                    <option value="checkbox" className={formCss.formDropDown}>checkbox</option>
+                    <option value="date" className={formCss.formDropDown}>date</option>
+                    <option value="time" className={formCss.formDropDown}>time</option>
+                </select>
                 <input
                     type="text"
                     className={formCss.formaddfield}
