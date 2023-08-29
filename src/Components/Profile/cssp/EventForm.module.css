@@ -51,7 +51,7 @@
 }*/
 .formDiv>input::placeholder,
 .formBottom>input::placeholder, .formBottom select, select {
-    color: white;
+    /* color: white; */
     font-size: 22px;
     font-family: Mulish;
     font-weight: 700;
