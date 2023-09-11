@@ -24,8 +24,78 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                 [name]: value
             };
             return currState;
-        })
-    }
+        });
+    };
+
+    // Function to render Field Value input based on Field Type
+    const renderFieldValueInput = () => {
+        const fieldType = showFields.fields[idx].type || "";
+
+        switch (fieldType) {
+            case "date":
+                return (
+                    <input
+                        type="date"
+                        className={formCss.formaddfield}
+                        placeholder="Enter Date*"
+                        onChange={handleValues}
+                        name="value"
+                        value={showFields.fields[idx].value || ""}
+                        required
+                    />
+                );
+            case "number":
+                return (
+                    <input
+                        type="number"
+                        className={formCss.formaddfield}
+                        placeholder="Enter Value*"
+                        onChange={handleValues}
+                        name="value"
+                        value={showFields.fields[idx].value || ""}
+                        required
+                    />
+                );
+            case "text":
+                return (
+                    <input
+                        type="text"
+                        className={formCss.formaddfield}
+                        placeholder="Enter Text*"
+                        onChange={handleValues}
+                        name="value"
+                        value={showFields.fields[idx].value || ""}
+                        required
+                    />
+                );
+            case "time":
+                return (
+                    <input
+                        type="time"
+                        className={formCss.formaddfield}
+                        placeholder="Enter Time*"
+                        onChange={handleValues}
+                        name="value"
+                        value={showFields.fields[idx].value || ""}
+                        required
+                    />
+                );
+            case "radio":
+            case "checkbox":
+            default:
+                return (
+                    <input
+                        type="text"
+                        className={formCss.formaddfield}
+                        placeholder="Field Value*"
+                        onChange={handleValues}
+                        name="value"
+                        value={showFields.fields[idx].value || ""}
+                        required
+                    />
+                );
+        }
+    };
     return (
         <>
             <div className={formCss.formBottom}>
@@ -35,7 +105,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     placeholder='Field Name*'
                     onChange={handleValues}
                     name="name"
-                    value={showFields.fields[idx].name}
+                    value={showFields.fields[idx].name || ""}
                     required
                 />
                 {/* <input
@@ -48,28 +118,20 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     required
                 /> */}
                 <select
-                    value={showFields.fields[idx].type}
+                    value={showFields.fields[idx].type || ""}
                     name="type"
                     onChange={handleValues}
                     className={formCss.formaddfield}
                     required>
                     <option value="" hidden >Field Type*</option>
-                    <option value="text" className={formCss.formDropDown}>text</option>
-                    <option value="number" className={formCss.formDropDown}>number</option>
-                    <option value="radio" className={formCss.formDropDown}>radio</option>
-                    <option value="checkbox" className={formCss.formDropDown}>checkbox</option>
-                    <option value="date" className={formCss.formDropDown}>date</option>
-                    <option value="time" className={formCss.formDropDown}>time</option>
+                    <option value="text" className={formCss.formDropDown}>Text</option>
+                    <option value="number" className={formCss.formDropDown}>Number</option>
+                    <option value="radio" className={formCss.formDropDown}>Radio</option>
+                    <option value="checkbox" className={formCss.formDropDown}>Checkbox</option>
+                    <option value="date" className={formCss.formDropDown}>Date</option>
+                    <option value="time" className={formCss.formDropDown}>Time</option>
                 </select>
-                <input
-                    type="text"
-                    className={formCss.formaddfield}
-                    placeholder='Field Value*'
-                    onChange={handleValues}
-                    name="value"
-                    value={showFields.fields[idx].value}
-                    required
-                />
+                {renderFieldValueInput()}
                 {idx !== 0 &&
                     <button
                         onClick={handleDelete}

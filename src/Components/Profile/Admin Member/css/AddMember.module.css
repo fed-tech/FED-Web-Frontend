@@ -1,32 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 
 .memInputs {
-    width:70%;
-    height: 110%;
+    width:75%;
+    height: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    overflow-y: scroll;
+    margin-top: 30px;
+    overflow-y: auto;
+    padding-top: 20px;
+    padding-right: 35px;
 }
+
+.memInputs::-webkit-scrollbar{
+    width: .3rem;
+    height: .2rem;
+}
+
 .memInputs input, .memInputs select{
     background-color: transparent;
     border: none;
-    height: 25px;
-    border-bottom: 1px solid white;
-    margin-bottom: 104px;
-    font-size: 23px;
+    height: 40px;
+    border-bottom: 3px solid #4B4B4B;
+    margin-bottom: 60px;
+    font-size: 20px;
     padding-left: 10px;
+    padding-bottom: 10px;
+   
 }
 .memInputs select{
     color: white;
-    height: fit-content;
+    height:fit-content;
     outline: none;
+    margin-top: -10px;
+    width: 100%;
 }
 
 .memInputs select option{
     color: black;
     font-size: 20px;
+    background-color: rgb(194, 194, 194);
 }
 .memInputs input::placeholder{
     /* color: white; */
@@ -40,13 +53,16 @@
 }
 .saveBtn {
     color: #FFF;
-    font-size: 24.891px;
+    font-size: 22px;
     font-family: Mulish;
     font-weight: 600;
     padding: 7px 30px;
-    border-radius: 458.004px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-radius: 6px;
     background: #F45725;
     border: none;
+    float: right;
     width: fit-content;
     cursor: pointer;
 }

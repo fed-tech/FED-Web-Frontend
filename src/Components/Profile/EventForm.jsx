@@ -18,19 +18,30 @@ export default function Form() {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
+  const [selectedEventType, setSelectedEventType] = useState("");
 
   const authCtx = useContext(AuthContext);
+  const initialFormState = {
+    formTitle: "",
+    eventName: "",
+    eventType: "",
+    amount: hideAmount ? 0 : "",
+    priority: "",
+    fields: [{}],
+  };
 
   const handleSave = async (e) => {
+    e.preventDefault();
+    
     if (hideAmount) {
       setShowFields((prev) => {
         const formData = { ...prev, amount: 0 };
         return formData;
       });
     }
-    e.preventDefault();
     const formDetails = showFields;
     try {
+      console.log("Check form save");
       const res = await axios.post(
         "/form/addForm",
         {
@@ -48,8 +59,8 @@ export default function Form() {
         }
       );
       if (res.status == 200) {
-        // setShowFields({ fields: [{}] });
         window.scrollTo(0, 0);
+        setShowFields(initialFormState);
       }
     } catch (err) {
       console.log(err);
@@ -96,8 +107,10 @@ export default function Form() {
   };
 
   const handleDropDownChange = (e) => {
+    const selectedValue = e.target.value;
+    setSelectedEventType(selectedValue);
     console.log("check");
-    if (e.target.value === "paid") {
+    if (selectedValue === "paid") {
       sethideAmount(false);
     } else {
       sethideAmount(true);
@@ -172,6 +185,7 @@ export default function Form() {
           className={formCss.formtitle}
           placeholder="Form Title*"
           required
+          value={showFields.formTitle || ""}
         />
         {/* <input
           onChange={handleChange}
@@ -187,6 +201,7 @@ export default function Form() {
           className={formCss.formtitle}
           onChange={handleChange}
           required
+          value={showFields.eventName || ""}
         >
           <option value="" hidden>
             Related Event Name*
@@ -208,9 +223,10 @@ export default function Form() {
           className={formCss.formtitle}
           onChange={handleDropDownChange}
           required
+          value={showFields.eventType || ""}
         >
           <option value="" hidden>
-            Event Type*
+            {selectedEventType === "paid" ? "Paid" : selectedEventType === "free" ? "Free" : "Event Type*"}
           </option>
           <option value="paid" className={formCss.formDropDownOption}>
             Paid
@@ -228,6 +244,7 @@ export default function Form() {
           type="number"
           className={formCss.formtitle}
           placeholder="Amount*"
+          value={showFields.amount || ""}
         />
         <input
           onChange={handleChange}
@@ -236,13 +253,14 @@ export default function Form() {
           type="number"
           className={formCss.formtitle}
           placeholder="Priority*"
+          value={showFields.priority || ""}
         />
         {fields}
         <div>
           <button className={formCss.saveBtn} onClick={handleAdd}>
             ADD FIELD
           </button>
-          <button type="submit" className={formCss.saveBtn}>
+          <button type="submit" className={formCss.saveBtn} onClick={handleSave}>
             SAVE
           </button>
         </div>

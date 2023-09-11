@@ -9,34 +9,54 @@
     justify-content: flex-start;
     padding: 20px;
     padding-left: 100px;
+    padding-right: 100px;
+
 }
 .addevent input{
-    margin-bottom: 44px;
+    margin-bottom: 40px;
     padding: 10px 0px;
-    border-bottom: 2px solid #808080;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    background: none;
+    border-bottom: 3px solid #4B4B4B;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: 600;
+    
     color: white;
 }
 .addevent input::placeholder{
-    color: white;
+    background-color: transparent;
     font: 'Mulish';
+    width: 100%;
 
 }
 .addevent .inp_btn{
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    margin-top: 10px;
+    width: 30%;
+    float: right;
 
 }
-.addevent_submit_btn{
-    padding: 5px 10px;
-    width: 90px;
-    border-radius: 20px;
+.addevent .inp_btn .submit_btn{
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 6px;
+    font-family: Mulish;
+    font-weight: 600;
     background-color: #f45725;
     border: none;
     outline: none;
     color: white;
     cursor: pointer;
+    border: none;
+    
 }
+
 .addevent_date{
     width: 100%;
     display: flex;
@@ -44,10 +64,10 @@
     justify-content: space-between;
 }
 .addevent_date input{
-    width: 36%;
+    width: 48.5%;
 }
 .addevent form{
-    width: 60%;
+    width: 100%;
 }
 
 .event_poster{
@@ -65,8 +85,14 @@
 .event_poster .preview_btn{
     background-color: transparent;
     border: 1px solid #f45725;
-    border-radius: 20px;
+    margin-left: 10px;
+    border-radius: 6px;
     padding: 10px 20px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.event_poster .preview_btn:hover{
+    background-color: #f45725;
+    transition: .2s linear;
 }

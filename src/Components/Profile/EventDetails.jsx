@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 // css
 import eventCss from "./cssp/EventDetails.module.css";
@@ -9,6 +9,10 @@ import AuthContext from "../../store/auth-context";
 // import logo from "../../Img/image26.png"
 function EventDetails({ cardNo, setShow }) {
   const authCtx = useContext(AuthContext);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isToggleOn, setIsToggleOn] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
 
   const handleDelete = async () => {
     const id = cardNo._id;
@@ -28,9 +32,79 @@ function EventDetails({ cardNo, setShow }) {
     }
   };
 
+  const handleDeleteform = async () => {
+    setAlertMessage("Form Deleted Successfully !");
+    handleCloseModal();
+  
+    const id = cardNo._id;
+    try {
+      const response = await axios.delete(`/event/deleteevent/${id}`, {
+        headers: {
+          Authorization: authCtx.token,
+        },
+      });
+      console.log(response);
+      if (response.status === 200) {
+        console.log("Form Deleted");
+        setShow(false);
+  
+        //automatically hide the alert
+        setTimeout(() => {
+          setAlertMessage("");
+        }, 2000);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  //overall functionality still remaining
+  const handleViewform = async () => {
+    setAlertMessage("Form Viewed Successfully !");
+    setTimeout(() => {
+      setAlertMessage("");
+    }, 2000);
+    handleCloseModal();
+  };
+
+
+  const handleToggle = () => {
+    setIsToggleOn((prevState) => !prevState);
+    setAlertMessage(isToggleOn ? "Form is Closed !" : "Form is Currently Active !");
+
+    setTimeout(() => {
+      setAlertMessage("");
+    }, 2000);
+  };
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+
+    if (!isModalOpen) {
+      document.body.style.overflow = 'auto';
+      setIsModalOpen(true);
+    } else {
+      document.body.style.overflow = 'auto';
+
+      setTimeout(() => {
+        setIsModalOpen(false);
+      }, 500);
+    }
+  };
+  
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleFormClick = () => {
+    toggleModal(); // Open or close the modal
+  };
+
   useEffect(() => {
     console.log(cardNo);
   }, []);
+
   return (
     <div className={eventCss.fullPage}>
       <div className={eventCss.details}>
@@ -55,24 +129,28 @@ function EventDetails({ cardNo, setShow }) {
           </div>
         </div>
         <div className={eventCss.forms}>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
-          <div className={eventCss.form}>Form 1</div>
+
+          <div className={eventCss.form} onClick={handleFormClick}>Test</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
+
         </div>
         <div className={eventCss.btns}>
           <button className={eventCss.edit}>Edit</button>
@@ -81,6 +159,34 @@ function EventDetails({ cardNo, setShow }) {
           </button>
         </div>
       </div>
+
+      {isModalOpen && (
+        <div className={`${eventCss.modal} ${eventCss['slide-from-top']}`}>
+          <span className={eventCss.close} onClick={handleCloseModal}>
+            &times;
+          </span>
+          <h2>Form Title</h2>
+          <p>Form Content</p>
+          <button onClick={handleDeleteform}>Delete Form</button>
+          <button onClick={handleViewform}>View Form</button>
+
+          <label className={eventCss.switch}>
+            <input
+              input type="checkbox"
+              checked={isToggleOn}
+              onChange={handleToggle}
+            />
+            <span className={eventCss.slider}></span>
+          </label>
+        </div>
+      )}
+
+      {alertMessage && (
+        <div className={eventCss.alert}>
+          {alertMessage}
+        </div>
+      )}
+
     </div>
   );
 }
