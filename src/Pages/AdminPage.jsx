@@ -36,7 +36,9 @@ function Page() {
       setDesignation("Member");
     }
   }, []);
-
+  useEffect(()=>{
+    console.log(authCtx.user.access)
+  },[])
   const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
   const [profile, setProfile] = useState(true);
@@ -91,6 +93,7 @@ function Page() {
               </div>
             </div>
             <div className={pageCss.dashboardBottom}>
+              {designation==="Admin"?<>
               <div
                 onClick={handleEvent}
                 className={
@@ -126,6 +129,7 @@ function Page() {
                 <GroupsIcon className={pageCss.dashboardBottom_icons} />
                 <p>Members</p>
               </div>
+              </>:<></>}
               <div
                 onClick={handleLogout}
                 className={pageCss.dashboardBottom_options}
