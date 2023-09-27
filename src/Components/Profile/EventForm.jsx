@@ -23,10 +23,12 @@ export default function Form() {
   const authCtx = useContext(AuthContext);
   const initialFormState = {
     formTitle: "",
+    description:"",
     eventName: "",
     eventType: "",
     amount: hideAmount ? 0 : "",
     priority: "",
+    maxReg:0,
     fields: [{}],
   };
 
@@ -46,11 +48,12 @@ export default function Form() {
         "/form/addForm",
         {
           title: formDetails.formTitle,
-          description: "test",
+          description: formDetails.description,
           amount: formDetails.amount,
           priority: formDetails.priority,
           formelement: formDetails.fields,
           event: formDetails.eventName,
+          maxReg: formDetails.maxReg
         },
         {
           headers: {
@@ -187,14 +190,15 @@ export default function Form() {
           required
           value={showFields.formTitle || ""}
         />
-        {/* <input
+        <input
           onChange={handleChange}
-          name="forrmDesc"
+          name="description"
           type="text"
           className={formCss.formtitle}
-          placeholder="About Event*"
+          placeholder="About Form*"
+          value={showFields.description || ""}
           required
-        /> */}
+        />
         <select
           id="eventType"
           name="eventName"
@@ -254,6 +258,15 @@ export default function Form() {
           className={formCss.formtitle}
           placeholder="Priority*"
           value={showFields.priority || ""}
+        />
+          <input
+          onChange={handleChange}
+          required
+          name="maxReg"
+          type="number"
+          className={formCss.formtitle}
+          placeholder="Max Registrations Allowed*"
+          value={showFields.maxReg || ""}
         />
         {fields}
         <div>

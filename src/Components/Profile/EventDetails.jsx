@@ -4,24 +4,62 @@ import React, { useContext, useEffect, useState } from "react";
 import eventCss from "./cssp/EventDetails.module.css";
 import axios from "axios";
 import AuthContext from "../../store/auth-context";
-
+import Load from "../../MicroInterAction/Load";
+import { Alert } from "../../MicroInterAction/Alert";
 // logo
 // import logo from "../../Img/image26.png"
 function EventDetails({ cardNo, setShow }) {
   const authCtx = useContext(AuthContext);
-
+  const [loading,setLoading] = useState(true)
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isToggleOn, setIsToggleOn] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
+  const [forms,setForms] = useState([])
+  const [currentForm,setCurrentForm] = useState({})
+  const [isToggleOn, setIsToggleOn] = useState(currentForm.active);
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
+  //creating instance
+  let api = axios.create({
+    headers: {
+      Authorization: authCtx.token,
+    }
+  })
+  api.interceptors.response.use((response) => response, (error) => {
+    // whatever you want to do with the error
+    if(error.response.status >= 500){
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Server Error",
+        text: "Internal Server Error",
+        val: true,
+      });
+    }
+    else if(error.response.status >= 400){
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Server Error",
+        text: "You Dont Have Access",
+        val: true,
+      });
+    }
+    throw error
+  });
+
 
   const handleDelete = async () => {
     const id = cardNo._id;
     try {
-      const response = await axios.delete(`/event/deleteevent/${id}`, {
-        headers: {
-          Authorization: authCtx.token,
-        },
-      });
+      const response = await api.delete(`/event/deleteevent/${id}`);
       console.log(response);
       if (response.status === 200) {
         console.log("Event deleted");
@@ -32,26 +70,15 @@ function EventDetails({ cardNo, setShow }) {
     }
   };
 
-  const handleDeleteform = async () => {
-    setAlertMessage("Form Deleted Successfully !");
-    handleCloseModal();
-  
-    const id = cardNo._id;
+  const handleDeleteform = async () => {  
+    const id = currentForm._id;
     try {
-      const response = await axios.delete(`/event/deleteevent/${id}`, {
-        headers: {
-          Authorization: authCtx.token,
-        },
-      });
+      const response = await api.delete(`/form/deleteForm?formid=${id}`);
       console.log(response);
       if (response.status === 200) {
-        console.log("Form Deleted");
-        setShow(false);
-  
-        //automatically hide the alert
-        setTimeout(() => {
-          setAlertMessage("");
-        }, 2000);
+        setAlertMessage("Form Deleted Successfully !");
+        handleCloseModal();
+        makeRequest()
       }
     } catch (err) {
       console.log(err);
@@ -68,7 +95,8 @@ function EventDetails({ cardNo, setShow }) {
   };
 
 
-  const handleToggle = () => {
+  const handleToggle = async () => {
+    await api.get(`/form/toggleform?formid=${currentForm._id}`)
     setIsToggleOn((prevState) => !prevState);
     setAlertMessage(isToggleOn ? "Form is Closed !" : "Form is Currently Active !");
 
@@ -97,13 +125,52 @@ function EventDetails({ cardNo, setShow }) {
     setIsModalOpen(false);
   };
 
-  const handleFormClick = () => {
+  const handleFormClick = (form) => {
+    setCurrentForm(form);
+    setIsToggleOn(form.active)
     toggleModal(); // Open or close the modal
   };
 
+  const makeRequest= async()=>{
+    try {
+      setForms([])
+      var eventid = cardNo._id
+      setLoading(true)
+      const res = await api.get(
+        `/form/getForm?eventid=${eventid}`,        
+        {
+          headers: {
+            Authorization: authCtx.token,
+          },
+        }
+      );
+      if (res.status == 200) {
+        setForms(res.data)
+      }
+      setLoading(false)
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  useEffect(()=>{
+    console.log(forms)
+  },[forms])
   useEffect(() => {
     console.log(cardNo);
+    makeRequest()
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setError({
+        mainColor: "",
+        secondaryColor: "",
+        symbol: "",
+        title: "",
+        text: "",
+        val: false,
+      });
+    }, 10000);
+  }, [variants]);
 
   return (
     <div className={eventCss.fullPage}>
@@ -129,28 +196,27 @@ function EventDetails({ cardNo, setShow }) {
           </div>
         </div>
         <div className={eventCss.forms}>
-
-          <div className={eventCss.form} onClick={handleFormClick}>Test</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-          <div className={eventCss.form} onClick={handleFormClick}>Form 1</div>
-
+          {loading ? <Load></Load> : <></>}
+          {forms.length == 0 && !loading? (
+            <>
+              <h1>No Forms Created</h1>
+            </>
+          ) : (
+            <>
+              {forms.map((form) => {
+                return (
+                  <div
+                    className={eventCss.form}
+                    onClick={() => {
+                      handleFormClick(form);
+                    }}
+                  >
+                    {form.title}
+                  </div>
+                );
+              })}
+            </>
+          )}
         </div>
         <div className={eventCss.btns}>
           <button className={eventCss.edit}>Edit</button>
@@ -161,18 +227,39 @@ function EventDetails({ cardNo, setShow }) {
       </div>
 
       {isModalOpen && (
-        <div className={`${eventCss.modal} ${eventCss['slide-from-top']}`}>
+        <div className={`${eventCss.modal} ${eventCss["slide-from-top"]}`}>
           <span className={eventCss.close} onClick={handleCloseModal}>
             &times;
           </span>
-          <h2>Form Title</h2>
-          <p>Form Content</p>
+          <div for="form details">
+            <div>
+              <span>Title:</span>
+              <label>{currentForm.title}</label>
+            </div>
+            <div>
+              <span>Description:</span>
+              <label>{currentForm.description}</label>
+            </div>
+            <div>
+              <span>Amount:</span>
+              <label>{currentForm.amount}</label>
+            </div>
+            <div>
+              <span>Priority:</span>
+              <label>{currentForm.priority}</label>
+            </div>
+            <div>
+              <span>Max Registrations:</span>
+              <label>{currentForm.maxReg}</label>
+            </div>
+          </div>
           <button onClick={handleDeleteform}>Delete Form</button>
           <button onClick={handleViewform}>View Form</button>
 
           <label className={eventCss.switch}>
             <input
-              input type="checkbox"
+              input
+              type="checkbox"
               checked={isToggleOn}
               onChange={handleToggle}
             />
@@ -180,13 +267,8 @@ function EventDetails({ cardNo, setShow }) {
           </label>
         </div>
       )}
-
-      {alertMessage && (
-        <div className={eventCss.alert}>
-          {alertMessage}
-        </div>
-      )}
-
+      <Alert variant={variants} val={setError} />
+      {alertMessage && <div className={eventCss.alert}>{alertMessage}</div>}
     </div>
   );
 }

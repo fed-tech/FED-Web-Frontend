@@ -101,7 +101,7 @@
   border-radius: 10px;
   border: 1px solid #808080;
   padding: 22px 41px;
-  width:22%;
+  width:fit-content;
   text-align: center;
   height: auto;
   font-size: 30px;
@@ -199,7 +199,19 @@
   margin-bottom: 20px;
   padding-left: 10px;
 }
-
+.modal div {
+  margin: 8px;
+}
+.modal div label{
+  width: fit-content;
+}
+.modal div span{
+  font-weight: bold;
+}
+.modal div div{
+  display: flex;
+  justify-content:start;
+}
 .modal button {
   padding: 10px 20px;
   margin: 8px;
