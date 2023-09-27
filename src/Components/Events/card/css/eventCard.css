@@ -92,9 +92,13 @@
     color: #f45725;
     font-weight: 700;
     transition: all 0.3s;
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
+    cursor: pointer;
     display: flex;
     align-items: center;
+}
+.live {
+    color: rgb(34, 185, 34);
 }
 
 .lockSvg {

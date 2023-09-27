@@ -4,54 +4,148 @@
     width: 70%;
     margin-bottom: 49px;
 }
-.head h1{
+
+.head h1 {
     font-size: 45px;
-font-family: Mulish;
-font-weight: 700;
-letter-spacing: 0.225px;
-width: 100%;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.225px;
+    width: 100%;
 }
-.formDiv>input, .formBottom>input {
+
+.formtitle, select {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    background: none;
+    border-bottom: 3px solid #4B4B4B;
+    font-size: 20px;
+}
+
+.formDropDownOption {
+    color: black;
+    background-color: rgb(194, 194, 194);
+}
+.formDropDown {
+    color: black;
+    background-color: rgb(194, 194, 194);
+}
+.formaddfield, .formBottom select {
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: none;
+    border-bottom: 3px solid #4B4B4B;
+    display: flex;
+    flex-shrink: 0;
+    /* Prevent the container from shrinking */
+    margin-right: 10px;
+}
+
+/*.formDiv>input, .formBottom>input {
     border-bottom: 1px solid white;
     margin-bottom: 104px;
+}*/
+.formDiv>input::placeholder,
+.formBottom>input::placeholder, .formBottom select, select {
+    /* color: white; */
+    font-size: 22px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.125px;
 }
-.formDiv>input::placeholder, .formBottom>input::placeholder{
-    color: white;
-font-size: 25px;
-font-family: Mulish;
-font-weight: 700;
-letter-spacing: 0.125px;
-}
+
 .formDiv {
-    width:70%;
+    width: 75%;
     text-align: center;
 }
+
 .formBottom {
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.formBottom>input {
-    width: 27%;
+.formBottom select {
+    margin-right: 20px;
+    outline: none;
+    margin: 0 10px 20px 0;
+}
+
+.formBottom::-webkit-scrollbar {
+    display: none;
+}
+
+.formBottom>input, .formBottom select {
+    width: 203px;
+}
+input {
+    outline: none;
 }
 .saveBtn {
     color: #FFF;
-font-size: 24.891px;
-font-family: Mulish;
-font-weight: 600;
-padding: 7px 30px;
-border-radius: 458.004px;
-background: #F45725;
-border: none;
+    font-size: 20px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 7px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #F45725;
+    border: none;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
-@media (max-width:1310px) {
-    .formDiv>input::placeholder, .formBottom>input::placeholder {
-        font-size: 21px;
+select {
+    width: 90%;
+    color: #fff;
+    padding: 10px 5px;
+    background: transparent;
+    font-size: 25px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .formDiv>input::placeholder, select
+    .formBottom>input::placeholder {
+        font-size: 18px;
     }
+
     .head h1 {
         font-size: 42px;
     }
+
     .formDiv {
         width: 75%;
     }
+
+    .formBottom {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        margin-bottom: 30px;
+    }
+
+    .formaddfield, .formBottom select {
+        height: 50px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .formBottom>input {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* select {
+        font-size: 18px;
+    } */
 }

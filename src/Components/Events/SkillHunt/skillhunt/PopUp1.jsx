@@ -3,6 +3,7 @@ import React from "react";
 function PopUp1({ dataInp, info, setInfo }) {
   const checkBoxInp = (e) => {
     const { name } = e.target;
+
     if (info.workshops[name]) {
       setInfo({ ...info, workshops: { ...info.workshops, [name]: false } });
     } else {
@@ -70,7 +71,7 @@ function PopUp1({ dataInp, info, setInfo }) {
               </label>
             </div>
           </div>
-          <h3 className="step-title h3marginTop">
+          {/* <h3 className="step-title h3marginTop">
             Do you want access to the Speaker Session?
           </h3>
           <div className="inpDivC">
@@ -100,7 +101,7 @@ function PopUp1({ dataInp, info, setInfo }) {
                 No
               </label>
             </div>
-          </div>
+          </div> */}
           <p id="toogle-talkshow" className="toogle"></p>
         </div>
       </div>
