@@ -90,7 +90,10 @@ function SkillHuntPage() {
           </>
         )}
       </div> */}
-      <div className="btnDivReg">
+      <div className="btnDivReg"
+      onClick={() => {
+        setShowPopUp(true);
+      }}>
         <h2>Register Closed</h2>
       </div>
 

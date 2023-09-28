@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import QR from "./QR";
 
 function PopUp2({ dataInp, info }) {
+  const [QrImg, setQrImg] = useState(0);
+
+  useEffect(() => {
+    const amtQR = Object.values(info.workshops).filter((val) => {
+      return val === true;
+    }).length;
+
+    setQrImg(amtQR);
+  }, []);
   return (
     <>
       <div className="cardeve" id="div1_2" data-step-1>
@@ -10,11 +19,10 @@ function PopUp2({ dataInp, info }) {
           preferred workshop then the allotment or cancellation of allotment of
           learning workshops will be at the sole discretion of FED.
         </h3>
-        {info.speaker === "true" && (
-          <QR qrLink="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/64c2cfe0bb7f8dae8d14746d_Picture2.png" />
-        )}
-        {info.speaker === "false" && (
-          <QR qrLink="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/64c2ceaf78167dd32ed57513_Picture1.png" />
+        {QrImg === 1 ? (
+          <QR qrLink="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/64c513708dd599c8a2879125_99.png" />
+        ) : (
+          <QR qrLink="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/64c513707f29e6de7c4c6bb2_149.png" />
         )}
         <h3 className="step-title h3marginTop">
           Last 4 digits of the Transaction ID

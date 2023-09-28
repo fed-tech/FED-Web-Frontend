@@ -24,7 +24,8 @@ const ResetPassword = React.lazy(() => import("./Pages/ResetPassword"));
 const ForgotPassword = React.lazy(() => import("./Pages/ForgotPassword"));
 
 // Pages || Profiles
-const Profile = React.lazy(() => import("./Pages/AdminPage"));
+const Profile = React.lazy(() => import("./Pages/Profile"));
+const AdminPage = React.lazy(() => import("./Pages/AdminPage"));
 
 // Loading
 import Loading from "./MicroInterAction/Loading";
@@ -173,7 +174,8 @@ function App() {
                     path="/MyProfile"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <Profile />
+                        {/* <Profile /> */}
+                        <AdminPage />
                       </Suspense>
                     }
                   />
@@ -184,6 +186,15 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <Error />
+                    </Suspense>
+                  }
+                />
+            
+              <Route
+                  path="/newform"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <AdminPage />
                     </Suspense>
                   }
                 />

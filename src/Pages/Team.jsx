@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 // Components
 import Core from "../Components/Team/Core";
@@ -15,10 +16,49 @@ export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
 
+  const [core, setCore] = useState([]);
+  const [creative, setCreative] = useState([]);
+  const [technical, setTechnical] = useState([]);
+  const [marketing, setMarketing] = useState([]);
+  const [operations, setOperations] = useState([]);
+
+  const memberData = async () => {
+    const response = await axios.get("/member/");
+    if (response.status === 202) {
+      setCreative(
+        response.data.users.filter((element) => {
+          if (element.access == 3) return element;
+        })
+      );
+      setTechnical(
+        response.data.users.filter((element) => {
+          if (element.access == 4) return element;
+        })
+      );
+      setMarketing(
+        response.data.users.filter((element) => {
+          if (element.access == 5) return element;
+        })
+      );
+      setOperations(
+        response.data.users.filter((element) => {
+          if (element.access == 6) return element;
+        })
+      );
+    } else {
+      console.log("no members");
+    }
+  };
+
+  useEffect(() => {
+    memberData();
+  }, []);
+
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <section id="OurTeam">
@@ -46,7 +86,7 @@ export default function Team() {
           name="Technical"
           title="Those who help us design, analyze, troubleshoot, diagnose and
             resolve technicalities in FED!"
-          data={domain.Tech}
+          data={technical}
         />
         <div className="space" />
 
@@ -55,7 +95,7 @@ export default function Team() {
           name="Creative"
           title="Those who help us illustrate, create, design, address, showcase, and
           introduce FED as a whole- behind the veil!"
-          data={domain.creative}
+          data={creative}
         />
         <div className="space" />
 
@@ -64,7 +104,7 @@ export default function Team() {
           name="Marketing"
           title="Those who help us strategize, develop, promote, grow and market
           FED's endeavor!"
-          data={domain.marketing}
+          data={marketing}
         />
         <div className="space" />
 
@@ -73,7 +113,7 @@ export default function Team() {
           name="Operations"
           title="Those who help us plan, strategize, commemorate, organize and
           operate FED's initiatives!"
-          data={domain.operation}
+          data={operations}
         />
         <div className="space" />
       </section>
