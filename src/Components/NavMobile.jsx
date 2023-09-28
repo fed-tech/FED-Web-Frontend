@@ -38,6 +38,7 @@ export default function NavMobile() {
             <div className="LogoDiv">
               <img src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png"></img>
               <p className="LogoFED">FED</p>
+              <p>{import.meta.env.VITE_BETA==="true"?<>Test</>:<></>}</p>
             </div>
           </Link>
           <div id="Navdarkright"></div>
