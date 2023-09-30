@@ -35,7 +35,7 @@ function AddEvent({setViewEvents}) {
       month: form.month,
       registration: form.reg_type
     }
-    const response = await axios.post('http://localhost:5000/event/addevent',obj,{
+    const response = await axios.post('/event/addevent',obj,{
       headers: {
           'Authorization': authCtx.token
       }})

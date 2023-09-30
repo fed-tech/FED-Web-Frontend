@@ -45,7 +45,7 @@ function updateModal({ setShowUpdateModal }) {
       };
       try {
         axios
-          .post(`http://localhost:5000/auth/updateProfile`, userObject)
+          .post(`/auth/updateProfile`, userObject)
           .then((res) => {
             if (res.status === 200) {
               const resp = res.data.response;
