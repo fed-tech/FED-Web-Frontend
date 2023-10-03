@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
-import './cssp/AddEvent.css';
+import addEventCss from "./cssp/AddEvent.css";
 import axios from 'axios';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import AuthContext from '../../store/auth-context';
 import ImageModal from './ImageModal';
 
@@ -9,7 +11,7 @@ function AddEvent({setViewEvents}) {
     title:"",
     about:"",
     poster:"",
-    date:"",
+    date: new Date(),
     month:"",
     reg_type:""
   });
@@ -57,7 +59,13 @@ function AddEvent({setViewEvents}) {
     setPreviewImage(form.poster);
     setIsModalOpen(true);
   }
-
+  const handleDateChange = (date) => {
+    setForm(prevState => ({ ...prevState, date: date }));
+  }
+  const handleRegTypeChange = (e) => {
+    setForm(prevState => ({ ...prevState, reg_type: e.target.value }));
+  }
+  // const handleChangeMonth=(month)=>setForm((prevState)=>( {...prevState , month}))
   const closeModal = () => {
     setIsModalOpen(false);
   }
@@ -66,18 +74,31 @@ function AddEvent({setViewEvents}) {
     <div className='addevent'>
         <form action="">
             <input type="text" placeholder='Event Title' name='title' onChange={dataInp}/>
-            <input type="text" placeholder='About the Event' name='about' onChange={dataInp}/>
+            <input type="textarea" placeholder='About the Event'   name='about' onChange={dataInp}/>
+            {/* <textarea placeholder='About the Event'  name='about' onChange={dataInp}/> */}
+            {/* <div className='about_event'>
+              {form.about}
+            </div> */}
             <div className='event_poster'>
               <input type="text" placeholder='Poster Link' name='poster' onChange={dataInp}/>
               {/*<a href={form.poster} target='blank' className='preview_btn'>Preview</a>*/}
               <button type="button" className='preview_btn' onClick={handlePreview}>Preview</button>
             </div>
-            
-            <div className='addevent_date'>
-              <input type="text" placeholder='Event Date' name='date' onChange={dataInp}/>
-              <input type="text" placeholder='Event Month' name='month' onChange={dataInp}/>
-            </div>
-            <input type="text" placeholder='Registration Type' name='reg_type' onChange={dataInp}/>
+            <div className={addEventCss.addEvent}> 
+                <DatePicker
+                selected={form.date} 
+                onChange={handleDateChange} 
+                dateFormat="dd/MM/yyyy"
+                placeholderText="dd/mm/yyyy"
+               />
+            <select placeholder='Registration type' name='reg_type' onChange={handleRegTypeChange}
+            className='regdropdown'>
+              <option value="">Select Registration Type</option>
+              <option value="upcoming">Upcoming</option>
+              <option value="closed">Closed</option>
+              <option value="now">Now</option>
+            </select>
+          </div>
             <div className='inp_btn'>
               <input type="submit" value="Submit" className='submit_btn' onClick={handleSubmit}/>
             </div>

@@ -57,11 +57,6 @@ export default function NavMobile(props) {
         </div>
 
         <div class="mobileNavListChild">
-          <div class="mobileList">
-            <NavLink to="/" className="liTag" onClick={() => setCount(false)}>
-              Home
-            </NavLink>
-          </div>
           <div class="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/event" className="liTag">
               Events
@@ -122,13 +117,13 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
           <div class="mobileList">
-            <NavLink
+            {/* <NavLink
               to="/Alumni"
               className="liTag"
               onClick={() => setCount(false)}
             >
               Alumni
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </div>

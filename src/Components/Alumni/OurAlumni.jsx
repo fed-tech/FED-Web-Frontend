@@ -3,6 +3,7 @@ import React from "react";
 // css
 import "./css/alumni.css";
 
+
 // Data
 import Card from "./../../Data/card.json";
 
@@ -14,15 +15,20 @@ function OurAlumni() {
   return (
     <section className="alumni">
       <div className="main_body">
-        <div className="ouralumni">
-          <p className="para1_">
-            Our <span className="para2_">Alumni.</span>
-          </p>
-        </div>
-        <p className="para3_">
+          <div className="ouralumni">
+            <p className="para1_">
+              Our <span className="para2_">Alumni.</span>
+            </p>
+          </div>
+          <p className="para3_">
           Effort that is done by you all for the development of our society
-        </p>
-      </div>
+          </p>
+            <p className="TeamName">
+            <button className="alumniButton" onClick={() => window.location.href = '/Team'}>
+              Back to Teams
+            </button>
+            </p>
+        </div>
       <div className="bottomcontainer_">
         {Card.map((card) => {
           return (
@@ -50,9 +56,13 @@ function OurAlumni() {
                 </div>
               </div>
             </div>
+            
           );
+        
         })}
       </div>
+      
+      
     </section>
   );
 }

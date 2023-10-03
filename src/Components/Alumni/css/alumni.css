@@ -27,6 +27,57 @@
   align-items: center;
   padding-bottom: 50px;
 }
+.main_body {
+  text-align: end;
+}
+.alumniButton{
+  padding: 7px 7px;
+  width: auto;
+  border-radius: 6px;
+  font-family: Mulish;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  /* display: inline-block; */
+  /* align-items: center; */
+  justify-content: center;
+  background-color: #f45725; 
+  font-size: 26px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alumniButton:hover {
+background-color: #f45725; 
+transform: scale(1.1); 
+}
+
+
+.alumniButton:disabled {
+cursor: not-allowed; 
+background-color: #ccc; 
+}
+
+
+.alumniButton:disabled:after {
+content: "";
+border: 4px solid rgba(255, 255, 255, 0.3);
+border-radius: 50%;
+border-top: 4px solid #ffffff;
+width: 20px;
+height: 20px;
+animation: spin 1s linear infinite; 
+margin-left: 10px; 
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
 .ouralumni {
   display: flex;
   justify-content: center;

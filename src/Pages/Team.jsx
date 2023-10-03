@@ -62,6 +62,29 @@ export default function Team() {
   return (
     <>
       <section id="OurTeam">
+        <div className="TeamCore">
+          <p className="TeamName">
+            Our <span>
+              Alumni.</span>
+          </p>
+          <button className="alumniButton" onClick={() => window.location.href = '/Alumni'}>
+            Explore Alumni
+          </button>
+          <p className="TeamNameSubTitle">
+          Effort that is done by you all for the development of our society.                                                      
+          </p>
+  </div>
+          {/* <div className="listDiv">
+            <ul id="Alumni">
+              <li>
+                <NavLink to="/Alumni" className="liTag">
+                  Alumni
+                </NavLink>
+              </li>
+              </ul>
+        </div> */}
+        
+        
         {/* Core */}
         <div className="TeamCore">
           <p className="TeamName">
