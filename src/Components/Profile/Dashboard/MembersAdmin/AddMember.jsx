@@ -4,10 +4,10 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 
 //context
-import AuthContext from "../../../store/auth-context";
+import AuthContext from "../../../../store/auth-context";
 
 //css
-import memberCSS from "./css/AddMember.module.css";
+import memberCSS from "../../../css/Profile/Dashboard/MembersAdmin/AddMember.module.css";
 
 export default function AddMember() {
   const authCtx = useContext(AuthContext);

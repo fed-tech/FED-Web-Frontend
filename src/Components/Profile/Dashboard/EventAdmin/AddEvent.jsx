@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
-import './cssp/AddEvent.css'
+import '../../../css/Profile/Dashboard/EventAdmin/AddEvent.css'
 import axios from 'axios';
-import AuthContext from '../../store/auth-context';
+import AuthContext from '../../../../store/auth-context';
 
 function AddEvent({setViewEvents}) {
   const [form,setForm] = useState({

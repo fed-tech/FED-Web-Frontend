@@ -1,11 +1,15 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
 
-// css
-import formCss from "../Profile/cssp/EventForm.module.css";
+// Components
 import AddField from "./AddField";
-import { Alert } from "../../MicroInterAction/Alert";
+
+// css
+import formCss from "../../../css/Profile/Dashboard/EventForm/EventForm.module.css";
+
+import { Alert } from "../../../../MicroInterAction/Alert";
 import axios from "axios";
-import AuthContext from "../../store/auth-context";
+import AuthContext from "../../../../store/auth-context";
+
 export default function Form() {
   const [variants, setError] = useState({
     mainColor: "",

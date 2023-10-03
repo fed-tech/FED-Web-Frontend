@@ -1,0 +1,622 @@
+#profile {
+  color: #ffffff;
+  font-family: rubik;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 27px;
+  margin-left: 30px;
+}
+
+.headInnerText img {
+  cursor: pointer;
+}
+
+.dets1,
+.vals1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 28px;
+  padding: 20px;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1300px) {
+  .memberRight {
+    width: 67%;
+  }
+
+  .memberLeft {
+    width: 33%;
+  }
+}
+
+@media (max-width: 1155px) {
+  .memberRight {
+    width: 64%;
+  }
+
+  .memberLeft {
+    width: 36%;
+  }
+
+  .memberLeft,
+  .memberRight {
+    padding-top: 130px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .dashboardTop h1,
+  h2 {
+    font-size: 25px;
+  }
+
+  .Position .name {
+    font-size: 26px;
+  }
+
+  .dashboardTop img {
+    height: 180px;
+    width: 180px;
+  }
+
+  .dashboardBottom {
+    font-size: 20px;
+  }
+
+  .memberRight {
+    width: 63%;
+  }
+
+  .memberLeft {
+    width: 37%;
+  }
+
+  .memberLeft,
+  .memberRight {
+    padding-top: 100px;
+  }
+
+  .proHeading {
+    /* width: 60%; */
+    font-size: 30px;
+  }
+
+  .dets1,
+  .vals1 {
+    font-size: 24px;
+  }
+
+  .dashboard {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 880px) {
+  .memberRight {
+    align-items: center;
+    justify-content: center;
+    width: 67%;
+    padding-bottom: 60px;
+  }
+
+  .Position .name,
+  .dashboardBottom {
+    font-weight: 500;
+  }
+
+  .memberLeft {
+    width: 33%;
+  }
+}
+
+@media (max-width: 830px) {
+  .dashboard {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .profilePic img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dashboardTop h1,
+  h2 {
+    font-size: 20px;
+  }
+
+  .Position .name {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .dashboardBottom p {
+    display: none;
+  }
+
+  .memberLeft {
+    width: 28%;
+  }
+
+  .memberRight {
+    width: 72%;
+  }
+
+  .dets1,
+  .vals1 {
+    font-size: 22px;
+  }
+
+  .dashboard {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 690px) {
+  .memberRight {
+    padding: 40px 0;
+  }
+
+  .memberLeft {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .dashboardTop h1 {
+    display: none;
+  }
+
+  .dashboardTop h2 {
+    display: block;
+  }
+
+  .memberLeft {
+    width: 20%;
+  }
+
+  .dashboard {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  .memberRight {
+    width: 80%;
+  }
+
+  .memberLeft,
+  .memberRight {
+    padding-top: 0px;
+  }
+
+  .dashboard {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .dashboardTop h1,
+  h2 {
+    font-size: 16px;
+  }
+
+  .proHeading {
+    padding-bottom: 40px;
+    width: 70%;
+  }
+
+  .Position .name {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .headInnerText {
+    font-size: 23px;
+  }
+
+  .dets1,
+  .vals1 {
+    font-size: 19px;
+    padding: 15px 15px 15px 0;
+  }
+
+  .memberRight {
+    justify-content: flex-start;
+  }
+
+  .dashboard {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 482px) {
+  .memberLeft {
+    width: 17%;
+  }
+
+  .memberRight {
+    width: 83%;
+  }
+
+  .dashboardTop img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dashboardTop h1,
+  h2 {
+    font-size: 13px;
+  }
+
+  .Position .name {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .headInnerText {
+    font-size: 20px;
+  }
+
+  .dets1,
+  .vals,
+  .vals1 {
+    font-size: 16px;
+  }
+
+  .dashboard {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  .memberRight {
+    padding: 10px 0 40px 0;
+  }
+
+  .proHeading {
+    padding-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #profile {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 394px) {
+  .memberRight {
+    padding: 10px 10px 40px 15px;
+  }
+}
+
+@media (max-width: 348px) {
+  .memberRight {
+    padding: 10px 0 30px 15px;
+  }
+}
+
+@media (max-width: 298px) {
+  .proHeading {
+    font-size: 22px;
+  }
+
+  .vals,
+  .vals1,
+  .dets1 {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* Registration css */
+.registrationsTop {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.filter {
+  background-color: #424243;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Mulish";
+  font-weight: 500;
+  font-size: 15.7863px;
+  line-height: 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+.filter img {
+  margin-right: 20px;
+}
+
+.registrationsTop h1 {
+  font-family: "Mulish";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 21px;
+  letter-spacing: 0.005em;
+  margin-left: 50px;
+  color: #ffffff;
+}
+
+.registrationsBottom {
+  margin-top: 54px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.registrationTable {
+  width: 80%;
+}
+
+.tableData,
+.tableHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 42px;
+}
+
+.scroll {
+  max-height: 700px;
+  overflow-y: auto;
+  padding-right: 40px;
+  margin-right: -40px;
+}
+
+.font1 {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 21.1512px;
+  line-height: 29px;
+}
+
+.tableData {
+  border: 1.5px #808080 solid;
+  background-color: #1c1b1b;
+  border-radius: 16px;
+  margin-bottom: 64px;
+
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 20.2296px;
+  line-height: 25px;
+}
+
+/* event registrations */
+
+.row {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  padding: 29px 42px;
+  /* height: 247.53px; */
+  border: 1.5px #808080 solid;
+  border-radius: 16px;
+  margin-bottom: 64px;
+
+  font-family: "Mulish";
+  font-weight: 600;
+  font-size: 20.2296px;
+  line-height: 25px;
+}
+
+.eTableData {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desc {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.media,
+.mediaBottom,
+.mediaTop {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.source {
+  border: 1.5px #808080 solid;
+  background-color: #1c1b1b;
+  border-radius: 16px;
+  padding: 10px;
+
+  /* height: 87px; */
+  margin-bottom: 20px;
+  height: 100%;
+  width: 45%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.registrationTable td,
+th {
+  width: 23%;
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .row {
+    font-size: 18px;
+    /* height: 280px; */
+  }
+
+  .source {
+    height: 90%;
+  }
+}
+
+@media (max-width: 1175px) {
+  .row,
+  .tableHead,
+  .tableData {
+    padding: 29px 25px;
+  }
+
+  .tableHead {
+    margin-right: 10px;
+  }
+
+  .font1 {
+    font-size: 19px;
+  }
+
+  .registrationTable {
+    width: 90%;
+  }
+
+  .registrationsTop h1 {
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1040px) {
+  .registrationsTop h1 {
+    line-height: 30px;
+    font-size: 35px;
+  }
+
+  .media {
+    flex-wrap: wrap;
+  }
+
+  .source {
+    margin-bottom: 0px;
+    height: 100%;
+    padding: 20px;
+    width: 40%;
+  }
+
+  .mediaTop {
+    margin-bottom: 15px;
+  }
+}
+
+/* @media(max-width:880) {
+    .memberRight {
+        max-height: 880px;
+        overflow-y: auto;
+    }
+} */
+@media (max-width: 733px) {
+  .registrationsTop h1 {
+    margin-left: 30px;
+  }
+
+  .source {
+    width: 43%;
+  }
+
+  .row,
+  .tableHead,
+  .tableData {
+    padding: 29px 15px;
+  }
+
+  .tableData {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 620px) {
+  .registrationsTop h1 {
+    font-size: 30px;
+    margin-left: 25px;
+  }
+
+  .row,
+  .tableHead,
+  .tableData {
+    font-size: 16px;
+    padding: 18px 9px;
+  }
+
+  .tableData {
+    padding-right: 30px;
+  }
+
+  .font1 {
+    font-size: 16px;
+  }
+
+  .source {
+    width: 40%;
+  }
+
+  /* .mediaTop, .mediaBottom {
+        justify-content: space-between;
+    } */
+}
+
+@media (max-width: 580px) {
+  .registrationsTop h1 {
+    font-size: 25px;
+    margin-left: 25px;
+  }
+
+  .source {
+    margin-bottom: 0px;
+    height: 100%;
+    padding: 12px;
+  }
+
+  .mediaTop {
+    margin-bottom: 8px;
+  }
+
+  .registrationTable th,
+  td {
+    width: 30%;
+  }
+}
+
+@media (max-width: 425px) {
+  .source {
+    width: 44%;
+  }
+
+  .tableHead {
+    margin-right: 10px;
+    /* padding-right: 50px; */
+    padding-left: 10px;
+  }
+
+  .tableData {
+    padding-right: 35px;
+  }
+
+  .registrationsTop h1 {
+    font-size: 25px;
+    line-height: 30px;
+    margin-left: 0;
+  }
+
+  .row {
+    font-size: 14px;
+  }
+
+  .font1 {
+    font-size: 14px;
+  }
+
+  .registrationTable {
+    width: 95%;
+  }
+}

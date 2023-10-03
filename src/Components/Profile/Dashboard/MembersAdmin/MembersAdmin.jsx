@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import memberCSS from "./css/MembersAdmin.module.css";
+import memberCSS from "../../../css/Profile/Dashboard/MembersAdmin/MembersAdmin.module.css";
 
 import ViewMembers from "./ViewMembers";
 import ViewAlumni from "./ViewAlumni";

@@ -7,16 +7,20 @@ import AuthContext from "../store/auth-context";
 // css
 import pageCss from "./Css/Page.module.css";
 
-// Components
+// icons
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-import EventAdmin from "../Components/Profile/EventAdmin";
+
+// Components - Dashboard
+import Profile from "../Components/Profile/Dashboard/Profile";
+import EventAdmin from "../Components/Profile/Dashboard/EventAdmin/EventAdmin";
+import EventForm from "../Components/Profile/Dashboard/EventForm/EventForm";
+import MembersAdmin from "../Components/Profile/Dashboard/MembersAdmin/MembersAdmin";
+
+// Components
 import UpdateProfile from "../Components/Profile/UpdateProfile";
-import Profile from "../Components/Profile/Profile";
-import EventForm from "../Components/Profile/EventForm";
-import MembersAdmin from "../Components/Profile/Admin Member/MembersAdmin";
 
 function Page() {
   const [designation, setDesignation] = useState("");

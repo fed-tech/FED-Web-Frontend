@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import MemCards from "./MemCards";
 
-import viewAlumniCSS from "./css/ViewAlumni.module.css";
-import AuthContext from "../../../store/auth-context";
+import viewAlumniCSS from "../../../css/Profile/Dashboard/MembersAdmin/viewAlumni.module.css";
+import AuthContext from "../../../../store/auth-context";
 
 export default function ViewAlumni() {
   const [alumni, setAlumni] = useState([]);

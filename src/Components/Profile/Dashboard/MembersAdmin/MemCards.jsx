@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 
-import memCardCSS from "./css/MemCards.module.css";
-import AuthContext from "../../../store/auth-context";
+import memCardCSS from "../../../css/Profile/Dashboard/MembersAdmin/MemCards.module.css";
+import AuthContext from "../../../../store/auth-context";
 
 export default function MemCards(props) {
   const [dept, setDept] = useState("");

@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 // css
-import formCss from "../Profile/cssp/EventForm.module.css";
-import addCss from "../Profile/cssp/AddField.module.css"
+import formCss from "../../../css/Profile/Dashboard/EventForm/EventForm.module.css";
+import addCss from "../../../css/Profile/Dashboard/EventForm/AddField.module.css"
 export default function AddField({ idx, setShowFields, showFields, handleDelete }) {
 
     const handleValues = (e) => {

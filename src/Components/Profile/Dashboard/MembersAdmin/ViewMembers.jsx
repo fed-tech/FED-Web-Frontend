@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import MemCards from "./MemCards";
 import axios from "axios";
 
-import viewMemCSS from "./css/ViewMembers.module.css";
-import AuthContext from "../../../store/auth-context";
+import viewMemCSS from "../../../css/Profile/Dashboard/MembersAdmin/ViewMembers.module.css";
+import AuthContext from "../../../../store/auth-context";
 
 export default function ViewMembers() {
   const [members, setMembers] = useState([]);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import EventCards from './EventCards'
-import './cssp/ViewEvents.css'
+import EventCards from '../../EventCards'
+import '../../../css/Profile/Dashboard/EventAdmin/ViewEvents.css'
 import axios from 'axios';
-import EventDetails from './EventDetails';
+import EventDetails from '../../EventDetails';
 
 function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
   const [events, setEvents] = useState([]);
