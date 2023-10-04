@@ -1,113 +1,171 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from "react";
 import addEventCss from "./cssp/AddEvent.css";
-import axios from 'axios';
+import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import AuthContext from '../../store/auth-context';
-import ImageModal from './ImageModal';
+import AuthContext from "../../store/auth-context";
+import ImageModal from "./ImageModal";
+import { Alert } from "../../MicroInterAction/Alert";
+import validator from "validator";
 
-function AddEvent({setViewEvents}) {
-  const [form,setForm] = useState({
-    title:"",
-    about:"",
-    poster:"",
-    date: new Date(),
-    month:"",
-    reg_type:""
-  });
+function AddEvent({ setViewEvents }) {
+  const authCtx = useContext(AuthContext);
 
   const [previewImage, setPreviewImage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const authCtx = useContext(AuthContext);
+  const [form, setForm] = useState({
+    title: "",
+    about: "",
+    poster: "",
+    date: new Date(),
+    reg_type: "",
+  });
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
 
-  const dataInp = (e)=>{
+  const dataInp = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setForm({...form, [name]: value})
-  }
+    setForm({ ...form, [name]: value });
+  };
 
-  console.log(form)
-  const handleSubmit = async (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (
+      form.title === "" ||
+      form.about === "" ||
+      form.poster === "" ||
+      form.reg_type === ""
+    ) {
+      setError({
+        mainColor: "#FDEDED",
+        secondaryColor: "#F16360",
+        symbol: "error",
+        title: "Error",
+        text: "Please fill all the fields",
+        val: true,
+      });
+      return;
+    }
+    if (!validator.isURL(form.poster)) {
+      setError({
+        mainColor: "#FFF4E5",
+        secondaryColor: "#FFA117",
+        symbol: "warning",
+        title: "Warning",
+        text: "Invalid Image Link",
+        val: true,
+      });
+      return;
+    }
     const obj = {
       title: form.title,
       description: form.about,
       image: form.poster,
       date: form.date,
-      month: form.month,
-      registration: form.reg_type
-    }
-    const response = await axios.post('/event/addevent',obj,{
+      registration: form.reg_type,
+    };
+    const response = await axios.post("/event/addevent", obj, {
       headers: {
-          'Authorization': authCtx.token
-      }})
-      console.log(response)
-      if(response.status === 202)
-      {
-        console.log(response)
-        console.log("Added event")
-        setViewEvents(true);
-      }
-      else{
-        console.log("Not added");
-      }
-
-  }
+        Authorization: authCtx.token,
+      },
+    });
+    console.log(response);
+    if (response.status === 202) {
+      console.log(response);
+      console.log("Added event");
+      setViewEvents(true);
+    } else {
+      console.log("Not added");
+    }
+  };
 
   const handlePreview = () => {
     console.log("check handle");
     setPreviewImage(form.poster);
     setIsModalOpen(true);
-  }
+  };
   const handleDateChange = (date) => {
-    setForm(prevState => ({ ...prevState, date: date }));
-  }
+    setForm((prevState) => ({ ...prevState, date: date }));
+  };
   const handleRegTypeChange = (e) => {
-    setForm(prevState => ({ ...prevState, reg_type: e.target.value }));
-  }
-  // const handleChangeMonth=(month)=>setForm((prevState)=>( {...prevState , month}))
+    setForm((prevState) => ({ ...prevState, reg_type: e.target.value }));
+  };
   const closeModal = () => {
     setIsModalOpen(false);
-  }
+  };
 
   return (
-    <div className='addevent'>
-        <form action="">
-            <input type="text" placeholder='Event Title' name='title' onChange={dataInp}/>
-            <input type="textarea" placeholder='About the Event'   name='about' onChange={dataInp}/>
-            {/* <textarea placeholder='About the Event'  name='about' onChange={dataInp}/> */}
-            {/* <div className='about_event'>
+    <div className="addevent">
+      <form action="">
+        <input
+          type="text"
+          placeholder="Event Title"
+          name="title"
+          onChange={dataInp}
+        />
+        <input
+          type="textarea"
+          placeholder="About the Event"
+          name="about"
+          onChange={dataInp}
+        />
+        {/* <textarea placeholder='About the Event'  name='about' onChange={dataInp}/> */}
+        {/* <div className='about_event'>
               {form.about}
             </div> */}
-            <div className='event_poster'>
-              <input type="text" placeholder='Poster Link' name='poster' onChange={dataInp}/>
-              {/*<a href={form.poster} target='blank' className='preview_btn'>Preview</a>*/}
-              <button type="button" className='preview_btn' onClick={handlePreview}>Preview</button>
-            </div>
-            <div className={addEventCss.addEvent}> 
-                <DatePicker
-                selected={form.date} 
-                onChange={handleDateChange} 
-                dateFormat="dd/MM/yyyy"
-                placeholderText="dd/mm/yyyy"
-               />
-            <select placeholder='Registration type' name='reg_type' onChange={handleRegTypeChange}
-            className='regdropdown'>
-              <option value="">Select Registration Type</option>
-              <option value="upcoming">Upcoming</option>
-              <option value="closed">Closed</option>
-              <option value="now">Now</option>
-            </select>
-          </div>
-            <div className='inp_btn'>
-              <input type="submit" value="Submit" className='submit_btn' onClick={handleSubmit}/>
-            </div>
-        </form>
-        {isModalOpen && (
+        <div className="event_poster">
+          <input
+            type="text"
+            placeholder="Poster Link"
+            name="poster"
+            onChange={dataInp}
+          />
+          {/*<a href={form.poster} target='blank' className='preview_btn'>Preview</a>*/}
+          <button type="button" className="preview_btn" onClick={handlePreview}>
+            Preview
+          </button>
+        </div>
+        <div className={addEventCss.addEvent}>
+          <DatePicker
+            selected={form.date}
+            onChange={handleDateChange}
+            dateFormat="dd/MM/yyyy"
+            placeholderText="dd/mm/yyyy"
+          />
+          <select
+            placeholder="Registration type"
+            name="reg_type"
+            onChange={handleRegTypeChange}
+            className="regdropdown"
+          >
+            <option value="">Select Registration Type</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="closed">Closed</option>
+            <option value="now">Now</option>
+          </select>
+        </div>
+        <div className="inp_btn">
+          <input
+            type="submit"
+            value="Submit"
+            className="submit_btn"
+            onClick={handleSubmit}
+          />
+        </div>
+      </form>
+      {isModalOpen && (
         <ImageModal imageUrl={previewImage} onClose={closeModal} />
       )}
+      <Alert variant={variants} val={setError} />
     </div>
-  )
+  );
 }
 
-export default AddEvent
+export default AddEvent;

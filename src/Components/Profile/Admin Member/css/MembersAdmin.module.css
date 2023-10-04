@@ -33,3 +33,20 @@
         height: 700px;
     }
 }
+@media (max-width: 768px)
+{
+    .memNav{
+        font-size: larger;
+    }
+}
+@media (max-width: 630px)
+{
+    .memNav{
+        font-size: larger;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+}
