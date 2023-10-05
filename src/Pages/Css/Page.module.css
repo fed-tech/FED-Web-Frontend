@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 26.2%;
+  width: 20.2%;
   min-width: 180px;
 }
 
@@ -30,8 +30,8 @@
   border-right: 3px solid #808080;
   margin-top: 44px;
   margin-bottom: 119px;
-  padding: 0 42px 42px 62px;
-  width: 100%;
+  padding: 0 75px 0px 0px;
+  width: 65%;
   padding-bottom: 200px;
 }
 
@@ -40,10 +40,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 18px;
+  padding-top: 0px;
 }
 
-.DASHBOARD {
+/*.DASHBOARD {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -51,7 +51,7 @@
   line-height: clamp(1.2rem, 1.5vw + 1rem, 1.5rem);
   color: #999999;
   text-align: center;
-}
+}*/
 
 .profilePic {
   display: flex;
@@ -62,7 +62,8 @@
   width: 200px;
   height: 200px;
   border-radius: 15px;
-  margin-top: 27px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .name,
@@ -110,6 +111,8 @@
   line-height: 21px;
   letter-spacing: 0.005em;
   align-items: center;
+  padding-right: 30%;
+  text-align: center;
 }
 
 .dashboardBottom_options {
@@ -284,8 +287,18 @@
 
 @media (max-width: 830px) {
   .dashboard {
-    padding-right: 40px;
-    padding-left: 40px;
+    width:100%;
+    margin-right: 0px;
+  }
+
+  .pageLeft {
+    padding-top: 162px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20.2%;
+    min-width: 180px;
+    padding-right: 2px;
   }
 
   .profilePic img {
@@ -299,10 +312,12 @@
 
   .profilePic {
     justify-content: unset;
+    margin-bottom: -10px;
   }
 
   .dashboardBottom {
-    align-items: flex-start;
+    align-items: center;
+    padding-left: 10px;
   }
 
   .dashboardBottom p {

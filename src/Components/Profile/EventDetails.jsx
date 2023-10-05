@@ -10,7 +10,11 @@ import { Alert } from "../../MicroInterAction/Alert";
 // import logo from "../../Img/image26.png"
 function EventDetails({ cardNo, setShow }) {
   const authCtx = useContext(AuthContext);
-  const [loading,setLoading] = useState(true)
+  const [loading,setLoading] = useState(true);
+  const [deleting,setDeleting] = useState(false);
+  const [editing,setEditing] = useState(false);
+  const [deletingform,setDeletingForm] = useState(false);
+  const [viewingform,setViewingForm] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [alertMessage, setAlertMessage] = useState("");
   const [forms,setForms] = useState([])
@@ -62,12 +66,45 @@ function EventDetails({ cardNo, setShow }) {
       const response = await api.delete(`/event/deleteevent/${id}`);
       console.log(response);
       if (response.status === 200) {
-        console.log("Event deleted");
-        setShow(false);
+
+        setDeleting(true);
+
+        setError({
+          mainColor: "pink",
+          secondaryColor: "orange",
+          symbol: "check",
+          title: "Success",
+          text: "Event deleted successfully!",
+          val: true,
+        });
+        
+        setTimeout(() => {
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });
+  
+          console.log("Event deleted");
+          setShow(false);
+          window.scrollTo(0, 0);
+        }, 2000);
+        
       }
     } catch (err) {
       console.log(err);
     }
+  };
+
+  const handleEdit = async () => {
+
+    setEditing(true);
+    setTimeout(() => {
+      setEditing(false);
+    }, 1000);
   };
 
   const handleDeleteform = async () => {  
@@ -76,9 +113,37 @@ function EventDetails({ cardNo, setShow }) {
       const response = await api.delete(`/form/deleteForm?formid=${id}`);
       console.log(response);
       if (response.status === 200) {
-        setAlertMessage("Form Deleted Successfully !");
-        handleCloseModal();
-        makeRequest()
+
+        setDeletingForm(true);
+        setTimeout(() => {
+          setDeletingForm(false);
+        }, 500);
+
+        setError({
+          mainColor: "pink",
+          secondaryColor: "orange",
+          symbol: "check",
+          title: "Success",
+          text: "Form deleted successfully!",
+          val: true,
+        });
+        
+        setTimeout(() => {
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });
+  
+          console.log("Form deleted");
+          handleCloseModal();
+          makeRequest()
+          window.scrollTo(0, 0);
+        }, 2000);
+        
       }
     } catch (err) {
       console.log(err);
@@ -87,13 +152,39 @@ function EventDetails({ cardNo, setShow }) {
 
   //overall functionality still remaining
   const handleViewform = async () => {
-    setAlertMessage("Form Viewed Successfully !");
+
+    setViewingForm(true);
     setTimeout(() => {
-      setAlertMessage("");
+      setViewingForm(false);
+    }, 500);
+
+    setError({
+      mainColor: "pink",
+      secondaryColor: "orange",
+      symbol: "check",
+      title: "Success",
+      text: "Form Viewed successfully!",
+      val: true,
+    });
+    
+    setTimeout(() => {
+      setError({
+        mainColor: "",
+        secondaryColor: "",
+        symbol: "",
+        title: "",
+        text: "",
+        val: false,
+      });
+
+      console.log("Form viewed");
+      handleCloseModal();
+      window.scrollTo(0, 0);
     }, 2000);
-    handleCloseModal();
+
   };
 
+  
 
   const handleToggle = async () => {
     await api.get(`/form/toggleform?formid=${currentForm._id}`)
@@ -216,12 +307,14 @@ function EventDetails({ cardNo, setShow }) {
                 );
               })}
             </>
-          )}
+          )} 
         </div>
         <div className={eventCss.btns}>
-          <button className={eventCss.edit}>Edit</button>
+          <button className={eventCss.edit} onClick={handleEdit}>
+            {editing ? <Load /> : "Edit"}
+          </button>
           <button className={eventCss.delete} onClick={handleDelete}>
-            Delete
+            {deleting ? <Load /> : "Delete"}
           </button>
         </div>
       </div>
@@ -253,18 +346,24 @@ function EventDetails({ cardNo, setShow }) {
               <label>{currentForm.maxReg}</label>
             </div>
           </div>
-          <button onClick={handleDeleteform}>Delete Form</button>
-          <button onClick={handleViewform}>View Form</button>
-
-          <label className={eventCss.switch}>
-            <input
-              input
-              type="checkbox"
-              checked={isToggleOn}
-              onChange={handleToggle}
-            />
-            <span className={eventCss.slider}></span>
-          </label>
+          <div className={eventCss.modbtns}>
+            <button onClick={handleDeleteform}>
+              {deletingform ? <Load /> : "Delete"}
+            </button>
+            <button onClick={handleViewform}>
+              {viewingform ? <Load /> : "View Form"}
+            </button>
+    
+            <label className={eventCss.switch}>
+              <input
+                input
+                type="checkbox"
+                checked={isToggleOn}
+                onChange={handleToggle}
+              />
+              <span className={eventCss.slider}></span>
+            </label>
+          </div>
         </div>
       )}
       <Alert variant={variants} val={setError} />

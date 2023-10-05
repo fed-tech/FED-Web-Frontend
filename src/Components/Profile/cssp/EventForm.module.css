@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
 
 .head {
-    width: 70%;
+    width: 85%;
     margin-bottom: 49px;
 }
 
@@ -64,8 +64,9 @@
 }
 
 .formDiv {
-    width: 75%;
+    width: 80%;
     text-align: center;
+    margin-right: 50px;
 }
 
 .formBottom {
@@ -88,17 +89,19 @@
 }
 
 .formBottom>input, .formBottom select {
-    width: 203px;
+    width: 215px;
 }
 input {
     outline: none; 
 }
 .saveBtn {
     color: #FFF;
+    width: 150px;
+    height: 50px;
     font-size: 20px;
     font-family: Mulish;
     font-weight: 600;
-    padding: 7px 30px;
+    padding: 7px 20px;
     border-radius: 6px;
     cursor: pointer;
     background: #F45725;
@@ -106,6 +109,7 @@ input {
     float: right;
     margin-left: 10px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 select {
@@ -116,8 +120,14 @@ select {
     font-size: 25px;
 }
 
+@media only screen and (max-width: 768px) {
 
-@media only screen and (max-width: 600px) {
+    .head {
+        width: 75%;
+        margin-bottom: 49px;
+        text-align: left;
+        margin-right: 10px;
+    }
 
     .formDiv>input::placeholder, select
     .formBottom>input::placeholder {
@@ -129,7 +139,9 @@ select {
     }
 
     .formDiv {
-        width: 75%;
+        width: 80%;
+        margin-bottom: 30px;
+        margin-right: 5px;
     }
 
     .formBottom {
@@ -149,73 +161,21 @@ select {
         width: 100%;
         margin-bottom: 40px;
     }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: -20px;
+    }
+    .saveBtn {
+        width: 110px;
+        height: 55px;
+        padding: 3px 10px 3px 10px;
+        font-size: 16.5px;
+        font-weight: 70;
 
+    }
     /* select {
         font-size: 18px;
     } */
-}
-
-
-
-
-
-
-
-
-
-/* Calendar Container */
-.calendar-container {
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  font-family: Arial, sans-serif;
-}
-
-/* Calendar Header */
-.calendar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 8px;
-}
-
-/* Previous and Next Month Buttons */
-.prev-month-btn,
-.next-month-btn {
-  cursor: pointer;
-}
-
-/* Calendar Grid */
-.calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 4px;
-}
-
-/* Calendar Day Cell */
-.day-cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 30px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
-/* Current Month Day */
-.current-month-day {
-  background-color: #fff;
-}
-
-/* Previous Month Day */
-.previous-month-day {
-  color: #ccc;
-}
-
-/* Selected Day */
-.selected-day {
-  background-color: #007bff;
-  color: #fff;
 }

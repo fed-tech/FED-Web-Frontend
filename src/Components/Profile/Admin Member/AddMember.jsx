@@ -9,8 +9,21 @@ import AuthContext from "../../../store/auth-context";
 //css
 import memberCSS from "./css/AddMember.module.css";
 
+import Load from "../../../MicroInterAction/Load";
+import { Alert } from "../../../MicroInterAction/Alert";
+
 export default function AddMember() {
   const authCtx = useContext(AuthContext);
+  const [savingal,setSavingAl] = useState(false);
+
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
 
   const [data, setData] = useState({
     name: "",
@@ -32,22 +45,11 @@ export default function AddMember() {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSave = async (e) => {
     e.preventDefault();
     const { name, email, img, access, blur, github, linkedin } = data;
 
-    if (
-      name === "" ||
-      email === "" ||
-      access == "" ||
-      img == "" ||
-      blur == "" ||
-      github == "" ||
-      linkedin == ""
-    ) {
-      console.log("Please Fill All Fields");
-      return;
-    }
+    setSavingAl(true);
     try {
       const res = await axios.post(
         "/member/addMember",
@@ -66,21 +68,69 @@ export default function AddMember() {
           },
         }
       );
-      if (res.data.status) {
+      if (res.data.status===200) {
         console.log(res.data.status);
-        setData({
-          name: "",
-          email: "",
-          img: "",
-          access: "",
-          blur: "",
-          github: "",
-          linkedin: "",
+
+        setError({
+          mainColor: "pink",
+          secondaryColor: "orange",
+          symbol: "check",
+          title: "Success",
+          text: "Member Added successfully!",
+          val: true,
         });
-        window.scrollTo(0, 0);
+        
+        // Set a delay before resetting to the initial state and hiding the success message
+        setTimeout(() => {
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });
+  
+          setData({
+            name: "",
+            email: "",
+            img: "",
+            access: "",
+            blur: "",
+            github: "",
+            linkedin: "",
+          });
+
+          setSavingAl(true);
+          window.scrollTo(0, 0);
+        }, 2000);
       }
     } catch (err) {
       console.log(err);
+      setError({
+        mainColor: "lightpink",
+        secondaryColor: "red",
+        symbol: "Error",
+        title: "Check it out",
+        text: "Please fill all the details!",
+        val: true,
+      });
+      
+      // Set a delay before resetting to the initial state and hiding the success message
+      setTimeout(() => {
+        setError({
+          mainColor: "",
+          secondaryColor: "",
+          symbol: "",
+          title: "",
+          text: "",
+          val: false,
+        });
+      }, 2000);
+
+      setTimeout(() => {  
+        setSavingAl(false);
+      }, 500);
     }
   };
 
@@ -140,11 +190,12 @@ export default function AddMember() {
           onChange={DataInp}
         />
         <div className="divButton">
-          <button className={memberCSS.saveBtn} onClick={handleSubmit}>
-            SAVE
+          <button className={memberCSS.saveBtn} onClick={handleSave}>
+            {savingal ? <Load /> : "SAVE"}
           </button>
         </div>
       </form>
+      <Alert variant={variants} val={setError} />
     </>
   );
 }

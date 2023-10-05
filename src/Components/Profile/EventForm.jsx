@@ -3,9 +3,14 @@ import React, { useRef, useEffect, useState, useContext } from "react";
 // css
 import formCss from "../Profile/cssp/EventForm.module.css";
 import AddField from "./AddField";
+
+import Load from "../../MicroInterAction/Load";
 import { Alert } from "../../MicroInterAction/Alert";
+
 import axios from "axios";
+
 import AuthContext from "../../store/auth-context";
+
 export default function Form() {
   const [variants, setError] = useState({
     mainColor: "",
@@ -19,8 +24,11 @@ export default function Form() {
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
   const [selectedEventType, setSelectedEventType] = useState("");
-
   const authCtx = useContext(AuthContext);
+
+  const [saving,setSaving] = useState(false);
+  const [adding,setAdding] = useState(false);
+
   const initialFormState = {
     formTitle: "",
     description:"",
@@ -34,13 +42,16 @@ export default function Form() {
 
   const handleSave = async (e) => {
     e.preventDefault();
-    
+  
     if (hideAmount) {
       setShowFields((prev) => {
         const formData = { ...prev, amount: 0 };
         return formData;
       });
     }
+  
+    setSaving(true);
+  
     const formDetails = showFields;
     try {
       console.log("Check form save");
@@ -53,7 +64,7 @@ export default function Form() {
           priority: formDetails.priority,
           formelement: formDetails.fields,
           event: formDetails.eventName,
-          maxReg: formDetails.maxReg
+          maxReg: formDetails.maxReg,
         },
         {
           headers: {
@@ -61,14 +72,64 @@ export default function Form() {
           },
         }
       );
-      if (res.status == 200) {
-        window.scrollTo(0, 0);
-        setShowFields(initialFormState);
+      if (res.status === 200) {
+        
+        setError({
+          mainColor: "pink",
+          secondaryColor: "orange",
+          symbol: "check",
+          title: "Success",
+          text: "Form saved successfully!",
+          val: true,
+        });
+        
+        // Set a delay before resetting to the initial state and hiding the success message
+        setTimeout(() => {
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });
+  
+          setShowFields(initialFormState);
+          setSaving(false);
+
+          window.scrollTo(0, 0);
+        }, 2000);
       }
     } catch (err) {
       console.log(err);
+      setError({
+        mainColor: "lightpink",
+        secondaryColor: "red",
+        symbol: "Error",
+        title: "Check it out",
+        text: "Please fill all the details!",
+        val: true,
+      });
+      
+      // Set a delay before resetting to the initial state and hiding the success message
+      setTimeout(() => {
+        setError({
+          mainColor: "",
+          secondaryColor: "",
+          symbol: "",
+          title: "",
+          text: "",
+          val: false,
+        });
+      }, 2000);
+
+      setTimeout(() => {  
+        setSaving(false);
+      }, 500);
+
     }
   };
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -107,6 +168,12 @@ export default function Form() {
       currState.fields.push({});
       return currState;
     });
+
+    setAdding(true);
+
+    setTimeout(() => {
+      setAdding(false);
+    }, 500);
   };
 
   const handleDropDownChange = (e) => {
@@ -269,12 +336,12 @@ export default function Form() {
           value={showFields.maxReg || ""}
         />
         {fields}
-        <div>
+        <div className={formCss.buttons}>
           <button className={formCss.saveBtn} onClick={handleAdd}>
-            ADD FIELD
+            {adding ? <Load /> : "ADD FIELD"}
           </button>
           <button type="submit" className={formCss.saveBtn} onClick={handleSave}>
-            SAVE
+            {saving ? <Load /> : "SAVE"}
           </button>
         </div>
       </form>

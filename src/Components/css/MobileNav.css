@@ -133,9 +133,10 @@
   }
 
   .mobileNavListChild {
-    margin-left: 20px;
-    margin-top: 37px;
+    margin-left: 10%;
+    margin-top: 20%;
     width: 80%;
+    align-items: center;
   }
 
   .liTag {
@@ -152,11 +153,18 @@
   .mobileListProfile {
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
+  .mobileListProfile .username{
+    margin-top: 140px;
+    position: absolute;
+  }
+
   .profile_img {
+    margin-top: 20px;
     width: 50px;
     height: 50px;
     aspect-ratio: 1/1;

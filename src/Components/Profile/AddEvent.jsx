@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import './cssp/AddEvent.css';
 import axios from 'axios';
 import AuthContext from '../../store/auth-context';
+import Load from "../../MicroInterAction/Load";
+import { Alert } from "../../MicroInterAction/Alert";
 import ImageModal from './ImageModal';
 
 function AddEvent({setViewEvents}) {
@@ -13,10 +15,20 @@ function AddEvent({setViewEvents}) {
     month:"",
     reg_type:""
   });
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
 
   const [previewImage, setPreviewImage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const authCtx = useContext(AuthContext);
+
+  const [submitting,setSubmitting] = useState(false);
 
   const dataInp = (e)=>{
     const name = e.target.name;
@@ -24,32 +36,90 @@ function AddEvent({setViewEvents}) {
     setForm({...form, [name]: value})
   }
 
-  console.log(form)
   const handleSubmit = async (e)=>{
+
     e.preventDefault();
-    const obj = {
-      title: form.title,
-      description: form.about,
-      image: form.poster,
-      date: form.date,
-      month: form.month,
-      registration: form.reg_type
-    }
-    const response = await axios.post('http://localhost:5000/event/addevent',obj,{
-      headers: {
-          'Authorization': authCtx.token
-      }})
-      console.log(response)
-      if(response.status === 202)
-      {
-        console.log(response)
-        console.log("Added event")
-        setViewEvents(true);
-      }
-      else{
-        console.log("Not added");
+    setSubmitting(true);
+
+    try {
+      const response = await axios.post(
+        "/events/addEvent",
+        {
+        title: form.title,
+        description: form.about,
+        image: form.poster,
+        date: form.date,
+        month: form.month,
+        registration: form.reg_type
+        },
+        {
+        headers: {
+          Authorization: authCtx.token,
+          }
+        }
+      )
+      console.log("Response status 1:", err.response.status);
+
+      if(response.status === 202){
+        console.log(form);
+        console.log("Added event");
+        console.log("Response status 2:", err.response.status);
+
+        setError({
+          mainColor: "pink",
+          secondaryColor: "orange",
+          symbol: "check",
+          title: "Success",
+          text: "Event submitted successfully!",
+          val: true,
+        });
+        
+        // Set a delay before resetting to the initial state and hiding the success message
+        setTimeout(() => {
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });
+
+          setSubmitting(false);
+          setViewEvents(true);
+          window.scrollTo(0, 0);
+        }, 2000);
       }
 
+    } catch (err) {
+      console.log(form);
+      console.log("Response status 3:"); // Log the response status
+      setError({
+        mainColor: "lightpink",
+        secondaryColor: "red",
+        symbol: "Error",
+        title: "Check it out",
+        text: "Please fill all the details!",
+        val: true,
+      });
+        
+        // Set a delay before resetting to the initial state and hiding the success message
+        setTimeout(() => {
+          setError({
+            mainColor: "",
+            secondaryColor: "",
+            symbol: "",
+            title: "",
+            text: "",
+            val: false,
+          });   
+        }, 2000);
+
+        setTimeout(() => {  
+            setSubmitting(false);
+        }, 300);
+
+      }
   }
 
   const handlePreview = () => {
@@ -79,9 +149,12 @@ function AddEvent({setViewEvents}) {
             </div>
             <input type="text" placeholder='Registration Type' name='reg_type' onChange={dataInp}/>
             <div className='inp_btn'>
-              <input type="submit" value="Submit" className='submit_btn' onClick={handleSubmit}/>
+              <button type="submit" value="Submit" className='submit_btn' onClick={handleSubmit}>
+                {submitting ? <Load /> : "SUBMIT"}
+              </button>
             </div>
         </form>
+        <Alert variant={variants} val={setError} />
         {isModalOpen && (
         <ImageModal imageUrl={previewImage} onClose={closeModal} />
       )}

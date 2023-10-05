@@ -25,11 +25,7 @@ export default function Nav(props) {
           </Link>
           <div className="listDiv">
             <ul id="NavUl">
-              <li>
-                <NavLink to="/" className="liTag">
-                  Home
-                </NavLink>
-              </li>
+             
               <li>
                 <NavLink to="/event" className="liTag">
                   Events
