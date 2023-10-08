@@ -8,6 +8,7 @@ import AuthContext from "../../../store/auth-context";
 
 //css
 import memberCSS from "./css/AddMember.module.css";
+import { Alert } from "../../../MicroInterAction/Alert";
 
 export default function AddMember() {
   const authCtx = useContext(AuthContext);
@@ -20,6 +21,14 @@ export default function AddMember() {
     blur: "",
     github: "",
     linkedin: "",
+  });
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
   });
 
   const DataInp = (e) => {
@@ -46,6 +55,14 @@ export default function AddMember() {
       linkedin == ""
     ) {
       console.log("Please Fill All Fields");
+      setError({
+        mainColor: "#FDEDED",
+        secondaryColor: "#F16360",
+        symbol: "error",
+        title: "Error",
+        text: "Please fill all the fields",
+        val: true,
+      });
       return;
     }
     try {
@@ -145,6 +162,7 @@ export default function AddMember() {
           </button>
         </div>
       </form>
+      <Alert variant={variants} val={setError} />
     </>
   );
 }

@@ -43,3 +43,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+@media screen and (max-width:350px) {
+    .card{
+        width: 200px;
+        margin-left: 5px;
+    }
+}

@@ -23,25 +23,16 @@ export default function Form() {
   const authCtx = useContext(AuthContext);
   const initialFormState = {
     formTitle: "",
-    description:"",
+    description: "",
     eventName: "",
     eventType: "",
     amount: hideAmount ? 0 : "",
     priority: "",
-    maxReg:0,
+    maxReg: 0,
     fields: [{}],
   };
 
-  const handleSave = async (e) => {
-    e.preventDefault();
-    
-    if (hideAmount) {
-      setShowFields((prev) => {
-        const formData = { ...prev, amount: 0 };
-        return formData;
-      });
-    }
-    const formDetails = showFields;
+  const sendData = async (formDetails) => {
     try {
       console.log("Check form save");
       const res = await axios.post(
@@ -53,7 +44,7 @@ export default function Form() {
           priority: formDetails.priority,
           formelement: formDetails.fields,
           event: formDetails.eventName,
-          maxReg: formDetails.maxReg
+          maxReg: formDetails.maxReg,
         },
         {
           headers: {
@@ -67,6 +58,72 @@ export default function Form() {
       }
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  const handleSave = async (e) => {
+    e.preventDefault();
+
+    if (hideAmount) {
+      setShowFields((prev) => {
+        const formData = { ...prev, amount: 0 };
+        return formData;
+      });
+    }
+    const formDetails = showFields;
+    if (
+      formDetails.formTitle === "" ||
+      formDetails.description === "" ||
+      (hideAmount
+        ? formDetails.amount === ""
+        : formDetails.amount === 0 || formDetails.amount === "") ||
+      formDetails.priority === "" ||
+      formDetails.eventName == "" ||
+      formDetails.maxReg === 0 ||
+      formDetails.maxReg === ""
+    ) {
+      setError({
+        mainColor: "#FDEDED",
+        secondaryColor: "#F16360",
+        symbol: "error",
+        title: "Error",
+        text: "Please fill all the fields",
+        val: true,
+      });
+      return;
+    } else {
+      var flag = false;
+      formDetails.fields.forEach((element) => {
+        if (Object.keys(element).length == 3) {
+          flag = false;
+          if (element.name == "" || element.type == "" || element.value == "") {
+            setError({
+              mainColor: "#FDEDED",
+              secondaryColor: "#F16360",
+              symbol: "error",
+              title: "Error",
+              text: "Please fill all the fields",
+              val: true,
+            });
+            return;
+          }
+          flag = true;
+        } else {
+          flag = false;
+          setError({
+            mainColor: "#FDEDED",
+            secondaryColor: "#F16360",
+            symbol: "error",
+            title: "Error",
+            text: "Please fill all the fields",
+            val: true,
+          });
+          return;
+        }
+      });
+      if (flag) {
+        sendData(formDetails);
+      }
     }
   };
 
@@ -230,7 +287,11 @@ export default function Form() {
           value={showFields.eventType || ""}
         >
           <option value="" hidden>
-            {selectedEventType === "paid" ? "Paid" : selectedEventType === "free" ? "Free" : "Event Type*"}
+            {selectedEventType === "paid"
+              ? "Paid"
+              : selectedEventType === "free"
+              ? "Free"
+              : "Event Type*"}
           </option>
           <option value="paid" className={formCss.formDropDownOption}>
             Paid
@@ -259,7 +320,7 @@ export default function Form() {
           placeholder="Priority*"
           value={showFields.priority || ""}
         />
-          <input
+        <input
           onChange={handleChange}
           required
           name="maxReg"
@@ -273,7 +334,11 @@ export default function Form() {
           <button className={formCss.saveBtn} onClick={handleAdd}>
             ADD FIELD
           </button>
-          <button type="submit" className={formCss.saveBtn} onClick={handleSave}>
+          <button
+            type="submit"
+            className={formCss.saveBtn}
+            onClick={handleSave}
+          >
             SAVE
           </button>
         </div>
