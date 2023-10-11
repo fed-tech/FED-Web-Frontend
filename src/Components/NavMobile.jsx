@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink,useNavigate  } from "react-router-dom";
 import "./css/MobileNav.css";
 // state
 import AuthContext from "./../store/auth-context";
@@ -11,6 +11,12 @@ export default function NavMobile(props) {
     setCount(true);
   }
   const authCtx = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("/Login");
+    authCtx.logout();
+  };
   return (
     <header>
       <nav className="mobileNav">
@@ -52,6 +58,7 @@ export default function NavMobile(props) {
                 srcset=""
                 className="profile_img"
               />
+              <div className="username">{authCtx.user.name}</div>
             </NavLink>
           )}
         </div>
@@ -80,6 +87,32 @@ export default function NavMobile(props) {
               Our Team
             </NavLink>
           </div>
+
+          <div class="mobileList">
+            <NavLink
+              // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+              to={authCtx.isLoggedIn ? "/Login" : "/Login"}
+              className="liTag"
+              onClick={handleLogout}
+            >
+              {authCtx.isLoggedIn ? (
+                "Logout"
+              ) : (
+                "Login/SignUp"
+              )}
+            </NavLink>
+          </div>
+
+          <div class="mobileList">
+            <NavLink
+              to="/Alumni"
+              className="liTag"
+              onClick={() => setCount(false)}
+            >
+              Alumni
+            </NavLink>
+          </div>
+
           {/* <div className="mobileList">
             <NavLink
               to="/Alumni"
@@ -89,6 +122,7 @@ export default function NavMobile(props) {
               Alumni
             </NavLink>
           </div> */}
+
           {/* <div class="mobileList">
             <HashLink
               to="/#ContactUs"
@@ -98,33 +132,9 @@ export default function NavMobile(props) {
               Contact Us
             </HashLink>
           </div> */}
-          <div class="mobileList">
-            <NavLink
-              // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
-              to={authCtx.isLoggedIn ? "/MyProfile/member" : "Register"}
-              className="liTag"
-            >
-              {authCtx.isLoggedIn ? (
-                <img
-                  src={authCtx.user.pic}
-                  alt=""
-                  srcset=""
-                  className="profile_img"
-                />
-              ) : (
-                "Login/SignUp"
-              )}
-            </NavLink>
-          </div>
-          <div class="mobileList">
-            {/* <NavLink
-              to="/Alumni"
-              className="liTag"
-              onClick={() => setCount(false)}
-            >
-              Alumni
-            </NavLink> */}
-          </div>
+
+          
+
         </div>
       </div>
     </header>

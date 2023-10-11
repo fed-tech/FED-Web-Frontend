@@ -33,10 +33,14 @@
         height: 700px;
     }
 }
-@media (max-width: 768px)
-{
+
+@media (max-width: 768px) {
     .memNav{
-        font-size: larger;
+        display: flex;
+        width: 90%;
+        text-align: center;
+        gap: 10px;
+        font-size: 1.1rem;
     }
 }
 @media (max-width: 630px)

@@ -3,15 +3,24 @@
 
 .viewevents{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 1px;
+    grid-template-columns: repeat(2, 1fr);
     overflow-y: scroll;
-    margin-left: 20px;
-    width: 85%;
-    height: 100%;
-    
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 0px;
+    width: 90%;
+    height: 800px;  
+    row-gap:30px; 
+    column-gap: 0px;
+    padding-bottom: 120px;
+
 }
+
+.viewevents::-webkit-scrollbar{
+  width: .3rem;
+  height: .2rem;
+}
+
 .viewEventDets {
   margin-left: 20px;
   width: 85%;
@@ -39,19 +48,38 @@
   display: flex;
   justify-content: center;
 }
-@media(max-width:1408px)
-{
-  .viewevents{
 
-    grid-template-columns: repeat(2, 1fr);
+
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1408px) {
+  .viewevents {
+      grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-}
-@media(max-width:1008px)
-{
-  .viewevents{
+@media (max-width: 1008px) {
+  .viewevents {
+      grid-template-columns: repeat(1, 1fr);
+      width: 120%; 
+      margin-top: 20px; 
+      margin-left: -10px;
+      margin-right: 0px; 
+      row-gap:0px; 
+      column-gap: 30px;
+  }
 
-    grid-template-columns: repeat(1, 1fr);
-}
+  .viewevents::-webkit-scrollbar{
+    width: 0rem;
+    height: 0rem;
+  }
 
+  .viewEventDets {
+      margin-left: 40px;
+  }
+
+  .fullPage {
+      align-items: flex-start;
+  }
 }

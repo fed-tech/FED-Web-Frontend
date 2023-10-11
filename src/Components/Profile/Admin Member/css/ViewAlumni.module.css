@@ -4,11 +4,17 @@
 .viewMem{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 1px;
+    row-gap: 0px;
+    column-gap: 15px;
     overflow-y: scroll;
     height: 100%;
+    width: 90%;
     
+}
+
+.viewMem::-webkit-scrollbar{
+    width: .3rem;
+    height: .2rem;
 }
 
 @media screen and (max-width:1148px) {
@@ -17,8 +23,18 @@
     }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:768px) {
     .viewMem{
         grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin-top: 10px;
+        margin-left: -10px;
+        margin-right: 10px; 
+        row-gap: 30px;
+    }
+
+    .viewMem::-webkit-scrollbar{
+        width: 0rem;
+        height: 0rem;
     }
 }

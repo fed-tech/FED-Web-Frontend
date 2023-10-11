@@ -40,3 +40,12 @@
         height: 700px;
     }
 }
+
+@media (max-width: 768px) {
+    .info_headers{
+        display: flex;
+        width: 90%;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+}

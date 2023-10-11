@@ -7,9 +7,9 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding: 20px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 30px;
+    padding-left: 70px;
+    padding-right: 95px;
 
 }
 .addevent input{
@@ -25,7 +25,7 @@
     background-color: transparent;
     font-size: 20px;
     font-weight: 600;
-    
+    margin-right: 0px;
     color: white;
 }
 .addevent input::placeholder{
@@ -34,28 +34,34 @@
     width: 100%;
 
 }
-.addevent .inp_btn{
+.addevent .inp_btn {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
-    width: 30%;
+    margin-top: 20px;
+    padding-left: 90px; /* Adjust margin-right */
+    width: 150px;
+    height: 50px;
     float: right;
 
 }
-.addevent .inp_btn .submit_btn{
-    padding: 10px 10px;
-    width: 100%;
+
+.addevent .inp_btn .submit_btn {
+    padding: 10px 20px; /* Adjust padding for more space */
     border-radius: 6px;
     font-family: Mulish;
-    font-weight: 600;
+    font-size: 18px;
+    height: 50px;
+    width: 120px;
+    min-width: 120px;
     background-color: #f45725;
     border: none;
     outline: none;
     color: white;
     cursor: pointer;
-    border: none;
-    
+    margin-right: auto; /* Push the button to the right corner */
 }
+
+
 
 .addevent_date{
     width: 100%;
@@ -81,6 +87,7 @@
     align-items: center;
     border-bottom: 2px solid #808080;
     margin-bottom: 44px;
+    width: 100%;
 }
 .event_poster input{
     display: flex;
@@ -93,7 +100,7 @@
     border: 1px solid #f45725;
     margin-left: 10px;
     border-radius: 6px;
-    padding: 10px 20px;
+    padding: 8px 10px;
     cursor: pointer;
     text-decoration: none;
 }
@@ -101,4 +108,30 @@
 .event_poster .preview_btn:hover{
     background-color: #f45725;
     transition: .2s linear;
+}
+
+@media (max-width: 768px) {
+    .addevent {
+        width: 90%;
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+
+    .addevent input {
+        font-size: 16px;
+    }
+
+    .event_poster input {
+        font-size: 16px;
+    }
+
+    .addevent .inp_btn .submit_btn{
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        min-width: 100px;
+        width: 100px;
+        height: 50px;
+        font-size: 16px;
+    }
 }
