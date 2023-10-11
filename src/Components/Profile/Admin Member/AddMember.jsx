@@ -89,9 +89,7 @@ export default function AddMember() {
           },
         }
       );
-      if (res.data.status===200) {
-        console.log(res.data.status);
-
+      if (res.status===200) {
         setError({
           mainColor: "pink",
           secondaryColor: "orange",
