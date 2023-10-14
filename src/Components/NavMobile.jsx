@@ -88,12 +88,13 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
 
-          <div class="mobileList">
+          {/* <div class="mobileList">
             <NavLink
               // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
               className="liTag"
-              onClick={handleLogout}
+              // onClick={handleLogout}//
+              onClick={() => setCount(false)}
             >
               {authCtx.isLoggedIn ? (
                 "Logout"
@@ -101,9 +102,26 @@ export default function NavMobile(props) {
                 "Login/SignUp"
               )}
             </NavLink>
-          </div>
-
+          </div> */}
           <div class="mobileList">
+            <NavLink
+               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
+               className="liTag"
+               onClick={() => {
+             if (authCtx.isLoggedIn) {
+                authCtx.logout(); // assuming you have a logout method in your auth context
+                history.push("/"); // redirect to home page
+             } else {
+                setCount(false);
+              }
+            }}
+            >
+            {authCtx.isLoggedIn ? "Logout" : "Login/SignUp"}
+           </NavLink>
+        </div>
+
+
+          {/* <div class="mobileList">
             <NavLink
               to="/Alumni"
               className="liTag"
@@ -111,7 +129,7 @@ export default function NavMobile(props) {
             >
               Alumni
             </NavLink>
-          </div>
+          </div> */}
 
           {/* <div className="mobileList">
             <NavLink
@@ -132,9 +150,33 @@ export default function NavMobile(props) {
               Contact Us
             </HashLink>
           </div> */}
-
-          
-
+          <div class="mobileList">
+            {/* <NavLink
+              // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+              to={authCtx.isLoggedIn ? "/MyProfile/member" : "Register"}
+              className="liTag"
+            >
+              {authCtx.isLoggedIn ? (
+                <img
+                  src={authCtx.user.pic}
+                  alt=""
+                  srcset=""
+                  className="profile_img"
+                />
+              ) : (
+                "Login/SignUp"
+              )}
+            </NavLink> */}
+          </div>
+          <div class="mobileList">
+            {/* <NavLink
+              to="/Alumni"
+              className="liTag"
+              onClick={() => setCount(false)}
+            >
+              Alumni
+            </NavLink> */}
+          </div>
         </div>
       </div>
     </header>

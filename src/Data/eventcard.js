@@ -1,5 +1,19 @@
 export const eventcard = [
   {
+    class: "Skill-O-Hunt",
+    date: "4",
+    month: "August",
+    img: "https://uploads-ssl.webflow.com/6510733a753332fbbff0b1da/6510741e9056667fec7cfdd8_skillhuntlogo.png",
+    title: "Skill-O-Hunt",
+    dis: {
+      d1: `“Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft” ~Will Smith`,
+      d2: `We are thrilled to invite you to be a part of the highly anticipated Skill Hunt event organized by FED at KIIT.`,
+      d3: `Skill Hunt is where individuals like you, with unparalleled expertise, come together to showcase their remarkable skills.`,
+      d4:` Whether you excel in design, programming, marketing, or any other distinctive skill, we want to see what you've got!`,
+      d5:`We look forward to reviewing your exceptional portfolio. Don't miss this chance to connect, receive feedback, and collaborate! Join Skill Hunt now and let your talent shine!`,
+    } ,
+  },
+  {
     class: "talkShow",
     date: "26",
     month: "August",

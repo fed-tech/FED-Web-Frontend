@@ -85,6 +85,7 @@
 }
 
 .formBottom::-webkit-scrollbar {
+    overflow-x: auto;
     display: none;
 }
 
@@ -148,6 +149,7 @@ select {
         display: flex;
         width: 100%;
         overflow-x: auto;
+        white-space: nowrap;
         margin-bottom: 30px;
     }
 

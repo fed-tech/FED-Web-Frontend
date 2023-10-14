@@ -62,7 +62,7 @@ export default function Team() {
   return (
     <>
       <section id="OurTeam">
-        <div className="TeamCore">
+        {/*<div className="TeamCore">
           <p className="TeamName">
             Our <span>
               Alumni.</span>
@@ -74,7 +74,7 @@ export default function Team() {
           Effort that is done by you all for the development of our society.                                                      
           </p>
   </div>
-          {/* <div className="listDiv">
+           <div className="listDiv">
             <ul id="Alumni">
               <li>
                 <NavLink to="/Alumni" className="liTag">

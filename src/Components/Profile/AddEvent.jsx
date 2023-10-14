@@ -184,7 +184,7 @@ function AddEvent({ setViewEvents }) {
   };
 
   return (
-    <div className="addevent">
+    <div className="addEvent">
       <form action="">
         <input
           type="text"

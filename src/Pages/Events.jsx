@@ -13,10 +13,10 @@ export default function Events() {
 
   return (
     <>
-      <div>
+      {/* <div>
         <Header head="Current Events" />
         <SkillHunt />
-      </div>
+      </div> */}
       <div>
         <Header head="Previous Events" />
         <Card />

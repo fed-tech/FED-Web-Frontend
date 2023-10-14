@@ -23,11 +23,7 @@ function OurAlumni() {
           <p className="para3_">
           Effort that is done by you all for the development of our society
           </p>
-            <p className="TeamName">
-            <button className="alumniButton" onClick={() => window.location.href = '/Team'}>
-              Back to Teams
-            </button>
-            </p>
+            
         </div>
       <div className="bottomcontainer_">
         {Card.map((card) => {
@@ -55,14 +51,18 @@ function OurAlumni() {
                   </div>
                 </div>
               </div>
-            </div>
-            
-          );
-        
-        })}
+            </div>);
+          
+          } 
+        )}
       </div>
-      
-      
+        <div>
+          <p className="TeamName">
+            <button className="alumniButton" onClick={() => window.location.href = '/Team'}>
+              Teams
+            </button>
+          </p>
+        </div>
     </section>
   );
 }

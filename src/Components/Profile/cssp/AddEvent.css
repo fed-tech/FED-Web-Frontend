@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
 
 
-.addevent{
+.addEvent{
     background-color: transparent;
     width: 100%;
     display: flex;
@@ -12,7 +12,7 @@
     padding-right: 95px;
 
 }
-.addevent input{
+.addEvent input{
     margin-bottom: 40px;
     padding: 10px 0px;
     border: none;
@@ -28,13 +28,13 @@
     margin-right: 0px;
     color: white;
 }
-.addevent input::placeholder{
+.addEvent input::placeholder{
     background-color: transparent;
     font: 'Mulish';
     width: 100%;
 
 }
-.addevent .inp_btn {
+.addEvent .inp_btn{
     display: flex;
     justify-content: flex-end;
     margin-top: 20px;
@@ -44,9 +44,9 @@
     float: right;
 
 }
-
-.addevent .inp_btn .submit_btn {
-    padding: 10px 20px; /* Adjust padding for more space */
+.addEvent .inp_btn .submit_btn{
+    padding: 10px 10px;
+    width: 100%;
     border-radius: 6px;
     font-family: Mulish;
     font-size: 18px;
@@ -63,22 +63,22 @@
 
 
 
-.addevent_date{
+.addEvent_date{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.addevent_date input{
+.addEvent_date input{
     width: 100%;
 }
-.addevent .regdropdown {
+.addEvent .regdropdown {
     width: 100%;
     color: white;
     background-color: rgb(20, 19, 19);
     cursor: pointer;
 }
-.addevent form{
+.addEvent form{
     width: 100%;
 }
 

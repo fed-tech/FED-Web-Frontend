@@ -46,16 +46,16 @@
 #NavUl {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding-inline-start: 140px;;
+  width: 98%;
+  padding-inline-start: 300px;
 }
 
 #NavUl li {
   font-family: "Manrope", sans-serif;
   list-style-type: none;
-  font-size: 19px;
-  line-height: 28px;
-  font-weight: 700;
+  font-size: 22px;
+  line-height: auto;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -79,10 +79,20 @@
   border-radius: 50%;
   margin-top: -6px;
 }
-
-@media only screen and (max-width: 900px) {
+@media  (max-width: 1024px) {
   .listDiv {
-    width: 75%;
+    width: 120%;
+  }
+}
+@media (max-width: 900px) {
+  .listDiv {
+    width: 190%;
+  }
+  #NavUl {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    padding-inline-start: 200px;
   }
 }
 

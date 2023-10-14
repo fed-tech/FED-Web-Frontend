@@ -31,11 +31,11 @@
   text-align: end;
 }
 .alumniButton{
-  padding: 7px 7px;
+  padding: 7px 27px;
   width: auto;
   border-radius: 6px;
   font-family: Mulish;
-  font-weight: 600;
+  font-weight: 500;
   border: none;
   outline: none;
   color: white;
@@ -106,6 +106,8 @@ margin-left: 10px;
 }
 .para2_ {
   color: #f45725;
+  width: 275px;
+  height: 147px;
 }
 .bottomcontainer_ {
   display: flex;
@@ -121,7 +123,6 @@ margin-left: 10px;
   height: 100px;
   flex: 0 0 215px;
   padding-bottom: 500px;
-
   padding-left: 30px;
   padding-right: 30px;
   /* margin: 20em 20px; */
@@ -129,7 +130,7 @@ margin-left: 10px;
   /* margin: 1rem;
   padding: 1rem; */
   /* text-align: center; */
-
+  
   /* display: inline-block; */
   /* margin-left: 200px; */
   background-color: black;
@@ -144,9 +145,12 @@ margin-left: 10px;
   padding-right: 0px; */
 }
 .image_1 {
-  width: 346px;
-  height: 424px;
+  width: 350px;
+  height: 450px;
+  border-radius: 8px;
   position: relative;
+  padding-left: 4px;
+  padding-right: 4px;
   object-fit: cover;
 }
 .child_ {
@@ -162,15 +166,17 @@ margin-left: 10px;
   align-items: center;
   justify-content: center;
   padding: 30px;
-  border-radius: 1px;
-  margin-left: 18px;
-  margin-top: -186px;
+  border-radius: 15px;
+  margin-left: 22px;
+  margin-right: 5px;
+  margin-top: -190px;
   position: absolute;
 
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 .heading_1 {
   font-size: 24px;
+  justify-content: center;
   font-family: "Inter", sans-serif;
   padding-bottom: 5px;
 }
@@ -200,5 +206,6 @@ margin-left: 10px;
   padding-right: 5px;
 }
 .icon_ {
+  justify-content: center;
   display: flex;
 }

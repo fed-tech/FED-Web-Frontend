@@ -109,7 +109,7 @@
   font-weight: 700;
   font-size: 22.0914px;
   line-height: 21px;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.005rem;
   align-items: center;
   padding-right: 30%;
   text-align: center;
@@ -288,7 +288,7 @@
 @media (max-width: 830px) {
   .dashboard {
     width:100%;
-    margin-right: 0px;
+    /* margin-right: 0px; */
   }
 
   .pageLeft {
@@ -316,11 +316,11 @@
   }
   .dashboardBottom_options{
     align-items: flex-end;
-    margin-bottom: -10px;
+    margin-bottom: 60px;
   }
 
   .dashboardBottom {
-    align-items: center;
+    align-items: flex-end;
     padding-left: 10px;
   }
 
@@ -430,7 +430,7 @@
     justify-content: flex-start;
   }
   .profilePic {
-    justify-content: flex-end;
+    justify-content: center;
   }
   .dashboardBottom_options{
     align-items: flex-end;
@@ -496,3 +496,9 @@
     display: none;
   }
 }
+@media (max-width: 290px) {
+  .profilePic{
+    
+  }
+};
+  
