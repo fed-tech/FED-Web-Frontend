@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import "../../Pages/Css/Profilecss/profile.css";
-import penSvg from "../../Img/pen-icon.svg";
-import "./cssp/Profile.css";
-import AuthContext from "../../store/auth-context";
+import "../../css/Profile/profile.css";
+// import penSvg from "../../../Img/pen-icon.svg";
+import "../../css/Profile/profile2.css";
+import AuthContext from "../../../store/auth-context";
 
 function Profile() {
   const authCtx = useContext(AuthContext);

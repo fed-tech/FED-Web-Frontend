@@ -7,16 +7,20 @@ import AuthContext from "../store/auth-context";
 // css
 import pageCss from "./Css/Page.module.css";
 
-// Components
+// icons
 import GroupsIcon from "@mui/icons-material/Groups";
 import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-import EventAdmin from "../Components/Profile/EventAdmin";
+
+// Components - Dashboard
+import Profile from "../Components/Profile/Dashboard/Profile";
+import EventAdmin from "../Components/Profile/Dashboard/EventAdmin/EventAdmin";
+import EventForm from "../Components/Profile/Dashboard/EventForm/EventForm";
+import MembersAdmin from "../Components/Profile/Dashboard/MembersAdmin/MembersAdmin";
+
+// Components
 import UpdateProfile from "../Components/Profile/UpdateProfile";
-import Profile from "../Components/Profile/Profile";
-import EventForm from "../Components/Profile/EventForm";
-import MembersAdmin from "../Components/Profile/Admin Member/MembersAdmin";
 
 function Page() {
   const [designation, setDesignation] = useState("");
@@ -36,52 +40,33 @@ function Page() {
       setDesignation("Member");
     }
   }, []);
-  useEffect(()=>{
-    console.log(authCtx.user.access)
-  },[])
+  // useEffect(()=>{
+  //   console.log(authCtx.user.access)
+  // },[])
   const navigate = useNavigate();
   const authCtx = useContext(AuthContext);
-  const [profile, setProfile] = useState(true);
-  const [event, setEvent] = useState(false);
-  const [form, setFrom] = useState(false);
-  const [members, setMembers] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
+  const [currPage, setCurrPage] = useState("Profile");
+
+  console.log(currPage);
+
+  const handleSetPage = (e) => {
+    const pageName = e.target.innerText;
+    console.log(pageName)
+    setCurrPage(pageName);
+  }
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
   };
-  const handleProfile = () => {
-    setProfile(true);
-    setEvent(false);
-    setFrom(false);
-    setMembers(false);
-  };
-  const handleEvent = () => {
-    setProfile(false);
-    setEvent(true);
-    setFrom(false);
-    setMembers(false);
-  };
-  const handleForm = () => {
-    setProfile(false);
-    setEvent(false);
-    setFrom(true);
-    setMembers(false);
-  };
-  const handleMembers = () => {
-    setProfile(false);
-    setEvent(false);
-    setFrom(false);
-    setMembers(true);
-  };
-
+  
   return (
     <div className={pageCss.Page_main}>
       <div className={pageCss.Page}>
         <div className={pageCss.pageLeft}>
           <div className={pageCss.dashboard}>
             <div className={pageCss.dashboardTop}>
-              {/*<h1 className={pageCss.DASHBOARD}>DASHBOARD</h1>*/}
+              <h1 className={pageCss.DASHBOARD}>DASHBOARD</h1>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
                   <img src={authCtx.user.pic} alt="" />
@@ -95,9 +80,9 @@ function Page() {
             <div className={pageCss.dashboardBottom}>
               {designation==="Admin"?<>
               <div
-                onClick={handleEvent}
+                onClick={handleSetPage}
                 className={
-                  event
+                  currPage === "Events"
                     ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
                     : `${pageCss.dashboardBottom_options}`
                 }
@@ -108,9 +93,9 @@ function Page() {
                 <p>Events</p>
               </div>
               <div
-                onClick={handleForm}
+                onClick={handleSetPage}
                 className={
-                  form
+                  currPage === "Form"
                     ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
                     : `${pageCss.dashboardBottom_options}`
                 }
@@ -119,9 +104,9 @@ function Page() {
                 <p>Form</p>
               </div>
               <div
-                onClick={handleMembers}
+                onClick={handleSetPage}
                 className={
-                  members
+                  currPage === "Members"
                     ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
                     : `${pageCss.dashboardBottom_options}`
                 }
@@ -141,10 +126,10 @@ function Page() {
           </div>
         </div>
         <div className={pageCss.pageRight}>
-          {profile && <Profile setShowUpdateModal={setShowUpdateModal} />}
-          {event && <EventAdmin />}
-          {form && <EventForm />}
-          {members && <MembersAdmin />}
+          {currPage === "Profile" && <Profile setShowUpdateModal={setShowUpdateModal} />}
+          {currPage === "Events" && <EventAdmin />}
+          {currPage === "Form" && <EventForm />}
+          {currPage === "Members" && <MembersAdmin />}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />

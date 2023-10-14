@@ -1,15 +1,14 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
 
-// css
-import formCss from "../Profile/cssp/EventForm.module.css";
+// Components
 import AddField from "./AddField";
 
-import Load from "../../MicroInterAction/Load";
-import { Alert } from "../../MicroInterAction/Alert";
+// css
+import formCss from "../../../css/Profile/Dashboard/EventForm/EventForm.module.css";
 
+import { Alert } from "../../../../MicroInterAction/Alert";
 import axios from "axios";
-
-import AuthContext from "../../store/auth-context";
+import AuthContext from "../../../../store/auth-context";
 
 export default function Form() {
   const [variants, setError] = useState({
@@ -23,36 +22,28 @@ export default function Form() {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
-  const [selectedEventType, setSelectedEventType] = useState("");
+
   const authCtx = useContext(AuthContext);
 
-  const [saving,setSaving] = useState(false);
-  const [adding,setAdding] = useState(false);
-
-  const initialFormState = {
-    formTitle: "",
-    description: "",
-    eventName: "",
-    eventType: "",
-    amount: hideAmount ? 0 : "",
-    priority: "",
-    maxReg: 0,
-    fields: [{}],
-  };
-
-  const sendData = async (formDetails) => {
+  const handleSave = async (e) => {
+    if (hideAmount) {
+      setShowFields((prev) => {
+        const formData = { ...prev, amount: 0 };
+        return formData;
+      });
+    }
+    e.preventDefault();
+    const formDetails = showFields;
     try {
-      console.log("Check form save");
       const res = await axios.post(
         "/form/addForm",
         {
           title: formDetails.formTitle,
-          description: formDetails.description,
+          description: "test",
           amount: formDetails.amount,
           priority: formDetails.priority,
           formelement: formDetails.fields,
           event: formDetails.eventName,
-          maxReg: formDetails.maxReg,
         },
         {
           headers: {
@@ -60,102 +51,12 @@ export default function Form() {
           },
         }
       );
-      if (res.status === 200) {
-        
-        setError({
-          mainColor: "pink",
-          secondaryColor: "orange",
-          symbol: "check",
-          title: "Success",
-          text: "Form saved successfully!",
-          val: true,
-        });
-        
-        // Set a delay before resetting to the initial state and hiding the success message
-        setTimeout(() => {
-          setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
-            val: false,
-          });
-  
-          setShowFields(initialFormState);
-          setSaving(false);
-
-          window.scrollTo(0, 0);
-        }, 2000);
+      if (res.status == 200) {
+        // setShowFields({ fields: [{}] });
+        window.scrollTo(0, 0);
       }
     } catch (err) {
       console.log(err);
-    }
-  };
-
-  const handleSave = async (e) => {
-    e.preventDefault();
-
-    if (hideAmount) {
-      setShowFields((prev) => {
-        const formData = { ...prev, amount: 0 };
-        return formData;
-      });
-    }
-    const formDetails = showFields;
-    if (
-      formDetails.formTitle === "" ||
-      formDetails.description === "" ||
-      (hideAmount
-        ? formDetails.amount === ""
-        : formDetails.amount === 0 || formDetails.amount === "") ||
-      formDetails.priority === "" ||
-      formDetails.eventName == "" ||
-      formDetails.maxReg === 0 ||
-      formDetails.maxReg === ""
-    ) {
-      setError({
-        mainColor: "#FDEDED",
-        secondaryColor: "#F16360",
-        symbol: "error",
-        title: "Error",
-        text: "Please fill all the fields",
-        val: true,
-      });
-      return;
-    } else {
-      var flag = false;
-      formDetails.fields.forEach((element) => {
-        if (Object.keys(element).length == 3) {
-          flag = false;
-          if (element.name == "" || element.type == "" || element.value == "") {
-            setError({
-              mainColor: "#FDEDED",
-              secondaryColor: "#F16360",
-              symbol: "error",
-              title: "Error",
-              text: "Please fill all the fields",
-              val: true,
-            });
-            return;
-          }
-          flag = true;
-        } else {
-          flag = false;
-          setError({
-            mainColor: "#FDEDED",
-            secondaryColor: "#F16360",
-            symbol: "error",
-            title: "Error",
-            text: "Please fill all the fields",
-            val: true,
-          });
-          return;
-        }
-      });
-      if (flag) {
-        sendData(formDetails);
-      }
     }
   };
 
@@ -196,19 +97,11 @@ export default function Form() {
       currState.fields.push({});
       return currState;
     });
-
-    setAdding(true);
-
-    setTimeout(() => {
-      setAdding(false);
-    }, 500);
   };
 
   const handleDropDownChange = (e) => {
-    const selectedValue = e.target.value;
-    setSelectedEventType(selectedValue);
     console.log("check");
-    if (selectedValue === "paid") {
+    if (e.target.value === "paid") {
       sethideAmount(false);
     } else {
       sethideAmount(true);
@@ -283,24 +176,21 @@ export default function Form() {
           className={formCss.formtitle}
           placeholder="Form Title*"
           required
-          value={showFields.formTitle || ""}
         />
-        <input
+        {/* <input
           onChange={handleChange}
-          name="description"
+          name="forrmDesc"
           type="text"
           className={formCss.formtitle}
-          placeholder="About Form*"
-          value={showFields.description || ""}
+          placeholder="About Event*"
           required
-        />
+        /> */}
         <select
           id="eventType"
           name="eventName"
           className={formCss.formtitle}
           onChange={handleChange}
           required
-          value={showFields.eventName || ""}
         >
           <option value="" hidden>
             Related Event Name*
@@ -322,14 +212,9 @@ export default function Form() {
           className={formCss.formtitle}
           onChange={handleDropDownChange}
           required
-          value={showFields.eventType || ""}
         >
           <option value="" hidden>
-            {selectedEventType === "paid"
-              ? "Paid"
-              : selectedEventType === "free"
-              ? "Free"
-              : "Event Type*"}
+            Event Type*
           </option>
           <option value="paid" className={formCss.formDropDownOption}>
             Paid
@@ -347,7 +232,6 @@ export default function Form() {
           type="number"
           className={formCss.formtitle}
           placeholder="Amount*"
-          value={showFields.amount || ""}
         />
         <input
           onChange={handleChange}
@@ -356,28 +240,14 @@ export default function Form() {
           type="number"
           className={formCss.formtitle}
           placeholder="Priority*"
-          value={showFields.priority || ""}
-        />
-        <input
-          onChange={handleChange}
-          required
-          name="maxReg"
-          type="number"
-          className={formCss.formtitle}
-          placeholder="Max Registrations Allowed*"
-          value={showFields.maxReg || ""}
         />
         {fields}
-        <div className={formCss.buttons}>
+        <div>
           <button className={formCss.saveBtn} onClick={handleAdd}>
-            {adding ? <Load /> : "ADD FIELD"}
+            ADD FIELD
           </button>
-          <button
-            type="submit"
-            className={formCss.saveBtn}
-            onClick={handleSave}
-          >
-            {saving ? <Load /> : "SAVE"}
+          <button type="submit" className={formCss.saveBtn}>
+            SAVE
           </button>
         </div>
       </form>

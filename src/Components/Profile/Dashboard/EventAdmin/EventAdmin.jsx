@@ -1,9 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
+
+// Components
 import ViewEvents from "./ViewEvents";
 import AddEvent from "./AddEvent";
-import "./cssp/EventAdmin.css";
-import axios from "axios";
-import AuthContext from "../../store/auth-context";
+
+// css
+import "../../../css/Profile/Dashboard/EventAdmin/EventAdmin.css";
+
+// import axios from "axios";
+import AuthContext from "../../../../store/auth-context";
 
 function EventAdmin() {
   const [viewEvents, setViewEvents] = useState(true);
