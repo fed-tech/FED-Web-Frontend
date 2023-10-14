@@ -37,11 +37,10 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     <input
                         type="date"
                         className={formCss.formaddfield}
-                        placeholder="Enter Date*"
+                        placeholder="Enter Date"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
-                        required
                     />
                 );
             case "number":
@@ -49,11 +48,10 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     <input
                         type="number"
                         className={formCss.formaddfield}
-                        placeholder="Enter Value*"
+                        placeholder="Enter Value"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
-                        required
                     />
                 );
             case "text":
@@ -61,11 +59,10 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     <input
                         type="text"
                         className={formCss.formaddfield}
-                        placeholder="Enter Text*"
+                        placeholder="Enter Text"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
-                        required
                     />
                 );
             case "time":
@@ -73,11 +70,10 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     <input
                         type="time"
                         className={formCss.formaddfield}
-                        placeholder="Enter Time*"
+                        placeholder="Enter Time"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
-                        required
                     />
                 );
             case "radio":
@@ -87,11 +83,10 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     <input
                         type="text"
                         className={formCss.formaddfield}
-                        placeholder="Field Value*"
+                        placeholder="Field Value"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
-                        required
                     />
                 );
         }

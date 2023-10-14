@@ -34,6 +34,9 @@
     background-color: rgb(194, 194, 194);
     cursor: pointer;
 }
+input[type="date"], input[type="time"]{
+    color-scheme: dark;
+}
 .formaddfield, .formBottom select {
     border: none;
     padding: 10px;

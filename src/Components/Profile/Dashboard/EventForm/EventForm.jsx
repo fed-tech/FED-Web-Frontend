@@ -26,6 +26,7 @@ export default function Form() {
   const authCtx = useContext(AuthContext);
 
   const handleSave = async (e) => {
+
     if (hideAmount) {
       setShowFields((prev) => {
         const formData = { ...prev, amount: 0 };
@@ -44,6 +45,8 @@ export default function Form() {
           priority: formDetails.priority,
           formelement: formDetails.fields,
           event: formDetails.eventName,
+          isTeam: formDetails.eventTeam,
+          maxReg: formDetails.maxReg,
         },
         {
           headers: {
@@ -61,6 +64,9 @@ export default function Form() {
   };
 
   const handleChange = (e) => {
+    if(e.target.type == "number" && e.target.value < 0){
+      e.target.value = 0
+    }
     const { name, value } = e.target;
     setShowFields((prev) => {
       const formData = { ...prev, [name]: value };
@@ -241,6 +247,31 @@ export default function Form() {
           className={formCss.formtitle}
           placeholder="Priority*"
         />
+        <input
+          onChange={handleChange}
+          required
+          name="maxReg"
+          type="number"
+          className={formCss.formtitle}
+          placeholder="Maximum Registration allowed*"
+        />
+        <select
+          id="eventTeam"
+          name="eventTeam"
+          className={formCss.formtitle}
+          onChange={handleChange}
+          required
+        >
+          <option value="" hidden>
+            Team Based Event*
+          </option>
+          <option value="true" className={formCss.formDropDownOption}>
+            It needs team
+          </option>
+          <option value="false" className={formCss.formDropDownOption}>
+            It doesn't need team
+          </option>
+        </select>
         {fields}
         <div>
           <button className={formCss.saveBtn} onClick={handleAdd}>
