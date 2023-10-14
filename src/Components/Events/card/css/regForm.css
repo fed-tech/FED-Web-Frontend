@@ -32,6 +32,15 @@
     font-size: 20px;
     cursor: pointer;
 }
+.submitBtn {
+    width: 300px;
+    background-color: #f45725;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
 
 .fontDets {
     font-family: mulish;

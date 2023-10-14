@@ -17,38 +17,64 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
         text: "",
         val: false,
       });
-
+    var showTeam = formData.isTeam
     const handleNext = () => {
-        var validationerror = false
-        formData.formelement.slice(count, count + limit).forEach((e)=>{
-            if(!submission[[e.title]] && e.required){
-                validationerror = true
-                setError({
-                    mainColor: "#FFC0CB",
-                    secondaryColor: "#FF69B4",
-                    symbol: "pets",
-                    title: "Check it out",
-                    text: "Please Fill All The Details",
-                    val: true,
-                });
+        var validationerror = formData.formelement.slice(count, count + limit).every((e)=>{
+            //check for radio and checkbox
+            console.log(e.type)
+            if(e.type == "checkbox"){
+                return submission[e.title]?
+                Object.keys(submission[e.title]).every((f)=>{
+                    console.log(submission[e.title][f])
+                    return submission[e.title][f]
+                }):false
+            }else{
+              if (!submission[[e.title]] && e.required) {
+                return false
+              }
             }
+            return true
         })
-        validationerror || setCount(prevCount => prevCount + limit);
+        if(!validationerror){
+            setError({
+              mainColor: "#FFC0CB",
+              secondaryColor: "#FF69B4",
+              symbol: "pets",
+              title: "Check it out",
+              text: "Please Fill All The Details",
+              val: true,
+            });
+        }
+        !validationerror || setCount(prevCount => prevCount + limit);
     };
 
     const handlePrev = () => {
         setCount(prevCount => Math.max(prevCount - limit, 0));
     };
-
-    const visibleFields = formData.formelement.slice(count, count + limit).map((field, idx) => {
-        return (
-            <FormField key={idx} {...field} count={count} setCount={setCount} submission={submission} setSubmission ={setSubmission}/>
-        );
-    });
-
+        var visibleFields = []
+        formData.formelement.slice(count, count + limit).map((field, idx) => {
+            visibleFields.push(
+            <FormField
+              key={count + idx}
+              {...field}
+              count={count}
+              setCount={setCount}
+              submission={submission}
+              setSubmission={setSubmission}
+            />
+          );
+        });
+        if (visibleFields.length == 0 && formData.isTeam) {
+            visibleFields.push(<div>Team Page</div>);
+            showTeam =false
+        }
     const handleSubmit = (e)=>{
-        console.log(e.target.value)
+        console.log(submission)
+        setShowPopUp(false)
     }
+    useEffect(()=>{
+        console.log(submission)
+    },[submission])
 
     return (
         <div className="regFormPopUp">
@@ -61,18 +87,20 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
                 />
                 {visibleFields}
                 <div className="btns">
-                    {count < formData.formelement.length - limit && (
-                        <button className="nextBtn" onClick={handleNext}>
-                            Next
-                        </button>
-                    )}
                     {count !== 0 && (
                         <button className="prevBtn" onClick={handlePrev}>
                             Previous
                         </button>
                     )}
+                    {count < formData.formelement.length - limit && (
+                        <button className="nextBtn" onClick={handleNext}>
+                            Next
+                        </button>
+                    )}
                     {count >= formData.formelement.length - limit && (
-                        <input className="prevBtn" type="submit"/>
+                        showTeam?
+                        <button className='prevBtn' onClick={handleNext}>Enter Team Details</button>
+                        :<input className="submitBtn" type="submit" onClick={handleSubmit}/>
                     )}
                 </div>
                 <Alert variant={variants} val={setError} />
