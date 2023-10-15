@@ -16,7 +16,6 @@ function EventDetails({ cardNo, setShow }) {
   const [deletingform,setDeletingForm] = useState(false);
   const [viewingform,setViewingForm] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
   const [forms,setForms] = useState([])
   const [currentForm,setCurrentForm] = useState({})
   const [isToggleOn, setIsToggleOn] = useState(currentForm.active);
@@ -189,11 +188,16 @@ function EventDetails({ cardNo, setShow }) {
   const handleToggle = async () => {
     await api.get(`/form/toggleform?formid=${currentForm._id}`)
     setIsToggleOn((prevState) => !prevState);
-    setAlertMessage(isToggleOn ? "Form is Closed !" : "Form is Currently Active !");
-
-    setTimeout(() => {
-      setAlertMessage("");
-    }, 2000);
+    setError({
+      mainColor: "pink",
+      secondaryColor: "orange",
+      symbol: "check",
+      title: "Success",
+      text: isToggleOn ? "Form is Closed !" : "Form is Currently Active !",
+      val: true,
+    });
+    toggleModal()
+    makeRequest()
   };
 
   const toggleModal = () => {
@@ -288,7 +292,7 @@ function EventDetails({ cardNo, setShow }) {
         </div>
         <div className={eventCss.forms}>
           {loading ? <Load></Load> : <></>}
-          {forms.length == 0 && !loading? (
+          {forms.length == 0 && !loading ? (
             <>
               <h1>No Forms Created</h1>
             </>
@@ -307,7 +311,7 @@ function EventDetails({ cardNo, setShow }) {
                 );
               })}
             </>
-          )} 
+          )}
         </div>
         <div className={eventCss.btns}>
           <button className={eventCss.edit} onClick={handleEdit}>
@@ -325,26 +329,14 @@ function EventDetails({ cardNo, setShow }) {
             &times;
           </span>
           <div for="form details">
-            <div>
-              <span>Title:</span>
-              <label>{currentForm.title}</label>
-            </div>
-            <div>
-              <span>Description:</span>
-              <label>{currentForm.description}</label>
-            </div>
-            <div>
-              <span>Amount:</span>
-              <label>{currentForm.amount}</label>
-            </div>
-            <div>
-              <span>Priority:</span>
-              <label>{currentForm.priority}</label>
-            </div>
-            <div>
-              <span>Max Registrations:</span>
-              <label>{currentForm.maxReg}</label>
-            </div>
+            {Object.keys(currentForm).map((elem,idx) => {
+                return (
+                  <div key={idx}>
+                    <span>{[elem]}:</span>
+                    <label>{JSON.stringify(currentForm[elem])}</label>
+                  </div>
+                );
+            })}
           </div>
           <div className={eventCss.modbtns}>
             <button onClick={handleDeleteform}>
@@ -353,7 +345,7 @@ function EventDetails({ cardNo, setShow }) {
             <button onClick={handleViewform}>
               {viewingform ? <Load /> : "View Form"}
             </button>
-    
+
             <label className={eventCss.switch}>
               <input
                 input
@@ -367,7 +359,6 @@ function EventDetails({ cardNo, setShow }) {
         </div>
       )}
       <Alert variant={variants} val={setError} />
-      {alertMessage && <div className={eventCss.alert}>{alertMessage}</div>}
     </div>
   );
 }

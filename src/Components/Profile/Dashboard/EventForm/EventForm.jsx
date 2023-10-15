@@ -22,6 +22,7 @@ export default function Form() {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
+  const [showTeamsize,setShowTeamsize] = useState(false)
 
   const authCtx = useContext(AuthContext);
 
@@ -33,6 +34,12 @@ export default function Form() {
         return formData;
       });
     }
+    if (!showTeamsize) {
+      setShowFields((prev) => {
+        const formData = { ...prev, teamsize: 0 };
+        return formData;
+      });
+    }
     e.preventDefault();
     const formDetails = showFields;
     try {
@@ -40,12 +47,13 @@ export default function Form() {
         "/form/addForm",
         {
           title: formDetails.formTitle,
-          description: "test",
+          description: formDetails.forrmDesc,
           amount: formDetails.amount,
           priority: formDetails.priority,
           formelement: formDetails.fields,
           event: formDetails.eventName,
-          isTeam: formDetails.eventTeam,
+          isTeam: showTeamsize,
+          teamsize:formDetails.teamSize,
           maxReg: formDetails.maxReg,
         },
         {
@@ -55,7 +63,8 @@ export default function Form() {
         }
       );
       if (res.status == 200) {
-        // setShowFields({ fields: [{}] });
+        setShowFields({ fields: [{}] });
+        e.target.reset()
         window.scrollTo(0, 0);
       }
     } catch (err) {
@@ -106,14 +115,24 @@ export default function Form() {
   };
 
   const handleDropDownChange = (e) => {
-    console.log("check");
-    if (e.target.value === "paid") {
-      sethideAmount(false);
-    } else {
-      sethideAmount(true);
+    console.log(e.target.name)  
+    if (e.target.name == "eventType") {
+      if (e.target.value === "paid") {
+        sethideAmount(false);
+      } else {
+        sethideAmount(true);
+      }
+    } else if (e.target.name == "eventTeam") {
+      if (e.target.value == "true") {
+        setShowTeamsize(true);
+      } else {
+        setShowTeamsize(false);
+      }
     }
   };
-
+  useEffect(()=>{
+    console.log(showTeamsize)
+  },[showTeamsize])
   const handleFormError = (e) => {
     e.preventDefault();
     setError({
@@ -169,9 +188,9 @@ export default function Form() {
       <div className={formCss.head}>
         <h1>NEW FORM</h1>
       </div>
+      <div className={formCss.formDiv} style={{overflow:"auto",height:"100vh",paddingRight:"10px"}}>
       <form
         action=""
-        className={formCss.formDiv}
         onSubmit={handleSave}
         onInvalid={handleFormError}
       >
@@ -183,14 +202,14 @@ export default function Form() {
           placeholder="Form Title*"
           required
         />
-        {/* <input
+        <input
           onChange={handleChange}
           name="forrmDesc"
           type="text"
           className={formCss.formtitle}
           placeholder="About Event*"
           required
-        /> */}
+        />
         <select
           id="eventType"
           name="eventName"
@@ -259,7 +278,7 @@ export default function Form() {
           id="eventTeam"
           name="eventTeam"
           className={formCss.formtitle}
-          onChange={handleChange}
+          onChange={handleDropDownChange}
           required
         >
           <option value="" hidden>
@@ -272,6 +291,14 @@ export default function Form() {
             It doesn't need team
           </option>
         </select>
+        {showTeamsize?<input
+          onChange={handleChange}
+          required
+          name="teamSize"
+          type="number"
+          className={formCss.formtitle}
+          placeholder="Maximum team size*"
+        />:<></>}
         {fields}
         <div>
           <button className={formCss.saveBtn} onClick={handleAdd}>
@@ -282,6 +309,7 @@ export default function Form() {
           </button>
         </div>
       </form>
+      </div>
       <Alert variant={variants} val={setError} />
     </>
   );
