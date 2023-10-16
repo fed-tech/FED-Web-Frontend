@@ -103,7 +103,7 @@
   border-radius: 10px;
   border: 1px solid #808080;
   padding: 22px 41px;
-  width:fit-content;
+  width:100%;
   text-align: center;
   height: auto;
   font-size: 30px;
@@ -176,7 +176,7 @@
   max-width: 80%;
   width: 400px;
   box-shadow: 0 6px 6px 0 black,0 6px 10px 0 white;
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
 }
 
 .slide-from-top {
@@ -209,7 +209,7 @@
   margin: 8px;
 }
 .modal div label{
-  width: fit-content;
+  width: auto;
 }
 .modal div span{
   font-weight: bold;

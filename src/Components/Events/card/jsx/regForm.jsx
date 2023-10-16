@@ -4,10 +4,14 @@ import formData from './formElements.json';
 import FormField from './formField';
 import cancel from '../../../../assets/SkillHunt/XCircle.png';
 import { Alert } from '../../../../MicroInterAction/Alert';
+import Switch from "react-switch";
 
 export default function RegForm({ showPopUp, setShowPopUp }) {
     const [limit, setLimit] = useState(3);
     const [count, setCount] = useState(0);
+    const [isLoading, setIsLoading] = useState(false);
+    const [isVerified, setIsVerified] = useState(false);
+    const [isCreatingTeam, setIsCreatingTeam] = useState(false);
     const [submission,setSubmission] = useState({});
     const [variants, setError] = useState({
         mainColor: "",
@@ -17,7 +21,7 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
         text: "",
         val: false,
       });
-    var showTeam = formData.isTeam
+    var showTeam = formData.isTeam    
     const handleNext = () => {
         var validationerror = formData.formelement.slice(count, count + limit).every((e)=>{
             //check for radio and checkbox
@@ -47,38 +51,102 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
         }
         !validationerror || setCount(prevCount => prevCount + limit);
     };
-
+    
     const handlePrev = () => {
         setCount(prevCount => Math.max(prevCount - limit, 0));
     };
-        var visibleFields = []
-        formData.formelement.slice(count, count + limit).map((field, idx) => {
-            visibleFields.push(
-            <FormField
-              key={count + idx}
-              {...field}
-              count={count}
-              setCount={setCount}
-              submission={submission}
-              setSubmission={setSubmission}
-            />
-          );
-        });
-        if (visibleFields.length == 0 && formData.isTeam) {
-            visibleFields.push(<div>Team Page</div>);
-            showTeam =false
-        }
-    const handleSubmit = (e)=>{
-        console.log(submission)
-        setShowPopUp(false)
-    }
-    useEffect(()=>{
-        console.log(submission)
-    },[submission])
+var visibleFields = []
+formData.formelement.slice(count, count + limit).map((field, idx) => {
+    visibleFields.push(
+        <FormField
+        key={count + idx}
+        {...field}
+            count={count}
+            setCount={setCount}
+            submission={submission}
+            setSubmission={setSubmission}
+        />
+    );
+});
+const handleToggle = (e) =>{
+    console.log(e)
+    setIsCreatingTeam(!e)
+}
+            const handleVerify = async () => {
+                setIsLoading(true);
+                try {
+                    await new Promise((resolve) => setTimeout(resolve, 2000));
+                    setIsVerified(true);
+                } catch (error) {
+                    console.error(error);
+                } finally {
+                    setIsLoading(false);
+                }
+            };
+if (visibleFields.length === 0 && formData.isTeam) {
+    visibleFields.push(
+      <div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <div >
+            <label>Create Team</label>
+            <Switch
+              onChange={handleToggle}
+              checked={!isCreatingTeam}
+              checkedIcon={false}
+              uncheckedIcon={false}
+              onColor="#f45725;"
+              offColor="#f45725;"
+            ></Switch>
+            <label>Join Team</label>
+          </div>
+          {isCreatingTeam ? (
+            <div className="createteam">
+              <label htmlFor="teamName">Team Name</label>
+              <div className="teamn">
+                <input type="text" style={{width:"30%"}} name="teamName" id="teamName" />
+                <button className="verifybtn" onClick={handleVerify}>
+    {isLoading ? 'Verifying...' : 'Verify'}
+</button>
+{!isLoading && <p className={isVerified ? 'message' : 'message-failed'}>
+    {isVerified ? 'Verification successful' : 'Verify'}
 
+                </p>}
+                
+
+              </div>
+            </div>
+          ) : (
+            <div className="jointeam">
+              <label htmlFor="teamEmail">Team leaders Email</label>
+              <div className="teamn">
+                <input type="text" style={{width:"70%"}} name="teamName" id="teamName" />
+                
+              </div>
+              </div>
+          )}
+        </div>
+      </div>
+    );
+    showTeam = false;
+}
+
+const handleSubmit = (e) => {
+    console.log(submission);
+    setShowPopUp(false);
+};
+
+
+    useEffect(() => {
+            console.log(submission);
+        }, [submission]);
+
+        
+        
+                
     return (
+        
         <div className="regFormPopUp">
-            <div className="form">
+                <div className="form">
                 <img
                     src={cancel}
                     alt=""
@@ -100,9 +168,9 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
                     {count >= formData.formelement.length - limit && (
                         showTeam?
                         <button className='prevBtn' onClick={handleNext}>Enter Team Details</button>
-                        :<input className="submitBtn" type="submit" onClick={handleSubmit}/>
-                    )}
-                </div>
+                        :<input className="submitBtn" type="submit" onClick={handleSubmit} disabled={!isVerified}/>
+                  )}
+           </div>
                 <Alert variant={variants} val={setError} />
             </div>
         </div>

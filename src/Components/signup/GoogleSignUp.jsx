@@ -66,7 +66,7 @@ const GoogleSignUp = ({ setLoad }) => {
       const response = await axios.post("/auth/googleverification", {
         email: mail,
       });
-
+      
       console.log(response);
 
       if (response.status === 202) {

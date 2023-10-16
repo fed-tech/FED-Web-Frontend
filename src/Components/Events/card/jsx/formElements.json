@@ -21,27 +21,6 @@
             "value":["male", "female", "other"],
             "placeholder":"",
             "required":true
-        },
-        {
-            "title":"DOB",
-            "type":"date",
-            "value":"",
-            "placeholder":"",
-            "required":true
-        },
-        {
-            "title":"Time",
-            "type":"time",
-            "value":"",
-            "placeholder":"",
-            "required":true
-        },
-        {
-            "title":"Languages you know",
-            "type":"checkbox",
-            "value":["C++", "Java", "C", "Python", "Javascript", "gjhdsb", "fsjvb"],
-            "placeholder":"",
-            "required":true
-        }
+        } 
     ]
 }

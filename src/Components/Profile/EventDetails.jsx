@@ -353,16 +353,15 @@ function EventDetails({ cardNo, setShow }) {
             <button onClick={handleViewform}>
               {viewingform ? <Load /> : "View Form"}
             </button>
-    
             <label className={eventCss.switch}>
-              <input
-                input
-                type="checkbox"
-                checked={isToggleOn}
-                onChange={handleToggle}
-              />
-              <span className={eventCss.slider}></span>
-            </label>
+            <input
+              input
+              type="checkbox"
+              checked={isToggleOn}
+              onChange={handleToggle}
+            />
+            <span className={eventCss.slider}></span>
+          </label>
           </div>
         </div>
       )}
