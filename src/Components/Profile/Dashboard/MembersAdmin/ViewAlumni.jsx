@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import MemCards from "./MemCards";
 
-import viewAlumniCSS from "../../../css/Profile/Dashboard/MembersAdmin/viewAlumni.module.css";
+import viewAlumniCSS from "../../../css/Profile/Dashboard/MembersAdmin/ViewAlumni.module.css";
 import AuthContext from "../../../../store/auth-context";
 
 export default function ViewAlumni() {
