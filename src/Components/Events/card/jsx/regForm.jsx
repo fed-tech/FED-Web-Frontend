@@ -13,6 +13,7 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
     const [isVerified, setIsVerified] = useState(false);
     const [isCreatingTeam, setIsCreatingTeam] = useState(false);
     const [submission,setSubmission] = useState({});
+    const [teamname,setTeamName] = useState("");
     const [variants, setError] = useState({
         mainColor: "",
         secondaryColor: "",
@@ -76,6 +77,7 @@ const handleToggle = (e) =>{
                 setIsLoading(true);
                 try {
                     await new Promise((resolve) => setTimeout(resolve, 2000));
+                    setTeamName("demo team")
                     setIsVerified(true);
                 } catch (error) {
                     console.error(error);
@@ -87,7 +89,7 @@ if (visibleFields.length === 0 && formData.isTeam) {
     visibleFields.push(
       <div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div >
+          <div>
             <label>Create Team</label>
             <Switch
               onChange={handleToggle}
@@ -99,31 +101,30 @@ if (visibleFields.length === 0 && formData.isTeam) {
             ></Switch>
             <label>Join Team</label>
           </div>
-          {isCreatingTeam ? (
-            <div className="createteam">
-              <label htmlFor="teamName">Team Name</label>
-              <div className="teamn">
-                <input type="text" style={{width:"30%"}} name="teamName" id="teamName" />
-                <button className="verifybtn" onClick={handleVerify}>
-    {isLoading ? 'Verifying...' : 'Verify'}
-</button>
-{!isLoading && <p className={isVerified ? 'message' : 'message-failed'}>
-    {isVerified ? 'Verification successful' : 'Verify'}
-
-                </p>}
-                
-
-              </div>
-            </div>
-          ) : (
-            <div className="jointeam">
-              <label htmlFor="teamEmail">Team leaders Email</label>
-              <div className="teamn">
-                <input type="text" style={{width:"70%"}} name="teamName" id="teamName" />
-                
-              </div>
-              </div>
-          )}
+          <div className='team'>
+            {isCreatingTeam ? (
+                <div style={{display:"flex",flexDirection:"column",width:"100%"}}>
+                    <label htmlFor="teamName">Team Name</label>
+                    <input className="teamcreate" type="text" name="teamName" id="teamName" />
+                </div>
+            ) : (
+                <div className="jointeam">
+                    <label htmlFor="teamEmail">Team leader's Email</label>
+                    <div className="teamjoin">
+                        <input type="text" name="teamName" id="teamName" />
+                        <button className="verifybtn" onClick={handleVerify}>
+                        {isLoading ? "Verifying..." : "Verify"}
+                        </button>
+                    </div>
+                    {!isLoading && (
+                        <p className={`message ${isVerified ? "" : "message-failed"}`}>
+                        {isVerified ? `Verification successful,${teamname}
+                        ` : "Please Verify"}
+                        </p>
+                    )}
+                </div>
+            )}
+          </div>
         </div>
       </div>
     );

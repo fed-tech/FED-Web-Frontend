@@ -47,14 +47,16 @@
     cursor: pointer;
 }
 
-.createteam
+.team
 {
-    font-size: 10px;
-    width: 100%;
-    
+    font-size: 1rem;
+    width: 80%;
+    height: 20vh;
     margin-right: 500px;
     padding-top: 5%;
-    padding-bottom: 10%;
+    padding-bottom: 6.5%;
+    margin-bottom: 7%;
+    display: flex;  
 } 
 
 label {
@@ -66,14 +68,9 @@ label {
     margin-left: 15px;
     margin-right: 12px;
 }
-.verifybtn{
-    width: 125px ;
-    height: 42px;
-    background-color: #f45725;
-    margin-left: 30px;
-}
+
 .verifybtn {
-    font-size: 17px;
+    font-size: 1.3rem;
     color: #fff;
     display: inline-block;
     text-align: center;
@@ -81,31 +78,37 @@ label {
     cursor: pointer;
     padding: .375rem .75rem;
     line-height: 1.5;
-    border-radius: .25rem;
+    border-radius: 1rem;
+    width: 25% ;
+    background-color: #f45725;
+    margin-left: 30px;
 }
 
-.verifybtn:hover {
-    color: #fff;
 
+.teamcreate
+{
+    width: 100%;
 }
-
-.verifybtn:disabled {
-    color: #6c757d;
-    background-color: #fff;
+.teamjoin
+{
+    
+    width: 100%;
+    display: flex;
+}
+.submitBtn:disabled {
+    color: #ffffff;
+    background-color: #834d4d;
     border-color: #6c757d;
 }
 
 .message {
     font-size: 20px;
     font-family: mulish;
-    margin-left:10px ;
+    padding: 1%;
     color: #28a745; /* Change this to the color you want for successful verification */
 }
 
 .message-failed {
-    font-size: 16px;
-    font-family: mulish;
-    margin-left:10px ;
     color: #dc3545; /* Change this to the color you want for failed verification */
 }
 
@@ -146,9 +149,9 @@ label {
     transition: .4s;
 }
 .jointeam{
-    margin-right: 400px;
-    padding-top: 5%;
-    padding-bottom: 12.5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 input:checked + .slider {
     background-color: #f45725;;
