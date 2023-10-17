@@ -6,6 +6,8 @@ import omegaRetro from "../../../assets/Omega/omegaRetro.png";
 import click from "../../../assets/Omega/Maskgroup.svg";
 import EventCard from "./cards/EventCard";
 
+import { eventDetails } from "./eventDetails";
+
 export default function Main() {
   // scroll to top
   useEffect(() => {
@@ -26,10 +28,18 @@ export default function Main() {
         </div>
       </div>
       <div className={OMCss.cards}>
-        <EventCard />
-        <EventCard />
-        <EventCard />
-        <EventCard />
+        {eventDetails.map((e) => {
+          return (
+            <EventCard
+              name={e.name}
+              image={e.image}
+              logo={e.logo}
+              date={e.date}
+              month={e.month}
+              description={e.description}
+            />
+          );
+        })}
       </div>
     </div>
   );
