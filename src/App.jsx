@@ -10,6 +10,7 @@ const Team = React.lazy(() => import("./Pages/Team"));
 const Error = React.lazy(() => import("./Pages/Error"));
 const Alumni = React.lazy(() => import("./Pages/Alumni"));
 const Events = React.lazy(() => import("./Pages/Events"));
+const Omega = React.lazy(() => import("./Pages/Omega"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
 const PrivacyPolicies = React.lazy(() => import("./Pages/PrivacyPolicies"));
@@ -63,6 +64,14 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <Home />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/omega"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Omega />
                     </Suspense>
                   }
                 />
@@ -189,8 +198,8 @@ function App() {
                     </Suspense>
                   }
                 />
-            
-              <Route
+
+                <Route
                   path="/newform"
                   element={
                     <Suspense fallback={<Loading />}>
