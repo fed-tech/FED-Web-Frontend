@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import OMCss from "./Main.module.css";
 
-import omegaRetro from "../../../assets/Omega/omegaRetro.png";
+import omegaRetro from "../../../assets/Omega/omegaRetro.webp";
 import click from "../../../assets/Omega/Maskgroup.svg";
 import EventCard from "./cards/EventCard";
 
