@@ -1,27 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useContext} from 'react';
 import '../../css/Events/regForm.css';
 import formData from './formElements.json';
 import FormField from './formField';
 import cancel from '../../../assets/SkillHunt/XCircle.png';
-import { Alert } from '../../../MicroInterAction/Alert';
 import Switch from "react-switch";
+import Load from "../../../MicroInterAction/Load"
+import axios from 'axios';
+import AuthContext from "../../../store/auth-context";
 
-export default function RegForm({ showPopUp, setShowPopUp }) {
+export default function RegForm({ showPopUp, setShowPopUp, setError }) {
+    const authCtx = useContext(AuthContext);
     const [limit, setLimit] = useState(3);
     const [count, setCount] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [isVerified, setIsVerified] = useState(false);
     const [isCreatingTeam, setIsCreatingTeam] = useState(false);
     const [submission, setSubmission] = useState({});
-    const [teamname, setTeamName] = useState("");
-    const [variants, setError] = useState({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-    });
+    const [teamleadermail, setTeamleadermail] = useState("");
+    const [message,setMessage] = useState("")
+    const [formid,setFormId] = useState("652bdb0f955481122df6ef27")
+    const [isSubmitting, setIsSubmitting] = useState(false)
     var showTeam = formData.isTeam
     const handleNext = () => {
         var validationerror = formData.formelement.slice(count, count + limit).every((e) => {
@@ -70,21 +68,47 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
         );
     });
     const handleToggle = (e) => {
-        console.log(e)
+        setMessage("")
+        setIsVerified(!e)
         setIsCreatingTeam(!e)
     }
     const handleVerify = async () => {
         setIsLoading(true);
         try {
-            await new Promise((resolve) => setTimeout(resolve, 2000));
-            setTeamName("demo team")
-            setIsVerified(true);
+            var result = await axios.get(
+              `/form/verifyleader?teamleadermail=${teamleadermail}&formid=${formid}`,
+              {
+                headers: {
+                  Authorization: authCtx.token,
+                },
+              }
+            );
+            if(result.status == 200){
+                console.log(result.data)
+                if(result.data.validation){
+                    setIsVerified(true)
+                    console.log(result.data.message)
+                    setSubmission({...submission,teamleader:teamleadermail, teamname: result.data.message})
+                    setMessage("Verification Successfull,Your team name is "+result.data.message)
+                }else{
+                    setIsVerified(false)
+                    setMessage("Verification Failed")
+                }
+            }
         } catch (error) {
             console.error(error);
         } finally {
             setIsLoading(false);
         }
     };
+    const handleTeam = (e) =>{
+        console.log(e.target.value)
+        setSubmission({...submission,teamleader:authCtx.user.email,teamname:e.target.value})
+    }
+    const handleTeamleader = (e) =>{
+        setTeamleadermail(e.target.value)
+    }
+
     if (visibleFields.length === 0 && formData.isTeam) {
         visibleFields.push(
             <div>
@@ -105,21 +129,20 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
                         {isCreatingTeam ? (
                             <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
                                 <label htmlFor="teamName">Team Name</label>
-                                <input className="teamcreate" type="text" name="teamName" id="teamName" />
+                                <input className="teamcreate" type="text" name="teamName" id="teamName" onChange={handleTeam}/>
                             </div>
                         ) : (
                             <div className="jointeam">
                                 <label htmlFor="teamEmail">Team leader's Email</label>
                                 <div className="teamjoin">
-                                    <input type="text" name="teamName" id="teamName" />
+                                    <input type="text" name="teamName" id="teamName" onChange={handleTeamleader}/>
                                     <button className="verifybtn" onClick={handleVerify}>
-                                        {isLoading ? "Verifying..." : "Verify"}
+                                        {isLoading ? <Load />: "Verify"}
                                     </button>
                                 </div>
                                 {!isLoading && (
                                     <p className={`message ${isVerified ? "" : "message-failed"}`}>
-                                        {isVerified ? `Verification successful,${teamname}
-                        ` : "Please Verify"}
+                                        {message}
                                     </p>
                                 )}
                             </div>
@@ -131,8 +154,37 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
         showTeam = false;
     }
 
-    const handleSubmit = (e) => {
-        console.log(submission);
+    const handleSubmit = async (e) => {
+        if(!isVerified){
+            return setError({
+                mainColor: "#FFC0CB",
+                secondaryColor: "#FF69B4",
+                symbol: "pets",
+                title: "Error",
+                text: "Please verify the team details",
+                val: true,
+            });
+        }
+        setIsSubmitting(true)
+        try{
+            var result = await axios.post("/form/register", {...submission,formid:formid}, {
+              headers: {
+                Authorization: authCtx.token,
+              },
+            });
+        }catch(error){
+            setError({
+                mainColor: "#FFC0CB",
+                secondaryColor: "#FF69B4",
+                symbol: "pets",
+                title: "Unsuccessful",
+                text: "Failed to submit the form",
+                val: true,
+            });
+        }
+        finally{
+            setIsSubmitting(false)
+        }
         setShowPopUp(false);
     };
 
@@ -169,10 +221,11 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
                     {count >= formData.formelement.length - limit && (
                         showTeam ?
                             <button className='prevBtn' onClick={handleNext}>Enter Team Details</button>
-                            : <input className="submitBtn" type="submit" onClick={handleSubmit} disabled={!isVerified} />
+                            : <button className="submitBtn" type="submit" onClick={handleSubmit} disabled={!isVerified} >
+                                {isSubmitting ? <Load /> : "Submit"}
+                            </button>
                     )}
                 </div>
-                <Alert variant={variants} val={setError} />
             </div>
         </div>
     );

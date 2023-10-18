@@ -122,22 +122,8 @@ function AddEvent({ setViewEvents }) {
           text: "Event submitted successfully!",
           val: true,
         });
-
         // Set a delay before resetting to the initial state and hiding the success message
-        setTimeout(() => {
-          setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
-            val: false,
-          });
-
-          setSubmitting(false);
-          setViewEvents(true);
           window.scrollTo(0, 0);
-        }, 2000);
       }
     } catch (err) {
       console.log(form);
@@ -150,22 +136,6 @@ function AddEvent({ setViewEvents }) {
         text: "Please fill all the details!",
         val: true,
       });
-
-      // Set a delay before resetting to the initial state and hiding the success message
-      setTimeout(() => {
-        setError({
-          mainColor: "",
-          secondaryColor: "",
-          symbol: "",
-          title: "",
-          text: "",
-          val: false,
-        });
-      }, 2000);
-
-      setTimeout(() => {
-        setSubmitting(false);
-      }, 300);
     }
   }
   const handlePreview = () => {

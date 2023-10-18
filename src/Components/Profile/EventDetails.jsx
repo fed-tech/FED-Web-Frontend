@@ -77,20 +77,10 @@ function EventDetails({ cardNo, setShow }) {
           val: true,
         });
         
-        setTimeout(() => {
-          setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
-            val: false,
-          });
   
           console.log("Event deleted");
           setShow(false);
           window.scrollTo(0, 0);
-        }, 2000);
         
       }
     } catch (err) {
@@ -127,22 +117,10 @@ function EventDetails({ cardNo, setShow }) {
           val: true,
         });
         
-        setTimeout(() => {
-          setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
-            val: false,
-          });
-  
           console.log("Form deleted");
           handleCloseModal();
           makeRequest()
           window.scrollTo(0, 0);
-        }, 2000);
-        
       }
     } catch (err) {
       console.log(err);
@@ -165,22 +143,9 @@ function EventDetails({ cardNo, setShow }) {
       text: "Form Viewed successfully!",
       val: true,
     });
-    
-    setTimeout(() => {
-      setError({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-      });
-
       console.log("Form viewed");
       handleCloseModal();
       window.scrollTo(0, 0);
-    }, 2000);
-
   };
 
   
@@ -254,18 +219,6 @@ function EventDetails({ cardNo, setShow }) {
     console.log(cardNo);
     makeRequest()
   }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      setError({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-      });
-    }, 10000);
-  }, [variants]);
 
   return (
     <div className={eventCss.fullPage}>

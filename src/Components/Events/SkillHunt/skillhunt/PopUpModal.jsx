@@ -67,18 +67,6 @@ function PopUpModal({ setShowPopUp, setSuccess, setRegStatus }) {
     transaction,
   } = info;
 
-  useEffect(() => {
-    setTimeout(() => {
-      setError({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-      });
-    }, 10000);
-  }, [variants]);
 
   const handleNext = () => {
     if (count === 1) {

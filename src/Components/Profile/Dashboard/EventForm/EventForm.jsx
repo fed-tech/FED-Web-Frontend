@@ -143,16 +143,6 @@ export default function Form() {
       text: "Please fill all the required fields",
       val: true,
     });
-    setTimeout(() => {
-      setError({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-      });
-    }, 6000);
   };
 
   // const formBottomRef = useRef(null);

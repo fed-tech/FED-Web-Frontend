@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 import "../../css/Events/eventCard.css";
 import RegForm from './regForm'
+import { Alert } from '../../../MicroInterAction/Alert';
 
 import { eventcard } from "../../../Data/eventcard.js";
 
 export default function Card() {
   const [regLive, setRegLive] = useState(true);
   const [showPopUp, setShowPopUp] = useState(false);
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+});
   return (
     <div className="cards">
       {eventcard.map((data) => {
@@ -62,8 +71,10 @@ export default function Card() {
       })}
       {showPopUp &&
         <RegForm showPopUp={showPopUp}
-                  setShowPopUp={setShowPopUp}
+                  setShowPopUp={setShowPopUp} setError={setError}
         />}
+        <Alert variant={variants} val={setError} />
     </div>
+    
   );
 }

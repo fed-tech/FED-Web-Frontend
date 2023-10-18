@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // css
@@ -19,7 +19,19 @@ export const Alert = ({ variant, val, email }) => {
       console.log(e);
     }
   };
-
+  useEffect(() => {
+    console.log("vinit")
+    setTimeout(() => {
+      val({
+        mainColor: "",
+        secondaryColor: "",
+        symbol: "",
+        title: "",
+        text: "",
+        val: false,
+      });
+    }, 10000);
+  }, [variant]);
   return (
     <div className="alert-mDiv" id={variant.val ? "show" : "hide"}>
       <div
