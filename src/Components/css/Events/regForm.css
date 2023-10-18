@@ -19,7 +19,6 @@
     position: absolute;
     border-radius: 32px;
     background-color: #0f0e0e;
-
     height: 80%;
     width: 60%;
     padding: 50px;
@@ -85,8 +84,11 @@
     margin-right: 500px;
     padding-top: 5%;
     padding-bottom: 6.5%;
-    margin-bottom: 7%;
+    margin-bottom: 20%;
     display: flex;
+}
+.teamHead {
+    margin-top: 7%;
 }
 
 label {
@@ -272,11 +274,18 @@ input:checked+.slider:before {
 }
 
 @media(max-width:1027px) {
+    .teamHead {
+        margin-top: 10%;
+    }
     .team {
         width:95%;
+        margin-bottom: 20%;
     }
 }
 @media(max-width:832px) {
+    .teamHead {
+        margin-top: auto;
+    }
     .form {
         justify-content: space-evenly;
         height: 70%;

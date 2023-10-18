@@ -89,7 +89,7 @@ export default function RegForm({ showPopUp, setShowPopUp }) {
         visibleFields.push(
             <div>
                 <div className='teamDiv' style={{ display: "flex", flexDirection: "column" }}>
-                    <div>
+                    <div className='teamHead'>
                         <label>Create Team</label>
                         <Switch className='toggle'
                             onChange={handleToggle}
