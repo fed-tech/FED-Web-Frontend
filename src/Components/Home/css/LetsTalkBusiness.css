@@ -41,6 +41,12 @@
   color: #ffffff;
 }
 
+.business-text.address{
+  font-size: 16px;
+  line-height: 25px;
+  text-decoration: none;
+}
+
 .letsTalkBusiness-right div {
   background-color: transparent;
   display: flex;
