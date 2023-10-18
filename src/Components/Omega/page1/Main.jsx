@@ -1,18 +1,33 @@
 import React, { useEffect } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 import OMCss from "./Main.module.css";
+import EventCard from "./cards/EventCard";
+import AuthContext from "../../../store/auth-context";
 
 import omegaRetro from "../../../assets/Omega/omegaRetro.webp";
 import click from "../../../assets/Omega/Maskgroup.svg";
-import EventCard from "./cards/EventCard";
 
 import { eventDetails } from "./eventDetails";
 
-export default function Main() {
+export default function Main(props) {
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const authCtx = useContext(AuthContext);
+  const redirect = useNavigate();
+
+  const register = () => {
+    if (authCtx.token == null) {
+      authCtx.settarget("omega");
+      redirect("/Login");
+    } else {
+      props.setShift(true);
+    }
+  };
 
   return (
     <div className={OMCss.main}>
@@ -20,7 +35,7 @@ export default function Main() {
         <div className={OMCss.image}>
           <img src={omegaRetro} alt="" />
         </div>
-        <div className={OMCss.button}>
+        <div className={OMCss.button} onClick={register}>
           <div className={OMCss.buttonText}>REGISTER NOW</div>
           <div className={OMCss.buttonImage}>
             <img src={click} alt="" />
