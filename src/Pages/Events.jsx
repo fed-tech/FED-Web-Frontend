@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // Components
-import Card from "../Components/Events/card/jsx/Card.jsx";
+import Card from"../Components/Events/card/Card";
 import Header from "../Components/Events/header/jsx/Header.jsx";
 import SkillHunt from "./../Components/Events/SkillHunt/SkillHunt.jsx";
 

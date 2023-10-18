@@ -23,7 +23,7 @@ export default function formField({count, setCount, submission, setSubmission, .
             </label>
             <div className="input radioDiv">
               {field.value.map((radio) => (
-                <div>
+                <div className='labelAndRadio'>
                   <input
                     className="radioInp"
                     name={field.title}

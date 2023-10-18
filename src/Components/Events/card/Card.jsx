@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../css/eventCard.css";
+import "../../css/Events/eventCard.css";
 import RegForm from './regForm'
 
-import { eventcard } from "../../../../Data/eventcard.js";
+import { eventcard } from "../../../Data/eventcard.js";
 
 export default function Card() {
   const [regLive, setRegLive] = useState(true);
