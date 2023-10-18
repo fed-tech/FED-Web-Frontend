@@ -23,17 +23,7 @@ export default class SimpleSlider extends Component {
     return (
       <div>
         <Slider {...settings}>
-          <div>
-            <SliderComponent
-              image="https://uploads-ssl.webflow.com/63a4333d6709521275441c77/64ae2d29b8a56c3c661ed97e_image%20349%20(1).png"
-              para1="Got Skills?"
-              coloredPara=" Unleash"
-              para2="your inner apple"
-              para3="Participate and Showcase your skills. Win exciting prizes & get opportunity"
-              button="true"
-            />
-          </div>
-          <div>
+          {/* <div>
             <SliderComponent
               image="https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fa6c18300f0c3b718d0f99_h1.png"
               para1="Federation of"
@@ -60,6 +50,16 @@ export default class SimpleSlider extends Component {
               coloredPara=" 'start-ups' easier"
               para2="for you to understand and begin with!"
               para3='"Peace is a journey of a thousand miles and it must be taken one step at a time."― Lyndon B. Johnson'
+              button="false"
+            />
+          </div> */}
+          <div>
+            <SliderComponent
+              image="https://uploads-ssl.webflow.com/64553d5a8ac054ad27b992c4/652f7fdbdb673024d85097ce_caraousel%20(3).png"
+              para1=""
+              coloredPara=""
+              para2=""
+              para3=""
               button="false"
             />
           </div>
