@@ -18,7 +18,7 @@ export default function Events() {
         <SkillHunt />
       </div> */}
       <div>
-        <Header head="Previous Events" />
+        <Header head="Our Events" />
         <Card />
       </div>
     </>

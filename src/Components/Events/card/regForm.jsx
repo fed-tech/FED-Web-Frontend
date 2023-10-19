@@ -1,6 +1,6 @@
 import React, { useState, useEffect , useContext} from 'react';
 import '../../css/Events/regForm.css';
-import formData from './formElements.json';
+// import formData from './formElements.json';
 import FormField from './formField';
 import cancel from '../../../assets/SkillHunt/XCircle.png';
 import Switch from "react-switch";
@@ -8,7 +8,7 @@ import Load from "../../../MicroInterAction/Load"
 import axios from 'axios';
 import AuthContext from "../../../store/auth-context";
 import {QRCodeSVG} from 'qrcode.react';
-export default function RegForm({ showPopUp, setShowPopUp, setError }) {
+export default function RegForm({ showPopUp, setShowPopUp, setError,formid, formelement}) {
     const authCtx = useContext(AuthContext);
     const [limit, setLimit] = useState(3);
     const [count, setCount] = useState(0);
@@ -18,10 +18,11 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
     const [submission, setSubmission] = useState({});
     const [teamleadermail, setTeamleadermail] = useState("");
     const [message,setMessage] = useState("")
-    const [formid,setFormId] = useState("652bdb0f955481122df6ef27")
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [showPayment,setShowPayment] = useState(false)
     const [showFields,setShowFields] = useState(true)
+    var formData = formelement
+    console.log(formData.isTeam)
     var showTeam = formData.isTeam
     var isPaid = formData.amount != 0 
     const handleNext = () => {
@@ -55,6 +56,9 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
     };
     const onChange = (e) => {
         const {name, value}=e.target
+        if(name == "txnid"){
+          return setSubmission({...submission,[name]:value.substring(0,4)})
+        }
         setSubmission({...submission,[name]:value})
     }
     const handlePrev = () => {
@@ -197,7 +201,7 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
 
 
     const handlePayment = () =>{
-      if(!submission.teamleader || submission.teamleader.length === 0 || submission.teamname.length === 0){
+      if(formData.isTeam &&(!submission.teamleader || submission.teamleader.length === 0 || submission.teamname.length === 0)){
         return setError({
           mainColor: "#FFC0CB",
           secondaryColor: "#FF69B4",
@@ -217,17 +221,8 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
     }
 
     const handleSubmit = async (e) => {
-        if(!isVerified){
-            return setError({
-                mainColor: "#FFC0CB",
-                secondaryColor: "#FF69B4",
-                symbol: "pets",
-                title: "Error",
-                text: "Please verify the team details",
-                val: true,
-            });
-        }
-        if(submission.teamleader == "" || submission.teamname == ""){
+        if((formData.isTeam && (!isVerified || submission.teamleader == "" || submission.teamname == "")) || (isPaid && submission.txnid == "")){
+          console.log(submission)
           return setError({
             mainColor: "#FFC0CB",
             secondaryColor: "#FF69B4",
@@ -304,7 +299,7 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
                   className="submitBtn"
                   type="submit"
                   onClick={handleSubmit}
-                  disabled={!isVerified}
+                  disabled={formData.isTeam && !isVerified}
                 >
                   {isSubmitting ? <Load /> : "Submit"}
                 </button>

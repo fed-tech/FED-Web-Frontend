@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import addEventCss from "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
 import axios from "axios";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import AuthContext from "../../../../store/auth-context";
 import Load from "../../../../MicroInterAction/Load";
 import { Alert } from "../../../../MicroInterAction/Alert";
@@ -143,9 +141,7 @@ function AddEvent({ setViewEvents }) {
     setPreviewImage(form.poster);
     setIsModalOpen(true);
   };
-  const handleDateChange = (date) => {
-    setForm((prevState) => ({ ...prevState, date: date }));
-  };
+
   const handleRegTypeChange = (e) => {
     setForm((prevState) => ({ ...prevState, reg_type: e.target.value }));
   };
@@ -185,12 +181,7 @@ function AddEvent({ setViewEvents }) {
           </button>
         </div>
         <div className={addEventCss.addEvent}>
-          <DatePicker
-            selected={form.date}
-            onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"
-            placeholderText="dd/mm/yyyy"
-          />
+
           <select
             placeholder="Registration type"
             name="reg_type"

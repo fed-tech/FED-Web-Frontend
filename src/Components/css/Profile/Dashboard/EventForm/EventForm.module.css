@@ -22,8 +22,8 @@
     background: none;
     border-bottom: 3px solid #4B4B4B;
     font-size: 20px;
+    text-align: left;
 }
-
 .formDropDownOption {
     color: black;
     background-color: rgb(194, 194, 194);
@@ -68,10 +68,8 @@ input[type="date"], input[type="time"]{
 
 .formDiv {
     width: 80%;
-    text-align: center;
     margin-right: 50px;
 }
-
 .formBottom {
     display: flex;
     justify-content: space-between;

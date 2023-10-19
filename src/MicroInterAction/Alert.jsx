@@ -20,7 +20,7 @@ export const Alert = ({ variant, val, email }) => {
     }
   };
   useEffect(() => {
-    setShowAlert(true)
+    setShowAlert(variant.val ? true: false)
     setTimeout(() => {
       setShowAlert(false)
     }, 5000);

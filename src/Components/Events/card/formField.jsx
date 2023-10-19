@@ -18,15 +18,15 @@ export default function formField({count, setCount, submission, setSubmission, .
         {field.type === "radio" || field.type === "checkbox" ? (
           <div className="inpField">
             <label>
-              {field.title}
+              {field.name}
               {field.required ? <>* </> : <></>}
             </label>
             <div className="input radioDiv">
-              {field.value.map((radio) => (
+              {field.value.split(',').map((radio) => (
                 <div className='labelAndRadio'>
                   <input
                     className="radioInp"
-                    name={field.title}
+                    name={field.name}
                     type={field.type}
                     id={radio}
                     defaultValue={radio}
@@ -34,12 +34,12 @@ export default function formField({count, setCount, submission, setSubmission, .
                     onChange={onChange}
                     defaultChecked={
                       field.type === "radio"
-                        ? submission[field.title] &&
-                          submission[field.title] == radio
+                        ? submission[field.name] &&
+                          submission[field.name] == radio
                           ? true
                           : false
-                        : submission[field.title]
-                        ? submission[field.title][radio]
+                        : submission[field.name]
+                        ? submission[field.name][radio]
                         : false
                     }
                   />
@@ -53,17 +53,17 @@ export default function formField({count, setCount, submission, setSubmission, .
         ) : (
           <div className="inpField">
             <label>
-              {field.title}
+              {field.name}
               {field.required ? <>* </> : <></>}
             </label>
             <div className="inputField">
               <input
                 {...reqd}
                 type={field.type}
-                name={field.title}
+                name={field.name}
                 defaultValue={
-                  field.value != submission[field.title]
-                    ? submission[field.title]
+                  field.value != submission[field.name]
+                    ? submission[field.name]
                     : field.value
                 }
                 placeholder={field.placeholder}
