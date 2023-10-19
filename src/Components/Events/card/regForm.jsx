@@ -30,13 +30,14 @@ export default function RegForm({ showPopUp, setShowPopUp, setError,formid, form
             //check for radio and checkbox
             console.log(e.type)
             if (e.type == "checkbox") {
-                return submission[e.title] ?
-                    Object.keys(submission[e.title]).every((f) => {
-                        console.log(submission[e.title][f])
-                        return submission[e.title][f]
+                return submission[e.name] ?
+                    Object.keys(submission[e.name]).every((f) => {
+                        console.log(submission[e.name][f])
+                        return submission[e.name][f]
                     }) : false
             } else {
-                if (!submission[[e.title]] && e.required) {
+                if (!submission[[e.name]] && e.required) {
+                    console.log(e.name)
                     return false
                 }
             }
@@ -71,6 +72,7 @@ export default function RegForm({ showPopUp, setShowPopUp, setError,formid, form
     };
     var visibleFields = []
     formData.formelement.slice(count, count + limit).map((field, idx) => {
+      console.log(field)
         visibleFields.push(
             <FormField
                 key={count + idx}
@@ -201,13 +203,32 @@ export default function RegForm({ showPopUp, setShowPopUp, setError,formid, form
 
 
     const handlePayment = () =>{
-      if(formData.isTeam &&(!submission.teamleader || submission.teamleader.length === 0 || submission.teamname.length === 0)){
+      var validationerror = formData.formelement.slice(count, count + limit).every((e) => {
+        //check for radio and checkbox
+        console.log(e.type)
+        if (e.type == "checkbox") {
+            return submission[e.name] ?
+                Object.keys(submission[e.name]).every((f) => {
+                    console.log(submission[e.name][f])
+                    return submission[e.name][f]
+                }) : false
+        } else {
+            if (!submission[[e.name]] && e.required) {
+                console.log("hello")
+                console.log(e)
+                console.log(submission)
+                return false
+            }
+        }
+        return true
+    })
+      if(!validationerror || (formData.isTeam &&(!submission.teamleader || submission.teamleader.length === 0 || submission.teamname.length === 0))){
         return setError({
           mainColor: "#FFC0CB",
           secondaryColor: "#FF69B4",
           symbol: "pets",
           title: "Error",
-          text: "Please verify the team details",
+          text: "Please verify the details",
           val: true,
         });
       }
