@@ -89,6 +89,8 @@
 }
 .teamHead {
     margin-top: 7%;
+    display: flex;
+    text-align: center;
 }
 
 label {
@@ -200,6 +202,10 @@ input {
     background-color: #834d4d;
     border-color: #6c757d;
 }
+.prevBtn:disabled {
+    color: #777777;
+}
+
 
 .message {
     font-size: 20px;
@@ -272,6 +278,30 @@ input:checked+.slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
+.paymentMain{
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+}
+.paymentMain .qrcode{
+    padding: 1.5%;
+    background-color: white;
+    width: fit-content;
+    align-self: center;
+    margin: 1.5%;
+}
+.paymentMain input{
+    width: 60%;
+    align-self: center;
+}
+.paymentMain label{
+    width: 60%;
+    align-self: center;
+    font-size: 1rem;
+}
 
 @media(max-width:1027px) {
     .teamHead {
@@ -330,7 +360,9 @@ input:checked+.slider:before {
         margin-top: 2%;
         padding: 3.5% 2%;
     }
-   
+    .paymentMain label{
+        font-size: 0.8rem;
+    }
 }
 @media(min-height:670px) {
     .form {
@@ -374,6 +406,9 @@ input:checked+.slider:before {
         max-width: inherit;
         justify-content: space-between;
     }
+    .paymentMain label{
+        font-size: 0.7rem;
+    }
 }
 
 @media(max-width:610px) {
@@ -390,6 +425,9 @@ input:checked+.slider:before {
 
     input[type="radio"] {
         margin-right: 10px;
+    }
+    .paymentMain label{
+        font-size: 0.6rem;
     }
 }
 

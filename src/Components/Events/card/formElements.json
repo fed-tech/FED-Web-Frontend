@@ -1,5 +1,8 @@
 {
     "isTeam":true,
+    "amount":1000,
+    "upi":"vinit.agarwal@paytm",
+
     "formelement":[
         {
             "title":"Name",
@@ -21,6 +24,13 @@
             "value":["male", "female", "other"],
             "placeholder":"",
             "required":true
-        } 
+        },
+        {
+            "title":"Gender",
+            "type":"radio",
+            "value":["male", "female", "other"],
+            "placeholder":"",
+            "required":true
+        }  
     ]
 }

@@ -7,7 +7,7 @@ import Switch from "react-switch";
 import Load from "../../../MicroInterAction/Load"
 import axios from 'axios';
 import AuthContext from "../../../store/auth-context";
-
+import {QRCodeSVG} from 'qrcode.react';
 export default function RegForm({ showPopUp, setShowPopUp, setError }) {
     const authCtx = useContext(AuthContext);
     const [limit, setLimit] = useState(3);
@@ -20,7 +20,10 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
     const [message,setMessage] = useState("")
     const [formid,setFormId] = useState("652bdb0f955481122df6ef27")
     const [isSubmitting, setIsSubmitting] = useState(false)
+    const [showPayment,setShowPayment] = useState(false)
+    const [showFields,setShowFields] = useState(true)
     var showTeam = formData.isTeam
+    var isPaid = formData.amount != 0 
     const handleNext = () => {
         var validationerror = formData.formelement.slice(count, count + limit).every((e) => {
             //check for radio and checkbox
@@ -50,9 +53,17 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
         }
         !validationerror || setCount(prevCount => prevCount + limit);
     };
-
+    const onChange = (e) => {
+        const {name, value}=e.target
+        setSubmission({...submission,[name]:value})
+    }
     const handlePrev = () => {
-        setCount(prevCount => Math.max(prevCount - limit, 0));
+        if(showPayment){
+            setShowFields(true)
+            setShowPayment(false)
+        }else{
+            setCount(prevCount => Math.max(prevCount - limit, 0));
+        }
     };
     var visibleFields = []
     formData.formelement.slice(count, count + limit).map((field, idx) => {
@@ -108,9 +119,8 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
     const handleTeamleader = (e) =>{
         setTeamleadermail(e.target.value)
     }
-
-    if (visibleFields.length === 0 && formData.isTeam) {
-        visibleFields.push(
+    
+    const Teampage = (
             <div>
                 <div className='teamDiv' style={{ display: "flex", flexDirection: "column" }}>
                     <div className='teamHead'>
@@ -129,13 +139,13 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
                         {isCreatingTeam ? (
                             <div style={{ display: "flex", flexDirection: "column", width: "100%" }}>
                                 <label htmlFor="teamName">Team Name</label>
-                                <input className="teamcreate" type="text" name="teamName" id="teamName" onChange={handleTeam}/>
+                                <input className="teamcreate" type="text" name="teamName" id="teamName" onChange={handleTeam} value={submission.teamname}/>
                             </div>
                         ) : (
                             <div className="jointeam">
                                 <label htmlFor="teamEmail">Team leader's Email</label>
                                 <div className="teamjoin">
-                                    <input type="text" name="teamName" id="teamName" onChange={handleTeamleader}/>
+                                    <input type="text" name="teamName" id="teamName" onChange={handleTeamleader} value={teamleadermail}/>
                                     <button className="verifybtn" onClick={handleVerify}>
                                         {isLoading ? <Load />: "Verify"}
                                     </button>
@@ -150,7 +160,59 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
                     </div>
                 </div>
             </div>
-        );
+        )
+
+    
+    const Paymentpage = (
+      <div>
+        <div className="paymentMain fontDets">
+          <label>
+            Kindly Pay ₹{formData.amount} to the below QR Code thorugh any
+            payment provider. After the transaction is completed, Provide Us the last four digit of the transaction ID received by you
+            </label>
+          <div className="qrcode">
+            <QRCodeSVG
+              value={`upi://pay?pa=${formData.upi}&am=${formData.amount}&cu=INR`}
+              imageSettings={{
+                src: "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png",
+                excavate: true,
+                width:40,
+                height:40
+              }}
+              level={'H'}
+            />
+          </div>
+          <input
+            type="number"
+            name="txnid"
+            min={0}
+            id="teamName"
+            onChange={onChange}
+            value={submission.txnid}
+            placeholder="Last Four Digit Of Txn ID"
+          />
+        </div>
+      </div>
+    );
+
+
+    const handlePayment = () =>{
+      if(!submission.teamleader || submission.teamleader.length === 0 || submission.teamname.length === 0){
+        return setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "pets",
+          title: "Error",
+          text: "Please verify the team details",
+          val: true,
+        });
+      }
+        setShowFields(false)
+        setShowPayment(true)
+        isPaid = false
+    }
+    if (visibleFields.length === 0 && formData.isTeam) {
+        visibleFields.push(Teampage);
         showTeam = false;
     }
 
@@ -164,6 +226,16 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
                 text: "Please verify the team details",
                 val: true,
             });
+        }
+        if(submission.teamleader == "" || submission.teamname == ""){
+          return setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "pets",
+            title: "Error",
+            text: "Please verify the team details",
+            val: true,
+          });
         }
         setIsSubmitting(true)
         try{
@@ -197,36 +269,48 @@ export default function RegForm({ showPopUp, setShowPopUp, setError }) {
 
 
     return (
-
-        <div className="regFormPopUp">
-            <div className="form">
-                <img
-                    src={cancel}
-                    alt=""
-                    onClick={() => setShowPopUp(false)}
-                    id="CloseIcon"
-                />
-                {visibleFields}
-                <div className="btns">
-                    {count !== 0 && (
-                        <button className="prevBtn" onClick={handlePrev}>
-                            Previous
-                        </button>
-                    )}
-                    {count < formData.formelement.length - limit && (
-                        <button className="nextBtn" onClick={handleNext}>
-                            Next
-                        </button>
-                    )}
-                    {count >= formData.formelement.length - limit && (
-                        showTeam ?
-                            <button className='prevBtn' onClick={handleNext}>Enter Team Details</button>
-                            : <button className="submitBtn" type="submit" onClick={handleSubmit} disabled={!isVerified} >
-                                {isSubmitting ? <Load /> : "Submit"}
-                            </button>
-                    )}
-                </div>
-            </div>
+      <div className="regFormPopUp">
+        <div className="form">
+          <img
+            src={cancel}
+            alt=""
+            onClick={() => setShowPopUp(false)}
+            id="CloseIcon"
+          />
+          {showFields?visibleFields:<></>}
+          {showPayment?Paymentpage:<></>}
+          <div className="btns">
+            {count !== 0 && (
+              <button className="prevBtn" onClick={handlePrev}>
+                Previous
+              </button>
+            )}
+            {count < formData.formelement.length - limit && (
+              <button className="nextBtn" onClick={handleNext}>
+                Next
+              </button>
+            )}
+            {count >= formData.formelement.length - limit &&
+              (showTeam ? (
+                <button className="prevBtn" onClick={handleNext}>
+                  Enter Team Details
+                </button>
+              ) : isPaid && !showPayment? (
+                <button className="prevBtn" onClick={handlePayment} disabled={formData.isTeam?!isVerified:false}>
+                    Proceed To Pay
+                </button>
+              ) : (
+                <button
+                  className="submitBtn"
+                  type="submit"
+                  onClick={handleSubmit}
+                  disabled={!isVerified}
+                >
+                  {isSubmitting ? <Load /> : "Submit"}
+                </button>
+              ))}
+          </div>
         </div>
+      </div>
     );
 }

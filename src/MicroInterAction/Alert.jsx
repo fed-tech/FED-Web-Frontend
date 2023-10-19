@@ -7,7 +7,7 @@ import axios from "axios";
 
 export const Alert = ({ variant, val, email }) => {
   const [sent, setSent] = useState(false);
-
+  const [showAlert,setShowAlert] = useState(false)
   const resendMail = async () => {
     try {
       const response = await axios.get(`/auth/resendMail/${email}`);
@@ -20,20 +20,13 @@ export const Alert = ({ variant, val, email }) => {
     }
   };
   useEffect(() => {
-    console.log("vinit")
+    setShowAlert(true)
     setTimeout(() => {
-      val({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-      });
-    }, 10000);
+      setShowAlert(false)
+    }, 5000);
   }, [variant]);
   return (
-    <div className="alert-mDiv" id={variant.val ? "show" : "hide"}>
+    <div className="alert-mDiv" id={showAlert ? "show" : "hide"}>
       <div
         className="alert-container"
         style={{
