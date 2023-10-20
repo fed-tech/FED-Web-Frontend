@@ -21,12 +21,12 @@ export default function Main(props) {
   const redirect = useNavigate();
 
   const register = () => {
-    if (authCtx.token == null) {
-      authCtx.settarget("omega");
-      redirect("/Login");
-    } else {
+    // if (authCtx.token == null) {
+    //   authCtx.settarget("omega");
+    //   redirect("/Login");
+    // } else {
       props.setShift(true);
-    }
+    // }
   };
 
   return (

@@ -1,4 +1,53 @@
 .cardMain {
+    background-color: #181818;
+    border-radius: 20px;
+    width:70%;
+    height: 400px;
+    /* margin-bottom: 60px; */
     display: flex;
-    max-width: 50%;
+    box-shadow: -7px 7px 13px 0px rgba(0, 0, 0, 0.60);
+}
+.cardImg {
+    height: 100%;
+    width:100%;
+}
+.cardImg img {
+    object-fit: cover;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 20px;
+    height: 100%;
+    width:100%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 3%;
+    gap: 5%;
+}
+
+.eventLogo {
+    height: 79.35px;
+}
+.eventLogo img {
+    height: 100%;
+}
+.eventDescription {
+    height:30%;
+    max-width: 85%;
+}
+.registerBtn {
+    background-color: #F45725;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 15px 10px; */
+    width:45%;
+    height: 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    letter-spacing: 0.31px;
+}
+.registerBtn img {
+    height:30px;
 }
