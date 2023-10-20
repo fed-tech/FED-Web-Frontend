@@ -25,34 +25,8 @@ export default function Main() {
   });
   return <div className={RegCss.main}>
     <div className={RegCss.events}>EVENTS.</div>
-    {/* <RegisterCards /> */}
     <div className={RegCss.regCards}>
       {cards}
     </div>
   </div>
-  // return <div className={OMCss.main}>
-  //   <div>
-  //     <div className={OMCss.image}>
-  //       <img src={omegaRetro} alt="" />
-  //       <h1 style={{color:"black"}}>
-  //         EVENTS
-  //         </h1>
-  //     </div>
-
-  //   </div>
-  //   <div className={OMCss.cards}>
-  //     {eventDetails.map((e) => {
-  //       return (
-  //         <EventCard
-  //           name={e.name}
-  //           image={e.image}
-  //           logo={e.logo}
-  //           date={e.date}
-  //           month={e.month}
-  //           description={e.description}
-  //         />
-  //       );
-  //     })}
-  //   </div>
-  // </div>;
 }

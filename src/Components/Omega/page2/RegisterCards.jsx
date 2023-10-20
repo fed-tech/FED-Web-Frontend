@@ -15,9 +15,9 @@ export default function RegisterCards({img, logo, desc}) {
                     <img src={logo} alt="" />
                 </div>
                 <div className={RCss.eventDescription}>{desc}</div>
-                <div className={RCss.registerBtn}>REGISTER NOW
+                <button className={RCss.registerBtn}>REGISTER NOW
                     <img src={click} alt="" />
-                </div>
+                </button>
             </div>
         </div>
     );

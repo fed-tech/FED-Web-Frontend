@@ -28,6 +28,7 @@
 
 .eventLogo {
     height: 79.35px;
+    max-width:50%;
 }
 .eventLogo img {
     height: 100%;
@@ -35,7 +36,6 @@
 .eventDescription {
     overflow-y: auto;
     max-height:50%;
-    /* max-width: 85%; */
 }
 .registerBtn {
     background-color: #F45725;
@@ -43,11 +43,23 @@
     justify-content: center;
     align-items: center;
     width:45%;
-    height: 40px;
     border-radius: 12px;
     font-weight: 700;
     letter-spacing: 0.31px;
+    padding: 8px 15px;
+    border: none;
 }
 .registerBtn img {
-    height:30px;
+    height:25px;
+}
+
+@media(max-width:1033px) {
+    .registerBtn{
+        width: 60%;
+    }
+}
+@media(max-width:654px) {
+    .registerBtn{
+        width: 70%;
+    }
 }
