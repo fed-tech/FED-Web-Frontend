@@ -1,15 +1,14 @@
 .cardMain {
     background-color: #181818;
     border-radius: 20px;
-    width:70%;
     height: 400px;
-    /* margin-bottom: 60px; */
+    margin-bottom: 60px;
     display: flex;
     box-shadow: -7px 7px 13px 0px rgba(0, 0, 0, 0.60);
 }
 .cardImg {
     height: 100%;
-    width:100%;
+    width:43%;
 }
 .cardImg img {
     object-fit: cover;
@@ -20,6 +19,7 @@
 }
 
 .right {
+    width: 70%;
     display: flex;
     flex-direction: column;
     padding: 5% 3%;
@@ -33,15 +33,15 @@
     height: 100%;
 }
 .eventDescription {
-    height:30%;
-    max-width: 85%;
+    overflow-y: auto;
+    max-height:50%;
+    /* max-width: 85%; */
 }
 .registerBtn {
     background-color: #F45725;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 15px 10px; */
     width:45%;
     height: 40px;
     border-radius: 12px;
