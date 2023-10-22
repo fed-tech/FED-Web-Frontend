@@ -59,15 +59,6 @@ export default function Team() {
         />
         <div className="space" />
 
-        {/* Marketing */}
-        <Departments
-          name="Marketing"
-          title="Those who help us strategize, develop, promote, grow and market
-          FED's endeavor!"
-          data={domain.marketing}
-        />
-        <div className="space" />
-
         {/* Operations */}
         <Departments
           name="Operations"
@@ -76,6 +67,15 @@ export default function Team() {
           data={domain.operation}
         />
         <div className="space" />
+
+        {/* Marketing */}
+        <Departments
+          name="Marketing"
+          title="Those who help us strategize, develop, promote, grow and market
+          FED's endeavor!"
+          data={domain.marketing}
+        />
+        {/* <div className="space" /> */}
       </section>
     </>
   );
