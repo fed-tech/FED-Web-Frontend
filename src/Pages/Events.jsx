@@ -14,10 +14,6 @@ export default function Events() {
   return (
     <>
       <div>
-        {/* <Header head="Current Events" /> */}
-        {/* <SkillHunt /> */}
-      </div>
-      <div>
         <Header head="Previous Events" />
         <Card />
       </div>
