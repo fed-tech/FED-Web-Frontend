@@ -15,7 +15,10 @@ export default function Card() {
             <div className="carddetails">
               <div className="left">
                 <div className="datemonth">
-                  <p className="date">{data.date}</p>
+                  <p className="date">
+                    {data.date}{" "}
+                    <span className="superscript">{data.superscript}</span>
+                  </p>
                   <p className="month">{data.month}</p>
                 </div>
                 <img className="image" src={data.img} />
