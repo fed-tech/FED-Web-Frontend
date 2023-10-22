@@ -25,16 +25,6 @@ export default class SimpleSlider extends Component {
         <Slider {...settings}>
           <div>
             <SliderComponent
-              image="https://uploads-ssl.webflow.com/64553d5a8ac054ad27b992c4/652f7fdbdb673024d85097ce_caraousel%20(3).png"
-              para1=""
-              coloredPara=""
-              para2=""
-              para3=""
-              button="false"
-            />
-          </div>
-          <div>
-            <SliderComponent
               image="https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fa6c18300f0c3b718d0f99_h1.png"
               para1="Federation of"
               coloredPara=" Entrepreneurship"
