@@ -623,15 +623,6 @@
       },
       {
         "id": 2,
-        "name": "Ayush Raj",
-        "instagram": "https://instagram.com/_.ayushhhhhhh?igshid=ZDdkNTZiNTM=",
-        "linkedin": "https://www.linkedin.com/in/ayush-raj-ab0837262",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6454eb797ae02d5b820a80a3_as.jpg",
-        "blur": "LlJuM%soR+M{~qjYWYWBV@WBV@tR"
-      },
-      {
-        "id": 3,
         "name": "Aparna Aryalakshami",
         "linkedin": "https://www.linkedin.com/in/aparna-arylakshami-b95425255",
         "github": "",
@@ -639,7 +630,7 @@
         "blur": "LAGa?.^j~oRk?bodNIM|xuR*-AjY"
       },
       {
-        "id": 4,
+        "id": 3,
         "name": "Tushar Anand",
         "linkedin": "https://www.linkedin.com/in/tushar-anand-395ba6272",
         "github": "https://github.com/TusharAnand17",
@@ -647,7 +638,7 @@
         "blur": "L484SRtk_I58~n^~9]SwIo%Ii~={"
       },
       {
-        "id": 1,
+        "id": 4,
         "name": "Shradha Sahay",
         "linkedin": "https://www.linkedin.com/in/shradha-sahay-3ab123222",
         "github": "",
