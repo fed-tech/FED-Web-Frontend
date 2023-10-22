@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-// css
-import "./css/DesktopNav.css";
-
 // state
 import AuthContext from "./../store/auth-context";
+
+// css
+import "./css/DesktopNav.css";
 
 export default function Nav() {
   const authCtx = useContext(AuthContext);
