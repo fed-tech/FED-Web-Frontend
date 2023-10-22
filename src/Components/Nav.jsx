@@ -23,28 +23,28 @@ export default function Nav() {
           <div className="listDiv">
             <ul id="NavUl">
               <li>
-                <NavLink to="/" className="liTag">
+                <NavLink to="/" className="LinkStyle">
                   Home
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/event" className="liTag">
+                <NavLink to="/event" className="LinkStyle">
                   Events
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Podcasts" className="liTag">
+                <NavLink to="/Podcasts" className="LinkStyle">
                   Podcasts
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Team" className="liTag">
+                <NavLink to="/Team" className="LinkStyle">
                   Our Team
                 </NavLink>
               </li>
               <li>
                 {authCtx.isLoggedIn ? (
-                  <NavLink to="/MyProfile" className="liTag">
+                  <NavLink to="/MyProfile" className="LinkStyle">
                     <img
                       src={authCtx.user.pic}
                       alt=""
@@ -53,7 +53,7 @@ export default function Nav() {
                     />
                   </NavLink>
                 ) : (
-                  <NavLink to="/Login" className="liTag">
+                  <NavLink to="/Login" className="LinkStyle">
                     Login/SignUp
                   </NavLink>
                 )}
