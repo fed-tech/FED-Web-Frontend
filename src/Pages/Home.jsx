@@ -9,8 +9,8 @@ import Testimonial from "./../Components/Home/Testimonial";
 import LetsTalkBusiness from "./../Components/Home/LetsTalkBusiness";
 
 // css
-import "../Components/Home/css/space.css";
 import "../Components/Home/css/home.css";
+import "../Components/Home/css/space.css";
 import "../Components/Home/css/testimonial.css";
 
 export default function Home() {
