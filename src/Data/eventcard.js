@@ -2,6 +2,7 @@ export const eventcard = [
   {
     class: "skillHunt",
     date: "06",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/64ad21753343f7de91db6213_skillhuntlogo.png",
     title: "SkillHunt",
@@ -15,6 +16,7 @@ export const eventcard = [
   {
     class: "talkShow",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd770f897ba1255d05556_Talk%20show%20logo.png",
     title: "Talk Show",
@@ -28,6 +30,7 @@ export const eventcard = [
   {
     class: "stonkaholic",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fc493ff778a8707493_Stankaholic.png",
     title: "Stonkaholic",
@@ -41,6 +44,7 @@ export const eventcard = [
   {
     class: "pitcher",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fd57f342222ccb9560_Pitchers%20logo%20bw.png",
     title: "Pitcher",
@@ -54,6 +58,7 @@ export const eventcard = [
   {
     class: "eSports",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fc71109ad8c18f73a5_Esports%20logo.png",
     title: "E-Sports",
@@ -67,6 +72,7 @@ export const eventcard = [
   {
     class: "connectedWorld",
     date: "27",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fc85d8d83a1d250fbb_Group19.png",
     title: "The Connected World",
@@ -79,6 +85,7 @@ export const eventcard = [
   {
     class: "fedestateBattles",
     date: "29",
+    superscript: "th",
     month: "January",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fcb3e37525192f1f79_eventLog.jpg",
     title: "Fedestate Battles",
