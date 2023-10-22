@@ -119,16 +119,21 @@ export default function LetsTalkBusiness() {
         </p>
         <br />
         <br />
-        <p>Federation Of Entrepreneurship Development KIIT</p>
-        <p>
-          <span>
-            Campus 11, KIIT Deemed to be University, Bhubaneswar, Odisha.,
-            <br />
-            751024
-          </span>
-          <br />
-          <span>fedkiit@gmail.com</span>
-        </p>
+        <div class="business-text">
+          <p>For Any Other Query Post Us At: </p>
+          <a class="business-text address" target="_blank" href="https://maps.app.goo.gl/jno8aJVBUBXHzS5o9">
+            <p>Federation Of Entrepreneurship Development KIIT</p>
+            <p>
+              <span>
+                Campus 11, KIIT Deemed to be University, Bhubaneswar, Odisha.,
+                <br />
+                751024
+              </span>
+              <br />
+              <span>fedkiit@gmail.com</span>
+            </p>
+          </a>
+        </div>
       </div>
 
       <div class="letsTalkBusiness-right">
