@@ -1,6 +1,9 @@
 import React from "react";
+
+// css
 import "../css/eventCard.css";
 
+// data
 import { eventcard } from "../../../../Data/eventcard.js";
 
 export default function Card() {
