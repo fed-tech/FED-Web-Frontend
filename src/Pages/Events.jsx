@@ -15,7 +15,7 @@ export default function Events() {
     <>
       <div>
         <Header head="Current Events" />
-        <SkillHunt />
+        {/* <SkillHunt /> */}
       </div>
       <div>
         <Header head="Previous Events" />
