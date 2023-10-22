@@ -65,31 +65,6 @@
     "Tech": [
       {
         "id": 1,
-        "name": "Antara Dubey",
-        "linkedin": "https://www.linkedin.com/in/antara-dubey-573738228/",
-        "github": "https://github.com/Antara-3011",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1e1b9dff2642a6d6fcbb3_IMG-20230214-WA0008%20-%20Antara%20Dubey.jpg",
-        "blur": "L2FO$8_3m6~E0002Nf4T^kw0F#RN"
-      },
-      {
-        "id": 2,
-        "name": "Binay Kumar Sahu",
-        "instagram": "https://www.instagram.com/i_ambinaysahu/",
-        "linkedin": "https://www.linkedin.com/in/binay-sahu",
-        "github": "https://github.com/BinaySaahu",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6465be1f684e5287347f2c65_b.png",
-        "blur": "LTLW^R%%~p?akro#ayWBt5t5IVM{"
-      },
-      {
-        "id": 3,
-        "name": "Jaideep Bose",
-        "linkedin": "https://www.linkedin.com/in/jaideep-bose-89a93725a/",
-        "github": "https://github.com/jaideepbose51",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1d08c7d754142f3b2122c_jai.jpg",
-        "blur": "LDCjeAL4I8MaAPiaXTt8KGWTw~-r"
-      },
-      {
-        "id": 4,
         "name": "Kolla gayatri shruti ",
         "linkedin": "https://www.linkedin.com/in/shruti-kolla-514637204",
         "github": "https://github.com/me-mystic",
@@ -97,15 +72,15 @@
         "blur": "LRJHs|00S~I:?Gn+t7oc_NIor=xZ"
       },
       {
-        "id": 1,
-        "name": "Muskan Bajaj ",
+        "id": 2,
+        "name": "Muskan Bajaj",
         "linkedin": "https://www.linkedin.com/in/muskan-bajaj-705bb1244/",
         "github": "https://github.com/muskan-bajaj",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63f1ddba63ea2263cf32c933_IMG_20230219_134340%20-%20228_MUSKAN%20BAJAJ.jpg",
         "blur": "LPKBL0~q_2M_-.M{IVt8xtWAM|og"
       },
       {
-        "id": 2,
+        "id": 3,
         "name": "Prityanshu Singh",
         "instagram": "https://instagram.com/prityanshu__0111?igshid=OTk0YzhjMDVlZA==",
         "linkedin": "https://www.linkedin.com/in/prityanshu-singh-a23115248",
@@ -114,7 +89,7 @@
         "blur": "LFE{2?$x4mNg0iM{Iq%100xa_4In"
       },
       {
-        "id": 3,
+        "id": 4,
         "name": "Vinit Agarwal",
         "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
         "github": "https://github.com/vinitagarwal007",
