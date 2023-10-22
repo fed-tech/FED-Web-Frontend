@@ -1,7 +1,7 @@
 export const eventcard = [
   {
     class: "skillHunt",
-    date: "06",
+    date: "6",
     superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/64ad21753343f7de91db6213_skillhuntlogo.png",
