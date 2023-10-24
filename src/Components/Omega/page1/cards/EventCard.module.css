@@ -33,10 +33,13 @@
     justify-content: space-between;
 }
 
-.eventLogo, .eventLogo img{
+.eventLogo{
     height: 100%;
 }
-
+.eventLogo img{
+    max-width: 85%;
+    max-height: 90%;
+}
 .eventLogo{
     display: flex;
     align-items: center;
