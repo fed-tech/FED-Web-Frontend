@@ -57,7 +57,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* padding: 40px calc((100% - (600px * 3)) / 3); */
 }
 
 .Block {
