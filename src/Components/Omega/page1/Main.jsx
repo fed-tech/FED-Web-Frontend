@@ -31,7 +31,7 @@ export default function Main(props) {
 
   return (
     <div className={OMCss.main}>
-      <div>
+      <div className={OMCss.registerBtn}>
         <div className={OMCss.image}>
           <img src={omegaRetro} alt="" />
         </div>

@@ -11,10 +11,14 @@
     display: flex;
     justify-content: center;
 }
-
+.registerBtn{
+    padding-left: 90px;
+}
 .image img {
     width: 500px;
     padding-top: 125px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .button {
