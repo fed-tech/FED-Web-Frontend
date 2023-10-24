@@ -46,6 +46,19 @@ const getEvent = async () => {
         return temp
       })
       console.log(final)
+      if(authCtx.isLoggedIn){
+        var result = await axios.get("/form/getuserform", {
+          headers: { Authorization: authCtx.token },
+        });
+        console.log(result.data)
+        final.forEach((e)=>{
+          if(result.data.includes(e.formid)){
+            e.isRegistered = true
+          }else{
+            e.isRegistered = false
+          }
+        })
+      }
       setEvent(final)
       setLoading(false)
     }
@@ -53,9 +66,31 @@ const getEvent = async () => {
 
   }
 }
+
+const getRegisteredEvent = async () =>{
+  if(authCtx.isLoggedIn){
+    var result = await axios.get("/form/getuserform", {
+      headers: { Authorization: authCtx.token },
+    });
+  }
+  console.log(result.data)
+  var final = eventcard
+  final.forEach((e)=>{
+    if(result.data.includes(e.formid)){
+      e.isRegistered = true
+    }else{
+      e.isRegistered = false
+    }
+  })
+  console.log(final)
+  setEvent(final)
+  setShowPopUp(false)
+}
   useEffect(() => {
     getEvent()
+    getRegisteredEvent()
   },[])
+
   const [currentform,setCurentForm] = useState("")
   const [currentformelement,setCurentFormElement] = useState([])
   const handleRegClick= (ele)=>{
@@ -112,7 +147,27 @@ const getEvent = async () => {
                     {data.dis.d4}
                   </div>
                   {data.isLive
-                    ? <a className="regBtn" id={data.formid} onClick={handleRegClick}>Registration Open</a>
+                    ? (data.isRegistered ?
+                      <a className="regBtn">
+                      Already Registered
+                      <svg
+                        width="20"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="lockSvg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z"
+                          fill="currentColor"
+                        ></path>
+                      </svg>
+                    </a>
+                    :
+                    <a className="regBtn" id={data.formid} onClick={handleRegClick}>Registration Open</a>)
                     :
                     <a className="regBtn">
                       Registration Closed
