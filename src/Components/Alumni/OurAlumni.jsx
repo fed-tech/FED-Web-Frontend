@@ -26,7 +26,7 @@ function OurAlumni() {
       <div className={ACss.bottomcontainer_}>
         {Card.map((card) => {
           return (
-            <div className={ACss.box_}>
+            <div className={ACss.Block}>
               <div className={ACss.box1_}>
                 <img
                   src={card.image_}
