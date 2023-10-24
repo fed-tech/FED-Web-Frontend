@@ -13,10 +13,10 @@ import ACss from "./css/Alumni.module.css";
 function OurAlumni() {
   return (
     <section className={ACss.alumni}>
-      <div className={ACss.main_body}>
+      <div className={ACss.mainBody}>
         <div className={ACss.ouralumni}>
-          <p className={ACss.para1_}>
-            Our <span className={ACss.para2_}>Alumni.</span>
+          <p className={ACss.para1Ptag}>
+            Our <span className={ACss.para2Ptag}>Alumni.</span>
           </p>
         </div>
         <p className={ACss.para3_}>
