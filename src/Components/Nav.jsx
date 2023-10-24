@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 // state
@@ -7,11 +7,9 @@ import AuthContext from "./../store/auth-context";
 // css
 import "./css/DesktopNav.css";
 
-// axios
-import axios from "axios";
-
-export default function Nav(props) {
+export default function Nav() {
   const authCtx = useContext(AuthContext);
+
   return (
     <header className="Navigation">
       <nav className="desktopNav">
@@ -20,21 +18,16 @@ export default function Nav(props) {
             <div className="LogoDiv">
               <img src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png"></img>
               <p className="LogoFED">FED</p>
-              <p>{import.meta.env.VITE_BETA === "true" ? <>Test</> : <></>}</p>
             </div>
           </Link>
+
           <div className="listDiv">
             <ul id="NavUl">
               <li>
-                <NavLink to="/omega" className="liTag">
-                  Omega 3.0
-                </NavLink>
-              </li>
-              {/* <li>
-                <NavLink to="/event" className="liTag">
+                <NavLink to="/event" className="LinkStyle">
                   Events
                 </NavLink>
-              </li> */}
+              </li>
               <li>
                 <NavLink to="/Podcasts" className="LinkStyle">
                   Podcasts

@@ -32,6 +32,9 @@ export default function Footer() {
               <Link to="/Team" className="footerleftlink">
                 Member
               </Link>
+              <Link to="/Alumni" className="footerleftlink">
+                Alumni
+              </Link>
             </div>
             <div className="row2">
               <h4>About Us</h4>

@@ -1,0 +1,141 @@
+.alumni {
+  background-color: black;
+}
+
+.mainBody {
+  height: fit-content;
+  padding: 1rem 0px 0rem 0px;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.ouralumni {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 0%;
+  margin-top: 15%;
+}
+
+.para1Ptag,
+.para2Ptag {
+  width: auto;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+}
+
+.para3Ptag {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.para2Ptag {
+  color: #f45725;
+}
+
+.bottomcontainer_ {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Block {
+  position: relative;
+  height: 100px;
+  flex: 0 0 215px;
+  padding-bottom: 500px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: black;
+}
+
+.box1_ {
+  padding: 0rem 0rem;
+  vertical-align: middle;
+}
+
+.image_1 {
+  width: 346px;
+  height: 424px;
+  position: relative;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.childLabelDiv {
+  backdrop-filter: blur(32px);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.425) 75%,
+    rgba(0, 0, 0, 0.425) 87.5%,
+    rgba(0, 0, 0, 0.425) 100%
+  );
+  width: 310px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 90px;
+  left: 50px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.heading_1 {
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 5px;
+}
+
+.childLabelDiv h3 {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+.childLabelDiv p {
+  padding-top: 2px;
+  padding-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  word-spacing: -1px;
+  text-align: justify;
+}
+
+.vectorimage {
+  padding-left: 260px;
+  margin-bottom: -20px;
+  padding-top: 0px;
+}
+
+.iconimage {
+  padding-right: 5px;
+}
+
+.iconimage svg path {
+  transition: all 0.3s;
+}
+
+.iconimage svg path:hover {
+  color: #f45725;
+}
+
+.icon_ {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
