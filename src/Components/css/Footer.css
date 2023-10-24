@@ -210,6 +210,20 @@
   font-weight: 800;
 }
 
+.terms_and_policies{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.terms_and_policies a{
+  margin: 20px 10px 10px 10px;
+  /* text-decoration: none; */
+  font-family: "Manrope", sans-serif;
+
+}
+
 @media screen and (max-width: 1150px) {
   .bottomdiv {
     flex-direction: column;
@@ -294,6 +308,12 @@
   }
 }
 
+@media screen and (max-width:600px) {
+  .f1{
+    width: 200%;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .cover-btn {
     width: 70%;
@@ -314,17 +334,4 @@
     width: 100%;
     font-size: 25px;
   }
-}
-.terms_and_policies{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-.terms_and_policies a{
-  margin: 20px 10px 10px 10px;
-  /* text-decoration: none; */
-  font-family: "Manrope", sans-serif;
-
 }
