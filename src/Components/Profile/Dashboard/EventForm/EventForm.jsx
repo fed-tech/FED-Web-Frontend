@@ -5,10 +5,13 @@ import AddField from "./AddField";
 
 // css
 import formCss from "../../../css/Profile/Dashboard/EventForm/EventForm.module.css";
-
+import "react-datepicker/dist/react-datepicker.css";
 import { Alert } from "../../../../MicroInterAction/Alert";
 import axios from "axios";
 import AuthContext from "../../../../store/auth-context";
+import Load from "../../../../MicroInterAction/Load";
+
+import DatePicker from "react-datepicker";
 
 export default function Form() {
   const [variants, setError] = useState({
@@ -23,11 +26,12 @@ export default function Form() {
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
   const [showTeamsize,setShowTeamsize] = useState(false)
+  const [isSaving, setIsSaving] = useState(false)
 
   const authCtx = useContext(AuthContext);
 
   const handleSave = async (e) => {
-
+    setIsSaving(true)
     if (hideAmount) {
       setShowFields((prev) => {
         const formData = { ...prev, amount: 0 };
@@ -55,6 +59,9 @@ export default function Form() {
           isTeam: showTeamsize,
           teamsize:formDetails.teamSize,
           maxReg: formDetails.maxReg,
+          upi: formDetails.upi,
+          img: formDetails.formimg,
+          date:formDetails.date
         },
         {
           headers: {
@@ -69,6 +76,8 @@ export default function Form() {
       }
     } catch (err) {
       console.log(err);
+    }finally{
+      setIsSaving(false)
     }
   };
 
@@ -82,7 +91,12 @@ export default function Form() {
       return formData;
     });
   };
-
+  const handleDateChange = (date) => {
+    setShowFields((prev) => {
+      const formData = { ...prev, date: date };
+      return formData;
+    });
+  };
   const handleDelete = (e, idx) => {
     e.preventDefault();
     console.log("deleted", idx);
@@ -143,16 +157,6 @@ export default function Form() {
       text: "Please fill all the required fields",
       val: true,
     });
-    setTimeout(() => {
-      setError({
-        mainColor: "",
-        secondaryColor: "",
-        symbol: "",
-        title: "",
-        text: "",
-        val: false,
-      });
-    }, 6000);
   };
 
   // const formBottomRef = useRef(null);
@@ -202,14 +206,28 @@ export default function Form() {
           placeholder="Form Title*"
           required
         />
-        <input
+        <textarea
           onChange={handleChange}
           name="forrmDesc"
-          type="text"
           className={formCss.formtitle}
           placeholder="About Event*"
           required
         />
+        <input
+          onChange={handleChange}
+          name="formimg"
+          type="text"
+          className={formCss.formtitle}
+          placeholder="Form Logo*"
+          required
+        />
+        <DatePicker
+            selected={showFields.date}
+            className={formCss.formtitle}
+            onChange={handleDateChange}
+            dateFormat="dd/MM/yyyy"
+            placeholderText="dd/mm/yyyy"
+          />
         <select
           id="eventType"
           name="eventName"
@@ -252,11 +270,19 @@ export default function Form() {
           id="amount"
           onChange={handleChange}
           hidden={hideAmount}
-          required={!hideAmount}
           name="amount"
           type="number"
           className={formCss.formtitle}
           placeholder="Amount*"
+        />
+        <input
+          id="upi"
+          onChange={handleChange}
+          hidden={hideAmount}
+          name="upi"
+          type="text"
+          className={formCss.formtitle}
+          placeholder="Enter Receiver's UPI*"
         />
         <input
           onChange={handleChange}
@@ -305,7 +331,7 @@ export default function Form() {
             ADD FIELD
           </button>
           <button type="submit" className={formCss.saveBtn}>
-            SAVE
+            {isSaving ? <Load/>:"SAVE"}
           </button>
         </div>
       </form>

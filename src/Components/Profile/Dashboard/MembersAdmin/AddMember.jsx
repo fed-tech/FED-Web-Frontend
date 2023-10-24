@@ -98,18 +98,6 @@ export default function AddMember() {
           text: "Member Added successfully!",
           val: true,
         });
-        
-        // Set a delay before resetting to the initial state and hiding the success message
-        setTimeout(() => {
-          setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
-            val: false,
-          });
-  
           setData({
             name: "",
             email: "",
@@ -120,11 +108,11 @@ export default function AddMember() {
             linkedin: "",
           });
 
-          setSavingAl(true);
+          setSavingAl(false);
           window.scrollTo(0, 0);
-        }, 2000);
+        };
       }
-    } catch (err) {
+     catch (err) {
       console.log(err);
       setError({
         mainColor: "lightpink",
@@ -136,20 +124,6 @@ export default function AddMember() {
       });
       
       // Set a delay before resetting to the initial state and hiding the success message
-      setTimeout(() => {
-        setError({
-          mainColor: "",
-          secondaryColor: "",
-          symbol: "",
-          title: "",
-          text: "",
-          val: false,
-        });
-      }, 2000);
-
-      setTimeout(() => {  
-        setSavingAl(false);
-      }, 500);
     }
   };
 

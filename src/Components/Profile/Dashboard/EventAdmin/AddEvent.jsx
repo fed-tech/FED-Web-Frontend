@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import addEventCss from "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
 import axios from "axios";
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import AuthContext from "../../../../store/auth-context";
 import Load from "../../../../MicroInterAction/Load";
 import { Alert } from "../../../../MicroInterAction/Alert";
@@ -122,22 +120,8 @@ function AddEvent({ setViewEvents }) {
           text: "Event submitted successfully!",
           val: true,
         });
-
         // Set a delay before resetting to the initial state and hiding the success message
-        setTimeout(() => {
-          setError({
-            mainColor: "",
-            secondaryColor: "",
-            symbol: "",
-            title: "",
-            text: "",
-            val: false,
-          });
-
-          setSubmitting(false);
-          setViewEvents(true);
           window.scrollTo(0, 0);
-        }, 2000);
       }
     } catch (err) {
       console.log(form);
@@ -150,22 +134,6 @@ function AddEvent({ setViewEvents }) {
         text: "Please fill all the details!",
         val: true,
       });
-
-      // Set a delay before resetting to the initial state and hiding the success message
-      setTimeout(() => {
-        setError({
-          mainColor: "",
-          secondaryColor: "",
-          symbol: "",
-          title: "",
-          text: "",
-          val: false,
-        });
-      }, 2000);
-
-      setTimeout(() => {
-        setSubmitting(false);
-      }, 300);
     }
   }
   const handlePreview = () => {
@@ -173,9 +141,7 @@ function AddEvent({ setViewEvents }) {
     setPreviewImage(form.poster);
     setIsModalOpen(true);
   };
-  const handleDateChange = (date) => {
-    setForm((prevState) => ({ ...prevState, date: date }));
-  };
+
   const handleRegTypeChange = (e) => {
     setForm((prevState) => ({ ...prevState, reg_type: e.target.value }));
   };
@@ -215,12 +181,7 @@ function AddEvent({ setViewEvents }) {
           </button>
         </div>
         <div className={addEventCss.addEvent}>
-          <DatePicker
-            selected={form.date}
-            onChange={handleDateChange}
-            dateFormat="dd/MM/yyyy"
-            placeholderText="dd/mm/yyyy"
-          />
+
           <select
             placeholder="Registration type"
             name="reg_type"

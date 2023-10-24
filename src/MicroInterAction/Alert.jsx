@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 // css
@@ -7,7 +7,7 @@ import axios from "axios";
 
 export const Alert = ({ variant, val, email }) => {
   const [sent, setSent] = useState(false);
-
+  const [showAlert,setShowAlert] = useState(false)
   const resendMail = async () => {
     try {
       const response = await axios.get(`/auth/resendMail/${email}`);
@@ -19,9 +19,14 @@ export const Alert = ({ variant, val, email }) => {
       console.log(e);
     }
   };
-
+  useEffect(() => {
+    setShowAlert(variant.val ? true: false)
+    setTimeout(() => {
+      setShowAlert(false)
+    }, 5000);
+  }, [variant]);
   return (
-    <div className="alert-mDiv" id={variant.val ? "show" : "hide"}>
+    <div className="alert-mDiv" id={showAlert ? "show" : "hide"}>
       <div
         className="alert-container"
         style={{
