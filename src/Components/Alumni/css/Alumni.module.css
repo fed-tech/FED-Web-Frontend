@@ -83,7 +83,7 @@
   border-radius: 5px;
 }
 
-.child_ {
+.childLabelDiv {
   backdrop-filter: blur(32px);
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.425) 75%,
@@ -96,9 +96,10 @@
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  margin-left: 18px;
-  margin-top: -186px;
+  /* margin-left: 18px; */
+  /* margin-top: -186px; */
   position: absolute;
+  bottom: 0px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
@@ -108,12 +109,12 @@
   padding-bottom: 5px;
 }
 
-.child_ h3 {
+.childLabelDiv h3 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
 
-.child_ p {
+.childLabelDiv p {
   padding-top: 2px;
   padding-bottom: 10px;
   font-family: "Inter", sans-serif;
