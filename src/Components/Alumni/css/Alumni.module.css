@@ -91,12 +91,11 @@
     rgba(0, 0, 0, 0.425) 100%
   );
   width: 310px;
-  height: 167px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  border-radius: 1px;
+  border-radius: 5px;
   margin-left: 18px;
   margin-top: -186px;
   position: absolute;
