@@ -126,6 +126,14 @@
   padding-right: 5px;
 }
 
+.iconimage svg path {
+  transition: all 0.3s;
+}
+
+.iconimage svg path:hover {
+  color: #f45725;
+}
+
 .icon_ {
   display: flex;
   justify-content: space-evenly;
