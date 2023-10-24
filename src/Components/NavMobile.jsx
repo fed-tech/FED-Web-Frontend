@@ -63,12 +63,6 @@ export default function NavMobile() {
         </div>
 
         <div class="mobileNavListChild">
-          <div class="mobileList">
-            <NavLink to="/" className="liTag" onClick={() => setCount(false)}>
-              Home
-            </NavLink>
-          </div>
-
           <div class="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/event" className="liTag">
               Events
