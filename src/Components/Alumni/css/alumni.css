@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Manrope:wght@700&family=Open+Sans:wght@500&family=Rubik:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Manrope:wght@700&family=Open+Sans:wght@500&family=Rubik:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope&family=Open+Sans:wght@500&family=Rubik:wght@500&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -11,9 +12,11 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 .alumni {
   background-color: black;
 }
+
 .main_body {
   height: fit-content;
   padding: 1rem 0px 0rem 0px;
@@ -27,6 +30,7 @@
   align-items: center;
   padding-bottom: 50px;
 }
+
 .ouralumni {
   display: flex;
   justify-content: center;
@@ -36,6 +40,7 @@
   margin-bottom: 0%;
   margin-top: 15%;
 }
+
 .para1_,
 .para2_ {
   width: auto;
@@ -46,6 +51,7 @@
   line-height: 59px;
   text-align: center;
 }
+
 .para3_ {
   color: #fff;
   font-family: "Manrope", sans-serif;
@@ -53,9 +59,11 @@
   text-align: center;
   align-items: center;
 }
+
 .para2_ {
   color: #f45725;
 }
+
 .bottomcontainer_ {
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +74,7 @@
   /* padding-left: 230px;
   padding-right: 230px; */
 }
+
 .box_ {
   height: 100px;
   flex: 0 0 215px;
@@ -84,6 +93,7 @@
   background-color: black;
   /* justify-content: center; */
 }
+
 .box1_ {
   /* display: inline-block; */
   /* border: 1px solid red; */
@@ -92,12 +102,14 @@
   /* padding-left: 9rem;
   padding-right: 0px; */
 }
+
 .image_1 {
   width: 346px;
   height: 424px;
   position: relative;
   object-fit: cover;
 }
+
 .child_ {
   backdrop-filter: blur(32px);
   background-image: linear-gradient(
@@ -118,15 +130,18 @@
 
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
+
 .heading_1 {
   font-size: 24px;
   font-family: "Inter", sans-serif;
   padding-bottom: 5px;
 }
+
 .child_ h3 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+
 .child_ p {
   padding-top: 2px;
   padding-bottom: 10px;
@@ -140,14 +155,17 @@
   word-wrap: break-word; */
   text-align: justify;
 }
+
 .vectorimage {
   padding-left: 260px;
   margin-bottom: -20px;
   padding-top: 0px;
 }
+
 .iconimage {
   padding-right: 5px;
 }
+
 .icon_ {
   display: flex;
 }
