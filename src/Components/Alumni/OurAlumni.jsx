@@ -40,12 +40,12 @@ function OurAlumni() {
                   <h3>{card.subtitle}</h3>
                   <p>{card.para_}</p>
                   <div className={ACss.icon_}>
-                    <a href={card.github_link}>
+                    <a href={card.github_link} target="_blank">
                       <div className={ACss.iconimage}>
                         <GitHubIcon />
                       </div>
                     </a>
-                    <a href={card.linkedin_link}>
+                    <a href={card.linkedin_link} target="_blank">
                       <div className={ACss.iconimage}>
                         <LinkedInIcon />
                       </div>
