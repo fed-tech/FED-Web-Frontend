@@ -1,14 +1,14 @@
 import React from "react";
 
-// css
-import "./css/alumni.css";
-
 // Data
 import Card from "./../../Data/card.json";
 
 // Icons
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
+// css
+import "./css/alumni.css";
 
 function OurAlumni() {
   return (
