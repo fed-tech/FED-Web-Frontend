@@ -57,11 +57,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
-  padding: 40px calc((100% - (600px * 3)) / 3);
+  /* padding: 40px calc((100% - (600px * 3)) / 3); */
 }
 
-.box_ {
+.Block {
+  position: relative;
   height: 100px;
   flex: 0 0 215px;
   padding-bottom: 500px;
@@ -99,7 +99,8 @@
   /* margin-left: 18px; */
   /* margin-top: -186px; */
   position: absolute;
-  bottom: 0px;
+  bottom: 90px;
+  left: 50px;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
