@@ -7,7 +7,7 @@
   background-color: black;
 }
 
-.main_body {
+.mainBody {
   height: fit-content;
   padding: 1rem 0px 0rem 0px;
   background-color: black;
@@ -30,8 +30,8 @@
   margin-top: 15%;
 }
 
-.para1_,
-.para2_ {
+.para1Ptag,
+.para2Ptag {
   width: auto;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -41,7 +41,7 @@
   text-align: center;
 }
 
-.para3_ {
+.para3Ptag {
   color: #fff;
   font-family: "Manrope", sans-serif;
   font-size: 20px;
@@ -49,7 +49,7 @@
   align-items: center;
 }
 
-.para2_ {
+.para2Ptag {
   color: #f45725;
 }
 
