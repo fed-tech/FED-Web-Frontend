@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;500&family=Rubik:wght@300&display=swap");
 
+#CloseIcon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    cursor: pointer;
+    background-color: black;
+  }
+
 .regFormPopUp {
     position: fixed;
     top: 0px;
@@ -27,6 +36,7 @@
     font-family: mulish;
     font-weight: 700;
     font-size: 1.45rem;
+    color: #0f0e0e;
 }
 .prevBtn {
     width: 300px;
@@ -208,6 +218,7 @@ input {
     border-radius: 13px;
     width: 100%;
     border: rgb(145, 141, 141) solid 1px;
+    color: #0f0e0e;
 }
 
 .inputField {

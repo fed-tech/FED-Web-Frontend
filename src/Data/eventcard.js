@@ -1,21 +1,22 @@
 export const eventcard = [
   {
-    class: "Skill-O-Hunt",
-    date: "4",
+    class: "skillHunt",
+    date: "6",
+    superscript: "th",
     month: "August",
-    img: "https://uploads-ssl.webflow.com/6510733a753332fbbff0b1da/6510741e9056667fec7cfdd8_skillhuntlogo.png",
-    title: "Skill-O-Hunt",
+    img: "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/64ad21753343f7de91db6213_skillhuntlogo.png",
+    title: "SkillHunt",
     dis: {
       d1: `“Talent you have naturally. Skill is only developed by hours and hours and hours of beating on your craft” ~Will Smith`,
       d2: `We are thrilled to invite you to be a part of the highly anticipated Skill Hunt event organized by FED at KIIT.`,
-      d3: `Skill Hunt is where individuals like you, with unparalleled expertise, come together to showcase their remarkable skills.`,
-      d4:` Whether you excel in design, programming, marketing, or any other distinctive skill, we want to see what you've got!`,
-      d5:`We look forward to reviewing your exceptional portfolio. Don't miss this chance to connect, receive feedback, and collaborate! Join Skill Hunt now and let your talent shine!`,
-    } ,
+      d3: `Skill Hunt is where individuals like you, with unparalleled expertise, come together to showcase their remarkable skills. Whether you excel in design, programming, marketing, or any other distinctive skill, we want to see what you've got!`,
+      d4: `We look forward to reviewing your exceptional portfolio. Don't miss this chance to connect, receive feedback, and collaborate! Join Skill Hunt now and let your talent shine!`,
+    },
   },
   {
     class: "talkShow",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd770f897ba1255d05556_Talk%20show%20logo.png",
     title: "Talk Show",
@@ -29,6 +30,7 @@ export const eventcard = [
   {
     class: "stonkaholic",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fc493ff778a8707493_Stankaholic.png",
     title: "Stonkaholic",
@@ -42,6 +44,7 @@ export const eventcard = [
   {
     class: "pitcher",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fd57f342222ccb9560_Pitchers%20logo%20bw.png",
     title: "Pitcher",
@@ -55,6 +58,7 @@ export const eventcard = [
   {
     class: "eSports",
     date: "26",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fc71109ad8c18f73a5_Esports%20logo.png",
     title: "E-Sports",
@@ -68,6 +72,7 @@ export const eventcard = [
   {
     class: "connectedWorld",
     date: "27",
+    superscript: "th",
     month: "August",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fc85d8d83a1d250fbb_Group19.png",
     title: "The Connected World",
@@ -80,6 +85,7 @@ export const eventcard = [
   {
     class: "fedestateBattles",
     date: "29",
+    superscript: "th",
     month: "January",
     img: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/63afd7fcb3e37525192f1f79_eventLog.jpg",
     title: "Fedestate Battles",

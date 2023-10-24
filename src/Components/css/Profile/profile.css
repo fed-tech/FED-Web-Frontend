@@ -5,7 +5,7 @@
   background-color: black;
   width: 100%;
   height: 100%;
-   overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .pmainBox {
@@ -21,8 +21,6 @@
 }
 
 .profile {
-  /* background-color: grey; */
-  /* background-image: url(../../../Img/Frame\ 17.png); */
   color: #ffffff;
   font-family: rubik;
   font-weight: 300;
@@ -48,12 +46,11 @@
   padding-bottom: 3px;
 }
 
-
 .dets,
 .vals {
   font-family: "Rubik", sans-serif;
   font-size: 28px;
-  padding:20px;
+  padding: 20px;
 }
 
 .dets,
@@ -159,11 +156,14 @@
   .proHeading {
     font-size: 28px;
   }
-  
-  .dets, .dets1, .vals, .vals1 {
+
+  .dets,
+  .dets1,
+  .vals,
+  .vals1 {
     font-size: 22px;
   }
-  
+
   .illuminating {
     padding: 6% 3% 2% 9%;
     /* width: 100%; */
@@ -181,9 +181,7 @@
     /* width: 58%; */
     padding-bottom: 15%;
   }
-
 }
-
 
 @media (max-width: 880px) {
   .profileLeft {
@@ -198,14 +196,15 @@
     font-size: 24px;
   }
 
-  .dets .dets1, .vals, .vals1 {
+  .dets .dets1,
+  .vals,
+  .vals1 {
     font-size: 20px;
   }
 
   .illuminating {
     font-size: 33px;
   }
-
 }
 
 @media (max-width: 650px) {
@@ -213,10 +212,9 @@
     margin-top: 0px;
   }
 
-  .profileLeft{
+  .profileLeft {
     width: 80%;
   }
- 
 
   .illuminating {
     padding-top: 15%;
@@ -226,8 +224,6 @@
     font-size: 15px;
     padding-bottom: 15%;
   }
-
-
 }
 
 @media (max-width: 482px) {
@@ -235,14 +231,15 @@
     font-size: 20px;
   }
 
-  .dets .dets1, .vals, .vals1 {
+  .dets .dets1,
+  .vals,
+  .vals1 {
     font-size: 15px;
   }
 
   .illuminating {
     font-size: 30px;
   }
-
 }
 
 @media (max-width: 394px) {
@@ -250,29 +247,31 @@
     font-size: 18px;
   }
 
-  .dets .dets1, .vals, .vals1 {
+  .dets .dets1,
+  .vals,
+  .vals1 {
     font-size: 14px;
   }
 
   .illuminating {
     font-size: 30px;
   }
-
 }
 @media (max-width: 348px) {
   .proHeading {
     font-size: 22px;
   }
 
-  .dets .dets1, .vals, .vals1 {
+  .dets .dets1,
+  .vals,
+  .vals1 {
     font-size: 14px;
-    padding:0;
+    padding: 0;
   }
 
   .illuminating {
     font-size: 30px;
   }
-
 }
 @media (max-width: 298px) {
   .proHeading {
@@ -283,9 +282,9 @@
     font-size: 30px;
   }
 
-  .vals, .vals1 {
+  .vals,
+  .vals1 {
     font-size: 14px;
-    padding:15px;
+    padding: 15px;
   }
 }
-

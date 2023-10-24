@@ -11,17 +11,10 @@
 
 .mtMDiv {
   position: relative;
-  margin-top: 120px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media only screen and (max-width: 650px) {
-  .mtMDiv {
-    margin-top: 48px;
-  }
 }
 
 .signupErrDiv {
@@ -259,7 +252,7 @@
 }
 
 .mobileno_container input {
-  margin-top: 0;
+  margin-top: 0px;
 }
 
 .CollegeInpmDIv {

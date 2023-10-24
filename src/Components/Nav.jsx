@@ -1,11 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-// css
-import "./css/DesktopNav.css";
-
 // state
 import AuthContext from "./../store/auth-context";
+
+// css
+import "./css/DesktopNav.css";
 
 // axios
 import axios from "axios";
@@ -31,44 +31,35 @@ export default function Nav(props) {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/event" className="liTag">
+                <NavLink to="/event" className="LinkStyle">
                   Events
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Podcasts" className="liTag">
+                <NavLink to="/Podcasts" className="LinkStyle">
                   Podcasts
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/Team" className="liTag">
+                <NavLink to="/Team" className="LinkStyle">
                   Our Team
                 </NavLink>
               </li>
-              {/* <li>
-                <NavLink to="/Alumni" className="liTag">
-                  Alumni
-                </NavLink>
-              </li> */}
               <li>
-                <NavLink
-                  // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
-                  // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile/admin" : "/MyProfile/member") : "Signup"}
-                  // to={authCtx.isLoggedIn ? (authCtx.user.access == "0" ?"/MyProfile" : "/MyProfile/member") : "Signup"}
-                  to={authCtx.isLoggedIn ? "/MyProfile" : "Login"}
-                  className="liTag"
-                >
-                  {authCtx.isLoggedIn ? (
+                {authCtx.isLoggedIn ? (
+                  <NavLink to="/MyProfile" className="LinkStyle">
                     <img
                       src={authCtx.user.pic}
                       alt=""
                       srcset=""
                       className="profile_img"
                     />
-                  ) : (
-                    "Login/SignUp"
-                  )}
-                </NavLink>
+                  </NavLink>
+                ) : (
+                  <NavLink to="/Login" className="LinkStyle">
+                    Login/SignUp
+                  </NavLink>
+                )}
               </li>
             </ul>
           </div>

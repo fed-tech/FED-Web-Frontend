@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../css/eventCard.css";
 import RegForm from './regForm'
 
+// data
 import { eventcard } from "../../../../Data/eventcard.js";
 
 export default function Card() {
@@ -15,7 +16,10 @@ export default function Card() {
             <div className="carddetails">
               <div className="left">
                 <div className="datemonth">
-                  <p className="date">{data.date}</p>
+                  <p className="date">
+                    {data.date}{" "}
+                    <span className="superscript">{data.superscript}</span>
+                  </p>
                   <p className="month">{data.month}</p>
                 </div>
                 <img className="image" src={data.img} />
