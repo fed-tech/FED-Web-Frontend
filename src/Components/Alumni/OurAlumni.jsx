@@ -19,7 +19,7 @@ function OurAlumni() {
             Our <span className={ACss.para2Ptag}>Alumni.</span>
           </p>
         </div>
-        <p className={ACss.para3_}>
+        <p className={ACss.para3Ptag}>
           Effort that is done by you all for the development of our society
         </p>
       </div>
@@ -34,7 +34,7 @@ function OurAlumni() {
                   alt="alumni"
                 ></img>
               </div>
-              <div className={ACss.child_}>
+              <div className={ACss.childLabelDiv}>
                 <div className={ACss.content_}>
                   <h1 className={ACss.heading_1}>{card.title_}</h1>
                   <h3>{card.subtitle}</h3>
