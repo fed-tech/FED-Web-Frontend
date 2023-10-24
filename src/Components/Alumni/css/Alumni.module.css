@@ -80,6 +80,7 @@
   height: 424px;
   position: relative;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .child_ {
