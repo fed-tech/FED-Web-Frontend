@@ -7,6 +7,7 @@
     justify-content: center;
     background-color: rgb(60, 58, 58);
     height: 300px;
+    cursor: pointer;
 }
 .event_img{
     height: 60%;

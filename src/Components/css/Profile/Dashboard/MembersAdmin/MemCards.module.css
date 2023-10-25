@@ -1,0 +1,65 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    margin-left: 10px;
+    background-color: rgb(60, 58, 58);
+    height: 290px;
+    padding-top: 12px;
+    cursor: pointer;
+    text-transform:capitalize;
+}
+
+.memImg{
+    height: 60%;
+    width: 90%;
+}
+
+.memImg img{
+    height: 100%;
+    width: 100%;
+}
+
+.memContent{
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6px;
+}
+
+.memButton{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.memButton button{
+    color: #FFF;
+    font-size: 14px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #F45725;
+    border: none;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    min-width: 80px;
+    width: 90px;
+    height: 40px;
+}
+@media screen and (max-width:350px) {
+    .card{
+        width: 200px;
+        margin-left: 5px;
+    }
+}

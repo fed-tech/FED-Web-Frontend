@@ -10,6 +10,7 @@ const Team = React.lazy(() => import("./Pages/Team"));
 const Error = React.lazy(() => import("./Pages/Error"));
 const Alumni = React.lazy(() => import("./Pages/Alumni"));
 const Events = React.lazy(() => import("./Pages/Events"));
+const Omega = React.lazy(() => import("./Pages/Omega"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
 const PrivacyPolicies = React.lazy(() => import("./Pages/PrivacyPolicies"));
@@ -24,7 +25,8 @@ const ResetPassword = React.lazy(() => import("./Pages/ResetPassword"));
 const ForgotPassword = React.lazy(() => import("./Pages/ForgotPassword"));
 
 // Pages || Profiles
-const Profile = React.lazy(() => import("./Pages/AdminPage"));
+const Profile = React.lazy(() => import("./Pages/Profile"));
+const AdminPage = React.lazy(() => import("./Pages/AdminPage"));
 
 // Loading
 import Loading from "./MicroInterAction/Loading";
@@ -62,6 +64,14 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <Home />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/omega"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <Omega />
                     </Suspense>
                   }
                 />
@@ -173,7 +183,8 @@ function App() {
                     path="/MyProfile"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <Profile />
+                        {/* <Profile /> */}
+                        <AdminPage />
                       </Suspense>
                     }
                   />
@@ -184,6 +195,15 @@ function App() {
                   element={
                     <Suspense fallback={<Loading />}>
                       <Error />
+                    </Suspense>
+                  }
+                />
+
+                <Route
+                  path="/newform"
+                  element={
+                    <Suspense fallback={<Loading />}>
+                      <AdminPage />
                     </Suspense>
                   }
                 />

@@ -1,0 +1,56 @@
+.memMainDiv{
+    height: 871px;
+    font-family: 'Manrope';
+    font-style: normal;
+    width: 100%;
+}
+.memNav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* margin-bottom: 20px; */
+    font-size: 1.5rem;
+    font-weight: 800;
+    height: 10%;
+}
+.content{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width:1408px)
+{
+    .memMainDiv{
+        height: 700px;
+    }
+}
+@media (max-width: 1008px)
+{
+    .memMainDiv{
+        height: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .memNav{
+        display: flex;
+        width: 90%;
+        text-align: center;
+        gap: 10px;
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 630px)
+{
+    .memNav{
+        font-size: larger;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+}

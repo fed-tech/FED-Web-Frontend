@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+
+.head {
+    width: 85%;
+    margin-bottom: 49px;
+}
+
+.head h1 {
+    font-size: 45px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.225px;
+    width: 100%;
+}
+
+.formtitle, select {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    background: none;
+    border-bottom: 3px solid #4B4B4B;
+    font-size: 20px;
+    text-align: left;
+}
+.formDropDownOption {
+    color: black;
+    background-color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+.formDropDown {
+    color: black;
+    background-color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+input[type="date"], input[type="time"]{
+    color-scheme: dark;
+}
+.formaddfield, .formBottom select {
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: none;
+    border-bottom: 3px solid #4B4B4B;
+    display: flex;
+    font-family: Mulish;
+    flex-shrink: 0;
+    /* Prevent the container from shrinking */
+    margin-right: 10px;
+}
+
+/*.formDiv>input, .formBottom>input {
+    border-bottom: 1px solid white;
+    margin-bottom: 104px;
+}*/
+.formDiv>input::placeholder,
+.formBottom>input::placeholder, .formBottom select, select {
+    /* color: white; */
+    font-size: 20px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.125px;
+    background-color: none;
+}
+
+.formDiv {
+    width: 80%;
+    margin-right: 50px;
+}
+.formBottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.formBottom select {
+    margin-right: 20px;
+    outline: none;
+    margin: 0 10px 20px 0;
+}
+
+.formBottom::-webkit-scrollbar {
+    overflow-x: auto;
+    display: none;
+}
+
+.formBottom>input, .formBottom select {
+    width: 215px;
+}
+input {
+    outline: none; 
+}
+.saveBtn {
+    color: #FFF;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 7px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #F45725;
+    border: none;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+select {
+    width: 90%;
+    color: #fff;
+    padding: 10px 5px;
+    background: transparent;
+    font-size: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .head {
+        width: 75%;
+        margin-bottom: 49px;
+        text-align: left;
+        margin-right: 10px;
+    }
+
+    .formDiv>input::placeholder, select
+    .formBottom>input::placeholder {
+        font-size: 18px;
+    }
+
+    .head h1 {
+        font-size: 42px;
+    }
+
+    .formDiv {
+        width: 80%;
+        margin-bottom: 30px;
+        margin-right: 5px;
+    }
+
+    .formBottom {
+        display: flex;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        margin-bottom: 30px;
+    }
+
+    .formaddfield, .formBottom select {
+        height: 50px;
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+    .formBottom>input {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        margin-top: -20px;
+    }
+    .saveBtn {
+        width: 110px;
+        height: 55px;
+        padding: 3px 10px 3px 10px;
+        font-size: 16.5px;
+        font-weight: 70;
+
+    }
+    /* select {
+        font-size: 18px;
+    } */
+}

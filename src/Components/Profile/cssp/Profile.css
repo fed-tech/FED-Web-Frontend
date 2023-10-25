@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 27px;
-  margin-left: 30px;
+  margin-right:75px;
 }
 
 .headInnerText img {
@@ -17,21 +17,63 @@
   font-family: "Rubik", sans-serif;
   font-size: 28px;
   padding: 20px;
-  padding-left: 0;
+  padding-left: 0px;
   margin-bottom: 30px;
 }
 
 @media (max-width: 1300px) {
-  .memberRight {
-    width: 67%;
+    .memberRight {
+      width: 80%;
+    }
+  #profile {
+    color: #ffffff;
+    font-family: rubik;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 27px;
+    margin-right: 55px;
   }
-
+  .dets1,
+  .vals1 {
+    font-family: "Rubik", sans-serif;
+    font-size: 35px;
+    padding: 20px;
+    padding-left: 0px;
+    margin-bottom: 30px;
+  }
   .memberLeft {
-    width: 33%;
+    width: 20%;
   }
 }
 
-@media (max-width: 1155px) {
+ @media (max-width: 1188px) {
+  .memberRight {
+    width: 69%;
+  }
+
+  .memberLeft {
+    width: 31%;
+  }
+} 
+
+.dashboardTop h1,h2 {
+    font-size: 30px;
+  }
+
+  .Position .name {
+    font-size: 76px;
+  }
+
+  .dashboardTop img {
+    height: 160px;
+    width: 160px;
+  }
+
+  .dashboardBottom {
+    font-size: 25px;
+  }
+
   .memberRight {
     width: 64%;
   }
@@ -42,11 +84,84 @@
 
   .memberLeft,
   .memberRight {
-    padding-top: 130px;
+    padding-top: 120px;
   }
+
+  .proHeading {
+    /* width: 60%;*/ 
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  .dets1,
+  .vals1 {
+    font-size: 27px;
+    font-weight: 300;
+  }
+
+  .dashboard {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+@media (min-width: 1155px){
+  /* .memberRight {
+    width: 69%;
+  }
+
+  .memberLeft {
+    width: 31%;
+  }
+} */
+
+.dashboardTop h1,h2 {
+  font-size: 20px;
 }
 
-@media (max-width: 1000px) {
+.Position .name {
+  font-size: 76px;
+}
+
+.dashboardTop img {
+  height: 100px;
+  width: 100px;
+}
+
+.dashboardBottom {
+  font-size: 22px;
+}
+
+.memberRight {
+  width: 64%;
+}
+
+.memberLeft {
+  width: 36%;
+}
+
+.memberLeft,
+.memberRight {
+  padding-top: 120px;
+}
+
+.proHeading {
+  /* width: 60%; */
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.dets1,
+.vals1 {
+  font-size: 20px;
+  padding: 20px;
+  font-weight: 300;
+}
+
+.dashboard {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+}
+@media (max-width: 1155px) {
   .dashboardTop h1,
   h2 {
     font-size: 25px;
@@ -80,12 +195,15 @@
 
   .proHeading {
     /* width: 60%; */
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .dets1,
   .vals1 {
-    font-size: 24px;
+    font-size: 26px;
+    padding: 16px;
+    padding-left: 0px;
+    font-weight: 300;
   }
 
   .dashboard {
@@ -101,7 +219,13 @@
     width: 67%;
     padding-bottom: 60px;
   }
-
+  .dets1,
+  .vals1 {
+    font-size: 25px;
+    padding: 17px;
+    padding-left: 0px;
+    font-weight: 300;
+  }
   .Position .name,
   .dashboardBottom {
     font-weight: 500;
@@ -110,7 +234,7 @@
   .memberLeft {
     width: 33%;
   }
-}
+} 
 
 @media (max-width: 830px) {
   .dashboard {
@@ -134,7 +258,9 @@
   }
 
   .dashboardBottom p {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .memberLeft {
@@ -147,7 +273,11 @@
 
   .dets1,
   .vals1 {
-    font-size: 22px;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    padding: 18px;
+    padding-left: 0px;
+    margin-bottom: 30px;
   }
 
   .dashboard {
@@ -156,7 +286,7 @@
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 768px) {
   .memberRight {
     padding: 40px 0;
   }
@@ -167,24 +297,31 @@
 }
 
 @media (max-width: 650px) {
-  .dashboardTop h1 {
+  .dashboardTop h1 {   
     display: none;
   }
-
-  .dashboardTop h2 {
+  .proHeading {
+    /* width: 60%; */
+    font-size: 28px;
+  }
+  /* .dashboardTop h2 {
     display: block;
   }
-
+    justify-content: center;
+    justify-items: center;
+  } */
+  
   .memberLeft {
     width: 20%;
   }
-
+  
   .dashboard {
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 25px;
+    padding-right: 25px;
   }
-
+  
   .memberRight {
+    padding-left: 0px;
     width: 80%;
   }
 
@@ -200,19 +337,21 @@
 }
 
 @media (max-width: 575px) {
+  #profile {
+    margin-left: 20px;
+  }
   .dashboardTop h1,
   h2 {
     font-size: 16px;
   }
 
   .proHeading {
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     width: 70%;
   }
 
   .Position .name {
-    font-size: 16px;
-    font-weight: 400;
+    display: none;
   }
 
   .headInnerText {
@@ -222,7 +361,7 @@
   .dets1,
   .vals1 {
     font-size: 19px;
-    padding: 15px 15px 15px 0;
+    /* padding: 15px 15px 15px 0; */
   }
 
   .memberRight {
@@ -230,78 +369,52 @@
   }
 
   .dashboard {
-    padding-left: 12px;
-    padding-right: 12px;
+   padding-left:  12px;
+   padding-right: 12px;
   }
 }
-
-@media (max-width: 482px) {
-  .memberLeft {
-    width: 17%;
+/* @media(max-width: 529px){
+  .dets1,.vals1{
+    font-size : 18px !important ;
   }
-
-  .memberRight {
-    width: 83%;
-  }
-
-  .dashboardTop img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .dashboardTop h1,
-  h2 {
-    font-size: 13px;
-  }
-
-  .Position .name {
-    font-size: 13px;
-    font-weight: 400;
-  }
-
-  .headInnerText {
-    font-size: 20px;
-  }
-
-  .dets1,
-  .vals,
-  .vals1 {
-    font-size: 16px;
-  }
-
-  .dashboard {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-
-  .memberRight {
-    padding: 10px 0 40px 0;
-  }
-
-  .proHeading {
-    padding-bottom: 30px;
-  }
-}
-
-@media only screen and (max-width: 450px) {
+}  */
+@media  (max-width: 486px) {
   #profile {
-    margin-left: 0px;
+    margin-left: 10px;
+  }
+  .dets1,.vals1{
+    font-size: 15px;
+    padding: 10px;
   }
 }
 
-@media (max-width: 394px) {
+@media (max-width: 350px) {
   .memberRight {
     padding: 10px 10px 40px 15px;
   }
+  .memberLeft
+  {
+    padding: 10px 10px 40px 15px;
+  }
+  .dets1,.vals1{
+    font-size: 13px;
+    padding: 10px;
+  }
 }
 
-@media (max-width: 348px) {
+@media (max-width: 344px) {
   .memberRight {
-    padding: 10px 0 30px 15px;
+    padding: 10px 0 30px 70px;
+  }
+  .dets1,.vals1{
+    font-size: 12px;
   }
 }
 
 @media (max-width: 298px) {
+  .dashboardBottom{
+    width:fit-content;
+  }
   .proHeading {
     font-size: 22px;
   }
@@ -309,8 +422,8 @@
   .vals,
   .vals1,
   .dets1 {
-    font-size: 14px;
-    padding: 15px;
+    font-size: 9px;
+    padding: 11px;
   }
 }
 

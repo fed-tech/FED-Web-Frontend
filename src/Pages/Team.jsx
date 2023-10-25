@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 // Components
 import Core from "../Components/Team/Core";
@@ -15,13 +16,75 @@ export default function Team() {
   const coreMember = db.data.core;
   const domain = db.data;
 
+  const [core, setCore] = useState([]);
+  const [creative, setCreative] = useState([]);
+  const [technical, setTechnical] = useState([]);
+  const [marketing, setMarketing] = useState([]);
+  const [operations, setOperations] = useState([]);
+
+  const memberData = async () => {
+    // const response = await axios.get("/member/");
+    // if (response.status === 202) {
+    //   setCreative(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 3) return element;
+    //     })
+    //   );
+    //   setTechnical(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 4) return element;
+    //     })
+    //   );
+    //   setMarketing(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 5) return element;
+    //     })
+    //   );
+    //   setOperations(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 6) return element;
+    //     })
+    //   );
+    // } else {
+    //   console.log("no members");
+    // }
+  };
+
+  useEffect(() => {
+    memberData();
+  }, []);
+
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <section id="OurTeam">
+        {/*<div className="TeamCore">
+          <p className="TeamName">
+            Our <span>
+              Alumni.</span>
+          </p>
+          <button className="alumniButton" onClick={() => window.location.href = '/Alumni'}>
+            Explore Alumni
+          </button>
+          <p className="TeamNameSubTitle">
+          Effort that is done by you all for the development of our society.                                                      
+          </p>
+  </div>
+           <div className="listDiv">
+            <ul id="Alumni">
+              <li>
+                <NavLink to="/Alumni" className="liTag">
+                  Alumni
+                </NavLink>
+              </li>
+              </ul>
+        </div> */}
+        
+        
         {/* Core */}
         <div className="TeamCore">
           <p className="TeamName">

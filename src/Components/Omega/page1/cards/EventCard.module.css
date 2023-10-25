@@ -1,0 +1,72 @@
+.cardMain{
+    background-color: #181818;
+    border-radius: 20px;
+    width: 400px;
+    margin-bottom: 60px;
+}
+
+.top{
+    padding: 30px 20px;
+}
+
+.omega img{
+    height: 25px;
+}
+
+.eventName{
+    font-family: "Poppins";
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.eventImg, .eventImg img{
+    width: 100%;
+}
+
+.bottom{
+    padding: 30px;
+}
+
+.part1{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventLogo{
+    height: 100%;
+}
+.eventLogo img{
+    max-width: 85%;
+    max-height: 90%;
+}
+.eventLogo{
+    display: flex;
+    align-items: center;
+}
+
+.eventDate{
+    font-size: x-large;
+    font-family: "Poppins";
+}
+
+.date{
+    font-weight: bolder;
+}
+
+.description{
+    padding-top: 20px;
+    font-family: "Poppins";
+}
+
+@media screen and (max-width:600px) and (min-width:500px) {
+    .cardMain{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .cardMain{
+        width: 300px;
+    }
+}

@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 26.2%;
+  width: 20.2%;
   min-width: 180px;
 }
 
@@ -30,8 +30,8 @@
   border-right: 3px solid #808080;
   margin-top: 44px;
   margin-bottom: 119px;
-  padding: 0 42px 42px 62px;
-  width: 100%;
+  padding: 0 75px 0px 0px;
+  width: 65%;
   padding-bottom: 200px;
 }
 
@@ -40,10 +40,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 18px;
+  padding-top: 0px;
 }
 
-.DASHBOARD {
+/*.DASHBOARD {
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -51,7 +51,7 @@
   line-height: clamp(1.2rem, 1.5vw + 1rem, 1.5rem);
   color: #999999;
   text-align: center;
-}
+}*/
 
 .profilePic {
   display: flex;
@@ -62,7 +62,8 @@
   width: 200px;
   height: 200px;
   border-radius: 15px;
-  margin-top: 27px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .name,
@@ -108,8 +109,10 @@
   font-weight: 700;
   font-size: 22.0914px;
   line-height: 21px;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.005rem;
   align-items: center;
+  padding-right: 30%;
+  text-align: center;
 }
 
 .dashboardBottom_options {
@@ -284,8 +287,18 @@
 
 @media (max-width: 830px) {
   .dashboard {
-    padding-right: 40px;
-    padding-left: 40px;
+    width:100%;
+    /* margin-right: 0px; */
+  }
+
+  .pageLeft {
+    padding-top: 162px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20.2%;
+    min-width: 180px;
+    padding-right: 2px;
   }
 
   .profilePic img {
@@ -298,11 +311,17 @@
   }
 
   .profilePic {
-    justify-content: unset;
+    
+    justify-content: center;
+  }
+  .dashboardBottom_options{
+    align-items: flex-end;
+    margin-bottom: 60px;
   }
 
   .dashboardBottom {
-    align-items: flex-start;
+    align-items: flex-end;
+    padding-left: 10px;
   }
 
   .dashboardBottom p {
@@ -342,10 +361,22 @@
   .pageLeft {
     width: 20%;
   }
-
+  .DASHBOARD,.Position,.designation
+  .name {
+    display: none;
+  }
+  .profilePic {
+    width: 100px;
+    height: auto;
+  }
   .dashboard {
-    padding-left: 25%;
-    padding-right: 25%;
+    left: 0; 
+    width: 95%; 
+    overflow: auto; 
+    display: block; 
+    z-index: 1;
+    padding-left: 35%;
+    padding-right:35%;
   }
 
   .pageRight {
@@ -356,13 +387,21 @@
   .pageRight {
     padding-top: 0px;
   }
-
-  .dashboard {
-    padding-left: 20px;
-    padding-right: 20px;
+  .profilePic {
+    justify-content: flex-end;
   }
-}
+  .dashboardBottom_options{
+    align-items: flex-end;
+  }
+  .dashboardBottom{
+    align-items: flex-end;
+  }
+  .dashboardBottom p {
+    display: none;
+  }
+  
 
+}
 @media (max-width: 575px) {
   .proHeading {
     padding-bottom: 40px;
@@ -372,7 +411,15 @@
   .headInnerText {
     font-size: 23px;
   }
-
+  .dashboard {
+    left: 0; 
+    width: 95%; 
+    overflow: auto; 
+    display: block; 
+    z-index: 1;
+    padding-left: 25%;
+    padding-right:25%;
+  }
   .dets1,
   .vals1 {
     font-size: 19px;
@@ -382,20 +429,36 @@
   .pageRight {
     justify-content: flex-start;
   }
-
+  .profilePic {
+    justify-content: center;
+  }
+  .dashboardBottom_options{
+    align-items: flex-end;
+  }
+  .dashboardBottom{
+    align-items: flex-end;
+  }
+  .dashboardBottom p {
+    display: none;
+  }
   .dashboard {
     padding-left: 12px;
     padding-right: 12px;
   }
-}
-
-@media (max-width: 482px) {
+/* }
+/* @media(max-width: 529px){
+  .dets1,.vals1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+} 
+@media (max-width: 529px) { */
   .pageLeft {
-    width: 17%;
+    width: 7%;
   }
 
   .pageRight {
-    width: 83%;
+    width: 93%;
   }
 
   .headInnerText {
@@ -414,7 +477,7 @@
   }
 
   .pageRight {
-    padding: 10px 0 40px 0;
+    padding: 10px 30px 30px 0;
   }
 
   .proHeading {
@@ -423,13 +486,19 @@
   }
 }
 
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 416px) {
   .pageLeft {
     min-width: 100px;
   }
 
-  .DASHBOARD,
+  .DASHBOARD,.Position,.designation
   .name {
     display: none;
   }
 }
+@media (max-width: 290px) {
+  .profilePic{
+    
+  }
+};
+  

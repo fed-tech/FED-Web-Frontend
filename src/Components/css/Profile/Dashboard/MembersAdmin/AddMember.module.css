@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
+
+.memInputs {
+    width:85%;
+    height: 120%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    margin-top: 30px;
+    /* overflow-y: auto; */
+    padding-top: 20px;
+    padding-right: 0px;
+}
+
+
+.memInputs input, .memInputs select{
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    border-bottom: 3px solid #4B4B4B;
+    margin-bottom: 50px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+   
+}
+.memInputs select{
+    color: white;
+    height:fit-content;
+    outline: none;
+    margin-top: -10px;
+    width: 100%;
+}
+
+.memInputs select option{
+    color: black;
+    font-size: 20px;
+    background-color: rgb(194, 194, 194);
+}
+.memInputs input::placeholder{
+    /* color: white; */
+    font-size: 20px;
+    font-family: Mulish;
+    font-weight: 700;
+    letter-spacing: 0.125px;
+}
+.memInputs input:focus{
+    outline: none;
+}
+.saveBtn {
+    color: #FFF;
+    font-size: 22px;
+    font-family: Mulish;
+    font-weight: 600;
+    padding: 7px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    background: #F45725;
+    border: none;
+    float: right;
+    width: fit-content;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    width: 120px;
+    min-width: 120px;
+}
+
+.divButton{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .memInputs {
+        width: 80%;
+        height: 100%;
+        font-size: 10px;
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 15px;
+    }
+
+    .memInputs input,
+    .memInputs select,
+    .memInputs select option {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .memInputs input::placeholder{
+        font-size: 16px;
+    }
+
+    .saveBtn {
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        height: 45px;
+        width: 100px;
+        min-width: 100px;
+    }
+}

@@ -1,0 +1,91 @@
+/* ImageModal.css */
+
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 6px;
+  position: fixed;
+  text-align: center;
+  box-shadow: 0px 0px 20px black;
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  max-height: 90%;
+  z-index: 1002;
+  top: 50%;
+  left: 50%;
+  flex-wrap: nowrap;
+  overflow: scroll;
+  transform: translate(-50%, -50%);
+  animation: popUp 0.3s ease-in-out;
+}
+
+.modal::-webkit-scrollbar {
+  width: .01rem;
+  height: .01rem;
+}
+
+.close_button {
+  position: absolute;
+  top: -5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 60px;
+  color: #aaa;
+  transition: color 0.2s linear;
+}
+
+.close_button:hover {
+  color: orangered;
+}
+
+.modal_image {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Animation Keyframes */
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .modal {
+    width: 80%;
+    max-width: 90%;
+    height: auto;
+    max-height: 90%;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .close_button {
+    top: -5px;
+    font-size: 40px;
+  }
+}

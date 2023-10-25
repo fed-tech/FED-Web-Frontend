@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap');
+
+.viewMem{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0px;
+    column-gap: 15px;
+    overflow-y: scroll;
+    height: 100%;  
+    width: 90%;
+}
+
+.viewMem::-webkit-scrollbar{
+    width: .3rem;
+    height: .2rem;
+}
+
+@media screen and (max-width: 1148px) {
+    .viewMem {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .viewMem {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        margin-top: 10px;
+        margin-left: -10px;
+        margin-right: 20px;
+        row-gap: 5px;
+    }
+
+    .viewMem::-webkit-scrollbar{
+        width: 0rem;
+        height: 0rem;
+    }
+
+}
