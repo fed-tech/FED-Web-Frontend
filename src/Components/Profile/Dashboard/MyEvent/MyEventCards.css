@@ -54,56 +54,108 @@
 .showDetailsBtn:hover{
     opacity: 90%;
 }
-@media(max-width:1408px)
-{
-  .eventcards{
-
-    width: 60%;
-    height: 50%;
-}
+@media(max-width :1408px) {
+.eventcards {
+width :60%; 
+height :70%;
 
 }
-@media(max-width:1024px)
-{
-  .eventcards{
-    height: 42%;
-    width: 70%;
-}}
-@media(max-width:768px)
-{
-  .eventcards{
-    height: 80%;
-    width: 40%;
-    margin-left: 10%;
-}
-
-}
-@media(max-width:550px)
-{
-  .eventcards{
+.date_and_month p {
+    font-size :1.2rem;
     
-    width: 90%;
-}}
-@media (max-width:320px) 
-{ 
-    .eventcards{
-        width: 90%;
-        height: 60%;
-    margin-left: 0px;
-
-        
-}
-.date_and_month p{
-    font-size: 1rem;
+    }
     
-}
-.event_img img{
-    width: 120px;
+    .event_img img {
+    width :160px;
+    padding: 10px;
+    
+    }
+    
+    .event_content h2 {
+    font-size :1.4rem; 
+    font-weight :300px; 
+    
+    }
 }
 
-.event_content h2{
-    font-size: 1rem;
-    font-weight: 400px;
-    justify-content: center;
+@media(max-width :1008px) {
+.eventcards {
+height :90%; 
+width :30%;
+
+}
+.date_and_month p {
+    font-size :1.2rem;
+    
+    }
+    
+    .event_img img {
+    width :160px;
+    padding: 10px;
+    
+    }
+    
+    .event_content h2 {
+    font-size :1.4rem; 
+    font-weight :300px; 
+    
+    }
+}
+
+@media(max-width :824px) {
+.eventcards {
+height :90%; 
+width :40%; 
+margin-left :10%;
+
+}.date_and_month p {
+    font-size :1.2rem;
+    
+    }
+    
+    .event_img img {
+    width :160px;
+    padding: 10px;
+    
+    }
+    
+    .event_content h2 {
+    font-size :1.4rem; 
+    font-weight :300px; 
+    
+    }
+}
+
+@media(max-width :590px) {
+.eventcards {
+width :60%;
+height: 90%;
+
+}
+}
+
+@media(max-width :474px) {
+.eventcards {
+width :70%; 
+height :90%; 
+margin-left :10px;
+
+}
+
+.date_and_month p {
+font-size :1rem;
+
+}
+
+.event_img img {
+width :150px;
+
+}
+
+.event_content h2 {
+font-size :1rem; 
+font-weight :400px; 
+justify-content : center;
+
 }
 }

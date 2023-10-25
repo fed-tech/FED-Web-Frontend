@@ -100,39 +100,45 @@
 
 /* Media queries for responsiveness */
 
-@media (max-width: 1408px) {
+@media (max-width :1408px) {
   .viewevents {
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns : repeat(2,1fr); 
+  
   }
-}
-
-@media (max-width: 1008px) {
+  }
+  
+  @media (max-width :1008px) {
   .viewevents {
-      grid-template-columns: repeat(1, 1fr);
-      width: 120%; 
-      margin-top: 20px; 
-      margin-left: -10px;
-      margin-right: 0px; 
-      row-gap:0px; 
-      column-gap: 30px;
+  grid-template-columns : repeat(1,1fr); 
+  width :120%; 
+  margin-top :20px; 
+  margin-left :-10px; 
+  margin-right :0px; 
+  row-gap :0px; 
+  column-gap :30px;
+  
   }
-  @media (max-width: 768px) {
-    .modal {
-      max-width: 90%;
-      width: auto;
-      padding: 15px;
-    }
+  @media (max-width :768px) {
+  .modal {
+  max-width :90%; 
+  width : auto; 
+  padding :15px;
+  
+  }
   }
   .viewevents::-webkit-scrollbar{
-    width: 0rem;
-    height: 0rem;
+  width :0rem; 
+  height :0rem;
+  
   }
-
+  
   .viewEventDets {
-      margin-left: 40px;
+  margin-left :40px;
+  
   }
-
+  
   .fullPage {
-      align-items: flex-start;
+  align-items : flex-start;
+  
   }
 }
