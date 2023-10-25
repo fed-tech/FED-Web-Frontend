@@ -75,14 +75,14 @@ function App() {
                     </Suspense>
                   }
                 />
-                {/* <Route
+                <Route
                   path="/Event"
                   element={
                     <Suspense fallback={<Loading />}>
                       <Events />
                     </Suspense>
                   }
-                /> */}
+                />
                 <Route
                   path="/Podcasts"
                   element={

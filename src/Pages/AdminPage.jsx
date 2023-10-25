@@ -18,6 +18,7 @@ import Profile from "../Components/Profile/Dashboard/Profile";
 import EventAdmin from "../Components/Profile/Dashboard/EventAdmin/EventAdmin";
 import EventForm from "../Components/Profile/Dashboard/EventForm/EventForm";
 import MembersAdmin from "../Components/Profile/Dashboard/MembersAdmin/MembersAdmin";
+import MyEvents from "../Components/Profile/Dashboard/MyEvent/MyEvent";
 
 // Components
 import UpdateProfile from "../Components/Profile/UpdateProfile";
@@ -59,7 +60,7 @@ function Page() {
     navigate("/Login");
     authCtx.logout();
   };
-  
+
   return (
     <div className={pageCss.Page_main}>
       <div className={pageCss.Page}>
@@ -115,6 +116,17 @@ function Page() {
                 <p>Members</p>
               </div>
               </>:<></>}
+              {designation === "User"?<div
+                onClick={handleSetPage}
+                className={
+                  currPage === "Registrations"
+                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                    : `${pageCss.dashboardBottom_options}`
+                }
+              >
+                <InsertInvitationIcon className={pageCss.dashboardBottom_icons} />
+                <p>Registrations</p>
+              </div>:<></>}
               <div
                 onClick={handleLogout}
                 className={pageCss.dashboardBottom_options}
@@ -122,6 +134,7 @@ function Page() {
                 <LogoutIcon className={pageCss.dashboardBottom_icons} />
                 <p>Logout</p>
               </div>
+              
             </div>
           </div>
         </div>
@@ -130,6 +143,8 @@ function Page() {
           {currPage === "Events" && <EventAdmin />}
           {currPage === "Form" && <EventForm />}
           {currPage === "Members" && <MembersAdmin />}
+          {currPage === "Registrations" && <MyEvents />}
+
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />
