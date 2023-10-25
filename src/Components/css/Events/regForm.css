@@ -143,6 +143,7 @@ input {
     border-radius: 13px;
     width: 100%;
     border: rgb(145, 141, 141) solid 1px;
+    background-color: #0f0e0e;
 }
 
 .inputField {

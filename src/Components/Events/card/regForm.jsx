@@ -260,6 +260,16 @@ export default function RegForm({ showPopUp, setShowPopUp, setError,formid, form
                 Authorization: authCtx.token,
               },
             });
+            if(result.status == 200){
+              return setError({
+                mainColor: "#EDFEEE",
+                secondaryColor: "#5CB660",
+                symbol: "check_circle",
+                title: "Success",
+                text: "Data submitted successfully",
+                val: true,
+              });
+            }
         }catch(error){
             setError({
                 mainColor: "#FFC0CB",

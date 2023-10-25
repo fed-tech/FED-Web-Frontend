@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { Alert } from '../../../MicroInterAction/Alert';
 
 import OMCss from "./Main.module.css";
 import EventCard from "./cards/EventCard";
@@ -10,8 +11,11 @@ import omegaRetro from "../../../assets/Omega/omegaRetro.webp";
 import click from "../../../assets/Omega/Maskgroup.svg";
 
 import { eventDetails } from "./eventDetails";
-
+import { getOrdinal } from "../../../MicroInterAction/ordinal";
+import RegForm from "../../Events/card/regForm";
+import axios from "axios";
 export default function Main(props) {
+  const omegaformid = "6539067c050513e0feb200a0"
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -19,24 +23,105 @@ export default function Main(props) {
 
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
-
-  const register = () => {
+  const [eventcard,setEvent] = useState([])
+  const [isRegistered,setIsRegistered] = useState(false)
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [currentform,setCurentForm] = useState("")
+  const [currentformelement,setCurentFormElement] = useState([])
+  const [formLoading,setFormLoading] = useState(false)
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+});
+  const getEvents = async () =>{
+    var result = await axios.get("/form/getactiveform");
+    if (result.status == 200) {
+      var final = result.data
+        .filter((e) => e._id == omegaformid)
+        .map((e, idx) => {
+          var temp = {};
+          temp.formid = e._id;
+          temp.title = e.title;
+          var date = new Date(e.date);
+          temp.date = date.getDate();
+          temp.month = date.toLocaleString("default", { month: "long" });
+          temp.img = e.img;
+          temp.dis = {};
+          temp.dis.d1 = e.description.split("\n")[0];
+          temp.dis.d2 = e.description.split("\n")[1];
+          temp.dis.d3 = e.description.split("\n")[2];
+          temp.dis.d4 = e.description.split("\n")[3];
+          temp.dis.d5 = e.description.split("\n")[4];
+          temp.isLive = e.active;
+          temp.amount = e.amount;
+          temp.upi = e.upi;
+          temp.formelement = e.formelement;
+          temp.isTeam = e.isTeam;
+          temp.superscript = getOrdinal(temp.date);
+          return temp;
+        });
+        console.log(final.length != 0 )
+        final.length != 0 ? setCurentForm(final[0].formid) : null
+        final.length != 0 ? final[0].formelement = final[0].formelement.map((e)=>{
+          var temp = {}
+          temp.name = e.name
+          temp.type = e.type
+          temp.placeholder = "Enter your " + e.name
+          temp.required = true
+          temp.value = e.value
+          return temp
+        }):null
+        final.length != 0 ? setCurentFormElement(final[0]) : null
+      if (authCtx.isLoggedIn) {
+        var result = await axios.get("/form/getuserform", {
+          headers: { Authorization: authCtx.token },
+        });
+        console.log(result.data)
+        final.forEach((e) => {
+          if (result.data.includes(e.formid)) {
+            setIsRegistered(true);
+          } else {
+            setIsRegistered(false)
+          }
+        });
+      }
+      console.log(final)
+      setEvent(final);
+      setFormLoading(false)
+    }
+  }
+  const register = async () => {
     if (authCtx.token == null) {
       authCtx.settarget("omega");
       redirect("/Login");
     } else {
-      props.setShift(true);
+      isRegistered ? props.setShift(true):setShowPopUp(true);
     }
   };
-
+  useEffect(()=>{
+    getEvents()
+    if(authCtx.isLoggedIn){
+      setFormLoading(true)
+    }
+  },[])
+  useEffect(()=>{
+    getEvents()
+    if(authCtx.isLoggedIn){
+      setFormLoading(true)
+    }
+  },[showPopUp])
   return (
     <div className={OMCss.main}>
       <div className={OMCss.registerBtn}>
         <div className={OMCss.image}>
           <img src={omegaRetro} alt="" />
         </div>
-        <div className={OMCss.button} onClick={register}>
-          <div className={OMCss.buttonText}>REGISTER NOW</div>
+        <div className={OMCss.button} onClick={register} aria-disabled={!formLoading}>
+          <div className={OMCss.buttonText}>{formLoading?"Loading...":isRegistered?"ENTER OMEGA":"REGISTER NOW"}</div>
           <div className={OMCss.buttonImage}>
             <img src={click} alt="" />
           </div>
@@ -56,6 +141,11 @@ export default function Main(props) {
           );
         })}
       </div>
+      {showPopUp &&
+        <RegForm showPopUp={showPopUp}
+                  setShowPopUp={setShowPopUp} setError={setError} formid={currentform} formelement={currentformelement}
+        />}
+        <Alert variant={variants} val={setError} />
     </div>
   );
 }
