@@ -68,9 +68,11 @@ export default function NavMobile(props) {
             <NavLink to="/omega" className="liTag">
               Omega 3.0
             </NavLink>
-            {/* <NavLink to="/event" className="liTag">
+            </div>
+            <div class="mobileList" onClick={() => setCount(false)}>
+            <NavLink to="/event" className="liTag">
               Events
-            </NavLink> */}
+            </NavLink>
           </div>
           <div class="mobileList">
             <NavLink
