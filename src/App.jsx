@@ -7,10 +7,10 @@ import Layout from "./Pages/Layout";
 // Pages
 const Home = React.lazy(() => import("./Pages/Home"));
 const Team = React.lazy(() => import("./Pages/Team"));
-const Error = React.lazy(() => import("./Pages/Error"));
-const Alumni = React.lazy(() => import("./Pages/Alumni"));
-const Events = React.lazy(() => import("./Pages/Events"));
 const Omega = React.lazy(() => import("./Pages/Omega"));
+const Error = React.lazy(() => import("./Pages/Error"));
+const Events = React.lazy(() => import("./Pages/Events"));
+const Alumni = React.lazy(() => import("./Pages/Alumni"));
 const Podcasts = React.lazy(() => import("./Pages/Podcasts"));
 const Testimonial = React.lazy(() => import("./Pages/Testimonial"));
 const PrivacyPolicies = React.lazy(() => import("./Pages/PrivacyPolicies"));
