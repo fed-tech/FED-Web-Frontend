@@ -15,7 +15,7 @@ import { getOrdinal } from "../../../MicroInterAction/ordinal";
 import RegForm from "../../Events/card/regForm";
 import axios from "axios";
 export default function Main(props) {
-  const omegaformid = "6539067c050513e0feb200a0"
+  const omegaformid = "653969a83bfd20c9bfb1078b"
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);

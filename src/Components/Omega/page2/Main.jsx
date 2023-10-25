@@ -15,10 +15,10 @@ import { Alert } from "../../../MicroInterAction/Alert";
 export default function Main() {
   const authCtx = useContext(AuthContext)
   const [isRegistered,setIsRegistered] = useState([])
-  const pitchersformid = "6539067c050513e0feb200a0"
-  const fplformid = "6539067c050513e0feb200a0"
-  const sitcomformid = "65317a99cbb7f9cce717a6eb"
-  const logoformid = "6539067c050513e0feb200a0"
+  const pitchersformid = "65396d193bfd20c9bfb1079a" //done
+  const fplformid = "65396c993bfd20c9bfb10791" //done
+  const sitcomformid = "65396db33bfd20c9bfb107a0" //done
+  const logoformid = "65396e453bfd20c9bfb107a4" //done
   var [pitchersform,setpitchersform] = useState({})
   var [fplform,setfplform] = useState({})
   var [sitcomform,setsitcomform] = useState({})
