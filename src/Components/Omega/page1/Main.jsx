@@ -64,7 +64,6 @@ export default function Main(props) {
           temp.superscript = getOrdinal(temp.date);
           return temp;
         });
-        console.log(final.length != 0 )
         final.length != 0 ? setCurentForm(final[0].formid) : null
         final.length != 0 ? final[0].formelement = final[0].formelement.map((e)=>{
           var temp = {}
@@ -89,12 +88,22 @@ export default function Main(props) {
           }
         });
       }
-      console.log(final)
-      setEvent(final);
+      console.log(final[0])
+      setEvent(final[0]);
       setFormLoading(false)
     }
   }
   const register = async () => {
+    if(formLoading || !eventcard.isLive){
+      return setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Error",
+        text: "Form Closed Or Loading !!!",
+        val: true,
+      });
+    }
     if (authCtx.token == null) {
       authCtx.settarget("omega");
       redirect("/Login");
@@ -120,8 +129,16 @@ export default function Main(props) {
         <div className={OMCss.image}>
           <img src={omegaRetro} alt="" />
         </div>
-        <div className={OMCss.button} onClick={register} aria-disabled={!formLoading}>
-          <div className={OMCss.buttonText}>{formLoading?"Loading...":isRegistered?"ENTER OMEGA":"REGISTER NOW"}</div>
+        <div className={OMCss.button} onClick={register}>
+          <div className={OMCss.buttonText}>
+            {formLoading
+              ? "Loading..."
+              : eventcard.isLive
+              ? isRegistered
+                ? "ENTER OMEGA"
+                : "REGISTER NOW"
+              : "REGISTRATION CLOSED"}
+          </div>
           <div className={OMCss.buttonImage}>
             <img src={click} alt="" />
           </div>
@@ -141,11 +158,16 @@ export default function Main(props) {
           );
         })}
       </div>
-      {showPopUp &&
-        <RegForm showPopUp={showPopUp}
-                  setShowPopUp={setShowPopUp} setError={setError} formid={currentform} formelement={currentformelement}
-        />}
-        <Alert variant={variants} val={setError} />
+      {showPopUp && (
+        <RegForm
+          showPopUp={showPopUp}
+          setShowPopUp={setShowPopUp}
+          setError={setError}
+          formid={currentform}
+          formelement={currentformelement}
+        />
+      )}
+      <Alert variant={variants} val={setError} />
     </div>
   );
 }
