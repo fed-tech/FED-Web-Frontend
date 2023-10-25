@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
+import addEventCss from "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
 
 // axios
 import axios from "axios";
