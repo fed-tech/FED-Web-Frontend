@@ -89,9 +89,9 @@ function Page() {
                 }
               >
                 <InsertInvitationIcon
-                  className={pageCss.dashboardBottom_icons} id="Registrations"
+                  className={pageCss.dashboardBottom_icons} id="Events"
                 />
-                <p id="Registrations">Events</p>
+                <p id="Events">Events</p>
               </div>
               <div
                 onClick={handleSetPage}
@@ -101,8 +101,8 @@ function Page() {
                     : `${pageCss.dashboardBottom_options}`
                 }
               >
-                <PlaylistAddIcon className={pageCss.dashboardBottom_icons} id="Registrations"/>
-                <p id="Registrations">Form</p>
+                <PlaylistAddIcon className={pageCss.dashboardBottom_icons} id="Form"/>
+                <p id="Form">Form</p>
               </div>
               <div
                 onClick={handleSetPage}
@@ -112,8 +112,8 @@ function Page() {
                     : `${pageCss.dashboardBottom_options}`
                 }
               >
-                <GroupsIcon className={pageCss.dashboardBottom_icons} id="Registrations"/>
-                <p id="Registrations">Members</p>
+                <GroupsIcon className={pageCss.dashboardBottom_icons} id="Members"/>
+                <p id="Members">Members</p>
               </div>
               </>:<></>}
               {designation === "User"?<div
