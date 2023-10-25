@@ -52,7 +52,7 @@ function Page() {
   console.log(currPage);
 
   const handleSetPage = (e) => {
-    const pageName = e.target.innerText;
+    const pageName = e.target.id;
     console.log(pageName)
     setCurrPage(pageName);
   }
@@ -89,9 +89,9 @@ function Page() {
                 }
               >
                 <InsertInvitationIcon
-                  className={pageCss.dashboardBottom_icons}
+                  className={pageCss.dashboardBottom_icons} id="Registrations"
                 />
-                <p>Events</p>
+                <p id="Registrations">Events</p>
               </div>
               <div
                 onClick={handleSetPage}
@@ -101,8 +101,8 @@ function Page() {
                     : `${pageCss.dashboardBottom_options}`
                 }
               >
-                <PlaylistAddIcon className={pageCss.dashboardBottom_icons} />
-                <p>Form</p>
+                <PlaylistAddIcon className={pageCss.dashboardBottom_icons} id="Registrations"/>
+                <p id="Registrations">Form</p>
               </div>
               <div
                 onClick={handleSetPage}
@@ -112,8 +112,8 @@ function Page() {
                     : `${pageCss.dashboardBottom_options}`
                 }
               >
-                <GroupsIcon className={pageCss.dashboardBottom_icons} />
-                <p>Members</p>
+                <GroupsIcon className={pageCss.dashboardBottom_icons} id="Registrations"/>
+                <p id="Registrations">Members</p>
               </div>
               </>:<></>}
               {designation === "User"?<div
@@ -124,8 +124,8 @@ function Page() {
                     : `${pageCss.dashboardBottom_options}`
                 }
               >
-                <InsertInvitationIcon className={pageCss.dashboardBottom_icons} />
-                <p>Registrations</p>
+                <InsertInvitationIcon className={pageCss.dashboardBottom_icons} id="Registrations"/>
+                <p id="Registrations">Registrations</p>
               </div>:<></>}
               <div
                 onClick={handleLogout}
