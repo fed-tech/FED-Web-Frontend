@@ -1,5 +1,8 @@
 import React, { useContext, useState } from "react";
-import addEventCss from "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
+
+import "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
+
+// axios
 import axios from "axios";
 import AuthContext from "../../../../store/auth-context";
 import Load from "../../../../MicroInterAction/Load";
@@ -28,7 +31,7 @@ function AddEvent({ setViewEvents }) {
     reg_type: "",
   });
 
-  const [submitting,setSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
 
   const dataInp = (e) => {
     const name = e.target.name;
@@ -36,8 +39,7 @@ function AddEvent({ setViewEvents }) {
     setForm({ ...form, [name]: value });
   };
 
-  console.log(form)
-  const handleSubmit = async (e)=>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (
       form.title === "" ||
@@ -121,7 +123,7 @@ function AddEvent({ setViewEvents }) {
           val: true,
         });
         // Set a delay before resetting to the initial state and hiding the success message
-          window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
       }
     } catch (err) {
       console.log(form);
@@ -135,7 +137,8 @@ function AddEvent({ setViewEvents }) {
         val: true,
       });
     }
-  }
+  };
+
   const handlePreview = () => {
     console.log("check handle");
     setPreviewImage(form.poster);
@@ -145,6 +148,7 @@ function AddEvent({ setViewEvents }) {
   const handleRegTypeChange = (e) => {
     setForm((prevState) => ({ ...prevState, reg_type: e.target.value }));
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -181,7 +185,6 @@ function AddEvent({ setViewEvents }) {
           </button>
         </div>
         <div className={addEventCss.addEvent}>
-
           <select
             placeholder="Registration type"
             name="reg_type"
@@ -195,9 +198,14 @@ function AddEvent({ setViewEvents }) {
           </select>
         </div>
         <div className="inp_btn">
-        <button type="submit" value="Submit" className='submit_btn' onClick={handleSubmit}>
-                {submitting ? <Load /> : "SUBMIT"}
-              </button>
+          <button
+            type="submit"
+            value="Submit"
+            className="submit_btn"
+            onClick={handleSubmit}
+          >
+            {submitting ? <Load /> : "SUBMIT"}
+          </button>
         </div>
       </form>
       {isModalOpen && (
