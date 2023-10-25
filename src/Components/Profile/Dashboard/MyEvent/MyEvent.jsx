@@ -22,6 +22,7 @@ export default function MyEvents() {
       });
       setMainLoading(false)
       setCard(result.data)
+      console.log(result.data)
     }
     const getTeamDetails = async (info) =>{
       setTeamLoading(true)
