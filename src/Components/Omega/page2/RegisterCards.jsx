@@ -19,7 +19,7 @@ export default function RegisterCards({img, logo, desc, isRegistered, showform, 
                     <img src={logo} alt="" />
                 </div>
                 <div className={RCss.eventDescription}>{desc}</div>
-                <button className={RCss.registerBtn} disabled={isRegistered} onClick={handleClick}>{isRegistered?"ALREADY REGISTERED":"REGISTER NOW"}
+                <button className={RCss.registerBtn} disabled={isRegistered} onClick={handleClick}>{true?(isRegistered?"ALREADY REGISTERED":"REGISTER NOW"):"REGISTRATION CLOSED"}
                     <img src={click} alt="" />
                 </button>
             </div>

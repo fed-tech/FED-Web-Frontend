@@ -94,7 +94,7 @@ export default function Main(props) {
     }
   }
   const register = async () => {
-    if(formLoading || !eventcard.isLive){
+    if(formLoading || !eventcard.isLive && !isRegistered){
       return setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -133,11 +133,11 @@ export default function Main(props) {
           <div className={OMCss.buttonText}>
             {formLoading
               ? "Loading..."
-              : eventcard.isLive
-              ? isRegistered
+              :isRegistered
                 ? "ENTER OMEGA"
-                : "REGISTER NOW"
-              : "REGISTRATION CLOSED"}
+                : eventcard.isLive?
+                "REGISTER NOW":
+                "REGISTRATION CLOSED"}
           </div>
           <div className={OMCss.buttonImage}>
             <img src={click} alt="" />
