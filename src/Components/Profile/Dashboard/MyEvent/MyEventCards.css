@@ -58,23 +58,52 @@
 {
   .eventcards{
 
-    width: 90%;
+    width: 60%;
+    height: 50%;
 }
 
 }
-@media(max-width:1008px)
+@media(max-width:1024px)
 {
   .eventcards{
-
-    width: 80%;
+    height: 42%;
+    width: 70%;
+}}
+@media(max-width:768px)
+{
+  .eventcards{
+    height: 80%;
+    width: 40%;
+    margin-left: 10%;
 }
 
 }
 @media(max-width:550px)
 {
   .eventcards{
-
+    
     width: 90%;
+}}
+@media (max-width:320px) 
+{ 
+    .eventcards{
+        width: 90%;
+        height: 60%;
+    margin-left: 0px;
+
+        
+}
+.date_and_month p{
+    font-size: 1rem;
+    
+}
+.event_img img{
+    width: 120px;
 }
 
+.event_content h2{
+    font-size: 1rem;
+    font-weight: 400px;
+    justify-content: center;
+}
 }
