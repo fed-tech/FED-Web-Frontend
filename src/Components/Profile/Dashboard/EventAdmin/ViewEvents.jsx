@@ -1,29 +1,34 @@
 import React, { useEffect, useState } from "react";
-import EventCards from "../../EventCards";
-
-// css
-import "../../../css/Profile/Dashboard/EventAdmin/ViewEvents.css";
 
 // Componentss
 import EventDetails from "../../EventDetails";
+import EventCards from "../../EventCards";
 
 //  axios
 import axios from "axios";
 
+// css
+import "../../../css/Profile/Dashboard/EventAdmin/ViewEvents.css";
+
 function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
   const [events, setEvents] = useState([]);
-  const loadEvents = async () => {
-    const response = await axios.get("/event/getevent");
-    if (response.status === 200) {
-      setEvents(response.data.event);
-    } else {
-      console.log("Did not recieve events");
-    }
-  };
 
   useEffect(() => {
     loadEvents();
   }, [showEvent]);
+
+  const loadEvents = async () => {
+    try {
+      const response = await axios.get("/event/getevent");
+      if (response.status === 200) {
+        setEvents(response.data.event);
+      } else {
+        console.log("Did not recieve events");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <div className="viewEventss">
