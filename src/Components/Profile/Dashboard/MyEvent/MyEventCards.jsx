@@ -12,6 +12,7 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
     setCardNo(info);
     getTeamDetails(info);
   };
+
   return (
     <div className="eventcards">
       <div className="event_img">
