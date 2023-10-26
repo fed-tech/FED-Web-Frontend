@@ -46,6 +46,7 @@ export default function Main(props) {
     text: "",
     val: false,
   });
+
   const getEvents = async () => {
     var result = await axios.get("/form/getactiveform");
     if (result.status == 200) {
@@ -104,6 +105,7 @@ export default function Main(props) {
       setFormLoading(false);
     }
   };
+
   const register = async () => {
     if (formLoading || (!eventcard.isLive && !isRegistered)) {
       return setError({
@@ -122,18 +124,21 @@ export default function Main(props) {
       isRegistered ? props.setShift(true) : setShowPopUp(true);
     }
   };
+
   useEffect(() => {
     getEvents();
     if (authCtx.isLoggedIn) {
       setFormLoading(true);
     }
   }, []);
+
   useEffect(() => {
     getEvents();
     if (authCtx.isLoggedIn) {
       setFormLoading(true);
     }
   }, [showPopUp]);
+
   return (
     <div className={OMCss.main}>
       <div className={OMCss.registerBtn}>
