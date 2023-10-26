@@ -13,10 +13,6 @@ export default function Events() {
 
   return (
     <>
-      {/* <div>
-        <Header head="Current Events" />
-        <SkillHunt />
-      </div> */}
       <div>
         <Header head="Upcomming Events" />
         <Card />
