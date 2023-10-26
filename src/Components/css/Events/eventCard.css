@@ -52,6 +52,7 @@
   border-radius: 10px;
   width: 121px;
   height: 72px;
+  object-fit: cover;
 }
 
 .right {
@@ -82,32 +83,32 @@
 }
 
 .regBtn {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-family: "Manrope", sans-serif;
-    float: right;
-    margin-left: 20px;
-    border-radius: 16px;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px 67px;
-    background-color: rgb(209, 209, 209);
-    outline: none;
-    border-width: 0px;
-    color: #f45725;
-    font-weight: 700;
-    transition: all 0.3s;
-    cursor: context-menu;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: "Manrope", sans-serif;
+  float: right;
+  margin-left: 20px;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 67px;
+  background-color: rgb(209, 209, 209);
+  outline: none;
+  border-width: 0px;
+  color: #f45725;
+  font-weight: 700;
+  transition: all 0.3s;
+  cursor: context-menu;
+  display: flex;
+  align-items: center;
 }
-.block{
+.block {
   cursor: not-allowed;
 }
 
 .live {
-    color: rgb(34, 185, 34);
+  color: rgb(34, 185, 34);
 }
 
 .lockSvg {

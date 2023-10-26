@@ -23,12 +23,6 @@ export default class SimpleSlider extends Component {
     return (
       <div>
         <Slider {...settings}>
-          {/* <div>
-            <SliderComponent
-              image="https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/65381b185995c3f682fb4bc4_Frame%20157%201x.png"
-              button="false"
-            />
-          </div> */}
           <div>
             <SliderComponent
               image="https://uploads-ssl.webflow.com/61dd733efbe56d4e2f5f701f/65381b185995c3f682fb4bc4_Frame%20157%201x.png"
