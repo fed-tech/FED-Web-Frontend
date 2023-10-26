@@ -24,11 +24,13 @@ import omegaRetro from "../../../assets/Omega/omegaRetro.webp";
 import { eventDetails } from "./eventDetails";
 
 export default function Main(props) {
-  const omegaformid = "653969a83bfd20c9bfb1078b";
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // form ID
+  const omegaformid = "653969a83bfd20c9bfb1078b";
 
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
