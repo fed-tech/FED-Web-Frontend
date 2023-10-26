@@ -43,16 +43,6 @@
   padding-top: 0px;
 }
 
-/*.DASHBOARD {
-  font-family: "Manrope", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: clamp(1.1rem, 1.2vw + 1rem, 1.626rem);
-  line-height: clamp(1.2rem, 1.5vw + 1rem, 1.5rem);
-  color: #999999;
-  text-align: center;
-}*/
-
 .profilePic {
   display: flex;
   justify-content: center;
@@ -287,8 +277,7 @@
 
 @media (max-width: 830px) {
   .dashboard {
-    width:100%;
-    /* margin-right: 0px; */
+    width: 100%;
   }
 
   .pageLeft {
@@ -311,10 +300,10 @@
   }
 
   .profilePic {
-    
     justify-content: center;
   }
-  .dashboardBottom_options{
+
+  .dashboardBottom_options {
     align-items: flex-end;
     margin-bottom: 60px;
   }
@@ -361,22 +350,26 @@
   .pageLeft {
     width: 20%;
   }
-  .DASHBOARD,.Position,.designation
-  .name {
+
+  .DASHBOARD,
+  .Position,
+  .designation .name {
     display: none;
   }
+
   .profilePic {
     width: 100px;
     height: auto;
   }
+
   .dashboard {
-    left: 0; 
-    width: 95%; 
-    overflow: auto; 
-    display: block; 
+    left: 0;
+    width: 95%;
+    overflow: auto;
+    display: block;
     z-index: 1;
     padding-left: 35%;
-    padding-right:35%;
+    padding-right: 35%;
   }
 
   .pageRight {
@@ -387,21 +380,24 @@
   .pageRight {
     padding-top: 0px;
   }
+
   .profilePic {
     justify-content: flex-end;
   }
-  .dashboardBottom_options{
+
+  .dashboardBottom_options {
     align-items: flex-end;
   }
-  .dashboardBottom{
+
+  .dashboardBottom {
     align-items: flex-end;
   }
+
   .dashboardBottom p {
     display: none;
   }
-  
-
 }
+
 @media (max-width: 575px) {
   .proHeading {
     padding-bottom: 40px;
@@ -411,15 +407,17 @@
   .headInnerText {
     font-size: 23px;
   }
+
   .dashboard {
-    left: 0; 
-    width: 95%; 
-    overflow: auto; 
-    display: block; 
+    left: 0;
+    width: 95%;
+    overflow: auto;
+    display: block;
     z-index: 1;
     padding-left: 25%;
-    padding-right:25%;
+    padding-right: 25%;
   }
+
   .dets1,
   .vals1 {
     font-size: 19px;
@@ -429,23 +427,29 @@
   .pageRight {
     justify-content: flex-start;
   }
+
   .profilePic {
     justify-content: center;
   }
-  .dashboardBottom_options{
+
+  .dashboardBottom_options {
     align-items: flex-end;
   }
-  .dashboardBottom{
+
+  .dashboardBottom {
     align-items: flex-end;
   }
+
   .dashboardBottom p {
     display: none;
   }
+
   .dashboard {
     padding-left: 12px;
     padding-right: 12px;
   }
-/* }
+
+  /* }
 /* @media(max-width: 529px){
   .dets1,.vals1{
     display: flex;
@@ -491,14 +495,14 @@
     min-width: 100px;
   }
 
-  .DASHBOARD,.Position,.designation
-  .name {
+  .DASHBOARD,
+  .Position,
+  .designation .name {
     display: none;
   }
 }
+
 @media (max-width: 290px) {
-  .profilePic{
-    
+  .profilePic {
   }
-};
-  
+}
