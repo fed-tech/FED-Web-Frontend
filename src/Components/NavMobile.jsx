@@ -1,8 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import "./css/MobileNav.css";
+
 // state
 import AuthContext from "./../store/auth-context";
+
+// css
+import "./css/MobileNav.css";
 
 export default function NavMobile(props) {
   const [count, setCount] = useState(false);
@@ -68,8 +71,8 @@ export default function NavMobile(props) {
             <NavLink to="/omega" className="liTag">
               Omega 3.0
             </NavLink>
-            </div>
-            <div class="mobileList" onClick={() => setCount(false)}>
+          </div>
+          <div class="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/event" className="liTag">
               Events
             </NavLink>
