@@ -23,21 +23,10 @@ export default function MyEvents() {
   const [show, setShow] = useState(false);
   const [cardNo, setCardNo] = useState("");
   const [currTeam, setCurrTeam] = useState([]);
-  const [mainLoading, setMainLoading] = useState(true);
+  const [mainLoading, setMainLoading] = useState(false);
   const [teamLoading, setTeamLoading] = useState(true);
 
   const authCtx = useContext(AuthContext);
-
-  const getuserformdetails = async () => {
-    var result = await axios.get("/form/getuserformdetails", {
-      headers: {
-        Authorization: authCtx.token,
-      },
-    });
-    setMainLoading(false);
-    setCard(result.data);
-    console.log(result.data);
-  };
 
   const getTeamDetails = async (info) => {
     setTeamLoading(true);
@@ -55,10 +44,40 @@ export default function MyEvents() {
     getuserformdetails();
   }, []);
 
+  const getuserformdetails = async () => {
+    setMainLoading(true);
+
+    try {
+      var result = await axios.get("/form/getuserformdetails", {
+        headers: {
+          Authorization: authCtx.token,
+        },
+      });
+
+      if (result.status === 200) {
+        setMainLoading(false);
+        setCard(result.data);
+      } else {
+        setMainLoading(false);
+      }
+    } catch (e) {
+      console.log(e);
+
+      setMainLoading(false);
+    }
+  };
+
   return (
     <div className={MeCss.viewEventss}>
       <div className={MeCss.viewevents}>
-        {mainLoading ? <Load /> : <></>}
+        {mainLoading ? (
+          <div className={MeCss.loadCenter}>
+            <Load />
+          </div>
+        ) : (
+          <></>
+        )}
+
         {card.map((e, idx) => {
           return (
             <MyEventCards
@@ -71,6 +90,7 @@ export default function MyEvents() {
           );
         })}
       </div>
+
       {show ? (
         <div className={MeCss.modal}>
           {teamLoading ? <Load /> : <></>}
