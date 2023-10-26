@@ -12,7 +12,7 @@ export default function Events() {
   }, []);
 
   return (
-    <>
+    <div className="mEventsDiv">
       <div>
         <Header head="Upcomming Events" />
         <Card />
@@ -22,6 +22,6 @@ export default function Events() {
         <Header head="Previous Events" />
         <CardPrev />
       </div>
-    </>
+    </div>
   );
 }
