@@ -25,8 +25,8 @@ import UpdateProfile from "../Components/Profile/UpdateProfile";
 
 function Page() {
   const [designation, setDesignation] = useState("");
-  // const navigate = useNavigate();
-  // const authCtx = useContext(AuthContext);
+  const [currPage, setCurrPage] = useState("Profile");
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
 
   // scroll to top
   useEffect(() => {
@@ -41,21 +41,18 @@ function Page() {
       setDesignation("Member");
     }
   }, []);
-  // useEffect(()=>{
-  //   console.log(authCtx.user.access)
-  // },[])
+
   const navigate = useNavigate();
+
   const authCtx = useContext(AuthContext);
-  const [showUpdateModal, setShowUpdateModal] = useState(false);
-  const [currPage, setCurrPage] = useState("Profile");
 
   console.log(currPage);
 
   const handleSetPage = (e) => {
     const pageName = e.target.id;
-    console.log(pageName)
+    console.log(pageName);
     setCurrPage(pageName);
-  }
+  };
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
@@ -79,54 +76,72 @@ function Page() {
               </div>
             </div>
             <div className={pageCss.dashboardBottom}>
-              {designation==="Admin"?<>
-              <div
-                onClick={handleSetPage}
-                className={
-                  currPage === "Events"
-                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
-                    : `${pageCss.dashboardBottom_options}`
-                }
-              >
-                <InsertInvitationIcon
-                  className={pageCss.dashboardBottom_icons} id="Events"
-                />
-                <p id="Events">Events</p>
-              </div>
-              <div
-                onClick={handleSetPage}
-                className={
-                  currPage === "Form"
-                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
-                    : `${pageCss.dashboardBottom_options}`
-                }
-              >
-                <PlaylistAddIcon className={pageCss.dashboardBottom_icons} id="Form"/>
-                <p id="Form">Form</p>
-              </div>
-              <div
-                onClick={handleSetPage}
-                className={
-                  currPage === "Members"
-                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
-                    : `${pageCss.dashboardBottom_options}`
-                }
-              >
-                <GroupsIcon className={pageCss.dashboardBottom_icons} id="Members"/>
-                <p id="Members">Members</p>
-              </div>
-              </>:<></>}
-              {designation === "User"?<div
-                onClick={handleSetPage}
-                className={
-                  currPage === "Registrations"
-                    ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
-                    : `${pageCss.dashboardBottom_options}`
-                }
-              >
-                <InsertInvitationIcon className={pageCss.dashboardBottom_icons} id="Registrations"/>
-                <p id="Registrations">Registrations</p>
-              </div>:<></>}
+              {designation === "Admin" ? (
+                <>
+                  <div
+                    onClick={handleSetPage}
+                    className={
+                      currPage === "Events"
+                        ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                        : `${pageCss.dashboardBottom_options}`
+                    }
+                  >
+                    <InsertInvitationIcon
+                      className={pageCss.dashboardBottom_icons}
+                      id="Events"
+                    />
+                    <p id="Events">Events</p>
+                  </div>
+                  <div
+                    onClick={handleSetPage}
+                    className={
+                      currPage === "Form"
+                        ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                        : `${pageCss.dashboardBottom_options}`
+                    }
+                  >
+                    <PlaylistAddIcon
+                      className={pageCss.dashboardBottom_icons}
+                      id="Form"
+                    />
+                    <p id="Form">Form</p>
+                  </div>
+                  <div
+                    onClick={handleSetPage}
+                    className={
+                      currPage === "Members"
+                        ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                        : `${pageCss.dashboardBottom_options}`
+                    }
+                  >
+                    <GroupsIcon
+                      className={pageCss.dashboardBottom_icons}
+                      id="Members"
+                    />
+                    <p id="Members">Members</p>
+                  </div>
+                </>
+              ) : (
+                <></>
+              )}
+              {designation === "User" ? (
+                <div
+                  onClick={handleSetPage}
+                  className={
+                    currPage === "Registrations"
+                      ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                      : `${pageCss.dashboardBottom_options}`
+                  }
+                >
+                  <InsertInvitationIcon
+                    className={pageCss.dashboardBottom_icons}
+                    id="Registrations"
+                  />
+                  <p id="Registrations">Registrations</p>
+                </div>
+              ) : (
+                <></>
+              )}
               <div
                 onClick={handleLogout}
                 className={pageCss.dashboardBottom_options}
@@ -134,17 +149,17 @@ function Page() {
                 <LogoutIcon className={pageCss.dashboardBottom_icons} />
                 <p>Logout</p>
               </div>
-              
             </div>
           </div>
         </div>
         <div className={pageCss.pageRight}>
-          {currPage === "Profile" && <Profile setShowUpdateModal={setShowUpdateModal} />}
+          {currPage === "Profile" && (
+            <Profile setShowUpdateModal={setShowUpdateModal} />
+          )}
           {currPage === "Events" && <EventAdmin />}
           {currPage === "Form" && <EventForm />}
           {currPage === "Members" && <MembersAdmin />}
           {currPage === "Registrations" && <MyEvents />}
-
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />
