@@ -5,22 +5,34 @@
   cursor: pointer;
   align-self: self-end;
 }
+
+.loadCenter {
+  display: flex;
+  justify-content: center;
+}
+
 .superscript {
   vertical-align: super;
   font-size: smaller;
   color: #fff;
 }
+
 .viewevents {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  gap: 20px 30px;
   overflow-y: scroll;
   padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 0px;
+  /* margin-left: 10px; */
+  /* margin-right: 0px; */
   width: 90%;
-  height: 800px;
-  row-gap: 30px;
-  column-gap: 0px;
+  /* height: 800px; */
+  /* row-gap: 30px; */
+  /* column-gap: 0px; */
   padding-bottom: 120px;
 }
 
@@ -35,6 +47,7 @@
   display: flex;
   justify-content: center;
 }
+
 .deleteMemberBtn {
   color: #fff;
   font-size: 15px;
@@ -48,15 +61,18 @@
   width: fit-content;
   min-width: 120px;
 }
+
 .modal .td {
   color: #fff;
   font-size: 18px;
   font-family: Mulish;
   text-align: center;
 }
+
 .modal .th {
   padding-bottom: 15px;
 }
+
 .modal .table {
   table-layout: fixed;
   font-size: 15px;
@@ -65,6 +81,7 @@
   width: fit;
   border-radius: 6px;
 }
+
 .modal .table,
 .td,
 .th {
@@ -72,9 +89,11 @@
   border-collapse: collapse;
   padding: 10px;
 }
+
 .modal .tr {
   vertical-align: middle;
 }
+
 .modal {
   position: fixed;
   top: 50%;
@@ -97,14 +116,14 @@
 
 /* Media queries for responsiveness */
 
-@media (max-width: 1408px) {
+/* @media (max-width: 1408px) {
   .viewevents {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+} */
 
 @media (max-width: 1008px) {
-  .viewevents {
+  /* .viewevents {
     grid-template-columns: repeat(1, 1fr);
     width: 120%;
     margin-top: 20px;
@@ -112,7 +131,8 @@
     margin-right: 0px;
     row-gap: 0px;
     column-gap: 30px;
-  }
+  } */
+
   @media (max-width: 768px) {
     .modal {
       max-width: 90%;
@@ -120,6 +140,7 @@
       padding: 15px;
     }
   }
+
   .viewevents::-webkit-scrollbar {
     width: 0rem;
     height: 0rem;

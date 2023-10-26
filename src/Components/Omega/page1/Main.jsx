@@ -39,8 +39,8 @@ export default function Main(props) {
   const [eventcard, setEvent] = useState([]);
   const [currentform, setCurentForm] = useState("");
   const [showPopUp, setShowPopUp] = useState(false);
-  const [isRegistered, setIsRegistered] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
   const [currentformelement, setCurentFormElement] = useState([]);
   const [variants, setError] = useState({
     mainColor: "",

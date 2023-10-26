@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import addEventCss from "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
+import "../../../css/Profile/Dashboard/EventAdmin/AddEvent.css";
 
 // axios
 import axios from "axios";
@@ -184,7 +184,7 @@ function AddEvent({ setViewEvents }) {
             Preview
           </button>
         </div>
-        <div className={addEventCss.addEvent}>
+        <div className="addEvent">
           <select
             placeholder="Registration type"
             name="reg_type"

@@ -4,15 +4,6 @@ import { useNavigate } from "react-router-dom";
 // state
 import AuthContext from "../store/auth-context";
 
-// css
-import pageCss from "./Css/Page.module.css";
-
-// icons
-import GroupsIcon from "@mui/icons-material/Groups";
-import LogoutIcon from "@mui/icons-material/Logout";
-import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
-import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-
 // Components - Dashboard
 import Profile from "../Components/Profile/Dashboard/Profile";
 import EventAdmin from "../Components/Profile/Dashboard/EventAdmin/EventAdmin";
@@ -22,6 +13,15 @@ import MyEvents from "../Components/Profile/Dashboard/MyEvent/MyEvent";
 
 // Components
 import UpdateProfile from "../Components/Profile/UpdateProfile";
+
+// css
+import pageCss from "./Css/Page.module.css";
+
+// icons
+import GroupsIcon from "@mui/icons-material/Groups";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
+import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 
 function Page() {
   const [designation, setDesignation] = useState("");
@@ -46,13 +46,12 @@ function Page() {
 
   const authCtx = useContext(AuthContext);
 
-  console.log(currPage);
-
   const handleSetPage = (e) => {
     const pageName = e.target.id;
     console.log(pageName);
     setCurrPage(pageName);
   };
+
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
@@ -64,7 +63,6 @@ function Page() {
         <div className={pageCss.pageLeft}>
           <div className={pageCss.dashboard}>
             <div className={pageCss.dashboardTop}>
-              <h1 className={pageCss.DASHBOARD}>DASHBOARD</h1>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
                   <img src={authCtx.user.pic} alt="" />
