@@ -45,6 +45,7 @@ export default function MyEvents() {
   }, []);
 
   const getuserformdetails = async () => {
+    setMainLoading(true);
     try {
       var result = await axios.get("/form/getuserformdetails", {
         headers: {
@@ -52,13 +53,20 @@ export default function MyEvents() {
         },
       });
 
-      console.log(result);
+      if (result.status === 200) {
+        console.log(result);
+
+        setMainLoading(false);
+        setCard(result.data);
+      } else {
+        setMainLoading(false);
+      }
     } catch (e) {
       console.log(e);
-    }
 
-    setMainLoading(false);
-    setCard(result.data);
+      setMainLoading(false);
+      setCard(result.data);
+    }
   };
 
   return (
