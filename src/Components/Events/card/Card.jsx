@@ -219,6 +219,7 @@ export default function Card() {
           );
         })
       )}
+
       {showPopUp && (
         <RegForm
           showPopUp={showPopUp}
