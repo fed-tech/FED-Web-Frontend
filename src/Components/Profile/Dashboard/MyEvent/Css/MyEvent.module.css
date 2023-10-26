@@ -6,6 +6,11 @@
   align-self: self-end;
 }
 
+.loadCenter {
+  display: flex;
+  justify-content: center;
+}
+
 .superscript {
   vertical-align: super;
   font-size: smaller;
