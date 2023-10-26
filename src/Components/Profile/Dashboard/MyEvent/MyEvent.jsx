@@ -75,20 +75,38 @@ export default function MyEvents() {
             <Load />
           </div>
         ) : (
-          <></>
-        )}
+          <>
+            {card.map((e, idx) => {
+              return (
+                <>
+                  <MyEventCards
+                    info={e}
+                    key={idx}
+                    setShow={setShow}
+                    setCardNo={setCardNo}
+                    getTeamDetails={getTeamDetails}
+                  />
 
-        {card.map((e, idx) => {
-          return (
-            <MyEventCards
-              info={e}
-              key={idx}
-              setShow={setShow}
-              setCardNo={setCardNo}
-              getTeamDetails={getTeamDetails}
-            />
-          );
-        })}
+                  <MyEventCards
+                    info={e}
+                    key={idx}
+                    setShow={setShow}
+                    setCardNo={setCardNo}
+                    getTeamDetails={getTeamDetails}
+                  />
+
+                  <MyEventCards
+                    info={e}
+                    key={idx}
+                    setShow={setShow}
+                    setCardNo={setCardNo}
+                    getTeamDetails={getTeamDetails}
+                  />
+                </>
+              );
+            })}
+          </>
+        )}
       </div>
 
       {show ? (
