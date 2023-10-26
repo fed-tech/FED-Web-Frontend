@@ -27,6 +27,12 @@ export default function Nav() {
                 <NavLink to="/omega" className="LinkStyle">
                   Omega 3.0
                 </NavLink>
+                <div id="NewDiv">
+                  <div className="ArrowDiv">
+                    <div className="NavArrow"></div>
+                  </div>
+                  <p id="NavNewPtag">New!</p>
+                </div>
               </li>
               <li>
                 <NavLink to="/event" className="LinkStyle">
