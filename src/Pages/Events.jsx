@@ -14,7 +14,7 @@ export default function Events() {
   return (
     <div className="mEventsDiv">
       <div>
-        <Header head="Upcomming Events" />
+        <Header head="Upcoming Events" />
         <Card />
       </div>
 
