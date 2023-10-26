@@ -16,28 +16,17 @@ import axios from "axios";
 import AuthContext from "../../../../store/auth-context";
 
 // css
-import "./Css/MyEvent.module.css";
+import MECss from "./Css/MyEvent.module.css";
 
 export default function MyEvents() {
   const [card, setCard] = useState([]);
   const [show, setShow] = useState(false);
   const [cardNo, setCardNo] = useState("");
   const [currTeam, setCurrTeam] = useState([]);
-  const [mainLoading, setMainLoading] = useState(true);
+  const [mainLoading, setMainLoading] = useState(false);
   const [teamLoading, setTeamLoading] = useState(true);
 
   const authCtx = useContext(AuthContext);
-
-  const getuserformdetails = async () => {
-    var result = await axios.get("/form/getuserformdetails", {
-      headers: {
-        Authorization: authCtx.token,
-      },
-    });
-
-    setMainLoading(false);
-    setCard(result.data);
-  };
 
   const getTeamDetails = async (info) => {
     setTeamLoading(true);
@@ -55,11 +44,28 @@ export default function MyEvents() {
     getuserformdetails();
   }, []);
 
+  const getuserformdetails = async () => {
+    try {
+      var result = await axios.get("/form/getuserformdetails", {
+        headers: {
+          Authorization: authCtx.token,
+        },
+      });
+
+      console.log(result);
+    } catch (e) {
+      console.log(e);
+    }
+
+    setMainLoading(false);
+    setCard(result.data);
+  };
+
   return (
-    <div className="viewEventss">
-      <div className="viewevents">
+    <div className={MECss.viewEventss}>
+      <div className={MECss.viewevents}>
         {mainLoading ? (
-          <div>
+          <div className={MECss.loadCenter}>
             <Load />
           </div>
         ) : (
@@ -78,7 +84,7 @@ export default function MyEvents() {
         })}
       </div>
       {show ? (
-        <div className="modal">
+        <div className={MECss.modal}>
           {teamLoading ? <Load /> : <></>}
           <img
             src={cancel}
@@ -86,21 +92,21 @@ export default function MyEvents() {
             onClick={() => setShow(false)}
             id="CloseIcon"
           />
-          <table className="table">
-            <th className="th" colSpan={2} style={{ fontSize: "1.5rem" }}>
+          <table className={MECss.table}>
+            <th className={MECss.th} colSpan={2} style={{ fontSize: "1.5rem" }}>
               Team Details
             </th>
-            <tr className="tr">
-              <th className="th">Member</th>
-              <th className="th">Actions</th>
+            <tr className={MECss.tr}>
+              <th className={MECss.th}>Member</th>
+              <th className={MECss.th}>Actions</th>
             </tr>
             {currTeam.map((member) => {
               return (
-                <tr className="tr">
-                  <td className="td">{member.name}</td>
-                  <td className="td">
+                <tr className={MECss.tr}>
+                  <td className={MECss.td}>{member.name}</td>
+                  <td className={MECss.td}>
                     <a href={`${member.token}`} target="_blank">
-                      <button className="deleteMemberBtn">Remove</button>
+                      <button className={MECss.deleteMemberBtn}>Remove</button>
                     </a>
                   </td>
                 </tr>
