@@ -55,8 +55,8 @@ export default function MyEvents() {
   }, []);
 
   return (
-    <div className="viewEventss">
-      <div className="viewevents">
+    <div className={MeCss.viewEventss}>
+      <div className={MeCss.viewevents}>
         {mainLoading ? <Load /> : <></>}
         {card.map((e, idx) => {
           return (
@@ -71,7 +71,7 @@ export default function MyEvents() {
         })}
       </div>
       {show ? (
-        <div className="modal">
+        <div className={MeCss.modal}>
           {teamLoading ? <Load /> : <></>}
           <img
             src={cancel}
@@ -79,21 +79,21 @@ export default function MyEvents() {
             onClick={() => setShow(false)}
             id="CloseIcon"
           />
-          <table className="table">
-            <th className="th" colSpan={2} style={{ fontSize: "1.5rem" }}>
+          <table className={MeCss.table}>
+            <th className={MeCss.th} colSpan={2} style={{ fontSize: "1.5rem" }}>
               Team Details
             </th>
-            <tr className="tr">
-              <th className="th">Member</th>
-              <th className="th">Actions</th>
+            <tr className={MeCss.tr}>
+              <th className={MeCss.th}>Member</th>
+              <th className={MeCss.th}>Actions</th>
             </tr>
             {currTeam.map((member) => {
               return (
-                <tr className="tr">
-                  <td className="td">{member.name}</td>
-                  <td className="td">
+                <tr className={MeCss.tr}>
+                  <td className={MeCss.td}>{member.name}</td>
+                  <td className={MeCss.td}>
                     <a href={`${member.token}`} target="_blank">
-                      <button className="deleteMemberBtn">Remove</button>
+                      <button className={MeCss.deleteMemberBtn}>Remove</button>
                     </a>
                   </td>
                 </tr>
