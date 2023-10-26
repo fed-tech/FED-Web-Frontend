@@ -14,7 +14,7 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
   };
 
   return (
-    <div className={MECs.eventcards}>
+    <div className={MECs.eventCards}>
       <div className={MECs.eventImg}>
         <img src={info.img} alt="" className={MECs.imgTag} />
       </div>
