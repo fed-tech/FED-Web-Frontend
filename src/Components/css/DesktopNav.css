@@ -10,8 +10,8 @@
   background-color: #0f0e0e;
   box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
   z-index: 3;
-  background-color: #0F0E0E;
-  left:0;
+  background-color: #0f0e0e;
+  left: 0;
 }
 
 .navmDiv {
@@ -22,6 +22,53 @@
   margin: 20px 40px;
 }
 
+#NewDiv {
+  position: relative;
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.ArrowDiv {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NavArrow {
+  width: 8px;
+  height: 8px;
+  border-style: solid;
+  border-width: 2.99227px 2.99227px 0px 0px;
+  transform: rotate(-45deg);
+}
+
+#NavNewPtag {
+  margin-top: 20px;
+  color: #f45725;
+  width: 100%;
+  text-align: center;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 8px, 0);
+  }
+}
+
 .LogoFED {
   font-family: "Rubik", sans-serif;
   font-weight: 700;
@@ -29,7 +76,6 @@
   font-size: 30px;
   line-height: 36px;
   text-shadow: 1px 0px 0.496831px #f45725;
- 
 }
 
 .LogoDiv {
@@ -81,7 +127,7 @@
   border-radius: 50%;
   margin-top: -6px;
 }
-@media  (max-width: 1024px) {
+@media (max-width: 1024px) {
   .listDiv {
     width: 120%;
   }
@@ -94,12 +140,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    /* padding-inline-start: 200px; */
   }
 }
 
 @media only screen and (max-width: 800px) {
-  #NavUl li {
+  #NavUl li,
+  #NavNewPtag {
     font-size: 14px;
   }
 }
