@@ -19,8 +19,8 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
         <img src={info.img} alt="" className={MECs.imgTag} />
       </div>
 
-      <div className={MECs.event_content}>
-        <h2>{info.title}</h2>
+      <div className={MECs.eventContent}>
+        <p className={MECs.titlePtag}>{info.title}</p>
         <div className={MECs.date_and_month}>
           <p className={MECs.date}>
             {new Date(info.date).getDate()}{" "}
