@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 // css
-import "./MyEventCards.css";
+import "./Css/MyEventCards.module.css";
+
 import axios from "axios";
 import { Button } from "@mui/material";
 import { getOrdinal } from "../../../../MicroInterAction/ordinal";
