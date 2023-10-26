@@ -16,10 +16,10 @@
 }
 
 .image img {
-  width: 500px;
+  width: 30%;
+  min-width: 300px;
   padding-top: 125px;
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin: 30px 0px 20px -30px;
 }
 
 .button {
@@ -65,7 +65,15 @@
 
 @media screen and (max-width: 500px) {
   .main {
-    width: 200%;
+    width: 100%;
     background-size: cover;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .image img {
+    padding-top: 30px;
+    min-width: 210px;
+    margin: 30px 0px 20px -50px;
   }
 }
