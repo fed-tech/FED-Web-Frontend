@@ -21,17 +21,13 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
 
       <div className={MECs.eventContent}>
         <p className={MECs.titlePtag}>{info.title}</p>
-        <div className={MECs.date_and_month}>
-          <p className={MECs.date}>
-            {new Date(info.date).getDate()}{" "}
-            <span className={MECs.superscript}>
-              {getOrdinal(new Date(info.date).getDate())}
-            </span>
-          </p>
-          <p>
-            {new Date(info.date).toLocaleString("default", { month: "long" })}
-          </p>
-        </div>
+        <p className={MECs.date}>
+          {new Date(info.date).getDate()}{" "}
+          <span className={MECs.superscript}>
+            {getOrdinal(new Date(info.date).getDate())}
+          </span>{" "}
+          {new Date(info.date).toLocaleString("default", { month: "long" })}
+        </p>
       </div>
 
       {info.isTeam ? (
