@@ -242,14 +242,14 @@ export default function RegForm({ showPopUp, setShowPopUp, setError,formid, form
     }
 
     const handleSubmit = async (e) => {
-        if((formData.isTeam && (!isVerified || submission.teamleader == "" || submission.teamname == "")) || (isPaid && submission.txnid == "")){
+        if((formData.isTeam && (!isVerified || submission.teamleader == "" || submission.teamname == "")) || (formData.amount != 0 && submission.txnid.length == 0)){
           console.log(submission)
           return setError({
             mainColor: "#FFC0CB",
             secondaryColor: "#FF69B4",
             symbol: "pets",
             title: "Error",
-            text: "Please verify the team details",
+            text: "Please verify the details",
             val: true,
           });
         }
