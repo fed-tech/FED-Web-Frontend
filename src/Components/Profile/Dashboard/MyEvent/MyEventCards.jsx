@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 
+// MicroInterAction
+import { getOrdinal } from "../../../../MicroInterAction/ordinal";
+
 // css
 import "./Css/MyEventCards.module.css";
-
-import axios from "axios";
-import { Button } from "@mui/material";
-import { getOrdinal } from "../../../../MicroInterAction/ordinal";
 
 function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
   const handleShow = () => {
