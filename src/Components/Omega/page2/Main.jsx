@@ -126,7 +126,7 @@ export default function Main() {
     if(event.name == "Pitchers"){
       alreadyRegistered = isRegistered.includes(pitchersformid)
       formelement = pitchersform
-      formid = pitchersform
+      formid = pitchersformid
     }
     if(event.name == "Fed Premier League"){
       alreadyRegistered = isRegistered.includes(fplformid)
