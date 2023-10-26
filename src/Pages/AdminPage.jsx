@@ -137,7 +137,7 @@ function Page() {
                     className={pageCss.dashboardBottom_icons}
                     id="Registrations"
                   />
-                  <p id="Registrations">Registrations</p>
+                  <p id="Registrations">Events</p>
                 </div>
               ) : (
                 <></>
