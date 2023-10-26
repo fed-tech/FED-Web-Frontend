@@ -1,92 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap");
-
 .fullPage {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .details {
-    width: 100%;
-    max-height: 800px;
-    overflow-y: auto;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 25px;
+  width: 100%;
+  max-height: 800px;
+  overflow-y: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 25px;
 }
 
-.details::-webkit-scrollbar{
-  width: .3rem;
-  height: .2rem;
+.details::-webkit-scrollbar {
+  width: 0.3rem;
+  height: 0.2rem;
 }
 
 .gradient {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    display: fl;
-    bottom: -100px;
-    height: 300px;
-    width: 100%;
-    background: linear-gradient(0deg, #0E0E0E 49.48%, rgba(14, 14, 14, 0.00) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  display: fl;
+  bottom: -100px;
+  height: 300px;
+  width: 100%;
+  background: linear-gradient(0deg, #0e0e0e 49.48%, rgba(14, 14, 14, 0) 100%);
 }
-.btns button{
-    cursor: pointer;
+.btns button {
+  cursor: pointer;
 }
 
 .eventDesc,
 .eventName,
 .moreDetails,
-.forms, .btns {
-    width: 100%;
+.forms,
+.btns {
+  width: 100%;
 }
 
 .eventName {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .eventName img {
-    width: 204.861px;
-    margin-right: 43.14px;
+  width: 204.861px;
+  margin-right: 43.14px;
 }
 
 .eventName h1 {
-    color: #D9D9D9;
-    font-size: 50px;
-    font-family: Mulish;
-    font-weight: 600;
+  color: #d9d9d9;
+  font-size: 50px;
+  font-family: Mulish;
+  font-weight: 600;
 }
 
 .eventDesc {
-    border-radius: 10px;
-    border: 1px solid #808080;
-    padding: 17px;
-    color: #FFF;
-    font-size: 24px;
-    font-family: Mulish;
-    font-weight: 600;
-    line-height: 161%;
-    margin-bottom: 40px;
+  border-radius: 10px;
+  border: 1px solid #808080;
+  padding: 17px;
+  color: #fff;
+  font-size: 24px;
+  font-family: Mulish;
+  font-weight: 600;
+  line-height: 161%;
+  margin-bottom: 40px;
 }
 
 .moreDetails {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .date,
 .regType {
-    color: #D9D9D9;
-    font-size: 30px;
-    font-family: Mulish;
-    font-weight: 600;
+  color: #d9d9d9;
+  font-size: 30px;
+  font-family: Mulish;
+  font-weight: 600;
 }
 
 .forms {
@@ -103,7 +102,7 @@
   border-radius: 10px;
   border: 1px solid #808080;
   padding: 22px 41px;
-  width:100%;
+  width: 100%;
   text-align: center;
   height: auto;
   font-size: 30px;
@@ -113,7 +112,7 @@
   padding-right: 20px;
   cursor: pointer;
   box-sizing: border-box;
-  overflow:scroll;
+  overflow: scroll;
   scrollbar-width: thin;
   -ms-overflow-style: none;
   white-space: nowrap;
@@ -124,42 +123,40 @@
   height: 0;
 }
 
-.form:hover{
-    box-shadow: 0 0 5px #FFF,
-                0 0 10px #FFF;
-    transition: .2s linear;
+.form:hover {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+  transition: 0.2s linear;
 }
 .btns {
-    /* display: flex;
+  /* display: flex;
     align-items: center;
     justify-content: center;
     position:sticky;
     bottom: 52px;
     z-index: +1; */
 }
-.edit, .delete {
-    color: #FFF;
-    font-size: 24.891px;
-    font-family: Mulish;
-    font-weight: 600;
-    padding: 7px 20px;
-    border-radius: 6px;
-    background: #F45725;
-    border: none;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    float: right;
-    font-size: 18px;
-    height: 50px;
-    width: 120px;
-    min-width: 120px;
+.edit,
+.delete {
+  color: #fff;
+  font-size: 24.891px;
+  font-family: Mulish;
+  font-weight: 600;
+  padding: 7px 20px;
+  border-radius: 6px;
+  background: #f45725;
+  border: none;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  float: right;
+  font-size: 18px;
+  height: 50px;
+  width: 120px;
+  min-width: 120px;
 }
 .edit {
-    margin-right: 5px;
-    margin-left: 15px;
+  margin-right: 5px;
+  margin-left: 15px;
 }
-
-
 
 /* Modal */
 .modal {
@@ -167,7 +164,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #0E0E0E;
+  background-color: #0e0e0e;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px;
@@ -175,7 +172,7 @@
   z-index: 1000;
   max-width: 80%;
   width: 400px;
-  box-shadow: 0 6px 6px 0 black,0 6px 10px 0 white;
+  box-shadow: 0 6px 6px 0 black, 0 6px 10px 0 white;
   /* backdrop-filter: blur(5px); */
 }
 
@@ -208,32 +205,31 @@
 .modal div {
   margin: 8px;
 }
-.modal div label{
+.modal div label {
   width: auto;
 }
-.modal div span{
+.modal div span {
   font-weight: bold;
 }
-.modal div div{
+.modal div div {
   display: flex;
-  justify-content:start;
+  justify-content: start;
 }
 
-.modbtns{
+.modbtns {
   margin-left: 20px;
   height: 50px;
   min-width: 120px;
   position: relative;
   display: flex;
   flex-direction: row;
-  align-items:center;
+  align-items: center;
 }
 
 .modal button {
-
   margin: 5px;
   font-size: 16px;
-  background-color: #F45725;
+  background-color: #f45725;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -243,18 +239,14 @@
   min-width: 120px;
 }
 
-
 .close {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 35px;
-    color: #F45725;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 35px;
+  color: #f45725;
 }
-  
-
-
 
 /* Toggle switch */
 .modbtns .switch {
@@ -298,7 +290,7 @@
 }
 
 .modbtns .switch input:checked + .slider {
-  background-color: #F45725;
+  background-color: #f45725;
 }
 
 .modbtns .switch input:checked + .slider:before {
@@ -307,16 +299,13 @@
   transform: translateX(26px);
 }
 
-
-
-
 /* Alert box */
 .alert {
   position: fixed;
   bottom: 20px;
   right: 20px;
   font-weight: 800;
-  background-color: #F45725;
+  background-color: #f45725;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -344,16 +333,15 @@
 }
 
 @media (max-width: 768px) {
-
   .fullPage {
-      margin-left: -30px;
+    margin-left: -30px;
   }
   .details {
-      padding-right: 10px;
+    padding-right: 10px;
   }
 
   .btns button {
-      cursor: pointer;
+    cursor: pointer;
   }
 
   .eventDesc,
@@ -361,67 +349,67 @@
   .moreDetails,
   .forms,
   .btns {
-      width: 100%;
+    width: 100%;
   }
 
   .eventName {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .eventName img {
-      width: 100%;
-      margin-bottom: 15px;
-      margin-left: 0px;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 0px;
   }
 
   .eventName h1 {
-      font-size: 30px;
+    font-size: 30px;
   }
   .eventDesc {
-      border-radius: 10px;
-      border: 1px solid #808080;
-      padding: 10px;
-      font-size: 18px;
-      line-height: 140%;
-      margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #808080;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 20px;
   }
 
   .moreDetails {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
   }
 
   .date,
   .regType {
-      font-size: 18px;
-      padding: 5px;
+    font-size: 18px;
+    padding: 5px;
   }
 
   .forms {
-      display: flex;
-      flex-direction: column;
-      align-items: center; 
-      text-align: center;
-      max-width: 100%;
-      padding: 10px;
-      margin-top: 30px;
-      margin-bottom: 40px;
-      font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 9px;
   }
 
   .form {
-      width: 100%;
-      text-align: center;
-      font-size: 20px; 
-      padding: 10px;
-      white-space: normal;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    white-space: normal;
   }
 
-  .btns{
+  .btns {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -430,20 +418,18 @@
   }
   .edit,
   .delete {
-      margin-top: 0px;
-      margin-bottom: 10px;
-      padding:10px;
-      font-size: 18px;
-      height: 50px;
-      width: 80px;
-      min-width: 80px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 18px;
+    height: 50px;
+    width: 80px;
+    min-width: 80px;
   }
 }
 
-
 /* Modal Responsive*/
 @media (max-width: 768px) {
-  
   .modal {
     max-width: 90%;
     width: auto;
@@ -467,26 +453,24 @@
     min-width: 80px;
   }
 
-  .modbtns{
+  .modbtns {
     margin-left: 20px;
     height: 50px;
     min-width: 130px;
     position: relative;
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
   }
-  
 
   .modal div {
     margin: 4px;
     margin-bottom: 15px;
   }
 
-  .switch{
+  .switch {
     margin-right: 0px;
     left: 0px;
-
   }
 
   .close {

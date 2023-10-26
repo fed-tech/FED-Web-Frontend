@@ -1,70 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 .main {
-    background-image: url("../../../assets/Omega/background.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: auto;
+  background-image: url("../../../assets/Omega/background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
 }
 
 .image {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-.registerBtn{
-    padding-left: 90px;
+.registerBtn {
+  padding-left: 90px;
 }
 .image img {
-    width: 500px;
-    padding-top: 125px;
-    margin-top: 30px;
-    margin-bottom: 20px;
+  width: 500px;
+  padding-top: 125px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    margin-top: -20px;
-    margin-left: -100px;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+  margin-left: -100px;
+  cursor: pointer;
 }
 
 .buttonText,
 .buttonImage {
-    background-color: white;
+  background-color: white;
 }
 
 .buttonText {
-    color: #BB1F00;
-    font-weight: bolder;
-    font-family: "Poppins";
-    padding: 10px 20px 10px 40px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    font-size: x-large;
-    display: flex;
-    align-items: center;
+  color: #bb1f00;
+  font-weight: bolder;
+  font-family: "Poppins";
+  padding: 10px 20px 10px 40px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-size: x-large;
+  display: flex;
+  align-items: center;
 }
 
 .buttonImage {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .buttonImage img {
-    height: 60px;
+  height: 60px;
 }
 
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 60px;
 }
 
-@media screen and (max-width:500px) {
-    .main {
-        width: 200%;
-        background-size: cover;
-    }
+@media screen and (max-width: 500px) {
+  .main {
+    width: 200%;
+    background-size: cover;
+  }
 }

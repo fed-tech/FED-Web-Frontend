@@ -1,6 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
-
 .bg {
   background-image: url("../../Img/image-23.png");
   height: 90vh;
@@ -17,13 +14,12 @@
 }
 
 .bg:hover > .cycle_image {
-  transform: translateX(45%) ;
+  transform: translateX(45%);
 }
 
 .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
   transform: translateX(-20%);
 }
-
 
 .ErrorPageOverlayDiv {
   display: flex;
@@ -84,7 +80,6 @@
   transition: all 0.3s;
   z-index: -1;
 }
-
 
 @media only screen and (max-width: 1030px) {
   .bg {
@@ -151,11 +146,11 @@
   .bg:hover > .cycle_image {
     transform: translate(20%, 23%);
   }
-  
+
   .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
     transform: translateY(-30%);
   }
- 
+
   .OverlayDivCenter {
     width: 80%;
   }
@@ -175,11 +170,11 @@
   .bg:hover > .cycle_image {
     transform: rotate(90deg) translate(70%, 0%);
   }
-  
+
   .bg:hover > .ErrorPageOverlayDiv .OverlayDivCenter {
     transform: translateY(-45%);
   }
- 
+
   .OverlayDivCenter {
     width: 80%;
   }

@@ -1,36 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 .main {
-    background-image: url("../../../assets/Omega/background.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: auto;
-    padding:100px 53px ;
-    font-family: 'Poppins';
+  background-image: url("../../../assets/Omega/background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: auto;
+  padding: 100px 53px;
+  font-family: "Poppins";
 }
 .events {
-    color: black;
-    font-family: Montserrat;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    letter-spacing: 2.46px;
-    padding: 0px 11px ;
-    padding-top: 150px;
+  color: black;
+  font-family: Montserrat;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  letter-spacing: 2.46px;
+  padding: 0px 11px;
+  padding-top: 150px;
 }
 
 .regCards {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
 }
 
-@media screen and (max-width:500px) {
-    .main {
-        width: 200%;
-        background-size: cover;
-    }
+@media screen and (max-width: 500px) {
+  .main {
+    width: 200%;
+    background-size: cover;
+  }
 }
