@@ -51,6 +51,7 @@ function Page() {
     console.log(pageName);
     setCurrPage(pageName);
   };
+
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
