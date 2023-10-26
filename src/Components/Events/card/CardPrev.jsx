@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import RegForm from "./regForm";
 
 // css
-import "../css/eventCard.css";
+import "../../css/Events/eventCard.css";
 
 // data
 import { eventcard } from "../../../../Data/eventcard.js";
