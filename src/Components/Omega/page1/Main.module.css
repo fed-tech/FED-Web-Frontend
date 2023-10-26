@@ -8,10 +8,13 @@
 .image {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
+
 .registerBtn {
   padding-left: 90px;
 }
+
 .image img {
   width: 500px;
   padding-top: 125px;
