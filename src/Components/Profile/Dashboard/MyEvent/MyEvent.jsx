@@ -26,6 +26,7 @@ export default function MyEvents() {
   const [mainLoading, setMainLoading] = useState(true);
   const [currTeam, setCurrTeam] = useState([]);
   const [teamLoading, setTeamLoading] = useState(true);
+
   const getuserformdetails = async () => {
     var result = await axios.get("/form/getuserformdetails", {
       headers: {
@@ -36,6 +37,7 @@ export default function MyEvents() {
     setCard(result.data);
     console.log(result.data);
   };
+
   const getTeamDetails = async (info) => {
     setTeamLoading(true);
     setCurrTeam([]);
@@ -51,9 +53,7 @@ export default function MyEvents() {
   useEffect(() => {
     getuserformdetails();
   }, []);
-  currTeam.map((e) => {
-    console.log(e);
-  });
+
   return (
     <div className="viewEventss">
       <div className="viewevents">
