@@ -52,7 +52,7 @@ export default function NavMobile(props) {
           {authCtx.isLoggedIn && (
             <NavLink
               to="/MyProfile"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               <img
@@ -68,19 +68,19 @@ export default function NavMobile(props) {
 
         <div class="mobileNavListChild">
           <div class="mobileList" onClick={() => setCount(false)}>
-            <NavLink to="/omega" className="liTag">
+            <NavLink to="/omega" className="liTag LinkStyle">
               Omega 3.0
             </NavLink>
           </div>
           <div class="mobileList" onClick={() => setCount(false)}>
-            <NavLink to="/event" className="liTag">
+            <NavLink to="/event" className="liTag LinkStyle">
               Events
             </NavLink>
           </div>
           <div class="mobileList">
             <NavLink
               to="/Podcasts"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               Podcasts
@@ -89,7 +89,7 @@ export default function NavMobile(props) {
           <div class="mobileList">
             <NavLink
               to="/Team"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               Our Team
@@ -100,7 +100,7 @@ export default function NavMobile(props) {
             <NavLink
               // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
-              className="liTag"
+              className="liTag LinkStyle"
               // onClick={handleLogout}//
               onClick={() => setCount(false)}
             >
@@ -114,7 +114,7 @@ export default function NavMobile(props) {
           <div class="mobileList">
             <NavLink
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => {
                 if (authCtx.isLoggedIn) {
                   authCtx.logout(); // assuming you have a logout method in your auth context
@@ -131,7 +131,7 @@ export default function NavMobile(props) {
           {/* <div class="mobileList">
             <NavLink
               to="/Alumni"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               Alumni
@@ -141,7 +141,7 @@ export default function NavMobile(props) {
           {/* <div className="mobileList">
             <NavLink
               to="/Alumni"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               Alumni
@@ -151,7 +151,7 @@ export default function NavMobile(props) {
           {/* <div class="mobileList">
             <HashLink
               to="/#ContactUs"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               Contact Us
@@ -161,7 +161,7 @@ export default function NavMobile(props) {
             {/* <NavLink
               // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
               to={authCtx.isLoggedIn ? "/MyProfile/member" : "Register"}
-              className="liTag"
+              className="liTag LinkStyle"
             >
               {authCtx.isLoggedIn ? (
                 <img
@@ -178,7 +178,7 @@ export default function NavMobile(props) {
           <div class="mobileList">
             {/* <NavLink
               to="/Alumni"
-              className="liTag"
+              className="liTag LinkStyle"
               onClick={() => setCount(false)}
             >
               Alumni
