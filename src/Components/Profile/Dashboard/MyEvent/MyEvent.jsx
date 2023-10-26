@@ -19,13 +19,14 @@ import MeCss from "./Css/MyEvent.module.css";
 import cancel from "../../../../assets/SkillHunt/XCircle.png";
 
 export default function MyEvents() {
-  const authCtx = useContext(AuthContext);
   const [card, setCard] = useState([]);
   const [show, setShow] = useState(false);
   const [cardNo, setCardNo] = useState("");
-  const [mainLoading, setMainLoading] = useState(true);
   const [currTeam, setCurrTeam] = useState([]);
+  const [mainLoading, setMainLoading] = useState(true);
   const [teamLoading, setTeamLoading] = useState(true);
+
+  const authCtx = useContext(AuthContext);
 
   const getuserformdetails = async () => {
     var result = await axios.get("/form/getuserformdetails", {
