@@ -20,7 +20,10 @@ export default function Card() {
             <div className={ECss.carddetails}>
               <div className={ECss.left}>
                 <div className={ECss.datemonth}>
-                  <p className={ECss.date}>{data.date}</p>
+                  <p className={ECss.date}>
+                    {data.date}{" "}
+                    <span className={ECss.superscript}>{data.superscript}</span>
+                  </p>
                   <p className={ECss.month}>{data.month}</p>
                 </div>
                 <img className={ECss.image} src={data.img} />
