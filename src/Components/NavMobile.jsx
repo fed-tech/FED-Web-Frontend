@@ -37,6 +37,7 @@ export default function NavMobile(props) {
               </div>
             )}
           </div>
+
           <Link to="/" className="LinkStyle" onClick={() => setCount(false)}>
             <div className="LogoDiv">
               <img src="https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png"></img>
@@ -44,11 +45,13 @@ export default function NavMobile(props) {
               <p>{import.meta.env.VITE_BETA === "true" ? <>Test</> : <></>}</p>
             </div>
           </Link>
+
           <div id="Navdarkright"></div>
         </div>
       </nav>
+
       <div className="mobileNavClass" id={count ? "mobileNavList" : "blank"}>
-        <div class="mobileListProfile">
+        <div className="mobileListProfile">
           {authCtx.isLoggedIn && (
             <NavLink
               to="/MyProfile"
@@ -66,18 +69,22 @@ export default function NavMobile(props) {
           )}
         </div>
 
-        <div class="mobileNavListChild">
-          <div class="mobileList" onClick={() => setCount(false)}>
+        <div className="mobileNavListChild">
+          <div className="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/omega" className="liTag LinkStyle">
               Omega 3.0
             </NavLink>
+            <div className="NavNewMobo" id="newEvent">
+              <div className="NavMoboArrow"></div>
+              <p className="NavNew">New</p>
+            </div>
           </div>
-          <div class="mobileList" onClick={() => setCount(false)}>
+          <div className="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/event" className="liTag LinkStyle">
               Events
             </NavLink>
           </div>
-          <div class="mobileList">
+          <div className="mobileList">
             <NavLink
               to="/Podcasts"
               className="liTag LinkStyle"
@@ -86,7 +93,7 @@ export default function NavMobile(props) {
               Podcasts
             </NavLink>
           </div>
-          <div class="mobileList">
+          <div className="mobileList">
             <NavLink
               to="/Team"
               className="liTag LinkStyle"
@@ -96,7 +103,7 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
 
-          {/* <div class="mobileList">
+          {/* <div className="mobileList">
             <NavLink
               // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
@@ -111,7 +118,7 @@ export default function NavMobile(props) {
               )}
             </NavLink>
           </div> */}
-          <div class="mobileList">
+          <div className="mobileList">
             <NavLink
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
               className="liTag LinkStyle"
@@ -128,7 +135,7 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
 
-          {/* <div class="mobileList">
+          {/* <div className="mobileList">
             <NavLink
               to="/Alumni"
               className="liTag LinkStyle"
@@ -148,7 +155,7 @@ export default function NavMobile(props) {
             </NavLink>
           </div> */}
 
-          {/* <div class="mobileList">
+          {/* <div className="mobileList">
             <HashLink
               to="/#ContactUs"
               className="liTag LinkStyle"
@@ -157,7 +164,7 @@ export default function NavMobile(props) {
               Contact Us
             </HashLink>
           </div> */}
-          <div class="mobileList">
+          <div className="mobileList">
             {/* <NavLink
               // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
               to={authCtx.isLoggedIn ? "/MyProfile/member" : "Register"}
@@ -175,7 +182,7 @@ export default function NavMobile(props) {
               )}
             </NavLink> */}
           </div>
-          <div class="mobileList">
+          <div className="mobileList">
             {/* <NavLink
               to="/Alumni"
               className="liTag LinkStyle"

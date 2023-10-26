@@ -95,6 +95,43 @@
     line-height: 28.44px;
   }
 
+  .NavNewMobo {
+    margin: 7px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .NavMoboArrow {
+    width: 7px;
+    height: 7px;
+    border-style: solid;
+    border-width: 1.99227px 1.99227px 0px 0px;
+    transform: rotate(-135deg);
+  }
+
+  .NavNew {
+    color: #f45725;
+    margin-top: -7px;
+    margin-left: 5px;
+  }
+
+  #newEvent {
+    animation: bounceMobo 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounceMobo {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+
+    to {
+      transform: translate3d(8px, 0, 0);
+    }
+  }
+
   .mobileNavClass {
     background-color: #0f0e0e;
     font-family: "Manrope", sans-serif;
