@@ -23,9 +23,7 @@ export default function Footer() {
               <h4>Community</h4>
 
               {/* ContactUs */}
-              <Link to="/Alumni" className="footerleftlink">
-                Alumni
-              </Link>
+
               <HashLink to="/#ContactUs" className="footerleftlink">
                 Contact
               </HashLink>

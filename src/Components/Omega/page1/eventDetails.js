@@ -2,9 +2,9 @@ export const eventDetails = [
   {
     name: "Sitcom saga",
     image:
-      "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/652e9e0e55c2b0e85580d148_Rectangle%201033%20(1).png",
+      "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/653a282d084dbed7d7a011dc_img1.jpg",
     logo: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/652e9e0bbefbcffd62c2ce81_Group%202663.png",
-    date: "4th",
+    date: "5th",
     month: "November",
     description: `An exciting event where you’ll be challenged by your favourite sitcoms and strategic cases related to them. Get ready to showcase your sitcom expertise and compete for the ultimate glory.`,
   },
@@ -13,7 +13,7 @@ export const eventDetails = [
     image:
       "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/652e9e0becd4c40f05732593_Rectangle%201034.png",
     logo: "https://uploads-ssl.webflow.com/63a4333d6709521275441c77/652e9dffc53a61a02d84a01b_Group%202688%20(1).png",
-    date: "5th",
+    date: "4th",
     month: "November",
     description: `Get ready for a captivating deck of creative proposals. A team or a shark may register, and there will be two different registration options available. We will name the top two teams and sharks after two fierce rounds of competition.`,
   },
