@@ -1,19 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { Alert } from "../../../MicroInterAction/Alert";
 
-import OMCss from "./Main.module.css";
+// Components
 import EventCard from "./cards/EventCard";
+import RegForm from "../../Events/card/regForm";
+
+// MicroInterAction
+import { Alert } from "../../../MicroInterAction/Alert";
+import { getOrdinal } from "../../../MicroInterAction/ordinal";
+
+// axios
+import axios from "axios";
+
+// css
+import OMCss from "./Main.module.css";
 import AuthContext from "../../../store/auth-context";
 
-import omegaRetro from "../../../assets/Omega/omegaRetro.webp";
+// img
 import click from "../../../assets/Omega/Maskgroup.svg";
+import omegaRetro from "../../../assets/Omega/omegaRetro.webp";
 
+// data
 import { eventDetails } from "./eventDetails";
-import { getOrdinal } from "../../../MicroInterAction/ordinal";
-import RegForm from "../../Events/card/regForm";
-import axios from "axios";
+
 export default function Main(props) {
   const omegaformid = "653969a83bfd20c9bfb1078b";
   // scroll to top
@@ -24,11 +33,11 @@ export default function Main(props) {
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
   const [eventcard, setEvent] = useState([]);
-  const [isRegistered, setIsRegistered] = useState(false);
-  const [showPopUp, setShowPopUp] = useState(false);
   const [currentform, setCurentForm] = useState("");
-  const [currentformelement, setCurentFormElement] = useState([]);
+  const [showPopUp, setShowPopUp] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false);
   const [formLoading, setFormLoading] = useState(false);
+  const [currentformelement, setCurentFormElement] = useState([]);
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
