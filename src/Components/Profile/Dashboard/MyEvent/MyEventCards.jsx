@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { getOrdinal } from "../../../../MicroInterAction/ordinal";
 
 // css
-import "./Css/MyEventCards.module.css";
+import MECs from "./Css/MyEventCards.module.css";
 
 function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
   const handleShow = () => {
@@ -14,16 +14,16 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
   };
 
   return (
-    <div className="eventcards">
-      <div className="event_img">
-        <img src={info.img} alt="" />
+    <div className={MECs.eventcards}>
+      <div className={MECs.eventImg}>
+        <img src={info.img} alt="" className={MECs.imgTag} />
       </div>
-      <div className="event_content">
+      <div className={MECs.event_content}>
         <h2>{info.title}</h2>
-        <div className="date_and_month">
-          <p className="date">
+        <div className={MECs.date_and_month}>
+          <p className={MECs.date}>
             {new Date(info.date).getDate()}{" "}
-            <span className="superscript">
+            <span className={MECs.superscript}>
               {getOrdinal(new Date(info.date).getDate())}
             </span>
           </p>
@@ -33,7 +33,7 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
         </div>
       </div>
       {info.isTeam ? (
-        <button className="showDetailsBtn" onClick={handleShow}>
+        <button className={MECs.showDetailsBtn} onClick={handleShow}>
           Show Team Details
         </button>
       ) : (
