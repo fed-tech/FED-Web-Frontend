@@ -1,7 +1,7 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { Alert } from '../../../MicroInterAction/Alert';
+import { Alert } from "../../../MicroInterAction/Alert";
 
 import OMCss from "./Main.module.css";
 import EventCard from "./cards/EventCard";
@@ -15,7 +15,7 @@ import { getOrdinal } from "../../../MicroInterAction/ordinal";
 import RegForm from "../../Events/card/regForm";
 import axios from "axios";
 export default function Main(props) {
-  const omegaformid = "653969a83bfd20c9bfb1078b"
+  const omegaformid = "653969a83bfd20c9bfb1078b";
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,12 +23,12 @@ export default function Main(props) {
 
   const authCtx = useContext(AuthContext);
   const redirect = useNavigate();
-  const [eventcard,setEvent] = useState([])
-  const [isRegistered,setIsRegistered] = useState(false)
+  const [eventcard, setEvent] = useState([]);
+  const [isRegistered, setIsRegistered] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
-  const [currentform,setCurentForm] = useState("")
-  const [currentformelement,setCurentFormElement] = useState([])
-  const [formLoading,setFormLoading] = useState(false)
+  const [currentform, setCurentForm] = useState("");
+  const [currentformelement, setCurentFormElement] = useState([]);
+  const [formLoading, setFormLoading] = useState(false);
   const [variants, setError] = useState({
     mainColor: "",
     secondaryColor: "",
@@ -36,8 +36,8 @@ export default function Main(props) {
     title: "",
     text: "",
     val: false,
-});
-  const getEvents = async () =>{
+  });
+  const getEvents = async () => {
     var result = await axios.get("/form/getactiveform");
     if (result.status == 200) {
       var final = result.data
@@ -64,37 +64,39 @@ export default function Main(props) {
           temp.superscript = getOrdinal(temp.date);
           return temp;
         });
-        final.length != 0 ? setCurentForm(final[0].formid) : null
-        final.length != 0 ? final[0].formelement = final[0].formelement.map((e)=>{
-          var temp = {}
-          temp.name = e.name
-          temp.type = e.type
-          temp.placeholder = "Enter your " + e.name
-          temp.required = true
-          temp.value = e.value
-          return temp
-        }):null
-        final.length != 0 ? setCurentFormElement(final[0]) : null
+      final.length != 0 ? setCurentForm(final[0].formid) : null;
+      final.length != 0
+        ? (final[0].formelement = final[0].formelement.map((e) => {
+            var temp = {};
+            temp.name = e.name;
+            temp.type = e.type;
+            temp.placeholder = "Enter your " + e.name;
+            temp.required = true;
+            temp.value = e.value;
+            return temp;
+          }))
+        : null;
+      final.length != 0 ? setCurentFormElement(final[0]) : null;
       if (authCtx.isLoggedIn) {
         var result = await axios.get("/form/getuserform", {
           headers: { Authorization: authCtx.token },
         });
-        console.log(result.data)
+        console.log(result.data);
         final.forEach((e) => {
           if (result.data.includes(e.formid)) {
             setIsRegistered(true);
           } else {
-            setIsRegistered(false)
+            setIsRegistered(false);
           }
         });
       }
-      console.log(final[0])
+      console.log(final[0]);
       setEvent(final[0]);
-      setFormLoading(false)
+      setFormLoading(false);
     }
-  }
+  };
   const register = async () => {
-    if(formLoading || !eventcard.isLive && !isRegistered){
+    if (formLoading || (!eventcard.isLive && !isRegistered)) {
       return setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -108,21 +110,21 @@ export default function Main(props) {
       authCtx.settarget("omega");
       redirect("/Login");
     } else {
-      isRegistered ? props.setShift(true):setShowPopUp(true);
+      isRegistered ? props.setShift(true) : setShowPopUp(true);
     }
   };
-  useEffect(()=>{
-    getEvents()
-    if(authCtx.isLoggedIn){
-      setFormLoading(true)
+  useEffect(() => {
+    getEvents();
+    if (authCtx.isLoggedIn) {
+      setFormLoading(true);
     }
-  },[])
-  useEffect(()=>{
-    getEvents()
-    if(authCtx.isLoggedIn){
-      setFormLoading(true)
+  }, []);
+  useEffect(() => {
+    getEvents();
+    if (authCtx.isLoggedIn) {
+      setFormLoading(true);
     }
-  },[showPopUp])
+  }, [showPopUp]);
   return (
     <div className={OMCss.main}>
       <div className={OMCss.registerBtn}>
@@ -133,11 +135,11 @@ export default function Main(props) {
           <div className={OMCss.buttonText}>
             {formLoading
               ? "Loading..."
-              :isRegistered
-                ? "ENTER OMEGA"
-                : eventcard.isLive?
-                "REGISTER NOW":
-                "REGISTRATION CLOSED"}
+              : isRegistered
+              ? "ENTER OMEGA"
+              : eventcard.isLive
+              ? "REGISTER NOW"
+              : "REGISTRATION CLOSED"}
           </div>
           <div className={OMCss.buttonImage}>
             <img src={click} alt="" />
