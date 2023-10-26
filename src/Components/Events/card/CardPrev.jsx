@@ -4,30 +4,30 @@ import React, { useState } from "react";
 import RegForm from "./regForm";
 
 // css
-import "../../css/Events/eventCard.css";
+import ECss from "./Css/eventCard.module.css";
 
 // data
-import { eventcard } from "../../../../Data/eventcard.js";
+import { eventcard } from "./../../../Data/eventcard.js";
 
 export default function Card() {
   const [regLive, setRegLive] = useState(true);
   const [showPopUp, setShowPopUp] = useState(false);
   return (
-    <div className="cards">
+    <div className={ECss.cards}>
       {eventcard.map((data) => {
         return (
-          <div className="eventcard">
-            <div className="carddetails">
-              <div className="left">
-                <div className="datemonth">
-                  <p className="date">{data.date}</p>
-                  <p className="month">{data.month}</p>
+          <div className={ECss.eventcard}>
+            <div className={ECss.carddetails}>
+              <div className={ECss.left}>
+                <div className={ECss.datemonth}>
+                  <p className={ECss.date}>{data.date}</p>
+                  <p className={ECss.month}>{data.month}</p>
                 </div>
-                <img className="image" src={data.img} />
+                <img className={ECss.image} src={data.img} />
               </div>
-              <div className="right">
-                <h1 className="title">{data.title}</h1>
-                <div className="eventDetail">
+              <div className={ECss.right}>
+                <h1 className={ECss.title}>{data.title}</h1>
+                <div className={ECss.eventDetail}>
                   {data.dis.d1}
                   <br />
                   <br />
@@ -40,11 +40,11 @@ export default function Card() {
                   {data.dis.d4}
                 </div>
                 {regLive ? (
-                  <a className="regBtn" onClick={() => setShowPopUp(true)}>
+                  <a className={ECss.regBtn} onClick={() => setShowPopUp(true)}>
                     Registration Open
                   </a>
                 ) : (
-                  <a className="regBtn">
+                  <a className={ECss.regBtn}>
                     Registration Closed
                     <svg
                       width="20"
