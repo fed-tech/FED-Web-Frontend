@@ -13,7 +13,9 @@ export default function NavMobile(props) {
   function toggleEvent() {
     setCount(true);
   }
+
   const authCtx = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -96,21 +98,17 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
 
-          {/* <div class="mobileList">
+          <div class="mobileList">
             <NavLink
-              // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
-              to={authCtx.isLoggedIn ? "/Login" : "/Login"}
+              to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+              // to={authCtx.isLoggedIn ? "/Login" : "/Login"}
               className="liTag"
-              // onClick={handleLogout}//
-              onClick={() => setCount(false)}
+              onClick={handleLogout}
+              // onClick={() => setCount(false)}
             >
-              {authCtx.isLoggedIn ? (
-                "Logout"
-              ) : (
-                "Login/SignUp"
-              )}
+              {authCtx.isLoggedIn ? "Logout" : "Login/SignUp"}
             </NavLink>
-          </div> */}
+          </div>
           <div class="mobileList">
             <NavLink
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
