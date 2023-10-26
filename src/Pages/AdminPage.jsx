@@ -46,8 +46,6 @@ function Page() {
 
   const authCtx = useContext(AuthContext);
 
-  console.log(currPage);
-
   const handleSetPage = (e) => {
     const pageName = e.target.id;
     console.log(pageName);
