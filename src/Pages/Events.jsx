@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 
 // Components
 import Card from "../Components/Events/card/Card";
+import CardPrev from "../Components/Events/card/CardPrev";
 import Header from "../Components/Events/header/jsx/Header.jsx";
 
 export default function Events() {
@@ -17,8 +18,13 @@ export default function Events() {
         <SkillHunt />
       </div> */}
       <div>
-        <Header head="Our Events" />
+        <Header head="Upcomming Events" />
         <Card />
+      </div>
+
+      <div>
+        <Header head="Previous Events" />
+        <CardPrev />
       </div>
     </>
   );
