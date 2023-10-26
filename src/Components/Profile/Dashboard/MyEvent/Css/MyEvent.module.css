@@ -21,17 +21,18 @@
   /* display: grid; */
   /* grid-template-columns: repeat(2, 1fr); */
   display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  gap: 20px 30px;
   overflow-y: scroll;
   padding-right: 10px;
   /* margin-left: 10px; */
   /* margin-right: 0px; */
   width: 90%;
-  height: 800px;
-  row-gap: 30px;
-  column-gap: 0px;
+  /* height: 800px; */
+  /* row-gap: 30px; */
+  /* column-gap: 0px; */
   padding-bottom: 120px;
 }
 
