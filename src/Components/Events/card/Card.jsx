@@ -164,7 +164,7 @@ export default function Card() {
                     <br />
                     {data.dis.d4}
                   </div>
-                  {data.isLive ? (
+                  {/* {data.isLive ? (
                     data.isRegistered ? (
                       <a className="regBtn block">
                         Already Registered
@@ -212,7 +212,7 @@ export default function Card() {
                         ></path>
                       </svg>
                     </a>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>
