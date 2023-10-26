@@ -126,3 +126,7 @@ input[type="number"] {
   width: 0;
   pointer-events: none;
 }
+
+.mEventsDiv {
+  margin: 0px 0px 0px 0px;
+}
