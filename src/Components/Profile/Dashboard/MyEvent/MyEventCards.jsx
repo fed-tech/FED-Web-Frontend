@@ -11,7 +11,6 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
     setShow(true);
     setCardNo(info);
     getTeamDetails(info);
-    // console.log(cardNo)
   };
   return (
     <div className="eventcards">
