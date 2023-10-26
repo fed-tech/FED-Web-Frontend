@@ -4,15 +4,6 @@ import { useNavigate } from "react-router-dom";
 // state
 import AuthContext from "../store/auth-context";
 
-// css
-import pageCss from "./Css/Page.module.css";
-
-// icons
-import GroupsIcon from "@mui/icons-material/Groups";
-import LogoutIcon from "@mui/icons-material/Logout";
-import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
-import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
-
 // Components - Dashboard
 import Profile from "../Components/Profile/Dashboard/Profile";
 import EventAdmin from "../Components/Profile/Dashboard/EventAdmin/EventAdmin";
@@ -22,6 +13,15 @@ import MyEvents from "../Components/Profile/Dashboard/MyEvent/MyEvent";
 
 // Components
 import UpdateProfile from "../Components/Profile/UpdateProfile";
+
+// css
+import pageCss from "./Css/Page.module.css";
+
+// icons
+import GroupsIcon from "@mui/icons-material/Groups";
+import LogoutIcon from "@mui/icons-material/Logout";
+import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
+import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 
 function Page() {
   const [designation, setDesignation] = useState("");
