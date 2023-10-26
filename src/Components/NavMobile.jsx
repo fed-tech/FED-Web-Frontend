@@ -1,11 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-
+import "./css/MobileNav.css";
 // state
 import AuthContext from "./../store/auth-context";
-
-// css
-import "./css/MobileNav.css";
 
 export default function NavMobile(props) {
   const [count, setCount] = useState(false);
@@ -13,9 +10,7 @@ export default function NavMobile(props) {
   function toggleEvent() {
     setCount(true);
   }
-
   const authCtx = useContext(AuthContext);
-
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -98,17 +93,21 @@ export default function NavMobile(props) {
             </NavLink>
           </div>
 
-          <div class="mobileList">
+          {/* <div class="mobileList">
             <NavLink
-              to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
-              // to={authCtx.isLoggedIn ? "/Login" : "/Login"}
+              // to={authCtx.isLoggedIn ? "/MyProfile" : "Signup"}
+              to={authCtx.isLoggedIn ? "/Login" : "/Login"}
               className="liTag"
-              onClick={handleLogout}
-              // onClick={() => setCount(false)}
+              // onClick={handleLogout}//
+              onClick={() => setCount(false)}
             >
-              {authCtx.isLoggedIn ? "Logout" : "Login/SignUp"}
+              {authCtx.isLoggedIn ? (
+                "Logout"
+              ) : (
+                "Login/SignUp"
+              )}
             </NavLink>
-          </div>
+          </div> */}
           <div class="mobileList">
             <NavLink
               to={authCtx.isLoggedIn ? "/Login" : "/Login"}
