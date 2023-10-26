@@ -18,6 +18,7 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
       <div className={MECs.eventImg}>
         <img src={info.img} alt="" className={MECs.imgTag} />
       </div>
+
       <div className={MECs.event_content}>
         <h2>{info.title}</h2>
         <div className={MECs.date_and_month}>
@@ -32,6 +33,7 @@ function EventCards({ info, setShow, setCardNo, getTeamDetails }) {
           </p>
         </div>
       </div>
+
       {info.isTeam ? (
         <button className={MECs.showDetailsBtn} onClick={handleShow}>
           Show Team Details
