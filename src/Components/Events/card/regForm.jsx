@@ -179,12 +179,7 @@ export default function RegForm({ showPopUp, setShowPopUp, setError,formid, form
           <div className="qrcode">
             <QRCodeSVG
               value={`upi://pay?pa=${formData.upi}&am=${formData.amount}&cu=INR`}
-              imageSettings={{
-                src: "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/62eeaa9927e6aea4ff13590e_FedLogo.png",
-                excavate: true,
-                width:40,
-                height:40
-              }}
+
               level={'H'}
             />
           </div>
