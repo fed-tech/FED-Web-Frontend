@@ -73,6 +73,14 @@
       },
       {
         "id": 2,
+        "name": "Mohit Sharma",
+        "linkedin": "https://www.linkedin.com/in/mohitsharma7667",
+        "github": "https://github.com/MohitSharma2312",
+        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/6466546772e48a444d12c1a1_profile%20pic.png",
+        "blur": "LiKwqY5u?boz~VNgNHs+Nas8WBfj"
+      },
+      {
+        "id": 3,
         "name": "Muskan Bajaj",
         "linkedin": "https://www.linkedin.com/in/muskan-bajaj-705bb1244/",
         "github": "https://github.com/muskan-bajaj",
@@ -80,7 +88,7 @@
         "blur": "LPKBL0~q_2M_-.M{IVt8xtWAM|og"
       },
       {
-        "id": 3,
+        "id": 4,
         "name": "Prityanshu Singh",
         "instagram": "https://instagram.com/prityanshu__0111?igshid=OTk0YzhjMDVlZA==",
         "linkedin": "https://www.linkedin.com/in/prityanshu-singh-a23115248",
@@ -89,7 +97,7 @@
         "blur": "LFE{2?$x4mNg0iM{Iq%100xa_4In"
       },
       {
-        "id": 4,
+        "id": 5,
         "name": "Vinit Agarwal",
         "linkedin": "https://www.linkedin.com/in/vinit-agarwal007",
         "github": "https://github.com/vinitagarwal007",
@@ -438,14 +446,6 @@
       },
       {
         "id": 3,
-        "name": "Mohit Sharma",
-        "linkedin": "https://www.linkedin.com/in/mohitsharma7667",
-        "github": "https://github.com/MohitSharma2312",
-        "img": "https://uploads-ssl.webflow.com/64553d8f26885d246222cfdc/6466546772e48a444d12c1a1_profile%20pic.png",
-        "blur": "LiKwqY5u?boz~VNgNHs+Nas8WBfj"
-      },
-      {
-        "id": 4,
         "name": "Arnav Kapur",
         "linkedin": "https://www.linkedin.com/in/arnav-kapur-079925255/",
         "github": "https://github.com/ArnavKap",
@@ -453,7 +453,7 @@
         "blur": "LZLEZyD%~qxu-;M|IUkCIUxFIURj"
       },
       {
-        "id": 1,
+        "id": 4,
         "name": "Aaditya Raj",
         "linkedin": "https://www.linkedin.com/in/aaditya-raj-20535420a",
         "github": "https://github.com/1Addy3",
@@ -461,7 +461,7 @@
         "blur": "LHD]PN_4%gTK^*V?9GS557NGxG=|"
       },
       {
-        "id": 2,
+        "id": 1,
         "name": "Suyash Pandey",
         "linkedin": "https://www.linkedin.com/in/suyash-pandey-78417524a/",
         "github": "",
