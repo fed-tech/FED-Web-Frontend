@@ -541,15 +541,6 @@
         "blur": "LRJ*;l0K~qx]~Cs+bJi_yXIor=Rj"
       },
       {
-        "id": 1,
-        "name": "Harsh Kumar",
-        "instagram": "",
-        "linkedin": "https://www.linkedin.com/in/harsh-kumar-27a124231",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450be3da3e63f4439afd4de_harsh.jpg",
-        "blur": "LRHe8?E3~WXn?aIox[j]?HIVRPoz"
-      },
-      {
         "id": 2,
         "name": "Monalisa Pal",
         "instagram": "https://instagram.com/nutellaaenthusiast?igshid=YmMyMTA2M2Y=",
@@ -557,15 +548,6 @@
         "github": "https://github.com/lizzz25",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b602dcbf17c8ae9723c3_Polish_20230227_224006049%20-%20287_MONALISA%20PAL.jpg",
         "blur": "L}I5Soay~qj[offPayj[WCj[j[az"
-      },
-      {
-        "id": 3,
-        "name": "Ritabrata Paul",
-        "instagram": "https://instagram.com/_ritabrata_paul_?igshid=ZDdkNTZiNTM=",
-        "linkedin": "https://www.linkedin.com/in/ritabrata-paul-544531224",
-        "github": "https://github.com/Tatai26",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450b832a23597f0885ac88e_IMG-20230227-WA0094%20-%20Ritabrata%20Paul.jpg",
-        "blur": "LAKxPM?c4.t,00nN.Tpd00R4;K-;"
       },
       {
         "id": 4,
@@ -593,41 +575,6 @@
         "github": "",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6450c5df6f603706ab9d584d_uj.jpg",
         "blur": "LLHf9+v|p{pI0UkXJBR*avRjrWaK"
-      },
-      {
-        "id": 3,
-        "name": "Shouryjeet Gupta",
-        "instagram": "https://instagram.com/shoury.jeet?igshid=ZDdkNTZiNTM=",
-        "linkedin": "https://www.linkedin.com/in/shouryjeet-gupta-319260255",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645120e9739c0115080a754b_WhatsApp%20Image%202023-05-02%20at%2014.41.16.jpg",
-        "blur": "LIK1UXxsT|s,~pxu?bt60fbbMdt7"
-      },
-      {
-        "id": 4,
-        "name": "Sayeed Anwar",
-        "instagram": "https://instagram.com/_iam_sayeed_?igshid=YmMyMTA2M2Y=",
-        "linkedin": "https://www.linkedin.com/in/sayeed-anwar-a23a91216/",
-        "github": "https://github.com/sayeedanwar-28",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/6451221b466415d341064440_s.0.png",
-        "blur": "L4BMi8O=9Z}s009a?bod5=-A4oEz"
-      },
-      {
-        "id": 1,
-        "name": "Samidh Daschaudhuri",
-        "instagram": "https://instagram.com/samidhhh?igshid=YmMyMTA2M2Y=",
-        "linkedin": "https://www.linkedin.com/in/samidh-daschaudhuri-b875841ab",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/645126ef61a70320bc269027_IMG_0509.JPG",
-        "blur": "LHBzC4?b_3Rj~qofxuM{M{Rjofj["
-      },
-      {
-        "id": 2,
-        "name": "Aparna Aryalakshami",
-        "linkedin": "https://www.linkedin.com/in/aparna-arylakshami-b95425255",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd14a49e84e5f1e0169_Aparna.jpg",
-        "blur": "LAGa?.^j~oRk?bodNIM|xuR*-AjY"
       },
       {
         "id": 3,
@@ -751,6 +698,13 @@
         "github": "",
         "img": "https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/629da5df5b281548afb59021_veer.jpg",
         "blur": "LMJkDvrD%~Fx0%F|sk-TcusW#l%f"
+      },
+      {
+        "name": "Aparna Aryalakshami",
+        "linkedin": "https://www.linkedin.com/in/aparna-arylakshami-b95425255",
+        "github": "",
+        "img": "https://uploads-ssl.webflow.com/645fbf430429258bf124f9e1/6469fbd14a49e84e5f1e0169_Aparna.jpg",
+        "blur": "LAGa?.^j~oRk?bodNIM|xuR*-AjY"
       }
     ]
   }
