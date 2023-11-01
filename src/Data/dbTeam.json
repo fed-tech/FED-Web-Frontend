@@ -310,14 +310,6 @@
       },
       {
         "id": 2,
-        "name": "Likhita Sahu",
-        "linkedin": "",
-        "github": "",
-        "img": "https://uploads-ssl.webflow.com/63c2e6198fc675c6638e1edd/63c2eaba8fc6752db28e7af5_IMG_20230113_231125%20-%20Likhita%201225.jpg",
-        "blur": "LFF;$oEy0z=y*Iw0xabuEkt7-UM|"
-      },
-      {
-        "id": 3,
         "name": "Parth",
         "linkedin": "https://www.linkedin.com/in/parth-verma-100819252/",
         "github": "https://github.com/White-Caffeine",
@@ -325,7 +317,7 @@
         "blur": "L8C~VYv}110#005n=_-STx=w}rJA"
       },
       {
-        "id": 4,
+        "id": 3,
         "name": "Sakib Alam",
         "linkedin": "https://www.linkedin.com/in/sakib-alam-22b20817a/",
         "github": "https://github.com/Sakibalam03",
@@ -333,7 +325,7 @@
         "blur": "LeJa$P?H?GE1~qt7M|Rjt7j]Rjof"
       },
       {
-        "id": 1,
+        "id": 4,
         "name": "Shubham Mohapatra",
         "linkedin": "http://linkedin.com/in/shubham-mohapatra-2558a4202",
         "github": "https://github.com/Shubh290704",
@@ -341,7 +333,7 @@
         "blur": "L6DlTTIA5:0MI%%1M|oc00.7#9~B"
       },
       {
-        "id": 2,
+        "id": 1,
         "name": "Ryansh Rajput",
         "linkedin": "https://www.linkedin.com/in/ryansh-rajput-5045b6275/",
         "github": "https://github.com/RyanshRajput",
@@ -349,7 +341,7 @@
         "blur": "LdG*vHbvocn#~AIqt8s:%0R*xtt5"
       },
       {
-        "id": 3,
+        "id": 2,
         "name": "Chaitanya Gera",
         "linkedin": "https://www.linkedin.com/in/chaitanya-gera-593681258",
         "github": "https://github.com/chaitanya-g11",
@@ -357,7 +349,7 @@
         "blur": "LBCGGKT1_LRo9G%I9Ioc00rWITRk"
       },
       {
-        "id": 4,
+        "id": 3,
         "name": "Divyak Pratap Singh",
         "linkedin": "https://www.linkedin.com/in/divyak-pratap-singh-8bb713230",
         "github": "https://github.com/divyak21",
@@ -365,7 +357,7 @@
         "blur": "L2ASritl.81a00R5NG]o~q.S$*K%"
       },
       {
-        "id": 1,
+        "id": 4,
         "name": "Kinjal Chandra",
         "linkedin": "https://www.linkedin.com/in/kinjal-chandra-185376275/",
         "github": "",
@@ -373,7 +365,7 @@
         "blur": "LJEVc.D*k7Iq4qs.NfxW~pWUoMaL"
       },
       {
-        "id": 2,
+        "id": 1,
         "name": "Niladri Bhattacharya",
         "linkedin": "https://www.linkedin.com/in/niladri-bhattacharya-a673b4146",
         "github": "",
@@ -381,7 +373,7 @@
         "blur": "LAECg[02-b.ANV~CE:jCHr-.=~E1"
       },
       {
-        "id": 3,
+        "id": 2,
         "name": "Ankit Sinha",
         "linkedin": "https://www.linkedin.com/in/ankit-sinha-0431b325b/",
         "github": "https://github.com/AnkitSinha22",
@@ -389,7 +381,7 @@
         "blur": "LcQJZUD$~q?v?HRiIUo#fka#RjjZ"
       },
       {
-        "id": 4,
+        "id": 3,
         "name": "Riddhi Agrawal",
         "linkedin": "https://www.linkedin.com/in/riddhi-agrawal-684b98236/",
         "github": "https://github.com/Riddhi13Agrawal",
@@ -397,7 +389,7 @@
         "blur": "LjI;-VIp%1Rj~oofWEofWFt7RjWU"
       },
       {
-        "id": 1,
+        "id": 3,
         "name": "Manish Shankar Prasad",
         "linkedin": "https://www.linkedin.com/in/manish-shankar-1bab6b22b",
         "github": "https://github.com/RAGE-12",
@@ -405,7 +397,7 @@
         "blur": "L7KnxWP2[7~RYM000g%iM|0Lbyai"
       },
       {
-        "id": 2,
+        "id": 4,
         "name": "Deepanshu Pandey",
         "linkedin": "https://www.linkedin.com/in/deepanshu-pandey-743284244",
         "github": "https://github.com/Deepanshu7771",
@@ -413,7 +405,7 @@
         "blur": "L7JuGd00--kV00tRIA%g%W?a~pM|"
       },
       {
-        "id": 3,
+        "id": 1,
         "name": "Krishanu Roy",
         "linkedin": "https://www.linkedin.com/in/krishanu-roy-145a36225",
         "github": "",
@@ -421,7 +413,7 @@
         "blur": "LKGbq,D#pZf.cIR4V}o}yEact8WY"
       },
       {
-        "id": 4,
+        "id": 2,
         "name": "Sarthak Singh",
         "linkedin": "https://www.linkedin.com/in/sarthak-singh-450a31261",
         "github": "https://github.com/Sarthak045",
@@ -429,7 +421,7 @@
         "blur": "LZH_f3M{xuM|Mws:t6M|~oV?%1R-"
       },
       {
-        "id": 1,
+        "id": 3,
         "name": "Gudla Sai Surya",
         "linkedin": "https://www.linkedin.com/in/gudla-sai-surya-9258a7241",
         "github": "https://github.com/GudlaSaiSurya",
@@ -437,7 +429,7 @@
         "blur": "LQI};PD#~qbF%wI9ozf6_3ITD*WC"
       },
       {
-        "id": 2,
+        "id": 4,
         "name": "Aditya Kumar Mohapatra",
         "linkedin": "https://www.linkedin.com/in/aditya-kumar-mohapatra-830997258",
         "github": "https://github.com/mr-drex",
@@ -445,15 +437,7 @@
         "blur": "LNHxH2nSPlJ5%QbFS6NFuPR*#XnO"
       },
       {
-        "id": 3,
-        "name": "Arnav Kapur",
-        "linkedin": "https://www.linkedin.com/in/arnav-kapur-079925255/",
-        "github": "https://github.com/ArnavKap",
-        "img": "https://uploads-ssl.webflow.com/63c2dc1d7239e9141b452bff/646659aaa37555d0f8c0c54a_WhatsApp%20Image%202023-05-18%20at%2022.27.14.jpg",
-        "blur": "LZLEZyD%~qxu-;M|IUkCIUxFIURj"
-      },
-      {
-        "id": 4,
+        "id": 1,
         "name": "Aaditya Raj",
         "linkedin": "https://www.linkedin.com/in/aaditya-raj-20535420a",
         "github": "https://github.com/1Addy3",
@@ -461,7 +445,7 @@
         "blur": "LHD]PN_4%gTK^*V?9GS557NGxG=|"
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "Suyash Pandey",
         "linkedin": "https://www.linkedin.com/in/suyash-pandey-78417524a/",
         "github": "",
