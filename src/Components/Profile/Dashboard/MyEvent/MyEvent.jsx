@@ -86,22 +86,6 @@ export default function MyEvents() {
                     setCardNo={setCardNo}
                     getTeamDetails={getTeamDetails}
                   />
-
-                  <MyEventCards
-                    info={e}
-                    key={idx}
-                    setShow={setShow}
-                    setCardNo={setCardNo}
-                    getTeamDetails={getTeamDetails}
-                  />
-
-                  <MyEventCards
-                    info={e}
-                    key={idx}
-                    setShow={setShow}
-                    setCardNo={setCardNo}
-                    getTeamDetails={getTeamDetails}
-                  />
                 </>
               );
             })}
