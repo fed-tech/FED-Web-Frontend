@@ -70,15 +70,7 @@ export default function NavMobile(props) {
         </div>
 
         <div className="mobileNavListChild">
-          <div className="mobileList" onClick={() => setCount(false)}>
-            <NavLink to="/omega" className="liTag LinkStyle">
-              Omega 3.0
-            </NavLink>
-            <div className="NavNewMobo" id="newEvent">
-              <div className="NavMoboArrow"></div>
-              <p className="NavNew">New</p>
-            </div>
-          </div>
+          
           <div className="mobileList" onClick={() => setCount(false)}>
             <NavLink to="/event" className="liTag LinkStyle">
               Events
