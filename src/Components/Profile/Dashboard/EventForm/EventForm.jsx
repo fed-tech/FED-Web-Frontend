@@ -326,7 +326,10 @@ export default function Form() {
           placeholder="Maximum team size*"
         />:<></>}
         {fields}
-        <div>
+       
+      </form>
+      </div>
+      <div>
           <button className={formCss.saveBtn} onClick={handleAdd}>
             ADD FIELD
           </button>
@@ -334,8 +337,6 @@ export default function Form() {
             {isSaving ? <Load/>:"SAVE"}
           </button>
         </div>
-      </form>
-      </div>
       <Alert variant={variants} val={setError} />
     </>
   );
