@@ -23,11 +23,7 @@ export default function Nav() {
 
           <div className="listDiv">
             <ul id="NavUl">
-              <li>
-                <NavLink to="/" className="LinkStyle">
-                  Home
-                </NavLink>
-              </li>
+        
               <li>
                 <NavLink to="/event" className="LinkStyle">
                   Events
