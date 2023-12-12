@@ -64,10 +64,19 @@
   width: 100%;
 }
 .addEvent .regdropdown {
-  width: 100%;
-  color: white;
-  background-color: rgb(20, 19, 19);
-  cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    background: none;
+    border-bottom: 3px solid #4b4b4b;
+    font-size: 20px;
+    text-align: left;
+}
+select option {
+  background-color: #c2c2c2; 
+  color: #333; 
 }
 .addEvent form {
   width: 100%;

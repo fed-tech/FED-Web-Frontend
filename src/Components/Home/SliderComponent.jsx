@@ -32,7 +32,7 @@ export default function SliderComponent(props) {
                 redirect("/event");
               }}
             >
-              Register Now!!
+            Register Now!!
             </button>
           </>
         ) : (
