@@ -65,7 +65,9 @@ function Page() {
             <div className={pageCss.dashboardTop}>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
-                  <img src={authCtx.user.pic} alt="" />
+                  <a href="/MyProfile">
+                    <img src={authCtx.user.pic} alt="" />
+                  </a>
                 </div>
                 <div className={pageCss.Position}>
                   <p className={pageCss.name}>{authCtx.user.name}</p>
