@@ -25,13 +25,13 @@ export default function Form() {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
-  const [showTeamsize,setShowTeamsize] = useState(false)
-  const [isSaving, setIsSaving] = useState(false)
+  const [showTeamsize, setShowTeamsize] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
 
   const authCtx = useContext(AuthContext);
 
   const handleSave = async (e) => {
-    setIsSaving(true)
+    setIsSaving(true);
     if (hideAmount) {
       setShowFields((prev) => {
         const formData = { ...prev, amount: 0 };
@@ -57,11 +57,11 @@ export default function Form() {
           formelement: formDetails.fields,
           event: formDetails.eventName,
           isTeam: showTeamsize,
-          teamsize:formDetails.teamSize,
+          teamsize: formDetails.teamSize,
           maxReg: formDetails.maxReg,
           upi: formDetails.upi,
           img: formDetails.formimg,
-          date:formDetails.date
+          date: formDetails.date,
         },
         {
           headers: {
@@ -71,19 +71,19 @@ export default function Form() {
       );
       if (res.status == 200) {
         setShowFields({ fields: [{}] });
-        e.target.reset()
+        e.target.reset();
         window.scrollTo(0, 0);
       }
     } catch (err) {
       console.log(err);
-    }finally{
-      setIsSaving(false)
+    } finally {
+      setIsSaving(false);
     }
   };
 
   const handleChange = (e) => {
-    if(e.target.type == "number" && e.target.value < 0){
-      e.target.value = 0
+    if (e.target.type == "number" && e.target.value < 0) {
+      e.target.value = 0;
     }
     const { name, value } = e.target;
     setShowFields((prev) => {
@@ -129,7 +129,7 @@ export default function Form() {
   };
 
   const handleDropDownChange = (e) => {
-    console.log(e.target.name)  
+    console.log(e.target.name);
     if (e.target.name == "eventType") {
       if (e.target.value === "paid") {
         sethideAmount(false);
@@ -144,9 +144,9 @@ export default function Form() {
       }
     }
   };
-  useEffect(()=>{
-    console.log(showTeamsize)
-  },[showTeamsize])
+  useEffect(() => {
+    console.log(showTeamsize);
+  }, [showTeamsize]);
   const handleFormError = (e) => {
     e.preventDefault();
     setError({
@@ -192,151 +192,158 @@ export default function Form() {
       <div className={formCss.head}>
         <h1>NEW FORM</h1>
       </div>
-      <div className={formCss.formDiv} style={{overflow:"auto",height:"100vh",paddingRight:"10px"}}>
-      <form
-        action=""
-        onSubmit={handleSave}
-        onInvalid={handleFormError}
+      <div
+        className={formCss.formDiv}
+        style={{ overflow: "auto", height: "100vh", paddingRight: "10px" }}
       >
-        <input
-          onChange={handleChange}
-          name="formTitle"
-          type="text"
-          className={formCss.formtitle}
-          placeholder="Form Title*"
-          required
-        />
-        <textarea
-          onChange={handleChange}
-          name="forrmDesc"
-          className={formCss.formtitle}
-          placeholder="About Event*"
-          required
-        />
-        <input
-          onChange={handleChange}
-          name="formimg"
-          type="text"
-          className={formCss.formtitle}
-          placeholder="Form Logo*"
-          required
-        />
-        <DatePicker
+        <form
+          action=""
+          onSubmit={handleSave}
+          onInvalid={handleFormError}
+          id="form"
+        >
+          <input
+            onChange={handleChange}
+            name="formTitle"
+            type="text"
+            className={formCss.formtitle}
+            placeholder="Form Title*"
+            required
+          />
+          <textarea
+            onChange={handleChange}
+            name="forrmDesc"
+            className={formCss.formtitle}
+            placeholder="About Event*"
+            required
+          />
+          <input
+            onChange={handleChange}
+            name="formimg"
+            type="text"
+            className={formCss.formtitle}
+            placeholder="Form Logo*"
+            required
+          />
+          <DatePicker
             selected={showFields.date}
             className={formCss.formtitle}
             onChange={handleDateChange}
             dateFormat="dd/MM/yyyy"
             placeholderText="dd/mm/yyyy"
           />
-        <select
-          id="eventType"
-          name="eventName"
-          className={formCss.formtitle}
-          onChange={handleChange}
-          required
-        >
-          <option value="" hidden>
-            Related Event Name*
-          </option>
-          {eventList.map((element) => {
-            return (
-              <option
-                value={element._id}
-                className={formCss.formDropDownOption}
-              >
-                {element.title}
-              </option>
-            );
-          })}
-        </select>
-        <select
-          id="eventType"
-          name="eventType"
-          className={formCss.formtitle}
-          onChange={handleDropDownChange}
-          required
-        >
-          <option value="" hidden>
-            Event Type*
-          </option>
-          <option value="paid" className={formCss.formDropDownOption}>
-            Paid
-          </option>
-          <option value="free" className={formCss.formDropDownOption}>
-            Free
-          </option>
-        </select>
-        <input
-          id="amount"
-          onChange={handleChange}
-          hidden={hideAmount}
-          name="amount"
-          type="number"
-          className={formCss.formtitle}
-          placeholder="Amount*"
-        />
-        <input
-          id="upi"
-          onChange={handleChange}
-          hidden={hideAmount}
-          name="upi"
-          type="text"
-          className={formCss.formtitle}
-          placeholder="Enter Receiver's UPI*"
-        />
-        <input
-          onChange={handleChange}
-          required
-          name="priority"
-          type="number"
-          className={formCss.formtitle}
-          placeholder="Priority*"
-        />
-        <input
-          onChange={handleChange}
-          required
-          name="maxReg"
-          type="number"
-          className={formCss.formtitle}
-          placeholder="Maximum Registration allowed*"
-        />
-        <select
-          id="eventTeam"
-          name="eventTeam"
-          className={formCss.formtitle}
-          onChange={handleDropDownChange}
-          required
-        >
-          <option value="" hidden>
-            Team Based Event*
-          </option>
-          <option value="true" className={formCss.formDropDownOption}>
-            It needs team
-          </option>
-          <option value="false" className={formCss.formDropDownOption}>
-            It doesn't need team
-          </option>
-        </select>
-        {showTeamsize?<input
-          onChange={handleChange}
-          required
-          name="teamSize"
-          type="number"
-          className={formCss.formtitle}
-          placeholder="Maximum team size*"
-        />:<></>}
-        {fields}
-       
-      </form>
+          <select
+            id="eventType"
+            name="eventName"
+            className={formCss.formtitle}
+            onChange={handleChange}
+            required
+          >
+            <option value="" hidden>
+              Related Event Name*
+            </option>
+            {eventList.map((element) => {
+              return (
+                <option
+                  value={element._id}
+                  className={formCss.formDropDownOption}
+                >
+                  {element.title}
+                </option>
+              );
+            })}
+          </select>
+          <select
+            id="eventType"
+            name="eventType"
+            className={formCss.formtitle}
+            onChange={handleDropDownChange}
+            required
+          >
+            <option value="" hidden>
+              Event Type*
+            </option>
+            <option value="paid" className={formCss.formDropDownOption}>
+              Paid
+            </option>
+            <option value="free" className={formCss.formDropDownOption}>
+              Free
+            </option>
+          </select>
+          <input
+            id="amount"
+            onChange={handleChange}
+            hidden={hideAmount}
+            name="amount"
+            type="number"
+            className={formCss.formtitle}
+            placeholder="Amount*"
+          />
+          <input
+            id="upi"
+            onChange={handleChange}
+            hidden={hideAmount}
+            name="upi"
+            type="text"
+            className={formCss.formtitle}
+            placeholder="Enter Receiver's UPI*"
+          />
+          <input
+            onChange={handleChange}
+            required
+            name="priority"
+            type="number"
+            className={formCss.formtitle}
+            placeholder="Priority*"
+          />
+          <input
+            onChange={handleChange}
+            required
+            name="maxReg"
+            type="number"
+            className={formCss.formtitle}
+            placeholder="Maximum Registration allowed*"
+          />
+          <select
+            id="eventTeam"
+            name="eventTeam"
+            className={formCss.formtitle}
+            onChange={handleDropDownChange}
+            required
+          >
+            <option value="" hidden>
+              Team Based Event*
+            </option>
+            <option value="true" className={formCss.formDropDownOption}>
+              It needs team
+            </option>
+            <option value="false" className={formCss.formDropDownOption}>
+              It doesn't need team
+            </option>
+          </select>
+          {showTeamsize ? (
+            <input
+              onChange={handleChange}
+              required
+              name="teamSize"
+              type="number"
+              className={formCss.formtitle}
+              placeholder="Maximum team size*"
+            />
+          ) : (
+            <></>
+          )}
+          {fields}
+        </form>
       </div>
       <div>
-          <button className={formCss.saveBtn} onClick={handleAdd}>
-            ADD FIELD
-          </button>
-          <button type="submit" className={formCss.saveBtn}>
-            {isSaving ? <Load/>:"SAVE"}
-          </button>
-        </div>
+        <button className={formCss.saveBtn} onClick={handleAdd}>
+          ADD FIELD
+        </button>
+        <button form="form" type="submit" className={formCss.saveBtn}>
+          {isSaving ? <Load /> : "SAVE"}
+        </button>
+      </div>
       <Alert variant={variants} val={setError} />
     </>
   );
