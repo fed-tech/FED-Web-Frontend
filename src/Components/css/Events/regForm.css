@@ -237,7 +237,7 @@ input {
 }
 
 .slider {
-  position: absolute;
+  /* position: absolute; */
   cursor: pointer;
   top: 0;
   left: 0;
@@ -249,7 +249,7 @@ input {
 }
 
 .slider:before {
-  position: absolute;
+  /* position: absolute; */
   content: "";
   height: 26px;
   width: 26px;

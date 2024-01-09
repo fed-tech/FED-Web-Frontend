@@ -122,7 +122,8 @@ function LoginForm() {
           console.log("authCtx.target -> ", authCtx.target);
 
           if (authCtx.target == "") {
-            navigate("/MyProfile");
+            // navigate("/MyProfile");
+            window.history.back();
           } else {
             navigate(`/${authCtx.target}`);
             authCtx.settarget(null);
