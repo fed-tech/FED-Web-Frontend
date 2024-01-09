@@ -60,7 +60,7 @@ const retrieveStoredToken = () => {
 
 export const AuthContextProvider = (props) => {
   const tokenData = retrieveStoredToken();
-
+  console.log(tokenData)
   let initialToken = null;
   let initialuser = {};
   let logedin = false;
@@ -76,7 +76,8 @@ export const AuthContextProvider = (props) => {
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(logedin);
   // const [admin, setAdmin] = useState(false);
 
-  console.log("userislogedin : -" + userIsLoggedIn);
+  // console.log("userislogedin : -" + userIsLoggedIn);
+  console.log("context handler called")
 
   const targetHandler = (t) => {
     setTarget(t);
@@ -110,6 +111,7 @@ export const AuthContextProvider = (props) => {
     token,
     expirationTime
   ) => {
+    console.log("login handler called")
     localStorage.setItem("token", token);
     const setuserdata = {
       name: name,

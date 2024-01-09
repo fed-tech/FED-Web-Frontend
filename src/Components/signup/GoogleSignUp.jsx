@@ -66,7 +66,7 @@ const GoogleSignUp = ({ setLoad }) => {
       const response = await axios.post("/auth/googleverification", {
         email: mail,
       });
-      
+
       console.log(response);
 
       if (response.status === 202) {
@@ -81,6 +81,7 @@ const GoogleSignUp = ({ setLoad }) => {
           response.data.user.College,
           response.data.user.MobileNo,
           response.data.user.selected,
+          response.data.user.regForm,
           Number(response.data.user.access),
           response.data.token,
           10800000
