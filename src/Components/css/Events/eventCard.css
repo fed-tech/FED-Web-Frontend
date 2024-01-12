@@ -105,6 +105,9 @@
 }
 .block {
   cursor: not-allowed;
+  color: #f45725;
+  background-color: rgb(209, 209, 209);
+
 }
 
 .live {

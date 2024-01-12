@@ -10,7 +10,7 @@ import ECss from "./Css/eventCard.module.css";
 import { eventcard } from "./../../../Data/eventcard.js";
 
 export default function Card() {
-  const [regLive, setRegLive] = useState(true);
+  const [regLive, setRegLive] = useState(false);
   const [showPopUp, setShowPopUp] = useState(false);
   return (
     <div className={ECss.cards}>
@@ -48,7 +48,6 @@ export default function Card() {
                   </a>
                 ) : (
                   <a className={ECss.regBtn}>
-                    Registration Closed
                     <svg
                       width="20"
                       height="18"
@@ -64,6 +63,7 @@ export default function Card() {
                         fill="currentColor"
                       ></path>
                     </svg>
+                    Registration Closed
                   </a>
                 )}
               </div>
