@@ -7,6 +7,7 @@
   margin-top: -1px;
   padding-top: 5px;
   background-color: #0f0e0e;
+  margin-top: -90px;
 }
 
 #message {
@@ -17,6 +18,7 @@
 #appleIcon img {
   width: 50px;
   height: 50px;
+  
 }
 
 #KnowUspTag {
@@ -67,29 +69,52 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
-  background-color: #0f0e0e;
+  background: linear-gradient(to bottom, #0f0e0e, #0f0e0e);
   margin-top: -30px;
+  padding-bottom: 20px;
 }
 
 .whyDiv,
 .HowDiv,
 .WhatDiv {
-  padding: 20px 20px 41px 20px;
+  padding: 20px 20px 40px 20px;
   width: 26%;
   background-color: #fff;
+  opacity: 1;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5),whitesmoke );
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s linear;
+  
+}
+
+.whyDiv:hover{
+  opacity: 1;
+  box-shadow: 0px 8px 20px #f45725;
+  background-color: white;
+}
+
+.HowDiv:hover{
+  opacity: 1;
+  box-shadow: 0px 8px 20px #f45725;
+  background-color: white;
+}
+.WhatDiv:hover{
+  opacity: 1;
+  box-shadow: 0px 8px 20px #f45725;
+  background-color: white;
 }
 
 .whyDiv {
-  margin-right: 30px;
+  margin-right: 0px;
 }
 
 .WhatDiv {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 .whyDiv .CardDesPTag {
@@ -111,13 +136,16 @@
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 36px;
   margin: 30px 0px;
 }
 
-.questionpTag span,
-.CardDesPTag span,
+.questionpTag span{
+  color:#0f0e0e;
+  opacity: .8;
+}
+
 .BelievePTag span,
 .believeCenterCol p span,
 .userName,
@@ -134,7 +162,7 @@
 .CardDesPTag {
   background-color: transparent;
   font-family: "Manrope", sans-serif;
-  font-style: normal;
+  font-style: bold;
   font-weight: 400;
   font-size: 17px;
   line-height: 150%;
@@ -151,7 +179,7 @@
   font-weight: 800;
   font-size: 50px;
   line-height: 59px;
-  margin: 0px 0px 90px 0px;
+  margin: 80px 0px 90px 0px;
 }
 
 .believeCenterDiv {
@@ -180,6 +208,12 @@
   color: #000000;
 }
 
+#testimonial {
+  margin-top:-90px;
+  margin-bottom: -20px;
+  background: #0f0e0e !important;
+}
+
 .testDivMain {
   display: flex;
   justify-content: center;
@@ -196,22 +230,32 @@
 
 .testDiv {
   position: relative;
-  background-color: #fff;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5),whitesmoke );
   padding: 24px;
   width: 40%;
   height: 294px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s linear;
+  
+}
+
+.testDiv:hover{
+  opacity: 1;
+  box-shadow: 0px 8px 15px #f45725;
+  background-color: white;
 }
 
 .testpTag {
   background-color: transparent;
   font-family: "Manrope", sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 17px;
   line-height: 150%;
   letter-spacing: 0.005em;
+  padding: 10px 10px;
   color: #000000;
 }
 
@@ -240,10 +284,11 @@
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 24px;
+  padding: 10px 10px;
   letter-spacing: 0.005em;
-  margin-bottom: 4px;
+  margin-bottom: -12px;
 }
 
 .userPost {
@@ -251,7 +296,8 @@
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 15px;
+  padding: 10px 10px;
   line-height: 20px;
   letter-spacing: 0.005em;
   color: #000000;
@@ -285,20 +331,22 @@
 }
 
 .WeWorkWith {
-  padding: 90px 0px;
-  background-color: #fff;
+  padding: 0px 0px;
+  background: linear-gradient(to top, rgba(18,23,17), #0f0e0e);
 }
 
 .WeWorkWithPTag {
-  margin-bottom: 90px;
+  margin-bottom: 45px;
   background-color: transparent;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 59px;
-  color: #0f0e0e;
+  color: white;
   text-align: center;
+  padding-bottom: 40px;
+
 }
 
 .carousel-cell {
@@ -309,10 +357,6 @@
   display: block;
 }
 
-.corousal {
-  background-color: transparent;
-  margin-bottom: 90px;
-}
 
 .cardMain {
   width: 250px;
@@ -334,6 +378,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: -20px;
 }
 
 .workptagDes {
@@ -342,13 +387,14 @@
   font-family: "Manrope", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 150%;
   text-align: center;
-  letter-spacing: 0.005em;
+  letter-spacing: 0.05em;
   text-align: center;
-  color: #000;
-  margin-top: 90px;
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 90px;
 }
 
 .businessMDiv {
@@ -414,6 +460,7 @@
 
 form {
   background-color: transparent;
+  margin-bottom: 50px;
 }
 
 .businessMDivright div input,
