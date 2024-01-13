@@ -21,10 +21,6 @@ export default function Team() {
   const [technical, setTechnical] = useState([]);
   const [marketing, setMarketing] = useState([]);
   const [operations, setOperations] = useState([]);
-  setTechnical(domain.Tech)
-  setCreative(domain.creative)
-  setMarketing(domain.marketing)
-  setOperations(domain.operation)
   const memberData = async () => {
     // const response = await axios.get("/member/");
     // if (response.status === 202) {
@@ -112,7 +108,7 @@ export default function Team() {
           name="Technical"
           title="Those who help us design, analyze, troubleshoot, diagnose and
             resolve technicalities in FED!"
-          data={technical}
+          data={domain.Tech}
         />
         <div className="space" />
 
@@ -121,7 +117,7 @@ export default function Team() {
           name="Creative"
           title="Those who help us illustrate, create, design, address, showcase, and
           introduce FED as a whole- behind the veil!"
-          data={creative}
+          data={domain.creative}
         />
         <div className="space" />
 
@@ -130,7 +126,7 @@ export default function Team() {
           name="Operations"
           title="Those who help us plan, strategize, commemorate, organize and
           operate FED's initiatives!"
-          data={operations}
+          data={domain.operation}
         />
         <div className="space" />
 
@@ -139,7 +135,7 @@ export default function Team() {
           name="Marketing"
           title="Those who help us strategize, develop, promote, grow and market
           FED's endeavor!"
-          data={marketing}
+          data={domain.marketing}
         />
         {/* <div className="space" /> */}
       </section>
