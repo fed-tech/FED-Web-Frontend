@@ -39,11 +39,7 @@ export default function Events() {
           temp.month = date.toLocaleString("default", { month: "long" });
           temp.img = e.img;
           temp.dis = {};
-          temp.dis.d1 = e.description.split("\n")[0];
-          temp.dis.d2 = e.description.split("\n")[1];
-          temp.dis.d3 = e.description.split("\n")[2];
-          temp.dis.d4 = e.description.split("\n")[3];
-          temp.dis.d5 = e.description.split("\n")[4];
+          temp.dis = e.description;
           temp.isLive = e.active;
           temp.amount = e.amount;
           temp.upi = e.upi;

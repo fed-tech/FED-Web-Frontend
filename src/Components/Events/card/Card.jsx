@@ -52,16 +52,7 @@ export default function Card({eventcard,setError}) {
                 <div className="right">
                   <h1 className="title">{data.title}</h1>
                   <div className="eventDetail">
-                    {data.dis.d1}
-                    <br />
-                    <br />
-                    {data.dis.d2}
-                    <br />
-                    <br />
-                    {data.dis.d3}
-                    <br />
-                    <br />
-                    {data.dis.d4}
+                    {data.dis}
                   </div>
                   {data.isRegistered ? (
                     <a className="regBtn block">
