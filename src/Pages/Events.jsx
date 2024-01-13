@@ -5,6 +5,7 @@ import Card from "../Components/Events/card/Card";
 import CardPrev from "../Components/Events/card/CardPrev";
 import Header from "../Components/Events/header/jsx/Header.jsx";
 import { Alert } from "../MicroInterAction/Alert";
+import Loading from "../MicroInterAction/Loading";
 import AuthContext from "../store/auth-context";
 import { getOrdinal } from "../MicroInterAction/ordinal.js";
 import axios from "axios";
@@ -108,7 +109,7 @@ export default function Events() {
       return formDate < todayDate && e.isLive;
     });
     categorised.closed = final.filter((e) => !e.isLive);
-    console.log(categorised)
+    console.log(categorised);
     setEvent(categorised);
     setShowPopUp(false);
   };
@@ -125,47 +126,31 @@ export default function Events() {
 
   return (
     <div className="mEventsDiv">
-        <div>
-          <Header head="Ongoing Events" />
-          {loading ? (
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
-          ) : (
-            <Card eventcard={eventcard.ongoing} setError={setError} />
-          )}
-        </div>
-        <div>
-          <Header head="Upcoming Events" />
-          {loading ? (
-            <div className="centerLoader">
-              <div className="arc" />
-              <h1 className="loadingSpanH1">
-                <span className="loadingSpan">Loading</span>
-              </h1>
-            </div>
-          ) : (
-            <Card eventcard={eventcard.upcoming} setError={setError} />
-          )}
-        </div>
-
+      <div>
+        <Header head="Ongoing Events" />
+        {loading ? (
+          <Loading />
+        ) : (
+          <Card eventcard={eventcard.ongoing} setError={setError} />
+        )}
+      </div>
+      <div>
+        <Header head="Upcoming Events" />
+        {loading ? (
+          <Loading />
+        ) : (
+          <Card eventcard={eventcard.upcoming} setError={setError} />
+        )}
+      </div>
       <div>
         <Header head="Previous Events" />
-          <div>
-            {loading ? (
-              <div className="centerLoader">
-                <div className="arc" />
-                <h1 className="loadingSpanH1">
-                  <span className="loadingSpan">Loading</span>
-                </h1>
-              </div>
-            ) : (
-              <Card eventcard={eventcard.closed} setError={setError} />
-            )}
-          </div>
+        <div>
+          {loading ? (
+            <Loading />
+          ) : (
+            <Card eventcard={eventcard.closed} setError={setError} />
+          )}
+        </div>
         <CardPrev />
       </div>
       <Alert variant={variants} val={setError} />
