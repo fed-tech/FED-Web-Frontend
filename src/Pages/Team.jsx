@@ -21,37 +21,36 @@ export default function Team() {
   const [technical, setTechnical] = useState([]);
   const [marketing, setMarketing] = useState([]);
   const [operations, setOperations] = useState([]);
-
+  setTechnical(domain.Tech)
+  setCreative(domain.creative)
+  setMarketing(domain.marketing)
+  setOperations(domain.operation)
   const memberData = async () => {
-    const response = await axios.get("/member/");
-    if (response.status === 202) {
-      // setCreative(
-      //   response.data.users.filter((element) => {
-      //     if (element.access == 3) return element;
-      //   })
-      // );
-      // setTechnical(
-      //   response.data.users.filter((element) => {
-      //     if (element.access == 4) return element;
-      //   })
-      // );
-      // setMarketing(
-      //   response.data.users.filter((element) => {
-      //     if (element.access == 5) return element;
-      //   })
-      // );
-      // setOperations(
-      //   response.data.users.filter((element) => {
-      //     if (element.access == 6) return element;
-      //   })
-      // );
-      setTechnical(domain.Tech)
-      setCreative(domain.creative)
-      setMarketing(domain.marketing)
-      setOperations(domain.operation)
-    } else {
-      console.log("no members");
-    }
+    // const response = await axios.get("/member/");
+    // if (response.status === 202) {
+    //   setCreative(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 3) return element;
+    //     })
+    //   );
+    //   setTechnical(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 4) return element;
+    //     })
+    //   );
+    //   setMarketing(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 5) return element;
+    //     })
+    //   );
+    //   setOperations(
+    //     response.data.users.filter((element) => {
+    //       if (element.access == 6) return element;
+    //     })
+    //   );
+    // } else {
+    //   console.log("no members");
+    // }
   };
 
   useEffect(() => {
