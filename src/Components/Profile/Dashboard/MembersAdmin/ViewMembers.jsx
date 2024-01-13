@@ -5,7 +5,7 @@ import axios from "axios";
 import viewMemCSS from "../../../css/Profile/Dashboard/MembersAdmin/ViewMembers.module.css";
 import AuthContext from "../../../../store/auth-context";
 
-export default function ViewMembers() {
+export default function ViewMembers({ showMembers }) {
   const [members, setMembers] = useState([]);
   const authCtx = useContext(AuthContext);
 
@@ -22,21 +22,48 @@ export default function ViewMembers() {
 
   useEffect(() => {
     memberData();
-  }, []);
+  }, [showMembers]);
 
   return (
+    // <div className={viewMemCSS.viewMem}>
+    //   {members.map((data) => (
+    //     <MemCards
+    //       key={data}
+    //       image={data.img}
+    //       name={data.name}
+    //       access={data.access}
+    //       isMember={true}
+    //       email={data.email}
+    //       memberData={memberData}
+    //     />
+    //   ))}
+    // </div>
     <div className={viewMemCSS.viewMem}>
-      {members.map((data) => (
-        <MemCards
-          key={data}
-          image={data.img}
-          name={data.name}
-          access={data.access}
-          isMember={true}
-          email={data.email}
-          memberData={memberData}
-        />
-      ))}
+      {showMembers ? (
+        <div className="viewMem">
+          <ViewMembers />
+        </div>
+      ) : (
+        <div className="viewMem">
+          {members.length === 0 ? (
+            <div style={{ marginLeft: "20%" }}>
+              <h2>No Members Found</h2>
+            </div>
+          ) : (
+            members.map((data) => (
+              <MemCards
+                key={data}
+                image={data.img}
+                name={data.name}
+                access={data.access}
+                isMember={true}
+                email={data.email}
+                memberData={memberData}
+              />
+            ))
+          )}
+        </div>
+      )}
     </div>
   );
 }

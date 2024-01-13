@@ -57,6 +57,12 @@ function Page() {
     authCtx.logout();
   };
 
+  const handleName = () => {
+    const maxLength = 15;
+    let name = authCtx.user.name;
+    return name.length > maxLength ? name.slice(0, maxLength) + "..." : name;
+  };
+
   return (
     <div className={pageCss.Page_main}>
       <div className={pageCss.Page}>
@@ -70,7 +76,7 @@ function Page() {
                   </a>
                 </div>
                 <div className={pageCss.Position}>
-                  <p className={pageCss.name}>{authCtx.user.name}</p>
+                  <p className={pageCss.name}>{handleName()}</p>
                   <p className={pageCss.designation}>{designation}</p>
                 </div>
               </div>
@@ -104,7 +110,7 @@ function Page() {
                       className={pageCss.dashboardBottom_icons}
                       id="Form"
                     />
-                    <p id="Form">Form</p>
+                    <p id="Form">NewForm</p>
                   </div>
                   <div
                     onClick={handleSetPage}
