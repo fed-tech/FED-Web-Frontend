@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 
 // Components
 import RegForm from "./regForm";
+import AuthContext from "../../../store/auth-context";
 
 // css
 import "../../css/Events/eventCard.css";
@@ -12,9 +13,20 @@ export default function Card({eventcard,setError}) {
   const [showPopUp, setShowPopUp] = useState(false);
   const [currentform, setCurentForm] = useState("");
   const [currentformelement, setCurentFormElement] = useState([]);
-  const handleRegClick = (ele) => {
-    setCurentForm(ele.target.id);
+  const authCtx = useContext(AuthContext);
 
+  const handleRegClick = (ele) => {
+    if(!authCtx.isLoggedIn){
+      return setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Alert",
+        text: "Please Login First",
+        val: true,
+    });
+    }
+    setCurentForm(ele.target.id);
     eventcard.forEach((e) => {
       if (e.formid == ele.target.id) {
         e.formelement = e.formelement.map((e) => {

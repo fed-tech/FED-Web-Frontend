@@ -88,7 +88,8 @@ const GoogleSignUp = ({ setLoad }) => {
         );
 
         if (authCtx.target == "") {
-          navigate("/MyProfile");
+          // navigate("/MyProfile");
+          window.history.back();
         } else {
           navigate(`/${authCtx.target}`);
           authCtx.settarget(null);
