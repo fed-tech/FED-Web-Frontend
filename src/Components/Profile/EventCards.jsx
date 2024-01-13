@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './cssp/EventCards.css'
+
 import axios from 'axios'
+import { date2str } from '../../MicroInterAction/date2str'
 
 function EventCards({info,setShow, setCardNo}) {
   const handleShow = ()=>{
@@ -16,7 +18,7 @@ function EventCards({info,setShow, setCardNo}) {
         <div className='event_content'>
             <h2>{info.title}</h2>
             <div className="date_and_month">
-              <p>{info.date}</p>
+              <p>{date2str(info.date)}</p>
               <p>{info.month}</p>
             </div>
         </div>

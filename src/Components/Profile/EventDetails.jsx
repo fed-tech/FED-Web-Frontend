@@ -6,8 +6,10 @@ import axios from "axios";
 import AuthContext from "../../store/auth-context";
 import Load from "../../MicroInterAction/Load";
 import { Alert } from "../../MicroInterAction/Alert";
+import { date2str } from "../../MicroInterAction/date2str";
 // logo
 // import logo from "../../Img/image26.png"
+
 function EventDetails({ cardNo, setShow }) {
   const authCtx = useContext(AuthContext);
   const [loading,setLoading] = useState(true);
@@ -237,7 +239,7 @@ function EventDetails({ cardNo, setShow }) {
         </div> */}
         <div className={eventCss.moreDetails}>
           <div className={eventCss.date}>
-            Event Date : {cardNo.date} {cardNo.month}
+            Event Date : {date2str(cardNo.date)}
           </div>
           <div className={eventCss.regType}>
             Registration : {cardNo.registration}
