@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, {  useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Components
 import RegForm from "./regForm";
@@ -14,17 +15,10 @@ export default function Card({eventcard,setError}) {
   const [currentform, setCurentForm] = useState("");
   const [currentformelement, setCurentFormElement] = useState([]);
   const authCtx = useContext(AuthContext);
-
+  const navigate = useNavigate();
   const handleRegClick = (ele) => {
     if(!authCtx.isLoggedIn){
-      return setError({
-        mainColor: "#FFC0CB",
-        secondaryColor: "#FF69B4",
-        symbol: "pets",
-        title: "Alert",
-        text: "Please Login First",
-        val: true,
-    });
+      return navigate('/login')
     }
     setCurentForm(ele.target.id);
     eventcard.forEach((e) => {
