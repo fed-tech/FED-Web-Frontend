@@ -30,27 +30,27 @@ export default function RegForm({
   var formData = formelement;
   var showTeam = formData.isTeam;
   var isPaid = formData.amount != 0;
-  const handleNext = () => {
-    var validationerror = formData.formelement
-      .slice(count, count + limit)
-      .every((e) => {
-        //check for radio and checkbox
-        if (e.type == "checkbox") {
-          return submission[e.name]
-            ? Object.keys(submission[e.name]).every((f) => {
-                console.log(submission[e.name][f]);
-                return submission[e.name][f];
-              })
-            : false;
-        } else {
-          if (!submission[[e.name]] && e.required) {
-            console.log(e.name);
-            return false;
-          }
+  function validateInput() {
+    return formData.formelement.slice(count, count + limit).every((e) => {
+      //check for radio and checkbox
+      if (e.type == "checkbox") {
+        return submission[e.name]
+          ? Object.keys(submission[e.name]).every((f) => {
+              console.log(submission[e.name][f]);
+              return submission[e.name][f];
+            })
+          : false;
+      } else {
+        if (!submission[[e.name]] && e.required) {
+          console.log(e.name);
+          return false;
         }
-        return true;
-      });
-    if (!validationerror) {
+      }
+      return true;
+    });
+  }
+  const handleNext = () => {
+    if (!validateInput) {
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -280,6 +280,16 @@ export default function RegForm({
   }
 
   const handleSubmit = async (e) => {
+    if (!validateInput) {
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Fill All The Details",
+        val: true,
+      });
+    }
     if (
       (formData.isTeam &&
         (!isVerified ||
@@ -287,7 +297,6 @@ export default function RegForm({
           submission.teamname == "")) ||
       (formData.amount != 0 && submission.txnid.length == 0)
     ) {
-      console.log(submission);
       return setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -376,7 +385,7 @@ export default function RegForm({
                 className="submitBtn"
                 type="submit"
                 onClick={handleSubmit}
-                disabled={formData.isTeam && !isVerified}
+                disabled={formData.isTeam && !isVerified && isSubmitting}
               >
                 {isSubmitting ? <Load /> : "Submit"}
               </button>
