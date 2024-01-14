@@ -36,13 +36,11 @@ export default function RegForm({
       if (e.type == "checkbox") {
         return submission[e.name]
           ? Object.keys(submission[e.name]).every((f) => {
-              console.log(submission[e.name][f]);
               return submission[e.name][f];
             })
           : false;
       } else {
         if (!submission[[e.name]] && e.required) {
-          console.log(e.name);
           return false;
         }
       }
@@ -50,7 +48,8 @@ export default function RegForm({
     });
   }
   const handleNext = () => {
-    if (!validateInput) {
+    var validationerror = validateInput()
+    if (!validationerror) {
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -60,7 +59,7 @@ export default function RegForm({
         val: true,
       });
     }
-    !validateInput || setCount((prevCount) => prevCount + limit);
+    !validationerror || setCount((prevCount) => prevCount + limit);
   };
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -232,28 +231,7 @@ export default function RegForm({
   );
 
   const handlePayment = () => {
-    var validationerror = formData.formelement
-      .slice(count, count + limit)
-      .every((e) => {
-        //check for radio and checkbox
-        console.log(e.type);
-        if (e.type == "checkbox") {
-          return submission[e.name]
-            ? Object.keys(submission[e.name]).every((f) => {
-                console.log(submission[e.name][f]);
-                return submission[e.name][f];
-              })
-            : false;
-        } else {
-          if (!submission[[e.name]] && e.required) {
-            console.log("hello");
-            console.log(e);
-            console.log(submission);
-            return false;
-          }
-        }
-        return true;
-      });
+    var validationerror = validateInput()
     if (
       !validationerror ||
       (formData.isTeam &&
@@ -280,8 +258,9 @@ export default function RegForm({
   }
 
   const handleSubmit = async (e) => {
-    if (!validateInput) {
-      setError({
+    var validationerror = validateInput()
+    if (!validationerror) {
+      return setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
         symbol: "pets",
