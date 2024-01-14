@@ -60,7 +60,7 @@ export default function RegForm({
         val: true,
       });
     }
-    !validationerror || setCount((prevCount) => prevCount + limit);
+    !validateInput || setCount((prevCount) => prevCount + limit);
   };
   const onChange = (e) => {
     const { name, value } = e.target;
