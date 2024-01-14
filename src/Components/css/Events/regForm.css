@@ -438,7 +438,7 @@ input:checked + .slider:before {
 
 @media (max-width: 512px) {
   .form {
-    width: 80%;
+    width: 90%;
     padding: 35px;
   }
   .radioDiv {
@@ -447,6 +447,7 @@ input:checked + .slider:before {
   }
   input[type="radio"] {
     margin: 7px;
+    font-size: 90%;
   }
 }
 
