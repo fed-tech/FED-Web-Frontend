@@ -441,6 +441,13 @@ input:checked + .slider:before {
     width: 80%;
     padding: 35px;
   }
+  .radioDiv {
+    margin-top: 2%;
+    flex-flow: wrap;
+  }
+  input[type="radio"] {
+    margin: 7px;
+  }
 }
 
 @media (max-width: 409px) {
