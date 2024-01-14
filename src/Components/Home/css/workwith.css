@@ -1,5 +1,5 @@
 .img-style{
-  border: 20px solid;
+  /* border: 20px solid; */
   width: auto;
   height: auto;
   border-radius: 30px;
@@ -11,7 +11,7 @@
   border-radius: 24px;
   min-width: 250px;
   min-height: 250px;
-  background-color: #f2f1f1;
+  background-color:white;
   padding: 20px;
   height: 200px;
   width: 200px;
