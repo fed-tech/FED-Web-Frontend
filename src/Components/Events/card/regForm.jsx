@@ -318,6 +318,8 @@ export default function RegForm({
         }
       );
       if (result.status == 200) {
+        setShowPopUp(false);
+
         return setError({
           mainColor: "#EDFEEE",
           secondaryColor: "#5CB660",
@@ -339,7 +341,6 @@ export default function RegForm({
     } finally {
       setIsSubmitting(false);
     }
-    setShowPopUp(false);
   };
 
   return (
