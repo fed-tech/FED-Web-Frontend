@@ -188,13 +188,31 @@
   justify-content: center;
   align-items: center;
 }
+.believeCenterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
 
 .believeCenterCol {
-  width: 60%;
-  background-color: #fff;
+  position: relative;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.5), whitesmoke);
+  padding: 24px;
+  width: 60%; 
+  height: 180px;
+  overflow: hidden;
   border-radius: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
+  cursor: pointer;
+  transition: .2s linear;
 }
+
+.believeCenterCol:hover {
+  opacity: 1;
+  box-shadow: 0px 8px 15px #f45725;
+  background-color: white;
+}
+
 
 .believeCenterCol p {
   background-color: transparent;
