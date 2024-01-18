@@ -4,24 +4,15 @@ import React, { useEffect, useState, useContext } from "react";
 import Card from "../Components/Events/card/Card";
 import CardPrev from "../Components/Events/card/CardPrev";
 import Header from "../Components/Events/header/jsx/Header.jsx";
-import { Alert } from "../MicroInterAction/Alert";
 import Loading from "../MicroInterAction/Loading";
 import AuthContext from "../store/auth-context";
 import { getOrdinal } from "../MicroInterAction/ordinal.js";
 import axios from "axios";
 import "../Components/Team/css/loading.css";
 
-export default function Events() {
+export default function Events({setError}) {
   const [eventcard, setEvent] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const authCtx = useContext(AuthContext);
 
@@ -149,7 +140,6 @@ export default function Events() {
         </div>
         <CardPrev />
       </div>
-      <Alert variant={variants} val={setError} />
     </div>
   );
 }

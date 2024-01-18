@@ -7,7 +7,7 @@ import Header from "./Header";
 // Css
 import Lcss from "./css/loginpg.module.css";
 
-function LoginFun() {
+function LoginFun({setError}) {
   return (
     <>
       <div className={Lcss.full}>
@@ -17,7 +17,7 @@ function LoginFun() {
           </div>
           <div className={Lcss.whitebox}>
             <Header title="Welcome Back" des="Please Enter your details" />
-            <LoginForm />
+            <LoginForm setError={setError}/>
           </div>
         </div>
       </div>

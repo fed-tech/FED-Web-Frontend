@@ -13,7 +13,7 @@ import "../Components/Home/css/home.css";
 import "../Components/Home/css/space.css";
 import "../Components/Home/css/testimonial.css";
 
-export default function Home() {
+export default function Home({setError}) {
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,7 +26,7 @@ export default function Home() {
       <BelieveCom />
       <Testimonial />
       <WorkWith />
-      <LetsTalkBusiness />
+      <LetsTalkBusiness setError={setError}/>
     </>
   );
 }

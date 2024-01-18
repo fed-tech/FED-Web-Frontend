@@ -23,22 +23,13 @@ import Lcss from "./css/loginpg.module.css";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
-function LoginForm() {
+function LoginForm({setError}) {
   const [loadingEffect, setLoad] = useState(false);
   const [see, hide] = useState(false);
 
   const [user, setUser] = useState({
     email: "",
     passwrd: "",
-  });
-
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
   });
 
   const authCtx = useContext(AuthContext);
@@ -83,12 +74,6 @@ function LoginForm() {
           password,
         });
 
-        console.log(response.data);
-        console.log(
-          "response.data.status === true",
-          response.data.status === true
-        );
-
         if (response.data.status === true) {
           setLoad(false);
 
@@ -97,11 +82,9 @@ function LoginForm() {
             secondaryColor: "#5CB660",
             symbol: "check_circle",
             title: "Success",
-            text: "",
+            text: "Login Successful",
             val: true,
           });
-
-          console.log("----------------------------------------");
           await authCtx.login(
             response.data.result[0].name,
             response.data.result[0].email,
@@ -116,10 +99,6 @@ function LoginForm() {
             response.data.token,
             10800000
           );
-          console.log("====================================");
-          console.log("access->", response.data.result[0].access == "0");
-
-          console.log("authCtx.target -> ", authCtx.target);
 
           if (authCtx.target == "") {
             // navigate("/MyProfile");
@@ -142,6 +121,7 @@ function LoginForm() {
             title: "Information",
             text: "email",
             val: true,
+            email:user.email
           });
 
           return;
@@ -184,7 +164,7 @@ function LoginForm() {
 
   return (
     <>
-      <GoogleLogin setLoad={setLoad} />
+      <GoogleLogin setLoad={setLoad} setError={setError}/>
       <Or />
       <form className={Lcss.formTag}>
         <div className={Lcss.user}>
@@ -236,8 +216,6 @@ function LoginForm() {
           </Link>
         </p>
       </div>
-
-      <Alert variant={variants} val={setError} email={user.email} />
     </>
   );
 }
