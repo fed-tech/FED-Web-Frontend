@@ -57,6 +57,7 @@ export default function formField({count, setCount, submission, setSubmission, .
               {field.required ? <>* </> : <></>}
             </label>
             <div className="inputField">
+              
               <input
                 {...reqd}
                 type={field.type}
