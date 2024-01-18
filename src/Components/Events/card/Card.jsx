@@ -9,7 +9,7 @@ import AuthContext from "../../../store/auth-context";
 import "../../css/Events/eventCard.css";
 import "../../Team/css/loading.css";
 
-export default function Card({ eventcard, setError }) {
+export default function Card({ eventcard, setError}) {
   // const [eventcard, setEvent] = useState([]);
   const [showPopUp, setShowPopUp] = useState(false);
   const [currentform, setCurentForm] = useState("");
