@@ -39,6 +39,21 @@ export default function Form({setError}) {
     e.preventDefault();
     const formDetails = showFields;
     try {
+      console.log(        {
+        title: formDetails.formTitle,
+        description: formDetails.formDesc,
+        amount: formDetails.amount,
+        priority: formDetails.priority,
+        formelement: formDetails.fields,
+        event: formDetails.eventName,
+        isTeam: showTeamsize,
+        teamsize: formDetails.teamSize,
+        maxReg: formDetails.maxReg,
+        upi: formDetails.upi,
+        img: formDetails.formimg,
+        date: formDetails.date,
+        mail:formDetails.formMail
+      })
       const res = await axios.post(
         "/form/addForm",
         {
@@ -328,7 +343,7 @@ export default function Form({setError}) {
           )}
           <textarea
             onChange={handleChange}
-            name="fromMail"
+            name="formMail"
             className={formCss.formtitle}
             placeholder="Successful Registration Mail"
             required
