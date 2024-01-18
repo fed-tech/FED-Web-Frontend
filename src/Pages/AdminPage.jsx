@@ -23,7 +23,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 
-function Page() {
+function Page({setError}) {
   const [designation, setDesignation] = useState("");
   const [currPage, setCurrPage] = useState("Profile");
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -162,10 +162,10 @@ function Page() {
           {currPage === "Profile" && (
             <Profile setShowUpdateModal={setShowUpdateModal} />
           )}
-          {currPage === "Events" && <EventAdmin />}
-          {currPage === "Form" && <EventForm />}
-          {currPage === "Members" && <MembersAdmin />}
-          {currPage === "Registrations" && <MyEvents />}
+          {currPage === "Events" && <EventAdmin setError={setError}/>}
+          {currPage === "Form" && <EventForm setError={setError}/>}
+          {currPage === "Members" && <MembersAdmin setError={setError}/>}
+          {currPage === "Registrations" && <MyEvents setError={setError}/>}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />

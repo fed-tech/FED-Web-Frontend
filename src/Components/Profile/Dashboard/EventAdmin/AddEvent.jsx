@@ -10,16 +10,8 @@ import { Alert } from "../../../../MicroInterAction/Alert";
 import ImageModal from "../../ImageModal";
 import validator from "validator";
 
-function AddEvent({ setViewEvents }) {
+function AddEvent({ setViewEvents, setError }) {
   const authCtx = useContext(AuthContext);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const [previewImage, setPreviewImage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -211,7 +203,6 @@ function AddEvent({ setViewEvents }) {
       {isModalOpen && (
         <ImageModal imageUrl={previewImage} onClose={closeModal} />
       )}
-      <Alert variant={variants} val={setError} />
     </div>
   );
 }

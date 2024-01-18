@@ -10,21 +10,12 @@ import axios from "axios";
 // Css
 import "./css/LetsTalkBusiness.css";
 
-export default function LetsTalkBusiness() {
+export default function LetsTalkBusiness({setError}) {
   const [loadingEffect, setLoad] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  });
-
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
   });
 
   const onChange = (e) => {
@@ -175,8 +166,6 @@ export default function LetsTalkBusiness() {
             {loadingEffect ? <Load /> : "Send"}
           </button>
         </form>
-
-        <Alert variant={variants} val={setError} />
       </div>
     </div>
   );

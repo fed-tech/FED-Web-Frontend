@@ -18,6 +18,14 @@ export default function Card({ eventcard, setError }) {
   const navigate = useNavigate();
   const handleRegClick = (ele) => {
     if (!authCtx.isLoggedIn) {
+      setError({
+        mainColor: "#FFC0CB",
+        secondaryColor: "#FF69B4",
+        symbol: "pets",
+        title: "Check it out",
+        text: "Please Login Before Registration",
+        val: true,
+      });
       return navigate("/login");
     }
     setCurentForm(ele.target.id);
