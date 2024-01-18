@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // Components
 import LoginMain from "./../Components/Login/LoginFun";
 
-function Login() {
+function Login({setError}) {
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -11,7 +11,7 @@ function Login() {
 
   return (
     <>
-      <LoginMain />
+      <LoginMain setError={setError} />
     </>
   );
 }

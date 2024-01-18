@@ -12,18 +12,9 @@ import memberCSS from "../../../css/Profile/Dashboard/MembersAdmin/AddMember.mod
 import Load from "../../../../MicroInterAction/Load";
 import { Alert } from "../../../../MicroInterAction/Alert";
 
-export default function AddMember() {
+export default function AddMember({setError}) {
   const authCtx = useContext(AuthContext);
   const [savingal,setSavingAl] = useState(false);
-
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const [data, setData] = useState({
     name: "",
@@ -188,7 +179,6 @@ export default function AddMember() {
           </button>
         </div>
       </form>
-      <Alert variant={variants} val={setError} />
     </>
   );
 }

@@ -6,9 +6,11 @@ import axios from "axios";
 import AuthContext from "../../store/auth-context";
 import Load from "../../MicroInterAction/Load";
 import { Alert } from "../../MicroInterAction/Alert";
+import { date2str } from "../../MicroInterAction/date2str";
 // logo
 // import logo from "../../Img/image26.png"
-function EventDetails({ cardNo, setShow }) {
+
+function EventDetails({ cardNo, setShow, setError }) {
   const authCtx = useContext(AuthContext);
   const [loading,setLoading] = useState(true);
   const [deleting,setDeleting] = useState(false);
@@ -19,14 +21,6 @@ function EventDetails({ cardNo, setShow }) {
   const [forms,setForms] = useState([])
   const [currentForm,setCurrentForm] = useState({})
   const [isToggleOn, setIsToggleOn] = useState(currentForm.active);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
   //creating instance
   let api = axios.create({
     headers: {
@@ -237,7 +231,7 @@ function EventDetails({ cardNo, setShow }) {
         </div> */}
         <div className={eventCss.moreDetails}>
           <div className={eventCss.date}>
-            Event Date : {cardNo.date} {cardNo.month}
+            Event Date : {date2str(cardNo.date)}
           </div>
           <div className={eventCss.regType}>
             Registration : {cardNo.registration}
@@ -311,7 +305,6 @@ function EventDetails({ cardNo, setShow }) {
           </div>
         </div>
       )}
-      <Alert variant={variants} val={setError} />
     </div>
   );
 }

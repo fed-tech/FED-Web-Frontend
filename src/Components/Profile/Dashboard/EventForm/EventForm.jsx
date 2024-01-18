@@ -13,15 +13,7 @@ import Load from "../../../../MicroInterAction/Load";
 
 import DatePicker from "react-datepicker";
 
-export default function Form() {
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
+export default function Form({setError}) {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
@@ -51,7 +43,7 @@ export default function Form() {
         "/form/addForm",
         {
           title: formDetails.formTitle,
-          description: formDetails.forrmDesc,
+          description: formDetails.formDesc,
           amount: formDetails.amount,
           priority: formDetails.priority,
           formelement: formDetails.fields,
@@ -62,6 +54,7 @@ export default function Form() {
           upi: formDetails.upi,
           img: formDetails.formimg,
           date: formDetails.date,
+          mail:formDetails.formMail
         },
         {
           headers: {
@@ -212,7 +205,7 @@ export default function Form() {
           />
           <textarea
             onChange={handleChange}
-            name="forrmDesc"
+            name="formDesc"
             className={formCss.formtitle}
             placeholder="About Event*"
             required
@@ -333,6 +326,13 @@ export default function Form() {
           ) : (
             <></>
           )}
+          <textarea
+            onChange={handleChange}
+            name="fromMail"
+            className={formCss.formtitle}
+            placeholder="Successful Registration Mail"
+            required
+          />
           {fields}
         </form>
       </div>
@@ -344,7 +344,6 @@ export default function Form() {
           {isSaving ? <Load /> : "SAVE"}
         </button>
       </div>
-      <Alert variant={variants} val={setError} />
     </>
   );
 }

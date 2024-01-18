@@ -19,7 +19,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.formFieldContainer{
+  margin-top: 10%;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@
   height: 80%;
   width: 60%;
   padding: 50px;
-  /* overflow-y: auto; */
+  overflow-y: auto;
 }
 
 .form::-webkit-scrollbar {
@@ -102,8 +104,7 @@
 
 label {
   font-family: mulish;
-  font-weight: 100;
-
+  font-weight: bold;
   font-size: 1.25rem;
   color: white;
   margin-left: 15px;
@@ -149,10 +150,11 @@ input {
 
 .radioLabel {
   margin-right: 20%;
+  font-weight: 100;
 }
 
 .radioInp {
-  width: unset;
+  width: 50%;
   margin: 0;
   margin-right: 7px;
 }
@@ -160,9 +162,10 @@ input {
 .radioDiv {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   line-height: 0px;
   flex-flow: row wrap;
+  
 }
 
 .radioDiv div {
@@ -440,6 +443,14 @@ input:checked + .slider:before {
   .form {
     width: 80%;
     padding: 35px;
+    height: 90%;
+  }
+  .radioDiv {
+    margin-top: 2%;
+    flex-flow: wrap;
+  }
+  input[type="radio"] {
+    margin: 5%;
   }
 }
 
@@ -478,9 +489,5 @@ input:checked + .slider:before {
   .radioDiv {
     margin-top: 2%;
     flex-flow: wrap;
-  }
-
-  .labelAndRadio {
-    margin-bottom: 5%;
   }
 }

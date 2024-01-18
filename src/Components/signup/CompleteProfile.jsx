@@ -34,15 +34,7 @@ function CompleteProfile(props) {
     img: "",
     tandC: false,
   });
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
-
+  var setError = props.setError
   let menu = useRef();
 
   const authCtx = useContext(AuthContext);
@@ -198,7 +190,8 @@ function CompleteProfile(props) {
           props.set(false);
 
           if (authCtx.target == "") {
-            navigate("/MyProfile");
+            // navigate("/MyProfile");
+            window.history.back();
           } else {
             navigate(`/${authCtx.target}`);
             authCtx.settarget(null);
@@ -414,8 +407,6 @@ function CompleteProfile(props) {
           </form>
         </div>
       </div>
-
-      <Alert variant={variants} val={setError} />
     </div>
   );
 }

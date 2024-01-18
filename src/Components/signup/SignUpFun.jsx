@@ -7,7 +7,7 @@ import Header from "./../Login/Header";
 // Css
 import SuCss from "./css/Signup.module.css";
 
-function SignUpFun() {
+function SignUpFun({setError}) {
   return (
     <>
       <div className={SuCss.mDiv}>
@@ -16,7 +16,7 @@ function SignUpFun() {
             <p className={SuCss.FED}>FED</p>
             <div className={SuCss.wFFFDiv}>
               <Header title="Hello There" des="Please enter Your Details" />
-              <SignupForm />
+              <SignupForm setError={setError}/>
             </div>
           </div>
         </div>

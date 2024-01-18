@@ -6,7 +6,7 @@ import ViewMembers from "./ViewMembers";
 import ViewAlumni from "./ViewAlumni";
 import AddMember from "./AddMember";
 
-export default function MembersAdmin() {
+export default function MembersAdmin({setError}) {
   const [memNav, setMemNav] = useState({
     viewMem: true,
     viewAlumni: false,
@@ -55,9 +55,9 @@ export default function MembersAdmin() {
         </div>
       </div>
       <div className={memberCSS.content}>
-        {memNav.viewMem && <ViewMembers />}
+        {memNav.viewMem && <ViewMembers/>}
         {memNav.viewAlumni && <ViewAlumni />}
-        {memNav.addMem && <AddMember />}
+        {memNav.addMem && <AddMember setError={setError}/>}
       </div>
     </div>
   );

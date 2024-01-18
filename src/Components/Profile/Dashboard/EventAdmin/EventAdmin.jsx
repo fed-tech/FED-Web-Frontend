@@ -10,11 +10,10 @@ import "../../../css/Profile/Dashboard/EventAdmin/EventAdmin.css";
 // import axios from "axios";
 import AuthContext from "../../../../store/auth-context";
 
-function EventAdmin() {
+function EventAdmin({setError}) {
   const [viewEvents, setViewEvents] = useState(true);
   const [showEvent, setShow] = useState(false);
   const [cardNo, setCardNo] = useState("");
-  const authCtx = useContext(AuthContext);
   const handleView = (e) => {
     e.target.style.color = "#f45725";
     setViewEvents(true);
@@ -40,8 +39,8 @@ function EventAdmin() {
         </p>
       </div>
       <div className="info_content">
-        {viewEvents && <ViewEvents showEvent = {showEvent} setShow = {setShow} setCardNo = {setCardNo} cardNo= {cardNo}/>}
-        {!viewEvents && <AddEvent setViewEvents={setViewEvents} />}
+        {viewEvents && <ViewEvents setError={setError} showEvent = {showEvent} setShow = {setShow} setCardNo = {setCardNo} cardNo= {cardNo}/>}
+        {!viewEvents && <AddEvent setError={setError} setViewEvents={setViewEvents} />}
       </div>
     </div>
   );
