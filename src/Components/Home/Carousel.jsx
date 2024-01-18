@@ -23,6 +23,16 @@ export default class SimpleSlider extends Component {
     return (
       <div>
         <Slider {...settings}>
+        <div>
+            <SliderComponent
+              image="https://assets-global.website-files.com/65a8bedf841c57da58f51211/65a945cc1f0bba41c914ddb0_Rectangle%2039268.png"
+              para1="FED is"
+              coloredPara=" Recruiting!"
+              para2="Join FED - Ignite Your Entrepreneurial Spirit!"
+              para3="Discover a world of innovation and creativity at the Federation of Entrepreneurship Development(FED)"
+              button="true"
+            />
+          </div>
           <div>
             <SliderComponent
               image="https://uploads-ssl.webflow.com/63fa5ca40e9534258ea78986/63fa6c18300f0c3b718d0f99_h1.png"
