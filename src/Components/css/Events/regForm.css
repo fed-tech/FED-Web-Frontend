@@ -58,6 +58,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  margin: 2%;
 }
 
 .fontDets {
@@ -74,6 +75,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  margin: 2%;
 }
 
 .submitBtn {
