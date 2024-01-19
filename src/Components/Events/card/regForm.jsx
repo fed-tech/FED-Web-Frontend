@@ -8,6 +8,7 @@ import Load from "../../../MicroInterAction/Load";
 import axios from "axios";
 import AuthContext from "../../../store/auth-context";
 import { QRCodeSVG } from "qrcode.react";
+import { useNavigate } from "react-router-dom";
 export default function RegForm({
   showPopUp,
   setShowPopUp,
@@ -30,6 +31,7 @@ export default function RegForm({
   var formData = formelement;
   var showTeam = formData.isTeam;
   var isPaid = formData.amount != 0;
+  const navigate = useNavigate();
   function validateInput() {
     return formData.formelement.slice(count, count + limit).every((e) => {
       //check for radio and checkbox
@@ -48,7 +50,7 @@ export default function RegForm({
     });
   }
   const handleNext = () => {
-    var validationerror = validateInput()
+    var validationerror = validateInput();
     if (!validationerror) {
       setError({
         mainColor: "#FFC0CB",
@@ -231,7 +233,7 @@ export default function RegForm({
   );
 
   const handlePayment = () => {
-    var validationerror = validateInput()
+    var validationerror = validateInput();
     if (
       !validationerror ||
       (formData.isTeam &&
@@ -258,7 +260,7 @@ export default function RegForm({
   }
 
   const handleSubmit = async (e) => {
-    var validationerror = validateInput()
+    var validationerror = validateInput();
     if (!validationerror) {
       return setError({
         mainColor: "#FFC0CB",
@@ -298,8 +300,7 @@ export default function RegForm({
       );
       if (result.status == 200) {
         setShowPopUp(false);
-
-        return setError({
+        setError({
           mainColor: "#EDFEEE",
           secondaryColor: "#5CB660",
           symbol: "check_circle",
@@ -307,8 +308,12 @@ export default function RegForm({
           text: "Data submitted successfully",
           val: true,
         });
+        setTimeout(() => {
+          return window.location.reload();
+        }, 2000);
       }
     } catch (error) {
+      console.log(error);
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",

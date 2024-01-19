@@ -70,12 +70,13 @@ export default function Events({setError}) {
   };
 
   const getRegisteredEvent = async () => {
+    console.log("called")
     if (authCtx.isLoggedIn) {
       var result = await axios.get("/form/getuserform", {
         headers: { Authorization: authCtx.token },
       });
     }
-    console.log(result.data);
+    // console.log(result.data);
     var final = eventcard;
     final.forEach((e) => {
       if (result.data.includes(e.formid)) {
@@ -96,9 +97,7 @@ export default function Events({setError}) {
       return formDate < todayDate && e.isLive;
     });
     categorised.closed = final.filter((e) => !e.isLive);
-    console.log(categorised);
     setEvent(categorised);
-    setShowPopUp(false);
   };
 
   useEffect(() => {
@@ -106,11 +105,6 @@ export default function Events({setError}) {
     getEvent();
     getRegisteredEvent();
   }, []);
-  // scroll to top
-  useEffect(() => {
-    console.log(eventcard);
-  }, [eventcard]);
-
   return (
     <div className="mEventsDiv">
       <div>
@@ -118,7 +112,7 @@ export default function Events({setError}) {
         {loading ? (
           <Loading />
         ) : (
-          <Card eventcard={eventcard.ongoing} setError={setError} />
+          <Card eventcard={eventcard.ongoing} setError={setError}/>
         )}
       </div>
       <div>

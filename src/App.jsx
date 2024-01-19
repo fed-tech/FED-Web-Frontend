@@ -211,7 +211,7 @@ function App() {
               </Routes>
             </div>
           </div>
-          <Alert variant={variants} setError={setError} />
+          <Alert variant={variants} val={setError} />
           <Footer />
         </Layout>
       </BrowserRouter>
