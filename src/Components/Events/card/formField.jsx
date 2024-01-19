@@ -33,7 +33,11 @@ export default function formField({
           <select onChange={onChange} className={"year"} name={field.name}>
             <option hidden>Please Select</option>
             {field.value.split(",").map((radio) => {
-              return <option>{radio}</option>;
+              var selected = submission[field.name] &&
+              submission[field.name] == radio
+              ? true
+              : false
+              return <option selected={selected}>{radio}</option>;
             })}
           </select>
         </div>
