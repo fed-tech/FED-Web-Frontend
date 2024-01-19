@@ -306,7 +306,21 @@ input:checked + .slider:before {
   align-self: center;
   font-size: 1rem;
 }
+.year {
+  outline: none;
+  width: 90%;
+  color: white;
+  background-color: #0f0e0e;
+  padding: 15px;
+  border: 1px solid #717171;
+  border-radius: 7px;
+  font-size: 1rem;
 
+}
+.year option {
+  color: white;
+  font-size: 1rem;
+}
 @media (max-width: 1027px) {
   .teamHead {
     margin-top: 10%;
