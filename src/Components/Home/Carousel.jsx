@@ -33,7 +33,7 @@ export default class SimpleSlider extends Component {
               button="true"
             />
           </div>
-          <div>
+          {/* <div>
             <SliderComponent
               image="https://uploads-ssl.webflow.com/64553d5a8ac054ad27b992c4/65aaaebb4154d6975cb896fe_63fa6c18300f0c3b718d0f99_h1-min.jpg"
               para1="Federation of"
@@ -62,7 +62,7 @@ export default class SimpleSlider extends Component {
               para3='"Peace is a journey of a thousand miles and it must be taken one step at a time."― Lyndon B. Johnson'
               button="false"
             />
-          </div>
+          </div> */}
         </Slider>
       </div>
     );
