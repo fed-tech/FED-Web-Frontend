@@ -9,7 +9,7 @@ export default function SliderComponent(props) {
       <div
         className="text"
         style={{
-          backgroundImage: `url('${props.image}')`,
+          backgroundImage: `linear-gradient(to top, #0f0e0e 0%, rgba(0, 0, 0, 0) 20%,rgba(0, 0, 0, 0) 100%),url('${props.image}')`,
           height: "740px",
           width: "100%",
           backgroundPosition: "center",
