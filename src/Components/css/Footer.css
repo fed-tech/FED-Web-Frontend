@@ -216,6 +216,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .terms_and_policies a {
   margin: 20px 10px 10px 10px;
   /* text-decoration: none; */
@@ -326,6 +327,7 @@
 }
 
 @media screen and (max-width: 370px) {
+
   .para1,
   .para2 {
     width: 100%;

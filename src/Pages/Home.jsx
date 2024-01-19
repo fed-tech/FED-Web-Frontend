@@ -25,7 +25,7 @@ export default function Home({setError}) {
       <KnowUsCom />
       <BelieveCom />
       <Testimonial />
-      <WorkWith />
+      {/* <WorkWith /> */}
       <LetsTalkBusiness setError={setError}/>
     </>
   );
