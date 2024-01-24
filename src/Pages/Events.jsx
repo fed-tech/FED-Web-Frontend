@@ -10,7 +10,7 @@ import { getOrdinal } from "../MicroInterAction/ordinal.js";
 import axios from "axios";
 import "../Components/Team/css/loading.css";
 
-export default function Events({setError}) {
+export default function Events({ setError }) {
   const [eventcard, setEvent] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -70,7 +70,7 @@ export default function Events({setError}) {
   };
 
   const getRegisteredEvent = async () => {
-    console.log("called")
+    console.log("called");
     if (authCtx.isLoggedIn) {
       var result = await axios.get("/form/getuserform", {
         headers: { Authorization: authCtx.token },
@@ -108,15 +108,19 @@ export default function Events({setError}) {
   return (
     <div className="mEventsDiv">
       <div>
-        <Header head="Ongoing Events" />
+        {Object.keys(eventcard).includes("ongoing") ?<Header head="Ongoing Events" />:<></>}
         {loading ? (
           <Loading />
         ) : (
-          <Card eventcard={eventcard.ongoing} setError={setError}/>
+          <Card eventcard={eventcard.ongoing} setError={setError} />
         )}
       </div>
       <div>
-        <Header head="Upcoming Events" />
+        {Object.keys(eventcard).includes("upcomming") ? (
+          <Header head="Upcoming Events" />
+        ) : (
+          <></>
+        )}
         {loading ? (
           <Loading />
         ) : (
