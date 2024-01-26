@@ -70,7 +70,6 @@ export default function Events({ setError }) {
   };
 
   const getRegisteredEvent = async () => {
-    console.log("called");
     if (authCtx.isLoggedIn) {
       var result = await axios.get("/form/getuserform", {
         headers: { Authorization: authCtx.token },
@@ -142,7 +141,7 @@ export default function Events({ setError }) {
             <Card eventcard={eventcard.closed} setError={setError} />
           )}
         </div>
-        <CardPrev />
+        {/* <CardPrev /> */}
       </div>
     </div>
   );
