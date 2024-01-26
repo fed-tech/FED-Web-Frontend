@@ -108,7 +108,12 @@ export default function Events({ setError }) {
   return (
     <div className="mEventsDiv">
       <div>
-        {Object.keys(eventcard).includes("ongoing") ?<Header head="Ongoing Events" />:<></>}
+        {Object.keys(eventcard).includes("ongoing") &&
+        eventcard["ongoing"].length != 0 ? (
+          <Header head="Ongoing Events" />
+        ) : (
+          <></>
+        )}
         {loading ? (
           <Loading />
         ) : (
@@ -116,7 +121,8 @@ export default function Events({ setError }) {
         )}
       </div>
       <div>
-        {Object.keys(eventcard).includes("upcomming") ? (
+        {Object.keys(eventcard).includes("upcoming") &&
+        eventcard["upcoming"].length != 0 ? (
           <Header head="Upcoming Events" />
         ) : (
           <></>
