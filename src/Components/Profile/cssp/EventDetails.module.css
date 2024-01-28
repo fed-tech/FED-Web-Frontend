@@ -112,16 +112,11 @@
   padding-right: 20px;
   cursor: pointer;
   box-sizing: border-box;
-  overflow: scroll;
-  scrollbar-width: thin;
+  overflow: hidden;
   -ms-overflow-style: none;
   white-space: nowrap;
 }
 
-.form::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
 
 .form:hover {
   box-shadow: 0 0 5px #fff, 0 0 10px #fff;
@@ -157,14 +152,6 @@
   margin-right: 5px;
   margin-left: 15px;
 }
-
-.registrationsCount{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-
 /* Modal */
 .modal {
   position: fixed;
@@ -178,8 +165,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   max-width: 80%;
-  width: 500px;
-  height:70%;
+  width: 40%;
+  max-height:70%;
   box-shadow: 0 6px 6px 0 black, 0 6px 10px 0 white;
   overflow-y: auto;
   /* backdrop-filter: blur(5px); */

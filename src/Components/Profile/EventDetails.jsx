@@ -13,46 +13,48 @@ import { date2str } from "../../MicroInterAction/date2str";
 function EventDetails({ cardNo, setShow, setError }) {
   const authCtx = useContext(AuthContext);
   const [designation, setDesignation] = useState("");
-  const [loading,setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [registrationsCount, setRegistrationsCount] = useState("");
-  const [deleting,setDeleting] = useState(false);
-  const [editing,setEditing] = useState(false);
-  const [deletingform,setDeletingForm] = useState(false);
-  const [viewingform,setViewingForm] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [editing, setEditing] = useState(false);
+  const [deletingform, setDeletingForm] = useState(false);
+  const [viewingform, setViewingForm] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [forms,setForms] = useState([])
-  const [currentForm,setCurrentForm] = useState({})
+  const [forms, setForms] = useState([]);
+  const [currentForm, setCurrentForm] = useState({});
   const [isToggleOn, setIsToggleOn] = useState(currentForm.active);
   //creating instance
   let api = axios.create({
     headers: {
       Authorization: authCtx.token,
-    }
-  })
-  api.interceptors.response.use((response) => response, (error) => {
-    // whatever you want to do with the error
-    if(error.response.status >= 500){
-      setError({
-        mainColor: "#FFC0CB",
-        secondaryColor: "#FF69B4",
-        symbol: "pets",
-        title: "Server Error",
-        text: "Internal Server Error",
-        val: true,
-      });
-    }
-    else if(error.response.status >= 400){
-      setError({
-        mainColor: "#FFC0CB",
-        secondaryColor: "#FF69B4",
-        symbol: "pets",
-        title: "Server Error",
-        text: "You Dont Have Access",
-        val: true,
-      });
-    }
-    throw error
+    },
   });
+  api.interceptors.response.use(
+    (response) => response,
+    (error) => {
+      // whatever you want to do with the error
+      if (error.response.status >= 500) {
+        setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "pets",
+          title: "Server Error",
+          text: "Internal Server Error",
+          val: true,
+        });
+      } else if (error.response.status >= 400) {
+        setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "pets",
+          title: "Server Error",
+          text: "You Dont Have Access",
+          val: true,
+        });
+      }
+      throw error;
+    }
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -73,7 +75,6 @@ function EventDetails({ cardNo, setShow, setError }) {
       const response = await api.delete(`/event/deleteevent/${id}`);
       console.log(response);
       if (response.status === 200) {
-
         setDeleting(true);
 
         setError({
@@ -84,12 +85,10 @@ function EventDetails({ cardNo, setShow, setError }) {
           text: "Event deleted successfully!",
           val: true,
         });
-        
-  
-          console.log("Event deleted");
-          setShow(false);
-          window.scrollTo(0, 0);
-        
+
+        console.log("Event deleted");
+        setShow(false);
+        window.scrollTo(0, 0);
       }
     } catch (err) {
       console.log(err);
@@ -97,20 +96,18 @@ function EventDetails({ cardNo, setShow, setError }) {
   };
 
   const handleEdit = async () => {
-
     setEditing(true);
     setTimeout(() => {
       setEditing(false);
     }, 1000);
   };
 
-  const handleDeleteform = async () => {  
+  const handleDeleteform = async () => {
     const id = currentForm._id;
     try {
       const response = await api.delete(`/form/deleteForm?formid=${id}`);
       console.log(response);
       if (response.status === 200) {
-
         setDeletingForm(true);
         setTimeout(() => {
           setDeletingForm(false);
@@ -124,11 +121,11 @@ function EventDetails({ cardNo, setShow, setError }) {
           text: "Form deleted successfully!",
           val: true,
         });
-        
-          console.log("Form deleted");
-          handleCloseModal();
-          makeRequest()
-          window.scrollTo(0, 0);
+
+        console.log("Form deleted");
+        handleCloseModal();
+        makeRequest();
+        window.scrollTo(0, 0);
       }
     } catch (err) {
       console.log(err);
@@ -137,7 +134,6 @@ function EventDetails({ cardNo, setShow, setError }) {
 
   //overall functionality still remaining
   const handleViewform = async () => {
-
     setViewingForm(true);
     setTimeout(() => {
       setViewingForm(false);
@@ -151,15 +147,13 @@ function EventDetails({ cardNo, setShow, setError }) {
       text: "Form Viewed successfully!",
       val: true,
     });
-      console.log("Form viewed");
-      handleCloseModal();
-      window.scrollTo(0, 0);
+    console.log("Form viewed");
+    handleCloseModal();
+    window.scrollTo(0, 0);
   };
 
-  
-
   const handleToggle = async () => {
-    await api.get(`/form/toggleform?formid=${currentForm._id}`)
+    await api.get(`/form/toggleform?formid=${currentForm._id}`);
     setIsToggleOn((prevState) => !prevState);
     setError({
       mainColor: "pink",
@@ -169,25 +163,24 @@ function EventDetails({ cardNo, setShow, setError }) {
       text: isToggleOn ? "Form is Closed !" : "Form is Currently Active !",
       val: true,
     });
-    toggleModal()
-    makeRequest()
+    toggleModal();
+    makeRequest();
   };
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
 
     if (!isModalOpen) {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
       setIsModalOpen(true);
     } else {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
 
       setTimeout(() => {
         setIsModalOpen(false);
       }, 500);
     }
   };
-  
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -195,24 +188,22 @@ function EventDetails({ cardNo, setShow, setError }) {
 
   const handleFormClick = (form) => {
     if (designation === "Member") {
-        setTimeout(() => {
-            countRequest(form);
-        }, 50); 
-    }
 
+    }
+    countRequest(form);
     setCurrentForm(form);
     setIsToggleOn(form.active);
     toggleModal(); // Open or close the modal
-    setLoading(false)
+    setLoading(false);
   };
 
-  const countRequest = async(form) =>{
+  const countRequest = async (form) => {
     try {
       setRegistrationsCount("");
-      setLoading(true)
-      console.log("Current form id : ",form._id);
+      setLoading(true);
+      console.log("Current form id : ", form._id);
       const formres = await api.get(
-        `/form/countRegistrations?formid=${form._id}`,        
+        `/form/countRegistrations?formid=${form._id}`,
         {
           headers: {
             Authorization: authCtx.token,
@@ -223,62 +214,56 @@ function EventDetails({ cardNo, setShow, setError }) {
       // console.log("Response data id count: ",formres.data);
 
       if (formres.status === 200) {
+        setRegistrationsCount(formres.data);
+        // COUNTER IMPLEMENTATION
+        // let ascend = 0;
+        // const intervalId = setInterval(() => {
 
-          setRegistrationsCount(formres.data);
-          // COUNTER IMPLEMENTATION
-          // let ascend = 0;
-          // const intervalId = setInterval(() => {
+        //     // Update the registrations count
+        //     setRegistrationsCount(ascend);
+        //     console.log(ascend);
 
-          //     // Update the registrations count
-          //     setRegistrationsCount(ascend);
-          //     console.log(ascend);
-              
-          //     if (ascend >= formres.data) {
-          //         clearInterval(intervalId);
-          //     }
+        //     if (ascend >= formres.data) {
+        //         clearInterval(intervalId);
+        //     }
 
-          //     ascend++;
-          // }, 100);
-
+        //     ascend++;
+        // }, 100);
       }
       setLoading(false);
-
     } catch (err) {
       console.log(err);
     }
   };
 
-  const makeRequest= async()=>{
+  const makeRequest = async () => {
     try {
-      setForms([])
-      var eventid = cardNo._id
-      setLoading(true)
-      const res = await api.get(
-        `/form/getForm?eventid=${eventid}`,        
-        {
-          headers: {
-            Authorization: authCtx.token,
-          },
-        }
-      );
+      setForms([]);
+      var eventid = cardNo._id;
+      setLoading(true);
+      const res = await api.get(`/form/getForm?eventid=${eventid}`, {
+        headers: {
+          Authorization: authCtx.token,
+        },
+      });
 
       //console.log("Response view forms data:",res.data);
       //console.log("Response view forms data id:",res.data[0]._id);
 
       if (res.status == 200) {
-        setForms(res.data)
+        setForms(res.data);
       }
-      setLoading(false)
+      setLoading(false);
     } catch (err) {
       console.log(err);
     }
-  }
-  useEffect(()=>{
-    console.log(forms)
-  },[forms])
+  };
+  useEffect(() => {
+    console.log(forms);
+  }, [forms]);
   useEffect(() => {
     console.log(cardNo);
-    makeRequest()
+    makeRequest();
   }, []);
 
   return (
@@ -337,67 +322,49 @@ function EventDetails({ cardNo, setShow, setError }) {
               {deleting ? <Load /> : "Delete"}
             </button>
           </div>
-        ) : (<div></div>)}
-
-        {designation === "Member" ? (
-          <div></div>
-        ) : (<div></div>)}
-
+        ) : (
+          <></>
+        )}
       </div>
 
       <div>
-        {designation === "Admin" && isModalOpen && (
+        {isModalOpen && (
           <div className={`${eventCss.modal} ${eventCss["slide-from-top"]}`}>
             <span className={eventCss.close} onClick={handleCloseModal}>
               &times;
             </span>
             <div for="form details">
-              {Object.keys(currentForm).map((elem, idx) => {
-                return (
-                  <div key={idx}>
-                    <span>{[elem]}:</span>
-                    <label>{JSON.stringify(currentForm[elem])}</label>
-                  </div>
-                );
-              })}
+              {loading ? (
+                <Load></Load>
+              ) : (
+                <>
+                  <h3>Total Registrations: {registrationsCount}</h3>
+                </>
+              )}
             </div>
-            <div className={eventCss.modbtns}>
-              <button onClick={handleDeleteform}>
-                {deletingform ? <Load /> : "Delete"}
-              </button>
-              <button onClick={handleViewform}>
-                {viewingform ? <Load /> : "View Form"}
-              </button>
-              <label className={eventCss.switch}>
-                <input
-                  input
-                  type="checkbox"
-                  checked={isToggleOn}
-                  onChange={handleToggle}
-                />
-                <span className={eventCss.slider}></span>
-              </label>
-            </div>
+            {designation === "Admin" && (
+              <div className={eventCss.modbtns}>
+                <button onClick={handleDeleteform}>
+                  {deletingform ? <Load /> : "Delete"}
+                </button>
+                <button onClick={handleViewform}>
+                  {viewingform ? <Load /> : "View Form"}
+                </button>
+                <label className={eventCss.switch}>
+                  <input
+                    input
+                    type="checkbox"
+                    checked={isToggleOn}
+                    onChange={handleToggle}
+                  />
+                  <span className={eventCss.slider}></span>
+                </label>
+              </div>
+            )}
           </div>
         )}
       </div>
-      <div>
-        {designation === "Member" && isModalOpen && (
-          <div className={`${eventCss.modal} ${eventCss["slide-from-top"]}`}>
-            <span className={eventCss.close} onClick={handleCloseModal}>
-              &times;
-            </span>
-
-            <div className={eventCss.registrationsCount}> 
-              <h2>Total Registrations</h2>
-              <h1>{registrationsCount}</h1>
-              <br></br>
-              {loading ? <Load></Load> : <></>}
-            </div>  
-          </div>
-        )}
-      </div>
-  </div>
+    </div>
   );
 }
 
