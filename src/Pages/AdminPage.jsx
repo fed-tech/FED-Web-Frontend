@@ -130,6 +130,26 @@ function Page({setError}) {
               ) : (
                 <></>
               )}
+
+              {designation === "Member" ? (
+                <div
+                    onClick={handleSetPage}
+                    className={
+                      currPage === "Events"
+                        ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                        : `${pageCss.dashboardBottom_options}`
+                    }
+                  >
+                    <InsertInvitationIcon
+                      className={pageCss.dashboardBottom_icons}
+                      id="Events"
+                    />
+                    <p id="Events">Events</p>
+                </div>
+              ) : (
+                <></>
+              )}
+
               {designation === "User" ? (
                 <div
                   onClick={handleSetPage}

@@ -12,7 +12,9 @@ import { date2str } from "../../MicroInterAction/date2str";
 
 function EventDetails({ cardNo, setShow, setError }) {
   const authCtx = useContext(AuthContext);
+  const [designation, setDesignation] = useState("");
   const [loading,setLoading] = useState(true);
+  const [registrationsCount, setRegistrationsCount] = useState("");
   const [deleting,setDeleting] = useState(false);
   const [editing,setEditing] = useState(false);
   const [deletingform,setDeletingForm] = useState(false);
@@ -52,6 +54,18 @@ function EventDetails({ cardNo, setShow, setError }) {
     throw error
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    if (authCtx.user.access == 0) {
+      setDesignation("Admin");
+    } else if (authCtx.user.access == 1) {
+      setDesignation("User");
+    } else if (authCtx.user.access == 7) {
+      setDesignation("Alumni");
+    } else {
+      setDesignation("Member");
+    }
+  }, [authCtx.user.access]);
 
   const handleDelete = async () => {
     const id = cardNo._id;
@@ -180,9 +194,58 @@ function EventDetails({ cardNo, setShow, setError }) {
   };
 
   const handleFormClick = (form) => {
+    if (designation === "Member") {
+        setTimeout(() => {
+            countRequest(form);
+        }, 50); 
+    }
+
     setCurrentForm(form);
-    setIsToggleOn(form.active)
+    setIsToggleOn(form.active);
     toggleModal(); // Open or close the modal
+    setLoading(false)
+  };
+
+  const countRequest = async(form) =>{
+    try {
+      setRegistrationsCount("");
+      setLoading(true)
+      console.log("Current form id : ",form._id);
+      const formres = await api.get(
+        `/form/countRegistrations?formid=${form._id}`,        
+        {
+          headers: {
+            Authorization: authCtx.token,
+          },
+        }
+      );
+
+      // console.log("Response data id count: ",formres.data);
+
+      if (formres.status === 200) {
+
+          setRegistrationsCount(formres.data);
+          // COUNTER IMPLEMENTATION
+          // let ascend = 0;
+          // const intervalId = setInterval(() => {
+
+          //     // Update the registrations count
+          //     setRegistrationsCount(ascend);
+          //     console.log(ascend);
+              
+          //     if (ascend >= formres.data) {
+          //         clearInterval(intervalId);
+          //     }
+
+          //     ascend++;
+          // }, 100);
+
+      }
+      setLoading(false);
+
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const makeRequest= async()=>{
@@ -198,6 +261,10 @@ function EventDetails({ cardNo, setShow, setError }) {
           },
         }
       );
+
+      //console.log("Response view forms data:",res.data);
+      //console.log("Response view forms data id:",res.data[0]._id);
+
       if (res.status == 200) {
         setForms(res.data)
       }
@@ -260,52 +327,77 @@ function EventDetails({ cardNo, setShow, setError }) {
             </>
           )}
         </div>
-        <div className={eventCss.btns}>
-          <button className={eventCss.edit} onClick={handleEdit}>
-            {editing ? <Load /> : "Edit"}
-          </button>
-          <button className={eventCss.delete} onClick={handleDelete}>
-            {deleting ? <Load /> : "Delete"}
-          </button>
-        </div>
+
+        {designation === "Admin" ? (
+          <div className={eventCss.btns}>
+            <button className={eventCss.edit} onClick={handleEdit}>
+              {editing ? <Load /> : "Edit"}
+            </button>
+            <button className={eventCss.delete} onClick={handleDelete}>
+              {deleting ? <Load /> : "Delete"}
+            </button>
+          </div>
+        ) : (<div></div>)}
+
+        {designation === "Member" ? (
+          <div></div>
+        ) : (<div></div>)}
+
       </div>
 
-      {isModalOpen && (
-        <div className={`${eventCss.modal} ${eventCss["slide-from-top"]}`}>
-          <span className={eventCss.close} onClick={handleCloseModal}>
-            &times;
-          </span>
-          <div for="form details">
-            {Object.keys(currentForm).map((elem,idx) => {
+      <div>
+        {designation === "Admin" && isModalOpen && (
+          <div className={`${eventCss.modal} ${eventCss["slide-from-top"]}`}>
+            <span className={eventCss.close} onClick={handleCloseModal}>
+              &times;
+            </span>
+            <div for="form details">
+              {Object.keys(currentForm).map((elem, idx) => {
                 return (
                   <div key={idx}>
                     <span>{[elem]}:</span>
                     <label>{JSON.stringify(currentForm[elem])}</label>
                   </div>
                 );
-            })}
+              })}
+            </div>
+            <div className={eventCss.modbtns}>
+              <button onClick={handleDeleteform}>
+                {deletingform ? <Load /> : "Delete"}
+              </button>
+              <button onClick={handleViewform}>
+                {viewingform ? <Load /> : "View Form"}
+              </button>
+              <label className={eventCss.switch}>
+                <input
+                  input
+                  type="checkbox"
+                  checked={isToggleOn}
+                  onChange={handleToggle}
+                />
+                <span className={eventCss.slider}></span>
+              </label>
+            </div>
           </div>
-          <div className={eventCss.modbtns}>
-            <button onClick={handleDeleteform}>
-              {deletingform ? <Load /> : "Delete"}
-            </button>
-            <button onClick={handleViewform}>
-              {viewingform ? <Load /> : "View Form"}
-            </button>
-    
-            <label className={eventCss.switch}>
-            <input
-              input
-              type="checkbox"
-              checked={isToggleOn}
-              onChange={handleToggle}
-            />
-            <span className={eventCss.slider}></span>
-          </label>
+        )}
+      </div>
+      <div>
+        {designation === "Member" && isModalOpen && (
+          <div className={`${eventCss.modal} ${eventCss["slide-from-top"]}`}>
+            <span className={eventCss.close} onClick={handleCloseModal}>
+              &times;
+            </span>
+
+            <div className={eventCss.registrationsCount}> 
+              <h2>Total Registrations</h2>
+              <h1>{registrationsCount}</h1>
+              <br></br>
+              {loading ? <Load></Load> : <></>}
+            </div>  
           </div>
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+  </div>
   );
 }
 
