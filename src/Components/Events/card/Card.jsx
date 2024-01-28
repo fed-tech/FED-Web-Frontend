@@ -14,6 +14,7 @@ export default function Card({ eventcard, setError}) {
   const [showPopUp, setShowPopUp] = useState(false);
   const [currentform, setCurentForm] = useState("");
   const [currentformelement, setCurentFormElement] = useState([]);
+  const [currentformname, setCurentFormName] = useState([]);
   const authCtx = useContext(AuthContext);
   const navigate = useNavigate();
   const handleRegClick = (ele) => {
@@ -31,6 +32,7 @@ export default function Card({ eventcard, setError}) {
     setCurentForm(ele.target.id);
     eventcard.forEach((e) => {
       if (e.formid == ele.target.id) {
+        setCurentFormName(e.title)
         e.formelement = e.formelement.map((e) => {
           var temp = {};
           temp.name = e.name;
@@ -125,6 +127,7 @@ export default function Card({ eventcard, setError}) {
           setError={setError}
           formid={currentform}
           formelement={currentformelement}
+          formName={currentformname}
         />
       )}
     </div>

@@ -10,7 +10,7 @@ import { getOrdinal } from "../MicroInterAction/ordinal.js";
 import axios from "axios";
 import "../Components/Team/css/loading.css";
 
-export default function Events({setError}) {
+export default function Events({ setError }) {
   const [eventcard, setEvent] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -108,7 +108,12 @@ export default function Events({setError}) {
   return (
     <div className="mEventsDiv">
       <div>
-        <Header head="Ongoing Events" />
+        {Object.keys(eventcard).includes("ongoing") &&
+        eventcard["ongoing"].length != 0 ? (
+          <Header head="Ongoing Events" />
+        ) : (
+          <></>
+        )}
         {loading ? (
           <Loading />
         ) : (
@@ -116,7 +121,12 @@ export default function Events({setError}) {
         )}
       </div>
       <div>
-        <Header head="Upcoming Events" />
+        {Object.keys(eventcard).includes("upcoming") &&
+        eventcard["upcoming"].length != 0 ? (
+          <Header head="Upcoming Events" />
+        ) : (
+          <></>
+        )}
         {loading ? (
           <Loading />
         ) : (
@@ -132,7 +142,7 @@ export default function Events({setError}) {
             <Card eventcard={eventcard.closed} setError={setError} />
           )}
         </div>
-        <CardPrev />
+        {/* <CardPrev /> */}
       </div>
     </div>
   );

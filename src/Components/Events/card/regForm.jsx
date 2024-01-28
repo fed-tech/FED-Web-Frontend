@@ -15,6 +15,7 @@ export default function RegForm({
   setError,
   formid,
   formelement,
+  formName,
 }) {
   const authCtx = useContext(AuthContext);
   const [limit, setLimit] = useState(3);
@@ -330,12 +331,32 @@ export default function RegForm({
   return (
     <div className="regFormPopUp">
       <div className="form">
-        <img
-          src={cancel}
-          alt=""
-          onClick={() => setShowPopUp(false)}
-          id="CloseIcon"
-        />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignContent: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <label
+            style={{
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              width: "70%",
+            }}
+          >
+            {formName}
+          </label>
+          <img
+            src={cancel}
+            alt=""
+            onClick={() => setShowPopUp(false)}
+            id="CloseIcon"
+          />
+        </div>
+
         <div className="formFieldContainer">
           {showFields ? visibleFields : <></>}
           {showPayment ? Paymentpage : <></>}

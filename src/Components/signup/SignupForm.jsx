@@ -96,7 +96,7 @@ function SignupForm({setError}) {
             secondaryColor: "#1AB1F5",
             symbol: "info",
             title: "Information",
-            text: "Please check your mail",
+            text: "Verification link has been sent",
             val: true,
           });
         }
