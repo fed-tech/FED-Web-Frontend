@@ -1,25 +1,24 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
-
+import DOMPurify from "dompurify";
 // Components
 import AddField from "./AddField";
 
 // css
 import formCss from "../../../css/Profile/Dashboard/EventForm/EventForm.module.css";
 import "react-datepicker/dist/react-datepicker.css";
-import { Alert } from "../../../../MicroInterAction/Alert";
 import axios from "axios";
 import AuthContext from "../../../../store/auth-context";
 import Load from "../../../../MicroInterAction/Load";
 
 import DatePicker from "react-datepicker";
 
-export default function Form({setError}) {
+export default function Form({ setError }) {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
   const [eventList, setEventList] = useState([]);
   const [showTeamsize, setShowTeamsize] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-
+  const [showMail, setShowMail] = useState(false);
   const authCtx = useContext(AuthContext);
 
   const handleSave = async (e) => {
@@ -39,7 +38,7 @@ export default function Form({setError}) {
     e.preventDefault();
     const formDetails = showFields;
     try {
-      console.log(        {
+      console.log({
         title: formDetails.formTitle,
         description: formDetails.formDesc,
         amount: formDetails.amount,
@@ -52,8 +51,8 @@ export default function Form({setError}) {
         upi: formDetails.upi,
         img: formDetails.formimg,
         date: formDetails.date,
-        mail:formDetails.formMail
-      })
+        mail: formDetails.formMail,
+      });
       const res = await axios.post(
         "/form/addForm",
         {
@@ -69,7 +68,7 @@ export default function Form({setError}) {
           upi: formDetails.upi,
           img: formDetails.formimg,
           date: formDetails.date,
-          mail:formDetails.formMail
+          mail: formDetails.formMail,
         },
         {
           headers: {
@@ -193,10 +192,13 @@ export default function Form({setError}) {
   //   useEffect(() => {
   //     console.log(eventList);
   //   }, [eventList]);
-
+  const handletrial = () => {
+    setShowMail(true);
+  };
   return (
     <>
       {/* <button onClick={getEvent()}>blah</button> */}
+
       <div className={formCss.head}>
         <h1>NEW FORM</h1>
       </div>
@@ -355,10 +357,32 @@ export default function Form({setError}) {
         <button className={formCss.saveBtn} onClick={handleAdd}>
           ADD FIELD
         </button>
+        <button className={formCss.saveBtn} onClick={handletrial}>
+          meri gand
+        </button>
         <button form="form" type="submit" className={formCss.saveBtn}>
           {isSaving ? <Load /> : "SAVE"}
         </button>
       </div>
+      {showMail && (
+        <div className={formCss.modal}>
+          <span
+            className={formCss.close}
+            onClick={() => {
+              setShowMail(false);
+            }}
+          >
+            &times;
+          </span>
+          <br></br>
+          <br></br>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(showFields.formMail),
+            }}
+          ></div>
+        </div>
+      )}
     </>
   );
 }
