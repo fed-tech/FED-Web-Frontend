@@ -158,6 +158,13 @@
   margin-left: 15px;
 }
 
+.registrationsCount{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
 /* Modal */
 .modal {
   position: fixed;
@@ -171,9 +178,16 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   max-width: 80%;
-  width: 400px;
+  width: 500px;
+  height:70%;
   box-shadow: 0 6px 6px 0 black, 0 6px 10px 0 white;
+  overflow-y: auto;
   /* backdrop-filter: blur(5px); */
+}
+
+.modal::-webkit-scrollbar {
+  width: 4px;
+  height: 0px;
 }
 
 .slide-from-top {
@@ -241,7 +255,7 @@
 
 .close {
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 20px;
   cursor: pointer;
   font-size: 35px;
@@ -431,19 +445,19 @@
 /* Modal Responsive*/
 @media (max-width: 768px) {
   .modal {
-    max-width: 90%;
-    width: auto;
-    padding: 15px;
+    max-width: 70%;
+    height:auto;
+    padding: 20px;
   }
 
   .modal h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     padding: 10px;
   }
 
   .modal p {
-    font-size: 20rem;
+    font-size: 1rem;
   }
   .modal button {
     padding: 8px 15px;
