@@ -113,9 +113,25 @@ input {
   background: #f45725;
   border: none;
   float: right;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.previewmailBtn{
+  margin-top: 0px;
+  background-color: transparent;
+  border: 1px solid #f45725;
+  margin-left: 560px;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.previewmailBtn:hover {
+  background-color: #f45725;
+  transition: 0.2s linear;
 }
 
 select {

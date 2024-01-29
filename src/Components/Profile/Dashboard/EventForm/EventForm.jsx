@@ -15,6 +15,7 @@ import DatePicker from "react-datepicker";
 export default function Form({ setError }) {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
+  const [eventpreview, seteventPreview] = useState(false);
   const [eventList, setEventList] = useState([]);
   const [showTeamsize, setShowTeamsize] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -192,9 +193,15 @@ export default function Form({ setError }) {
   //   useEffect(() => {
   //     console.log(eventList);
   //   }, [eventList]);
-  const handletrial = () => {
+
+  const handleeventpreview = () => {
+    seteventPreview(true);
+  };
+
+  const handlemailpreview = () => {
     setShowMail(true);
   };
+
   return (
     <>
       {/* <button onClick={getEvent()}>blah</button> */}
@@ -343,13 +350,20 @@ export default function Form({ setError }) {
           ) : (
             <></>
           )}
-          <textarea
-            onChange={handleChange}
-            name="formMail"
-            className={formCss.formtitle}
-            placeholder="Successful Registration Mail"
-            required
-          />
+          <div className={formCss.previewmailcont}>
+            
+            <button className={formCss.previewmailBtn} onClick={handlemailpreview}>
+              PREVIEW
+            </button>
+            <textarea
+              onChange={handleChange}
+              name="formMail"
+              className={formCss.formtitle}
+              placeholder="Successful Registration Mail"
+              required
+            />
+            
+          </div>
           {fields}
         </form>
       </div>
@@ -357,8 +371,8 @@ export default function Form({ setError }) {
         <button className={formCss.saveBtn} onClick={handleAdd}>
           ADD FIELD
         </button>
-        <button className={formCss.saveBtn} onClick={handletrial}>
-          meri gand
+        <button className={formCss.saveBtn} onClick={handleeventpreview}>
+          PREVIEW
         </button>
         <button form="form" type="submit" className={formCss.saveBtn}>
           {isSaving ? <Load /> : "SAVE"}
