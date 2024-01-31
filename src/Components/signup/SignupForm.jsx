@@ -103,9 +103,7 @@ function SignupForm({setError}) {
       } catch (error) {
         setLoad(false);
 
-        console.log(error);
 
-        console.log(error.response.data.code === 1);
 
         if (error.response.data.code === 1) {
           setError({
@@ -247,7 +245,6 @@ function SignupForm({setError}) {
         hideDrop(false);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 

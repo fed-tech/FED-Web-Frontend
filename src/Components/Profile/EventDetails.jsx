@@ -73,7 +73,6 @@ function EventDetails({ cardNo, setShow, setError }) {
     const id = cardNo._id;
     try {
       const response = await api.delete(`/event/deleteevent/${id}`);
-      console.log(response);
       if (response.status === 200) {
         setDeleting(true);
 
@@ -86,12 +85,10 @@ function EventDetails({ cardNo, setShow, setError }) {
           val: true,
         });
 
-        console.log("Event deleted");
         setShow(false);
         window.scrollTo(0, 0);
       }
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -106,7 +103,6 @@ function EventDetails({ cardNo, setShow, setError }) {
     const id = currentForm._id;
     try {
       const response = await api.delete(`/form/deleteForm?formid=${id}`);
-      console.log(response);
       if (response.status === 200) {
         setDeletingForm(true);
         setTimeout(() => {
@@ -122,13 +118,11 @@ function EventDetails({ cardNo, setShow, setError }) {
           val: true,
         });
 
-        console.log("Form deleted");
         handleCloseModal();
         makeRequest();
         window.scrollTo(0, 0);
       }
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -147,7 +141,6 @@ function EventDetails({ cardNo, setShow, setError }) {
       text: "Form Viewed successfully!",
       val: true,
     });
-    console.log("Form viewed");
     handleCloseModal();
     window.scrollTo(0, 0);
   };
@@ -201,7 +194,6 @@ function EventDetails({ cardNo, setShow, setError }) {
     try {
       setRegistrationsCount("");
       setLoading(true);
-      console.log("Current form id : ", form._id);
       const formres = await api.get(
         `/form/countRegistrations?formid=${form._id}`,
         {
@@ -211,7 +203,6 @@ function EventDetails({ cardNo, setShow, setError }) {
         }
       );
 
-      // console.log("Response data id count: ",formres.data);
 
       if (formres.status === 200) {
         setRegistrationsCount(formres.data);
@@ -221,7 +212,6 @@ function EventDetails({ cardNo, setShow, setError }) {
 
         //     // Update the registrations count
         //     setRegistrationsCount(ascend);
-        //     console.log(ascend);
 
         //     if (ascend >= formres.data) {
         //         clearInterval(intervalId);
@@ -232,7 +222,6 @@ function EventDetails({ cardNo, setShow, setError }) {
       }
       setLoading(false);
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -247,22 +236,17 @@ function EventDetails({ cardNo, setShow, setError }) {
         },
       });
 
-      //console.log("Response view forms data:",res.data);
-      //console.log("Response view forms data id:",res.data[0]._id);
 
       if (res.status == 200) {
         setForms(res.data);
       }
       setLoading(false);
     } catch (err) {
-      console.log(err);
     }
   };
   useEffect(() => {
-    console.log(forms);
   }, [forms]);
   useEffect(() => {
-    console.log(cardNo);
     makeRequest();
   }, []);
 

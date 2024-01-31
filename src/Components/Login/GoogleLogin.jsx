@@ -53,7 +53,7 @@ export default function GoogleLogin({ setLoad, setError }) {
 
       const response = await axios.post("/auth/googleverification", data);
 
-      console.log(response.data);
+      
 
       if (response.data.status === true) {
         setLoad(false);
@@ -73,7 +73,7 @@ export default function GoogleLogin({ setLoad, setError }) {
           10800000
         );
 
-        console.log("Login Done 💯💯💯💯💯");
+        
 
         if (authCtx.target == "") {
           // navigate("/MyProfile");
@@ -112,7 +112,7 @@ export default function GoogleLogin({ setLoad, setError }) {
         }
       }
     } catch (err) {
-      console.log(err);
+      
 
       setLoad(false);
 

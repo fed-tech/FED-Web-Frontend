@@ -5,7 +5,6 @@ import click from '../../../assets/Omega/click.svg'
 import { eventDetails } from "../page1/eventDetails";
 
 export default function RegisterCards({img, logo, desc, isRegistered, showform, formelement,formid}) {
-    console.log(formelement)
     const handleClick = () =>{
         showform(formelement,formid)
     }

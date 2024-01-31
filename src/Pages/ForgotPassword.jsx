@@ -42,7 +42,6 @@ function ForgotPassword({setError}) {
         email,
       });
 
-      console.log(res);
 
       if (res.status === 200) {
         setShowBtn(true);
@@ -58,7 +57,6 @@ function ForgotPassword({setError}) {
         });
       }
     } catch (err) {
-      console.log(err);
 
       if (err.response.status === 401) {
         setLoad(false);
@@ -91,7 +89,6 @@ function ForgotPassword({setError}) {
     e.preventDefault();
     setLoad(true);
 
-    console.log(email);
 
     if (email === "") {
       setLoad(false);
@@ -141,7 +138,6 @@ function ForgotPassword({setError}) {
         navigate("/resetpassword");
       }
     } catch (err) {
-      console.log(err);
 
       if (err.response.status === 401) {
         setLoad(false);

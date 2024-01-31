@@ -142,7 +142,6 @@ function Youtube(props) {
   });
 
   function transContent(linkch, titlech, parach) {
-    console.log(linkch, titlech, parach);
     setcontent({
       link: linkch,
       title: titlech,

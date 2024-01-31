@@ -11,12 +11,10 @@ export const Alert = ({ variant, val }) => {
   const resendMail = async () => {
     try {
       const response = await axios.get(`/auth/resendMail/${variant.email}`);
-      console.log(response);
       if (response.status == 200) {
         setSent(true);
       }
     } catch (e) {
-      console.log(e);
     }
   };
   useEffect(() => {

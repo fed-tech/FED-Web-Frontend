@@ -8,7 +8,6 @@ function EventCards({info,setShow, setCardNo}) {
   const handleShow = ()=>{
     setShow(true)
     setCardNo(info)
-    // console.log(cardNo)
   }
   return (
     <div className='eventcards' onClick={handleShow}>

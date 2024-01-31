@@ -59,7 +59,6 @@ const GoogleSignUp = ({ setLoad,setError }) => {
         email: mail,
       });
 
-      console.log(response);
 
       if (response.status === 202) {
         setLoad(false);
@@ -96,7 +95,6 @@ const GoogleSignUp = ({ setLoad,setError }) => {
         // navigate("/CreateProfile");
       }
     } catch (err) {
-      console.log(err);
 
       setLoad(false);
 

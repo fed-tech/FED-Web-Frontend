@@ -23,10 +23,8 @@ function ViewEvents({ showEvent, setShow, setCardNo, cardNo, setError }) {
       if (response.status === 200) {
         setEvents(response.data.event);
       } else {
-        console.log("Did not recieve events");
       }
     } catch (e) {
-      console.log(e);
     }
   };
 

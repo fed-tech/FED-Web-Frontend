@@ -7,7 +7,6 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
 
     const handleValues = (e) => {
         const { name, value } = e.target;
-        console.log(name, value);
 
         // setShowFields(prev => {
         //     const currState = [...prev];

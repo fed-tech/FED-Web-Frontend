@@ -95,7 +95,7 @@ export default function Main(props) {
         var result = await axios.get("/form/getuserform", {
           headers: { Authorization: authCtx.token },
         });
-        console.log(result.data);
+        
         final.forEach((e) => {
           if (result.data.includes(e.formid)) {
             setIsRegistered(true);
@@ -104,7 +104,7 @@ export default function Main(props) {
           }
         });
       }
-      console.log(final[0]);
+
       setEvent(final[0]);
       setFormLoading(false);
     }
