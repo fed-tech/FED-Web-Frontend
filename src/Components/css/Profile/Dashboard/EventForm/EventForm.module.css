@@ -113,16 +113,17 @@ input {
   background: #f45725;
   border: none;
   float: right;
-  margin-left: 30px;
+  margin-left: 80px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
 .previewmailBtn{
-  margin-top: 0px;
+  margin-top: -4%;
+  margin-bottom: 1%;
   background-color: transparent;
   border: 1px solid #f45725;
-  margin-left: 560px;
+  margin-left: 85%;
   border-radius: 6px;
   padding: 8px 10px;
   cursor: pointer;
@@ -175,7 +176,9 @@ select {
     text-align: left;
     margin-right: 10px;
   }
-
+  .previewmailBtn{
+    margin-left: 80%;
+  }
   .formDiv > input::placeholder,
   select .formBottom > input::placeholder {
     font-size: 18px;
