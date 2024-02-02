@@ -10,7 +10,6 @@ function Profile() {
   const authCtx = useContext(AuthContext);
 
   function handleLogout() {
-    console.log("logout");
     navigate("/Login");
     authCtx.logout();
   }

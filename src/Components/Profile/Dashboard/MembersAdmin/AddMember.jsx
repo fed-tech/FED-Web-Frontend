@@ -50,7 +50,6 @@ export default function AddMember({setError}) {
       github == "" ||
       linkedin == ""
     ) {
-      console.log("Please Fill All Fields");
       setError({
         mainColor: "#FDEDED",
         secondaryColor: "#F16360",
@@ -104,7 +103,6 @@ export default function AddMember({setError}) {
         };
       }
      catch (err) {
-      console.log(err);
       setError({
         mainColor: "lightpink",
         secondaryColor: "red",

@@ -48,7 +48,6 @@ function Page({setError}) {
 
   const handleSetPage = (e) => {
     const pageName = e.target.id;
-    console.log(pageName);
     setCurrPage(pageName);
   };
 

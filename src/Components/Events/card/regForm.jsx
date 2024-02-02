@@ -314,7 +314,7 @@ export default function RegForm({
         }, 2000);
       }
     } catch (error) {
-      console.log(error);
+      
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
@@ -327,7 +327,9 @@ export default function RegForm({
       setIsSubmitting(false);
     }
   };
-
+  useEffect(()=>{
+   
+  },[])
   return (
     <div className="regFormPopUp">
       <div className="form">

@@ -86,7 +86,6 @@ function CompleteProfile(props) {
   };
 
   const handleChange = (event) => {
-    console.log(event.target.value);
     setSelected(event.target.value);
   };
 
@@ -110,7 +109,6 @@ function CompleteProfile(props) {
         hideDrop(false);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -120,14 +118,7 @@ function CompleteProfile(props) {
         .toLowerCase()
         .includes(showUser.College)
     ) {
-      console.log(` "Kalinga Institute of Industrial Technology"
-      .toLowerCase()
-      .includes(showUser.College)`);
-      console.log(
-        "Kalinga Institute of Industrial Technology"
-          .toLowerCase()
-          .includes(showUser.College)
-      );
+      
       hideDrop(true);
     }
   };
@@ -150,7 +141,6 @@ function CompleteProfile(props) {
     ) {
       setLoad(true);
 
-      console.log("-------------------------");
 
       const password = props.data.id;
 
@@ -169,7 +159,6 @@ function CompleteProfile(props) {
       try {
         const response = await axios.post(`/auth/googleregister`, userObject);
 
-        console.log("response.data.status", response.data.status);
 
         if (response.data.status === true) {
           authCtx.login(
@@ -211,7 +200,6 @@ function CompleteProfile(props) {
           });
         }
       } catch (error) {
-        console.log(error);
 
         setLoad(false);
 

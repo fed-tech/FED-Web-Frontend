@@ -16,7 +16,6 @@ export default function ViewAlumni({showAlumni}) {
     if (response.status === 202) {
       setAlumni(response.data.users);
     } else {
-      console.log("no alumni");
     }
   };
 

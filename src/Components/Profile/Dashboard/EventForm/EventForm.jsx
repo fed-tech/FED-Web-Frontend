@@ -1,28 +1,46 @@
 import React, { useRef, useEffect, useState, useContext } from "react";
-
+import DOMPurify from "dompurify";
 // Components
 import AddField from "./AddField";
 
 // css
 import formCss from "../../../css/Profile/Dashboard/EventForm/EventForm.module.css";
 import "react-datepicker/dist/react-datepicker.css";
-import { Alert } from "../../../../MicroInterAction/Alert";
 import axios from "axios";
 import AuthContext from "../../../../store/auth-context";
 import Load from "../../../../MicroInterAction/Load";
 
+import RegForm from "../../../Events/card/regForm";
+
 import DatePicker from "react-datepicker";
 
-export default function Form({setError}) {
+export default function Form({ setError }) {
   const [showFields, setShowFields] = useState({ fields: [{}] });
   const [hideAmount, sethideAmount] = useState(true);
+  const [eventpreview, seteventPreview] = useState(false);
   const [eventList, setEventList] = useState([]);
   const [showTeamsize, setShowTeamsize] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-
+  const [showMail, setShowMail] = useState(false);
   const authCtx = useContext(AuthContext);
 
   const handleSave = async (e) => {
+    if(window.event.submitter.name == "preview"){
+      setShowFields({
+        ...showFields,
+        formelement: showFields.fields.map((e) => {
+          var temp = {};
+          temp.name = e.name;
+          temp.type = e.type;
+          temp.placeholder = e.value != null ? e.value : "Enter your " + e.name;
+          temp.required = true;
+          temp.value = e.value;
+          return temp;
+        }),
+      });
+      e.preventDefault()
+      return seteventPreview(true);
+    }
     setIsSaving(true);
     if (hideAmount) {
       setShowFields((prev) => {
@@ -39,21 +57,6 @@ export default function Form({setError}) {
     e.preventDefault();
     const formDetails = showFields;
     try {
-      console.log(        {
-        title: formDetails.formTitle,
-        description: formDetails.formDesc,
-        amount: formDetails.amount,
-        priority: formDetails.priority,
-        formelement: formDetails.fields,
-        event: formDetails.eventName,
-        isTeam: showTeamsize,
-        teamsize: formDetails.teamSize,
-        maxReg: formDetails.maxReg,
-        upi: formDetails.upi,
-        img: formDetails.formimg,
-        date: formDetails.date,
-        mail:formDetails.formMail
-      })
       const res = await axios.post(
         "/form/addForm",
         {
@@ -69,7 +72,7 @@ export default function Form({setError}) {
           upi: formDetails.upi,
           img: formDetails.formimg,
           date: formDetails.date,
-          mail:formDetails.formMail
+          mail: formDetails.formMail,
         },
         {
           headers: {
@@ -83,7 +86,6 @@ export default function Form({setError}) {
         window.scrollTo(0, 0);
       }
     } catch (err) {
-      console.log(err);
     } finally {
       setIsSaving(false);
     }
@@ -107,7 +109,6 @@ export default function Form({setError}) {
   };
   const handleDelete = (e, idx) => {
     e.preventDefault();
-    console.log("deleted", idx);
     setShowFields((prev) => {
       const updatedFields = { ...prev };
       updatedFields.fields.splice(idx, 1);
@@ -137,7 +138,6 @@ export default function Form({setError}) {
   };
 
   const handleDropDownChange = (e) => {
-    console.log(e.target.name);
     if (e.target.name == "eventType") {
       if (e.target.value === "paid") {
         sethideAmount(false);
@@ -153,8 +153,8 @@ export default function Form({setError}) {
     }
   };
   useEffect(() => {
-    console.log(showTeamsize);
   }, [showTeamsize]);
+
   const handleFormError = (e) => {
     e.preventDefault();
     setError({
@@ -191,12 +191,17 @@ export default function Form({setError}) {
   }, []);
 
   //   useEffect(() => {
-  //     console.log(eventList);
   //   }, [eventList]);
+
+
+  const handlemailpreview = () => {
+    setShowMail(true);
+  };
 
   return (
     <>
       {/* <button onClick={getEvent()}>blah</button> */}
+
       <div className={formCss.head}>
         <h1>NEW FORM</h1>
       </div>
@@ -286,6 +291,7 @@ export default function Form({setError}) {
             type="number"
             className={formCss.formtitle}
             placeholder="Amount*"
+            // required={!hideAmount}
           />
           <input
             id="upi"
@@ -295,6 +301,7 @@ export default function Form({setError}) {
             type="text"
             className={formCss.formtitle}
             placeholder="Enter Receiver's UPI*"
+            // required={!hideAmount}
           />
           <input
             onChange={handleChange}
@@ -341,13 +348,22 @@ export default function Form({setError}) {
           ) : (
             <></>
           )}
-          <textarea
-            onChange={handleChange}
-            name="formMail"
-            className={formCss.formtitle}
-            placeholder="Successful Registration Mail"
-            required
-          />
+          <div className={formCss.previewmailcont}>
+            <button
+              className={formCss.previewmailBtn}
+              type="button"
+              onClick={handlemailpreview}
+            >
+              PREVIEW
+            </button>
+            <textarea
+              onChange={handleChange}
+              name="formMail"
+              className={formCss.formtitle}
+              placeholder="Successful Registration Mail"
+              required
+            />
+          </div>
           {fields}
         </form>
       </div>
@@ -355,10 +371,42 @@ export default function Form({setError}) {
         <button className={formCss.saveBtn} onClick={handleAdd}>
           ADD FIELD
         </button>
-        <button form="form" type="submit" className={formCss.saveBtn}>
+        <button className={formCss.saveBtn} form="form" name="preview" type="submit">
+          PREVIEW
+        </button>
+        <button form="form" type="submit" name="save" className={formCss.saveBtn}>
           {isSaving ? <Load /> : "SAVE"}
         </button>
       </div>
+      {showMail && (
+        <div className={formCss.modal}>
+          <span
+            className={formCss.close}
+            onClick={() => {
+              setShowMail(false);
+            }}
+          >
+            &times;
+          </span>
+          <br></br>
+          <br></br>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(showFields.formMail),
+            }}
+          ></div>
+        </div>
+      )}
+      {eventpreview && (
+        <RegForm
+          showPopUp={eventpreview}
+          setShowPopUp={seteventPreview}
+          setError={setError}
+          formid={showFields.formTitle}
+          formelement={showFields}
+          formName={showFields.formTitle}
+        />
+      )}
     </>
   );
 }

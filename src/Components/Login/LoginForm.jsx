@@ -146,7 +146,7 @@ function LoginForm({setError}) {
             val: true,
           });
         }
-        console.log(err);
+        
       }
     } else {
       setLoad(false);

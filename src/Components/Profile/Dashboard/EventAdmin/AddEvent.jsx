@@ -72,13 +72,9 @@ function AddEvent({ setViewEvents, setError }) {
         Authorization: authCtx.token,
       },
     });
-    console.log(response);
     if (response.status === 202) {
-      console.log(response);
-      console.log("Added event");
       setViewEvents(true);
     } else {
-      console.log("Not added");
     }
     setSubmitting(true);
 
@@ -99,12 +95,8 @@ function AddEvent({ setViewEvents, setError }) {
           },
         }
       );
-      console.log("Response status 1:", err.response.status);
 
       if (response.status === 202) {
-        console.log(form);
-        console.log("Added event");
-        console.log("Response status 2:", err.response.status);
 
         setError({
           mainColor: "pink",
@@ -118,8 +110,6 @@ function AddEvent({ setViewEvents, setError }) {
         window.scrollTo(0, 0);
       }
     } catch (err) {
-      console.log(form);
-      console.log("Response status 3:"); // Log the response status
       setError({
         mainColor: "lightpink",
         secondaryColor: "red",
@@ -132,7 +122,6 @@ function AddEvent({ setViewEvents, setError }) {
   };
 
   const handlePreview = () => {
-    console.log("check handle");
     setPreviewImage(form.poster);
     setIsModalOpen(true);
   };

@@ -75,7 +75,6 @@ function ForgotPassword({setError}) {
         });
       }
     } catch (err) {
-      console.log(err);
 
       setLoad(false);
 

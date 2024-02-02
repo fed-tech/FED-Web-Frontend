@@ -16,7 +16,6 @@ export default function ViewMembers({ showMembers }) {
     if (response.status === 202) {
       setMembers(response.data.users);
     } else {
-      console.log("no members");
     }
   };
 

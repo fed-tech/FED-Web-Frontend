@@ -70,13 +70,11 @@ export default function Events({ setError }) {
   };
 
   const getRegisteredEvent = async () => {
-    console.log("called")
     if (authCtx.isLoggedIn) {
       var result = await axios.get("/form/getuserform", {
         headers: { Authorization: authCtx.token },
       });
     }
-    // console.log(result.data);
     var final = eventcard;
     final.forEach((e) => {
       if (result.data.includes(e.formid)) {

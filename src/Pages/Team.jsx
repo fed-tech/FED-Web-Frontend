@@ -45,7 +45,6 @@ export default function Team() {
     //     })
     //   );
     // } else {
-    //   console.log("no members");
     // }
   };
 

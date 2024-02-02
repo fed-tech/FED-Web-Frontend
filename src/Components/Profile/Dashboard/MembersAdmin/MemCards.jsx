@@ -45,7 +45,6 @@ export default function MemCards(props) {
     if (response.status === 200) {
       props.isMember ? props.memberData() : props.alumniData();
     } else {
-      console.log("no members");
     }
   };
 
@@ -60,7 +59,6 @@ export default function MemCards(props) {
     if (response.status === 200) {
       props.memberData();
     } else {
-      console.log("no members");
     }
   };
 
