@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // Components
 import SignUpFun from "../Components/signup/SignUpFun";
 
-function SignUp() {
+function SignUp({setError}) {
   // scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -11,7 +11,7 @@ function SignUp() {
 
   return (
     <>
-      <SignUpFun />
+      <SignUpFun setError={setError}/>
     </>
   );
 }

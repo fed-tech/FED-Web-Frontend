@@ -93,10 +93,10 @@
   text-align: center;
   text-decoration: none;
   padding: 10px 67px;
-  background-color: rgb(209, 209, 209);
+  color: rgb(209, 209, 209);
   outline: none;
   border-width: 0px;
-  color: #f45725;
+  background-color: #f45725;
   font-weight: 700;
   transition: all 0.3s;
   cursor: context-menu;
@@ -105,6 +105,9 @@
 }
 .block {
   cursor: not-allowed;
+  color: #f45725;
+  background-color: rgb(209, 209, 209);
+
 }
 
 .live {

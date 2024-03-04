@@ -10,7 +10,7 @@ import axios from "axios";
 // css
 import "../../../css/Profile/Dashboard/EventAdmin/ViewEvents.css";
 
-function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
+function ViewEvents({ showEvent, setShow, setCardNo, cardNo, setError }) {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -23,10 +23,8 @@ function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
       if (response.status === 200) {
         setEvents(response.data.event);
       } else {
-        console.log("Did not recieve events");
       }
     } catch (e) {
-      console.log(e);
     }
   };
 
@@ -34,7 +32,7 @@ function ViewEvents({ showEvent, setShow, setCardNo, cardNo }) {
     <div className="viewEventss">
       {showEvent ? (
         <div className="viewEventDets">
-          <EventDetails cardNo={cardNo} setShow={setShow} />
+          <EventDetails cardNo={cardNo} setShow={setShow} setError={setError} />
         </div>
       ) : (
         <div className="viewevents">

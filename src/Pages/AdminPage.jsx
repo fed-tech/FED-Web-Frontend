@@ -23,7 +23,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import PlaylistAddIcon from "@mui/icons-material/PlaylistAdd";
 import InsertInvitationIcon from "@mui/icons-material/InsertInvitation";
 
-function Page() {
+function Page({setError}) {
   const [designation, setDesignation] = useState("");
   const [currPage, setCurrPage] = useState("Profile");
   const [showUpdateModal, setShowUpdateModal] = useState(false);
@@ -48,13 +48,18 @@ function Page() {
 
   const handleSetPage = (e) => {
     const pageName = e.target.id;
-    console.log(pageName);
     setCurrPage(pageName);
   };
 
   const handleLogout = () => {
     navigate("/Login");
     authCtx.logout();
+  };
+
+  const handleName = () => {
+    const maxLength = 15;
+    let name = authCtx.user.name;
+    return name.length > maxLength ? name.slice(0, maxLength) + "..." : name;
   };
 
   return (
@@ -65,10 +70,12 @@ function Page() {
             <div className={pageCss.dashboardTop}>
               <div className={pageCss.gotoPro}>
                 <div className={pageCss.profilePic}>
-                  <img src={authCtx.user.pic} alt="" />
+                  <a href="/MyProfile">
+                    <img src={authCtx.user.pic} alt="" />
+                  </a>
                 </div>
                 <div className={pageCss.Position}>
-                  <p className={pageCss.name}>{authCtx.user.name}</p>
+                  <p className={pageCss.name}>{handleName()}</p>
                   <p className={pageCss.designation}>{designation}</p>
                 </div>
               </div>
@@ -102,7 +109,7 @@ function Page() {
                       className={pageCss.dashboardBottom_icons}
                       id="Form"
                     />
-                    <p id="Form">Form</p>
+                    <p id="Form">NewForm</p>
                   </div>
                   <div
                     onClick={handleSetPage}
@@ -122,6 +129,26 @@ function Page() {
               ) : (
                 <></>
               )}
+
+              {designation === "Member" ? (
+                <div
+                    onClick={handleSetPage}
+                    className={
+                      currPage === "Events"
+                        ? `${pageCss.dashboardBottom_options} ${pageCss.hello}`
+                        : `${pageCss.dashboardBottom_options}`
+                    }
+                  >
+                    <InsertInvitationIcon
+                      className={pageCss.dashboardBottom_icons}
+                      id="Events"
+                    />
+                    <p id="Events">Events</p>
+                </div>
+              ) : (
+                <></>
+              )}
+
               {designation === "User" ? (
                 <div
                   onClick={handleSetPage}
@@ -154,10 +181,10 @@ function Page() {
           {currPage === "Profile" && (
             <Profile setShowUpdateModal={setShowUpdateModal} />
           )}
-          {currPage === "Events" && <EventAdmin />}
-          {currPage === "Form" && <EventForm />}
-          {currPage === "Members" && <MembersAdmin />}
-          {currPage === "Registrations" && <MyEvents />}
+          {currPage === "Events" && <EventAdmin setError={setError}/>}
+          {currPage === "Form" && <EventForm setError={setError}/>}
+          {currPage === "Members" && <MembersAdmin setError={setError}/>}
+          {currPage === "Registrations" && <MyEvents setError={setError}/>}
         </div>
         {showUpdateModal && (
           <UpdateProfile setShowUpdateModal={setShowUpdateModal} />

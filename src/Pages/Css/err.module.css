@@ -1,5 +1,5 @@
 .bg {
-  background-image: url("https://uploads-ssl.webflow.com/629d87f593841156e4e0d9a4/63aeb74c910c7070ebca8b75_image-23.png");
+  background-image: linear-gradient(to top, #0f0e0e 0%, #0f0e0e  2%, rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0) 90%,#0f0e0e 100%),url("https://uploads-ssl.webflow.com/64553d5a8ac054ad27b992c4/65aaba9406f44b2f6d44a953_Black%20Gradient%20Minimalist%20Corporate%20Business%20Personal%20Profile%20New%20LinkedIn%20Banner%20(2)%20(1).jpg");
   width: 100%;
   height: 100%;
   text-align: center;

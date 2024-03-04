@@ -1,10 +1,9 @@
 #CloseIcon {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  z-index: 2;
   cursor: pointer;
-  background-color: black;
+  width: 2vw;
+  height: 2vw;
+  min-width: 30px;
+  min-height: 30px;
 }
 
 .regFormPopUp {
@@ -19,7 +18,9 @@
   justify-content: center;
   align-items: center;
 }
-
+.formFieldContainer{
+  margin-top: 4%;
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -29,7 +30,8 @@
   height: 80%;
   width: 60%;
   padding: 50px;
-  /* overflow-y: auto; */
+  overflow-y: auto;
+  max-height: 550px;
 }
 
 .form::-webkit-scrollbar {
@@ -56,6 +58,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  margin: 2%;
 }
 
 .fontDets {
@@ -72,6 +75,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  margin: 2%;
 }
 
 .submitBtn {
@@ -102,8 +106,7 @@
 
 label {
   font-family: mulish;
-  font-weight: 100;
-
+  font-weight: bold;
   font-size: 1.25rem;
   color: white;
   margin-left: 15px;
@@ -149,10 +152,11 @@ input {
 
 .radioLabel {
   margin-right: 20%;
+  font-weight: 100;
 }
 
 .radioInp {
-  width: unset;
+  width: 50%;
   margin: 0;
   margin-right: 7px;
 }
@@ -160,9 +164,10 @@ input {
 .radioDiv {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 30px;
   line-height: 0px;
   flex-flow: row wrap;
+  
 }
 
 .radioDiv div {
@@ -237,7 +242,7 @@ input {
 }
 
 .slider {
-  position: absolute;
+  /* position: absolute; */
   cursor: pointer;
   top: 0;
   left: 0;
@@ -249,7 +254,7 @@ input {
 }
 
 .slider:before {
-  position: absolute;
+  /* position: absolute; */
   content: "";
   height: 26px;
   width: 26px;
@@ -303,7 +308,21 @@ input:checked + .slider:before {
   align-self: center;
   font-size: 1rem;
 }
+.year {
+  outline: none;
+  width: 90%;
+  color: white;
+  background-color: #0f0e0e;
+  padding: 15px;
+  border: 1px solid #717171;
+  border-radius: 7px;
+  font-size: 1rem;
 
+}
+.year option {
+  color: white;
+  font-size: 1rem;
+}
 @media (max-width: 1027px) {
   .teamHead {
     margin-top: 10%;
@@ -440,6 +459,14 @@ input:checked + .slider:before {
   .form {
     width: 80%;
     padding: 35px;
+    height: 90%;
+  }
+  .radioDiv {
+    margin-top: 2%;
+    flex-flow: wrap;
+  }
+  input[type="radio"] {
+    margin: 5%;
   }
 }
 
@@ -478,9 +505,5 @@ input:checked + .slider:before {
   .radioDiv {
     margin-top: 2%;
     flex-flow: wrap;
-  }
-
-  .labelAndRadio {
-    margin-bottom: 5%;
   }
 }

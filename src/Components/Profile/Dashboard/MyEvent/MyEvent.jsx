@@ -61,7 +61,6 @@ export default function MyEvents() {
         setMainLoading(false);
       }
     } catch (e) {
-      console.log(e);
 
       setMainLoading(false);
     }

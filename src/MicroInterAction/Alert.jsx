@@ -5,18 +5,16 @@ import PropTypes from "prop-types";
 import "./Css/Alert.css";
 import axios from "axios";
 
-export const Alert = ({ variant, val, email }) => {
+export const Alert = ({ variant, val }) => {
   const [sent, setSent] = useState(false);
   const [showAlert,setShowAlert] = useState(false)
   const resendMail = async () => {
     try {
-      const response = await axios.get(`/auth/resendMail/${email}`);
-      console.log(response);
+      const response = await axios.get(`/auth/resendMail/${variant.email}`);
       if (response.status == 200) {
         setSent(true);
       }
     } catch (e) {
-      console.log(e);
     }
   };
   useEffect(() => {

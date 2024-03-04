@@ -49,7 +49,6 @@ const retrieveStoredToken = () => {
     min = Math.floor((ms / 1000 / 60) << 0),
     sec = Math.floor((ms / 1000) % 60);
 
-  console.log(min + ":" + sec);
   const finaluser = JSON.parse(userdata);
   return {
     token: storedToken,
@@ -60,7 +59,6 @@ const retrieveStoredToken = () => {
 
 export const AuthContextProvider = (props) => {
   const tokenData = retrieveStoredToken();
-
   let initialToken = null;
   let initialuser = {};
   let logedin = false;
@@ -76,7 +74,6 @@ export const AuthContextProvider = (props) => {
   const [userIsLoggedIn, setUserIsLoggedIn] = useState(logedin);
   // const [admin, setAdmin] = useState(false);
 
-  console.log("userislogedin : -" + userIsLoggedIn);
 
   const targetHandler = (t) => {
     setTarget(t);
@@ -161,7 +158,7 @@ export const AuthContextProvider = (props) => {
       access: access,
       regForm: regForm,
     };
-    console.log("Update function called");
+   
     localStorage.setItem("user", JSON.stringify(setuserdata));
     setUser(setuserdata);
   };
@@ -172,7 +169,7 @@ export const AuthContextProvider = (props) => {
       setUserIsLoggedIn(true);
       logoutTimer = setTimeout(logoutHandler, tokenData.duration);
       // setUser(user);
-      console.log(user);
+      
     }
   }, [tokenData, logoutHandler]);
 

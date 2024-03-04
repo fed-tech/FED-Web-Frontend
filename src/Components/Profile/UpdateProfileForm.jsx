@@ -15,7 +15,6 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
         { value: "5th", text: "5th year" },
       ];
     const handleChange = (event) => {
-        console.log(event.target.value);
         setSelected(event.target.value);
       };
       const DataInp = (e) => {
@@ -36,7 +35,6 @@ function UpdateProfileForm({showUser, setUser, selected, setSelected}) {
           }
         }
         setUser({ ...showUser, [name]: value });
-        console.log(showUser);
       };
   return (
     <>

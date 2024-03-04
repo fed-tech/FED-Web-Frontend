@@ -83,6 +83,7 @@ export const eventcard = [
     },
   },
   {
+    regLive: false,
     class: "fedestateBattles",
     date: "29",
     superscript: "th",

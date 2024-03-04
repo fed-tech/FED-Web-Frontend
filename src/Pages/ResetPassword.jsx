@@ -12,19 +12,11 @@ import axios from "axios";
 import Load from "./../MicroInterAction/Load";
 import { Alert } from "./../MicroInterAction/Alert";
 
-function ForgotPassword() {
+function ForgotPassword({setError}) {
   const [err, setErr] = useState("Invalid");
   const [newPass, setNewPass] = useState("");
   const [cnfPass, setCnfPass] = useState("");
   const [loadingEffect, setLoad] = useState(false);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const navigate = useNavigate();
 
@@ -83,7 +75,6 @@ function ForgotPassword() {
         });
       }
     } catch (err) {
-      console.log(err);
 
       setLoad(false);
 
@@ -129,8 +120,6 @@ function ForgotPassword() {
           </div>
         </div>
       </div>
-
-      <Alert variant={variants} val={setError} />
     </>
   );
 }

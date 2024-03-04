@@ -21,17 +21,9 @@ import SuCss from "./css/Signup.module.css";
 // img
 import google from "./../../assets/Login/Google.svg";
 
-const GoogleSignUp = ({ setLoad }) => {
+const GoogleSignUp = ({ setLoad,setError }) => {
   const [codeResponse, setCodeResponse] = useState();
   const [passData, setGoogleData] = useState([]);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const authCtx = useContext(AuthContext);
 
@@ -66,8 +58,7 @@ const GoogleSignUp = ({ setLoad }) => {
       const response = await axios.post("/auth/googleverification", {
         email: mail,
       });
-      
-      console.log(response);
+
 
       if (response.status === 202) {
         setLoad(false);
@@ -81,13 +72,15 @@ const GoogleSignUp = ({ setLoad }) => {
           response.data.user.College,
           response.data.user.MobileNo,
           response.data.user.selected,
+          response.data.user.regForm,
           Number(response.data.user.access),
           response.data.token,
           10800000
         );
 
         if (authCtx.target == "") {
-          navigate("/MyProfile");
+          // navigate("/MyProfile");
+          window.history.back();
         } else {
           navigate(`/${authCtx.target}`);
           authCtx.settarget(null);
@@ -102,7 +95,6 @@ const GoogleSignUp = ({ setLoad }) => {
         // navigate("/CreateProfile");
       }
     } catch (err) {
-      console.log(err);
 
       setLoad(false);
 
@@ -123,9 +115,7 @@ const GoogleSignUp = ({ setLoad }) => {
         <img src={google} className="icon"></img>
         <p className={SuCss.googleText}>SignUp with google</p>
       </div>
-
-      <Alert variant={variants} val={setError} />
-      <CompleteProfile data={passData} set={setGoogleData} />
+      <CompleteProfile data={passData} set={setGoogleData} setError={setError} />
     </>
   );
 };

@@ -14,11 +14,14 @@
 .memImg{
     height: 60%;
     width: 90%;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .memImg img{
     height: 100%;
     width: 100%;
+    object-fit: fill;
 }
 
 .memContent{

@@ -11,19 +11,11 @@ import axios from "axios";
 import Load from "./../MicroInterAction/Load";
 import { Alert } from "./../MicroInterAction/Alert";
 
-function ForgotPassword() {
+function ForgotPassword({setError}) {
   const [otp, setOtp] = useState("");
   const [email, setEmail] = useState("");
   const [showBtn, setShowBtn] = useState(false);
   const [loadingEffect, setLoad] = useState(false);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const navigate = useNavigate();
 
@@ -50,7 +42,6 @@ function ForgotPassword() {
         email,
       });
 
-      console.log(res);
 
       if (res.status === 200) {
         setShowBtn(true);
@@ -66,7 +57,6 @@ function ForgotPassword() {
         });
       }
     } catch (err) {
-      console.log(err);
 
       if (err.response.status === 401) {
         setLoad(false);
@@ -99,7 +89,6 @@ function ForgotPassword() {
     e.preventDefault();
     setLoad(true);
 
-    console.log(email);
 
     if (email === "") {
       setLoad(false);
@@ -149,7 +138,6 @@ function ForgotPassword() {
         navigate("/resetpassword");
       }
     } catch (err) {
-      console.log(err);
 
       if (err.response.status === 401) {
         setLoad(false);
@@ -228,8 +216,6 @@ function ForgotPassword() {
           </div>
         </div>
       </div>
-
-      <Alert variant={variants} val={setError} />
     </>
   );
 }

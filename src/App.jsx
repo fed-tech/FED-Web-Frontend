@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { Suspense, useContext } from "react";
+import React, { Suspense, useContext, useState } from "react";
 
 // Layout
 import Layout from "./Pages/Layout";
@@ -25,7 +25,7 @@ const ResetPassword = React.lazy(() => import("./Pages/ResetPassword"));
 const ForgotPassword = React.lazy(() => import("./Pages/ForgotPassword"));
 
 // Pages || Profiles
-const Profile = React.lazy(() => import("./Pages/Profile"));
+// const Profile = React.lazy(() => import("./Pages/Profile"));
 const AdminPage = React.lazy(() => import("./Pages/AdminPage"));
 
 // Loading
@@ -44,12 +44,22 @@ import AuthContext from "./store/auth-context";
 
 // axios
 import axios from "axios";
+import { Alert } from "./MicroInterAction/Alert";
 
 // BaseURL
 axios.defaults.baseURL = import.meta.env.VITE_SERVER_URL;
 
 function App() {
   const authCtx = useContext(AuthContext);
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+    email: ""
+  });
   return (
     <>
       <BrowserRouter>
@@ -63,23 +73,23 @@ function App() {
                   path="/"
                   element={
                     <Suspense fallback={<Loading />}>
-                      <Home />
+                      <Home setError={setError}/>
                     </Suspense>
                   }
                 />
-                <Route
+                {/* <Route
                   path="/omega"
                   element={
                     <Suspense fallback={<Loading />}>
                       <Omega />
                     </Suspense>
                   }
-                />
+                /> */}
                 <Route
                   path="/Event"
                   element={
                     <Suspense fallback={<Loading />}>
-                      <Events />
+                      <Events setError={setError} />
                     </Suspense>
                   }
                 />
@@ -139,7 +149,7 @@ function App() {
                     path="/Login"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <Login />
+                        <Login setError={setError}/>
                       </Suspense>
                     }
                   />
@@ -150,7 +160,7 @@ function App() {
                     path="/Register"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <SignUp />
+                        <SignUp setError={setError}/>
                       </Suspense>
                     }
                   />
@@ -161,7 +171,7 @@ function App() {
                     path="/forgotpassword"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <ForgotPassword />
+                        <ForgotPassword setError={setError}/>
                       </Suspense>
                     }
                   />
@@ -172,7 +182,7 @@ function App() {
                     path="/resetpassword"
                     element={
                       <Suspense fallback={<Loading />}>
-                        <ResetPassword />
+                        <ResetPassword setError={setError}/>
                       </Suspense>
                     }
                   />
@@ -184,7 +194,7 @@ function App() {
                     element={
                       <Suspense fallback={<Loading />}>
                         {/* <Profile /> */}
-                        <AdminPage />
+                        <AdminPage setError={setError}/>
                       </Suspense>
                     }
                   />
@@ -198,18 +208,10 @@ function App() {
                     </Suspense>
                   }
                 />
-
-                <Route
-                  path="/newform"
-                  element={
-                    <Suspense fallback={<Loading />}>
-                      <AdminPage />
-                    </Suspense>
-                  }
-                />
               </Routes>
             </div>
           </div>
+          <Alert variant={variants} val={setError} />
           <Footer />
         </Layout>
       </BrowserRouter>

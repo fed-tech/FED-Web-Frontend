@@ -7,7 +7,6 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
 
     const handleValues = (e) => {
         const { name, value } = e.target;
-        console.log(name, value);
 
         // setShowFields(prev => {
         //     const currState = [...prev];
@@ -121,6 +120,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                     <option value="" hidden >Field Type*</option>
                     <option value="text" className={formCss.formDropDown}>Text</option>
                     <option value="number" className={formCss.formDropDown}>Number</option>
+                    <option value="list" className={formCss.formDropDown}>List</option>
                     <option value="radio" className={formCss.formDropDown}>Radio</option>
                     <option value="checkbox" className={formCss.formDropDown}>Checkbox</option>
                     <option value="date" className={formCss.formDropDown}>Date</option>

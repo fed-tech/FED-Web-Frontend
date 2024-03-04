@@ -34,15 +34,7 @@ function CompleteProfile(props) {
     img: "",
     tandC: false,
   });
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
-
+  var setError = props.setError
   let menu = useRef();
 
   const authCtx = useContext(AuthContext);
@@ -94,7 +86,6 @@ function CompleteProfile(props) {
   };
 
   const handleChange = (event) => {
-    console.log(event.target.value);
     setSelected(event.target.value);
   };
 
@@ -118,7 +109,6 @@ function CompleteProfile(props) {
         hideDrop(false);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -128,14 +118,7 @@ function CompleteProfile(props) {
         .toLowerCase()
         .includes(showUser.College)
     ) {
-      console.log(` "Kalinga Institute of Industrial Technology"
-      .toLowerCase()
-      .includes(showUser.College)`);
-      console.log(
-        "Kalinga Institute of Industrial Technology"
-          .toLowerCase()
-          .includes(showUser.College)
-      );
+      
       hideDrop(true);
     }
   };
@@ -158,7 +141,6 @@ function CompleteProfile(props) {
     ) {
       setLoad(true);
 
-      console.log("-------------------------");
 
       const password = props.data.id;
 
@@ -177,7 +159,6 @@ function CompleteProfile(props) {
       try {
         const response = await axios.post(`/auth/googleregister`, userObject);
 
-        console.log("response.data.status", response.data.status);
 
         if (response.data.status === true) {
           authCtx.login(
@@ -198,7 +179,8 @@ function CompleteProfile(props) {
           props.set(false);
 
           if (authCtx.target == "") {
-            navigate("/MyProfile");
+            // navigate("/MyProfile");
+            window.history.back();
           } else {
             navigate(`/${authCtx.target}`);
             authCtx.settarget(null);
@@ -218,7 +200,6 @@ function CompleteProfile(props) {
           });
         }
       } catch (error) {
-        console.log(error);
 
         setLoad(false);
 
@@ -414,8 +395,6 @@ function CompleteProfile(props) {
           </form>
         </div>
       </div>
-
-      <Alert variant={variants} val={setError} />
     </div>
   );
 }

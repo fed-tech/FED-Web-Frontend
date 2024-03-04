@@ -14,7 +14,7 @@ import axios from "axios";
 // Css
 import SuCss from "./css/Signup.module.css";
 
-function SignupForm() {
+function SignupForm({setError}) {
   const [loadingEffect, setLoad] = useState(false);
   const [selected, setSelected] = useState("");
   const [DropShow, hideDrop] = useState(false);
@@ -28,15 +28,6 @@ function SignupForm() {
     College: "",
     MobileNo: "+91",
     tandC: false,
-  });
-
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
   });
 
   const options = [
@@ -105,16 +96,14 @@ function SignupForm() {
             secondaryColor: "#1AB1F5",
             symbol: "info",
             title: "Information",
-            text: "Please check your mail",
+            text: "Verification link has been sent",
             val: true,
           });
         }
       } catch (error) {
         setLoad(false);
 
-        console.log(error);
 
-        console.log(error.response.data.code === 1);
 
         if (error.response.data.code === 1) {
           setError({
@@ -256,7 +245,6 @@ function SignupForm() {
         hideDrop(false);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 
@@ -272,7 +260,7 @@ function SignupForm() {
 
   return (
     <>
-      <GoogleSignUp setLoad={setLoad} />
+      <GoogleSignUp setLoad={setLoad} setError={setError} />
       <Or />
 
       <div className={SuCss.form}>
@@ -439,8 +427,6 @@ function SignupForm() {
           </Link>
         </p>
       </div>
-
-      <Alert variant={variants} val={setError} />
     </>
   );
 }

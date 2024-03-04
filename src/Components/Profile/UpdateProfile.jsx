@@ -76,7 +76,6 @@ function updateModal({ setShowUpdateModal }) {
           setErrMssg("Invalid email format");
         }
 
-        console.log(error);
       }
     } else {
       if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {

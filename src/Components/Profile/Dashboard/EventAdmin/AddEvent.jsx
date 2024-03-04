@@ -10,16 +10,8 @@ import { Alert } from "../../../../MicroInterAction/Alert";
 import ImageModal from "../../ImageModal";
 import validator from "validator";
 
-function AddEvent({ setViewEvents }) {
+function AddEvent({ setViewEvents, setError }) {
   const authCtx = useContext(AuthContext);
-  const [variants, setError] = useState({
-    mainColor: "",
-    secondaryColor: "",
-    symbol: "",
-    title: "",
-    text: "",
-    val: false,
-  });
 
   const [previewImage, setPreviewImage] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -80,13 +72,9 @@ function AddEvent({ setViewEvents }) {
         Authorization: authCtx.token,
       },
     });
-    console.log(response);
     if (response.status === 202) {
-      console.log(response);
-      console.log("Added event");
       setViewEvents(true);
     } else {
-      console.log("Not added");
     }
     setSubmitting(true);
 
@@ -107,12 +95,8 @@ function AddEvent({ setViewEvents }) {
           },
         }
       );
-      console.log("Response status 1:", err.response.status);
 
       if (response.status === 202) {
-        console.log(form);
-        console.log("Added event");
-        console.log("Response status 2:", err.response.status);
 
         setError({
           mainColor: "pink",
@@ -126,8 +110,6 @@ function AddEvent({ setViewEvents }) {
         window.scrollTo(0, 0);
       }
     } catch (err) {
-      console.log(form);
-      console.log("Response status 3:"); // Log the response status
       setError({
         mainColor: "lightpink",
         secondaryColor: "red",
@@ -140,7 +122,6 @@ function AddEvent({ setViewEvents }) {
   };
 
   const handlePreview = () => {
-    console.log("check handle");
     setPreviewImage(form.poster);
     setIsModalOpen(true);
   };
@@ -211,7 +192,6 @@ function AddEvent({ setViewEvents }) {
       {isModalOpen && (
         <ImageModal imageUrl={previewImage} onClose={closeModal} />
       )}
-      <Alert variant={variants} val={setError} />
     </div>
   );
 }

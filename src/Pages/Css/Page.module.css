@@ -279,6 +279,8 @@
 @media (max-width: 830px) {
   .dashboard {
     width: 100%;
+    overflow-x: hidden;
+    
   }
 
   .pageLeft {
@@ -302,6 +304,7 @@
 
   .profilePic {
     justify-content: center;
+    margin-left: 20px;
   }
 
   .dashboardBottom_options {
@@ -361,12 +364,13 @@
   .profilePic {
     width: 100px;
     height: auto;
+    margin-left: 10px;
   }
 
   .dashboard {
     left: 0;
     width: 95%;
-    overflow: auto;
+    overflow-x: hidden;
     display: block;
     z-index: 1;
     padding-left: 35%;
@@ -383,7 +387,8 @@
   }
 
   .profilePic {
-    justify-content: flex-end;
+    justify-content: center;
+    margin-left: 10px;
   }
 
   .dashboardBottom_options {
@@ -412,7 +417,7 @@
   .dashboard {
     left: 0;
     width: 95%;
-    overflow: auto;
+    overflow-x: hidden;
     display: block;
     z-index: 1;
     padding-left: 25%;
@@ -431,6 +436,7 @@
 
   .profilePic {
     justify-content: center;
+    margin-left: 10px;
   }
 
   .dashboardBottom_options {
