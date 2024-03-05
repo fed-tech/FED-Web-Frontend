@@ -24,44 +24,29 @@ export default function ViewMembers({ showMembers }) {
   }, [showMembers]);
 
   return (
-    // <div className={viewMemCSS.viewMem}>
-    //   {members.map((data) => (
-    //     <MemCards
-    //       key={data}
-    //       image={data.img}
-    //       name={data.name}
-    //       access={data.access}
-    //       isMember={true}
-    //       email={data.email}
-    //       memberData={memberData}
-    //     />
-    //   ))}
-    // </div>
     <div className={viewMemCSS.viewMem}>
       {showMembers ? (
-        <div className="viewMem">
+        <div className={viewMemCSS.viewMem}>
           <ViewMembers />
         </div>
       ) : (
-        <div className="viewMem">
-          {members.length === 0 ? (
-            <div style={{ marginLeft: "20%" }}>
-              <h2>No Members Found</h2>
-            </div>
-          ) : (
-            members.map((data) => (
-              <MemCards
-                key={data}
-                image={data.img}
-                name={data.name}
-                access={data.access}
-                isMember={true}
-                email={data.email}
-                memberData={memberData}
-              />
-            ))
-          )}
-        </div>
+        members.length === 0 ? (
+          <div style={{ marginLeft: "20%" }}>
+            <h2>No Members Found</h2>
+          </div>
+        ) : (
+          members.map((data) => (
+            <MemCards
+              key={data}
+              image={data.img}
+              name={data.name}
+              access={data.access}
+              isMember={true}
+              email={data.email}
+              memberData={memberData}
+            />
+          ))
+        )
       )}
     </div>
   );
