@@ -142,6 +142,7 @@ export default function AddMember({setError}) {
           <option value="3">Creative</option>
           <option value="5">Marketing</option>
           <option value="6">Operations</option>
+          <option value="8">Sponsorship</option>
         </select>
         <input
           type="text"
