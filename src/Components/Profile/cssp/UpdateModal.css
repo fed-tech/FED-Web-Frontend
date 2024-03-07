@@ -25,8 +25,9 @@
 .updateModal h2{
     text-align: center;
     color: #fff;
-    margin: 20px;
+    margin: 30px;
     font-weight: normal;
+    font-size:28px;
 }
 .update_form{
     display: flex;
@@ -69,7 +70,7 @@
     margin-bottom: 30px;
     border-radius: 5px;
     border: none;
-    margin-top: -15px;
+    margin-top: 0px;
 }
 
 
