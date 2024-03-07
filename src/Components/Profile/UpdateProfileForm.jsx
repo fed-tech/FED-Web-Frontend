@@ -41,15 +41,16 @@ function UpdateProfileForm({ showUser, setShowUser, selected, setSelected }) {
         name="name"
         value={showUser.name}
         placeholder="Name"
+        onChange={DataInp}
       />
-      <input
+      {/*<input
         type="number"
         id="rollNum"
         name="RollNumber"
         value={showUser.RollNumber}
         placeholder="Roll Number"
         onChange={DataInp}
-      />
+      />*/}
       <input
         type="text"
         id="school"
