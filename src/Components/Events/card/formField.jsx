@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import DOMPurify from "dompurify";
+import { Label } from "@mui/icons-material";
 
 export default function formField({
   count,
@@ -69,9 +71,10 @@ export default function formField({
                       : false
                   }
                 />
-                <label htmlFor={radio} className="radioLabel">
+                {/* button used due to white space wrapping problem that we were not able to solve */}
+                <button htmlFor={radio} className="radioLabel" disabled={true}>
                   {radio}
-                </label>
+                </button>
               </div>
             ))}
           </div>
