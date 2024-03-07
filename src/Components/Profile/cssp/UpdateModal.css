@@ -71,3 +71,31 @@
     border: none;
     margin-top: -15px;
 }
+
+
+
+@media (max-width: 830px) {
+
+  
+    .updateModal h2{
+        text-align: center;
+        color: #fff;
+        margin: 20px;
+        font-size: 22px;
+        font-weight: normal;
+    }
+
+    .updateModal .btn{
+        cursor: pointer;
+        font-size: 16px;
+        height: 35px;
+        width: 80px;
+        background-color: #f45725;
+        padding: 6px 12px;
+        text-align: center;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        border: none;
+        margin-top: -10px;
+    }
+}

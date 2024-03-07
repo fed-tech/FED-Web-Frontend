@@ -58,19 +58,6 @@
   overflow-y: auto;
   /* backdrop-filter: blur(5px); */
 }
-@media only screen and (max-width: 768px) {
-  .modal {
-    max-width: 90%;
-    min-width: 70%;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .modal {
-    max-width: 400px;
-    min-width: 320px;
-  }
-}
 .close {
   position: absolute;
   top: 10px;
@@ -224,6 +211,15 @@
     margin-top: 10px;
   }
 
+  .modal {
+    
+    padding: 20px;
+    max-width: 80%;
+    min-width: 80%;
+    max-height:90%;
+    height: 500px;
+    /* backdrop-filter: blur(5px); */
+  }
   
   .dets1,
   .vals1 {

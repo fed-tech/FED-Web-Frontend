@@ -19,17 +19,6 @@ function UpdateModal({setError}) {
     College: authCtx.user.college,
     MobileNo: authCtx.user.mobileNo,
   });
-  // const handleFormError = (e) => {
-  //   e.preventDefault();
-  //   setError({
-  //     mainColor: "#FFC0CB",
-  //     secondaryColor: "#FF69B4",
-  //     symbol: "pets",
-  //     title: "Error",
-  //     text: "Please fill all the required fields",
-  //     val: true,
-  //   });
-  // };
 
   const [selected, setSelected] = useState(authCtx.user.selected);
 
@@ -65,7 +54,6 @@ function UpdateModal({setError}) {
         if (res.status === 200) {
           const resp = res.data.response;
 
-<<<<<<< HEAD
           authCtx.update(
             resp.name,
             resp.email,
@@ -91,36 +79,10 @@ function UpdateModal({setError}) {
           }, 1500);
         }
 
-=======
-            authCtx.update(
-              resp.name,
-              resp.email,
-              resp.img,
-              resp.RollNumber,
-              resp.School,
-              resp.College,
-              resp.MobileNo,
-              resp.selected,
-              Number(resp.access)
-            );
-            window.location.reload();
-            setError({
-              mainColor: "pink",
-              secondaryColor: "orange",
-              symbol: "check",
-              title: "Success",
-              text: "Details Updated successfully!",
-              val: true,
-            });
-            return;
-          }
-        });
->>>>>>> 3c4e762f4265d91be91fd0aa02cf6c7f6245e96d
       } catch (error) {
         setIsinValid(true);
         console.log("status : ",res.status);
         if (error.response.data.code === 1) {
-<<<<<<< HEAD
           return setError({
             mainColor: "#FFC0CB",
             secondaryColor: "#FF69B4",
@@ -129,38 +91,21 @@ function UpdateModal({setError}) {
             text: "User already exists",
             val: true,
           });
-=======
-          setErrMssg("User already exists");
-        }
-        if (error.response.data.code === 2) {
-          setErrMssg("Invalid email format");
->>>>>>> 3c4e762f4265d91be91fd0aa02cf6c7f6245e96d
         }
       }
     } else {
       if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
-<<<<<<< HEAD
         return setError({
           mainColor: "#FFC0CB",
           secondaryColor: "#FF69B4",
           symbol: "error",
           title: "Validation Error",
           text: "Please fill all the fields",
-=======
-        // setErrMssg("Please fill all the fields");
-        setError({
-          mainColor: "#FFC0CB",
-          secondaryColor: "#FF69B4",
-          symbol: "pets",
-          title: "Server Error",
-          text: "Please fill all the details",
->>>>>>> 3c4e762f4265d91be91fd0aa02cf6c7f6245e96d
           val: true,
         });
       } else {
         setIsinValid(true);
-<<<<<<< HEAD
         return setError({
           mainColor: "#FFC0CB",
           secondaryColor: "#FF69B4",
@@ -169,18 +114,6 @@ function UpdateModal({setError}) {
           text: "Invalid mobile number",
           val: true,
         });
-=======
-        // setErrMssg("Invalid mobile number");
-        setError({
-          mainColor: "#FFC0CB",
-          secondaryColor: "#FF69B4",
-          symbol: "pets",
-          title: "Server Error",
-          text: "Enter a valid mobile number",
-          val: true,
-        });
-
->>>>>>> 3c4e762f4265d91be91fd0aa02cf6c7f6245e96d
       }
     }
   };
@@ -196,7 +129,7 @@ function UpdateModal({setError}) {
             selected={selected}
             setSelected={setSelected}
           />
-          <button type="submit" className="btn" onClick={handleUpdate} onInvalid={handleFormError}>
+          <button type="submit" className="btn" onClick={handleUpdate}>
             {update ? <Load /> : "Update"}
           </button>
         </form>
