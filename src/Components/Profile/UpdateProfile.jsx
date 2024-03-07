@@ -4,14 +4,13 @@ import AuthContext from "../../store/auth-context";
 import axios from "axios";
 import UpdateProfileForm from "./UpdateProfileForm";
 import Load from "../../MicroInterAction/Load";
-import { Alert } from "../../MicroInterAction/Alert";
 
-function UpdateModal() {
+function UpdateModal({setError}) {
   const authCtx = useContext(AuthContext);
 
   const [isinValid, setIsinValid] = useState(false);
-  const [errmssg, setErrMssg] = useState("Invalid");
-  const [update, setUpdate] = useState();
+  const [update, setUpdate] = useState(false);
+
   const [showUser, setShowUser] = useState({
     email: authCtx.user.email,
     name: authCtx.user.name,
@@ -50,60 +49,71 @@ function UpdateModal() {
         selected,
       };
       try {
-        axios.post(`/auth/updateProfile`, userObject).then((res) => {
-          if (res.status === 200) {
-            const resp = res.data.response;
+        const res = await axios.post(`/auth/updateProfile`, userObject);
+        console.log("status : ",res.status);
+        if (res.status === 200) {
+          const resp = res.data.response;
 
-            authCtx.update(
-              resp.name,
-              resp.email,
-              resp.img,
-              resp.RollNumber,
-              resp.School,
-              resp.College,
-              resp.MobileNo,
-              resp.selected,
-              Number(resp.access)
-            );
+          authCtx.update(
+            resp.name,
+            resp.email,
+            resp.img,
+            resp.RollNumber,
+            resp.School,
+            resp.College,
+            resp.MobileNo,
+            resp.selected,
+            Number(resp.access)
+          );
 
-            // setError({
-            //   mainColor: "pink",
-            //   secondaryColor: "orange",
-            //   symbol: "check",
-            //   title: "Success",
-            //   text: "Details Updated successfully!",
-            //   val: true,
-            // });
-
+          setError({
+            mainColor: "pink",
+            secondaryColor: "orange",
+            symbol: "pets",
+            title: "Success",
+            text: "Details Updated Successfully",
+            val: true,
+          });
+          setTimeout(() => {
             window.location.reload();
-            
-            return;
-          }
-        });
+          }, 1500);
+        }
+
       } catch (error) {
         setIsinValid(true);
+        console.log("status : ",res.status);
         if (error.response.data.code === 1) {
-          setErrMssg("User already exists");
-          // setError({
-          //   mainColor: "#FFC0CB",
-          //   secondaryColor: "#FF69B4",
-          //   symbol: "check",
-          //   title: "Server Error",
-          //   text: "User already exits",
-          //   val: true,
-          // });
-        }
-        if (error.response.data.code === 2) {
-          setErrMssg("Invalid email format");
+          return setError({
+            mainColor: "#FFC0CB",
+            secondaryColor: "#FF69B4",
+            symbol: "error",
+            title: "Server Error",
+            text: "User already exists",
+            val: true,
+          });
         }
       }
     } else {
       if (MobileNo === "" || (MobileNo.length <= 12 && MobileNo.length >= 10)) {
         setIsinValid(true);
-        setErrMssg("Please fill all the fields");
+        return setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "error",
+          title: "Validation Error",
+          text: "Please fill all the fields",
+          val: true,
+        });
       } else {
         setIsinValid(true);
-        setErrMssg("Invalid mobile number");
+        return setError({
+          mainColor: "#FFC0CB",
+          secondaryColor: "#FF69B4",
+          symbol: "error",
+          title: "Validation Error",
+          text: "Invalid mobile number",
+          val: true,
+        });
       }
     }
   };

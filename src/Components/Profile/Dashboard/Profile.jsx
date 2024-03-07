@@ -5,12 +5,22 @@ import "../../css/Profile/profile2.css";
 import UpdateProfile from "../UpdateProfile";
 import AuthContext from "../../../store/auth-context";
 import Load from "../../../MicroInterAction/Load";
+import { Alert } from "../../../MicroInterAction/Alert";
 
 function Profile() {
 
   const authCtx = useContext(AuthContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editing, setEditing] = useState(false); 
+  const [variants, setError] = useState({
+    mainColor: "",
+    secondaryColor: "",
+    symbol: "",
+    title: "",
+    text: "",
+    val: false,
+  });
+
 
   const handleEdit = () => {
 
@@ -78,11 +88,12 @@ function Profile() {
               <span className="close" onClick={closeModal}>
                 &times;
               </span>
-              <UpdateProfile />
+              <UpdateProfile setError={setError} />
             </div>
           </div>
         )}
       </div>
+      <Alert variant={variants} val={setError} />
     </div>
   );
 }
