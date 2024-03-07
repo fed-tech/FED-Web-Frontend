@@ -152,17 +152,16 @@ input {
 }
 .radioLabel {
   font-weight: 100;
-  width: auto;
+  width: 100%;
   background-color: transparent;
   border-style: none;
   text-align: left;
-  padding-left: 2%;
 }
 
 .radioInp {
   width: auto;
   margin: 0;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .radioDiv {
