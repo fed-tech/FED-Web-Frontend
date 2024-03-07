@@ -26,14 +26,21 @@
     text-align: center;
     color: #fff;
     margin: 20px;
-
+    font-weight: normal;
 }
 .update_form{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.update_form input,select{
+.update_form input{
+    width: 100%;
+    color: #fff;
+    padding: 10px 5px;
+    margin-top: 10px;
+    background: transparent;
+}
+.update_form select{
     width: 100%;
     color: #fff;
     padding: 10px 5px;
@@ -53,9 +60,11 @@
 }
 .updateModal .btn{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
+    height: 45px;
+    width: 90px;
     background-color: #f45725;
-    padding: 10px 20px;
+    padding: 6px 12px;
     text-align: center;
     margin-bottom: 30px;
     border-radius: 5px;
