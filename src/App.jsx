@@ -18,6 +18,7 @@ const TermsAndConditions = React.lazy(() =>
   import("./Pages/TermsAndConditions")
 );
 
+
 // Pages || Authentication
 const Login = React.lazy(() => import("./Pages/Login"));
 const SignUp = React.lazy(() => import("./Pages/SignUp"));
