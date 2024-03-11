@@ -61,7 +61,6 @@ export default function MyEvents() {
         setMainLoading(false);
       }
     } catch (e) {
-
       setMainLoading(false);
     }
   };
@@ -75,19 +74,32 @@ export default function MyEvents() {
           </div>
         ) : (
           <>
-            {card.map((e, idx) => {
-              return (
-                <>
-                  <MyEventCards
-                    info={e}
-                    key={idx}
-                    setShow={setShow}
-                    setCardNo={setCardNo}
-                    getTeamDetails={getTeamDetails}
-                  />
-                </>
-              );
-            })}
+            {card.length === 0 && (
+              <>
+                <div style={{display:"flex",flexDirection:"column",textAlign:"center",alignItems:"center",height:"100%"}}>
+                  <label>
+                  😔<br></br>
+                  It looks like you haven't registred for any event yet...<br></br><br></br>
+                  <a href="/event">Explore Events</a>
+                  </label>
+                </div>
+                
+              </>
+            )}
+            {card.length != 0 &&
+              card.map((e, idx) => {
+                return (
+                  <>
+                    <MyEventCards
+                      info={e}
+                      key={idx}
+                      setShow={setShow}
+                      setCardNo={setCardNo}
+                      getTeamDetails={getTeamDetails}
+                    />
+                  </>
+                );
+              })}
           </>
         )}
       </div>
