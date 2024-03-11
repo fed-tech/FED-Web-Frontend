@@ -86,6 +86,7 @@
   border: none;
   font-size: 20px;
   cursor: pointer;
+  margin: 2%;
 }
 
 .team {
@@ -149,16 +150,18 @@ input {
 .inputField {
   width: 90%;
 }
-
 .radioLabel {
-  margin-right: 20%;
   font-weight: 100;
+  width: 100%;
+  background-color: transparent;
+  border-style: none;
+  text-align: left;
 }
 
 .radioInp {
-  width: 50%;
+  width: auto;
   margin: 0;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .radioDiv {

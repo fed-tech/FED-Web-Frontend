@@ -310,7 +310,7 @@ export default function RegForm({
           val: true,
         });
         setTimeout(() => {
-          return window.location.reload();
+          return navigate("/");
         }, 2000);
       }
     } catch (error) {

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import React, { Suspense, useContext, useState } from "react";
 
 // Layout
@@ -17,6 +17,7 @@ const PrivacyPolicies = React.lazy(() => import("./Pages/PrivacyPolicies"));
 const TermsAndConditions = React.lazy(() =>
   import("./Pages/TermsAndConditions")
 );
+
 
 // Pages || Authentication
 const Login = React.lazy(() => import("./Pages/Login"));
@@ -143,30 +144,6 @@ function App() {
                     </Suspense>
                   }
                 />
-
-                {!authCtx.isLoggedIn && (
-                  <Route
-                    path="/Login"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <Login setError={setError}/>
-                      </Suspense>
-                    }
-                  />
-                )}
-
-                {!authCtx.isLoggedIn && (
-                  <Route
-                    path="/Register"
-                    element={
-                      <Suspense fallback={<Loading />}>
-                        <SignUp setError={setError}/>
-                      </Suspense>
-                    }
-                  />
-                )}
-
-                {!authCtx.isLoggedIn && (
                   <Route
                     path="/forgotpassword"
                     element={
@@ -175,9 +152,6 @@ function App() {
                       </Suspense>
                     }
                   />
-                )}
-
-                {!authCtx.isLoggedIn && (
                   <Route
                     path="/resetpassword"
                     element={
@@ -186,7 +160,24 @@ function App() {
                       </Suspense>
                     }
                   />
-                )}
+                  <Route
+                    path="/Login"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        {authCtx.isLoggedIn ? <Navigate to="/MyProfile"></Navigate>: <Login setError={setError}/>}
+                      </Suspense>
+                    }
+                  />
+
+                  <Route
+                    path="/Register"
+                    element={
+                      <Suspense fallback={<Loading />}>
+                        {authCtx.isLoggedIn ? <Navigate to="/MyProfile"></Navigate>:<SignUp setError={setError}/>}
+                      </Suspense>
+                    }
+                  />
+
 
                 {authCtx.isLoggedIn && (
                   <Route
