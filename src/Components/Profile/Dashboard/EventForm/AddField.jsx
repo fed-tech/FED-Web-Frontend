@@ -37,6 +37,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                         type="date"
                         className={formCss.formaddfield}
                         placeholder="Enter Date"
+                        required="required"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
@@ -48,6 +49,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                         type="number"
                         className={formCss.formaddfield}
                         placeholder="Enter Value"
+                        required="required"
                         onChange={handleValues}
                         name="value"
                         value={showFields.fields[idx].value || ""}
@@ -61,6 +63,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                         placeholder="Enter Text"
                         onChange={handleValues}
                         name="value"
+                        required="required"
                         value={showFields.fields[idx].value || ""}
                     />
                 );
@@ -71,6 +74,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                         className={formCss.formaddfield}
                         placeholder="Enter Time"
                         onChange={handleValues}
+                        required="required"
                         name="value"
                         value={showFields.fields[idx].value || ""}
                     />
@@ -84,6 +88,7 @@ export default function AddField({ idx, setShowFields, showFields, handleDelete 
                         className={formCss.formaddfield}
                         placeholder="Field Value"
                         onChange={handleValues}
+                        required="required"
                         name="value"
                         value={showFields.fields[idx].value || ""}
                     />
