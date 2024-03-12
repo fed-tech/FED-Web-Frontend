@@ -19,6 +19,7 @@ export default function Card({ eventcard, setError}) {
   const navigate = useNavigate();
   const handleRegClick = (ele) => {
     if (!authCtx.isLoggedIn) {
+      authCtx.settarget("event");
       setError({
         mainColor: "#FFC0CB",
         secondaryColor: "#FF69B4",
