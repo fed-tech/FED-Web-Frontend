@@ -178,7 +178,7 @@ function CompleteProfile(props) {
 
           props.set(false);
 
-          if (authCtx.target == "") {
+          if (authCtx.target == "" || authCtx.target == null == "") {
             // navigate("/MyProfile");
             window.history.back();
           } else {

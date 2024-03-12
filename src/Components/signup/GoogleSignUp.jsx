@@ -78,7 +78,7 @@ const GoogleSignUp = ({ setLoad,setError }) => {
           10800000
         );
 
-        if (authCtx.target == "") {
+        if (authCtx.target == "" || authCtx.target == null) {
           // navigate("/MyProfile");
           window.history.back();
         } else {

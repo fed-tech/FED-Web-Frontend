@@ -75,7 +75,7 @@ export default function GoogleLogin({ setLoad, setError }) {
 
         
 
-        if (authCtx.target == "") {
+        if (authCtx.target == "" || authCtx.target == null) {
           // navigate("/MyProfile");
           window.history.back();
         } else {
