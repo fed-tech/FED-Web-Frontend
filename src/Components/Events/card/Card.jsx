@@ -37,8 +37,8 @@ export default function Card({ eventcard, setError}) {
           var temp = {};
           temp.name = e.name;
           temp.type = e.type;
-          temp.placeholder = e.value != null ? e.value : "Enter your " + e.name;
-          temp.required = true;
+          temp.placeholder = e.value.length > 0? e.value : "Enter " + e.name;
+          temp.required = e.required;
           temp.value = e.value;
           return temp;
         });
