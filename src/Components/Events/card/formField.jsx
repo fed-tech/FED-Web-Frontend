@@ -97,6 +97,7 @@ export default function formField({
               }
               placeholder={field.placeholder}
               onChange={onChange}
+              onFocus={(e) => e.target.addEventListener("wheel", function (e) { e.preventDefault() }, { passive: false })}
             />
           </div>
         </div>
