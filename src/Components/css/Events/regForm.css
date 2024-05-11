@@ -130,6 +130,20 @@ input[type="checkbox"] {
   accent-color: #f45725;
 }
 
+.txnImgLabel{
+  margin-top: 15px;
+  font-family: mulish;
+  font-weight: bold;
+  font-size: 1.7rem;
+  font-size: large;
+  color: rgb(156, 156, 156);
+
+  /* margin-right: 200px; */
+
+
+}
+
+
 .inpField {
   display: flex;
   flex-direction: column;

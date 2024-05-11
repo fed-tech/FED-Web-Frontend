@@ -229,6 +229,28 @@ export default function RegForm({
           value={submission.txnid}
           placeholder="Last Four Digit Of Txn ID"
         />
+         <label
+            for="txnImg"
+            class="txnImgLabel">
+          Upload transaction Completion image
+        </label>
+        <input
+             type="file" 
+             name="txnimg" 
+             id="txnImg"  
+             onChange={onchange} 
+             value={submission.txnImg} 
+             placeholder="upload image" />
+        <label 
+            for="txndate" 
+            class="txnImgLabel">Transactoin date
+        </label>
+        <input 
+             type="date" 
+             id="txndate" 
+             name="txnDate" 
+             value={submission.txndate}>
+        </input>
       </div>
     </div>
   );
