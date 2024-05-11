@@ -9,6 +9,7 @@ import axios from "axios";
 import AuthContext from "../../../store/auth-context";
 import { QRCodeSVG } from "qrcode.react";
 import { useNavigate } from "react-router-dom";
+import { func } from "prop-types";
 export default function RegForm({
   showPopUp,
   setShowPopUp,
@@ -29,6 +30,7 @@ export default function RegForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
   const [showFields, setShowFields] = useState(true);
+  const [image, setImage] = useState("");
   var formData = formelement;
   var showTeam = formData.isTeam;
   var isPaid = formData.amount != 0;
@@ -71,6 +73,7 @@ export default function RegForm({
     }
     setSubmission({ ...submission, [name]: value });
   };
+
   const handlePrev = () => {
     if (showPayment) {
       setShowFields(true);
@@ -101,7 +104,7 @@ export default function RegForm({
     setIsLoading(true);
     try {
       var result = await axios.get(
-        /form/verifyleader?teamleadermail=${teamleadermail}&formid=${formid},
+        `/form/verifyleader?teamleadermail=${teamleadermail}&formid=${formid}`,
         {
           headers: {
             Authorization: authCtx.token,
@@ -195,7 +198,7 @@ export default function RegForm({
                 </button>
               </div>
               {!isLoading && (
-                <p className={message ${isVerified ? "" : "message-failed"}}>
+                <p className={`message ${isVerified ? "" : "message-failed"}`}>
                   {message}
                 </p>
               )}
@@ -205,7 +208,19 @@ export default function RegForm({
       </div>
     </div>
   );
-
+  function convertToBase64(e){
+    console.log("Calling convert to base64 fn");
+    console.log(e);
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = () => {
+      console.log(reader.result);
+      setImage(reader.result);
+    }
+    reader.onerror = error => {
+      console.log("Error: ",error);
+    }
+  }
   const Paymentpage = (
     <div>
       <div className="paymentMain fontDets">
@@ -216,7 +231,7 @@ export default function RegForm({
         </label>
         <div className="qrcode">
           <QRCodeSVG
-            value={upi://pay?pa=${formData.upi}&am=${formData.amount}&cu=INR}
+            value={`upi://pay?pa=${formData.upi}&am=${formData.amount}&cu=INR`}
             level={"H"}
           />
         </div>
@@ -234,13 +249,16 @@ export default function RegForm({
             class="txnImgLabel">
           Upload transaction Completion image
         </label>
-        <input
-             type="file" 
-             name="txnimg" 
-             id="txnImg"  
-             onChange={onchange} 
-             value={submission.txnImg} 
-             placeholder="upload image" />
+
+        <input 
+        accept="image/"
+        type="file"
+        onChange={convertToBase64}
+        placeholder="upload image" 
+        />
+        <br/>
+        {image == "" || image == undefined?"":<img width={100} height={100} src={image}/>}
+        
         <label 
             for="txndate" 
             class="txnImgLabel">Transactoin date
@@ -310,11 +328,12 @@ export default function RegForm({
         val: true,
       });
     }
+
     setIsSubmitting(true);
     try {
       var result = await axios.post(
         "/form/register",
-        { ...submission, formid: formid },
+        { ...submission, formid: formid , img : image},
         {
           headers: {
             Authorization: authCtx.token,
