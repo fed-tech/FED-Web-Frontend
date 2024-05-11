@@ -8,8 +8,8 @@
 
 .regFormPopUp {
   position: fixed;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 3;
   width: 100%;
@@ -18,9 +18,9 @@
   justify-content: center;
   align-items: center;
 }
-.formFieldContainer{
+/* .formFieldContainer{
   margin-top: 4%;
-}
+} */
 .form {
   display: flex;
   flex-direction: column;
@@ -129,6 +129,20 @@ input {
 input[type="checkbox"] {
   accent-color: #f45725;
 }
+
+.txnImgLabel{
+  margin-top: 15px;
+  font-family: mulish;
+  font-weight: bold;
+  font-size: 1.7rem;
+  font-size: large;
+  color: rgb(156, 156, 156);
+
+  /* margin-right: 200px; */
+
+
+}
+
 
 .inpField {
   display: flex;
@@ -392,12 +406,12 @@ input:checked + .slider:before {
 }
 @media (min-height: 670px) {
   .form {
-    height: 55%;
+    height: 80%;
   }
 }
 @media (min-height: 850px) {
   .form {
-    height: 45%;
+    height: 80%;
   }
 }
 @media (max-height: 653px) {
