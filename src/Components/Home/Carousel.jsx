@@ -46,7 +46,7 @@ export default class SimpleSlider extends Component {
     return (
       <div>
         <Slider {...settings}>
-          {/*<div>
+          <div>
             <SliderComponent
               image="https://uploads-ssl.webflow.com/64553d5a8ac054ad27b992c4/65aaaf1b9023e275f7c27cdd_65a945cc1f0bba41c914ddb0_Rectangle%2039268-min.jpg"
               para1="Federation of"
@@ -55,8 +55,8 @@ export default class SimpleSlider extends Component {
               para3="The Federation of Entrepreneurship Development is the student body of KIIT TBI which aims to bring all ideas, potential startups under one umbrella ☂️"
               button="false"
             />
-          </div>*/}
-          <div className="ongoingevent">
+          </div>
+          {/*<div className="ongoingevent">
             <Link to="/event">
                 <SliderComponent
                   image={!isMobile ? "https://uploads-ssl.webflow.com/65f05fbb8ea3c917f4e8689d/65f0600fd1cd3798c015a005_Website%20Poster%20laptop.jpg" : 
@@ -64,7 +64,7 @@ export default class SimpleSlider extends Component {
                   button="false"
                 />
             </Link>
-          </div>
+          </div>*/}
           {/* <div>
             <SliderComponent
               image="https://uploads-ssl.webflow.com/64553d5a8ac054ad27b992c4/65aaaebb4154d6975cb896fe_63fa6c18300f0c3b718d0f99_h1-min.jpg"
