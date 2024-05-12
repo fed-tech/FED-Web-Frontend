@@ -18,9 +18,9 @@
   justify-content: center;
   align-items: center;
 }
-/* .formFieldContainer{
+.formFieldContainer{
   margin-top: 4%;
-} */
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -132,6 +132,7 @@ input[type="checkbox"] {
 
 .txnImgLabel{
   margin-top: 15px;
+  margin-bottom: 15px;
   font-family: mulish;
   font-weight: bold;
   font-size: 1.7rem;
@@ -323,6 +324,7 @@ input:checked + .slider:before {
 .paymentMain label {
   width: 60%;
   align-self: center;
+  text-align: start;
   font-size: 1rem;
 }
 .year {

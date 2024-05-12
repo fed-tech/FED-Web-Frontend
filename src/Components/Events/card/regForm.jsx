@@ -255,8 +255,10 @@ export default function RegForm({
         placeholder="upload image" 
         />
         <br/>
+        <div className="txnimgshow">
         {image == "" || image == undefined?"":<img width={100} height={100} src={image}/>}
-        
+        </div>
+     
         <label 
             for="txndate" 
             class="txnImgLabel">Transactoin date
