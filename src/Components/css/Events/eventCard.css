@@ -103,6 +103,12 @@
   display: flex;
   align-items: center;
 }
+
+.regBtn:hover {
+  background-color: #f45725;
+  color: #fff;
+  cursor: pointer;
+}
 .block {
   cursor: not-allowed;
   color: #f45725;
