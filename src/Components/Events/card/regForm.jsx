@@ -208,13 +208,11 @@ export default function RegForm({
       </div>
     </div>
   );
+  //Converts image to base64 format
   function convertToBase64(e){
-    console.log("Calling convert to base64 fn");
-    console.log(e);
     var reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
     reader.onload = () => {
-      console.log(reader.result);
       setImage(reader.result);
     }
     reader.onerror = error => {
