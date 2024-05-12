@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import "../../css/Events/regForm.css";
 // import formData from './formElements.json';
 import FormField from "./formField";
-import cancel from "../../../assets/SkillHunt/XCircle.png";
+import cancel from "../../../assets/SkillHunt/XCircle.svg";
 import Switch from "react-switch";
 import Load from "../../../MicroInterAction/Load";
 import axios from "axios";
@@ -34,21 +34,30 @@ export default function RegForm({
   var isPaid = formData.amount != 0;
   const navigate = useNavigate();
   function validateInput() {
-    return formData.formelement.slice(count, count + limit).every((e) => {
-      //check for radio and checkbox
-      if (e.type == "checkbox") {
-        return submission[e.name]
-          ? Object.keys(submission[e.name]).every((f) => {
-              return submission[e.name][f];
-            })
-          : false;
-      } else {
-        if (!submission[[e.name]] && e.required) {
-          return false;
+    const checkboxFields = formData.formelement.filter(
+      (field) => field.type === "checkbox"
+    );
+    const checkboxValid =
+      checkboxFields.length === 0 ||
+      checkboxFields.some((field) => {
+        const selectedOptions =
+          submission[field.name] &&
+          Object.values(submission[field.name]).filter(Boolean);
+        return selectedOptions && selectedOptions.length >= 1 && selectedOptions.length <= 3;
+      });
+  
+    return (
+      formData.formelement.slice(count, count + limit).every((e) => {
+        if (e.type === "checkbox") {
+          return checkboxValid;
+        } else {
+          if (!submission[[e.name]] && e.required) {
+            return false;
+          }
         }
-      }
-      return true;
-    });
+        return true;
+      })
+    );
   }
   const handleNext = () => {
     var validationerror = validateInput();
@@ -101,7 +110,7 @@ export default function RegForm({
     setIsLoading(true);
     try {
       var result = await axios.get(
-        /form/verifyleader?teamleadermail=${teamleadermail}&formid=${formid},
+        `/form/verifyleader?teamleadermail=${teamleadermail}&formid=${formid}`,
         {
           headers: {
             Authorization: authCtx.token,
@@ -195,7 +204,7 @@ export default function RegForm({
                 </button>
               </div>
               {!isLoading && (
-                <p className={message ${isVerified ? "" : "message-failed"}}>
+                <p className={`message ${isVerified ? "" : "message-failed"}`}>
                   {message}
                 </p>
               )}
@@ -216,7 +225,7 @@ export default function RegForm({
         </label>
         <div className="qrcode">
           <QRCodeSVG
-            value={upi://pay?pa=${formData.upi}&am=${formData.amount}&cu=INR}
+            value={`upi://pay?pa=${formData.upi}&am=${formData.amount}&cu=INR`}
             level={"H"}
           />
         </div>
@@ -229,28 +238,6 @@ export default function RegForm({
           value={submission.txnid}
           placeholder="Last Four Digit Of Txn ID"
         />
-         <label
-            for="txnImg"
-            class="txnImgLabel">
-          Upload transaction Completion image
-        </label>
-        <input
-             type="file" 
-             name="txnimg" 
-             id="txnImg"  
-             onChange={onchange} 
-             value={submission.txnImg} 
-             placeholder="upload image" />
-        <label 
-            for="txndate" 
-            class="txnImgLabel">Transactoin date
-        </label>
-        <input 
-             type="date" 
-             id="txndate" 
-             name="txnDate" 
-             value={submission.txndate}>
-        </input>
       </div>
     </div>
   );
@@ -269,7 +256,7 @@ export default function RegForm({
         secondaryColor: "#FF69B4",
         symbol: "pets",
         title: "Error",
-        text: "Please verify the details",
+        text: "Please verify the details or select at least 1 and at most 3 events.",
         val: true,
       });
     }

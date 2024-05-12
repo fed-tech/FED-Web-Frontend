@@ -4,7 +4,16 @@
   height: 2vw;
   min-width: 30px;
   min-height: 30px;
+  transition: transform 0.3s ease, fill 0.3s ease; 
+  fill: #f85424; 
 }
+
+#CloseIcon:hover {
+  transform: scale(1.3); 
+  fill: white; 
+  opacity: 0.5;
+ }
+
 
 .regFormPopUp {
   position: fixed;
@@ -25,7 +34,7 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  border-radius: 32px;
+  border-radius: 24px;
   background-color: #0f0e0e;
   height: 80%;
   width: 60%;
@@ -108,7 +117,7 @@
 label {
   font-family: mulish;
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   color: white;
   margin-left: 15px;
   margin-right: 12px;
@@ -128,6 +137,8 @@ input {
 
 input[type="checkbox"] {
   accent-color: #f45725;
+  height: 20px;
+  width: 20px;
 }
 
 .txnImgLabel{
@@ -166,10 +177,12 @@ input {
 }
 .radioLabel {
   font-weight: 100;
+  font-size: 15px;
   width: 100%;
   background-color: transparent;
   border-style: none;
   text-align: left;
+  margin-top: 2px;
 }
 
 .radioInp {
@@ -180,16 +193,17 @@ input {
 
 .radioDiv {
   display: flex;
-  align-items: center;
+  flex-direction: column; 
   gap: 30px;
-  line-height: 0px;
-  flex-flow: row wrap;
-  
+  margin-left: 30px;
+  line-height: 10px;
 }
 
 .radioDiv div {
   align-items: center;
   display: flex;
+  margin-top: 5px;
+  align-items: flex-start; 
 }
 
 .btns {
@@ -387,9 +401,8 @@ input:checked + .slider:before {
     padding: 3.5%;
     border-radius: 10px;
   }
-
   .radioInp {
-    margin: 0;
+    margin-right: 10px;
   }
 
   .nextBtn,
@@ -440,11 +453,14 @@ input:checked + .slider:before {
   .form {
     width: 70%;
   }
-  .radioDiv {
+  /* .radioDiv {
     flex-flow: nowrap;
     gap: 4%;
     max-width: inherit;
     justify-content: space-between;
+  } */
+  .radioInp {
+    margin-right: 10px;
   }
   .paymentMain label {
     font-size: 0.7rem;
@@ -522,5 +538,6 @@ input:checked + .slider:before {
   .radioDiv {
     margin-top: 2%;
     flex-flow: wrap;
+    margin-top: 5px;
   }
 }
