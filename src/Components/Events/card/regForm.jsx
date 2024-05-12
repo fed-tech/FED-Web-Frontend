@@ -234,7 +234,7 @@ export default function RegForm({
         <label>
           Kindly Pay ₹{formData.amount} to the below QR Code thorugh any payment
           provider. After the transaction is completed, Provide Us the last four
-          digit of the transaction ID received by you
+          digit of the transaction ID received by you for verification.
         </label>
         <div className="qrcode">
           <QRCodeSVG
@@ -254,7 +254,7 @@ export default function RegForm({
          <label
             for="txnImg"
             class="txnImgLabel">
-          Upload transaction Completion image
+          Upload Transaction Completion Image
         </label>
 
         <input 
@@ -270,7 +270,7 @@ export default function RegForm({
      
         <label 
             for="txndate" 
-            class="txnImgLabel">Transactoin date
+            class="txnImgLabel">Transaction Date
         </label>
         <input 
              type="date" 
@@ -356,7 +356,7 @@ export default function RegForm({
           secondaryColor: "#5CB660",
           symbol: "check_circle",
           title: "Success",
-          text: "Data submitted successfully",
+          text: "Form submitted successfully",
           val: true,
         });
         setTimeout(() => {

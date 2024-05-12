@@ -139,7 +139,6 @@ input[type="checkbox"] {
   cursor: pointer;
   height: 20px;
   width: 20px;
-
 }
 
 .txnImgLabel{
@@ -152,8 +151,12 @@ input[type="checkbox"] {
   color: rgb(156, 156, 156);
 
   /* margin-right: 200px; */
+}
 
-
+input[type="date"]:hover {
+  background-color: rgb(64, 62, 62);
+  transition: .2s linear;
+  cursor: pointer;
 }
 
 
@@ -172,6 +175,11 @@ input {
   width: 100%;
   border: rgb(145, 141, 141) solid 1px;
   background-color: #0f0e0e;
+}
+
+input:hover{
+  background-color: rgb(64, 62, 62);
+  transition: .2s linear;
 }
 
 .inputField {
@@ -347,7 +355,7 @@ input:checked + .slider:before {
   outline: none;
   width: 90%;
   color: white;
-  background-color: #0f0e0e;
+  background-color: #fefefe;
   padding: 15px;
   border: 1px solid #717171;
   border-radius: 7px;
