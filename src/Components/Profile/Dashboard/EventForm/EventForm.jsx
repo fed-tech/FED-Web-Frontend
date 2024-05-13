@@ -367,7 +367,7 @@ export default function Form({ setError }) {
           {fields}
         </form>
       </div>
-      <div>
+      <div className="saveButtons">
         <button className={formCss.saveBtn} onClick={handleAdd}>
           ADD FIELD
         </button>

@@ -2,13 +2,14 @@ import React, { useState, useEffect, useContext } from "react";
 import "../../css/Events/regForm.css";
 // import formData from './formElements.json';
 import FormField from "./formField";
-import cancel from "../../../assets/SkillHunt/XCircle.png";
+import cancel from "../../../assets/SkillHunt/XCircle.svg";
 import Switch from "react-switch";
 import Load from "../../../MicroInterAction/Load";
 import axios from "axios";
 import AuthContext from "../../../store/auth-context";
 import { QRCodeSVG } from "qrcode.react";
 import { useNavigate } from "react-router-dom";
+import { func } from "prop-types";
 export default function RegForm({
   showPopUp,
   setShowPopUp,
@@ -29,26 +30,36 @@ export default function RegForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
   const [showFields, setShowFields] = useState(true);
+  const [image, setImage] = useState("");
   var formData = formelement;
   var showTeam = formData.isTeam;
   var isPaid = formData.amount != 0;
   const navigate = useNavigate();
   function validateInput() {
-    return formData.formelement.slice(count, count + limit).every((e) => {
-      //check for radio and checkbox
-      if (e.type == "checkbox") {
-        return submission[e.name]
-          ? Object.keys(submission[e.name]).every((f) => {
-              return submission[e.name][f];
-            })
-          : false;
-      } else {
-        if (!submission[[e.name]] && e.required) {
-          return false;
-        }
-      }
-      return true;
-    });
+    const checkboxFields = formData.formelement.filter(
+      (field) => field.type === "checkbox"
+    );
+    const checkboxValid =
+      checkboxFields.length === 0 ||
+      checkboxFields.some((field) => {
+        const selectedOptions =
+          submission[field.name] &&
+          Object.values(submission[field.name]).filter(Boolean);
+        return selectedOptions && selectedOptions.length >= 1 && selectedOptions.length <= 3;
+      });
+      
+      return (
+        formData.formelement.slice(count, count + limit).every((e) => {
+          if (e.type === "checkbox") {
+            return checkboxValid;
+          } else {
+            if (!submission[[e.name]] && e.required) {
+              return false;
+            }
+          }
+          return true;
+        })
+      );
   }
   const handleNext = () => {
     var validationerror = validateInput();
@@ -71,6 +82,7 @@ export default function RegForm({
     }
     setSubmission({ ...submission, [name]: value });
   };
+
   const handlePrev = () => {
     if (showPayment) {
       setShowFields(true);
@@ -205,14 +217,24 @@ export default function RegForm({
       </div>
     </div>
   );
-
+  //Converts image to base64 format
+  function convertToBase64(e){
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onload = () => {
+      setImage(reader.result);
+    }
+    reader.onerror = error => {
+      console.log("Error: ",error);
+    }
+  }
   const Paymentpage = (
     <div>
       <div className="paymentMain fontDets">
         <label>
           Kindly Pay ₹{formData.amount} to the below QR Code thorugh any payment
           provider. After the transaction is completed, Provide Us the last four
-          digit of the transaction ID received by you
+          digit of the transaction ID received by you for verification.
         </label>
         <div className="qrcode">
           <QRCodeSVG
@@ -229,6 +251,33 @@ export default function RegForm({
           value={submission.txnid}
           placeholder="Last Four Digit Of Txn ID"
         />
+         <label
+            for="txnImg"
+            class="txnImgLabel">
+          Upload Transaction Completion Image
+        </label>
+
+        <input 
+        accept="image/"
+        type="file"
+        onChange={convertToBase64}
+        placeholder="upload image" 
+        />
+        <br/>
+        <div className="txnimgshow">
+        {image == "" || image == undefined?"":<img width={100} height={100} src={image}/>}
+        </div>
+     
+        <label 
+            for="txndate" 
+            class="txnImgLabel">Transaction Date
+        </label>
+        <input 
+             type="date" 
+             id="txndate" 
+             name="txnDate" 
+             value={submission.txndate}>
+        </input>
       </div>
     </div>
   );
@@ -247,7 +296,7 @@ export default function RegForm({
         secondaryColor: "#FF69B4",
         symbol: "pets",
         title: "Error",
-        text: "Please verify the details",
+        text: "Please verify the details or select at least 1 and at most 3 cohorts.",
         val: true,
       });
     }
@@ -288,11 +337,12 @@ export default function RegForm({
         val: true,
       });
     }
+
     setIsSubmitting(true);
     try {
       var result = await axios.post(
         "/form/register",
-        { ...submission, formid: formid },
+        { ...submission, formid: formid , img : image},
         {
           headers: {
             Authorization: authCtx.token,
@@ -306,7 +356,7 @@ export default function RegForm({
           secondaryColor: "#5CB660",
           symbol: "check_circle",
           title: "Success",
-          text: "Data submitted successfully",
+          text: "Form submitted successfully",
           val: true,
         });
         setTimeout(() => {

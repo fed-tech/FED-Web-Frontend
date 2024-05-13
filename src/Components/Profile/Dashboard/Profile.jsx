@@ -37,11 +37,12 @@ function Profile() {
 
   return (
     <div id="profile">
-      <div className="proHeading">
-        <p className="headInnerText">
-          <p>Profile Details</p>
-        </p>
-      </div>
+        <div className="proHeading">
+          <p className="headInnerText">Profile Details</p>
+          <button className="editBtn" onClick={handleEdit}>
+            {editing ? <Load /> : "Edit"}
+          </button>
+        </div>
       <div className="details">
         <table className="profileTable">
           <tbody>
@@ -77,9 +78,6 @@ function Profile() {
         </table>
       </div>
       <div>
-        <button className="editBtn" onClick={handleEdit}>
-          {editing ? <Load /> : "Edit"}
-        </button>
 
         {/* Render modal if isModalOpen is true */}
         {isModalOpen && (

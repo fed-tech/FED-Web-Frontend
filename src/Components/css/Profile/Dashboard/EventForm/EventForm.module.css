@@ -168,8 +168,14 @@ select {
   font-size: 35px;
   color: #f45725;
 }
+.saveButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -20px;
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .head {
     width: 75%;
     margin-bottom: 49px;
@@ -229,4 +235,14 @@ select {
   /* select {
         font-size: 18px;
     } */
+}
+
+@media only screen and (min-width: 684px) {
+  .formBottom {
+    overflow-x: hidden;
+  }
+  
+  .formBottom::-webkit-scrollbar {
+    display: none;
+  }
 }
