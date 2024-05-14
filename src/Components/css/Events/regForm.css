@@ -136,9 +136,9 @@ input {
 
 input[type="checkbox"] {
   accent-color: #f45725;
-  cursor: pointer;
   height: 20px;
-  width: 20px;
+  width: 20px;
+  cursor: pointer;
 }
 
 .txnImgLabel{
@@ -148,7 +148,7 @@ input[type="checkbox"] {
   font-weight: bold;
   font-size: 1.7rem;
   font-size: large;
-  color: rgb(156, 156, 156);
+  color: #ffffff;
 
   /* margin-right: 200px; */
 }
@@ -170,9 +170,10 @@ input[type="date"]:hover {
 
 input {
   /* padding: 15px; */
-  padding: 0.8rem;
+  padding: 0.6rem;
   border-radius: 13px;
   width: 100%;
+  margin-left: 13px;
   border: rgb(145, 141, 141) solid 1px;
   background-color: #0f0e0e;
 }
@@ -411,11 +412,13 @@ input:checked + .slider:before {
 
   input {
     padding: 3.5%;
+    margin-left: 14px;
     border-radius: 10px;
   }
 
   .radioInp {
-    margin: 0;
+    padding-top: 10px;
+    margin-right: 10px;
   }
 
   .nextBtn,
@@ -477,14 +480,16 @@ input:checked + .slider:before {
     margin-right: 10px;
   }
   .paymentMain label {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 610px) {
   label {
     margin: 0;
+    margin-left: 13px;
     margin-bottom: 4%;
+    font-size: 1.25rem;
   }
 
   .nextBtn,
@@ -493,12 +498,15 @@ input:checked + .slider:before {
   .verifybtn {
     border-radius: 10px;
   }
+  .nextBtn{
+    align-items: c;
+  }
 
   input[type="radio"] {
     margin-right: 10px;
   }
   .paymentMain label {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -515,7 +523,30 @@ input:checked + .slider:before {
   input[type="radio"] {
     margin: 5%;
   }
+  .paymentMain {
+    width: 100%; 
+    display: flex; 
+    padding: 8px;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .paymentMain,
+  .paymentMain input,
+  .paymentMain label,
+  .year {
+    width: 90%; 
+    margin: 1.5% auto; 
+  }
+  .paymentMain label {
+    font-size: 1rem; 
+    text-align: start;
+    padding: 8px;
+  }
+  .year {
+    padding: 1rem; 
+  }
 }
+
 
 @media (max-width: 409px) {
   
